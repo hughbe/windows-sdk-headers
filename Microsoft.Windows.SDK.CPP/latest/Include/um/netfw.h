@@ -560,7 +560,7 @@ NetworkIsolationGetEnterpriseIdClose(
     _In_ BOOL   bWaitForOperation
     );
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_FE) 
+#if (NTDDI_VERSION >= NTDDI_WIN10_CO) 
 #ifndef __FW_DYNAMIC_KEYWORDS_TYPES__
 #define __FW_DYNAMIC_KEYWORDS_TYPES__
 typedef enum _tag_FW_DYNAMIC_KEYWORD_ORIGIN_TYPE
@@ -636,7 +636,7 @@ typedef DWORD
     _In_ BOOL     append
 );
 
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_FE) 
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_CO) 
 
 
 extern RPC_IF_HANDLE __MIDL_itf_netfw_0000_0000_v0_0_c_ifspec;

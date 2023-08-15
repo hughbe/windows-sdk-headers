@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,8 +6,10 @@
 #ifndef WINRT_Windows_Devices_Input_H
 #define WINRT_Windows_Devices_Input_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.201201.7"
 #include "winrt/Windows.Devices.h"
+#include "winrt/impl/Windows.Devices.Haptics.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Devices.Input.2.h"
@@ -148,6 +150,12 @@ namespace winrt::impl
         winrt::guid value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Input::IPenDevice)->get_PenId(put_abi(value)));
         return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Haptics::SimpleHapticsController) consume_Windows_Devices_Input_IPenDevice2<D>::SimpleHapticsController() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Input::IPenDevice2)->get_SimpleHapticsController(&value));
+        return Windows::Devices::Haptics::SimpleHapticsController{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Input::PenDevice) consume_Windows_Devices_Input_IPenDeviceStatics<D>::GetFromPointerId(uint32_t pointerId) const
     {
@@ -475,6 +483,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, Windows::Devices::Input::IPenDevice2> : produce_base<D, Windows::Devices::Input::IPenDevice2>
+    {
+        int32_t __stdcall get_SimpleHapticsController(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Devices::Haptics::SimpleHapticsController>(this->shim().SimpleHapticsController());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, Windows::Devices::Input::IPenDeviceStatics> : produce_base<D, Windows::Devices::Input::IPenDeviceStatics>
     {
         int32_t __stdcall GetFromPointerId(uint32_t pointerId, void** result) noexcept final try
@@ -743,6 +765,7 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Input::IPenButtonListener> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Input::IPenButtonListenerStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Input::IPenDevice> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Input::IPenDevice2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Input::IPenDeviceStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Input::IPenDockListener> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Input::IPenDockListenerStatics> : winrt::impl::hash_base {};

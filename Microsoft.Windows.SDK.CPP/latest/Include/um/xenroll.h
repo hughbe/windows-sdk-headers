@@ -6470,9 +6470,9 @@ CEnroll;
 /* interface __MIDL_itf_xenroll_0000_0008 */
 /* [local] */ 
 
-extern "C" IEnroll * WINAPI PIEnrollGetNoCOM(void);
-extern "C" IEnroll2 * WINAPI PIEnroll2GetNoCOM(void);
-extern "C" IEnroll4 * WINAPI PIEnroll4GetNoCOM(void);
+EXTERN_C IEnroll * WINAPI PIEnrollGetNoCOM(void);
+EXTERN_C IEnroll2 * WINAPI PIEnroll2GetNoCOM(void);
+EXTERN_C IEnroll4 * WINAPI PIEnroll4GetNoCOM(void);
 #define CRYPT_ENUM_ALL_PROVIDERS  0x1
 #define XEPR_ENUM_FIRST        -1
 #define XEPR_CADNS           0x01

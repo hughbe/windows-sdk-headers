@@ -86,7 +86,7 @@ TLG_HAVE_EVENT_SET_INFORMATION macro.
 #pragma warning(disable:4626)      // assignment operator deleted
 #pragma warning(disable:4995 4996) // strlen/wcslen marked as deprecated
 #pragma warning(disable:25033)     // Nonconst psz parameter
-#if defined(_M_ARM) || defined(_M_ARM64)
+#if defined(_M_ARM) || defined(_M_ARM64) || defined(_M_ARM64EC)
 #pragma warning(disable:4714) // __forceinline not inlined
 #endif
 
@@ -360,13 +360,13 @@ TraceLoggingInt32 or TraceLoggingString.
 #define _tlgArgPackedField(ctype, pValue,   cbValue,  inType, outType, ...) /* for user-marshalled data and metadata. */ \
           (_tlgPackedField,ctype, pValue,   cbValue,  inType, _tlgExpandType(outType), _tlgNDT(pValue, __VA_ARGS__))
 #define _tlgArgPackedMeta(        name,               inType, outType, ...) /* for user-marshalled metadata. */ \
-          (_tlgPackedMeta,                            inType, _tlgExpandType(outType), _tlgNDT(, name, __VA_ARGS__))
+          (_tlgPackedMeta,                            inType, _tlgExpandType(outType), _tlgDT(name, __VA_ARGS__))
 #define _tlgArgPackedData( ctype, pValue,   cbValue, dataDescType         ) /* for user-marshalled data. */ \
           (_tlgPackedData, ctype, pValue,   cbValue, _tlgExpandType(dataDescType))
 #define _tlgArgCustom(     ctype, pValue,   cbValue,  protocol,bSchema,cbSchema,...) /* for user-serialized data and schema. */ \
           (_tlgCustom,     ctype, pValue,   cbValue,  protocol,bSchema,cbSchema,_tlgNDT(pValue, __VA_ARGS__))
 #define _tlgArgStruct(     fieldCount, name,          inType,          ...) /* for struct and array of struct. */ \
-          (_tlgStruct,     fieldCount,                inType,                   _tlgNDT(, name, __VA_ARGS__))
+          (_tlgStruct,     fieldCount,                inType,                   _tlgDT(name, __VA_ARGS__))
 #define _tlgArgChannel(    eventChannel)                                    /* for TraceLoggingChannel. */ \
           (_tlgChannel,    eventChannel)
 #define _tlgArgLevel(      eventLevel)                                      /* for TraceLoggingLevel. */ \
@@ -2797,7 +2797,7 @@ TraceLoggingSetInformation(
     static UNICODE_STRING strEtwSetInformation = {
         sizeof(L"EtwSetInformation") - 2,
         sizeof(L"EtwSetInformation") - 2,
-        L"EtwSetInformation"
+        (PWCH)L"EtwSetInformation"
     };
     PFEtwSetInformation pfEtwSetInformation;
     TLG_PAGED_CODE();
@@ -2930,7 +2930,7 @@ _tlgWriteCommon(
         int cbMetadata;
         int volatile volatileVar;
         cbMetadata = (int)((LPCCH)&_TraceLoggingMetadataEnd - (LPCCH)&_TraceLoggingMetadata);
-#if defined(_M_ARM) || defined(_M_ARM64)
+#if defined(_M_ARM) || defined(_M_ARM64) || defined(_M_ARM64EC)
         __iso_volatile_store32(&volatileVar, cbMetadata);
 #else
 #pragma warning(suppress: 28931) // Unused assignment
@@ -3927,7 +3927,7 @@ _tlgExpandType((typeVal))  --> (typeVal), 1
 #define _tlgExpandType(typeParam)         _tlgExpandType_impA(_tlg_NARGS typeParam, typeParam)
 
 /*
-_tlgNDT: Extracts Name/Description/Tags from varargs of wrapper macro.
+_tlgNDT: Extracts Name/Description/Tags from varargs of wrapper macro with optional name.
 _tlgNDT(value, __VA_ARGS__) --> "fieldName", L"description", tags, hasTags
 */
 #define _tlgNDT_imp0(value, ...)               #value,      ,     , 0
@@ -3937,6 +3937,17 @@ _tlgNDT(value, __VA_ARGS__) --> "fieldName", L"description", tags, hasTags
 #define _tlgNDT_impB(macro, args)              macro args
 #define _tlgNDT_impA(n, args)                  _tlgNDT_impB(_tlg_PASTE2(_tlgNDT_imp, n), args)
 #define _tlgNDT(value, ...)                    _tlgNDT_impA(_tlg_NARGS(__VA_ARGS__), (value, __VA_ARGS__))
+
+/*
+_tlgDT: Extracts Name/Description/Tags from varargs of wrapper macro with required name.
+_tlgDT(name, __VA_ARGS__) --> "fieldName", L"description", tags, hasTags
+*/
+#define _tlgDT_imp0(name, ...)                 name,        ,     , 0
+#define _tlgDT_imp1(name, desc)                name, L##desc,     , 0
+#define _tlgDT_imp2(name, desc, tags)          name, L##desc, tags, 1
+#define _tlgDT_impB(macro, args)               macro args
+#define _tlgDT_impA(n, args)                   _tlgDT_impB(_tlg_PASTE2(_tlgDT_imp, n), args)
+#define _tlgDT(name, ...)                      _tlgDT_impA(_tlg_NARGS(__VA_ARGS__), (name, __VA_ARGS__))
 
 /*
 _tlgApplyArgs and _tlgApplyArgsN: Macro dispatchers.

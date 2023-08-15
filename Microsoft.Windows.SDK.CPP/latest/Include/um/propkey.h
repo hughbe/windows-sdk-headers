@@ -8208,6 +8208,17 @@ DEFINE_PROPERTYKEY(PKEY_AppUserModel_RelaunchDisplayNameResource, 0x9F4C2855, 0x
 DEFINE_PROPERTYKEY(PKEY_AppUserModel_RelaunchIconResource, 0x9F4C2855, 0x9F79, 0x4B39, 0xA8, 0xD0, 0xE1, 0xD4, 0x2D, 0xE1, 0xD5, 0xF3, 3);
 #define INIT_PKEY_AppUserModel_RelaunchIconResource { { 0x9F4C2855, 0x9F79, 0x4B39, 0xA8, 0xD0, 0xE1, 0xD4, 0x2D, 0xE1, 0xD5, 0xF3 }, 3 }
 
+//  Name:     System.AppUserModel.SettingsCommand -- PKEY_AppUserModel_SettingsCommand
+//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
+//  FormatID: {9F4C2855-9F79-4B39-A8D0-E1D42DE1D5F3}, 38
+//  
+//  A command line that includes a fully qualified file path, which can include environment variables and arguments, that will launch the settings application corresponding to the shortcut (.lnk file) this property is included in.
+//  This property may be used by components such as the Start Menu to provide a settings verb.
+//  Example: "%ProgramFiles%\My App\Settings.exe"
+//  Example: "%ProgramFiles%\My App\My-app.exe" /settings
+DEFINE_PROPERTYKEY(PKEY_AppUserModel_SettingsCommand, 0x9F4C2855, 0x9F79, 0x4B39, 0xA8, 0xD0, 0xE1, 0xD4, 0x2D, 0xE1, 0xD5, 0xF3, 38);
+#define INIT_PKEY_AppUserModel_SettingsCommand { { 0x9F4C2855, 0x9F79, 0x4B39, 0xA8, 0xD0, 0xE1, 0xD4, 0x2D, 0xE1, 0xD5, 0xF3 }, 38 }
+
 //  Name:     System.AppUserModel.StartPinOption -- PKEY_AppUserModel_StartPinOption
 //  Type:     UInt32 -- VT_UI4
 //  FormatID: {9F4C2855-9F79-4B39-A8D0-E1D42DE1D5F3}, 12
@@ -8229,6 +8240,18 @@ DEFINE_PROPERTYKEY(PKEY_AppUserModel_StartPinOption, 0x9F4C2855, 0x9F79, 0x4B39,
 //  Used to CoCreate an INotificationActivationCallback interface to notify about toast activations.
 DEFINE_PROPERTYKEY(PKEY_AppUserModel_ToastActivatorCLSID, 0x9F4C2855, 0x9F79, 0x4B39, 0xA8, 0xD0, 0xE1, 0xD4, 0x2D, 0xE1, 0xD5, 0xF3, 26);
 #define INIT_PKEY_AppUserModel_ToastActivatorCLSID { { 0x9F4C2855, 0x9F79, 0x4B39, 0xA8, 0xD0, 0xE1, 0xD4, 0x2D, 0xE1, 0xD5, 0xF3 }, 26 }
+
+//  Name:     System.AppUserModel.UninstallCommand -- PKEY_AppUserModel_UninstallCommand
+//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
+//  FormatID: {9F4C2855-9F79-4B39-A8D0-E1D42DE1D5F3}, 37
+//  
+//  A command line that includes a fully qualified file path, which can include environment variables and arguments, that when launched will uninstall the application corresponding to the shortcut (.lnk file) this property is included in.
+//  This property may be used by components such as the Start Menu to provide an uninstall verb.
+//  The command should execute without displaying UI, as this avoids dismissing the Start Menu, but it may show UI if needed.
+//  Example: %SystemRoot%\system32\msiexec.exe /x {A7654BA2-D4AB-4510-AADF-253EA74869C5} /q
+//  Example: "%ProgramFiles%\My App\Uninstall.exe" /q /f
+DEFINE_PROPERTYKEY(PKEY_AppUserModel_UninstallCommand, 0x9F4C2855, 0x9F79, 0x4B39, 0xA8, 0xD0, 0xE1, 0xD4, 0x2D, 0xE1, 0xD5, 0xF3, 37);
+#define INIT_PKEY_AppUserModel_UninstallCommand { { 0x9F4C2855, 0x9F79, 0x4B39, 0xA8, 0xD0, 0xE1, 0xD4, 0x2D, 0xE1, 0xD5, 0xF3 }, 37 }
 
 //  Name:     System.AppUserModel.VisualElementsManifestHintPath -- PKEY_AppUserModel_VisualElementsManifestHintPath
 //  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)

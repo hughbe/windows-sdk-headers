@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,8 @@
 #include "winrt/impl/Windows.ApplicationModel.AppExtensions.1.h"
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::AppExtensions
 {
-    struct __declspec(empty_bases) AppExtension : Windows::ApplicationModel::AppExtensions::IAppExtension
+    struct __declspec(empty_bases) AppExtension : Windows::ApplicationModel::AppExtensions::IAppExtension,
+        impl::require<AppExtension, Windows::ApplicationModel::AppExtensions::IAppExtension2>
     {
         AppExtension(std::nullptr_t) noexcept {}
         AppExtension(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::AppExtensions::IAppExtension(ptr, take_ownership_from_abi) {}

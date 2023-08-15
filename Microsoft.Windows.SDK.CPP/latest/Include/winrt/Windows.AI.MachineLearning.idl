@@ -107,9 +107,13 @@ namespace Windows
 
             typedef enum LearningModelFeatureKind LearningModelFeatureKind;
 
+            typedef enum LearningModelPixelRange LearningModelPixelRange;
+
             typedef enum TensorKind TensorKind;
 
             interface IImageFeatureDescriptor;
+
+            interface IImageFeatureDescriptor2;
 
             interface IImageFeatureValue;
 
@@ -316,7 +320,7 @@ namespace Windows
     {
         namespace MachineLearning
         {
-            [contractversion(4.0)]
+            [contractversion(5.0)]
             apicontract MachineLearningContract
             {
             }
@@ -338,6 +342,14 @@ namespace Windows
                 Sequence = 1,
                 Map      = 2,
                 Image    = 3
+            };
+
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 5.0)]
+            enum LearningModelPixelRange
+            {
+                ZeroTo255     = 0,
+                ZeroToOne     = 1,
+                MinusOneToOne = 2
             };
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
@@ -370,6 +382,14 @@ namespace Windows
                 [propget] HRESULT BitmapAlphaMode([out] [retval] Windows.Graphics.Imaging.BitmapAlphaMode* value);
                 [propget] HRESULT Width([out] [retval] UINT32* value);
                 [propget] HRESULT Height([out] [retval] UINT32* value);
+            }
+
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 5.0)]
+            [exclusiveto(Windows.AI.MachineLearning.ImageFeatureDescriptor)]
+            [uuid(2B27CCA7-D533-5862-BB98-1611B155B0E1)]
+            interface IImageFeatureDescriptor2 : IInspectable
+            {
+                [propget] HRESULT PixelRange([out] [retval] Windows.AI.MachineLearning.LearningModelPixelRange* value);
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
@@ -956,6 +976,7 @@ namespace Windows
             runtimeclass ImageFeatureDescriptor
             {
                 [default] interface Windows.AI.MachineLearning.IImageFeatureDescriptor;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 5.0)] interface Windows.AI.MachineLearning.IImageFeatureDescriptor2;
                 interface Windows.AI.MachineLearning.ILearningModelFeatureDescriptor;
             }
 

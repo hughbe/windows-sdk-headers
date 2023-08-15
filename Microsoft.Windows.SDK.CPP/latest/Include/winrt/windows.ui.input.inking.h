@@ -92,7 +92,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xc0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xe0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
@@ -253,6 +253,23 @@ namespace ABI {
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration ABI::Windows::UI::Input::Inking::IInkInputConfiguration
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                namespace Inking {
+                    interface IInkInputConfiguration2;
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2 ABI::Windows::UI::Input::Inking::IInkInputConfiguration2
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputProcessingConfiguration_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputProcessingConfiguration_FWD_DEFINED__
@@ -644,6 +661,23 @@ namespace ABI {
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke3 ABI::Windows::UI::Input::Inking::IInkStroke3
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke3_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                namespace Inking {
+                    interface IInkStroke4;
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4 ABI::Windows::UI::Input::Inking::IInkStroke4
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeBuilder_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeBuilder_FWD_DEFINED__
@@ -3024,6 +3058,47 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfigurati
 
 /*
  *
+ * Interface Windows.UI.Input.Inking.IInkInputConfiguration2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.Inking.InkInputConfiguration
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Inking_IInkInputConfiguration2[] = L"Windows.UI.Input.Inking.IInkInputConfiguration2";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                namespace Inking {
+                    MIDL_INTERFACE("6ac2272e-81b4-5cc4-a36d-d057c387dfda")
+                    IInkInputConfiguration2 : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE get_IsPenHapticFeedbackEnabled(
+                            boolean* value
+                            ) = 0;
+                        virtual HRESULT STDMETHODCALLTYPE put_IsPenHapticFeedbackEnabled(
+                            boolean value
+                            ) = 0;
+                    };
+
+                    extern MIDL_CONST_ID IID& IID_IInkInputConfiguration2 = _uuidof(IInkInputConfiguration2);
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+/*
+ *
  * Interface Windows.UI.Input.Inking.IInkInputProcessingConfiguration
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -4150,6 +4225,44 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke3;
 
 /*
  *
+ * Interface Windows.UI.Input.Inking.IInkStroke4
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.Inking.InkStroke
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Inking_IInkStroke4[] = L"Windows.UI.Input.Inking.IInkStroke4";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Input {
+                namespace Inking {
+                    MIDL_INTERFACE("cd5b62e5-b6e9-5b91-a577-1921d2348690")
+                    IInkStroke4 : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE get_PointerId(
+                            UINT32* value
+                            ) = 0;
+                    };
+
+                    extern MIDL_CONST_ID IID& IID_IInkStroke4 = _uuidof(IInkStroke4);
+                } /* Inking */
+            } /* Input */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+/*
+ *
  * Interface Windows.UI.Input.Inking.IInkStrokeBuilder
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -4959,6 +5072,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.IInkInputConfiguration ** Default Interface **
+ *    Windows.UI.Input.Inking.IInkInputConfiguration2
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -5199,6 +5313,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.Input.Inking.IInkStroke ** Default Interface **
  *    Windows.UI.Input.Inking.IInkStroke2
  *    Windows.UI.Input.Inking.IInkStroke3
+ *    Windows.UI.Input.Inking.IInkStroke4
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -5451,6 +5566,12 @@ typedef interface __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration __
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2 __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2;
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputProcessingConfiguration_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputProcessingConfiguration_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputProcessingConfiguration __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputProcessingConfiguration;
@@ -5588,6 +5709,12 @@ typedef interface __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke2 __x_ABI_CWind
 typedef interface __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke3 __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke3;
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke3_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4 __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4;
+
+#endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeBuilder_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStrokeBuilder_FWD_DEFINED__
@@ -8920,6 +9047,80 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfigurati
 
 /*
  *
+ * Interface Windows.UI.Input.Inking.IInkInputConfiguration2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.Inking.InkInputConfiguration
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Inking_IInkInputConfiguration2[] = L"Windows.UI.Input.Inking.IInkInputConfiguration2";
+typedef struct __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_IsPenHapticFeedbackEnabled)(__x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* put_IsPenHapticFeedbackEnabled)(__x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2* This,
+        boolean value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2Vtbl;
+
+interface __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_get_IsPenHapticFeedbackEnabled(This, value) \
+    ((This)->lpVtbl->get_IsPenHapticFeedbackEnabled(This, value))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_put_IsPenHapticFeedbackEnabled(This, value) \
+    ((This)->lpVtbl->put_IsPenHapticFeedbackEnabled(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkInputConfiguration2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+/*
+ *
  * Interface Windows.UI.Input.Inking.IInkInputProcessingConfiguration
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -10913,6 +11114,75 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke3;
 
 /*
  *
+ * Interface Windows.UI.Input.Inking.IInkStroke4
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Input.Inking.InkStroke
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Inking_IInkStroke4[] = L"Windows.UI.Input.Inking.IInkStroke4";
+typedef struct __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_PointerId)(__x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4* This,
+        UINT32* value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4Vtbl;
+
+interface __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_get_PointerId(This, value) \
+    ((This)->lpVtbl->get_PointerId(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4;
+#endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke4_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+/*
+ *
  * Interface Windows.UI.Input.Inking.IInkStrokeBuilder
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -12296,6 +12566,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.IInkInputConfiguration ** Default Interface **
+ *    Windows.UI.Input.Inking.IInkInputConfiguration2
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -12536,6 +12807,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.Input.Inking.IInkStroke ** Default Interface **
  *    Windows.UI.Input.Inking.IInkStroke2
  *    Windows.UI.Input.Inking.IInkStroke3
+ *    Windows.UI.Input.Inking.IInkStroke4
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *

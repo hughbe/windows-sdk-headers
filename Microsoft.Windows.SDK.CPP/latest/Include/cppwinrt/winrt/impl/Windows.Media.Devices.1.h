@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -28,6 +28,13 @@ WINRT_EXPORT namespace winrt::Windows::Media::Devices
     {
         IAdvancedVideoCaptureDeviceController(std::nullptr_t = nullptr) noexcept {}
         IAdvancedVideoCaptureDeviceController(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IAdvancedVideoCaptureDeviceController10 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IAdvancedVideoCaptureDeviceController10>
+    {
+        IAdvancedVideoCaptureDeviceController10(std::nullptr_t = nullptr) noexcept {}
+        IAdvancedVideoCaptureDeviceController10(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IAdvancedVideoCaptureDeviceController2 :
         Windows::Foundation::IInspectable,
@@ -134,6 +141,27 @@ WINRT_EXPORT namespace winrt::Windows::Media::Devices
     {
         ICallControlStatics(std::nullptr_t = nullptr) noexcept {}
         ICallControlStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICameraOcclusionInfo :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICameraOcclusionInfo>
+    {
+        ICameraOcclusionInfo(std::nullptr_t = nullptr) noexcept {}
+        ICameraOcclusionInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICameraOcclusionState :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICameraOcclusionState>
+    {
+        ICameraOcclusionState(std::nullptr_t = nullptr) noexcept {}
+        ICameraOcclusionState(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICameraOcclusionStateChangedEventArgs :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICameraOcclusionStateChangedEventArgs>
+    {
+        ICameraOcclusionStateChangedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        ICameraOcclusionStateChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IDefaultAudioDeviceChangedEventArgs :
         Windows::Foundation::IInspectable,

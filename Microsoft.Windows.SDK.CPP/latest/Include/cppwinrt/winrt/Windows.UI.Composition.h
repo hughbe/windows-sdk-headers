@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,8 @@
 #ifndef WINRT_Windows_UI_Composition_H
 #define WINRT_Windows_UI_Composition_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.201201.7"
 #include "winrt/Windows.UI.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -1696,6 +1697,16 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::ICompositionSpriteShape)->put_StrokeThickness(value));
     }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::CompositionBrush) consume_Windows_UI_Composition_ICompositionSupportsSystemBackdrop<D>::SystemBackdrop() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::ICompositionSupportsSystemBackdrop)->get_SystemBackdrop(&value));
+        return Windows::UI::Composition::CompositionBrush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_ICompositionSupportsSystemBackdrop<D>::SystemBackdrop(Windows::UI::Composition::CompositionBrush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::ICompositionSupportsSystemBackdrop)->put_SystemBackdrop(*(void**)(&value)));
+    }
     template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::CompositionBitmapInterpolationMode) consume_Windows_UI_Composition_ICompositionSurfaceBrush<D>::BitmapInterpolationMode() const
     {
         Windows::UI::Composition::CompositionBitmapInterpolationMode value{};
@@ -2377,6 +2388,12 @@ namespace winrt::impl
         float value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::ICompositorStatics)->get_MinGlobalPlaybackRate(&value));
         return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::CompositionBackdropBrush) consume_Windows_UI_Composition_ICompositorWithBlurredWallpaperBackdropBrush<D>::TryCreateBlurredWallpaperBackdropBrush() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::ICompositorWithBlurredWallpaperBackdropBrush)->TryCreateBlurredWallpaperBackdropBrush(&result));
+        return Windows::UI::Composition::CompositionBackdropBrush{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::CompositionProjectedShadowCaster) consume_Windows_UI_Composition_ICompositorWithProjectedShadow<D>::CreateProjectedShadowCaster() const
     {
@@ -6638,6 +6655,25 @@ namespace winrt::impl
     };
 #endif
     template <typename D>
+    struct produce<D, Windows::UI::Composition::ICompositionSupportsSystemBackdrop> : produce_base<D, Windows::UI::Composition::ICompositionSupportsSystemBackdrop>
+    {
+        int32_t __stdcall get_SystemBackdrop(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Composition::CompositionBrush>(this->shim().SystemBackdrop());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SystemBackdrop(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SystemBackdrop(*reinterpret_cast<Windows::UI::Composition::CompositionBrush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+    template <typename D>
     struct produce<D, Windows::UI::Composition::ICompositionSurface> : produce_base<D, Windows::UI::Composition::ICompositionSurface>
     {
     };
@@ -7692,6 +7728,20 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             *value = detach_from<float>(this->shim().MinGlobalPlaybackRate());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::UI::Composition::ICompositorWithBlurredWallpaperBackdropBrush> : produce_base<D, Windows::UI::Composition::ICompositorWithBlurredWallpaperBackdropBrush>
+    {
+        int32_t __stdcall TryCreateBlurredWallpaperBackdropBrush(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::UI::Composition::CompositionBackdropBrush>(this->shim().TryCreateBlurredWallpaperBackdropBrush());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -10208,6 +10258,7 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Composition::ICompositionShape> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositionShapeFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositionSpriteShape> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::ICompositionSupportsSystemBackdrop> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositionSurface> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositionSurfaceBrush> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositionSurfaceBrush2> : winrt::impl::hash_base {};
@@ -10229,6 +10280,7 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Composition::ICompositor6> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositor7> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositorStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::ICompositorWithBlurredWallpaperBackdropBrush> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositorWithProjectedShadow> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositorWithRadialGradient> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositorWithVisualSurface> : winrt::impl::hash_base {};

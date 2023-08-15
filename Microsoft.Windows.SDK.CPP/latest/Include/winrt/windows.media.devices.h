@@ -92,7 +92,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xc0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xe0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
@@ -242,6 +242,21 @@ namespace ABI {
 #define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController ABI::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                interface IAdvancedVideoCaptureDeviceController10;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10 ABI::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController2_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController2_FWD_DEFINED__
@@ -467,6 +482,51 @@ namespace ABI {
 #define __x_ABI_CWindows_CMedia_CDevices_CICallControlStatics ABI::Windows::Media::Devices::ICallControlStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CICallControlStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                interface ICameraOcclusionInfo;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo ABI::Windows::Media::Devices::ICameraOcclusionInfo
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                interface ICameraOcclusionState;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState ABI::Windows::Media::Devices::ICameraOcclusionState
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                interface ICameraOcclusionStateChangedEventArgs;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs ABI::Windows::Media::Devices::ICameraOcclusionStateChangedEventArgs
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CMedia_CDevices_CIDefaultAudioDeviceChangedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CDevices_CIDefaultAudioDeviceChangedEventArgs_FWD_DEFINED__
@@ -2761,6 +2821,55 @@ typedef ITypedEventHandler<ABI::Windows::Media::Devices::AudioDeviceModulesManag
 
 namespace ABI {
     namespace Windows {
+        namespace Media {
+            namespace Devices {
+                class CameraOcclusionInfo;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                class CameraOcclusionStateChangedEventArgs;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+#ifndef DEF___FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs_USE
+#define DEF___FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("71561417-e06e-54e7-b25e-39213c4e65d6"))
+ITypedEventHandler<ABI::Windows::Media::Devices::CameraOcclusionInfo*, ABI::Windows::Media::Devices::CameraOcclusionStateChangedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Devices::CameraOcclusionInfo*, ABI::Windows::Media::Devices::ICameraOcclusionInfo*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Devices::CameraOcclusionStateChangedEventArgs*, ABI::Windows::Media::Devices::ICameraOcclusionStateChangedEventArgs*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.Media.Devices.CameraOcclusionInfo, Windows.Media.Devices.CameraOcclusionStateChangedEventArgs>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef ITypedEventHandler<ABI::Windows::Media::Devices::CameraOcclusionInfo*, ABI::Windows::Media::Devices::CameraOcclusionStateChangedEventArgs*> __FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs_t;
+#define __FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+namespace ABI {
+    namespace Windows {
         namespace Devices {
             namespace Enumeration {
                 typedef enum Panel : int Panel;
@@ -2934,6 +3043,16 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Devices {
+                typedef enum CameraOcclusionKind : int CameraOcclusionKind;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
                 typedef enum CaptureUse : int CaptureUse;
             } /* Devices */
         } /* Media */
@@ -3055,6 +3174,16 @@ namespace ABI {
         namespace Media {
             namespace Devices {
                 class CallControl;
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                class CameraOcclusionState;
             } /* Devices */
         } /* Media */
     } /* Windows */
@@ -3423,6 +3552,29 @@ namespace ABI {
     } /* Windows */
 } /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+/*
+ *
+ * Struct Windows.Media.Devices.CameraOcclusionKind
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                enum CameraOcclusionKind : int
+                {
+                    CameraOcclusionKind_Lid = 0,
+                    CameraOcclusionKind_CameraHardware = 1,
+                };
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
 
 /*
  *
@@ -4270,6 +4422,42 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDe
 
 /*
  *
+ * Interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController10
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.VideoDeviceController
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController10[] = L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController10";
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                MIDL_INTERFACE("c621b82d-d6f0-5c1b-a388-a6e938407146")
+                IAdvancedVideoCaptureDeviceController10 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE get_CameraOcclusionInfo(
+                        ABI::Windows::Media::Devices::ICameraOcclusionInfo** value
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_IAdvancedVideoCaptureDeviceController10 = _uuidof(IAdvancedVideoCaptureDeviceController10);
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+/*
+ *
  * Interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -4990,6 +5178,129 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CICallControlStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CICallControlStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION >= 0x10000
+
+/*
+ *
+ * Interface Windows.Media.Devices.ICameraOcclusionInfo
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.CameraOcclusionInfo
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_ICameraOcclusionInfo[] = L"Windows.Media.Devices.ICameraOcclusionInfo";
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                MIDL_INTERFACE("af6c4ad0-a84d-5db6-be58-a5da21cfe011")
+                ICameraOcclusionInfo : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE GetState(
+                        ABI::Windows::Media::Devices::ICameraOcclusionState** result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE IsOcclusionKindSupported(
+                        ABI::Windows::Media::Devices::CameraOcclusionKind occlusionKind,
+                        boolean* result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE add_StateChanged(
+                        __FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs* handler,
+                        EventRegistrationToken* token
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE remove_StateChanged(
+                        EventRegistrationToken token
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_ICameraOcclusionInfo = _uuidof(ICameraOcclusionInfo);
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+/*
+ *
+ * Interface Windows.Media.Devices.ICameraOcclusionState
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.CameraOcclusionState
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_ICameraOcclusionState[] = L"Windows.Media.Devices.ICameraOcclusionState";
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                MIDL_INTERFACE("430adeb8-6842-5e55-9bde-04b4ef3a8a57")
+                ICameraOcclusionState : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE get_IsOccluded(
+                        boolean* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE IsOcclusionKind(
+                        ABI::Windows::Media::Devices::CameraOcclusionKind occlusionKind,
+                        boolean* result
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_ICameraOcclusionState = _uuidof(ICameraOcclusionState);
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+/*
+ *
+ * Interface Windows.Media.Devices.ICameraOcclusionStateChangedEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.CameraOcclusionStateChangedEventArgs
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_ICameraOcclusionStateChangedEventArgs[] = L"Windows.Media.Devices.ICameraOcclusionStateChangedEventArgs";
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Devices {
+                MIDL_INTERFACE("8512d848-c0de-57ca-a1ca-fb2c3d23df55")
+                ICameraOcclusionStateChangedEventArgs : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE get_State(
+                        ABI::Windows::Media::Devices::ICameraOcclusionState** value
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_ICameraOcclusionStateChangedEventArgs = _uuidof(ICameraOcclusionStateChangedEventArgs);
+            } /* Devices */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
 
 /*
  *
@@ -7276,6 +7587,63 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
+ * Class Windows.Media.Devices.CameraOcclusionInfo
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.Media.Devices.ICameraOcclusionInfo ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#ifndef RUNTIMECLASS_Windows_Media_Devices_CameraOcclusionInfo_DEFINED
+#define RUNTIMECLASS_Windows_Media_Devices_CameraOcclusionInfo_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Devices_CameraOcclusionInfo[] = L"Windows.Media.Devices.CameraOcclusionInfo";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+/*
+ *
+ * Class Windows.Media.Devices.CameraOcclusionState
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.Media.Devices.ICameraOcclusionState ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#ifndef RUNTIMECLASS_Windows_Media_Devices_CameraOcclusionState_DEFINED
+#define RUNTIMECLASS_Windows_Media_Devices_CameraOcclusionState_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Devices_CameraOcclusionState[] = L"Windows.Media.Devices.CameraOcclusionState";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+/*
+ *
+ * Class Windows.Media.Devices.CameraOcclusionStateChangedEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.Media.Devices.ICameraOcclusionStateChangedEventArgs ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#ifndef RUNTIMECLASS_Windows_Media_Devices_CameraOcclusionStateChangedEventArgs_DEFINED
+#define RUNTIMECLASS_Windows_Media_Devices_CameraOcclusionStateChangedEventArgs_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Devices_CameraOcclusionStateChangedEventArgs[] = L"Windows.Media.Devices.CameraOcclusionStateChangedEventArgs";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+/*
+ *
  * Class Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -7917,6 +8285,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7
  *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController8
  *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController9
+ *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController10
  *
  * Class Threading Model:  Multi Threaded Apartment
  *
@@ -8083,6 +8452,12 @@ typedef interface __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceC
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10 __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10;
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController2_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController2_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController2 __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController2;
@@ -8172,6 +8547,24 @@ typedef interface __x_ABI_CWindows_CMedia_CDevices_CICallControl __x_ABI_CWindow
 typedef interface __x_ABI_CWindows_CMedia_CDevices_CICallControlStatics __x_ABI_CWindows_CMedia_CDevices_CICallControlStatics;
 
 #endif // ____x_ABI_CWindows_CMedia_CDevices_CICallControlStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo;
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState;
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_FWD_DEFINED__
+#define ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs;
+
+#endif // ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CMedia_CDevices_CIDefaultAudioDeviceChangedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CDevices_CIDefaultAudioDeviceChangedEventArgs_FWD_DEFINED__
@@ -12448,6 +12841,57 @@ interface __FITypedEventHandler_2_Windows__CMedia__CDevices__CAudioDeviceModules
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if !defined(____FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs_INTERFACE_DEFINED__)
+#define ____FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs_INTERFACE_DEFINED__
+
+typedef interface __FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs __FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs;
+
+typedef struct __FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgsVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs* This,
+        __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo* sender,
+        __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs* args);
+
+    END_INTERFACE
+} __FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgsVtbl;
+
+interface __FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs
+{
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgsVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs_Invoke(This, sender, args) \
+    ((This)->lpVtbl->Invoke(This, sender, args))
+
+#endif /* COBJMACROS */
+
+#endif // ____FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
 typedef enum __x_ABI_CWindows_CDevices_CEnumeration_CPanel __x_ABI_CWindows_CDevices_CEnumeration_CPanel;
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -12493,6 +12937,8 @@ typedef interface __x_ABI_CWindows_CStorage_CStreams_CIBuffer __x_ABI_CWindows_C
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIBuffer_FWD_DEFINED__
 
 typedef enum __x_ABI_CWindows_CMedia_CDevices_CAudioDeviceRole __x_ABI_CWindows_CMedia_CDevices_CAudioDeviceRole;
+
+typedef enum __x_ABI_CWindows_CMedia_CDevices_CCameraOcclusionKind __x_ABI_CWindows_CMedia_CDevices_CCameraOcclusionKind;
 
 typedef enum __x_ABI_CWindows_CMedia_CDevices_CCaptureUse __x_ABI_CWindows_CMedia_CDevices_CCaptureUse;
 
@@ -12563,6 +13009,21 @@ enum __x_ABI_CWindows_CMedia_CDevices_CAutoFocusRange
     AutoFocusRange_Normal = 2,
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+/*
+ *
+ * Struct Windows.Media.Devices.CameraOcclusionKind
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+enum __x_ABI_CWindows_CMedia_CDevices_CCameraOcclusionKind
+{
+    CameraOcclusionKind_Lid = 0,
+    CameraOcclusionKind_CameraHardware = 1,
+};
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
 
 /*
  *
@@ -13408,6 +13869,75 @@ interface __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceControlle
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+/*
+ *
+ * Interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController10
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.VideoDeviceController
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController10[] = L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController10";
+typedef struct __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_CameraOcclusionInfo)(__x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10* This,
+        __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo** value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10Vtbl;
+
+interface __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10
+{
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_get_CameraOcclusionInfo(This, value) \
+    ((This)->lpVtbl->get_CameraOcclusionInfo(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CIAdvancedVideoCaptureDeviceController10_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
 
 /*
  *
@@ -14730,6 +15260,236 @@ interface __x_ABI_CWindows_CMedia_CDevices_CICallControlStatics
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CICallControlStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CICallControlStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION >= 0x10000
+
+/*
+ *
+ * Interface Windows.Media.Devices.ICameraOcclusionInfo
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.CameraOcclusionInfo
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_ICameraOcclusionInfo[] = L"Windows.Media.Devices.ICameraOcclusionInfo";
+typedef struct __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfoVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetState)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo* This,
+        __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState** result);
+    HRESULT (STDMETHODCALLTYPE* IsOcclusionKindSupported)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo* This,
+        enum __x_ABI_CWindows_CMedia_CDevices_CCameraOcclusionKind occlusionKind,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* add_StateChanged)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo* This,
+        __FITypedEventHandler_2_Windows__CMedia__CDevices__CCameraOcclusionInfo_Windows__CMedia__CDevices__CCameraOcclusionStateChangedEventArgs* handler,
+        EventRegistrationToken* token);
+    HRESULT (STDMETHODCALLTYPE* remove_StateChanged)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo* This,
+        EventRegistrationToken token);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfoVtbl;
+
+interface __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo
+{
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfoVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_GetState(This, result) \
+    ((This)->lpVtbl->GetState(This, result))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_IsOcclusionKindSupported(This, occlusionKind, result) \
+    ((This)->lpVtbl->IsOcclusionKindSupported(This, occlusionKind, result))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_add_StateChanged(This, handler, token) \
+    ((This)->lpVtbl->add_StateChanged(This, handler, token))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_remove_StateChanged(This, token) \
+    ((This)->lpVtbl->remove_StateChanged(This, token))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionInfo_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+/*
+ *
+ * Interface Windows.Media.Devices.ICameraOcclusionState
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.CameraOcclusionState
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_ICameraOcclusionState[] = L"Windows.Media.Devices.ICameraOcclusionState";
+typedef struct __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_IsOccluded)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* IsOcclusionKind)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState* This,
+        enum __x_ABI_CWindows_CMedia_CDevices_CCameraOcclusionKind occlusionKind,
+        boolean* result);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateVtbl;
+
+interface __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState
+{
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_get_IsOccluded(This, value) \
+    ((This)->lpVtbl->get_IsOccluded(This, value))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_IsOcclusionKind(This, occlusionKind, result) \
+    ((This)->lpVtbl->IsOcclusionKind(This, occlusionKind, result))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+/*
+ *
+ * Interface Windows.Media.Devices.ICameraOcclusionStateChangedEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Interface is a part of the implementation of type Windows.Media.Devices.CameraOcclusionStateChangedEventArgs
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if !defined(____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Devices_ICameraOcclusionStateChangedEventArgs[] = L"Windows.Media.Devices.ICameraOcclusionStateChangedEventArgs";
+typedef struct __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgsVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_State)(__x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs* This,
+        __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionState** value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgsVtbl;
+
+interface __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs
+{
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgsVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_get_State(This, value) \
+    ((This)->lpVtbl->get_State(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs;
+#endif /* !defined(____x_ABI_CWindows_CMedia_CDevices_CICameraOcclusionStateChangedEventArgs_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
 
 /*
  *
@@ -18790,6 +19550,63 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
+ * Class Windows.Media.Devices.CameraOcclusionInfo
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.Media.Devices.ICameraOcclusionInfo ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#ifndef RUNTIMECLASS_Windows_Media_Devices_CameraOcclusionInfo_DEFINED
+#define RUNTIMECLASS_Windows_Media_Devices_CameraOcclusionInfo_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Devices_CameraOcclusionInfo[] = L"Windows.Media.Devices.CameraOcclusionInfo";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+/*
+ *
+ * Class Windows.Media.Devices.CameraOcclusionState
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.Media.Devices.ICameraOcclusionState ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#ifndef RUNTIMECLASS_Windows_Media_Devices_CameraOcclusionState_DEFINED
+#define RUNTIMECLASS_Windows_Media_Devices_CameraOcclusionState_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Devices_CameraOcclusionState[] = L"Windows.Media.Devices.CameraOcclusionState";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+/*
+ *
+ * Class Windows.Media.Devices.CameraOcclusionStateChangedEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.Media.Devices.ICameraOcclusionStateChangedEventArgs ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#ifndef RUNTIMECLASS_Windows_Media_Devices_CameraOcclusionStateChangedEventArgs_DEFINED
+#define RUNTIMECLASS_Windows_Media_Devices_CameraOcclusionStateChangedEventArgs_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Devices_CameraOcclusionStateChangedEventArgs[] = L"Windows.Media.Devices.CameraOcclusionStateChangedEventArgs";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+/*
+ *
  * Class Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -19431,6 +20248,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7
  *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController8
  *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController9
+ *    Windows.Media.Devices.IAdvancedVideoCaptureDeviceController10
  *
  * Class Threading Model:  Multi Threaded Apartment
  *

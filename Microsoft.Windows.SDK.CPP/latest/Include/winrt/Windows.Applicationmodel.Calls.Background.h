@@ -108,7 +108,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xc0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xe0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
@@ -174,6 +174,23 @@ namespace ABI {
 #define __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallDismissedTriggerDetails ABI::Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallDismissedTriggerDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallDismissedTriggerDetails_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace Calls {
+                namespace Background {
+                    interface IPhoneIncomingCallNotificationTriggerDetails;
+                } /* Background */
+            } /* Calls */
+        } /* ApplicationModel */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails ABI::Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallNotificationTriggerDetails
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneLineChangedTriggerDetails_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneLineChangedTriggerDetails_FWD_DEFINED__
@@ -413,6 +430,9 @@ namespace ABI {
 #if WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x20000
                         PhoneTriggerType_IncomingCallDismissed = 6,
 #endif // WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x20000
+#if WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x30000
+                        PhoneTriggerType_IncomingCallNotification = 7,
+#endif // WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x30000
                     };
                 } /* Background */
             } /* Calls */
@@ -563,6 +583,47 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallDismissedTriggerDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallDismissedTriggerDetails_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x20000
+
+/*
+ *
+ * Interface Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallNotificationTriggerDetails
+ *
+ * Introduced to Windows.ApplicationModel.Calls.Background.CallsBackgroundContract in version 3.0
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails
+ *
+ */
+#if WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x30000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Calls_Background_IPhoneIncomingCallNotificationTriggerDetails[] = L"Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallNotificationTriggerDetails";
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace Calls {
+                namespace Background {
+                    MIDL_INTERFACE("2b0e6044-9b32-5d42-8222-d2812e39fb21")
+                    IPhoneIncomingCallNotificationTriggerDetails : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE get_LineId(
+                            GUID* value
+                            ) = 0;
+                        virtual HRESULT STDMETHODCALLTYPE get_CallId(
+                            HSTRING* value
+                            ) = 0;
+                    };
+
+                    extern MIDL_CONST_ID IID& IID_IPhoneIncomingCallNotificationTriggerDetails = _uuidof(IPhoneIncomingCallNotificationTriggerDetails);
+                } /* Background */
+            } /* Calls */
+        } /* ApplicationModel */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_INTERFACE_DEFINED__) */
+#endif // WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x30000
 
 /*
  *
@@ -724,6 +785,25 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
+ * Class Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails
+ *
+ * Introduced to Windows.ApplicationModel.Calls.Background.CallsBackgroundContract in version 3.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallNotificationTriggerDetails ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x30000
+#ifndef RUNTIMECLASS_Windows_ApplicationModel_Calls_Background_PhoneIncomingCallNotificationTriggerDetails_DEFINED
+#define RUNTIMECLASS_Windows_ApplicationModel_Calls_Background_PhoneIncomingCallNotificationTriggerDetails_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Calls_Background_PhoneIncomingCallNotificationTriggerDetails[] = L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails";
+#endif
+#endif // WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x30000
+
+/*
+ *
  * Class Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails
  *
  * Introduced to Windows.ApplicationModel.Calls.Background.CallsBackgroundContract in version 1.0
@@ -787,6 +867,12 @@ typedef interface __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneC
 typedef interface __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallDismissedTriggerDetails __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallDismissedTriggerDetails;
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallDismissedTriggerDetails_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails;
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneLineChangedTriggerDetails_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneLineChangedTriggerDetails_FWD_DEFINED__
@@ -912,6 +998,9 @@ enum __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CPhoneTriggerType
 #if WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x20000
     PhoneTriggerType_IncomingCallDismissed = 6,
 #endif // WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x20000
+#if WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x30000
+    PhoneTriggerType_IncomingCallNotification = 7,
+#endif // WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x30000
 };
 #endif // WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x10000 || \
        // WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION >= 0x10000 && WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION < 0x30000
@@ -1169,6 +1258,80 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIP
 
 /*
  *
+ * Interface Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallNotificationTriggerDetails
+ *
+ * Introduced to Windows.ApplicationModel.Calls.Background.CallsBackgroundContract in version 3.0
+ *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails
+ *
+ */
+#if WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x30000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Calls_Background_IPhoneIncomingCallNotificationTriggerDetails[] = L"Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallNotificationTriggerDetails";
+typedef struct __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetailsVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_LineId)(__x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails* This,
+        GUID* value);
+    HRESULT (STDMETHODCALLTYPE* get_CallId)(__x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails* This,
+        HSTRING* value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetailsVtbl;
+
+interface __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails
+{
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetailsVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_get_LineId(This, value) \
+    ((This)->lpVtbl->get_LineId(This, value))
+
+#define __x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_get_CallId(This, value) \
+    ((This)->lpVtbl->get_CallId(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CCalls_CBackground_CIPhoneIncomingCallNotificationTriggerDetails_INTERFACE_DEFINED__) */
+#endif // WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x30000
+
+/*
+ *
  * Interface Windows.ApplicationModel.Calls.Background.IPhoneLineChangedTriggerDetails
  *
  * Introduced to Windows.ApplicationModel.Calls.Background.CallsBackgroundContract in version 1.0
@@ -1394,6 +1557,25 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Calls_Background_PhoneIncomingCallDismissedTriggerDetails[] = L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails";
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x20000
+
+/*
+ *
+ * Class Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails
+ *
+ * Introduced to Windows.ApplicationModel.Calls.Background.CallsBackgroundContract in version 3.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallNotificationTriggerDetails ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x30000
+#ifndef RUNTIMECLASS_Windows_ApplicationModel_Calls_Background_PhoneIncomingCallNotificationTriggerDetails_DEFINED
+#define RUNTIMECLASS_Windows_ApplicationModel_Calls_Background_PhoneIncomingCallNotificationTriggerDetails_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Calls_Background_PhoneIncomingCallNotificationTriggerDetails[] = L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails";
+#endif
+#endif // WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION >= 0x30000
 
 /*
  *

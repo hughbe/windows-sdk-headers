@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,8 +6,10 @@
 #ifndef WINRT_Windows_Networking_Vpn_H
 #define WINRT_Windows_Networking_Vpn_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.201201.7"
 #include "winrt/Windows.Networking.h"
+#include "winrt/impl/Windows.ApplicationModel.Activation.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Networking.2.h"
@@ -233,6 +235,12 @@ namespace winrt::impl
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_Vpn_IVpnChannel5<D>::FlushVpnSendPacketBuffers() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::Vpn::IVpnChannel5)->FlushVpnSendPacketBuffers());
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::ValueSet) consume_Windows_Networking_Vpn_IVpnChannel6<D>::ActivateForeground(param::hstring const& packageRelativeAppId, Windows::Foundation::Collections::ValueSet const& sharedContext) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::Vpn::IVpnChannel6)->ActivateForeground(*(void**)(&packageRelativeAppId), *(void**)(&sharedContext), &result));
+        return Windows::Foundation::Collections::ValueSet{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(Windows::Networking::Vpn::VpnChannelActivityEventType) consume_Windows_Networking_Vpn_IVpnChannelActivityEventArgs<D>::Type() const
     {
@@ -549,6 +557,28 @@ namespace winrt::impl
         void* domainNameInfo{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Networking::Vpn::IVpnDomainNameInfoFactory)->CreateVpnDomainNameInfo(*(void**)(&name), static_cast<int32_t>(nameType), *(void**)(&dnsServerList), *(void**)(&proxyServerList), &domainNameInfo));
         return Windows::Networking::Vpn::VpnDomainNameInfo{ domainNameInfo, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Networking_Vpn_IVpnForegroundActivatedEventArgs<D>::ProfileName() const
+    {
+        void* name{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::Vpn::IVpnForegroundActivatedEventArgs)->get_ProfileName(&name));
+        return hstring{ name, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::ValueSet) consume_Windows_Networking_Vpn_IVpnForegroundActivatedEventArgs<D>::SharedContext() const
+    {
+        void* sharedContext{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::Vpn::IVpnForegroundActivatedEventArgs)->get_SharedContext(&sharedContext));
+        return Windows::Foundation::Collections::ValueSet{ sharedContext, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::Vpn::VpnForegroundActivationOperation) consume_Windows_Networking_Vpn_IVpnForegroundActivatedEventArgs<D>::ActivationOperation() const
+    {
+        void* activationOperation{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::Vpn::IVpnForegroundActivatedEventArgs)->get_ActivationOperation(&activationOperation));
+        return Windows::Networking::Vpn::VpnForegroundActivationOperation{ activationOperation, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_Vpn_IVpnForegroundActivationOperation<D>::Complete(Windows::Foundation::Collections::ValueSet const& result) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Networking::Vpn::IVpnForegroundActivationOperation)->Complete(*(void**)(&result)));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_Vpn_IVpnInterfaceId<D>::GetAddressInfo(com_array<uint8_t>& id) const
     {
@@ -1511,6 +1541,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, Windows::Networking::Vpn::IVpnChannel6> : produce_base<D, Windows::Networking::Vpn::IVpnChannel6>
+    {
+        int32_t __stdcall ActivateForeground(void* packageRelativeAppId, void* sharedContext, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Foundation::Collections::ValueSet>(this->shim().ActivateForeground(*reinterpret_cast<hstring const*>(&packageRelativeAppId), *reinterpret_cast<Windows::Foundation::Collections::ValueSet const*>(&sharedContext)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, Windows::Networking::Vpn::IVpnChannelActivityEventArgs> : produce_base<D, Windows::Networking::Vpn::IVpnChannelActivityEventArgs>
     {
         int32_t __stdcall get_Type(int32_t* value) noexcept final try
@@ -2063,6 +2107,49 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Networking::Vpn::IVpnForegroundActivatedEventArgs> : produce_base<D, Windows::Networking::Vpn::IVpnForegroundActivatedEventArgs>
+    {
+        int32_t __stdcall get_ProfileName(void** name) noexcept final try
+        {
+            clear_abi(name);
+            typename D::abi_guard guard(this->shim());
+            *name = detach_from<hstring>(this->shim().ProfileName());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SharedContext(void** sharedContext) noexcept final try
+        {
+            clear_abi(sharedContext);
+            typename D::abi_guard guard(this->shim());
+            *sharedContext = detach_from<Windows::Foundation::Collections::ValueSet>(this->shim().SharedContext());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ActivationOperation(void** activationOperation) noexcept final try
+        {
+            clear_abi(activationOperation);
+            typename D::abi_guard guard(this->shim());
+            *activationOperation = detach_from<Windows::Networking::Vpn::VpnForegroundActivationOperation>(this->shim().ActivationOperation());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Networking::Vpn::IVpnForegroundActivationOperation> : produce_base<D, Windows::Networking::Vpn::IVpnForegroundActivationOperation>
+    {
+        int32_t __stdcall Complete(void* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Complete(*reinterpret_cast<Windows::Foundation::Collections::ValueSet const*>(&result));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, Windows::Networking::Vpn::IVpnInterfaceId> : produce_base<D, Windows::Networking::Vpn::IVpnInterfaceId>
@@ -3213,6 +3300,7 @@ namespace std
     template<> struct hash<winrt::Windows::Networking::Vpn::IVpnChannel2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::Vpn::IVpnChannel4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::Vpn::IVpnChannel5> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::Vpn::IVpnChannel6> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::Vpn::IVpnChannelActivityEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::Vpn::IVpnChannelActivityStateChangedArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::Vpn::IVpnChannelConfiguration> : winrt::impl::hash_base {};
@@ -3234,6 +3322,8 @@ namespace std
     template<> struct hash<winrt::Windows::Networking::Vpn::IVpnDomainNameInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::Vpn::IVpnDomainNameInfo2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::Vpn::IVpnDomainNameInfoFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::Vpn::IVpnForegroundActivatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::Vpn::IVpnForegroundActivationOperation> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::Vpn::IVpnInterfaceId> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::Vpn::IVpnInterfaceIdFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::Vpn::IVpnManagementAgent> : winrt::impl::hash_base {};
@@ -3277,6 +3367,8 @@ namespace std
     template<> struct hash<winrt::Windows::Networking::Vpn::VpnCustomTextBox> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::Vpn::VpnDomainNameAssignment> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::Vpn::VpnDomainNameInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::Vpn::VpnForegroundActivatedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::Vpn::VpnForegroundActivationOperation> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::Vpn::VpnInterfaceId> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::Vpn::VpnManagementAgent> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::Vpn::VpnNamespaceAssignment> : winrt::impl::hash_base {};

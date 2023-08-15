@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -88,6 +88,7 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Geolocation
     struct IGeocoordinateWithPoint;
     struct IGeocoordinateWithPositionData;
     struct IGeocoordinateWithPositionSourceTimestamp;
+    struct IGeocoordinateWithRemoteSource;
     struct IGeolocator;
     struct IGeolocator2;
     struct IGeolocatorStatics;
@@ -140,6 +141,7 @@ namespace winrt::impl
     template <> struct category<Windows::Devices::Geolocation::IGeocoordinateWithPoint>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Geolocation::IGeocoordinateWithPositionData>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Geolocation::IGeocoordinateWithPositionSourceTimestamp>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Geolocation::IGeocoordinateWithRemoteSource>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Geolocation::IGeolocator>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Geolocation::IGeolocator2>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Geolocation::IGeolocatorStatics>{ using type = interface_category; };
@@ -222,6 +224,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::IGeocoordinateWithPoint> = L"Windows.Devices.Geolocation.IGeocoordinateWithPoint";
     template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::IGeocoordinateWithPositionData> = L"Windows.Devices.Geolocation.IGeocoordinateWithPositionData";
     template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::IGeocoordinateWithPositionSourceTimestamp> = L"Windows.Devices.Geolocation.IGeocoordinateWithPositionSourceTimestamp";
+    template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::IGeocoordinateWithRemoteSource> = L"Windows.Devices.Geolocation.IGeocoordinateWithRemoteSource";
     template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::IGeolocator> = L"Windows.Devices.Geolocation.IGeolocator";
     template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::IGeolocator2> = L"Windows.Devices.Geolocation.IGeolocator2";
     template <> inline constexpr auto& name_v<Windows::Devices::Geolocation::IGeolocatorStatics> = L"Windows.Devices.Geolocation.IGeolocatorStatics";
@@ -254,6 +257,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::Devices::Geolocation::IGeocoordinateWithPoint>{ 0xFEEA0525,0xD22C,0x4D46,{ 0xB5,0x27,0x0B,0x96,0x06,0x6F,0xC7,0xDB } }; // FEEA0525-D22C-4D46-B527-0B96066FC7DB
     template <> inline constexpr guid guid_v<Windows::Devices::Geolocation::IGeocoordinateWithPositionData>{ 0x95E634BE,0xDBD6,0x40AC,{ 0xB8,0xF2,0xA6,0x5C,0x03,0x40,0xD9,0xA6 } }; // 95E634BE-DBD6-40AC-B8F2-A65C0340D9A6
     template <> inline constexpr guid guid_v<Windows::Devices::Geolocation::IGeocoordinateWithPositionSourceTimestamp>{ 0x8543FC02,0xC9F1,0x4610,{ 0xAF,0xE0,0x8B,0xC3,0xA6,0xA8,0x70,0x36 } }; // 8543FC02-C9F1-4610-AFE0-8BC3A6A87036
+    template <> inline constexpr guid guid_v<Windows::Devices::Geolocation::IGeocoordinateWithRemoteSource>{ 0x397CEBD7,0xEE38,0x5F3B,{ 0x89,0x00,0xC4,0xA7,0xBC,0x9C,0xF9,0x53 } }; // 397CEBD7-EE38-5F3B-8900-C4A7BC9CF953
     template <> inline constexpr guid guid_v<Windows::Devices::Geolocation::IGeolocator>{ 0xA9C3BF62,0x4524,0x4989,{ 0x8A,0xA9,0xDE,0x01,0x9D,0x2E,0x55,0x1F } }; // A9C3BF62-4524-4989-8AA9-DE019D2E551F
     template <> inline constexpr guid guid_v<Windows::Devices::Geolocation::IGeolocator2>{ 0xD1B42E6D,0x8891,0x43B4,{ 0xAD,0x36,0x27,0xC6,0xFE,0x9A,0x97,0xB1 } }; // D1B42E6D-8891-43B4-AD36-27C6FE9A97B1
     template <> inline constexpr guid guid_v<Windows::Devices::Geolocation::IGeolocatorStatics>{ 0x9A8E7571,0x2DF5,0x4591,{ 0x9F,0x87,0xEB,0x5F,0xD8,0x94,0xE9,0xB7 } }; // 9A8E7571-2DF5-4591-9F87-EB5FD894E9B7
@@ -398,6 +402,13 @@ namespace winrt::impl
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall get_PositionSourceTimestamp(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::Devices::Geolocation::IGeocoordinateWithRemoteSource>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IsRemoteSource(bool*) noexcept = 0;
         };
     };
     template <> struct abi<Windows::Devices::Geolocation::IGeolocator>
@@ -704,6 +715,15 @@ namespace winrt::impl
     template <> struct consume<Windows::Devices::Geolocation::IGeocoordinateWithPositionSourceTimestamp>
     {
         template <typename D> using type = consume_Windows_Devices_Geolocation_IGeocoordinateWithPositionSourceTimestamp<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Devices_Geolocation_IGeocoordinateWithRemoteSource
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsRemoteSource() const;
+    };
+    template <> struct consume<Windows::Devices::Geolocation::IGeocoordinateWithRemoteSource>
+    {
+        template <typename D> using type = consume_Windows_Devices_Geolocation_IGeocoordinateWithRemoteSource<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Geolocation_IGeolocator

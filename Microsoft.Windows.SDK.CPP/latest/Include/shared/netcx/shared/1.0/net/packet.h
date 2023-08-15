@@ -131,8 +131,6 @@ NetPacketGetExtension(
     SIZE_T offset
 )
 {
-    NT_ASSERT(offset <= 0xffff);
-
     return (void *)((UCHAR*)(packet)+offset);
 }
 

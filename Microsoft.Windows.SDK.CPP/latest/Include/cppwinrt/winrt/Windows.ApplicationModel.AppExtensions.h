@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,8 @@
 #ifndef WINRT_Windows_ApplicationModel_AppExtensions_H
 #define WINRT_Windows_ApplicationModel_AppExtensions_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.201201.7"
 #include "winrt/Windows.ApplicationModel.h"
 #include "winrt/impl/Windows.ApplicationModel.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -56,6 +57,12 @@ namespace winrt::impl
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::AppExtensions::IAppExtension)->GetPublicFolderAsync(&operation));
         return Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFolder>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_AppExtensions_IAppExtension2<D>::AppUserModelId() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::AppExtensions::IAppExtension2)->get_AppUserModelId(&value));
+        return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::AppExtensions::AppExtension>>) consume_Windows_ApplicationModel_AppExtensions_IAppExtensionCatalog<D>::FindAllAsync() const
     {
@@ -274,6 +281,20 @@ namespace winrt::impl
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
             *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Storage::StorageFolder>>(this->shim().GetPublicFolderAsync());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::ApplicationModel::AppExtensions::IAppExtension2> : produce_base<D, Windows::ApplicationModel::AppExtensions::IAppExtension2>
+    {
+        int32_t __stdcall get_AppUserModelId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().AppUserModelId());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -523,6 +544,7 @@ namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Windows::ApplicationModel::AppExtensions::IAppExtension> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::AppExtensions::IAppExtension2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::AppExtensions::IAppExtensionCatalog> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::AppExtensions::IAppExtensionCatalogStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::AppExtensions::IAppExtensionPackageInstalledEventArgs> : winrt::impl::hash_base {};

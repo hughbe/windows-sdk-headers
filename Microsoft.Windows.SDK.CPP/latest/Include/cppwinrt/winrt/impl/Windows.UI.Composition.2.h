@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -481,7 +481,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Composition
         CompositionVisualSurface(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Composition::ICompositionVisualSurface(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) Compositor : Windows::UI::Composition::ICompositor,
-        impl::require<Compositor, Windows::UI::Composition::ICompositor2, Windows::UI::Composition::ICompositor3, Windows::UI::Composition::ICompositor4, Windows::UI::Composition::ICompositor5, Windows::UI::Composition::ICompositor6, Windows::UI::Composition::ICompositorWithProjectedShadow, Windows::UI::Composition::ICompositorWithRadialGradient, Windows::UI::Composition::ICompositorWithVisualSurface, Windows::UI::Composition::ICompositor7, Windows::Foundation::IClosable>
+        impl::require<Compositor, Windows::UI::Composition::ICompositor2, Windows::UI::Composition::ICompositor3, Windows::UI::Composition::ICompositor4, Windows::UI::Composition::ICompositor5, Windows::UI::Composition::ICompositor6, Windows::UI::Composition::ICompositorWithProjectedShadow, Windows::UI::Composition::ICompositorWithRadialGradient, Windows::UI::Composition::ICompositorWithVisualSurface, Windows::UI::Composition::ICompositor7, Windows::UI::Composition::ICompositorWithBlurredWallpaperBackdropBrush, Windows::Foundation::IClosable>
     {
         Compositor(std::nullptr_t) noexcept {}
         Compositor(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Composition::ICompositor(ptr, take_ownership_from_abi) {}

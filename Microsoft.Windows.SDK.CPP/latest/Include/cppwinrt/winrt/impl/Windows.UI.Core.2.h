@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,6 +6,7 @@
 #ifndef WINRT_Windows_UI_Core_2_H
 #define WINRT_Windows_UI_Core_2_H
 #include "winrt/impl/Windows.Foundation.2.h"
+#include "winrt/impl/Windows.UI.Composition.2.h"
 #include "winrt/impl/Windows.UI.Core.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::Core
 {
@@ -111,10 +112,18 @@ WINRT_EXPORT namespace winrt::Windows::UI::Core
         CoreDispatcher(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Core::ICoreDispatcher(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) CoreIndependentInputSource : Windows::UI::Core::ICoreInputSourceBase,
-        impl::require<CoreIndependentInputSource, Windows::UI::Core::ICorePointerInputSource, Windows::UI::Core::ICorePointerInputSource2>
+        impl::require<CoreIndependentInputSource, Windows::UI::Core::ICorePointerInputSource, Windows::UI::Core::ICorePointerInputSource2, Windows::UI::Core::ICorePointerRedirector>
     {
         CoreIndependentInputSource(std::nullptr_t) noexcept {}
         CoreIndependentInputSource(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Core::ICoreInputSourceBase(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) CoreIndependentInputSourceController : Windows::UI::Core::ICoreIndependentInputSourceController,
+        impl::require<CoreIndependentInputSourceController, Windows::Foundation::IClosable>
+    {
+        CoreIndependentInputSourceController(std::nullptr_t) noexcept {}
+        CoreIndependentInputSourceController(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Core::ICoreIndependentInputSourceController(ptr, take_ownership_from_abi) {}
+        static auto CreateForVisual(Windows::UI::Composition::Visual const& visual);
+        static auto CreateForIVisualElement(Windows::UI::Composition::IVisualElement const& visualElement);
     };
     struct __declspec(empty_bases) CoreWindow : Windows::UI::Core::ICoreWindow,
         impl::require<CoreWindow, Windows::UI::Core::ICoreWindow2, Windows::UI::Core::ICorePointerRedirector, Windows::UI::Core::ICoreWindow3, Windows::UI::Core::ICoreWindow4, Windows::UI::Core::ICoreWindow5, Windows::UI::Core::ICoreWindowWithContext>

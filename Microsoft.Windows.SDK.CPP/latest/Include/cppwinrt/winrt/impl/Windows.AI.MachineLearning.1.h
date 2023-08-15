@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -14,6 +14,13 @@ WINRT_EXPORT namespace winrt::Windows::AI::MachineLearning
     {
         IImageFeatureDescriptor(std::nullptr_t = nullptr) noexcept {}
         IImageFeatureDescriptor(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IImageFeatureDescriptor2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IImageFeatureDescriptor2>
+    {
+        IImageFeatureDescriptor2(std::nullptr_t = nullptr) noexcept {}
+        IImageFeatureDescriptor2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IImageFeatureValue :
         Windows::Foundation::IInspectable,

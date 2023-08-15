@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -15,6 +15,20 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::ConversationalAgent
         IActivationSignalDetectionConfiguration(std::nullptr_t = nullptr) noexcept {}
         IActivationSignalDetectionConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) IActivationSignalDetectionConfiguration2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IActivationSignalDetectionConfiguration2>
+    {
+        IActivationSignalDetectionConfiguration2(std::nullptr_t = nullptr) noexcept {}
+        IActivationSignalDetectionConfiguration2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IActivationSignalDetectionConfigurationCreationResult :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IActivationSignalDetectionConfigurationCreationResult>
+    {
+        IActivationSignalDetectionConfigurationCreationResult(std::nullptr_t = nullptr) noexcept {}
+        IActivationSignalDetectionConfigurationCreationResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IActivationSignalDetector :
         Windows::Foundation::IInspectable,
         impl::consume_t<IActivationSignalDetector>
@@ -22,12 +36,26 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::ConversationalAgent
         IActivationSignalDetector(std::nullptr_t = nullptr) noexcept {}
         IActivationSignalDetector(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) IActivationSignalDetector2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IActivationSignalDetector2>
+    {
+        IActivationSignalDetector2(std::nullptr_t = nullptr) noexcept {}
+        IActivationSignalDetector2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IConversationalAgentDetectorManager :
         Windows::Foundation::IInspectable,
         impl::consume_t<IConversationalAgentDetectorManager>
     {
         IConversationalAgentDetectorManager(std::nullptr_t = nullptr) noexcept {}
         IConversationalAgentDetectorManager(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IConversationalAgentDetectorManager2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IConversationalAgentDetectorManager2>
+    {
+        IConversationalAgentDetectorManager2(std::nullptr_t = nullptr) noexcept {}
+        IConversationalAgentDetectorManager2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IConversationalAgentDetectorManagerStatics :
         Windows::Foundation::IInspectable,
@@ -42,6 +70,13 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::ConversationalAgent
     {
         IConversationalAgentSession(std::nullptr_t = nullptr) noexcept {}
         IConversationalAgentSession(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IConversationalAgentSession2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IConversationalAgentSession2>
+    {
+        IConversationalAgentSession2(std::nullptr_t = nullptr) noexcept {}
+        IConversationalAgentSession2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IConversationalAgentSessionInterruptedEventArgs :
         Windows::Foundation::IInspectable,
@@ -63,6 +98,13 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::ConversationalAgent
     {
         IConversationalAgentSignal(std::nullptr_t = nullptr) noexcept {}
         IConversationalAgentSignal(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IConversationalAgentSignal2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IConversationalAgentSignal2>
+    {
+        IConversationalAgentSignal2(std::nullptr_t = nullptr) noexcept {}
+        IConversationalAgentSignal2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IConversationalAgentSignalDetectedEventArgs :
         Windows::Foundation::IInspectable,
@@ -91,6 +133,13 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::ConversationalAgent
     {
         IDetectionConfigurationAvailabilityInfo(std::nullptr_t = nullptr) noexcept {}
         IDetectionConfigurationAvailabilityInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IDetectionConfigurationAvailabilityInfo2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IDetectionConfigurationAvailabilityInfo2>
+    {
+        IDetectionConfigurationAvailabilityInfo2(std::nullptr_t = nullptr) noexcept {}
+        IDetectionConfigurationAvailabilityInfo2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

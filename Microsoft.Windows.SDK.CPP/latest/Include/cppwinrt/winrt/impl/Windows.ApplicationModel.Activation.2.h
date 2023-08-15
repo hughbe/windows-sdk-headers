@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -183,6 +183,12 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Activation
     {
         LockScreenComponentActivatedEventArgs(std::nullptr_t) noexcept {}
         LockScreenComponentActivatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Activation::IActivatedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PhoneCallActivatedEventArgs : Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs,
+        impl::require<PhoneCallActivatedEventArgs, Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser>
+    {
+        PhoneCallActivatedEventArgs(std::nullptr_t) noexcept {}
+        PhoneCallActivatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) PickerReturnedActivatedEventArgs : Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs
     {

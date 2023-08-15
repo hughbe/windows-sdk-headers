@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,8 @@
 #ifndef WINRT_Windows_ApplicationModel_ConversationalAgent_H
 #define WINRT_Windows_ApplicationModel_ConversationalAgent_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.201201.7"
 #include "winrt/Windows.ApplicationModel.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -153,6 +154,48 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration)->ClearTrainingDataAsync(&operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationSetModelDataResult) consume_Windows_ApplicationModel_ConversationalAgent_IActivationSignalDetectionConfiguration2<D>::SetModelDataWithResult(param::hstring const& dataType, Windows::Storage::Streams::IInputStream const& data) const
+    {
+        Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationSetModelDataResult result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration2)->SetModelDataWithResult(*(void**)(&dataType), *(void**)(&data), reinterpret_cast<int32_t*>(&result)));
+        return result;
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationSetModelDataResult>) consume_Windows_ApplicationModel_ConversationalAgent_IActivationSignalDetectionConfiguration2<D>::SetModelDataWithResultAsync(param::hstring const& dataType, Windows::Storage::Streams::IInputStream const& data) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration2)->SetModelDataWithResultAsync(*(void**)(&dataType), *(void**)(&data), &operation));
+        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationSetModelDataResult>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationStateChangeResult>) consume_Windows_ApplicationModel_ConversationalAgent_IActivationSignalDetectionConfiguration2<D>::SetEnabledWithResultAsync(bool value) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration2)->SetEnabledWithResultAsync(value, &operation));
+        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationStateChangeResult>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationStateChangeResult) consume_Windows_ApplicationModel_ConversationalAgent_IActivationSignalDetectionConfiguration2<D>::SetEnabledWithResult(bool value) const
+    {
+        Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationStateChangeResult result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration2)->SetEnabledWithResult(value, reinterpret_cast<int32_t*>(&result)));
+        return result;
+    }
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_ApplicationModel_ConversationalAgent_IActivationSignalDetectionConfiguration2<D>::TrainingStepCompletionMaxAllowedTime() const
+    {
+        uint32_t value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration2)->get_TrainingStepCompletionMaxAllowedTime(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationStatus) consume_Windows_ApplicationModel_ConversationalAgent_IActivationSignalDetectionConfigurationCreationResult<D>::Status() const
+    {
+        Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfigurationCreationResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration) consume_Windows_ApplicationModel_ConversationalAgent_IActivationSignalDetectionConfigurationCreationResult<D>::Configuration() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfigurationCreationResult)->get_Configuration(&value));
+        return Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration{ value, take_ownership_from_abi };
+    }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_ConversationalAgent_IActivationSignalDetector<D>::ProviderId() const
     {
         void* value{};
@@ -245,6 +288,48 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector)->RemoveConfigurationAsync(*(void**)(&signalId), *(void**)(&modelId), &operation));
         return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVector<hstring>>) consume_Windows_ApplicationModel_ConversationalAgent_IActivationSignalDetector2<D>::GetAvailableModelIdsForSignalIdAsync(param::hstring const& signalId) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector2)->GetAvailableModelIdsForSignalIdAsync(*(void**)(&signalId), &operation));
+        return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVector<hstring>>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) consume_Windows_ApplicationModel_ConversationalAgent_IActivationSignalDetector2<D>::GetAvailableModelIdsForSignalId(param::hstring const& signalId) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector2)->GetAvailableModelIdsForSignalId(*(void**)(&signalId), &result));
+        return Windows::Foundation::Collections::IVector<hstring>{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult>) consume_Windows_ApplicationModel_ConversationalAgent_IActivationSignalDetector2<D>::CreateConfigurationWithResultAsync(param::hstring const& signalId, param::hstring const& modelId, param::hstring const& displayName) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector2)->CreateConfigurationWithResultAsync(*(void**)(&signalId), *(void**)(&modelId), *(void**)(&displayName), &operation));
+        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult) consume_Windows_ApplicationModel_ConversationalAgent_IActivationSignalDetector2<D>::CreateConfigurationWithResult(param::hstring const& signalId, param::hstring const& modelId, param::hstring const& displayName) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector2)->CreateConfigurationWithResult(*(void**)(&signalId), *(void**)(&modelId), *(void**)(&displayName), &result));
+        return Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationRemovalResult>) consume_Windows_ApplicationModel_ConversationalAgent_IActivationSignalDetector2<D>::RemoveConfigurationWithResultAsync(param::hstring const& signalId, param::hstring const& modelId) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector2)->RemoveConfigurationWithResultAsync(*(void**)(&signalId), *(void**)(&modelId), &operation));
+        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationRemovalResult>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationRemovalResult) consume_Windows_ApplicationModel_ConversationalAgent_IActivationSignalDetector2<D>::RemoveConfigurationWithResult(param::hstring const& signalId, param::hstring const& modelId) const
+    {
+        Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationRemovalResult result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector2)->RemoveConfigurationWithResult(*(void**)(&signalId), *(void**)(&modelId), reinterpret_cast<int32_t*>(&result)));
+        return result;
+    }
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_ConversationalAgent_IActivationSignalDetector2<D>::DetectorId() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector2)->get_DetectorId(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
     template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>) consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentDetectorManager<D>::GetAllActivationSignalDetectors() const
     {
         void* result{};
@@ -268,6 +353,18 @@ namespace winrt::impl
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager)->GetActivationSignalDetectorsAsync(static_cast<int32_t>(kind), &operation));
         return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector) consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentDetectorManager2<D>::GetActivationSignalDetectorFromId(param::hstring const& detectorId) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager2)->GetActivationSignalDetectorFromId(*(void**)(&detectorId), &result));
+        return Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>) consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentDetectorManager2<D>::GetActivationSignalDetectorFromIdAsync(param::hstring const& detectorId) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager2)->GetActivationSignalDetectorFromIdAsync(*(void**)(&detectorId), &operation));
+        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>{ operation, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager) consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentDetectorManagerStatics<D>::Default() const
     {
@@ -485,6 +582,40 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession)->GetSupportedSignalModelIds(&result));
         return Windows::Foundation::Collections::IVectorView<uint32_t>{ result, take_ownership_from_abi };
     }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentActivationResult>) consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentSession2<D>::RequestActivationAsync(Windows::ApplicationModel::ConversationalAgent::ConversationalAgentActivationKind const& activationKind) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession2)->RequestActivationAsync(static_cast<int32_t>(activationKind), &operation));
+        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentActivationResult>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ConversationalAgentActivationResult) consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentSession2<D>::RequestActivation(Windows::ApplicationModel::ConversationalAgent::ConversationalAgentActivationKind const& activationKind) const
+    {
+        Windows::ApplicationModel::ConversationalAgent::ConversationalAgentActivationResult result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession2)->RequestActivation(static_cast<int32_t>(activationKind), reinterpret_cast<int32_t*>(&result)));
+        return result;
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentSession2<D>::SetSupportLockScreenActivationAsync(bool lockScreenActivationSupported) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession2)->SetSupportLockScreenActivationAsync(lockScreenActivationSupported, &operation));
+        return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentSession2<D>::SetSupportLockScreenActivation(bool lockScreenActivationSupported) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession2)->SetSupportLockScreenActivation(lockScreenActivationSupported));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentVoiceActivationPrerequisiteKind>) consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentSession2<D>::GetMissingPrerequisites() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession2)->GetMissingPrerequisites(&result));
+        return Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentVoiceActivationPrerequisiteKind>{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentVoiceActivationPrerequisiteKind>>) consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentSession2<D>::GetMissingPrerequisitesAsync() const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession2)->GetMissingPrerequisitesAsync(&operation));
+        return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentVoiceActivationPrerequisiteKind>>{ operation, take_ownership_from_abi };
+    }
     template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession>) consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentSessionStatics<D>::GetCurrentSessionAsync() const
     {
         void* operation{};
@@ -557,6 +688,18 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignal)->put_SignalEnd(impl::bind_in(value)));
     }
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentSignal2<D>::DetectorId() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignal2)->get_DetectorId(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind) consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentSignal2<D>::DetectorKind() const
+    {
+        Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignal2)->get_DetectorKind(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
     template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangeType) consume_Windows_ApplicationModel_ConversationalAgent_IConversationalAgentSystemStateChangedEventArgs<D>::SystemStateChangeType() const
     {
         Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangeType value{};
@@ -592,6 +735,12 @@ namespace winrt::impl
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityInfo)->get_HasLockScreenPermission(&value));
         return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::SignalDetectorResourceKind>) consume_Windows_ApplicationModel_ConversationalAgent_IDetectionConfigurationAvailabilityInfo2<D>::UnavailableSystemResources() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityInfo2)->get_UnavailableSystemResources(&value));
+        return Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::SignalDetectorResourceKind>{ value, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
@@ -782,6 +931,70 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration2> : produce_base<D, Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration2>
+    {
+        int32_t __stdcall SetModelDataWithResult(void* dataType, void* data, int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationSetModelDataResult>(this->shim().SetModelDataWithResult(*reinterpret_cast<hstring const*>(&dataType), *reinterpret_cast<Windows::Storage::Streams::IInputStream const*>(&data)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetModelDataWithResultAsync(void* dataType, void* data, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationSetModelDataResult>>(this->shim().SetModelDataWithResultAsync(*reinterpret_cast<hstring const*>(&dataType), *reinterpret_cast<Windows::Storage::Streams::IInputStream const*>(&data)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetEnabledWithResultAsync(bool value, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationStateChangeResult>>(this->shim().SetEnabledWithResultAsync(value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetEnabledWithResult(bool value, int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationStateChangeResult>(this->shim().SetEnabledWithResult(value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_TrainingStepCompletionMaxAllowedTime(uint32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint32_t>(this->shim().TrainingStepCompletionMaxAllowedTime());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfigurationCreationResult> : produce_base<D, Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfigurationCreationResult>
+    {
+        int32_t __stdcall get_Status(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationStatus>(this->shim().Status());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Configuration(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration>(this->shim().Configuration());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector> : produce_base<D, Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector>
     {
         int32_t __stdcall get_ProviderId(void** value) noexcept final try
@@ -912,6 +1125,67 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector2> : produce_base<D, Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector2>
+    {
+        int32_t __stdcall GetAvailableModelIdsForSignalIdAsync(void* signalId, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVector<hstring>>>(this->shim().GetAvailableModelIdsForSignalIdAsync(*reinterpret_cast<hstring const*>(&signalId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetAvailableModelIdsForSignalId(void* signalId, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Foundation::Collections::IVector<hstring>>(this->shim().GetAvailableModelIdsForSignalId(*reinterpret_cast<hstring const*>(&signalId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateConfigurationWithResultAsync(void* signalId, void* modelId, void* displayName, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult>>(this->shim().CreateConfigurationWithResultAsync(*reinterpret_cast<hstring const*>(&signalId), *reinterpret_cast<hstring const*>(&modelId), *reinterpret_cast<hstring const*>(&displayName)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateConfigurationWithResult(void* signalId, void* modelId, void* displayName, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult>(this->shim().CreateConfigurationWithResult(*reinterpret_cast<hstring const*>(&signalId), *reinterpret_cast<hstring const*>(&modelId), *reinterpret_cast<hstring const*>(&displayName)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall RemoveConfigurationWithResultAsync(void* signalId, void* modelId, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationRemovalResult>>(this->shim().RemoveConfigurationWithResultAsync(*reinterpret_cast<hstring const*>(&signalId), *reinterpret_cast<hstring const*>(&modelId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall RemoveConfigurationWithResult(void* signalId, void* modelId, int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationRemovalResult>(this->shim().RemoveConfigurationWithResult(*reinterpret_cast<hstring const*>(&signalId), *reinterpret_cast<hstring const*>(&modelId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_DetectorId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().DetectorId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager> : produce_base<D, Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager>
     {
         int32_t __stdcall GetAllActivationSignalDetectors(void** result) noexcept final try
@@ -943,6 +1217,28 @@ namespace winrt::impl
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
             *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>>>(this->shim().GetActivationSignalDetectorsAsync(*reinterpret_cast<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind const*>(&kind)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager2> : produce_base<D, Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager2>
+    {
+        int32_t __stdcall GetActivationSignalDetectorFromId(void* detectorId, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>(this->shim().GetActivationSignalDetectorFromId(*reinterpret_cast<hstring const*>(&detectorId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetActivationSignalDetectorFromIdAsync(void* detectorId, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>>(this->shim().GetActivationSignalDetectorFromIdAsync(*reinterpret_cast<hstring const*>(&detectorId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1224,6 +1520,58 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession2> : produce_base<D, Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession2>
+    {
+        int32_t __stdcall RequestActivationAsync(int32_t activationKind, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentActivationResult>>(this->shim().RequestActivationAsync(*reinterpret_cast<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentActivationKind const*>(&activationKind)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall RequestActivation(int32_t activationKind, int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentActivationResult>(this->shim().RequestActivation(*reinterpret_cast<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentActivationKind const*>(&activationKind)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetSupportLockScreenActivationAsync(bool lockScreenActivationSupported, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<Windows::Foundation::IAsyncAction>(this->shim().SetSupportLockScreenActivationAsync(lockScreenActivationSupported));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetSupportLockScreenActivation(bool lockScreenActivationSupported) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SetSupportLockScreenActivation(lockScreenActivationSupported);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetMissingPrerequisites(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentVoiceActivationPrerequisiteKind>>(this->shim().GetMissingPrerequisites());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetMissingPrerequisitesAsync(void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::ConversationalAgentVoiceActivationPrerequisiteKind>>>(this->shim().GetMissingPrerequisitesAsync());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionInterruptedEventArgs> : produce_base<D, Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionInterruptedEventArgs>
     {
     };
@@ -1347,6 +1695,27 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignal2> : produce_base<D, Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignal2>
+    {
+        int32_t __stdcall get_DetectorId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().DetectorId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_DetectorKind(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind>(this->shim().DetectorKind());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignalDetectedEventArgs> : produce_base<D, Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignalDetectedEventArgs>
     {
     };
@@ -1411,6 +1780,20 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityInfo2> : produce_base<D, Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityInfo2>
+    {
+        int32_t __stdcall get_UnavailableSystemResources(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::ConversationalAgent::SignalDetectorResourceKind>>(this->shim().UnavailableSystemResources());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
 }
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::ConversationalAgent
 {
@@ -1431,18 +1814,26 @@ namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfiguration2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetectionConfigurationCreationResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IActivationSignalDetector2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManagerStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSession2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionInterruptedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSessionStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignal> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignal2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSignalDetectedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentSystemStateChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::IDetectionConfigurationAvailabilityInfo2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession> : winrt::impl::hash_base {};

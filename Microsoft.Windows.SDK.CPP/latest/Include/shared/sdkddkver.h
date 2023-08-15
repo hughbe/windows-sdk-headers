@@ -102,6 +102,8 @@ Abstract:
 //
 // NTDDI version constants
 //
+#define NTDDI_WIN4                          0x04000000
+
 #define NTDDI_WIN2K                         0x05000000
 #define NTDDI_WIN2KSP1                      0x05000100
 #define NTDDI_WIN2KSP2                      0x05000200
@@ -132,7 +134,7 @@ Abstract:
 #define NTDDI_VISTASP3                      NTDDI_WIN6SP3
 #define NTDDI_VISTASP4                      NTDDI_WIN6SP4
 
-#define NTDDI_LONGHORN  NTDDI_VISTA
+#define NTDDI_LONGHORN                      NTDDI_VISTA
 
 #define NTDDI_WS08                          NTDDI_WIN6SP1
 #define NTDDI_WS08SP2                       NTDDI_WIN6SP2
@@ -154,8 +156,9 @@ Abstract:
 #define NTDDI_WIN10_VB                      0x0A000008
 #define NTDDI_WIN10_MN                      0x0A000009
 #define NTDDI_WIN10_FE                      0x0A00000A
+#define NTDDI_WIN10_CO                      0x0A00000B
 
-#define WDK_NTDDI_VERSION                   NTDDI_WIN10_FE
+#define WDK_NTDDI_VERSION                   NTDDI_WIN10_CO
 
 
 //
@@ -227,11 +230,11 @@ Abstract:
 #define NTDDI_VERSION   NTDDI_VERSION_FROM_WIN32_WINNT(_WIN32_WINNT)
 #elif (_WIN32_WINNT >= _WIN32_WINNT_WIN10)
 // set NTDDI_VERSION to default to WDK_NTDDI_VERSION
-#define NTDDI_VERSION   WDK_NTDDI_VERSION 
+#define NTDDI_VERSION   WDK_NTDDI_VERSION
 #endif // (_WIN32_WINNT <= _WIN32_WINNT_WINBLUE)
 #else
 // set NTDDI_VERSION to default to latest if _WIN32_WINNT isn't set
-#define NTDDI_VERSION   0x0A00000A
+#define NTDDI_VERSION   0x0A00000B
 #endif // _WIN32_WINNT
 #endif // NTDDI_VERSION
 

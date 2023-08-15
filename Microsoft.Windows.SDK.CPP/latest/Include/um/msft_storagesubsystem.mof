@@ -710,6 +710,12 @@ class MSFT_StorageSubSystem : MSFT_StorageObject {
         [In, Units("Bytes")]
         UInt64 LogicalSectorSizeDefault,
 
+        [In, Units("Bytes")]
+        UInt64 MetadataLength,
+
+        [In, Units("Bytes")]
+        UInt64 MinimumAllocationSize,
+
         [In]
         UInt16 FaultDomainAwarenessDefault,
 

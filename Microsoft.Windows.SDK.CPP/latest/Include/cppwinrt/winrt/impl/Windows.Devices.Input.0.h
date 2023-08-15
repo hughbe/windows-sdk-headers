@@ -1,10 +1,14 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Devices_Input_0_H
 #define WINRT_Windows_Devices_Input_0_H
+WINRT_EXPORT namespace winrt::Windows::Devices::Haptics
+{
+    struct SimpleHapticsController;
+}
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
     struct EventRegistrationToken;
@@ -31,6 +35,7 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Input
     struct IPenButtonListener;
     struct IPenButtonListenerStatics;
     struct IPenDevice;
+    struct IPenDevice2;
     struct IPenDeviceStatics;
     struct IPenDockListener;
     struct IPenDockListenerStatics;
@@ -70,6 +75,7 @@ namespace winrt::impl
     template <> struct category<Windows::Devices::Input::IPenButtonListener>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Input::IPenButtonListenerStatics>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Input::IPenDevice>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Input::IPenDevice2>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Input::IPenDeviceStatics>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Input::IPenDockListener>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Input::IPenDockListenerStatics>{ using type = interface_category; };
@@ -124,6 +130,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::Devices::Input::IPenButtonListener> = L"Windows.Devices.Input.IPenButtonListener";
     template <> inline constexpr auto& name_v<Windows::Devices::Input::IPenButtonListenerStatics> = L"Windows.Devices.Input.IPenButtonListenerStatics";
     template <> inline constexpr auto& name_v<Windows::Devices::Input::IPenDevice> = L"Windows.Devices.Input.IPenDevice";
+    template <> inline constexpr auto& name_v<Windows::Devices::Input::IPenDevice2> = L"Windows.Devices.Input.IPenDevice2";
     template <> inline constexpr auto& name_v<Windows::Devices::Input::IPenDeviceStatics> = L"Windows.Devices.Input.IPenDeviceStatics";
     template <> inline constexpr auto& name_v<Windows::Devices::Input::IPenDockListener> = L"Windows.Devices.Input.IPenDockListener";
     template <> inline constexpr auto& name_v<Windows::Devices::Input::IPenDockListenerStatics> = L"Windows.Devices.Input.IPenDockListenerStatics";
@@ -144,6 +151,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::Devices::Input::IPenButtonListener>{ 0x8245C376,0x1EE3,0x53F7,{ 0xB1,0xF7,0x83,0x34,0xA1,0x6F,0x28,0x15 } }; // 8245C376-1EE3-53F7-B1F7-8334A16F2815
     template <> inline constexpr guid guid_v<Windows::Devices::Input::IPenButtonListenerStatics>{ 0x19A8A584,0x862F,0x5F69,{ 0xBF,0xEA,0x05,0xF6,0x58,0x4F,0x13,0x3F } }; // 19A8A584-862F-5F69-BFEA-05F6584F133F
     template <> inline constexpr guid guid_v<Windows::Devices::Input::IPenDevice>{ 0x31856EBA,0xA738,0x5A8C,{ 0xB8,0xF6,0xF9,0x7E,0xF6,0x8D,0x18,0xEF } }; // 31856EBA-A738-5A8C-B8F6-F97EF68D18EF
+    template <> inline constexpr guid guid_v<Windows::Devices::Input::IPenDevice2>{ 0x0207D327,0x7FB8,0x5566,{ 0x8C,0x34,0xF8,0x34,0x20,0x37,0xB7,0xF9 } }; // 0207D327-7FB8-5566-8C34-F8342037B7F9
     template <> inline constexpr guid guid_v<Windows::Devices::Input::IPenDeviceStatics>{ 0x9DFBBE01,0x0966,0x5180,{ 0xBC,0xB4,0xB8,0x50,0x60,0xE3,0x94,0x79 } }; // 9DFBBE01-0966-5180-BCB4-B85060E39479
     template <> inline constexpr guid guid_v<Windows::Devices::Input::IPenDockListener>{ 0x759F4D90,0x1DC0,0x55CB,{ 0xAD,0x18,0xB9,0x10,0x14,0x56,0xF5,0x92 } }; // 759F4D90-1DC0-55CB-AD18-B9101456F592
     template <> inline constexpr guid guid_v<Windows::Devices::Input::IPenDockListenerStatics>{ 0xCAB75E9A,0x0016,0x5C72,{ 0x96,0x9E,0xA9,0x7E,0x11,0x99,0x2A,0x93 } }; // CAB75E9A-0016-5C72-969E-A97E11992A93
@@ -237,6 +245,13 @@ namespace winrt::impl
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall get_PenId(winrt::guid*) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::Devices::Input::IPenDevice2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_SimpleHapticsController(void**) noexcept = 0;
         };
     };
     template <> struct abi<Windows::Devices::Input::IPenDeviceStatics>
@@ -425,6 +440,15 @@ namespace winrt::impl
     template <> struct consume<Windows::Devices::Input::IPenDevice>
     {
         template <typename D> using type = consume_Windows_Devices_Input_IPenDevice<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Devices_Input_IPenDevice2
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Haptics::SimpleHapticsController) SimpleHapticsController() const;
+    };
+    template <> struct consume<Windows::Devices::Input::IPenDevice2>
+    {
+        template <typename D> using type = consume_Windows_Devices_Input_IPenDevice2<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Input_IPenDeviceStatics

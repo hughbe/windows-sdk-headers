@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -90,6 +90,7 @@ WINRT_EXPORT namespace winrt::Windows::Media::Effects
         SpeakerCompensation = 16,
         DynamicRangeCompression = 17,
         FarFieldBeamForming = 18,
+        DeepNoiseSuppression = 19,
     };
     enum class MediaEffectClosedReason : int32_t
     {

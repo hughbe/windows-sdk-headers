@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -652,6 +652,13 @@ WINRT_EXPORT namespace winrt::Windows::UI::Composition
         ICompositionSpriteShape(std::nullptr_t = nullptr) noexcept {}
         ICompositionSpriteShape(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) ICompositionSupportsSystemBackdrop :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICompositionSupportsSystemBackdrop>
+    {
+        ICompositionSupportsSystemBackdrop(std::nullptr_t = nullptr) noexcept {}
+        ICompositionSupportsSystemBackdrop(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) ICompositionSurface :
         Windows::Foundation::IInspectable,
         impl::consume_t<ICompositionSurface>
@@ -798,6 +805,13 @@ WINRT_EXPORT namespace winrt::Windows::UI::Composition
     {
         ICompositorStatics(std::nullptr_t = nullptr) noexcept {}
         ICompositorStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICompositorWithBlurredWallpaperBackdropBrush :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICompositorWithBlurredWallpaperBackdropBrush>
+    {
+        ICompositorWithBlurredWallpaperBackdropBrush(std::nullptr_t = nullptr) noexcept {}
+        ICompositorWithBlurredWallpaperBackdropBrush(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICompositorWithProjectedShadow :
         Windows::Foundation::IInspectable,

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -119,6 +119,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Input::Inking
     struct IInkDrawingAttributesPencilProperties;
     struct IInkDrawingAttributesStatics;
     struct IInkInputConfiguration;
+    struct IInkInputConfiguration2;
     struct IInkInputProcessingConfiguration;
     struct IInkManager;
     struct IInkModelerAttributes;
@@ -142,6 +143,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Input::Inking
     struct IInkStroke;
     struct IInkStroke2;
     struct IInkStroke3;
+    struct IInkStroke4;
     struct IInkStrokeBuilder;
     struct IInkStrokeBuilder2;
     struct IInkStrokeBuilder3;
@@ -191,6 +193,7 @@ namespace winrt::impl
     template <> struct category<Windows::UI::Input::Inking::IInkDrawingAttributesPencilProperties>{ using type = interface_category; };
     template <> struct category<Windows::UI::Input::Inking::IInkDrawingAttributesStatics>{ using type = interface_category; };
     template <> struct category<Windows::UI::Input::Inking::IInkInputConfiguration>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::Inking::IInkInputConfiguration2>{ using type = interface_category; };
     template <> struct category<Windows::UI::Input::Inking::IInkInputProcessingConfiguration>{ using type = interface_category; };
     template <> struct category<Windows::UI::Input::Inking::IInkManager>{ using type = interface_category; };
     template <> struct category<Windows::UI::Input::Inking::IInkModelerAttributes>{ using type = interface_category; };
@@ -214,6 +217,7 @@ namespace winrt::impl
     template <> struct category<Windows::UI::Input::Inking::IInkStroke>{ using type = interface_category; };
     template <> struct category<Windows::UI::Input::Inking::IInkStroke2>{ using type = interface_category; };
     template <> struct category<Windows::UI::Input::Inking::IInkStroke3>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::Inking::IInkStroke4>{ using type = interface_category; };
     template <> struct category<Windows::UI::Input::Inking::IInkStrokeBuilder>{ using type = interface_category; };
     template <> struct category<Windows::UI::Input::Inking::IInkStrokeBuilder2>{ using type = interface_category; };
     template <> struct category<Windows::UI::Input::Inking::IInkStrokeBuilder3>{ using type = interface_category; };
@@ -307,6 +311,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::IInkDrawingAttributesPencilProperties> = L"Windows.UI.Input.Inking.IInkDrawingAttributesPencilProperties";
     template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::IInkDrawingAttributesStatics> = L"Windows.UI.Input.Inking.IInkDrawingAttributesStatics";
     template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::IInkInputConfiguration> = L"Windows.UI.Input.Inking.IInkInputConfiguration";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::IInkInputConfiguration2> = L"Windows.UI.Input.Inking.IInkInputConfiguration2";
     template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::IInkInputProcessingConfiguration> = L"Windows.UI.Input.Inking.IInkInputProcessingConfiguration";
     template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::IInkManager> = L"Windows.UI.Input.Inking.IInkManager";
     template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::IInkModelerAttributes> = L"Windows.UI.Input.Inking.IInkModelerAttributes";
@@ -330,6 +335,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::IInkStroke> = L"Windows.UI.Input.Inking.IInkStroke";
     template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::IInkStroke2> = L"Windows.UI.Input.Inking.IInkStroke2";
     template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::IInkStroke3> = L"Windows.UI.Input.Inking.IInkStroke3";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::IInkStroke4> = L"Windows.UI.Input.Inking.IInkStroke4";
     template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::IInkStrokeBuilder> = L"Windows.UI.Input.Inking.IInkStrokeBuilder";
     template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::IInkStrokeBuilder2> = L"Windows.UI.Input.Inking.IInkStrokeBuilder2";
     template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::IInkStrokeBuilder3> = L"Windows.UI.Input.Inking.IInkStrokeBuilder3";
@@ -353,6 +359,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::IInkDrawingAttributesPencilProperties>{ 0x4F2534CB,0x2D86,0x41BB,{ 0xB0,0xE8,0xE4,0xC2,0xA0,0x25,0x3C,0x52 } }; // 4F2534CB-2D86-41BB-B0E8-E4C2A0253C52
     template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::IInkDrawingAttributesStatics>{ 0xF731E03F,0x1A65,0x4862,{ 0x96,0xCB,0x6E,0x16,0x65,0xE1,0x7F,0x6D } }; // F731E03F-1A65-4862-96CB-6E1665E17F6D
     template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::IInkInputConfiguration>{ 0x93A68DC4,0x0B7B,0x49D7,{ 0xB3,0x4F,0x99,0x01,0xE5,0x24,0xDC,0xF2 } }; // 93A68DC4-0B7B-49D7-B34F-9901E524DCF2
+    template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::IInkInputConfiguration2>{ 0x6AC2272E,0x81B4,0x5CC4,{ 0xA3,0x6D,0xD0,0x57,0xC3,0x87,0xDF,0xDA } }; // 6AC2272E-81B4-5CC4-A36D-D057C387DFDA
     template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::IInkInputProcessingConfiguration>{ 0x2778D85E,0x33CA,0x4B06,{ 0xA6,0xD3,0xAC,0x39,0x45,0x11,0x6D,0x37 } }; // 2778D85E-33CA-4B06-A6D3-AC3945116D37
     template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::IInkManager>{ 0x4744737D,0x671B,0x4163,{ 0x9C,0x95,0x4E,0x8D,0x7A,0x03,0x5F,0xE1 } }; // 4744737D-671B-4163-9C95-4E8D7A035FE1
     template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::IInkModelerAttributes>{ 0xBAD31F27,0x0CD9,0x4BFD,{ 0xB6,0xF3,0x9E,0x03,0xBA,0x8D,0x74,0x54 } }; // BAD31F27-0CD9-4BFD-B6F3-9E03BA8D7454
@@ -376,6 +383,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::IInkStroke>{ 0x15144D60,0xCCE3,0x4FCF,{ 0x9D,0x52,0x11,0x51,0x8A,0xB6,0xAF,0xD4 } }; // 15144D60-CCE3-4FCF-9D52-11518AB6AFD4
     template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::IInkStroke2>{ 0x5DB9E4F4,0xBAFA,0x4DE1,{ 0x89,0xD3,0x20,0x1B,0x1E,0xD7,0xD8,0x9B } }; // 5DB9E4F4-BAFA-4DE1-89D3-201B1ED7D89B
     template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::IInkStroke3>{ 0x4A807374,0x9499,0x411D,{ 0xA1,0xC4,0x68,0x85,0x5D,0x03,0xD6,0x5F } }; // 4A807374-9499-411D-A1C4-68855D03D65F
+    template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::IInkStroke4>{ 0xCD5B62E5,0xB6E9,0x5B91,{ 0xA5,0x77,0x19,0x21,0xD2,0x34,0x86,0x90 } }; // CD5B62E5-B6E9-5B91-A577-1921D2348690
     template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::IInkStrokeBuilder>{ 0x82BBD1DC,0x1C63,0x41DC,{ 0x9E,0x07,0x4B,0x4A,0x70,0xCE,0xD8,0x01 } }; // 82BBD1DC-1C63-41DC-9E07-4B4A70CED801
     template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::IInkStrokeBuilder2>{ 0xBD82BC27,0x731F,0x4CBC,{ 0xBB,0xBF,0x6D,0x46,0x80,0x44,0xF1,0xE5 } }; // BD82BC27-731F-4CBC-BBBF-6D468044F1E5
     template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::IInkStrokeBuilder3>{ 0xB2C71FCD,0x5472,0x46B1,{ 0xA8,0x1D,0xC3,0x7A,0x3D,0x16,0x94,0x41 } }; // B2C71FCD-5472-46B1-A81D-C37A3D169441
@@ -486,6 +494,14 @@ namespace winrt::impl
             virtual int32_t __stdcall put_IsPrimaryBarrelButtonInputEnabled(bool) noexcept = 0;
             virtual int32_t __stdcall get_IsEraserInputEnabled(bool*) noexcept = 0;
             virtual int32_t __stdcall put_IsEraserInputEnabled(bool) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::UI::Input::Inking::IInkInputConfiguration2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IsPenHapticFeedbackEnabled(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_IsPenHapticFeedbackEnabled(bool) noexcept = 0;
         };
     };
     template <> struct abi<Windows::UI::Input::Inking::IInkInputProcessingConfiguration>
@@ -724,6 +740,13 @@ namespace winrt::impl
             virtual int32_t __stdcall put_StrokeStartedTime(void*) noexcept = 0;
             virtual int32_t __stdcall get_StrokeDuration(void**) noexcept = 0;
             virtual int32_t __stdcall put_StrokeDuration(void*) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::UI::Input::Inking::IInkStroke4>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_PointerId(uint32_t*) noexcept = 0;
         };
     };
     template <> struct abi<Windows::UI::Input::Inking::IInkStrokeBuilder>
@@ -973,6 +996,16 @@ namespace winrt::impl
     template <> struct consume<Windows::UI::Input::Inking::IInkInputConfiguration>
     {
         template <typename D> using type = consume_Windows_UI_Input_Inking_IInkInputConfiguration<D>;
+    };
+    template <typename D>
+    struct consume_Windows_UI_Input_Inking_IInkInputConfiguration2
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsPenHapticFeedbackEnabled() const;
+        WINRT_IMPL_AUTO(void) IsPenHapticFeedbackEnabled(bool value) const;
+    };
+    template <> struct consume<Windows::UI::Input::Inking::IInkInputConfiguration2>
+    {
+        template <typename D> using type = consume_Windows_UI_Input_Inking_IInkInputConfiguration2<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Input_Inking_IInkInputProcessingConfiguration
@@ -1261,6 +1294,15 @@ namespace winrt::impl
     template <> struct consume<Windows::UI::Input::Inking::IInkStroke3>
     {
         template <typename D> using type = consume_Windows_UI_Input_Inking_IInkStroke3<D>;
+    };
+    template <typename D>
+    struct consume_Windows_UI_Input_Inking_IInkStroke4
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) PointerId() const;
+    };
+    template <> struct consume<Windows::UI::Input::Inking::IInkStroke4>
+    {
+        template <typename D> using type = consume_Windows_UI_Input_Inking_IInkStroke4<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Input_Inking_IInkStrokeBuilder

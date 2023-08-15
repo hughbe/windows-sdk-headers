@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -50,6 +50,13 @@ WINRT_EXPORT namespace winrt::Windows::Networking::Vpn
     {
         IVpnChannel5(std::nullptr_t = nullptr) noexcept {}
         IVpnChannel5(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IVpnChannel6 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IVpnChannel6>
+    {
+        IVpnChannel6(std::nullptr_t = nullptr) noexcept {}
+        IVpnChannel6(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IVpnChannelActivityEventArgs :
         Windows::Foundation::IInspectable,
@@ -206,6 +213,20 @@ WINRT_EXPORT namespace winrt::Windows::Networking::Vpn
     {
         IVpnDomainNameInfoFactory(std::nullptr_t = nullptr) noexcept {}
         IVpnDomainNameInfoFactory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IVpnForegroundActivatedEventArgs :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IVpnForegroundActivatedEventArgs>
+    {
+        IVpnForegroundActivatedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IVpnForegroundActivatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IVpnForegroundActivationOperation :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IVpnForegroundActivationOperation>
+    {
+        IVpnForegroundActivationOperation(std::nullptr_t = nullptr) noexcept {}
+        IVpnForegroundActivationOperation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IVpnInterfaceId :
         Windows::Foundation::IInspectable,

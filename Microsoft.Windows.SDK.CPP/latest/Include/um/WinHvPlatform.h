@@ -60,6 +60,12 @@ WHvSetupPartition(
 
 HRESULT
 WINAPI
+WHvResetPartition(
+    _In_ WHV_PARTITION_HANDLE Partition
+    );
+
+HRESULT
+WINAPI
 WHvDeletePartition(
     _In_ WHV_PARTITION_HANDLE Partition
     );
@@ -674,8 +680,8 @@ WHvAcceptPartitionMigration(
 
 #endif // _WINHVAPI_H_
 
-#ifndef ext_ms_win_hyperv_hvplatform_l1_1_4_query_routines
-#define ext_ms_win_hyperv_hvplatform_l1_1_4_query_routines
+#ifndef ext_ms_win_hyperv_hvplatform_l1_1_5_query_routines
+#define ext_ms_win_hyperv_hvplatform_l1_1_5_query_routines
 
 //
 //Private Extension API Query Routines
@@ -700,6 +706,12 @@ IsWHvCreatePartitionPresent(
 BOOLEAN
 __stdcall
 IsWHvSetupPartitionPresent(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
+IsWHvResetPartitionPresent(
     VOID
     );
 

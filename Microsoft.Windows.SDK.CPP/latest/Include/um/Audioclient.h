@@ -117,6 +117,20 @@ typedef interface IAudioClientDuckingControl IAudioClientDuckingControl;
 #endif 	/* __IAudioClientDuckingControl_FWD_DEFINED__ */
 
 
+#ifndef __IAudioEffectsChangedNotificationClient_FWD_DEFINED__
+#define __IAudioEffectsChangedNotificationClient_FWD_DEFINED__
+typedef interface IAudioEffectsChangedNotificationClient IAudioEffectsChangedNotificationClient;
+
+#endif 	/* __IAudioEffectsChangedNotificationClient_FWD_DEFINED__ */
+
+
+#ifndef __IAudioEffectsManager_FWD_DEFINED__
+#define __IAudioEffectsManager_FWD_DEFINED__
+typedef interface IAudioEffectsManager IAudioEffectsManager;
+
+#endif 	/* __IAudioEffectsManager_FWD_DEFINED__ */
+
+
 #ifndef __IAudioStreamVolume_FWD_DEFINED__
 #define __IAudioStreamVolume_FWD_DEFINED__
 typedef interface IAudioStreamVolume IAudioStreamVolume;
@@ -1831,11 +1845,238 @@ EXTERN_C const IID IID_IAudioClientDuckingControl;
 /* interface __MIDL_itf_audioclient_0000_0010 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+typedef /* [v1_enum] */ 
+enum AUDIO_EFFECT_STATE
+    {
+        AUDIO_EFFECT_STATE_OFF	= 0,
+        AUDIO_EFFECT_STATE_ON	= ( AUDIO_EFFECT_STATE_OFF + 1 ) 
+    } 	AUDIO_EFFECT_STATE;
+
+typedef struct AUDIO_EFFECT
+    {
+    GUID id;
+    BOOL canSetState;
+    AUDIO_EFFECT_STATE state;
+    } 	AUDIO_EFFECT;
+
 
 
 extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0010_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0010_v0_0_s_ifspec;
+
+#ifndef __IAudioEffectsChangedNotificationClient_INTERFACE_DEFINED__
+#define __IAudioEffectsChangedNotificationClient_INTERFACE_DEFINED__
+
+/* interface IAudioEffectsChangedNotificationClient */
+/* [local][unique][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAudioEffectsChangedNotificationClient;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("A5DED44F-3C5D-4B2B-BD1E-5DC1EE20BBF6")
+    IAudioEffectsChangedNotificationClient : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE OnAudioEffectsChanged( void) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAudioEffectsChangedNotificationClientVtbl
+    {
+        BEGIN_INTERFACE
+        
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IAudioEffectsChangedNotificationClient * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IAudioEffectsChangedNotificationClient * This);
+        
+        DECLSPEC_XFGVIRT(IUnknown, Release)
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IAudioEffectsChangedNotificationClient * This);
+        
+        DECLSPEC_XFGVIRT(IAudioEffectsChangedNotificationClient, OnAudioEffectsChanged)
+        HRESULT ( STDMETHODCALLTYPE *OnAudioEffectsChanged )( 
+            IAudioEffectsChangedNotificationClient * This);
+        
+        END_INTERFACE
+    } IAudioEffectsChangedNotificationClientVtbl;
+
+    interface IAudioEffectsChangedNotificationClient
+    {
+        CONST_VTBL struct IAudioEffectsChangedNotificationClientVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAudioEffectsChangedNotificationClient_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAudioEffectsChangedNotificationClient_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAudioEffectsChangedNotificationClient_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAudioEffectsChangedNotificationClient_OnAudioEffectsChanged(This)	\
+    ( (This)->lpVtbl -> OnAudioEffectsChanged(This) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAudioEffectsChangedNotificationClient_INTERFACE_DEFINED__ */
+
+
+#ifndef __IAudioEffectsManager_INTERFACE_DEFINED__
+#define __IAudioEffectsManager_INTERFACE_DEFINED__
+
+/* interface IAudioEffectsManager */
+/* [local][unique][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAudioEffectsManager;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("4460B3AE-4B44-4527-8676-7548A8ACD260")
+    IAudioEffectsManager : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE RegisterAudioEffectsChangedNotificationCallback( 
+            /* [in] */ IAudioEffectsChangedNotificationClient *client) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE UnregisterAudioEffectsChangedNotificationCallback( 
+            /* [in] */ IAudioEffectsChangedNotificationClient *client) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetAudioEffects( 
+            /* [annotation][size_is][size_is][out] */ 
+            _Outptr_result_buffer_maybenull_(*numEffects)  AUDIO_EFFECT **effects,
+            /* [out] */ UINT32 *numEffects) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE SetAudioEffectState( 
+            /* [in] */ GUID effectId,
+            /* [in] */ AUDIO_EFFECT_STATE state) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAudioEffectsManagerVtbl
+    {
+        BEGIN_INTERFACE
+        
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IAudioEffectsManager * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IAudioEffectsManager * This);
+        
+        DECLSPEC_XFGVIRT(IUnknown, Release)
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IAudioEffectsManager * This);
+        
+        DECLSPEC_XFGVIRT(IAudioEffectsManager, RegisterAudioEffectsChangedNotificationCallback)
+        HRESULT ( STDMETHODCALLTYPE *RegisterAudioEffectsChangedNotificationCallback )( 
+            IAudioEffectsManager * This,
+            /* [in] */ IAudioEffectsChangedNotificationClient *client);
+        
+        DECLSPEC_XFGVIRT(IAudioEffectsManager, UnregisterAudioEffectsChangedNotificationCallback)
+        HRESULT ( STDMETHODCALLTYPE *UnregisterAudioEffectsChangedNotificationCallback )( 
+            IAudioEffectsManager * This,
+            /* [in] */ IAudioEffectsChangedNotificationClient *client);
+        
+        DECLSPEC_XFGVIRT(IAudioEffectsManager, GetAudioEffects)
+        HRESULT ( STDMETHODCALLTYPE *GetAudioEffects )( 
+            IAudioEffectsManager * This,
+            /* [annotation][size_is][size_is][out] */ 
+            _Outptr_result_buffer_maybenull_(*numEffects)  AUDIO_EFFECT **effects,
+            /* [out] */ UINT32 *numEffects);
+        
+        DECLSPEC_XFGVIRT(IAudioEffectsManager, SetAudioEffectState)
+        HRESULT ( STDMETHODCALLTYPE *SetAudioEffectState )( 
+            IAudioEffectsManager * This,
+            /* [in] */ GUID effectId,
+            /* [in] */ AUDIO_EFFECT_STATE state);
+        
+        END_INTERFACE
+    } IAudioEffectsManagerVtbl;
+
+    interface IAudioEffectsManager
+    {
+        CONST_VTBL struct IAudioEffectsManagerVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAudioEffectsManager_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAudioEffectsManager_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAudioEffectsManager_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAudioEffectsManager_RegisterAudioEffectsChangedNotificationCallback(This,client)	\
+    ( (This)->lpVtbl -> RegisterAudioEffectsChangedNotificationCallback(This,client) ) 
+
+#define IAudioEffectsManager_UnregisterAudioEffectsChangedNotificationCallback(This,client)	\
+    ( (This)->lpVtbl -> UnregisterAudioEffectsChangedNotificationCallback(This,client) ) 
+
+#define IAudioEffectsManager_GetAudioEffects(This,effects,numEffects)	\
+    ( (This)->lpVtbl -> GetAudioEffects(This,effects,numEffects) ) 
+
+#define IAudioEffectsManager_SetAudioEffectState(This,effectId,state)	\
+    ( (This)->lpVtbl -> SetAudioEffectState(This,effectId,state) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAudioEffectsManager_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_audioclient_0000_0012 */
+/* [local] */ 
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+
+
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0012_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0012_v0_0_s_ifspec;
 
 #ifndef __IAudioStreamVolume_INTERFACE_DEFINED__
 #define __IAudioStreamVolume_INTERFACE_DEFINED__
@@ -1991,7 +2232,7 @@ EXTERN_C const IID IID_IAudioStreamVolume;
 #endif 	/* __IAudioStreamVolume_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_audioclient_0000_0011 */
+/* interface __MIDL_itf_audioclient_0000_0013 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
@@ -2044,8 +2285,8 @@ typedef struct AMBISONICS_PARAMS
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0011_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0011_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0013_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0013_v0_0_s_ifspec;
 
 #ifndef __IAudioAmbisonicsControl_INTERFACE_DEFINED__
 #define __IAudioAmbisonicsControl_INTERFACE_DEFINED__
@@ -2172,7 +2413,7 @@ EXTERN_C const IID IID_IAudioAmbisonicsControl;
 #endif 	/* __IAudioAmbisonicsControl_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_audioclient_0000_0012 */
+/* interface __MIDL_itf_audioclient_0000_0014 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
@@ -2181,8 +2422,8 @@ EXTERN_C const IID IID_IAudioAmbisonicsControl;
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0012_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0012_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0014_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0014_v0_0_s_ifspec;
 
 #ifndef __IChannelAudioVolume_INTERFACE_DEFINED__
 #define __IChannelAudioVolume_INTERFACE_DEFINED__
@@ -2342,7 +2583,7 @@ EXTERN_C const IID IID_IChannelAudioVolume;
 #endif 	/* __IChannelAudioVolume_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_audioclient_0000_0013 */
+/* interface __MIDL_itf_audioclient_0000_0015 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
@@ -2387,6 +2628,8 @@ EXTERN_C const IID IID_IChannelAudioVolume;
 #define AUDCLNT_E_ENGINE_FORMAT_LOCKED         AUDCLNT_ERR(0x029)
 #define AUDCLNT_E_HEADTRACKING_ENABLED         AUDCLNT_ERR(0x030)
 #define AUDCLNT_E_HEADTRACKING_UNSUPPORTED     AUDCLNT_ERR(0x040)
+#define AUDCLNT_E_EFFECT_NOT_AVAILABLE         AUDCLNT_ERR(0x041)
+#define AUDCLNT_E_EFFECT_STATE_READ_ONLY       AUDCLNT_ERR(0x042)
 #define AUDCLNT_S_BUFFER_EMPTY                 AUDCLNT_SUCCESS(0x001)
 #define AUDCLNT_S_THREAD_ALREADY_REGISTERED    AUDCLNT_SUCCESS(0x002)
 #define AUDCLNT_S_POSITION_STALLED             AUDCLNT_SUCCESS(0x003)
@@ -2394,8 +2637,8 @@ EXTERN_C const IID IID_IChannelAudioVolume;
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0013_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0013_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0015_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0015_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

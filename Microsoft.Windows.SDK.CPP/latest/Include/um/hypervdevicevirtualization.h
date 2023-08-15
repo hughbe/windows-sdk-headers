@@ -69,6 +69,16 @@ typedef enum HDV_DOORBELL_FLAGS
     HDV_DOORBELL_FLAG_TRIGGER_ANY_VALUE  = 0x80000000
 } HDV_DOORBELL_FLAGS;
 
+typedef enum HDV_MMIO_MAPPING_FLAGS
+{
+    HdvMmioMappingFlagNone = 0x00000000,
+    HdvMmioMappingFlagWriteable = 0x00000001,
+    HdvMmioMappingFlagExecutable = 0x00000002
+
+} HDV_MMIO_MAPPING_FLAGS;
+
+DEFINE_ENUM_FLAG_OPERATORS(HDV_MMIO_MAPPING_FLAGS);
+
 #endif // _HDV_COMMON_DEFINITIONS_
 
 #define HDV_PCI_BAR_COUNT 6
@@ -160,6 +170,26 @@ HdvUnregisterDoorbell(
     _In_ UINT64 BarOffset,
     _In_ UINT64 TriggerValue,
     _In_ UINT64 Flags
+    );
+
+HRESULT
+WINAPI
+HdvCreateSectionBackedMmioRange(
+    _In_ HDV_DEVICE requestor,
+    _In_ HDV_PCI_BAR_SELECTOR barIndex,
+    _In_ UINT64 offsetInPages,
+    _In_ UINT64 lengthInPages,
+    _In_ HDV_MMIO_MAPPING_FLAGS MappingFlags,
+    _In_ HANDLE sectionHandle,
+    _In_ UINT64 sectionOffsetInPages
+    );
+
+HRESULT
+WINAPI
+HdvDestroySectionBackedMmioRange(
+    _In_ HDV_DEVICE requestor,
+    _In_ HDV_PCI_BAR_SELECTOR barIndex,
+    _In_ UINT64 offsetInPages
     );
 
 //
@@ -255,8 +285,8 @@ typedef struct HDV_PCI_DEVICE_INTERFACE
 
 #endif // _HYPERV_DEVICE_VIRTUALIZATION_H_
 
-#ifndef ext_ms_win_hyperv_devicevirtualization_l1_2_0_query_routines
-#define ext_ms_win_hyperv_devicevirtualization_l1_2_0_query_routines
+#ifndef ext_ms_win_hyperv_devicevirtualization_l1_2_1_query_routines
+#define ext_ms_win_hyperv_devicevirtualization_l1_2_1_query_routines
 
 //
 //Private Extension API Query Routines
@@ -323,6 +353,18 @@ IsHdvRegisterDoorbellPresent(
 BOOLEAN
 __stdcall
 IsHdvUnregisterDoorbellPresent(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
+IsHdvCreateSectionBackedMmioRangePresent(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
+IsHdvDestroySectionBackedMmioRangePresent(
     VOID
     );
 

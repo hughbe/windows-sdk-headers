@@ -56,6 +56,8 @@ namespace Windows
 
                 interface IPhoneIncomingCallDismissedTriggerDetails;
 
+                interface IPhoneIncomingCallNotificationTriggerDetails;
+
                 interface IPhoneLineChangedTriggerDetails;
 
                 interface IPhoneNewVoicemailMessageTriggerDetails;
@@ -65,6 +67,8 @@ namespace Windows
                 runtimeclass PhoneCallOriginDataRequestTriggerDetails;
 
                 runtimeclass PhoneIncomingCallDismissedTriggerDetails;
+
+                runtimeclass PhoneIncomingCallNotificationTriggerDetails;
 
                 runtimeclass PhoneLineChangedTriggerDetails;
 
@@ -145,7 +149,9 @@ namespace Windows
                     CallOriginDataRequest                = 4,
                     CallBlocked                          = 5,
                     [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 2.0)]
-                    IncomingCallDismissed                = 6
+                    IncomingCallDismissed                = 6,
+                    [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 3.0)]
+                    IncomingCallNotification             = 7
                 };
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
@@ -180,6 +186,15 @@ namespace Windows
                     [propget] HRESULT DismissalTime([out] [retval] Windows.Foundation.DateTime* value);
                     [propget] HRESULT TextReplyMessage([out] [retval] HSTRING* value);
                     [propget] HRESULT Reason([out] [retval] Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedReason* value);
+                }
+
+                [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 3.0)]
+                [exclusiveto(Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails)]
+                [uuid(2B0E6044-9B32-5D42-8222-D2812E39FB21)]
+                interface IPhoneIncomingCallNotificationTriggerDetails : IInspectable
+                {
+                    [propget] HRESULT LineId([out] [retval] GUID* value);
+                    [propget] HRESULT CallId([out] [retval] HSTRING* value);
                 }
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]
@@ -227,6 +242,13 @@ namespace Windows
                 runtimeclass PhoneIncomingCallDismissedTriggerDetails
                 {
                     [default] interface Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallDismissedTriggerDetails;
+                }
+
+                [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 3.0)]
+                [marshaling_behavior(agile)]
+                runtimeclass PhoneIncomingCallNotificationTriggerDetails
+                {
+                    [default] interface Windows.ApplicationModel.Calls.Background.IPhoneIncomingCallNotificationTriggerDetails;
                 }
 
                 [contract(Windows.ApplicationModel.Calls.Background.CallsBackgroundContract, 1.0)]

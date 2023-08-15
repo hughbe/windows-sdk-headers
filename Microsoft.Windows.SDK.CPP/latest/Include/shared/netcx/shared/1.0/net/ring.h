@@ -93,8 +93,6 @@ NetRingGetElementAtIndex(
     _In_ UINT32 Index
 )
 {
-    NT_ASSERT(Index < Ring->NumberOfElements);
-
     return (void *)(Ring->Buffer + (SIZE_T)Index * Ring->ElementStride);
 }
 

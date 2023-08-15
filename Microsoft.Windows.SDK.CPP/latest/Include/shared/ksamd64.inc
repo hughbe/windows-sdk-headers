@@ -826,11 +826,17 @@ CxxKernelCetLength equ 0001CH
 AfCount equ 00000H
 AfBitmap equ 00008H
 CFlushSize equ 000E8H
-PbEntropyCount equ 089A0H
-PbEntropyBuffer equ 089A4H
+PbEntropyCount equ 089E0H
+PbEntropyBuffer equ 089E4H
 KENTROPY_TIMING_INTERRUPTS_PER_BUFFER equ 00400H
 KENTROPY_TIMING_BUFFER_MASK equ 007FFH
 KENTROPY_TIMING_ANALYSIS equ 00000H
+
+;
+;  Priority state definitions
+;
+
+KPRIORITY_STATE_PRIORITY_BITMASK equ 0007FH
 
 ;
 ;  Register Argument Home Address Offset Definitions
@@ -923,18 +929,19 @@ PcCpuType equ 001C0H
 PcCpuID equ 001C1H
 PcCpuStep equ 001C2H
 PcCpuVendor equ 0020DH
-PcVirtualApicAssist equ 08848H
-PcFeatureBits equ 08AE0H
+PcVirtualApicAssist equ 08888H
+PcFeatureBits equ 08B20H
 PcNmiActive equ 08026H
 PcMceActive equ 08027H
-PcSfCode equ 08DA8H
-PcSfVa equ 08DB0H
+PcSfCode equ 08DE8H
+PcSfVa equ 08DF0H
+PcSfPa equ 08DF8H
 PcKernelDirectoryTableBase equ 0A000H
-PcExceptionStack equ 083A8H
-PcExceptionStackActive equ 083A6H
+PcExceptionStack equ 083E8H
+PcExceptionStackActive equ 083E6H
 PcDpcRequestSummary equ 0353CH
-PcTransitionShadowStack equ 097A0H
-PcKernelShadowStackInitial equ 097A8H
+PcTransitionShadowStack equ 09820H
+PcKernelShadowStackInitial equ 09828H
 ;
 ;
 CPU_AMD equ 00001H
@@ -1048,7 +1055,7 @@ KI_SPINLOCK_ORDER_PRCB_LOCK equ 00080H
 PbGroup equ 000D0H
 PbGroupIndex equ 000D1H
 PbProcessorState equ 00100H
-PbContext equ 08980H
+PbContext equ 089C0H
 PbCpuType equ 00040H
 PbCpuID equ 00041H
 PbCpuStep equ 00042H
@@ -1083,12 +1090,12 @@ PbContextSwitches equ 02D3CH
 PbTargetCount equ 02D84H
 PbIpiFrozen equ 02D88H
 PbRequestMailbox equ 0BEC0H
-PbMailbox equ 09540H
+PbMailbox equ 095C0H
 PbDpcList equ 03340H
 PbDpcLock equ 03350H
 PbDpcCount equ 0335CH
 PbDpcStack equ 033A0H
-PbIsrStack equ 08998H
+PbIsrStack equ 089D8H
 PbMaximumDpcQueueDepth equ 033A8H
 PbDpcRequestRate equ 033ACH
 PbMinimumDpcRate equ 033B0H
@@ -1108,24 +1115,26 @@ PbDpcTime equ 0814CH
 PbInterruptTime equ 08150H
 PbAdjustDpcThreshold equ 08154H
 PbStartCycles equ 08180H
-PbPageColor equ 08210H
-PbNodeColor equ 08214H
-PbNodeShiftedColor equ 08218H
-PbSecondaryColorMask equ 0821CH
-PbCycleTime equ 08238H
+PbPageColor equ 08250H
+PbNodeColor equ 08254H
+PbNodeShiftedColor equ 08258H
+PbSecondaryColorMask equ 0825CH
+PbCycleTime equ 08278H
+PbCpuCycleScalingFactor equ 081B8H
+PPM_FRACTION_SHIFT equ 00010H
 PbFastReadNoWait equ 02D44H
 PbFastReadWait equ 02D48H
 PbFastReadNotPossible equ 02D4CH
 PbCopyReadNoWait equ 02D50H
 PbCopyReadWait equ 02D54H
 PbCopyReadNoWaitMiss equ 02D58H
-PbAlignmentFixupCount equ 08678H
+PbAlignmentFixupCount equ 086B8H
 PbExceptionDispatchCount equ 08170H
-PbVendorString equ 08950H
+PbVendorString equ 08990H
 ProcessorBlockLength equ 0BF00H
 PbShadowFlags equ 09E98H
 PbTrappedSecurityDomain equ 000F0H
-PbKernelShadowStackInitial equ 09628H
+PbKernelShadowStackInitial equ 096A8H
 
 ;
 ;  Time Fields (TIME_FIELDS) Structure Offset Definitions
@@ -1363,7 +1372,7 @@ KI_EXCEPTION_INTEGER_DIVIDE_BY_ZERO equ 010000003H
 KI_EXCEPTION_ACCESS_VIOLATION equ 010000004H
 KI_EXCEPTION_SECURE_FAULT equ 010000006H
 KI_EXCEPTION_SEGMENT_NOT_PRESENT equ 010000007H
-KI_EXCEPTION_XFD_ERROR equ 010000008H
+KI_EXCEPTION_XFD_ERROR equ 010000010H
 TARGET_FREEZE equ 00005H
 KI_DPC_INTERRUPT_FLAGS equ 000AFH
 KI_DPC_THREAD_ACTIVE equ 010000H

@@ -66,6 +66,8 @@ extern "C"{
 /* interface __MIDL_itf_msimeapi_0000_0000 */
 /* [local] */ 
 
+#pragma once
+
 #include <winapifamily.h>
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)

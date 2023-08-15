@@ -138,6 +138,8 @@ namespace Windows
 
                 interface IInkInputConfiguration;
 
+                interface IInkInputConfiguration2;
+
                 interface IInkInputProcessingConfiguration;
 
                 interface IInkManager;
@@ -183,6 +185,8 @@ namespace Windows
                 interface IInkStroke2;
 
                 interface IInkStroke3;
+
+                interface IInkStroke4;
 
                 interface IInkStrokeBuilder;
 
@@ -500,6 +504,15 @@ namespace Windows
                     [propput] HRESULT IsEraserInputEnabled([in] boolean value);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+                [exclusiveto(Windows.UI.Input.Inking.InkInputConfiguration)]
+                [uuid(6AC2272E-81B4-5CC4-A36D-D057C387DFDA)]
+                interface IInkInputConfiguration2 : IInspectable
+                {
+                    [propget] HRESULT IsPenHapticFeedbackEnabled([out] [retval] boolean* value);
+                    [propput] HRESULT IsPenHapticFeedbackEnabled([in] boolean value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                 [exclusiveto(Windows.UI.Input.Inking.InkInputProcessingConfiguration)]
                 [uuid(2778D85E-33CA-4B06-A6D3-AC3945116D37)]
@@ -766,6 +779,14 @@ namespace Windows
                     [propput] HRESULT StrokeDuration([in] Windows.Foundation.IReference<Windows.Foundation.TimeSpan>* value);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+                [exclusiveto(Windows.UI.Input.Inking.InkStroke)]
+                [uuid(CD5B62E5-B6E9-5B91-A577-1921D2348690)]
+                interface IInkStroke4 : IInspectable
+                {
+                    [propget] HRESULT PointerId([out] [retval] UINT32* value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                 [exclusiveto(Windows.UI.Input.Inking.InkStrokeBuilder)]
                 [uuid(82BBD1DC-1C63-41DC-9E07-4B4A70CED801)]
@@ -965,6 +986,7 @@ namespace Windows
                 runtimeclass InkInputConfiguration
                 {
                     [default] interface Windows.UI.Input.Inking.IInkInputConfiguration;
+                    [contract(Windows.Foundation.UniversalApiContract, 13.0)] interface Windows.UI.Input.Inking.IInkInputConfiguration2;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1061,6 +1083,7 @@ namespace Windows
                     [default] interface Windows.UI.Input.Inking.IInkStroke;
                     [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.UI.Input.Inking.IInkStroke2;
                     [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.Input.Inking.IInkStroke3;
+                    [contract(Windows.Foundation.UniversalApiContract, 13.0)] interface Windows.UI.Input.Inking.IInkStroke4;
                 }
 
                 [activatable(Windows.Foundation.UniversalApiContract, 1.0)]

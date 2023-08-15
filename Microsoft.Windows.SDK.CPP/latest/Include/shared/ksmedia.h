@@ -1560,6 +1560,9 @@ typedef struct {
 #endif
 
 #if (NTDDI_VERSION >= NTDDI_WIN7)
+
+//===========================================================================
+
 //===========================================================================
 
 #define STATIC_KSPROPSETID_BtAudio\
@@ -1654,7 +1657,7 @@ typedef enum {
 #endif // (NTDDI_VERSION >= NTDDI_WINTHRESHOLD)
 
 #if (NTDDI_VERSION >= NTDDI_WIN10_19H1)
-// The payload of this notification is a SOUNDDETECTOR_DETECTIONHEADER
+// The payload of this notification is a SOUNDDETECTOR_PATTERNHEADER
 #define STATIC_KSNOTIFICATIONID_SoundDetector\
     0x6389d844, 0xbb32, 0x4c4c, 0xa8, 0x2, 0xf4, 0xb4, 0xb7, 0x7a, 0xfe, 0xad
 DEFINE_GUIDSTRUCT("6389D844-BB32-4C4C-A802-F4B4B77AFEAD", KSNOTIFICATIONID_SoundDetector);
@@ -6262,7 +6265,8 @@ typedef enum {
     MetadataId_CameraIntrinsics,
     MetadataId_FrameIllumination,
     MetadataId_DigitalWindow,
-    MetadataId_Standard_End = MetadataId_DigitalWindow,
+    MetadataId_BackgroundSegmentationMask,
+    MetadataId_Standard_End = MetadataId_BackgroundSegmentationMask,
     MetadataId_Custom_Start = 0x80000000,
 } KSCAMERA_MetadataId;
 
@@ -6530,6 +6534,7 @@ typedef struct {
 
 #define KSCAMERA_EXTENDEDPROP_BACKGROUNDSEGMENTATION_OFF                    0x0000000000000000
 #define KSCAMERA_EXTENDEDPROP_BACKGROUNDSEGMENTATION_BLUR                   0x0000000000000001
+#define KSCAMERA_EXTENDEDPROP_BACKGROUNDSEGMENTATION_MASK                   0x0000000000000002
 
 // Digital Window Framing Flags
 #define KSCAMERA_EXTENDEDPROP_DIGITALWINDOW_MANUAL                         0x0000000000000000
@@ -6568,6 +6573,41 @@ typedef struct tagKSCAMERA_EXTENDEDPROP_DIGITALWINDOW_CONFIGCAPS {
     LONG        MaxWindowSize;          // Largest legal WindowSize
     LONG        Reserved;               // Reserved
 } KSCAMERA_EXTENDEDPROP_DIGITALWINDOW_CONFIGCAPS, *PKSCAMERA_EXTENDEDPROP_DIGITALWINDOW_CONFIGCAPS;
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_CO)
+
+typedef struct tagKSCAMERA_EXTENDEDPROP_BACKGROUNDSEGMENTATION_CONFIGCAPS {
+    // Output width and height in pixels
+    SIZE Resolution;
+
+    // The maximum frame rate the driver can accommodate  for achieving 
+    // background segmentation for each frame corresponding to Resolution
+    struct
+    {
+        LONG Numerator; 
+        LONG Denominator;
+    } MaxFrameRate;
+    
+    // The width and height of the mask produced when streaming
+    // with a MediaType corresponding to Resolution and MaxFrameRate
+    SIZE MaskResolution;
+
+    // Optional subtype for which this configuration capability applies. If left 
+    // to zero, all streams conforming the Resolution and MaxFrameRate will support 
+    // background segmentation with the specified MaskResolution.
+    GUID SubType;
+ 
+} KSCAMERA_EXTENDEDPROP_BACKGROUNDSEGMENTATION_CONFIGCAPS, *PKSCAMERA_EXTENDEDPROP_BACKGROUNDSEGMENTATION_CONFIGCAPS;
+
+typedef struct tagKSCAMERA_METADATA_BACKGROUNDSEGMENTATIONMASK {
+    KSCAMERA_METADATA_ITEMHEADER   Header;
+    RECT                           MaskCoverageBoundingBox;
+    SIZE                           MaskResolution;
+    RECT                           ForegroundBoundingBox;
+    BYTE                           MaskData[1]; // Array of mask data of dimension MaskResolution.cx * MaskResolution.cy
+}KSCAMERA_METADATA_BACKGROUNDSEGMENTATIONMASK, *PKSCAMERA_METADATA_BACKGROUNDSEGMENTATIONMASK;
+
+#endif //  (NTDDI_VERSION >= NTDDI_WIN10_CO)
 
 typedef struct _KSCAMERA_EXTENDEDPROP_PROFILE
 {
@@ -8121,6 +8161,32 @@ DEFINE_GUIDSTRUCT("C18E2F7E-933D-4965-B7D1-1EEF228D2AF3", AUDIO_SIGNALPROCESSING
 DEFINE_GUIDSTRUCT("9E90EA20-B493-4FD1-A1A8-7E1361A956CF", AUDIO_SIGNALPROCESSINGMODE_RAW);
 #define AUDIO_SIGNALPROCESSINGMODE_RAW DEFINE_GUIDNAMED(AUDIO_SIGNALPROCESSINGMODE_RAW)
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_CO)
+//===========================================================================
+// AUDIO RESOURCE MANAGEMENT DEFINITIONS
+//===========================================================================
+// {D0B305E1-B2CC-484C-8F23-E5D28AD9CF88}
+#define STATIC_KSPROPSETID_AudioResourceManagement\
+    0xd0b305e1, 0xb2cc, 0x484c, 0x8f, 0x23, 0xe5, 0xd2, 0x8a, 0xd9, 0xcf, 0x88
+DEFINE_GUIDSTRUCT("D0B305E1-B2CC-484C-8F23-E5D28AD9CF88", KSPROPSETID_AudioResourceManagement); 
+#define KSPROPSETID_AudioResourceManagement DEFINE_GUIDNAMED(KSPROPSETID_AudioResourceManagement)
+
+// define new property id
+typedef enum {
+    KSPROPERTY_AUDIORESOURCEMANAGEMENT_RESOURCEGROUP
+} KSPROPERTY_AUDIORESOURCEMANAGEMENT;
+
+#define MAX_RESOURCEGROUPID_LENGTH 256
+
+// structure for KSPROPERTY_AUDIORESOURCEMANAGEMENT_RESOURCEGROUP
+typedef struct
+{
+    BOOL    ResourceGroupAcquired;
+    WCHAR   ResourceGroupName[MAX_RESOURCEGROUPID_LENGTH];
+} AUDIORESOURCEMANAGEMENT_RESOURCEGROUP, *PAUDIORESOURCEMANAGEMENT_RESOURCEGROUP;
+
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_CO)
+
 //
 // UUIDs defined for Bluetooth Midi
 //
@@ -8272,6 +8338,10 @@ DEFINE_GUIDSTRUCT("6f64adce-8211-11e2-8c70-2c27d7f001fa", AUDIO_EFFECT_TYPE_DYNA
 #define STATIC_AUDIO_EFFECT_TYPE_FAR_FIELD_BEAMFORMING      0x6f64adcf, 0x8211, 0x11e2, 0x8c, 0x70, 0x2c, 0x27, 0xd7, 0xf0, 0x01, 0xfa
 DEFINE_GUIDSTRUCT("6f64adcf-8211-11e2-8c70-2c27d7f001fa", AUDIO_EFFECT_TYPE_FAR_FIELD_BEAMFORMING);
 #define AUDIO_EFFECT_TYPE_FAR_FIELD_BEAMFORMING DEFINE_GUIDNAMED(AUDIO_EFFECT_TYPE_FAR_FIELD_BEAMFORMING)
+
+#define STATIC_AUDIO_EFFECT_TYPE_DEEP_NOISE_SUPPRESSION     0x6f64add0, 0x8211, 0x11e2, 0x8c, 0x70, 0x2c, 0x27, 0xd7, 0xf0, 0x01, 0xfa
+DEFINE_GUIDSTRUCT("6f64add0-8211-11e2-8c70-2c27d7f001fa", AUDIO_EFFECT_TYPE_DEEP_NOISE_SUPPRESSION);
+#define AUDIO_EFFECT_TYPE_DEEP_NOISE_SUPPRESSION DEFINE_GUIDNAMED(AUDIO_EFFECT_TYPE_DEEP_NOISE_SUPPRESSION)
 
 #endif
 

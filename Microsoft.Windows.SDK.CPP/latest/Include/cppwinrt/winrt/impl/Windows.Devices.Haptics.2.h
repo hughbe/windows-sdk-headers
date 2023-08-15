@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -16,6 +16,16 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Haptics
         [[nodiscard]] static auto RumbleContinuous();
         [[nodiscard]] static auto Press();
         [[nodiscard]] static auto Release();
+        [[nodiscard]] static auto BrushContinuous();
+        [[nodiscard]] static auto ChiselMarkerContinuous();
+        [[nodiscard]] static auto EraserContinuous();
+        [[nodiscard]] static auto Error();
+        [[nodiscard]] static auto GalaxyPenContinuous();
+        [[nodiscard]] static auto Hover();
+        [[nodiscard]] static auto InkContinuous();
+        [[nodiscard]] static auto MarkerContinuous();
+        [[nodiscard]] static auto PencilContinuous();
+        [[nodiscard]] static auto Success();
     };
     struct __declspec(empty_bases) SimpleHapticsController : Windows::Devices::Haptics::ISimpleHapticsController
     {

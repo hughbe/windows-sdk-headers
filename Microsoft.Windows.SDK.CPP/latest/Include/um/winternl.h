@@ -1027,6 +1027,13 @@ typedef BOOLEAN (WINAPI * PWINSTATIONQUERYINFORMATIONW)(
 #define FILE_EXISTS                     0x00000004
 #define FILE_DOES_NOT_EXIST             0x00000005
 
+#ifndef __os_arm64x_get_x64_information
+#define __os_arm64x_get_x64_information __os_arm64x_rdtsc
+#endif
+#ifndef __os_arm64x_set_x64_information
+#define __os_arm64x_set_x64_information __os_arm64x_cpuidex
+#endif
+
 #ifdef __cplusplus
 }
 #endif

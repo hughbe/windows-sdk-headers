@@ -132,7 +132,7 @@
 #endif
 
 #elif defined(_XM_ARM_NEON_INTRINSICS_)
-#if defined(_MSC_VER) && (defined(_M_ARM64) || defined(_M_HYBRID_X86_ARM64) || defined(_M_ARM64EC))
+#if defined(_MSC_VER) && !defined(__clang__) && (defined(_M_ARM64) || defined(_M_HYBRID_X86_ARM64) || defined(_M_ARM64EC))
 #include <arm64_neon.h>
 #else
 #include <arm_neon.h>
@@ -149,7 +149,10 @@
 #include <stdint.h>
 #pragma warning(pop)
 
-#ifdef __GNUC__
+#if __cplusplus >= 201703L
+#define XM_ALIGNED_DATA(x) alignas(x)
+#define XM_ALIGNED_STRUCT(x) struct alignas(x)
+#elif defined(__GNUC__)
 #define XM_ALIGNED_DATA(x) __attribute__ ((aligned(x)))
 #define XM_ALIGNED_STRUCT(x) struct __attribute__ ((aligned(x)))
 #else

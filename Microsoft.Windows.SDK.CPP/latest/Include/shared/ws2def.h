@@ -897,6 +897,8 @@ typedef WSACMSGHDR CMSGHDR, *PCMSGHDR;
 #define AI_FILESERVER               0x00040000  // Resolving fileserver name resolution
 #define AI_DISABLE_IDN_ENCODING     0x00080000  // Disable Internationalized Domain Names handling
 #define AI_SECURE_WITH_FALLBACK     0x00100000  // Forces clear text fallback if the secure DNS query fails
+#define AI_EXCLUSIVE_CUSTOM_SERVERS 0x00200000  // Use exclusively the custom DNS servers
+#define AI_RETURN_RESPONSE_FLAGS    0x10000000  // Requests extra information about the DNS results
 #define AI_REQUIRE_SECURE           0x20000000  // Forces the DNS query to be done over seucre protocols
 #define AI_RESOLUTION_HANDLE        0x40000000  // Request resolution handle
 #define AI_EXTENDED                 0x80000000  // Indicates this is extended ADDRINFOEX(2/..) struct
@@ -975,6 +977,7 @@ typedef struct addrinfoexW
 #define ADDRINFOEX_VERSION_3    3
 #define ADDRINFOEX_VERSION_4    4
 #define ADDRINFOEX_VERSION_5    5
+#define ADDRINFOEX_VERSION_6    6
 
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
@@ -1070,6 +1073,67 @@ typedef struct addrinfoex5
     HANDLE               ai_resolutionhandle;
     unsigned int         ai_ttl;          // Number of seconds for which this DNS record is valid
 } ADDRINFOEX5, *PADDRINFOEX5, *LPADDRINFOEX5;
+
+
+//
+// Types of custom DNS servers specified in the ai_servers parameter.
+// These options will be set in the ai_servertype field in the ADDRINFO_DNS_SERVER struct.
+//
+
+#define AI_DNS_SERVER_TYPE_UDP 0x1
+#define AI_DNS_SERVER_TYPE_DOH 0x2
+
+
+//
+// Flags for custom servers.
+// These options will be set in the ai_flags field in the ADDRINFO_DNS_SERVER struct.
+//
+
+#define AI_DNS_SERVER_UDP_FALLBACK 0x1
+
+typedef struct addrinfo_dns_server
+{
+    unsigned int     ai_servertype;
+    unsigned __int64 ai_flags;
+    unsigned int     ai_addrlen;
+    _Field_size_bytes_(ai_addrlen) struct sockaddr *ai_addr;
+
+    union
+    {
+        PWSTR ai_template;
+    };
+} ADDRINFO_DNS_SERVER;
+
+
+//
+// Flags returned through ai_returnflags, when AI_RETURN_RESPONSE_FLAGS is set
+//
+
+#define AI_DNS_RESPONSE_SECURE   0x1     // Present if the resolution was done through secure protocols
+#define AI_DNS_RESPONSE_HOSTFILE 0x2
+
+typedef struct addrinfoex6
+{
+    int                  ai_flags;       // AI_PASSIVE, AI_CANONNAME, AI_NUMERICHOST
+    int                  ai_family;      // PF_xxx
+    int                  ai_socktype;    // SOCK_xxx
+    int                  ai_protocol;    // 0 or IPPROTO_xxx for IPv4 and IPv6
+    size_t               ai_addrlen;     // Length of ai_addr
+    PWSTR                ai_canonname;   // Canonical name for nodename
+    _Field_size_bytes_(ai_addrlen) struct sockaddr    *ai_addr;        // Binary address
+    _Field_size_(ai_bloblen) void               *ai_blob;
+    size_t               ai_bloblen;
+    GUID                 *ai_provider;
+    struct addrinfoex5   *ai_next;        // Next structure in linked list
+    int                  ai_version;
+    PWSTR                ai_fqdn;
+    int                  ai_interfaceindex;
+    HANDLE               ai_resolutionhandle;
+    unsigned int         ai_ttl;          // Number of seconds for which this DNS record is valid
+    unsigned int         ai_numservers;
+    ADDRINFO_DNS_SERVER  *ai_servers;
+    ULONG64              ai_responseflags;
+} ADDRINFOEX6, *PADDRINFOEX6;
 
 #endif
 

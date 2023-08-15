@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,8 @@
 #ifndef WINRT_Windows_UI_WebUI_H
 #define WINRT_Windows_UI_WebUI_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.201201.7"
 #include "winrt/Windows.UI.h"
 #include "winrt/impl/Windows.ApplicationModel.2.h"
 #include "winrt/impl/Windows.ApplicationModel.Activation.2.h"
@@ -1324,6 +1325,7 @@ namespace std
     template<> struct hash<winrt::Windows::UI::WebUI::WebUINavigatedDeferral> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::WebUI::WebUINavigatedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::WebUI::WebUINavigatedOperation> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::WebUI::WebUIPhoneCallActivatedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::WebUI::WebUIPrint3DWorkflowActivatedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::WebUI::WebUIPrintTaskSettingsActivatedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::WebUI::WebUIPrintWorkflowForegroundTaskActivatedEventArgs> : winrt::impl::hash_base {};

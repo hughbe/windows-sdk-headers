@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -91,6 +91,21 @@ WINRT_EXPORT namespace winrt::Windows::Media::Devices
         CallControl(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Devices::ICallControl(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
         static auto FromId(param::hstring const& deviceId);
+    };
+    struct __declspec(empty_bases) CameraOcclusionInfo : Windows::Media::Devices::ICameraOcclusionInfo
+    {
+        CameraOcclusionInfo(std::nullptr_t) noexcept {}
+        CameraOcclusionInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Devices::ICameraOcclusionInfo(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) CameraOcclusionState : Windows::Media::Devices::ICameraOcclusionState
+    {
+        CameraOcclusionState(std::nullptr_t) noexcept {}
+        CameraOcclusionState(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Devices::ICameraOcclusionState(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) CameraOcclusionStateChangedEventArgs : Windows::Media::Devices::ICameraOcclusionStateChangedEventArgs
+    {
+        CameraOcclusionStateChangedEventArgs(std::nullptr_t) noexcept {}
+        CameraOcclusionStateChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Devices::ICameraOcclusionStateChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) DefaultAudioCaptureDeviceChangedEventArgs : Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs
     {
@@ -262,7 +277,7 @@ WINRT_EXPORT namespace winrt::Windows::Media::Devices
         TorchControl(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Devices::ITorchControl(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) VideoDeviceController : Windows::Media::Devices::IVideoDeviceController,
-        impl::require<VideoDeviceController, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController8, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController9>
+        impl::require<VideoDeviceController, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController8, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController9, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10>
     {
         VideoDeviceController(std::nullptr_t) noexcept {}
         VideoDeviceController(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Devices::IVideoDeviceController(ptr, take_ownership_from_abi) {}

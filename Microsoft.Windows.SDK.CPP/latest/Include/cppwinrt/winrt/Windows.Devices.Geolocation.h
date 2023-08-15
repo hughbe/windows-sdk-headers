@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,8 @@
 #ifndef WINRT_Windows_Devices_Geolocation_H
 #define WINRT_Windows_Devices_Geolocation_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.201201.7"
 #include "winrt/Windows.Devices.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -240,6 +241,12 @@ namespace winrt::impl
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Geolocation::IGeocoordinateWithPositionSourceTimestamp)->get_PositionSourceTimestamp(&value));
         return Windows::Foundation::IReference<Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Geolocation_IGeocoordinateWithRemoteSource<D>::IsRemoteSource() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Geolocation::IGeocoordinateWithRemoteSource)->get_IsRemoteSource(&value));
+        return value;
     }
     template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Geolocation::PositionAccuracy) consume_Windows_Devices_Geolocation_IGeolocator<D>::DesiredAccuracy() const
     {
@@ -908,6 +915,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, Windows::Devices::Geolocation::IGeocoordinateWithRemoteSource> : produce_base<D, Windows::Devices::Geolocation::IGeocoordinateWithRemoteSource>
+    {
+        int32_t __stdcall get_IsRemoteSource(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsRemoteSource());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, Windows::Devices::Geolocation::IGeolocator> : produce_base<D, Windows::Devices::Geolocation::IGeolocator>
     {
         int32_t __stdcall get_DesiredAccuracy(int32_t* value) noexcept final try
@@ -1522,6 +1542,7 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Geolocation::IGeocoordinateWithPoint> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Geolocation::IGeocoordinateWithPositionData> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Geolocation::IGeocoordinateWithPositionSourceTimestamp> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Geolocation::IGeocoordinateWithRemoteSource> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Geolocation::IGeolocator> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Geolocation::IGeolocator2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Geolocation::IGeolocatorStatics> : winrt::impl::hash_base {};

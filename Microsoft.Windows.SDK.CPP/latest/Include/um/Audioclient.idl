@@ -556,6 +556,7 @@ interface IAudioClient : IUnknown
     //  ISimpleAudioVolume
     //  IChannelAudioVolume
     //  IAudioClientDuckingControl
+    //  IAudioEffectsManager
     //
     HRESULT GetService([in, annotation("_In_")] REFIID riid, [out, iid_is(riid), annotation("_Out_")] void **ppv);
 
@@ -1296,6 +1297,51 @@ interface IAudioClientDuckingControl : IUnknown
     HRESULT SetDuckingOptionsForCurrentStream([in] AUDIO_DUCKING_OPTIONS options);
 }
 
+typedef [v1_enum] enum AUDIO_EFFECT_STATE
+{
+    AUDIO_EFFECT_STATE_OFF = 0,
+    AUDIO_EFFECT_STATE_ON
+} AUDIO_EFFECT_STATE;
+
+typedef struct AUDIO_EFFECT
+{
+    GUID id;
+    BOOL canSetState;
+    AUDIO_EFFECT_STATE state;
+} AUDIO_EFFECT;
+
+[
+    object,
+    uuid(A5DED44F-3C5D-4B2B-BD1E-5DC1EE20BBF6),
+    pointer_default(unique),
+    local
+]
+interface IAudioEffectsChangedNotificationClient : IUnknown
+{
+    HRESULT OnAudioEffectsChanged();
+};
+
+//-----------------------------------------------------------------------------
+// Description: IAudioEffectsManager interface
+// Use IAudioClient::GetService to obtain this interface.
+//
+[
+    object,
+    uuid(4460B3AE-4B44-4527-8676-7548A8ACD260),
+    pointer_default(unique),
+    local
+]
+interface IAudioEffectsManager : IUnknown
+{
+    HRESULT RegisterAudioEffectsChangedNotificationCallback([in] IAudioEffectsChangedNotificationClient *client);
+
+    HRESULT UnregisterAudioEffectsChangedNotificationCallback([in] IAudioEffectsChangedNotificationClient *client);
+
+    HRESULT GetAudioEffects([out, size_is(,*numEffects), annotation("_Outptr_result_buffer_maybenull_(*numEffects)")] AUDIO_EFFECT **effects, [out] UINT32 *numEffects);
+
+    HRESULT SetAudioEffectState([in] GUID effectId, [in] AUDIO_EFFECT_STATE state);
+};
+
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 
 //////////////////////////////////////////////////////////////////////////////
@@ -1757,6 +1803,8 @@ cpp_quote("#define AUDCLNT_E_ENGINE_PERIODICITY_LOCKED    AUDCLNT_ERR(0x028)")
 cpp_quote("#define AUDCLNT_E_ENGINE_FORMAT_LOCKED         AUDCLNT_ERR(0x029)")
 cpp_quote("#define AUDCLNT_E_HEADTRACKING_ENABLED         AUDCLNT_ERR(0x030)")
 cpp_quote("#define AUDCLNT_E_HEADTRACKING_UNSUPPORTED     AUDCLNT_ERR(0x040)")
+cpp_quote("#define AUDCLNT_E_EFFECT_NOT_AVAILABLE         AUDCLNT_ERR(0x041)")
+cpp_quote("#define AUDCLNT_E_EFFECT_STATE_READ_ONLY       AUDCLNT_ERR(0x042)")
 cpp_quote("#define AUDCLNT_S_BUFFER_EMPTY                 AUDCLNT_SUCCESS(0x001)")
 cpp_quote("#define AUDCLNT_S_THREAD_ALREADY_REGISTERED    AUDCLNT_SUCCESS(0x002)")
 cpp_quote("#define AUDCLNT_S_POSITION_STALLED             AUDCLNT_SUCCESS(0x003)")

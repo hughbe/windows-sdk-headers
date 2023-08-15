@@ -553,27 +553,6 @@ interface IWTSProtocolLogonErrorRedirector : IUnknown
         [out]        WTS_LOGON_ERROR_REDIRECTOR_RESPONSE* pResponse);
 };
 
-
-
-[
-    object,
-    uuid(0FAD5DCF-C6D3-423c-B097-163D6A676151),
-    pointer_default(unique)
-]
-interface IWRdsRemoteFXGraphicsConnection : IUnknown
-{
-    HRESULT
-    EnableRemoteFXGraphics(
-        [out] BOOL* pEnableRemoteFXGraphics
-        );
-
-    HRESULT
-    GetVirtualChannelTransport(
-        [out] IUnknown** ppTransport
-        );
-};
-cpp_quote("#pragma deprecated(IWRdsRemoteFXGraphicsConnection)")
-
 //
 // Following interfaces are for Windows 8
 //

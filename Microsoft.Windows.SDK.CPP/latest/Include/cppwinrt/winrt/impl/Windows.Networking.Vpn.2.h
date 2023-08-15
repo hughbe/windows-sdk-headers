@@ -1,10 +1,11 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #ifndef WINRT_Windows_Networking_Vpn_2_H
 #define WINRT_Windows_Networking_Vpn_2_H
+#include "winrt/impl/Windows.ApplicationModel.Activation.1.h"
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Networking.1.h"
 #include "winrt/impl/Windows.Networking.Vpn.1.h"
@@ -17,7 +18,7 @@ WINRT_EXPORT namespace winrt::Windows::Networking::Vpn
         VpnAppId(Windows::Networking::Vpn::VpnAppIdType const& type, param::hstring const& value);
     };
     struct __declspec(empty_bases) VpnChannel : Windows::Networking::Vpn::IVpnChannel,
-        impl::require<VpnChannel, Windows::Networking::Vpn::IVpnChannel2, Windows::Networking::Vpn::IVpnChannel4, Windows::Networking::Vpn::IVpnChannel5>
+        impl::require<VpnChannel, Windows::Networking::Vpn::IVpnChannel2, Windows::Networking::Vpn::IVpnChannel4, Windows::Networking::Vpn::IVpnChannel5, Windows::Networking::Vpn::IVpnChannel6>
     {
         VpnChannel(std::nullptr_t) noexcept {}
         VpnChannel(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Vpn::IVpnChannel(ptr, take_ownership_from_abi) {}
@@ -112,6 +113,17 @@ WINRT_EXPORT namespace winrt::Windows::Networking::Vpn
         VpnDomainNameInfo(std::nullptr_t) noexcept {}
         VpnDomainNameInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Vpn::IVpnDomainNameInfo(ptr, take_ownership_from_abi) {}
         VpnDomainNameInfo(param::hstring const& name, Windows::Networking::Vpn::VpnDomainNameType const& nameType, param::iterable<Windows::Networking::HostName> const& dnsServerList, param::iterable<Windows::Networking::HostName> const& proxyServerList);
+    };
+    struct __declspec(empty_bases) VpnForegroundActivatedEventArgs : Windows::Networking::Vpn::IVpnForegroundActivatedEventArgs,
+        impl::require<VpnForegroundActivatedEventArgs, Windows::ApplicationModel::Activation::IActivatedEventArgs, Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser>
+    {
+        VpnForegroundActivatedEventArgs(std::nullptr_t) noexcept {}
+        VpnForegroundActivatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Vpn::IVpnForegroundActivatedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) VpnForegroundActivationOperation : Windows::Networking::Vpn::IVpnForegroundActivationOperation
+    {
+        VpnForegroundActivationOperation(std::nullptr_t) noexcept {}
+        VpnForegroundActivationOperation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Vpn::IVpnForegroundActivationOperation(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) VpnInterfaceId : Windows::Networking::Vpn::IVpnInterfaceId
     {

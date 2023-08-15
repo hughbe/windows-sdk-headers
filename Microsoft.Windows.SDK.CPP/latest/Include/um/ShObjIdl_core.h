@@ -2156,6 +2156,26 @@ typedef CMINVOKECOMMANDINFOEX *LPCMINVOKECOMMANDINFOEX;
 
 typedef const CMINVOKECOMMANDINFOEX *PCCMINVOKECOMMANDINFOEX;
 
+typedef struct CMINVOKECOMMANDINFOEX_REMOTE
+    {
+    DWORD cbSize;
+    DWORD fMask;
+    HWND hwnd;
+    LPCSTR lpVerbString;
+    LPCSTR lpParameters;
+    LPCSTR lpDirectory;
+    int nShow;
+    DWORD dwHotKey;
+    LPCSTR lpTitle;
+    LPCWSTR lpVerbWString;
+    LPCWSTR lpParametersW;
+    LPCWSTR lpDirectoryW;
+    LPCWSTR lpTitleW;
+    POINT ptInvoke;
+    UINT lpVerbInt;
+    UINT lpVerbWInt;
+    } 	CMINVOKECOMMANDINFOEX_REMOTE;
+
 #include <poppack.h>
 
 
@@ -2166,7 +2186,7 @@ extern RPC_IF_HANDLE __MIDL_itf_shobjidl_core_0000_0000_v0_0_s_ifspec;
 #define __IContextMenu_INTERFACE_DEFINED__
 
 /* interface IContextMenu */
-/* [object][unique][uuid][local] */ 
+/* [object][unique][uuid] */ 
 
 
 EXTERN_C const IID IID_IContextMenu;
@@ -2177,7 +2197,7 @@ EXTERN_C const IID IID_IContextMenu;
     IContextMenu : public IUnknown
     {
     public:
-        virtual HRESULT STDMETHODCALLTYPE QueryContextMenu( 
+        virtual /* [local] */ HRESULT STDMETHODCALLTYPE QueryContextMenu( 
             /* [annotation][in] */ 
             _In_  HMENU hmenu,
             /* [annotation][in] */ 
@@ -2189,11 +2209,11 @@ EXTERN_C const IID IID_IContextMenu;
             /* [annotation][in] */ 
             _In_  UINT uFlags) = 0;
         
-        virtual HRESULT STDMETHODCALLTYPE InvokeCommand( 
+        virtual /* [local] */ HRESULT STDMETHODCALLTYPE InvokeCommand( 
             /* [annotation][in] */ 
             _In_  CMINVOKECOMMANDINFO *pici) = 0;
         
-        virtual HRESULT STDMETHODCALLTYPE GetCommandString( 
+        virtual /* [local] */ HRESULT STDMETHODCALLTYPE GetCommandString( 
             /* [annotation][in] */ 
             _In_  UINT_PTR idCmd,
             /* [annotation][in] */ 
@@ -2216,21 +2236,21 @@ EXTERN_C const IID IID_IContextMenu;
         
         DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IContextMenu * This,
-            /* [in] */ REFIID riid,
+            __RPC__in IContextMenu * This,
+            /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
         DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IContextMenu * This);
+            __RPC__in IContextMenu * This);
         
         DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
-            IContextMenu * This);
+            __RPC__in IContextMenu * This);
         
         DECLSPEC_XFGVIRT(IContextMenu, QueryContextMenu)
-        HRESULT ( STDMETHODCALLTYPE *QueryContextMenu )( 
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *QueryContextMenu )( 
             IContextMenu * This,
             /* [annotation][in] */ 
             _In_  HMENU hmenu,
@@ -2244,13 +2264,13 @@ EXTERN_C const IID IID_IContextMenu;
             _In_  UINT uFlags);
         
         DECLSPEC_XFGVIRT(IContextMenu, InvokeCommand)
-        HRESULT ( STDMETHODCALLTYPE *InvokeCommand )( 
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *InvokeCommand )( 
             IContextMenu * This,
             /* [annotation][in] */ 
             _In_  CMINVOKECOMMANDINFO *pici);
         
         DECLSPEC_XFGVIRT(IContextMenu, GetCommandString)
-        HRESULT ( STDMETHODCALLTYPE *GetCommandString )( 
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *GetCommandString )( 
             IContextMenu * This,
             /* [annotation][in] */ 
             _In_  UINT_PTR idCmd,
@@ -2302,6 +2322,53 @@ EXTERN_C const IID IID_IContextMenu;
 
 
 
+/* [call_as] */ HRESULT STDMETHODCALLTYPE IContextMenu_RemoteQueryContextMenu_Proxy( 
+    __RPC__in IContextMenu * This,
+    /* [in] */ __RPC__in HMENU hmenu,
+    /* [in] */ UINT indexMenu,
+    /* [in] */ UINT idCmdFirst,
+    /* [in] */ UINT idCmdLast,
+    /* [in] */ UINT uFlags,
+    /* [out] */ __RPC__out UINT *fileMappingHandlesCount,
+    /* [size_is][size_is][system_handle][out] */ __RPC__deref_out_ecount_full_opt(*fileMappingHandlesCount) HANDLE **fileMappingHandles,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*fileMappingHandlesCount) ULONG **bitmapIndices);
+
+
+void __RPC_STUB IContextMenu_RemoteQueryContextMenu_Stub(
+    IRpcStubBuffer *This,
+    IRpcChannelBuffer *_pRpcChannelBuffer,
+    PRPC_MESSAGE _pRpcMessage,
+    DWORD *_pdwStubPhase);
+
+
+/* [call_as] */ HRESULT STDMETHODCALLTYPE IContextMenu_RemoteInvokeCommand_Proxy( 
+    __RPC__in IContextMenu * This,
+    /* [in] */ __RPC__in const CMINVOKECOMMANDINFOEX_REMOTE *pici);
+
+
+void __RPC_STUB IContextMenu_RemoteInvokeCommand_Stub(
+    IRpcStubBuffer *This,
+    IRpcChannelBuffer *_pRpcChannelBuffer,
+    PRPC_MESSAGE _pRpcMessage,
+    DWORD *_pdwStubPhase);
+
+
+/* [call_as] */ HRESULT STDMETHODCALLTYPE IContextMenu_RemoteGetCommandString_Proxy( 
+    __RPC__in IContextMenu * This,
+    /* [in] */ UINT_PTR idCmd,
+    /* [in] */ UINT uType,
+    /* [in] */ __RPC__in UINT *pReserved,
+    /* [out] */ __RPC__out CHAR *pszName,
+    /* [in] */ UINT cchMax);
+
+
+void __RPC_STUB IContextMenu_RemoteGetCommandString_Stub(
+    IRpcStubBuffer *This,
+    IRpcChannelBuffer *_pRpcChannelBuffer,
+    PRPC_MESSAGE _pRpcMessage,
+    DWORD *_pdwStubPhase);
+
+
 
 #endif 	/* __IContextMenu_INTERFACE_DEFINED__ */
 
@@ -2320,7 +2387,7 @@ extern RPC_IF_HANDLE __MIDL_itf_shobjidl_core_0000_0001_v0_0_s_ifspec;
 #define __IContextMenu2_INTERFACE_DEFINED__
 
 /* interface IContextMenu2 */
-/* [object][unique][uuid][local] */ 
+/* [object][unique][uuid] */ 
 
 
 EXTERN_C const IID IID_IContextMenu2;
@@ -2331,7 +2398,7 @@ EXTERN_C const IID IID_IContextMenu2;
     IContextMenu2 : public IContextMenu
     {
     public:
-        virtual HRESULT STDMETHODCALLTYPE HandleMenuMsg( 
+        virtual /* [local] */ HRESULT STDMETHODCALLTYPE HandleMenuMsg( 
             /* [annotation][in] */ 
             _In_  UINT uMsg,
             /* [annotation][in] */ 
@@ -2350,21 +2417,21 @@ EXTERN_C const IID IID_IContextMenu2;
         
         DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IContextMenu2 * This,
-            /* [in] */ REFIID riid,
+            __RPC__in IContextMenu2 * This,
+            /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
         DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IContextMenu2 * This);
+            __RPC__in IContextMenu2 * This);
         
         DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
-            IContextMenu2 * This);
+            __RPC__in IContextMenu2 * This);
         
         DECLSPEC_XFGVIRT(IContextMenu, QueryContextMenu)
-        HRESULT ( STDMETHODCALLTYPE *QueryContextMenu )( 
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *QueryContextMenu )( 
             IContextMenu2 * This,
             /* [annotation][in] */ 
             _In_  HMENU hmenu,
@@ -2378,13 +2445,13 @@ EXTERN_C const IID IID_IContextMenu2;
             _In_  UINT uFlags);
         
         DECLSPEC_XFGVIRT(IContextMenu, InvokeCommand)
-        HRESULT ( STDMETHODCALLTYPE *InvokeCommand )( 
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *InvokeCommand )( 
             IContextMenu2 * This,
             /* [annotation][in] */ 
             _In_  CMINVOKECOMMANDINFO *pici);
         
         DECLSPEC_XFGVIRT(IContextMenu, GetCommandString)
-        HRESULT ( STDMETHODCALLTYPE *GetCommandString )( 
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *GetCommandString )( 
             IContextMenu2 * This,
             /* [annotation][in] */ 
             _In_  UINT_PTR idCmd,
@@ -2398,7 +2465,7 @@ EXTERN_C const IID IID_IContextMenu2;
             _In_  UINT cchMax);
         
         DECLSPEC_XFGVIRT(IContextMenu2, HandleMenuMsg)
-        HRESULT ( STDMETHODCALLTYPE *HandleMenuMsg )( 
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *HandleMenuMsg )( 
             IContextMenu2 * This,
             /* [annotation][in] */ 
             _In_  UINT uMsg,
@@ -2450,6 +2517,20 @@ EXTERN_C const IID IID_IContextMenu2;
 
 
 
+/* [call_as] */ HRESULT STDMETHODCALLTYPE IContextMenu2_RemoteHandleMenuMsg_Proxy( 
+    __RPC__in IContextMenu2 * This,
+    /* [in] */ UINT uMsg,
+    /* [in] */ WPARAM wParam,
+    /* [in] */ LPARAM lParam);
+
+
+void __RPC_STUB IContextMenu2_RemoteHandleMenuMsg_Stub(
+    IRpcStubBuffer *This,
+    IRpcChannelBuffer *_pRpcChannelBuffer,
+    PRPC_MESSAGE _pRpcMessage,
+    DWORD *_pdwStubPhase);
+
+
 
 #endif 	/* __IContextMenu2_INTERFACE_DEFINED__ */
 
@@ -2468,7 +2549,7 @@ extern RPC_IF_HANDLE __MIDL_itf_shobjidl_core_0000_0002_v0_0_s_ifspec;
 #define __IContextMenu3_INTERFACE_DEFINED__
 
 /* interface IContextMenu3 */
-/* [object][unique][uuid][local] */ 
+/* [object][unique][uuid] */ 
 
 
 EXTERN_C const IID IID_IContextMenu3;
@@ -2479,7 +2560,7 @@ EXTERN_C const IID IID_IContextMenu3;
     IContextMenu3 : public IContextMenu2
     {
     public:
-        virtual HRESULT STDMETHODCALLTYPE HandleMenuMsg2( 
+        virtual /* [local] */ HRESULT STDMETHODCALLTYPE HandleMenuMsg2( 
             /* [annotation][in] */ 
             _In_  UINT uMsg,
             /* [annotation][in] */ 
@@ -2500,21 +2581,21 @@ EXTERN_C const IID IID_IContextMenu3;
         
         DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IContextMenu3 * This,
-            /* [in] */ REFIID riid,
+            __RPC__in IContextMenu3 * This,
+            /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
         DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IContextMenu3 * This);
+            __RPC__in IContextMenu3 * This);
         
         DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
-            IContextMenu3 * This);
+            __RPC__in IContextMenu3 * This);
         
         DECLSPEC_XFGVIRT(IContextMenu, QueryContextMenu)
-        HRESULT ( STDMETHODCALLTYPE *QueryContextMenu )( 
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *QueryContextMenu )( 
             IContextMenu3 * This,
             /* [annotation][in] */ 
             _In_  HMENU hmenu,
@@ -2528,13 +2609,13 @@ EXTERN_C const IID IID_IContextMenu3;
             _In_  UINT uFlags);
         
         DECLSPEC_XFGVIRT(IContextMenu, InvokeCommand)
-        HRESULT ( STDMETHODCALLTYPE *InvokeCommand )( 
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *InvokeCommand )( 
             IContextMenu3 * This,
             /* [annotation][in] */ 
             _In_  CMINVOKECOMMANDINFO *pici);
         
         DECLSPEC_XFGVIRT(IContextMenu, GetCommandString)
-        HRESULT ( STDMETHODCALLTYPE *GetCommandString )( 
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *GetCommandString )( 
             IContextMenu3 * This,
             /* [annotation][in] */ 
             _In_  UINT_PTR idCmd,
@@ -2548,7 +2629,7 @@ EXTERN_C const IID IID_IContextMenu3;
             _In_  UINT cchMax);
         
         DECLSPEC_XFGVIRT(IContextMenu2, HandleMenuMsg)
-        HRESULT ( STDMETHODCALLTYPE *HandleMenuMsg )( 
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *HandleMenuMsg )( 
             IContextMenu3 * This,
             /* [annotation][in] */ 
             _In_  UINT uMsg,
@@ -2558,7 +2639,7 @@ EXTERN_C const IID IID_IContextMenu3;
             _In_  LPARAM lParam);
         
         DECLSPEC_XFGVIRT(IContextMenu3, HandleMenuMsg2)
-        HRESULT ( STDMETHODCALLTYPE *HandleMenuMsg2 )( 
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *HandleMenuMsg2 )( 
             IContextMenu3 * This,
             /* [annotation][in] */ 
             _In_  UINT uMsg,
@@ -2614,6 +2695,21 @@ EXTERN_C const IID IID_IContextMenu3;
 
 #endif 	/* C style interface */
 
+
+
+/* [call_as] */ HRESULT STDMETHODCALLTYPE IContextMenu3_RemoteHandleMenuMsg2_Proxy( 
+    __RPC__in IContextMenu3 * This,
+    /* [in] */ UINT uMsg,
+    /* [in] */ WPARAM wParam,
+    /* [in] */ LPARAM lParam,
+    /* [out] */ __RPC__out LRESULT *plResult);
+
+
+void __RPC_STUB IContextMenu3_RemoteHandleMenuMsg2_Stub(
+    IRpcStubBuffer *This,
+    IRpcChannelBuffer *_pRpcChannelBuffer,
+    PRPC_MESSAGE _pRpcMessage,
+    DWORD *_pdwStubPhase);
 
 
 
@@ -13282,7 +13378,7 @@ EXTERN_C const IID IID_IActionProgress;
 #define __IShellExtInit_INTERFACE_DEFINED__
 
 /* interface IShellExtInit */
-/* [unique][local][object][uuid] */ 
+/* [unique][object][uuid] */ 
 
 
 EXTERN_C const IID IID_IShellExtInit;
@@ -13293,7 +13389,7 @@ EXTERN_C const IID IID_IShellExtInit;
     IShellExtInit : public IUnknown
     {
     public:
-        virtual HRESULT STDMETHODCALLTYPE Initialize( 
+        virtual /* [local] */ HRESULT STDMETHODCALLTYPE Initialize( 
             /* [annotation][unique][in] */ 
             _In_opt_  PCIDLIST_ABSOLUTE pidlFolder,
             /* [annotation][unique][in] */ 
@@ -13312,21 +13408,21 @@ EXTERN_C const IID IID_IShellExtInit;
         
         DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IShellExtInit * This,
-            /* [in] */ REFIID riid,
+            __RPC__in IShellExtInit * This,
+            /* [in] */ __RPC__in REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
         DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IShellExtInit * This);
+            __RPC__in IShellExtInit * This);
         
         DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
-            IShellExtInit * This);
+            __RPC__in IShellExtInit * This);
         
         DECLSPEC_XFGVIRT(IShellExtInit, Initialize)
-        HRESULT ( STDMETHODCALLTYPE *Initialize )( 
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Initialize )( 
             IShellExtInit * This,
             /* [annotation][unique][in] */ 
             _In_opt_  PCIDLIST_ABSOLUTE pidlFolder,
@@ -13366,6 +13462,20 @@ EXTERN_C const IID IID_IShellExtInit;
 
 #endif 	/* C style interface */
 
+
+
+/* [call_as] */ HRESULT STDMETHODCALLTYPE IShellExtInit_RemoteInitialize_Proxy( 
+    __RPC__in IShellExtInit * This,
+    /* [unique][in] */ __RPC__in_opt PCIDLIST_ABSOLUTE pidlFolder,
+    /* [unique][in] */ __RPC__in_opt IDataObject *pdtobj,
+    /* [system_handle][unique][in] */ __RPC__in_opt HANDLE hkeyProgID);
+
+
+void __RPC_STUB IShellExtInit_RemoteInitialize_Stub(
+    IRpcStubBuffer *This,
+    IRpcChannelBuffer *_pRpcChannelBuffer,
+    PRPC_MESSAGE _pRpcMessage,
+    DWORD *_pdwStubPhase);
 
 
 
@@ -18035,7 +18145,7 @@ __inline void FreeIDListArray(_In_reads_(cItems) PIDLIST_RELATIVE *ppidls, UINT 
      UINT i;                             
      for (i = 0; i < cItems; i++)        
      {                                   
-         CoTaskMemFree(ppidls[i]);       
+         CoTaskMemFree((PVOID)ppidls[i]);
      }                                   
      CoTaskMemFree(ppidls);              
 }                                        
@@ -28259,7 +28369,8 @@ enum DEFAULT_FOLDER_MENU_RESTRICTIONS
         DFMR_USE_SPECIFIED_HANDLERS	= 0x100,
         DFMR_USE_SPECIFIED_VERBS	= 0x200,
         DFMR_NO_ASYNC_VERBS	= 0x400,
-        DFMR_NO_NATIVECPU_VERBS	= 0x800
+        DFMR_NO_NATIVECPU_VERBS	= 0x800,
+        DFMR_NO_NONWOW_VERBS	= 0x1000
     } 	DEFAULT_FOLDER_MENU_RESTRICTIONS;
 
 DEFINE_ENUM_FLAG_OPERATORS(DEFAULT_FOLDER_MENU_RESTRICTIONS)
@@ -33406,6 +33517,98 @@ unsigned char * __RPC_USER  VARIANT_UserMarshal64(  __RPC__in unsigned long *, _
 unsigned char * __RPC_USER  VARIANT_UserUnmarshal64(__RPC__in unsigned long *, __RPC__in_xcount(0) unsigned char *, __RPC__out VARIANT * ); 
 void                      __RPC_USER  VARIANT_UserFree64(     __RPC__in unsigned long *, __RPC__in VARIANT * ); 
 
+/* [local] */ HRESULT STDMETHODCALLTYPE IContextMenu_QueryContextMenu_Proxy( 
+    IContextMenu * This,
+    /* [annotation][in] */ 
+    _In_  HMENU hmenu,
+    /* [annotation][in] */ 
+    _In_  UINT indexMenu,
+    /* [annotation][in] */ 
+    _In_  UINT idCmdFirst,
+    /* [annotation][in] */ 
+    _In_  UINT idCmdLast,
+    /* [annotation][in] */ 
+    _In_  UINT uFlags);
+
+
+/* [call_as] */ HRESULT STDMETHODCALLTYPE IContextMenu_QueryContextMenu_Stub( 
+    __RPC__in IContextMenu * This,
+    /* [in] */ __RPC__in HMENU hmenu,
+    /* [in] */ UINT indexMenu,
+    /* [in] */ UINT idCmdFirst,
+    /* [in] */ UINT idCmdLast,
+    /* [in] */ UINT uFlags,
+    /* [out] */ __RPC__out UINT *fileMappingHandlesCount,
+    /* [size_is][size_is][system_handle][out] */ __RPC__deref_out_ecount_full_opt(*fileMappingHandlesCount) HANDLE **fileMappingHandles,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*fileMappingHandlesCount) ULONG **bitmapIndices);
+
+/* [local] */ HRESULT STDMETHODCALLTYPE IContextMenu_InvokeCommand_Proxy( 
+    IContextMenu * This,
+    /* [annotation][in] */ 
+    _In_  CMINVOKECOMMANDINFO *pici);
+
+
+/* [call_as] */ HRESULT STDMETHODCALLTYPE IContextMenu_InvokeCommand_Stub( 
+    __RPC__in IContextMenu * This,
+    /* [in] */ __RPC__in const CMINVOKECOMMANDINFOEX_REMOTE *pici);
+
+/* [local] */ HRESULT STDMETHODCALLTYPE IContextMenu_GetCommandString_Proxy( 
+    IContextMenu * This,
+    /* [annotation][in] */ 
+    _In_  UINT_PTR idCmd,
+    /* [annotation][in] */ 
+    _In_  UINT uType,
+    /* [annotation][in] */ 
+    _Reserved_  UINT *pReserved,
+    /* [annotation][out] */ 
+    _Out_writes_bytes_((uType & GCS_UNICODE) ? (cchMax * sizeof(wchar_t)) : cchMax) _When_(!(uType & (GCS_VALIDATEA | GCS_VALIDATEW)), _Null_terminated_)  CHAR *pszName,
+    /* [annotation][in] */ 
+    _In_  UINT cchMax);
+
+
+/* [call_as] */ HRESULT STDMETHODCALLTYPE IContextMenu_GetCommandString_Stub( 
+    __RPC__in IContextMenu * This,
+    /* [in] */ UINT_PTR idCmd,
+    /* [in] */ UINT uType,
+    /* [in] */ __RPC__in UINT *pReserved,
+    /* [out] */ __RPC__out CHAR *pszName,
+    /* [in] */ UINT cchMax);
+
+/* [local] */ HRESULT STDMETHODCALLTYPE IContextMenu2_HandleMenuMsg_Proxy( 
+    IContextMenu2 * This,
+    /* [annotation][in] */ 
+    _In_  UINT uMsg,
+    /* [annotation][in] */ 
+    _In_  WPARAM wParam,
+    /* [annotation][in] */ 
+    _In_  LPARAM lParam);
+
+
+/* [call_as] */ HRESULT STDMETHODCALLTYPE IContextMenu2_HandleMenuMsg_Stub( 
+    __RPC__in IContextMenu2 * This,
+    /* [in] */ UINT uMsg,
+    /* [in] */ WPARAM wParam,
+    /* [in] */ LPARAM lParam);
+
+/* [local] */ HRESULT STDMETHODCALLTYPE IContextMenu3_HandleMenuMsg2_Proxy( 
+    IContextMenu3 * This,
+    /* [annotation][in] */ 
+    _In_  UINT uMsg,
+    /* [annotation][in] */ 
+    _In_  WPARAM wParam,
+    /* [annotation][in] */ 
+    _In_  LPARAM lParam,
+    /* [annotation][out] */ 
+    _Out_opt_  LRESULT *plResult);
+
+
+/* [call_as] */ HRESULT STDMETHODCALLTYPE IContextMenu3_HandleMenuMsg2_Stub( 
+    __RPC__in IContextMenu3 * This,
+    /* [in] */ UINT uMsg,
+    /* [in] */ WPARAM wParam,
+    /* [in] */ LPARAM lParam,
+    /* [out] */ __RPC__out LRESULT *plResult);
+
 /* [local] */ HRESULT STDMETHODCALLTYPE IEnumIDList_Next_Proxy( 
     IEnumIDList * This,
     /* [annotation][in] */ 
@@ -33488,6 +33691,22 @@ void                      __RPC_USER  VARIANT_UserFree64(     __RPC__in unsigned
     /* [in] */ ULONG celt,
     /* [length_is][size_is][out] */ __RPC__out_ecount_part(celt, *pceltFetched) IShellItem **rgelt,
     /* [out] */ __RPC__out ULONG *pceltFetched);
+
+/* [local] */ HRESULT STDMETHODCALLTYPE IShellExtInit_Initialize_Proxy( 
+    IShellExtInit * This,
+    /* [annotation][unique][in] */ 
+    _In_opt_  PCIDLIST_ABSOLUTE pidlFolder,
+    /* [annotation][unique][in] */ 
+    _In_opt_  IDataObject *pdtobj,
+    /* [annotation][unique][in] */ 
+    _In_opt_  HKEY hkeyProgID);
+
+
+/* [call_as] */ HRESULT STDMETHODCALLTYPE IShellExtInit_Initialize_Stub( 
+    __RPC__in IShellExtInit * This,
+    /* [unique][in] */ __RPC__in_opt PCIDLIST_ABSOLUTE pidlFolder,
+    /* [unique][in] */ __RPC__in_opt IDataObject *pdtobj,
+    /* [system_handle][unique][in] */ __RPC__in_opt HANDLE hkeyProgID);
 
 /* [local] */ HRESULT STDMETHODCALLTYPE IParentAndItem_GetParentAndItem_Proxy( 
     IParentAndItem * This,

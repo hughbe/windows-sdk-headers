@@ -377,7 +377,7 @@ typedef struct _BCRYPT_AUTHENTICATED_CIPHER_MODE_INFO
 
 #define BCRYPT_BLOCK_PADDING        0x00000001  // BCryptEncrypt/Decrypt
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_FE)
+#if (NTDDI_VERSION >= NTDDI_WIN10_CO)
 #define BCRYPT_GENERATE_IV          0x00000020  // BCryptGenerateSymmetricKey BCryptEncrypt
 #endif
 
@@ -1220,7 +1220,7 @@ BCryptImportKey(
 
 #define BCRYPT_NO_KEY_VALIDATION    0x00000008
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_FE)
+#if (NTDDI_VERSION >= NTDDI_WIN10_CO)
 #define BCRYPT_KEY_VALIDATION_RANGE             0x00000010  // BCryptImportKeyPair
 #define BCRYPT_KEY_VALIDATION_RANGE_AND_ORDER   0x00000018  // BCryptImportKeyPair & BCryptFinalizeKeyPair
 #define BCRYPT_KEY_VALIDATION_REGENERATE        0x00000020  // BCryptImportKeyPair

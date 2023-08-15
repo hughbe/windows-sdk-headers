@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -23,6 +23,7 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Haptics
         DeniedByEnergySaver = 3,
     };
     struct IKnownSimpleHapticsControllerWaveformsStatics;
+    struct IKnownSimpleHapticsControllerWaveformsStatics2;
     struct ISimpleHapticsController;
     struct ISimpleHapticsControllerFeedback;
     struct IVibrationDevice;
@@ -35,6 +36,7 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Haptics
 namespace winrt::impl
 {
     template <> struct category<Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Haptics::ISimpleHapticsController>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Haptics::ISimpleHapticsControllerFeedback>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Haptics::IVibrationDevice>{ using type = interface_category; };
@@ -50,11 +52,13 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::Devices::Haptics::VibrationDevice> = L"Windows.Devices.Haptics.VibrationDevice";
     template <> inline constexpr auto& name_v<Windows::Devices::Haptics::VibrationAccessStatus> = L"Windows.Devices.Haptics.VibrationAccessStatus";
     template <> inline constexpr auto& name_v<Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics> = L"Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics";
+    template <> inline constexpr auto& name_v<Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2> = L"Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics2";
     template <> inline constexpr auto& name_v<Windows::Devices::Haptics::ISimpleHapticsController> = L"Windows.Devices.Haptics.ISimpleHapticsController";
     template <> inline constexpr auto& name_v<Windows::Devices::Haptics::ISimpleHapticsControllerFeedback> = L"Windows.Devices.Haptics.ISimpleHapticsControllerFeedback";
     template <> inline constexpr auto& name_v<Windows::Devices::Haptics::IVibrationDevice> = L"Windows.Devices.Haptics.IVibrationDevice";
     template <> inline constexpr auto& name_v<Windows::Devices::Haptics::IVibrationDeviceStatics> = L"Windows.Devices.Haptics.IVibrationDeviceStatics";
     template <> inline constexpr guid guid_v<Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics>{ 0x3D577EF7,0x4CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } }; // 3D577EF7-4CEE-11E6-B535-001BDC06AB3B
+    template <> inline constexpr guid guid_v<Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2>{ 0xA7D24C27,0xB79D,0x510A,{ 0xBF,0x79,0xFF,0x6D,0x49,0x17,0x3E,0x1D } }; // A7D24C27-B79D-510A-BF79-FF6D49173E1D
     template <> inline constexpr guid guid_v<Windows::Devices::Haptics::ISimpleHapticsController>{ 0x3D577EF9,0x4CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } }; // 3D577EF9-4CEE-11E6-B535-001BDC06AB3B
     template <> inline constexpr guid guid_v<Windows::Devices::Haptics::ISimpleHapticsControllerFeedback>{ 0x3D577EF8,0x4CEE,0x11E6,{ 0xB5,0x35,0x00,0x1B,0xDC,0x06,0xAB,0x3B } }; // 3D577EF8-4CEE-11E6-B535-001BDC06AB3B
     template <> inline constexpr guid guid_v<Windows::Devices::Haptics::IVibrationDevice>{ 0x40F21A3E,0x8844,0x47FF,{ 0xB3,0x12,0x06,0x18,0x5A,0x38,0x44,0xDA } }; // 40F21A3E-8844-47FF-B312-06185A3844DA
@@ -71,6 +75,22 @@ namespace winrt::impl
             virtual int32_t __stdcall get_RumbleContinuous(uint16_t*) noexcept = 0;
             virtual int32_t __stdcall get_Press(uint16_t*) noexcept = 0;
             virtual int32_t __stdcall get_Release(uint16_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_BrushContinuous(uint16_t*) noexcept = 0;
+            virtual int32_t __stdcall get_ChiselMarkerContinuous(uint16_t*) noexcept = 0;
+            virtual int32_t __stdcall get_EraserContinuous(uint16_t*) noexcept = 0;
+            virtual int32_t __stdcall get_Error(uint16_t*) noexcept = 0;
+            virtual int32_t __stdcall get_GalaxyPenContinuous(uint16_t*) noexcept = 0;
+            virtual int32_t __stdcall get_Hover(uint16_t*) noexcept = 0;
+            virtual int32_t __stdcall get_InkContinuous(uint16_t*) noexcept = 0;
+            virtual int32_t __stdcall get_MarkerContinuous(uint16_t*) noexcept = 0;
+            virtual int32_t __stdcall get_PencilContinuous(uint16_t*) noexcept = 0;
+            virtual int32_t __stdcall get_Success(uint16_t*) noexcept = 0;
         };
     };
     template <> struct abi<Windows::Devices::Haptics::ISimpleHapticsController>
@@ -129,6 +149,24 @@ namespace winrt::impl
     template <> struct consume<Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics>
     {
         template <typename D> using type = consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) BrushContinuous() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) ChiselMarkerContinuous() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) EraserContinuous() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) Error() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) GalaxyPenContinuous() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) Hover() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) InkContinuous() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) MarkerContinuous() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) PencilContinuous() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) Success() const;
+    };
+    template <> struct consume<Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2>
+    {
+        template <typename D> using type = consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Haptics_ISimpleHapticsController

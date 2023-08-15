@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,8 @@
 #ifndef WINRT_Windows_UI_Xaml_Controls_Primitives_H
 #define WINRT_Windows_UI_Xaml_Controls_Primitives_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.201201.7"
 #include "winrt/Windows.UI.Xaml.Controls.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -2068,6 +2069,276 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter3)->put_RevealBackgroundShowsAboveContent(value));
     }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectedDisabledBackground() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_SelectedDisabledBackground(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectedDisabledBackground(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_SelectedDisabledBackground(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckPressedBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_CheckPressedBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckPressedBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_CheckPressedBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckDisabledBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_CheckDisabledBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckDisabledBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_CheckDisabledBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxPointerOverBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_CheckBoxPointerOverBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxPointerOverBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_CheckBoxPointerOverBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxPressedBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_CheckBoxPressedBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxPressedBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_CheckBoxPressedBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxDisabledBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_CheckBoxDisabledBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxDisabledBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_CheckBoxDisabledBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxSelectedBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_CheckBoxSelectedBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxSelectedBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_CheckBoxSelectedBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxSelectedPointerOverBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_CheckBoxSelectedPointerOverBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxSelectedPointerOverBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_CheckBoxSelectedPointerOverBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxSelectedPressedBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_CheckBoxSelectedPressedBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxSelectedPressedBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_CheckBoxSelectedPressedBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxSelectedDisabledBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_CheckBoxSelectedDisabledBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxSelectedDisabledBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_CheckBoxSelectedDisabledBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxBorderBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_CheckBoxBorderBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_CheckBoxBorderBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxPointerOverBorderBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_CheckBoxPointerOverBorderBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxPointerOverBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_CheckBoxPointerOverBorderBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxPressedBorderBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_CheckBoxPressedBorderBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxPressedBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_CheckBoxPressedBorderBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxDisabledBorderBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_CheckBoxDisabledBorderBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxDisabledBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_CheckBoxDisabledBorderBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::CornerRadius) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxCornerRadius() const
+    {
+        Windows::UI::Xaml::CornerRadius value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_CheckBoxCornerRadius(put_abi(value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::CheckBoxCornerRadius(Windows::UI::Xaml::CornerRadius const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_CheckBoxCornerRadius(impl::bind_in(value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::CornerRadius) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectionIndicatorCornerRadius() const
+    {
+        Windows::UI::Xaml::CornerRadius value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_SelectionIndicatorCornerRadius(put_abi(value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectionIndicatorCornerRadius(Windows::UI::Xaml::CornerRadius const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_SelectionIndicatorCornerRadius(impl::bind_in(value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectionIndicatorVisualEnabled() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_SelectionIndicatorVisualEnabled(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectionIndicatorVisualEnabled(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_SelectionIndicatorVisualEnabled(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterSelectionIndicatorMode) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectionIndicatorMode() const
+    {
+        Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterSelectionIndicatorMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_SelectionIndicatorMode(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectionIndicatorMode(Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterSelectionIndicatorMode const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_SelectionIndicatorMode(static_cast<int32_t>(value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectionIndicatorBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_SelectionIndicatorBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectionIndicatorBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_SelectionIndicatorBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectionIndicatorPointerOverBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_SelectionIndicatorPointerOverBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectionIndicatorPointerOverBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_SelectionIndicatorPointerOverBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectionIndicatorPressedBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_SelectionIndicatorPressedBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectionIndicatorPressedBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_SelectionIndicatorPressedBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectionIndicatorDisabledBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_SelectionIndicatorDisabledBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectionIndicatorDisabledBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_SelectionIndicatorDisabledBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectedBorderBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_SelectedBorderBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectedBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_SelectedBorderBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectedPressedBorderBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_SelectedPressedBorderBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectedPressedBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_SelectedPressedBorderBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectedDisabledBorderBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_SelectedDisabledBorderBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectedDisabledBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_SelectedDisabledBorderBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectedInnerBorderBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_SelectedInnerBorderBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::SelectedInnerBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_SelectedInnerBorderBrush(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::PointerOverBorderBrush() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->get_PointerOverBorderBrush(&value));
+        return Windows::UI::Xaml::Media::Brush{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>::PointerOverBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4)->put_PointerOverBorderBrush(*(void**)(&value)));
+    }
     template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterFactory<D>::CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const
     {
         void* value{};
@@ -2264,6 +2535,168 @@ namespace winrt::impl
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics3)->get_RevealBackgroundShowsAboveContentProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::SelectedDisabledBackgroundProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_SelectedDisabledBackgroundProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::CheckPressedBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_CheckPressedBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::CheckDisabledBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_CheckDisabledBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::CheckBoxPointerOverBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_CheckBoxPointerOverBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::CheckBoxPressedBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_CheckBoxPressedBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::CheckBoxDisabledBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_CheckBoxDisabledBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::CheckBoxSelectedBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_CheckBoxSelectedBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::CheckBoxSelectedPointerOverBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_CheckBoxSelectedPointerOverBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::CheckBoxSelectedPressedBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_CheckBoxSelectedPressedBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::CheckBoxSelectedDisabledBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_CheckBoxSelectedDisabledBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::CheckBoxBorderBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_CheckBoxBorderBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::CheckBoxPointerOverBorderBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_CheckBoxPointerOverBorderBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::CheckBoxPressedBorderBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_CheckBoxPressedBorderBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::CheckBoxDisabledBorderBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_CheckBoxDisabledBorderBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::CheckBoxCornerRadiusProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_CheckBoxCornerRadiusProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::SelectionIndicatorCornerRadiusProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_SelectionIndicatorCornerRadiusProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::SelectionIndicatorVisualEnabledProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_SelectionIndicatorVisualEnabledProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::SelectionIndicatorModeProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_SelectionIndicatorModeProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::SelectionIndicatorBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_SelectionIndicatorBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::SelectionIndicatorPointerOverBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_SelectionIndicatorPointerOverBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::SelectionIndicatorPressedBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_SelectionIndicatorPressedBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::SelectionIndicatorDisabledBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_SelectionIndicatorDisabledBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::SelectedBorderBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_SelectedBorderBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::SelectedPressedBorderBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_SelectedPressedBorderBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::SelectedDisabledBorderBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_SelectedDisabledBorderBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::SelectedInnerBorderBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_SelectedInnerBorderBrushProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>::PointerOverBorderBrushProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4)->get_PointerOverBorderBrushProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemTemplateSettings<D>::DragItemsCount() const
@@ -2712,6 +3145,46 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IPopup3)->get_IsConstrainedToRootBounds(&value));
         return value;
     }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::FrameworkElement) consume_Windows_UI_Xaml_Controls_Primitives_IPopup4<D>::PlacementTarget() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IPopup4)->get_PlacementTarget(&value));
+        return Windows::UI::Xaml::FrameworkElement{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IPopup4<D>::PlacementTarget(Windows::UI::Xaml::FrameworkElement const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IPopup4)->put_PlacementTarget(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode) consume_Windows_UI_Xaml_Controls_Primitives_IPopup4<D>::DesiredPlacement() const
+    {
+        Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IPopup4)->get_DesiredPlacement(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IPopup4<D>::DesiredPlacement(Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IPopup4)->put_DesiredPlacement(static_cast<int32_t>(value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode) consume_Windows_UI_Xaml_Controls_Primitives_IPopup4<D>::ActualPlacement() const
+    {
+        Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IPopup4)->get_ActualPlacement(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Controls_Primitives_IPopup4<D>::ActualPlacementChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IPopup4)->add_ActualPlacementChanged(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> typename consume_Windows_UI_Xaml_Controls_Primitives_IPopup4<D>::ActualPlacementChanged_revoker consume_Windows_UI_Xaml_Controls_Primitives_IPopup4<D>::ActualPlacementChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    {
+        return impl::make_event_revoker<D, ActualPlacementChanged_revoker>(this, ActualPlacementChanged(handler));
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Controls_Primitives_IPopup4<D>::ActualPlacementChanged(winrt::event_token const& token) const noexcept
+    {
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IPopup4)->remove_ActualPlacementChanged(impl::bind_in(token)));
+    }
     template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IPopupStatics<D>::ChildProperty() const
     {
         void* value{};
@@ -2758,6 +3231,18 @@ namespace winrt::impl
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IPopupStatics3)->get_ShouldConstrainToRootBoundsProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IPopupStatics4<D>::PlacementTargetProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IPopupStatics4)->get_PlacementTargetProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Controls_Primitives_IPopupStatics4<D>::DesiredPlacementProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Controls::Primitives::IPopupStatics4)->get_DesiredPlacementProperty(&value));
         return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_UI_Xaml_Controls_Primitives_IProgressBarTemplateSettings<D>::EllipseDiameter() const
@@ -6785,6 +7270,415 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4> : produce_base<D, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4>
+    {
+        int32_t __stdcall get_SelectedDisabledBackground(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().SelectedDisabledBackground());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SelectedDisabledBackground(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SelectedDisabledBackground(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckPressedBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().CheckPressedBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_CheckPressedBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CheckPressedBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckDisabledBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().CheckDisabledBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_CheckDisabledBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CheckDisabledBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxPointerOverBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().CheckBoxPointerOverBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_CheckBoxPointerOverBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CheckBoxPointerOverBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxPressedBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().CheckBoxPressedBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_CheckBoxPressedBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CheckBoxPressedBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxDisabledBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().CheckBoxDisabledBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_CheckBoxDisabledBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CheckBoxDisabledBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxSelectedBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().CheckBoxSelectedBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_CheckBoxSelectedBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CheckBoxSelectedBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxSelectedPointerOverBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().CheckBoxSelectedPointerOverBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_CheckBoxSelectedPointerOverBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CheckBoxSelectedPointerOverBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxSelectedPressedBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().CheckBoxSelectedPressedBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_CheckBoxSelectedPressedBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CheckBoxSelectedPressedBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxSelectedDisabledBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().CheckBoxSelectedDisabledBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_CheckBoxSelectedDisabledBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CheckBoxSelectedDisabledBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxBorderBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().CheckBoxBorderBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_CheckBoxBorderBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CheckBoxBorderBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxPointerOverBorderBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().CheckBoxPointerOverBorderBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_CheckBoxPointerOverBorderBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CheckBoxPointerOverBorderBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxPressedBorderBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().CheckBoxPressedBorderBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_CheckBoxPressedBorderBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CheckBoxPressedBorderBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxDisabledBorderBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().CheckBoxDisabledBorderBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_CheckBoxDisabledBorderBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CheckBoxDisabledBorderBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxCornerRadius(struct struct_Windows_UI_Xaml_CornerRadius* value) noexcept final try
+        {
+            zero_abi<Windows::UI::Xaml::CornerRadius>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::CornerRadius>(this->shim().CheckBoxCornerRadius());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_CheckBoxCornerRadius(struct struct_Windows_UI_Xaml_CornerRadius value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CheckBoxCornerRadius(*reinterpret_cast<Windows::UI::Xaml::CornerRadius const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectionIndicatorCornerRadius(struct struct_Windows_UI_Xaml_CornerRadius* value) noexcept final try
+        {
+            zero_abi<Windows::UI::Xaml::CornerRadius>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::CornerRadius>(this->shim().SelectionIndicatorCornerRadius());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SelectionIndicatorCornerRadius(struct struct_Windows_UI_Xaml_CornerRadius value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SelectionIndicatorCornerRadius(*reinterpret_cast<Windows::UI::Xaml::CornerRadius const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectionIndicatorVisualEnabled(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().SelectionIndicatorVisualEnabled());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SelectionIndicatorVisualEnabled(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SelectionIndicatorVisualEnabled(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectionIndicatorMode(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterSelectionIndicatorMode>(this->shim().SelectionIndicatorMode());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SelectionIndicatorMode(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SelectionIndicatorMode(*reinterpret_cast<Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterSelectionIndicatorMode const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectionIndicatorBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().SelectionIndicatorBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SelectionIndicatorBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SelectionIndicatorBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectionIndicatorPointerOverBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().SelectionIndicatorPointerOverBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SelectionIndicatorPointerOverBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SelectionIndicatorPointerOverBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectionIndicatorPressedBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().SelectionIndicatorPressedBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SelectionIndicatorPressedBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SelectionIndicatorPressedBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectionIndicatorDisabledBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().SelectionIndicatorDisabledBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SelectionIndicatorDisabledBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SelectionIndicatorDisabledBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectedBorderBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().SelectedBorderBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SelectedBorderBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SelectedBorderBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectedPressedBorderBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().SelectedPressedBorderBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SelectedPressedBorderBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SelectedPressedBorderBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectedDisabledBorderBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().SelectedDisabledBorderBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SelectedDisabledBorderBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SelectedDisabledBorderBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectedInnerBorderBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().SelectedInnerBorderBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SelectedInnerBorderBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SelectedInnerBorderBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_PointerOverBorderBrush(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Media::Brush>(this->shim().PointerOverBorderBrush());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_PointerOverBorderBrush(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().PointerOverBorderBrush(*reinterpret_cast<Windows::UI::Xaml::Media::Brush const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterFactory> : produce_base<D, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterFactory>
     {
         int32_t __stdcall CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept final try
@@ -7069,6 +7963,228 @@ namespace winrt::impl
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().RevealBackgroundShowsAboveContentProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4> : produce_base<D, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4>
+    {
+        int32_t __stdcall get_SelectedDisabledBackgroundProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().SelectedDisabledBackgroundProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckPressedBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CheckPressedBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckDisabledBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CheckDisabledBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxPointerOverBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CheckBoxPointerOverBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxPressedBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CheckBoxPressedBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxDisabledBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CheckBoxDisabledBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxSelectedBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CheckBoxSelectedBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxSelectedPointerOverBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CheckBoxSelectedPointerOverBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxSelectedPressedBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CheckBoxSelectedPressedBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxSelectedDisabledBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CheckBoxSelectedDisabledBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxBorderBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CheckBoxBorderBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxPointerOverBorderBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CheckBoxPointerOverBorderBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxPressedBorderBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CheckBoxPressedBorderBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxDisabledBorderBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CheckBoxDisabledBorderBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CheckBoxCornerRadiusProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().CheckBoxCornerRadiusProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectionIndicatorCornerRadiusProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().SelectionIndicatorCornerRadiusProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectionIndicatorVisualEnabledProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().SelectionIndicatorVisualEnabledProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectionIndicatorModeProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().SelectionIndicatorModeProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectionIndicatorBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().SelectionIndicatorBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectionIndicatorPointerOverBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().SelectionIndicatorPointerOverBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectionIndicatorPressedBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().SelectionIndicatorPressedBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectionIndicatorDisabledBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().SelectionIndicatorDisabledBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectedBorderBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().SelectedBorderBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectedPressedBorderBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().SelectedPressedBorderBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectedDisabledBorderBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().SelectedDisabledBorderBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SelectedInnerBorderBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().SelectedInnerBorderBrushProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_PointerOverBorderBrushProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().PointerOverBorderBrushProperty());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -7837,6 +8953,62 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, Windows::UI::Xaml::Controls::Primitives::IPopup4> : produce_base<D, Windows::UI::Xaml::Controls::Primitives::IPopup4>
+    {
+        int32_t __stdcall get_PlacementTarget(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::FrameworkElement>(this->shim().PlacementTarget());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_PlacementTarget(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().PlacementTarget(*reinterpret_cast<Windows::UI::Xaml::FrameworkElement const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_DesiredPlacement(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode>(this->shim().DesiredPlacement());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_DesiredPlacement(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().DesiredPlacement(*reinterpret_cast<Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ActualPlacement(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode>(this->shim().ActualPlacement());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_ActualPlacementChanged(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().ActualPlacementChanged(*reinterpret_cast<Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_ActualPlacementChanged(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ActualPlacementChanged(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, Windows::UI::Xaml::Controls::Primitives::IPopupStatics> : produce_base<D, Windows::UI::Xaml::Controls::Primitives::IPopupStatics>
     {
         int32_t __stdcall get_ChildProperty(void** value) noexcept final try
@@ -7912,6 +9084,28 @@ namespace winrt::impl
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().ShouldConstrainToRootBoundsProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::UI::Xaml::Controls::Primitives::IPopupStatics4> : produce_base<D, Windows::UI::Xaml::Controls::Primitives::IPopupStatics4>
+    {
+        int32_t __stdcall get_PlacementTargetProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().PlacementTargetProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_DesiredPlacementProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().DesiredPlacementProperty());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -9593,6 +10787,114 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
     {
         return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics3 const&), ListViewItemPresenter, IListViewItemPresenterStatics3>([](IListViewItemPresenterStatics3 const& f) { return f.RevealBackgroundShowsAboveContentProperty(); });
     }
+    inline auto ListViewItemPresenter::SelectedDisabledBackgroundProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.SelectedDisabledBackgroundProperty(); });
+    }
+    inline auto ListViewItemPresenter::CheckPressedBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.CheckPressedBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::CheckDisabledBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.CheckDisabledBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::CheckBoxPointerOverBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.CheckBoxPointerOverBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::CheckBoxPressedBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.CheckBoxPressedBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::CheckBoxDisabledBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.CheckBoxDisabledBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::CheckBoxSelectedBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.CheckBoxSelectedBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::CheckBoxSelectedPointerOverBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.CheckBoxSelectedPointerOverBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::CheckBoxSelectedPressedBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.CheckBoxSelectedPressedBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::CheckBoxSelectedDisabledBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.CheckBoxSelectedDisabledBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::CheckBoxBorderBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.CheckBoxBorderBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::CheckBoxPointerOverBorderBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.CheckBoxPointerOverBorderBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::CheckBoxPressedBorderBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.CheckBoxPressedBorderBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::CheckBoxDisabledBorderBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.CheckBoxDisabledBorderBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::CheckBoxCornerRadiusProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.CheckBoxCornerRadiusProperty(); });
+    }
+    inline auto ListViewItemPresenter::SelectionIndicatorCornerRadiusProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.SelectionIndicatorCornerRadiusProperty(); });
+    }
+    inline auto ListViewItemPresenter::SelectionIndicatorVisualEnabledProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.SelectionIndicatorVisualEnabledProperty(); });
+    }
+    inline auto ListViewItemPresenter::SelectionIndicatorModeProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.SelectionIndicatorModeProperty(); });
+    }
+    inline auto ListViewItemPresenter::SelectionIndicatorBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.SelectionIndicatorBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::SelectionIndicatorPointerOverBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.SelectionIndicatorPointerOverBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::SelectionIndicatorPressedBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.SelectionIndicatorPressedBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::SelectionIndicatorDisabledBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.SelectionIndicatorDisabledBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::SelectedBorderBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.SelectedBorderBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::SelectedPressedBorderBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.SelectedPressedBorderBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::SelectedDisabledBorderBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.SelectedDisabledBorderBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::SelectedInnerBorderBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.SelectedInnerBorderBrushProperty(); });
+    }
+    inline auto ListViewItemPresenter::PointerOverBorderBrushProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IListViewItemPresenterStatics4 const&), ListViewItemPresenter, IListViewItemPresenterStatics4>([](IListViewItemPresenterStatics4 const& f) { return f.PointerOverBorderBrushProperty(); });
+    }
     inline auto LoopingSelector::ShouldLoopProperty()
     {
         return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(ILoopingSelectorStatics const&), LoopingSelector, ILoopingSelectorStatics>([](ILoopingSelectorStatics const& f) { return f.ShouldLoopProperty(); });
@@ -9690,6 +10992,14 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
     inline auto Popup::ShouldConstrainToRootBoundsProperty()
     {
         return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IPopupStatics3 const&), Popup, IPopupStatics3>([](IPopupStatics3 const& f) { return f.ShouldConstrainToRootBoundsProperty(); });
+    }
+    inline auto Popup::PlacementTargetProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IPopupStatics4 const&), Popup, IPopupStatics4>([](IPopupStatics4 const& f) { return f.PlacementTargetProperty(); });
+    }
+    inline auto Popup::DesiredPlacementProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IPopupStatics4 const&), Popup, IPopupStatics4>([](IPopupStatics4 const& f) { return f.DesiredPlacementProperty(); });
     }
     inline auto RangeBase::MinimumProperty()
     {
@@ -10131,7 +11441,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
     template <typename D, typename... Interfaces>
     struct ListViewItemPresenterT :
         implements<D, Windows::UI::Xaml::Controls::IContentPresenterOverrides, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, composing, Interfaces...>,
-        impl::require<D, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter2, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter3, Windows::UI::Xaml::Controls::IContentPresenter, Windows::UI::Xaml::Controls::IContentPresenter2, Windows::UI::Xaml::Controls::IContentPresenter3, Windows::UI::Xaml::Controls::IContentPresenter4, Windows::UI::Xaml::Controls::IContentPresenter5, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9, Windows::UI::Xaml::IUIElement10, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>,
+        impl::require<D, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter2, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter3, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4, Windows::UI::Xaml::Controls::IContentPresenter, Windows::UI::Xaml::Controls::IContentPresenter2, Windows::UI::Xaml::Controls::IContentPresenter3, Windows::UI::Xaml::Controls::IContentPresenter4, Windows::UI::Xaml::Controls::IContentPresenter5, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9, Windows::UI::Xaml::IUIElement10, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>,
         impl::base<D, ListViewItemPresenter, Windows::UI::Xaml::Controls::ContentPresenter, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
         Windows::UI::Xaml::Controls::IContentPresenterOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverridesT<D>, Windows::UI::Xaml::IFrameworkElementOverrides2T<D>, Windows::UI::Xaml::IUIElementOverridesT<D>, Windows::UI::Xaml::IUIElementOverrides7T<D>, Windows::UI::Xaml::IUIElementOverrides8T<D>, Windows::UI::Xaml::IUIElementOverrides9T<D>
     {
@@ -10298,10 +11608,12 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IListViewItemTemplateSettings> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::ILoopingSelector> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::ILoopingSelectorItem> : winrt::impl::hash_base {};
@@ -10325,9 +11637,11 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IPopup4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IPopupStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IPopupStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IPopupStatics3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IPopupStatics4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IProgressBarTemplateSettings> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IProgressRingTemplateSettings> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Controls::Primitives::IRangeBase> : winrt::impl::hash_base {};

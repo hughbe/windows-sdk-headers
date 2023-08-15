@@ -1673,6 +1673,10 @@ typedef struct _IMAGEHLP_SYMBOLW64_PACKAGE {
 // module data structure
 //
 
+//
+// ANSI Module Information
+//
+
 typedef struct _IMAGEHLP_MODULE64 {
     DWORD    SizeOfStruct;           // set to sizeof(IMAGEHLP_MODULE64)
     DWORD64  BaseOfImage;            // base load address of module
@@ -1704,6 +1708,16 @@ typedef struct _IMAGEHLP_MODULE64 {
     DWORD    Reserved;               // Padding - don't remove.
 } IMAGEHLP_MODULE64, *PIMAGEHLP_MODULE64;
 
+// (Extended) ANSI version of IMAGEHLP_MODULE64 that supports Search Hints
+typedef struct _IMAGEHLP_MODULE64_EX {
+    IMAGEHLP_MODULE64 Module;
+    DWORD    RegionFlags;            // Region Search Flags - IMAGEHLP_MODULE_REGION_XXX
+} IMAGEHLP_MODULE64_EX, *PIMAGEHLP_MODULE64_EX;
+
+//
+// WIDE Module Information
+//
+
 typedef struct _IMAGEHLP_MODULEW64 {
     DWORD    SizeOfStruct;           // set to sizeof(IMAGEHLP_MODULE64)
     DWORD64  BaseOfImage;            // base load address of module
@@ -1734,6 +1748,20 @@ typedef struct _IMAGEHLP_MODULEW64 {
     DWORD    MachineType;            // IMAGE_FILE_MACHINE_XXX from ntimage.h and winnt.h
     DWORD    Reserved;               // Padding - don't remove.
 } IMAGEHLP_MODULEW64, *PIMAGEHLP_MODULEW64;
+
+// (Extended) WIDE version of IMAGEHLP_MODULEW64 that supports Search Hints
+typedef struct _IMAGEHLP_MODULEW64_EX {
+    IMAGEHLP_MODULEW64 Module;
+    DWORD    RegionFlags;            // Region Search Flags - IMAGEHLP_MODULE_REGION_XXX
+} IMAGEHLP_MODULEW64_EX, *PIMAGEHLP_MODULEW64_EX;
+
+
+#define IMAGEHLP_MODULE_REGION_DLLBASE       0x01
+#define IMAGEHLP_MODULE_REGION_DLLRANGE      0x02
+#define IMAGEHLP_MODULE_REGION_ADDITIONAL    0x04
+#define IMAGEHLP_MODULE_REGION_JIT           0x08
+#define IMAGEHLP_MODULE_REGION_ALL           0xFF
+
 
 #if !defined(_IMAGEHLP_SOURCE_) && defined(_IMAGEHLP64)
 #define IMAGEHLP_MODULE IMAGEHLP_MODULE64
@@ -2727,6 +2755,18 @@ SymGetSourceFileToken(
 
 BOOL
 IMAGEAPI
+SymGetSourceFileTokenByTokenName(
+    _In_ HANDLE hProcess,
+    _In_ ULONG64 Base,
+    _In_ PCSTR FileSpec,
+    _In_ PCSTR TokenName,
+    _In_opt_ PCSTR TokenParameters,
+    _Outptr_ PVOID *Token,
+    _Out_ DWORD *Size
+    );
+
+BOOL
+IMAGEAPI
 SymGetSourceFileChecksumW(
     _In_ HANDLE hProcess,
     _In_ ULONG64 Base,
@@ -2761,6 +2801,18 @@ SymGetSourceFileTokenW(
 
 BOOL
 IMAGEAPI
+SymGetSourceFileTokenByTokenNameW(
+    _In_ HANDLE hProcess,
+    _In_ ULONG64 Base,
+    _In_ PCWSTR FileSpec,
+    _In_ PCWSTR TokenName,
+    _In_opt_ PCWSTR TokenParameters,
+    _Outptr_ PVOID *Token,
+    _Out_ DWORD *Size
+    );
+
+BOOL
+IMAGEAPI
 SymGetSourceFileFromToken(
     _In_ HANDLE hProcess,
     _In_ PVOID Token,
@@ -2771,9 +2823,31 @@ SymGetSourceFileFromToken(
 
 BOOL
 IMAGEAPI
+SymGetSourceFileFromTokenByTokenName(
+    _In_ HANDLE hProcess,
+    _In_ PVOID Token,
+    _In_opt_ PCSTR TokenName,
+    _In_opt_ PCSTR Params,
+    _Out_writes_(Size) PSTR FilePath,
+    _In_ DWORD Size
+    );
+
+BOOL
+IMAGEAPI
 SymGetSourceFileFromTokenW(
     _In_ HANDLE hProcess,
     _In_ PVOID Token,
+    _In_opt_ PCWSTR Params,
+    _Out_writes_(Size) PWSTR FilePath,
+    _In_ DWORD Size
+    );
+
+BOOL
+IMAGEAPI
+SymGetSourceFileFromTokenByTokenNameW(
+    _In_ HANDLE hProcess,
+    _In_ PVOID Token,
+    _In_opt_ PCWSTR TokenName,
     _In_opt_ PCWSTR Params,
     _Out_writes_(Size) PWSTR FilePath,
     _In_ DWORD Size
@@ -3419,6 +3493,7 @@ typedef enum _IMAGEHLP_SYMBOL_TYPE_INFO {
     TI_GET_IS_REFERENCE,
     TI_GET_INDIRECTVIRTUALBASECLASS,
     TI_GET_VIRTUALBASETABLETYPE,
+    TI_GET_OBJECTPOINTERTYPE,
     IMAGEHLP_SYMBOL_TYPE_INFO_MAX,
 } IMAGEHLP_SYMBOL_TYPE_INFO;
 
@@ -4119,12 +4194,11 @@ typedef BOOL (WINAPI *PSYMBOLSERVERSETHTTPAUTHHEADER)(_In_ PCWSTR pszAuthHeader)
  #define SymGetSourceFileToken             SymGetSourceFileTokenW
  #define SymGetSourceFileFromToken         SymGetSourceFileFromTokenW
  #define SymGetSourceVarFromToken          SymGetSourceVarFromTokenW
- #define SymGetSourceFileToken             SymGetSourceFileTokenW
+ #define SymGetSourceFileTokenByTokenName  SymGetSourceFileTokenByTokenNameW
  #define SymGetFileLineOffsets64           SymGetFileLineOffsetsW64
  #define SymFindFileInPath                 SymFindFileInPathW
  #define SymMatchFileName                  SymMatchFileNameW
- #define SymGetSourceFileFromToken         SymGetSourceFileFromTokenW
- #define SymGetSourceVarFromToken          SymGetSourceVarFromTokenW
+ #define SymGetSourceFileFromTokenByTokenName SymGetSourceFileFromTokenByTokenNameW
  #define SymGetModuleInfo64                SymGetModuleInfoW64
  #define SymAddSourceStream                SymAddSourceStreamW
  #define SymSrvIsStore                     SymSrvIsStoreW

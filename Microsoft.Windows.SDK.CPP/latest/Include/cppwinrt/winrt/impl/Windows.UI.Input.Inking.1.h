@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -63,6 +63,13 @@ WINRT_EXPORT namespace winrt::Windows::UI::Input::Inking
     {
         IInkInputConfiguration(std::nullptr_t = nullptr) noexcept {}
         IInkInputConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IInkInputConfiguration2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IInkInputConfiguration2>
+    {
+        IInkInputConfiguration2(std::nullptr_t = nullptr) noexcept {}
+        IInkInputConfiguration2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IInkInputProcessingConfiguration :
         Windows::Foundation::IInspectable,
@@ -230,6 +237,13 @@ WINRT_EXPORT namespace winrt::Windows::UI::Input::Inking
     {
         IInkStroke3(std::nullptr_t = nullptr) noexcept {}
         IInkStroke3(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IInkStroke4 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IInkStroke4>
+    {
+        IInkStroke4(std::nullptr_t = nullptr) noexcept {}
+        IInkStroke4(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IInkStrokeBuilder :
         Windows::Foundation::IInspectable,

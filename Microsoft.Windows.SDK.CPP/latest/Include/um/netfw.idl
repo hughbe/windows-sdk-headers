@@ -183,7 +183,7 @@ cpp_quote("    );")
 cpp_quote("")
 
 // Dynamic Keyword Address structs and APIs
-cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_FE) ")
+cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_CO) ")
 cpp_quote("#ifndef __FW_DYNAMIC_KEYWORDS_TYPES__")
 cpp_quote("#define __FW_DYNAMIC_KEYWORDS_TYPES__")
 cpp_quote("typedef enum _tag_FW_DYNAMIC_KEYWORD_ORIGIN_TYPE")
@@ -259,7 +259,7 @@ cpp_quote("    _In_ PCWSTR   updatedAddresses,")
 cpp_quote("    _In_ BOOL     append")
 cpp_quote(");")
 cpp_quote("")
-cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_FE) ")
+cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_CO) ")
 
 import "icftypes.idl";
 import "oaidl.idl";

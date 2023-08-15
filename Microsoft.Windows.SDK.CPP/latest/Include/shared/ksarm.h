@@ -751,11 +751,17 @@
 
 #define AfCount 0x0
 #define AfBitmap 0x8
-#define PbEntropyCount 0x97c
-#define PbEntropyBuffer 0x980
+#define PbEntropyCount 0x980
+#define PbEntropyBuffer 0x984
 #define KENTROPY_TIMING_INTERRUPTS_PER_BUFFER 0x400
 #define KENTROPY_TIMING_BUFFER_MASK 0x7ff
 #define KENTROPY_TIMING_ANALYSIS 0x0
+
+//
+// Priority state definitions
+//
+
+#define KPRIORITY_STATE_PRIORITY_BITMASK 0x7f
 
 //
 // Special Register Structure Offset Definition
@@ -955,11 +961,11 @@
 #define PbInterruptTime 0x910
 #define PbAdjustDpcThreshold 0x914
 #define PbStartCycles 0x948
-#define PbPageColor 0xab4
-#define PbNodeColor 0xab8
-#define PbNodeShiftedColor 0xabc
-#define PbSecondaryColorMask 0xac0
-#define PbCycleTime 0xac8
+#define PbPageColor 0xabc
+#define PbNodeColor 0xac0
+#define PbNodeShiftedColor 0xac4
+#define PbSecondaryColorMask 0xac8
+#define PbCycleTime 0xad0
 #define PbFastReadNoWait 0x638
 #define PbFastReadWait 0x63c
 #define PbFastReadNotPossible 0x640

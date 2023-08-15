@@ -89,6 +89,8 @@ namespace Windows
     {
         typedef struct DisplayAdapterId DisplayAdapterId;
 
+        typedef struct RectInt32 RectInt32;
+
         typedef struct SizeInt32 SizeInt32;
     }
 }
@@ -124,7 +126,13 @@ namespace Windows
 
                 typedef enum DisplayPathStatus DisplayPathStatus;
 
+                typedef enum DisplayPresentStatus DisplayPresentStatus;
+
                 typedef enum DisplayRotation DisplayRotation;
+
+                typedef enum DisplayScanoutOptions DisplayScanoutOptions;
+
+                typedef enum DisplaySourceStatus DisplaySourceStatus;
 
                 typedef enum DisplayStateApplyOptions DisplayStateApplyOptions;
 
@@ -152,6 +160,8 @@ namespace Windows
 
                 interface IDisplayDevice;
 
+                interface IDisplayDevice2;
+
                 interface IDisplayFence;
 
                 interface IDisplayManager;
@@ -170,7 +180,11 @@ namespace Windows
 
                 interface IDisplayModeInfo;
 
+                interface IDisplayModeInfo2;
+
                 interface IDisplayPath;
+
+                interface IDisplayPath2;
 
                 interface IDisplayPrimaryDescription;
 
@@ -182,6 +196,8 @@ namespace Windows
 
                 interface IDisplaySource;
 
+                interface IDisplaySource2;
+
                 interface IDisplayState;
 
                 interface IDisplayStateOperationResult;
@@ -192,7 +208,13 @@ namespace Windows
 
                 interface IDisplayTask;
 
+                interface IDisplayTask2;
+
                 interface IDisplayTaskPool;
+
+                interface IDisplayTaskPool2;
+
+                interface IDisplayTaskResult;
 
                 interface IDisplayView;
 
@@ -241,6 +263,8 @@ namespace Windows
                 runtimeclass DisplayTask;
 
                 runtimeclass DisplayTaskPool;
+
+                runtimeclass DisplayTaskResult;
 
                 runtimeclass DisplayView;
 
@@ -300,6 +324,8 @@ namespace Windows
                     interface Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayManager*, Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs*>;
 
                     interface Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplayManager*, Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs*>;
+
+                    interface Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplaySource*, IInspectable*>;
                 }
             }
         }
@@ -338,8 +364,10 @@ namespace Windows
                 [flags]
                 enum DisplayManagerOptions
                 {
-                    None                   = 0x0,
-                    EnforceSourceOwnership = 0x1
+                    None                    = 0x0,
+                    EnforceSourceOwnership  = 0x1,
+                    [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+                    VirtualRefreshRateAware = 0x2
                 };
 
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
@@ -382,6 +410,17 @@ namespace Windows
                     InvalidatedAsync = 5
                 };
 
+                [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+                enum DisplayPresentStatus
+                {
+                    Success                      = 0,
+                    SourceStatusPreventedPresent = 1,
+                    ScanoutInvalid               = 2,
+                    SourceInvalid                = 3,
+                    DeviceInvalid                = 4,
+                    UnknownFailure               = 5
+                };
+
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
                 enum DisplayRotation
                 {
@@ -389,6 +428,25 @@ namespace Windows
                     Clockwise90Degrees  = 1,
                     Clockwise180Degrees = 2,
                     Clockwise270Degrees = 3
+                };
+
+                [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+                [flags]
+                enum DisplayScanoutOptions
+                {
+                    None         = 0x0,
+                    [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+                    AllowTearing = 0x2
+                };
+
+                [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+                enum DisplaySourceStatus
+                {
+                    Active               = 0,
+                    PoweredOff           = 1,
+                    Invalid              = 2,
+                    OwnedByAnotherDevice = 3,
+                    Unowned              = 4
                 };
 
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
@@ -435,7 +493,9 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
                 enum DisplayTaskSignalKind
                 {
-                    OnPresentFlipAway = 0
+                    OnPresentFlipAway = 0,
+                    [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+                    OnPresentFlipTo   = 1
                 };
 
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
@@ -514,6 +574,14 @@ namespace Windows
                     HRESULT WaitForVBlank([in] Windows.Devices.Display.Core.DisplaySource* source);
                     HRESULT CreateSimpleScanout([in] Windows.Devices.Display.Core.DisplaySource* pSource, [in] Windows.Devices.Display.Core.DisplaySurface* pSurface, [in] UINT32 SubResourceIndex, [in] UINT32 SyncInterval, [out] [retval] Windows.Devices.Display.Core.DisplayScanout** result);
                     HRESULT IsCapabilitySupported([in] Windows.Devices.Display.Core.DisplayDeviceCapability capability, [out] [retval] boolean* result);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+                [exclusiveto(Windows.Devices.Display.Core.DisplayDevice)]
+                [uuid(3FEFE50C-0940-54BD-A02F-F9C7A536AD60)]
+                interface IDisplayDevice2 : IInspectable
+                {
+                    HRESULT CreateSimpleScanoutWithDirtyRectsAndOptions([in] Windows.Devices.Display.Core.DisplaySource* source, [in] Windows.Devices.Display.Core.DisplaySurface* surface, [in] UINT32 subresourceIndex, [in] UINT32 syncInterval, [in] Windows.Foundation.Collections.IIterable<Windows.Graphics.RectInt32>* dirtyRects, [in] Windows.Devices.Display.Core.DisplayScanoutOptions options, [out] [retval] Windows.Devices.Display.Core.DisplayScanout** result);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
@@ -623,6 +691,14 @@ namespace Windows
                     [propget] HRESULT Properties([out] [retval] Windows.Foundation.Collections.IMapView<GUID, IInspectable*>** value);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+                [exclusiveto(Windows.Devices.Display.Core.DisplayModeInfo)]
+                [uuid(C86FA386-0DDB-5473-BFB0-4B7807B5F909)]
+                interface IDisplayModeInfo2 : IInspectable
+                {
+                    [propget] HRESULT PhysicalPresentationRate([out] [retval] Windows.Devices.Display.Core.DisplayPresentationRate* value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
                 [exclusiveto(Windows.Devices.Display.Core.DisplayPath)]
                 [uuid(B3DFD64A-7460-5CDE-811B-D5AE9F3D9F84)]
@@ -652,6 +728,15 @@ namespace Windows
                     HRESULT FindModes([in] Windows.Devices.Display.Core.DisplayModeQueryOptions flags, [out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Devices.Display.Core.DisplayModeInfo*>** result);
                     HRESULT ApplyPropertiesFromMode([in] Windows.Devices.Display.Core.DisplayModeInfo* modeResult);
                     [propget] HRESULT Properties([out] [retval] Windows.Foundation.Collections.IMap<GUID, IInspectable*>** value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+                [exclusiveto(Windows.Devices.Display.Core.DisplayPath)]
+                [uuid(F32459C5-E994-570B-9EC8-EF42C35A8547)]
+                interface IDisplayPath2 : IInspectable
+                {
+                    [propget] HRESULT PhysicalPresentationRate([out] [retval] Windows.Foundation.IReference<Windows.Devices.Display.Core.DisplayPresentationRate>** value);
+                    [propput] HRESULT PhysicalPresentationRate([in] Windows.Foundation.IReference<Windows.Devices.Display.Core.DisplayPresentationRate>* value);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
@@ -699,6 +784,16 @@ namespace Windows
                     [propget] HRESULT AdapterId([out] [retval] Windows.Graphics.DisplayAdapterId* value);
                     [propget] HRESULT SourceId([out] [retval] UINT32* value);
                     HRESULT GetMetadata([in] GUID Key, [out] [retval] Windows.Storage.Streams.IBuffer** result);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+                [exclusiveto(Windows.Devices.Display.Core.DisplaySource)]
+                [uuid(71E18952-B321-5AF4-BFE8-03FBEA31E40D)]
+                interface IDisplaySource2 : IInspectable
+                {
+                    [propget] HRESULT Status([out] [retval] Windows.Devices.Display.Core.DisplaySourceStatus* value);
+                    [eventadd] HRESULT StatusChanged([in] Windows.Foundation.TypedEventHandler<Windows.Devices.Display.Core.DisplaySource*, IInspectable*>* handler, [out] [retval] EventRegistrationToken* token);
+                    [eventremove] HRESULT StatusChanged([in] EventRegistrationToken token);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
@@ -768,13 +863,39 @@ namespace Windows
                     HRESULT SetWait([in] Windows.Devices.Display.Core.DisplayFence* readyFence, [in] UINT64 readyFenceValue);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+                [exclusiveto(Windows.Devices.Display.Core.DisplayTask)]
+                [uuid(0957EA19-BD55-55DE-9267-C97B61E71C37)]
+                interface IDisplayTask2 : IInspectable
+                {
+                    HRESULT SetSignal([in] Windows.Devices.Display.Core.DisplayTaskSignalKind signalKind, [in] Windows.Devices.Display.Core.DisplayFence* fence);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
                 [exclusiveto(Windows.Devices.Display.Core.DisplayTaskPool)]
                 [uuid(C676253D-237D-5548-AAFA-3E517FEFEF1C)]
                 interface IDisplayTaskPool : IInspectable
                 {
                     HRESULT CreateTask([out] [retval] Windows.Devices.Display.Core.DisplayTask** result);
-                    HRESULT ExecuteTask([in] Windows.Devices.Display.Core.DisplayTask* task);
+                    [deprecated("Use TryExecuteTask instead of ExecuteTask. For more info see MSDN", deprecate, Windows.Foundation.UniversalApiContract, 13.0)] HRESULT ExecuteTask([in] Windows.Devices.Display.Core.DisplayTask* task);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+                [exclusiveto(Windows.Devices.Display.Core.DisplayTaskPool)]
+                [uuid(46B879B6-5D17-5955-A872-EB38003DB586)]
+                interface IDisplayTaskPool2 : IInspectable
+                {
+                    HRESULT TryExecuteTask([in] Windows.Devices.Display.Core.DisplayTask* task, [out] [retval] Windows.Devices.Display.Core.DisplayTaskResult** result);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+                [exclusiveto(Windows.Devices.Display.Core.DisplayTaskResult)]
+                [uuid(6FBC7D67-F9B1-55E0-9D88-D3A5197A3F59)]
+                interface IDisplayTaskResult : IInspectable
+                {
+                    [propget] HRESULT PresentStatus([out] [retval] Windows.Devices.Display.Core.DisplayPresentStatus* value);
+                    [propget] HRESULT PresentId([out] [retval] UINT64* value);
+                    [propget] HRESULT SourceStatus([out] [retval] Windows.Devices.Display.Core.DisplaySourceStatus* value);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
@@ -832,6 +953,7 @@ namespace Windows
                 runtimeclass DisplayDevice
                 {
                     [default] interface Windows.Devices.Display.Core.IDisplayDevice;
+                    [contract(Windows.Foundation.UniversalApiContract, 13.0)] interface Windows.Devices.Display.Core.IDisplayDevice2;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
@@ -891,6 +1013,7 @@ namespace Windows
                 runtimeclass DisplayModeInfo
                 {
                     [default] interface Windows.Devices.Display.Core.IDisplayModeInfo;
+                    [contract(Windows.Foundation.UniversalApiContract, 13.0)] interface Windows.Devices.Display.Core.IDisplayModeInfo2;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
@@ -898,6 +1021,7 @@ namespace Windows
                 runtimeclass DisplayPath
                 {
                     [default] interface Windows.Devices.Display.Core.IDisplayPath;
+                    [contract(Windows.Foundation.UniversalApiContract, 13.0)] interface Windows.Devices.Display.Core.IDisplayPath2;
                 }
 
                 [activatable(Windows.Devices.Display.Core.IDisplayPrimaryDescriptionFactory, Windows.Foundation.UniversalApiContract, 7.0)]
@@ -922,6 +1046,7 @@ namespace Windows
                 runtimeclass DisplaySource
                 {
                     [default] interface Windows.Devices.Display.Core.IDisplaySource;
+                    [contract(Windows.Foundation.UniversalApiContract, 13.0)] interface Windows.Devices.Display.Core.IDisplaySource2;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
@@ -957,6 +1082,7 @@ namespace Windows
                 runtimeclass DisplayTask
                 {
                     [default] interface Windows.Devices.Display.Core.IDisplayTask;
+                    [contract(Windows.Foundation.UniversalApiContract, 13.0)] interface Windows.Devices.Display.Core.IDisplayTask2;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
@@ -964,6 +1090,14 @@ namespace Windows
                 runtimeclass DisplayTaskPool
                 {
                     [default] interface Windows.Devices.Display.Core.IDisplayTaskPool;
+                    [contract(Windows.Foundation.UniversalApiContract, 13.0)] interface Windows.Devices.Display.Core.IDisplayTaskPool2;
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+                [marshaling_behavior(agile)]
+                runtimeclass DisplayTaskResult
+                {
+                    [default] interface Windows.Devices.Display.Core.IDisplayTaskResult;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]

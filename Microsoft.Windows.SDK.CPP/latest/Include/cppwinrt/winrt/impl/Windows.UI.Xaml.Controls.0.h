@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -971,6 +971,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
     struct ICalendarDatePickerStatics2;
     struct ICalendarDatePickerStatics3;
     struct ICalendarView;
+    struct ICalendarView2;
     struct ICalendarViewDayItem;
     struct ICalendarViewDayItemChangingEventArgs;
     struct ICalendarViewDayItemFactory;
@@ -978,6 +979,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
     struct ICalendarViewFactory;
     struct ICalendarViewSelectedDatesChangedEventArgs;
     struct ICalendarViewStatics;
+    struct ICalendarViewStatics2;
     struct ICandidateWindowBoundsChangedEventArgs;
     struct ICanvas;
     struct ICanvasFactory;
@@ -2126,6 +2128,7 @@ namespace winrt::impl
     template <> struct category<Windows::UI::Xaml::Controls::ICalendarDatePickerStatics2>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::ICalendarDatePickerStatics3>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::ICalendarView>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Controls::ICalendarView2>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::ICalendarViewDayItem>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::ICalendarViewDayItemChangingEventArgs>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::ICalendarViewDayItemFactory>{ using type = interface_category; };
@@ -2133,6 +2136,7 @@ namespace winrt::impl
     template <> struct category<Windows::UI::Xaml::Controls::ICalendarViewFactory>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::ICalendarViewSelectedDatesChangedEventArgs>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::ICalendarViewStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Controls::ICalendarViewStatics2>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::ICandidateWindowBoundsChangedEventArgs>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::ICanvas>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::ICanvasFactory>{ using type = interface_category; };
@@ -3712,6 +3716,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::ICalendarDatePickerStatics2> = L"Windows.UI.Xaml.Controls.ICalendarDatePickerStatics2";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::ICalendarDatePickerStatics3> = L"Windows.UI.Xaml.Controls.ICalendarDatePickerStatics3";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::ICalendarView> = L"Windows.UI.Xaml.Controls.ICalendarView";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::ICalendarView2> = L"Windows.UI.Xaml.Controls.ICalendarView2";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::ICalendarViewDayItem> = L"Windows.UI.Xaml.Controls.ICalendarViewDayItem";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::ICalendarViewDayItemChangingEventArgs> = L"Windows.UI.Xaml.Controls.ICalendarViewDayItemChangingEventArgs";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::ICalendarViewDayItemFactory> = L"Windows.UI.Xaml.Controls.ICalendarViewDayItemFactory";
@@ -3719,6 +3724,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::ICalendarViewFactory> = L"Windows.UI.Xaml.Controls.ICalendarViewFactory";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::ICalendarViewSelectedDatesChangedEventArgs> = L"Windows.UI.Xaml.Controls.ICalendarViewSelectedDatesChangedEventArgs";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::ICalendarViewStatics> = L"Windows.UI.Xaml.Controls.ICalendarViewStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::ICalendarViewStatics2> = L"Windows.UI.Xaml.Controls.ICalendarViewStatics2";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::ICandidateWindowBoundsChangedEventArgs> = L"Windows.UI.Xaml.Controls.ICandidateWindowBoundsChangedEventArgs";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::ICanvas> = L"Windows.UI.Xaml.Controls.ICanvas";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::ICanvasFactory> = L"Windows.UI.Xaml.Controls.ICanvasFactory";
@@ -4576,6 +4582,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::ICalendarDatePickerStatics2>{ 0x30206B58,0xA2F6,0x4A00,{ 0x8D,0x13,0x33,0xC4,0x6B,0x6B,0x8E,0x0D } }; // 30206B58-A2F6-4A00-8D13-33C46B6B8E0D
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::ICalendarDatePickerStatics3>{ 0xB188741D,0xCF69,0x568C,{ 0x97,0x07,0xBA,0xAA,0xEC,0x2B,0x64,0xDB } }; // B188741D-CF69-568C-9707-BAAAEC2B64DB
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::ICalendarView>{ 0xCD639203,0xDFB5,0x4312,{ 0xAC,0x07,0xC0,0x39,0x18,0x24,0x60,0x7B } }; // CD639203-DFB5-4312-AC07-C0391824607B
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::ICalendarView2>{ 0xF55AB64A,0x5504,0x5D9E,{ 0x9D,0x20,0x2F,0xFD,0xB8,0x8F,0xC5,0x6B } }; // F55AB64A-5504-5D9E-9D20-2FFDB88FC56B
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::ICalendarViewDayItem>{ 0x0FDB2DC5,0x32C1,0x4B8F,{ 0xBE,0xFC,0x01,0x7B,0x55,0x5B,0x32,0xD2 } }; // 0FDB2DC5-32C1-4B8F-BEFC-017B555B32D2
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::ICalendarViewDayItemChangingEventArgs>{ 0x73146666,0x1FB1,0x44F9,{ 0xB7,0xAD,0x4D,0xE8,0x59,0xEC,0xC5,0x65 } }; // 73146666-1FB1-44F9-B7AD-4DE859ECC565
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::ICalendarViewDayItemFactory>{ 0x62112BDC,0x1D2F,0x4E44,{ 0x9B,0xAF,0x16,0x65,0x74,0x95,0x21,0xF2 } }; // 62112BDC-1D2F-4E44-9BAF-1665749521F2
@@ -4583,6 +4590,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::ICalendarViewFactory>{ 0x3D8F82E3,0x6CC6,0x423E,{ 0x8D,0x7C,0x70,0x14,0xD9,0x54,0xDD,0xEF } }; // 3D8F82E3-6CC6-423E-8D7C-7014D954DDEF
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::ICalendarViewSelectedDatesChangedEventArgs>{ 0xEE6069F6,0x13EF,0x4896,{ 0x8F,0xFC,0x53,0x02,0xB1,0xB1,0x75,0x39 } }; // EE6069F6-13EF-4896-8FFC-5302B1B17539
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::ICalendarViewStatics>{ 0x7260F1C4,0x2F5D,0x41BD,{ 0x99,0xBB,0x45,0x71,0xB2,0x0B,0x79,0xA8 } }; // 7260F1C4-2F5D-41BD-99BB-4571B20B79A8
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::ICalendarViewStatics2>{ 0xF29E5024,0xB8FB,0x50C8,{ 0x8A,0x38,0xD4,0x43,0xAB,0xB3,0x70,0x09 } }; // F29E5024-B8FB-50C8-8A38-D443ABB37009
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::ICandidateWindowBoundsChangedEventArgs>{ 0x8A946458,0x83B0,0x4C32,{ 0x94,0x50,0x51,0x69,0xA5,0x83,0x8B,0x55 } }; // 8A946458-83B0-4C32-9450-5169A5838B55
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::ICanvas>{ 0x79190E19,0xCD38,0x4823,{ 0xAE,0xAE,0x64,0xA7,0x71,0x32,0xF5,0x19 } }; // 79190E19-CD38-4823-AEAE-64A77132F519
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::ICanvasFactory>{ 0x1B328BD1,0xB400,0x4A8E,{ 0x94,0x3B,0x5A,0xD2,0xC4,0x5B,0xE0,0xDF } }; // 1B328BD1-B400-4A8E-943B-5AD2C45BE0DF
@@ -6426,6 +6434,60 @@ namespace winrt::impl
             virtual int32_t __stdcall SetYearDecadeDisplayDimensions(int32_t, int32_t) noexcept = 0;
         };
     };
+    template <> struct abi<Windows::UI::Xaml::Controls::ICalendarView2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_SelectedDisabledBorderBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_SelectedDisabledBorderBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_TodaySelectedInnerBorderBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_TodaySelectedInnerBorderBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_BlackoutStrikethroughBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_BlackoutStrikethroughBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_BlackoutBackground(void**) noexcept = 0;
+            virtual int32_t __stdcall put_BlackoutBackground(void*) noexcept = 0;
+            virtual int32_t __stdcall get_CalendarItemHoverBackground(void**) noexcept = 0;
+            virtual int32_t __stdcall put_CalendarItemHoverBackground(void*) noexcept = 0;
+            virtual int32_t __stdcall get_CalendarItemPressedBackground(void**) noexcept = 0;
+            virtual int32_t __stdcall put_CalendarItemPressedBackground(void*) noexcept = 0;
+            virtual int32_t __stdcall get_CalendarItemDisabledBackground(void**) noexcept = 0;
+            virtual int32_t __stdcall put_CalendarItemDisabledBackground(void*) noexcept = 0;
+            virtual int32_t __stdcall get_TodayBackground(void**) noexcept = 0;
+            virtual int32_t __stdcall put_TodayBackground(void*) noexcept = 0;
+            virtual int32_t __stdcall get_TodayBlackoutBackground(void**) noexcept = 0;
+            virtual int32_t __stdcall put_TodayBlackoutBackground(void*) noexcept = 0;
+            virtual int32_t __stdcall get_TodayHoverBackground(void**) noexcept = 0;
+            virtual int32_t __stdcall put_TodayHoverBackground(void*) noexcept = 0;
+            virtual int32_t __stdcall get_TodayPressedBackground(void**) noexcept = 0;
+            virtual int32_t __stdcall put_TodayPressedBackground(void*) noexcept = 0;
+            virtual int32_t __stdcall get_TodayDisabledBackground(void**) noexcept = 0;
+            virtual int32_t __stdcall put_TodayDisabledBackground(void*) noexcept = 0;
+            virtual int32_t __stdcall get_TodayBlackoutForeground(void**) noexcept = 0;
+            virtual int32_t __stdcall put_TodayBlackoutForeground(void*) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedHoverForeground(void**) noexcept = 0;
+            virtual int32_t __stdcall put_SelectedHoverForeground(void*) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedPressedForeground(void**) noexcept = 0;
+            virtual int32_t __stdcall put_SelectedPressedForeground(void*) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedDisabledForeground(void**) noexcept = 0;
+            virtual int32_t __stdcall put_SelectedDisabledForeground(void*) noexcept = 0;
+            virtual int32_t __stdcall get_OutOfScopeHoverForeground(void**) noexcept = 0;
+            virtual int32_t __stdcall put_OutOfScopeHoverForeground(void*) noexcept = 0;
+            virtual int32_t __stdcall get_OutOfScopePressedForeground(void**) noexcept = 0;
+            virtual int32_t __stdcall put_OutOfScopePressedForeground(void*) noexcept = 0;
+            virtual int32_t __stdcall get_DisabledForeground(void**) noexcept = 0;
+            virtual int32_t __stdcall put_DisabledForeground(void*) noexcept = 0;
+            virtual int32_t __stdcall get_DayItemMargin(struct struct_Windows_UI_Xaml_Thickness*) noexcept = 0;
+            virtual int32_t __stdcall put_DayItemMargin(struct struct_Windows_UI_Xaml_Thickness) noexcept = 0;
+            virtual int32_t __stdcall get_MonthYearItemMargin(struct struct_Windows_UI_Xaml_Thickness*) noexcept = 0;
+            virtual int32_t __stdcall put_MonthYearItemMargin(struct struct_Windows_UI_Xaml_Thickness) noexcept = 0;
+            virtual int32_t __stdcall get_FirstOfMonthLabelMargin(struct struct_Windows_UI_Xaml_Thickness*) noexcept = 0;
+            virtual int32_t __stdcall put_FirstOfMonthLabelMargin(struct struct_Windows_UI_Xaml_Thickness) noexcept = 0;
+            virtual int32_t __stdcall get_FirstOfYearDecadeLabelMargin(struct struct_Windows_UI_Xaml_Thickness*) noexcept = 0;
+            virtual int32_t __stdcall put_FirstOfYearDecadeLabelMargin(struct struct_Windows_UI_Xaml_Thickness) noexcept = 0;
+            virtual int32_t __stdcall get_CalendarItemCornerRadius(struct struct_Windows_UI_Xaml_CornerRadius*) noexcept = 0;
+            virtual int32_t __stdcall put_CalendarItemCornerRadius(struct struct_Windows_UI_Xaml_CornerRadius) noexcept = 0;
+        };
+    };
     template <> struct abi<Windows::UI::Xaml::Controls::ICalendarViewDayItem>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -6532,6 +6594,36 @@ namespace winrt::impl
             virtual int32_t __stdcall get_VerticalFirstOfMonthLabelAlignmentProperty(void**) noexcept = 0;
             virtual int32_t __stdcall get_CalendarItemBorderThicknessProperty(void**) noexcept = 0;
             virtual int32_t __stdcall get_CalendarViewDayItemStyleProperty(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::UI::Xaml::Controls::ICalendarViewStatics2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_SelectedDisabledBorderBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_TodaySelectedInnerBorderBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_BlackoutStrikethroughBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_BlackoutBackgroundProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CalendarItemHoverBackgroundProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CalendarItemPressedBackgroundProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CalendarItemDisabledBackgroundProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_TodayBackgroundProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_TodayBlackoutBackgroundProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_TodayHoverBackgroundProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_TodayPressedBackgroundProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_TodayDisabledBackgroundProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_TodayBlackoutForegroundProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedHoverForegroundProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedPressedForegroundProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedDisabledForegroundProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_OutOfScopeHoverForegroundProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_OutOfScopePressedForegroundProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_DisabledForegroundProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_DayItemMarginProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_MonthYearItemMarginProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_FirstOfMonthLabelMarginProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_FirstOfYearDecadeLabelMarginProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CalendarItemCornerRadiusProperty(void**) noexcept = 0;
         };
     };
     template <> struct abi<Windows::UI::Xaml::Controls::ICandidateWindowBoundsChangedEventArgs>
@@ -15839,6 +15931,62 @@ namespace winrt::impl
         template <typename D> using type = consume_Windows_UI_Xaml_Controls_ICalendarView<D>;
     };
     template <typename D>
+    struct consume_Windows_UI_Xaml_Controls_ICalendarView2
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) SelectedDisabledBorderBrush() const;
+        WINRT_IMPL_AUTO(void) SelectedDisabledBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) TodaySelectedInnerBorderBrush() const;
+        WINRT_IMPL_AUTO(void) TodaySelectedInnerBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) BlackoutStrikethroughBrush() const;
+        WINRT_IMPL_AUTO(void) BlackoutStrikethroughBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) BlackoutBackground() const;
+        WINRT_IMPL_AUTO(void) BlackoutBackground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) CalendarItemHoverBackground() const;
+        WINRT_IMPL_AUTO(void) CalendarItemHoverBackground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) CalendarItemPressedBackground() const;
+        WINRT_IMPL_AUTO(void) CalendarItemPressedBackground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) CalendarItemDisabledBackground() const;
+        WINRT_IMPL_AUTO(void) CalendarItemDisabledBackground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) TodayBackground() const;
+        WINRT_IMPL_AUTO(void) TodayBackground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) TodayBlackoutBackground() const;
+        WINRT_IMPL_AUTO(void) TodayBlackoutBackground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) TodayHoverBackground() const;
+        WINRT_IMPL_AUTO(void) TodayHoverBackground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) TodayPressedBackground() const;
+        WINRT_IMPL_AUTO(void) TodayPressedBackground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) TodayDisabledBackground() const;
+        WINRT_IMPL_AUTO(void) TodayDisabledBackground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) TodayBlackoutForeground() const;
+        WINRT_IMPL_AUTO(void) TodayBlackoutForeground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) SelectedHoverForeground() const;
+        WINRT_IMPL_AUTO(void) SelectedHoverForeground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) SelectedPressedForeground() const;
+        WINRT_IMPL_AUTO(void) SelectedPressedForeground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) SelectedDisabledForeground() const;
+        WINRT_IMPL_AUTO(void) SelectedDisabledForeground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) OutOfScopeHoverForeground() const;
+        WINRT_IMPL_AUTO(void) OutOfScopeHoverForeground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) OutOfScopePressedForeground() const;
+        WINRT_IMPL_AUTO(void) OutOfScopePressedForeground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) DisabledForeground() const;
+        WINRT_IMPL_AUTO(void) DisabledForeground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Thickness) DayItemMargin() const;
+        WINRT_IMPL_AUTO(void) DayItemMargin(Windows::UI::Xaml::Thickness const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Thickness) MonthYearItemMargin() const;
+        WINRT_IMPL_AUTO(void) MonthYearItemMargin(Windows::UI::Xaml::Thickness const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Thickness) FirstOfMonthLabelMargin() const;
+        WINRT_IMPL_AUTO(void) FirstOfMonthLabelMargin(Windows::UI::Xaml::Thickness const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Thickness) FirstOfYearDecadeLabelMargin() const;
+        WINRT_IMPL_AUTO(void) FirstOfYearDecadeLabelMargin(Windows::UI::Xaml::Thickness const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::CornerRadius) CalendarItemCornerRadius() const;
+        WINRT_IMPL_AUTO(void) CalendarItemCornerRadius(Windows::UI::Xaml::CornerRadius const& value) const;
+    };
+    template <> struct consume<Windows::UI::Xaml::Controls::ICalendarView2>
+    {
+        template <typename D> using type = consume_Windows_UI_Xaml_Controls_ICalendarView2<D>;
+    };
+    template <typename D>
     struct consume_Windows_UI_Xaml_Controls_ICalendarViewDayItem
     {
         [[nodiscard]] WINRT_IMPL_AUTO(bool) IsBlackout() const;
@@ -15959,6 +16107,38 @@ namespace winrt::impl
     template <> struct consume<Windows::UI::Xaml::Controls::ICalendarViewStatics>
     {
         template <typename D> using type = consume_Windows_UI_Xaml_Controls_ICalendarViewStatics<D>;
+    };
+    template <typename D>
+    struct consume_Windows_UI_Xaml_Controls_ICalendarViewStatics2
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) SelectedDisabledBorderBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) TodaySelectedInnerBorderBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) BlackoutStrikethroughBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) BlackoutBackgroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CalendarItemHoverBackgroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CalendarItemPressedBackgroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CalendarItemDisabledBackgroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) TodayBackgroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) TodayBlackoutBackgroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) TodayHoverBackgroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) TodayPressedBackgroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) TodayDisabledBackgroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) TodayBlackoutForegroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) SelectedHoverForegroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) SelectedPressedForegroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) SelectedDisabledForegroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) OutOfScopeHoverForegroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) OutOfScopePressedForegroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) DisabledForegroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) DayItemMarginProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) MonthYearItemMarginProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) FirstOfMonthLabelMarginProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) FirstOfYearDecadeLabelMarginProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CalendarItemCornerRadiusProperty() const;
+    };
+    template <> struct consume<Windows::UI::Xaml::Controls::ICalendarViewStatics2>
+    {
+        template <typename D> using type = consume_Windows_UI_Xaml_Controls_ICalendarViewStatics2<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_ICandidateWindowBoundsChangedEventArgs

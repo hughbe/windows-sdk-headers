@@ -92,7 +92,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xc0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xe0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
@@ -288,6 +288,21 @@ namespace ABI {
 #define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithPositionSourceTimestamp ABI::Windows::Devices::Geolocation::IGeocoordinateWithPositionSourceTimestamp
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithPositionSourceTimestamp_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace Geolocation {
+                interface IGeocoordinateWithRemoteSource;
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource ABI::Windows::Devices::Geolocation::IGeocoordinateWithRemoteSource
+
+#endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator_FWD_DEFINED__
@@ -2302,6 +2317,42 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWit
 
 /*
  *
+ * Interface Windows.Devices.Geolocation.IGeocoordinateWithRemoteSource
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 14.0
+ *
+ * Interface is a part of the implementation of type Windows.Devices.Geolocation.Geocoordinate
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xe0000
+#if !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Geolocation_IGeocoordinateWithRemoteSource[] = L"Windows.Devices.Geolocation.IGeocoordinateWithRemoteSource";
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace Geolocation {
+                MIDL_INTERFACE("397cebd7-ee38-5f3b-8900-c4a7bc9cf953")
+                IGeocoordinateWithRemoteSource : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE get_IsRemoteSource(
+                        boolean* value
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_IGeocoordinateWithRemoteSource = _uuidof(IGeocoordinateWithRemoteSource);
+            } /* Geolocation */
+        } /* Devices */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xe0000
+
+/*
+ *
  * Interface Windows.Devices.Geolocation.IGeolocator
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -3220,6 +3271,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.Geolocation.IGeocoordinateWithPositionData
  *    Windows.Devices.Geolocation.IGeocoordinateWithPoint
  *    Windows.Devices.Geolocation.IGeocoordinateWithPositionSourceTimestamp
+ *    Windows.Devices.Geolocation.IGeocoordinateWithRemoteSource
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -3261,8 +3313,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Geolocation.IGeolocatorStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Geolocation.IGeolocatorStatics2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Geolocation.IGeolocatorStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Geolocation.IGeolocator ** Default Interface **
@@ -3563,6 +3615,12 @@ typedef interface __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithPosi
 typedef interface __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithPositionSourceTimestamp __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithPositionSourceTimestamp;
 
 #endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithPositionSourceTimestamp_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource;
+
+#endif // ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeolocator_FWD_DEFINED__
@@ -6487,6 +6545,75 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWit
 
 /*
  *
+ * Interface Windows.Devices.Geolocation.IGeocoordinateWithRemoteSource
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 14.0
+ *
+ * Interface is a part of the implementation of type Windows.Devices.Geolocation.Geocoordinate
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xe0000
+#if !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Geolocation_IGeocoordinateWithRemoteSource[] = L"Windows.Devices.Geolocation.IGeocoordinateWithRemoteSource";
+typedef struct __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSourceVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_IsRemoteSource)(__x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource* This,
+        boolean* value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSourceVtbl;
+
+interface __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource
+{
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSourceVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_get_IsRemoteSource(This, value) \
+    ((This)->lpVtbl->get_IsRemoteSource(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CGeolocation_CIGeocoordinateWithRemoteSource_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xe0000
+
+/*
+ *
  * Interface Windows.Devices.Geolocation.IGeolocator
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -8129,6 +8256,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.Devices.Geolocation.IGeocoordinateWithPositionData
  *    Windows.Devices.Geolocation.IGeocoordinateWithPoint
  *    Windows.Devices.Geolocation.IGeocoordinateWithPositionSourceTimestamp
+ *    Windows.Devices.Geolocation.IGeocoordinateWithRemoteSource
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -8170,8 +8298,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Geolocation.IGeolocatorStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.Geolocation.IGeolocatorStatics2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.Geolocation.IGeolocatorStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Geolocation.IGeolocator ** Default Interface **

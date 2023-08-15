@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -101,6 +101,13 @@ WINRT_EXPORT namespace winrt::Windows::Storage::Streams
     {
         IOutputStream(std::nullptr_t = nullptr) noexcept {}
         IOutputStream(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPropertySetSerializer :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPropertySetSerializer>
+    {
+        IPropertySetSerializer(std::nullptr_t = nullptr) noexcept {}
+        IPropertySetSerializer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IRandomAccessStream :
         Windows::Foundation::IInspectable,

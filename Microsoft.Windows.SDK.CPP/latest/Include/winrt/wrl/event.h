@@ -37,7 +37,7 @@ typedef ::Windows::Foundation::IDeferralCompletedHandler IDeferralCompletedHandl
 #endif
 #endif // __windows2Efoundation_h__
 
-namespace Microsoft { 
+namespace Microsoft {
 namespace WRL {
 
 // Enum to specify the behavior on checking delegate return results
@@ -70,7 +70,7 @@ enum InvokeMode
    FireAll = 2,
 };
 
-// Event error options 
+// Event error options
 template<InvokeMode invokeModeValue>
 struct InvokeModeOptions
 {
@@ -89,8 +89,8 @@ template<typename TDelegateInterface>
 void* GetDelegateBucketAssist(TDelegateInterface *pDelegate)
 {
     // By ABI contract, delegates satisfy the below as a mechanism of getting at the invocation
-    // function (the fourth slot in the V-Table of the delegate interface).  We do not care about 
-    // the signature of the function, only its address as a means of improving bucketing.  
+    // function (the fourth slot in the V-Table of the delegate interface).  We do not care about
+    // the signature of the function, only its address as a means of improving bucketing.
     void ***pVT = reinterpret_cast<void ***>(pDelegate);
     return (*pVT)[3];
 }
@@ -208,7 +208,7 @@ struct ArgTraits<HRESULT(STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, 
     typedef TArg9 Arg9Type;
 };
 
-#ifdef _NOEXCEPT_TYPES_SUPPORTED
+#if _NOEXCEPT_TYPES_SUPPORTED || (__cpp_noexcept_function_type >= 201510)
 template<typename TDelegateInterface>
 struct ArgTraits<HRESULT(STDMETHODCALLTYPE TDelegateInterface::*)(void) noexcept>
 {
@@ -315,7 +315,7 @@ struct ArgTraits<HRESULT(STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2, 
 };
 #endif
 
-// Traits factory extract appropriate ArgTraits type 
+// Traits factory extract appropriate ArgTraits type
 // for delegate interface
 template<typename TDelegateInterface, bool isImplements = __is_base_of(ImplementsBase, TDelegateInterface)>
 struct ArgTraitsHelper;
@@ -328,7 +328,7 @@ struct ArgTraitsHelper<TDelegateInterface, false>
     typedef ArgTraits<methodType> Traits;
     static const int args = Traits::args;
     typedef TDelegateInterface Interface;
-    // Make sure that you are using STDMETHOD macro to define delegate interfaces    
+    // Make sure that you are using STDMETHOD macro to define delegate interfaces
     static_assert(args != -1, "Delegate Invoke signature doesn't match. Possible reasons: wrong calling convention, wrong returned type or passed too many parameters to 'Callback'");
 };
 
@@ -344,60 +344,60 @@ template<typename TDelegateInterface> class DelegateArgTraits; // to be speciali
 template<typename TDelegateInterface, typename ...TArgs>
 class DelegateArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArgs...)>
 {
-    template<typename TDelegateInterface, typename TCallback, DelegateCheckMode checkMode, typename... TArgs>
-    struct DelegateInvokeHelper WrlFinal : public ::Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>, RemoveReference<TCallback>::Type
+    template<typename TOtherDelegateInterface, typename TCallback, DelegateCheckMode checkMode, typename... TOtherArgs>
+    struct DelegateInvokeHelper WrlFinal : public ::Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TOtherDelegateInterface>, RemoveReference<TCallback>::Type
     {
         DelegateInvokeHelper(TCallback&& callback) throw() : RemoveReference<TCallback>::Type(Details::Forward<TCallback>(callback)) {}
 
-        HRESULT STDMETHODCALLTYPE Invoke(TArgs... args) throw() override
+        HRESULT STDMETHODCALLTYPE Invoke(TOtherArgs... args) throw() override
         {
-            return DelegateTraits<checkMode>::CheckReturn((*this)(Details::Forward<TArgs>(args)...));
+            return DelegateTraits<checkMode>::CheckReturn((*this)(Details::Forward<TOtherArgs>(args)...));
         }
     };
 
 public:
 #ifndef BUILD_WINDOWS
-    template<typename TDelegateInterface, typename TImplements, DelegateCheckMode checkMode = DefaultDelegateCheckMode, typename TLambda>
+    template<typename TOtherDelegateInterface, typename TImplements, DelegateCheckMode checkMode = DefaultDelegateCheckMode, typename TLambda>
 #else
-    template<typename TDelegateInterface, typename TImplements, DelegateCheckMode checkMode = DefaultDelegateCheckModeTrait<TDelegateInterface>, typename TLambda>
+    template<typename TOtherDelegateInterface, typename TImplements, DelegateCheckMode checkMode = DefaultDelegateCheckModeTrait<TOtherDelegateInterface>, typename TLambda>
 #endif
     static ComPtr<TImplements> Callback(TLambda&& callback) throw()
     {
-        static_assert(__is_base_of(IUnknown, TDelegateInterface) && !__is_base_of(IInspectable, TDelegateInterface), "Delegates objects must be 'IUnknown' base and not 'IInspectable'");
-        return Make<DelegateInvokeHelper<TDelegateInterface, TLambda, checkMode, TArgs...>>(Details::Forward<TLambda>(callback));
+        static_assert(__is_base_of(IUnknown, TOtherDelegateInterface) && !__is_base_of(IInspectable, TOtherDelegateInterface), "Delegates objects must be 'IUnknown' base and not 'IInspectable'");
+        return Make<DelegateInvokeHelper<TOtherDelegateInterface, TLambda, checkMode, TArgs...>>(Details::Forward<TLambda>(callback));
     }
 };
 
-#ifdef _NOEXCEPT_TYPES_SUPPORTED
+#if _NOEXCEPT_TYPES_SUPPORTED || (__cpp_noexcept_function_type >= 201510)
 template<typename TDelegateInterface, typename ...TArgs>
 class DelegateArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArgs...) noexcept>
 {
-    template<typename TDelegateInterface, typename TCallback, DelegateCheckMode checkMode, typename... TArgs>
-    struct DelegateInvokeHelper WrlSealed : public ::Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>, RemoveReference<TCallback>::Type
+    template<typename TOtherDelegateInterface, typename TCallback, DelegateCheckMode checkMode, typename... TOtherArgs>
+    struct DelegateInvokeHelper WrlFinal : public ::Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TOtherDelegateInterface>, RemoveReference<TCallback>::Type
     {
         DelegateInvokeHelper(TCallback&& callback) throw() : RemoveReference<TCallback>::Type(Details::Forward<TCallback>(callback)) {}
 
-        HRESULT STDMETHODCALLTYPE Invoke(TArgs... args) throw() override
+        HRESULT STDMETHODCALLTYPE Invoke(TOtherArgs... args) throw() override
         {
-            return DelegateTraits<checkMode>::CheckReturn((*this)(Details::Forward<TArgs>(args)...));
+            return DelegateTraits<checkMode>::CheckReturn((*this)(Details::Forward<TOtherArgs>(args)...));
         }
     };
 
 public:
 #ifndef BUILD_WINDOWS
-    template<typename TDelegateInterface, typename TImplements, DelegateCheckMode checkMode = DefaultDelegateCheckMode, typename TLambda>
+    template<typename TOtherDelegateInterface, typename TImplements, DelegateCheckMode checkMode = DefaultDelegateCheckMode, typename TLambda>
 #else
-    template<typename TDelegateInterface, typename TImplements, DelegateCheckMode checkMode = DefaultDelegateCheckModeTrait<TDelegateInterface>, typename TLambda>
+    template<typename TOtherDelegateInterface, typename TImplements, DelegateCheckMode checkMode = DefaultDelegateCheckModeTrait<TOtherDelegateInterface>, typename TLambda>
 #endif
     static ComPtr<TImplements> Callback(TLambda&& callback) throw()
     {
-        static_assert(__is_base_of(IUnknown, TDelegateInterface) && !__is_base_of(IInspectable, TDelegateInterface), "Delegates objects must be 'IUnknown' base and not 'IInspectable'");
-        return Make<DelegateInvokeHelper<TDelegateInterface, TLambda, checkMode, TArgs...>>(Details::Forward<TLambda>(callback));
+        static_assert(__is_base_of(IUnknown, TOtherDelegateInterface) && !__is_base_of(IInspectable, TOtherDelegateInterface), "Delegates objects must be 'IUnknown' base and not 'IInspectable'");
+        return Make<DelegateInvokeHelper<TOtherDelegateInterface, TLambda, checkMode, TArgs...>>(Details::Forward<TLambda>(callback));
     }
 };
 #endif
 
-// Traits factory extract appropriate ArgTraits type 
+// Traits factory extract appropriate ArgTraits type
 // for delegate interface
 template<typename TDelegateInterface, bool isImplements = __is_base_of(ImplementsBase, TDelegateInterface)>
 struct DelegateArgTraitsHelper;
@@ -433,7 +433,7 @@ HRESULT CreateAgileHelper(_In_ TDelegateInterface* delegateInterface, _COM_Outpt
 
     auto callback = DelegateHelper::Traits::template Callback<Implements<RuntimeClassFlags<ClassicCom>, TDelegateInterface, FtmBase>, typename DelegateHelper::Interface>(
         [delegateAsAgile = Move(delegateAsAgile)](auto&&... args)
-    { 
+    {
         ComPtr<TDelegateInterface> localDelegate;
         HRESULT hr = delegateAsAgile.CopyTo(localDelegate.GetAddressOf());
         if (FAILED(hr)) return hr;
@@ -481,7 +481,7 @@ ComPtr<typename Details::DelegateArgTraitsHelper<TDelegateInterface>::Interface>
 
 // Provide a callback that holds a weak reference to an innner callback to invoke. This is useful when breaking cycles.
 template<typename TDelegateInterface>
-HRESULT WeakReferenceCallback(_In_ IWeakReferenceSource* innerCallback, _Outptr_result_nullonfailure_ TDelegateInterface** callback) 
+HRESULT WeakReferenceCallback(_In_ IWeakReferenceSource* innerCallback, _Outptr_result_nullonfailure_ TDelegateInterface** callback)
 {
     *callback = nullptr;
     WeakRef innerWeakRef;
@@ -491,7 +491,7 @@ HRESULT WeakReferenceCallback(_In_ IWeakReferenceSource* innerCallback, _Outptr_
         *callback = Callback<TDelegateInterface>([innerWeakRef = Details::Move(innerWeakRef)](auto&&... args) -> HRESULT
         {
             ComPtr<TDelegateInterface> strongHandler;
-            // Attempt to resolve directly to the delegate. Note that the delegate likely doesn't derive from IInspectable. Nonetheless, 
+            // Attempt to resolve directly to the delegate. Note that the delegate likely doesn't derive from IInspectable. Nonetheless,
             // this shortcut is generally considered safe. By default, WeakRef::As() blocks this since this is an unusual case.
             HRESULT hr = innerWeakRef.Get()->Resolve(__uuidof(TDelegateInterface), reinterpret_cast<IInspectable**>(strongHandler.GetAddressOf()));
             if (SUCCEEDED(hr))
@@ -502,7 +502,7 @@ HRESULT WeakReferenceCallback(_In_ IWeakReferenceSource* innerCallback, _Outptr_
                 }
                 else
                 {
-                    // This will signal to an event or async completion that the server isn't available. It'll be ignored as a failure, 
+                    // This will signal to an event or async completion that the server isn't available. It'll be ignored as a failure,
                     // but in events, will cause the event source to drop the callback, shorting out the need to resolve the weak reference again later.
                     return RPC_E_DISCONNECTED;
                 }
@@ -527,7 +527,7 @@ HRESULT WeakReferenceCallback(_In_ TDelegateInterface* innerCallback, _Outptr_re
     return hr;
 }
 
-// Make a callback to a specific method on a class through a weak pointer. The class must implement IWeakReferenceSource and the method signature must 
+// Make a callback to a specific method on a class through a weak pointer. The class must implement IWeakReferenceSource and the method signature must
 // match the delegate Invoke signature, but the class does not need to implement the specific delegate interface, and the member method does not need to be called "Invoke".
 template<typename T, typename TDelegateInterface, typename ...TArgs>
 HRESULT WeakReferenceCallback(_In_ T* targetObject, HRESULT (T::*targetMethod)(TArgs... args), _Outptr_result_nullonfailure_ TDelegateInterface** callback)
@@ -541,14 +541,14 @@ HRESULT WeakReferenceCallback(_In_ T* targetObject, HRESULT (T::*targetMethod)(T
     {
         *callback = Callback<TDelegateInterface>([innerWeakRef=Details::Move(innerWeakRef), targetObject, targetMethod](TArgs&&... innerArgs)
         {
-            // Attempt to resolve directly to the delegate. Note that the delegate likely doesn't derive from IInspectable. Nonetheless, 
+            // Attempt to resolve directly to the delegate. Note that the delegate likely doesn't derive from IInspectable. Nonetheless,
             // this shortcut is generally considered safe. By default, WeakRef::As() blocks this since this is an unusual case.
             ComPtr<IInspectable> strongHandler;
             HRESULT hr = innerWeakRef.Get()->Resolve(__uuidof(IInspectable), reinterpret_cast<IInspectable**>(strongHandler.GetAddressOf()));
             if (SUCCEEDED(hr))
             {
                 // Assumption is that targetObject is still valid if the inner weak reference resolved. There are some corner cases
-                // that can break this (e.g. tear-offs) but this safe in normal cases. WeakRef resolves to IInspectable, which T may multiply-inherit 
+                // that can break this (e.g. tear-offs) but this safe in normal cases. WeakRef resolves to IInspectable, which T may multiply-inherit
                 // from, so it's frequently not possible to static-cast from that pointer to T.
                 if (strongHandler)
                 {
@@ -556,7 +556,7 @@ HRESULT WeakReferenceCallback(_In_ T* targetObject, HRESULT (T::*targetMethod)(T
                 }
                 else
                 {
-                    // This will signal to an event or async completion that the server isn't available. It'll be ignored as a failure, 
+                    // This will signal to an event or async completion that the server isn't available. It'll be ignored as a failure,
                     // but in events, will cause the event source to drop the callback, shorting out the need to resolve the weak reference again later.
                     return RPC_E_DISCONNECTED;
                 }
@@ -588,7 +588,7 @@ class EventTargetArray WrlFinal : public ::Microsoft::WRL::RuntimeClass< ::Micro
         EventTargetArray() throw() : begin_(nullptr), end_(nullptr), bucketAssists_(nullptr)
         {
         }
-        
+
         HRESULT RuntimeClassInitialize(size_t items) throw()
         {
             begin_ = new(std::nothrow) ComPtr<IUnknown>[items];
@@ -598,7 +598,7 @@ class EventTargetArray WrlFinal : public ::Microsoft::WRL::RuntimeClass< ::Micro
                 // Don't check against nullptr because delete does it
                 delete[] begin_;
                 delete[] bucketAssists_;
-                
+
                 // Set member pointers to nullptr so destructor does not try to delete them again
                 begin_ = nullptr;
                 bucketAssists_ = nullptr;
@@ -630,7 +630,7 @@ class EventTargetArray WrlFinal : public ::Microsoft::WRL::RuntimeClass< ::Micro
         void AddTail(_In_ IUnknown* element) throw()
         {
             AddTail(element, nullptr);
-        }         
+        }
 
         void AddTail(_In_ IUnknown* element, void *bucketAssist) throw()
         {
@@ -676,9 +676,9 @@ struct InvokeTraits<FireAll>
       for (auto element = targets->Begin(); element != targets->End(); element++)
       {
           HRESULT hr = (invokeOne)(*element);
-          if (FAILED(hr)) 
+          if (FAILED(hr))
           {
-              ::RoTransformError(hr, S_OK, nullptr);                    
+              ::RoTransformError(hr, S_OK, nullptr);
               // Remove event that is already disconnected
               if (hr == RPC_E_DISCONNECTED || hr == HRESULT_FROM_WIN32(RPC_S_SERVER_UNAVAILABLE) || hr == JSCRIPT_E_CANTEXECUTE)
               {
@@ -709,7 +709,7 @@ struct InvokeTraits<StopOnFirstError>
            if (hr == RPC_E_DISCONNECTED || hr == HRESULT_FROM_WIN32(RPC_S_SERVER_UNAVAILABLE) || hr == JSCRIPT_E_CANTEXECUTE)
            {
                // if we get the above errors, treat it as success and unregister the delegate
-               ::RoTransformError(hr, S_OK, nullptr);   
+               ::RoTransformError(hr, S_OK, nullptr);
                EventRegistrationToken token;
                token.value = reinterpret_cast<__int64>(element->Get());
                pEvent->Remove(token);
@@ -795,21 +795,21 @@ public:
                         continue;
                     }
 
-                    // The ComPtr<TDelegateInterface> contained in p is assigned to a 
-                    // ComPtr<TDelegateInterface> of a new node in pNewList. The net result is 
+                    // The ComPtr<TDelegateInterface> contained in p is assigned to a
+                    // ComPtr<TDelegateInterface> of a new node in pNewList. The net result is
                     // an addref on the interface.
                     if (availableSlots == 0)
                     {
                         // We don't have any availableSlots left in the target array, hence every item was copied
-                        // from the source array. 
+                        // from the source array.
                         // This means we didn't find the item in the list - just return.
                         __WRL_ASSERT__(!removed && "Attempt to remove token that was not added to this EventSource<>");
                         break;
                     }
 
                     // Copy every registrant from old list except the item being removed
-                    // The ComPtr<TDelegateInterface> contained in p is assigned to a 
-                    // ComPtr<TDelegateInterface> of a new node in pNewList. The net result is 
+                    // The ComPtr<TDelegateInterface> contained in p is assigned to a
+                    // ComPtr<TDelegateInterface> of a new node in pNewList. The net result is
                     // an addref on the interface.
                     pNewList->AddTail(element->Get(), *bucketElement);
                     bucketElement++;
@@ -824,8 +824,8 @@ public:
                 // for the old list (which could be used currently for firing events)
                 Wrappers::SRWLock::SyncLockExclusive targetsPointerLock = targetsPointerLock_.LockExclusive();
 
-                // We move targets_ to pTempList so that we can actually delete the list while 
-                // not holding any locks. The InvokeAll method may still have a reference to targets_ so 
+                // We move targets_ to pTempList so that we can actually delete the list while
+                // not holding any locks. The InvokeAll method may still have a reference to targets_ so
                 // even when pTempList releases, this might not delete what was in targets_.
                 pTempList = Details::Move(targets_);
 
@@ -868,13 +868,13 @@ private:
         ComPtr<Details::EventTargetArray> pTempList;
 
         { // lock scope for addRemoveLock
-            // We are doing "copy to new list and add" so as not to disturb the list that may be 
-            // currently undergoing a walk and fire (invoke). 
+            // We are doing "copy to new list and add" so as not to disturb the list that may be
+            // currently undergoing a walk and fire (invoke).
 
-            // The addRemoveLock_ prevents multiple threads from doing simultaneous adds.  
+            // The addRemoveLock_ prevents multiple threads from doing simultaneous adds.
             // An invoke may be occurring during an add or remove operation.
             Wrappers::SRWLock::SyncLockExclusive addRemoveLock = addRemoveLock_.LockExclusive();
-            
+
             ComPtr<Details::EventTargetArray> pNewList;
 
             // Allocate event array
@@ -903,7 +903,7 @@ private:
             // Get unique token value
             token->value = reinterpret_cast<__int64>(delegateInterface);
 
-            // AddTail operation will take a reference which will result in 
+            // AddTail operation will take a reference which will result in
             // this function adding one reference count on delegateInterface.
             pNewList->AddTail(delegateInterface, bucketAssist);
 
@@ -913,14 +913,14 @@ private:
                 // for the old list (which could be used currently for firing events)
                 Wrappers::SRWLock::SyncLockExclusive targetsPointerLock = targetsPointerLock_.LockExclusive();
 
-                // We move targets_ to pTempList so that we can actually delete the list while 
-                // not holding any locks. The InvokeAll method may still have a reference to targets_ so 
+                // We move targets_ to pTempList so that we can actually delete the list while
+                // not holding any locks. The InvokeAll method may still have a reference to targets_ so
                 // even when pTempList releases, this might not delete what was in targets_.
                 pTempList = Details::Move(targets_);
 
                 // We're done with pNewList, so just move it to targets_.
                 targets_ = Details::Move(pNewList);
-                
+
             } // end lock scope for targetsPointerLock
         } // end lock scope for addRemoveLock
 
@@ -938,7 +938,7 @@ private:
         // The targetsPointerLock_ protects the acquisition of an AddRef'd pointer to
         // "current list".  An Add/Remove operation may occur during the
         // firing of events (but occurs on a copy of the list).  i.e. both
-        // InvokeAll/invoke and Add/Remove are readers of the "current list". 
+        // InvokeAll/invoke and Add/Remove are readers of the "current list".
         // NOTE:  EventSource<TDelegateInterface>::InvokeAll(...) must never take the addRemoveLock_.
         ComPtr<Details::EventTargetArray> targets;
 
@@ -950,7 +950,7 @@ private:
 
         // The list may not exist if nobody has registered
         if (targets)
-        {  
+        {
             hr = InvokeTraits<TEventSourceOptions::invokeMode>::InvokeDelegates(invokeOne, targets.Get(), this);
         }
         return hr;
@@ -1102,7 +1102,7 @@ public:
     {
         if (delegateInterface == nullptr)
         {
-            // We do not want to store a null interface pointer in the event list. This makes the behavior of 
+            // We do not want to store a null interface pointer in the event list. This makes the behavior of
             // AgileEvent similar to the behavior of Event.
             return E_INVALIDARG;
         }
@@ -1125,7 +1125,7 @@ public:
 
 // Restore packing
 #include <poppack.h>
-    
+
 #endif // _WRL_EVENT_H_
 
 #ifdef BUILD_WINDOWS

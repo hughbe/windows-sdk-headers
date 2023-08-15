@@ -1616,6 +1616,14 @@ typedef struct tagDigitalWindowSetting {
     double      WindowSize;
 } DigitalWindowSetting;
 
+// {03F14DD3-75DD-433A-A8E2-1E3F5F2A50A0}
+// Value type: BLOB
+// Reports the background segmentation mask BackgroundSegmentationMask structure.
+// Refer to the KSCAMERA_METADATA_BACKGROUNDSEGMENTATIONMASK struct in ksmedia.h
+DEFINE_GUID(MF_CAPTURE_METADATA_FRAME_BACKGROUND_MASK, 
+0x3f14dd3, 0x75dd, 0x433a, 0xa8, 0xe2, 0x1e, 0x3f, 0x5f, 0x2a, 0x50, 0xa0);
+
+
 
 typedef struct tagFaceRectInfoBlobHeader
 {
@@ -2156,6 +2164,7 @@ DEFINE_MEDIATYPE_GUID( MFVideoFormat_YVU9,      FCC('YVU9') );
 DEFINE_MEDIATYPE_GUID( MFVideoFormat_UYVY,      FCC('UYVY') );
 DEFINE_MEDIATYPE_GUID( MFVideoFormat_NV11,      FCC('NV11') );
 DEFINE_MEDIATYPE_GUID( MFVideoFormat_NV12,      FCC('NV12') );
+DEFINE_MEDIATYPE_GUID( MFVideoFormat_NV21,      FCC('NV21') );
 DEFINE_MEDIATYPE_GUID( MFVideoFormat_YV12,      FCC('YV12') );
 DEFINE_MEDIATYPE_GUID( MFVideoFormat_I420,      FCC('I420') );
 DEFINE_MEDIATYPE_GUID( MFVideoFormat_IYUV,      FCC('IYUV') );

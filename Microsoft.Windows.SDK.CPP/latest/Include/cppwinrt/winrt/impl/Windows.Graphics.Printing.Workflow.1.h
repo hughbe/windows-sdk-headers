@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -30,6 +30,13 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::Workflow
         IPrintWorkflowConfiguration(std::nullptr_t = nullptr) noexcept {}
         IPrintWorkflowConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) IPrintWorkflowConfiguration2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintWorkflowConfiguration2>
+    {
+        IPrintWorkflowConfiguration2(std::nullptr_t = nullptr) noexcept {}
+        IPrintWorkflowConfiguration2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IPrintWorkflowForegroundSession :
         Windows::Foundation::IInspectable,
         impl::consume_t<IPrintWorkflowForegroundSession>
@@ -44,6 +51,48 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::Workflow
         IPrintWorkflowForegroundSetupRequestedEventArgs(std::nullptr_t = nullptr) noexcept {}
         IPrintWorkflowForegroundSetupRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) IPrintWorkflowJobActivatedEventArgs :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintWorkflowJobActivatedEventArgs>
+    {
+        IPrintWorkflowJobActivatedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IPrintWorkflowJobActivatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPrintWorkflowJobBackgroundSession :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintWorkflowJobBackgroundSession>
+    {
+        IPrintWorkflowJobBackgroundSession(std::nullptr_t = nullptr) noexcept {}
+        IPrintWorkflowJobBackgroundSession(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPrintWorkflowJobNotificationEventArgs :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintWorkflowJobNotificationEventArgs>
+    {
+        IPrintWorkflowJobNotificationEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IPrintWorkflowJobNotificationEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPrintWorkflowJobStartingEventArgs :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintWorkflowJobStartingEventArgs>
+    {
+        IPrintWorkflowJobStartingEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IPrintWorkflowJobStartingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPrintWorkflowJobTriggerDetails :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintWorkflowJobTriggerDetails>
+    {
+        IPrintWorkflowJobTriggerDetails(std::nullptr_t = nullptr) noexcept {}
+        IPrintWorkflowJobTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPrintWorkflowJobUISession :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintWorkflowJobUISession>
+    {
+        IPrintWorkflowJobUISession(std::nullptr_t = nullptr) noexcept {}
+        IPrintWorkflowJobUISession(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IPrintWorkflowObjectModelSourceFileContent :
         Windows::Foundation::IInspectable,
         impl::consume_t<IPrintWorkflowObjectModelSourceFileContent>
@@ -51,12 +100,61 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::Workflow
         IPrintWorkflowObjectModelSourceFileContent(std::nullptr_t = nullptr) noexcept {}
         IPrintWorkflowObjectModelSourceFileContent(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) IPrintWorkflowObjectModelSourceFileContentFactory :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintWorkflowObjectModelSourceFileContentFactory>
+    {
+        IPrintWorkflowObjectModelSourceFileContentFactory(std::nullptr_t = nullptr) noexcept {}
+        IPrintWorkflowObjectModelSourceFileContentFactory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IPrintWorkflowObjectModelTargetPackage :
         Windows::Foundation::IInspectable,
         impl::consume_t<IPrintWorkflowObjectModelTargetPackage>
     {
         IPrintWorkflowObjectModelTargetPackage(std::nullptr_t = nullptr) noexcept {}
         IPrintWorkflowObjectModelTargetPackage(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPrintWorkflowPdlConverter :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintWorkflowPdlConverter>
+    {
+        IPrintWorkflowPdlConverter(std::nullptr_t = nullptr) noexcept {}
+        IPrintWorkflowPdlConverter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPrintWorkflowPdlDataAvailableEventArgs :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintWorkflowPdlDataAvailableEventArgs>
+    {
+        IPrintWorkflowPdlDataAvailableEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IPrintWorkflowPdlDataAvailableEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPrintWorkflowPdlModificationRequestedEventArgs :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintWorkflowPdlModificationRequestedEventArgs>
+    {
+        IPrintWorkflowPdlModificationRequestedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IPrintWorkflowPdlModificationRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPrintWorkflowPdlSourceContent :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintWorkflowPdlSourceContent>
+    {
+        IPrintWorkflowPdlSourceContent(std::nullptr_t = nullptr) noexcept {}
+        IPrintWorkflowPdlSourceContent(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPrintWorkflowPdlTargetStream :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintWorkflowPdlTargetStream>
+    {
+        IPrintWorkflowPdlTargetStream(std::nullptr_t = nullptr) noexcept {}
+        IPrintWorkflowPdlTargetStream(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPrintWorkflowPrinterJob :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintWorkflowPrinterJob>
+    {
+        IPrintWorkflowPrinterJob(std::nullptr_t = nullptr) noexcept {}
+        IPrintWorkflowPrinterJob(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IPrintWorkflowSourceContent :
         Windows::Foundation::IInspectable,
@@ -114,6 +212,13 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::Workflow
     {
         IPrintWorkflowUIActivatedEventArgs(std::nullptr_t = nullptr) noexcept {}
         IPrintWorkflowUIActivatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPrintWorkflowUILauncher :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintWorkflowUILauncher>
+    {
+        IPrintWorkflowUILauncher(std::nullptr_t = nullptr) noexcept {}
+        IPrintWorkflowUILauncher(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IPrintWorkflowXpsDataAvailableEventArgs :
         Windows::Foundation::IInspectable,

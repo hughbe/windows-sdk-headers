@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -30,6 +30,11 @@ WINRT_EXPORT namespace winrt::Windows::System
 WINRT_EXPORT namespace winrt::Windows::UI
 {
     struct UIContext;
+}
+WINRT_EXPORT namespace winrt::Windows::UI::Composition
+{
+    struct IVisualElement;
+    struct Visual;
 }
 WINRT_EXPORT namespace winrt::Windows::UI::Input
 {
@@ -85,6 +90,15 @@ WINRT_EXPORT namespace winrt::Windows::UI::Core
         Low = -1,
         Normal = 0,
         High = 1,
+    };
+    enum class CoreIndependentInputFilters : uint32_t
+    {
+        None = 0,
+        MouseButton = 0x1,
+        MouseWheel = 0x2,
+        MouseHover = 0x4,
+        PenWithBarrel = 0x8,
+        PenInverted = 0x10,
     };
     enum class CoreInputDeviceTypes : uint32_t
     {
@@ -143,6 +157,8 @@ WINRT_EXPORT namespace winrt::Windows::UI::Core
     struct ICoreDispatcher;
     struct ICoreDispatcher2;
     struct ICoreDispatcherWithTaskPriority;
+    struct ICoreIndependentInputSourceController;
+    struct ICoreIndependentInputSourceControllerStatics;
     struct ICoreInputSourceBase;
     struct ICoreKeyboardInputSource;
     struct ICoreKeyboardInputSource2;
@@ -189,6 +205,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Core
     struct CoreCursor;
     struct CoreDispatcher;
     struct CoreIndependentInputSource;
+    struct CoreIndependentInputSourceController;
     struct CoreWindow;
     struct CoreWindowDialog;
     struct CoreWindowEventArgs;
@@ -225,6 +242,8 @@ namespace winrt::impl
     template <> struct category<Windows::UI::Core::ICoreDispatcher>{ using type = interface_category; };
     template <> struct category<Windows::UI::Core::ICoreDispatcher2>{ using type = interface_category; };
     template <> struct category<Windows::UI::Core::ICoreDispatcherWithTaskPriority>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreIndependentInputSourceController>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Core::ICoreIndependentInputSourceControllerStatics>{ using type = interface_category; };
     template <> struct category<Windows::UI::Core::ICoreInputSourceBase>{ using type = interface_category; };
     template <> struct category<Windows::UI::Core::ICoreKeyboardInputSource>{ using type = interface_category; };
     template <> struct category<Windows::UI::Core::ICoreKeyboardInputSource2>{ using type = interface_category; };
@@ -271,6 +290,7 @@ namespace winrt::impl
     template <> struct category<Windows::UI::Core::CoreCursor>{ using type = class_category; };
     template <> struct category<Windows::UI::Core::CoreDispatcher>{ using type = class_category; };
     template <> struct category<Windows::UI::Core::CoreIndependentInputSource>{ using type = class_category; };
+    template <> struct category<Windows::UI::Core::CoreIndependentInputSourceController>{ using type = class_category; };
     template <> struct category<Windows::UI::Core::CoreWindow>{ using type = class_category; };
     template <> struct category<Windows::UI::Core::CoreWindowDialog>{ using type = class_category; };
     template <> struct category<Windows::UI::Core::CoreWindowEventArgs>{ using type = class_category; };
@@ -290,6 +310,7 @@ namespace winrt::impl
     template <> struct category<Windows::UI::Core::CoreAcceleratorKeyEventType>{ using type = enum_category; };
     template <> struct category<Windows::UI::Core::CoreCursorType>{ using type = enum_category; };
     template <> struct category<Windows::UI::Core::CoreDispatcherPriority>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Core::CoreIndependentInputFilters>{ using type = enum_category; };
     template <> struct category<Windows::UI::Core::CoreInputDeviceTypes>{ using type = enum_category; };
     template <> struct category<Windows::UI::Core::CoreProcessEventsOption>{ using type = enum_category; };
     template <> struct category<Windows::UI::Core::CoreProximityEvaluationScore>{ using type = enum_category; };
@@ -311,6 +332,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::UI::Core::CoreCursor> = L"Windows.UI.Core.CoreCursor";
     template <> inline constexpr auto& name_v<Windows::UI::Core::CoreDispatcher> = L"Windows.UI.Core.CoreDispatcher";
     template <> inline constexpr auto& name_v<Windows::UI::Core::CoreIndependentInputSource> = L"Windows.UI.Core.CoreIndependentInputSource";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreIndependentInputSourceController> = L"Windows.UI.Core.CoreIndependentInputSourceController";
     template <> inline constexpr auto& name_v<Windows::UI::Core::CoreWindow> = L"Windows.UI.Core.CoreWindow";
     template <> inline constexpr auto& name_v<Windows::UI::Core::CoreWindowDialog> = L"Windows.UI.Core.CoreWindowDialog";
     template <> inline constexpr auto& name_v<Windows::UI::Core::CoreWindowEventArgs> = L"Windows.UI.Core.CoreWindowEventArgs";
@@ -330,6 +352,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::UI::Core::CoreAcceleratorKeyEventType> = L"Windows.UI.Core.CoreAcceleratorKeyEventType";
     template <> inline constexpr auto& name_v<Windows::UI::Core::CoreCursorType> = L"Windows.UI.Core.CoreCursorType";
     template <> inline constexpr auto& name_v<Windows::UI::Core::CoreDispatcherPriority> = L"Windows.UI.Core.CoreDispatcherPriority";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::CoreIndependentInputFilters> = L"Windows.UI.Core.CoreIndependentInputFilters";
     template <> inline constexpr auto& name_v<Windows::UI::Core::CoreInputDeviceTypes> = L"Windows.UI.Core.CoreInputDeviceTypes";
     template <> inline constexpr auto& name_v<Windows::UI::Core::CoreProcessEventsOption> = L"Windows.UI.Core.CoreProcessEventsOption";
     template <> inline constexpr auto& name_v<Windows::UI::Core::CoreProximityEvaluationScore> = L"Windows.UI.Core.CoreProximityEvaluationScore";
@@ -353,6 +376,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreDispatcher> = L"Windows.UI.Core.ICoreDispatcher";
     template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreDispatcher2> = L"Windows.UI.Core.ICoreDispatcher2";
     template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreDispatcherWithTaskPriority> = L"Windows.UI.Core.ICoreDispatcherWithTaskPriority";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreIndependentInputSourceController> = L"Windows.UI.Core.ICoreIndependentInputSourceController";
+    template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreIndependentInputSourceControllerStatics> = L"Windows.UI.Core.ICoreIndependentInputSourceControllerStatics";
     template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreInputSourceBase> = L"Windows.UI.Core.ICoreInputSourceBase";
     template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreKeyboardInputSource> = L"Windows.UI.Core.ICoreKeyboardInputSource";
     template <> inline constexpr auto& name_v<Windows::UI::Core::ICoreKeyboardInputSource2> = L"Windows.UI.Core.ICoreKeyboardInputSource2";
@@ -405,6 +430,8 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreDispatcher>{ 0x60DB2FA8,0xB705,0x4FDE,{ 0xA7,0xD6,0xEB,0xBB,0x18,0x91,0xD3,0x9E } }; // 60DB2FA8-B705-4FDE-A7D6-EBBB1891D39E
     template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreDispatcher2>{ 0x6F5E63C7,0xE3AA,0x4EAE,{ 0xB0,0xE0,0xDC,0xF3,0x21,0xCA,0x4B,0x2F } }; // 6F5E63C7-E3AA-4EAE-B0E0-DCF321CA4B2F
     template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreDispatcherWithTaskPriority>{ 0xBAFAECAD,0x484D,0x41BE,{ 0xBA,0x80,0x1D,0x58,0xC6,0x52,0x63,0xEA } }; // BAFAECAD-484D-41BE-BA80-1D58C65263EA
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreIndependentInputSourceController>{ 0x0963261C,0x84FE,0x578A,{ 0x83,0xCA,0x64,0x25,0x30,0x9C,0xCD,0xE4 } }; // 0963261C-84FE-578A-83CA-6425309CCDE4
+    template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreIndependentInputSourceControllerStatics>{ 0x3EDC4E20,0x9A8A,0x5691,{ 0x85,0x86,0xFC,0xA4,0xCB,0x57,0x52,0x6D } }; // 3EDC4E20-9A8A-5691-8586-FCA4CB57526D
     template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreInputSourceBase>{ 0x9F488807,0x4580,0x4BE8,{ 0xBE,0x68,0x92,0xA9,0x31,0x17,0x13,0xBB } }; // 9F488807-4580-4BE8-BE68-92A9311713BB
     template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreKeyboardInputSource>{ 0x231C9088,0xE469,0x4DF1,{ 0xB2,0x08,0x6E,0x49,0x0D,0x71,0xCB,0x90 } }; // 231C9088-E469-4DF1-B208-6E490D71CB90
     template <> inline constexpr guid guid_v<Windows::UI::Core::ICoreKeyboardInputSource2>{ 0xFA24CB94,0xF963,0x47A5,{ 0x87,0x78,0x20,0x7C,0x48,0x2B,0x0A,0xFD } }; // FA24CB94-F963-47A5-8778-207C482B0AFD
@@ -453,6 +480,7 @@ namespace winrt::impl
     template <> struct default_interface<Windows::UI::Core::CoreCursor>{ using type = Windows::UI::Core::ICoreCursor; };
     template <> struct default_interface<Windows::UI::Core::CoreDispatcher>{ using type = Windows::UI::Core::ICoreDispatcher; };
     template <> struct default_interface<Windows::UI::Core::CoreIndependentInputSource>{ using type = Windows::UI::Core::ICoreInputSourceBase; };
+    template <> struct default_interface<Windows::UI::Core::CoreIndependentInputSourceController>{ using type = Windows::UI::Core::ICoreIndependentInputSourceController; };
     template <> struct default_interface<Windows::UI::Core::CoreWindow>{ using type = Windows::UI::Core::ICoreWindow; };
     template <> struct default_interface<Windows::UI::Core::CoreWindowDialog>{ using type = Windows::UI::Core::ICoreWindowDialog; };
     template <> struct default_interface<Windows::UI::Core::CoreWindowEventArgs>{ using type = Windows::UI::Core::ICoreWindowEventArgs; };
@@ -587,6 +615,27 @@ namespace winrt::impl
             virtual int32_t __stdcall ShouldYield(bool*) noexcept = 0;
             virtual int32_t __stdcall ShouldYieldToPriority(int32_t, bool*) noexcept = 0;
             virtual int32_t __stdcall StopProcessEvents() noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::UI::Core::ICoreIndependentInputSourceController>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IsTransparentForUncontrolledInput(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_IsTransparentForUncontrolledInput(bool) noexcept = 0;
+            virtual int32_t __stdcall get_IsPalmRejectionEnabled(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_IsPalmRejectionEnabled(bool) noexcept = 0;
+            virtual int32_t __stdcall get_Source(void**) noexcept = 0;
+            virtual int32_t __stdcall SetControlledInput(uint32_t) noexcept = 0;
+            virtual int32_t __stdcall SetControlledInputWithFilters(uint32_t, uint32_t, uint32_t) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::UI::Core::ICoreIndependentInputSourceControllerStatics>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateForVisual(void*, void**) noexcept = 0;
+            virtual int32_t __stdcall CreateForIVisualElement(void*, void**) noexcept = 0;
         };
     };
     template <> struct abi<Windows::UI::Core::ICoreInputSourceBase>
@@ -1144,6 +1193,31 @@ namespace winrt::impl
     template <> struct consume<Windows::UI::Core::ICoreDispatcherWithTaskPriority>
     {
         template <typename D> using type = consume_Windows_UI_Core_ICoreDispatcherWithTaskPriority<D>;
+    };
+    template <typename D>
+    struct consume_Windows_UI_Core_ICoreIndependentInputSourceController
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsTransparentForUncontrolledInput() const;
+        WINRT_IMPL_AUTO(void) IsTransparentForUncontrolledInput(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsPalmRejectionEnabled() const;
+        WINRT_IMPL_AUTO(void) IsPalmRejectionEnabled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::CoreIndependentInputSource) Source() const;
+        WINRT_IMPL_AUTO(void) SetControlledInput(Windows::UI::Core::CoreInputDeviceTypes const& inputTypes) const;
+        WINRT_IMPL_AUTO(void) SetControlledInput(Windows::UI::Core::CoreInputDeviceTypes const& inputTypes, Windows::UI::Core::CoreIndependentInputFilters const& required, Windows::UI::Core::CoreIndependentInputFilters const& excluded) const;
+    };
+    template <> struct consume<Windows::UI::Core::ICoreIndependentInputSourceController>
+    {
+        template <typename D> using type = consume_Windows_UI_Core_ICoreIndependentInputSourceController<D>;
+    };
+    template <typename D>
+    struct consume_Windows_UI_Core_ICoreIndependentInputSourceControllerStatics
+    {
+        WINRT_IMPL_AUTO(Windows::UI::Core::CoreIndependentInputSourceController) CreateForVisual(Windows::UI::Composition::Visual const& visual) const;
+        WINRT_IMPL_AUTO(Windows::UI::Core::CoreIndependentInputSourceController) CreateForIVisualElement(Windows::UI::Composition::IVisualElement const& visualElement) const;
+    };
+    template <> struct consume<Windows::UI::Core::ICoreIndependentInputSourceControllerStatics>
+    {
+        template <typename D> using type = consume_Windows_UI_Core_ICoreIndependentInputSourceControllerStatics<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Core_ICoreInputSourceBase

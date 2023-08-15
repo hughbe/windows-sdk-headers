@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,8 @@
 #ifndef WINRT_Windows_Management_Deployment_H
 #define WINRT_Windows_Management_Deployment_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.201201.7"
 #include "winrt/Windows.Management.h"
 #include "winrt/impl/Windows.ApplicationModel.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -168,6 +169,226 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAddPackageOptions)->put_DeferRegistrationWhenPackagesAreInUse(value));
     }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IAppInstallerManager<D>::SetAutoUpdateSettings(param::hstring const& packageFamilyName, Windows::Management::Deployment::AutoUpdateSettingsOptions const& appInstallerInfo) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAppInstallerManager)->SetAutoUpdateSettings(*(void**)(&packageFamilyName), *(void**)(&appInstallerInfo)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IAppInstallerManager<D>::ClearAutoUpdateSettings(param::hstring const& packageFamilyName) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAppInstallerManager)->ClearAutoUpdateSettings(*(void**)(&packageFamilyName)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IAppInstallerManager<D>::PauseAutoUpdatesUntil(param::hstring const& packageFamilyName, Windows::Foundation::DateTime const& dateTime) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAppInstallerManager)->PauseAutoUpdatesUntil(*(void**)(&packageFamilyName), impl::bind_in(dateTime)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Deployment::AppInstallerManager) consume_Windows_Management_Deployment_IAppInstallerManagerStatics<D>::GetDefault() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAppInstallerManagerStatics)->GetDefault(&result));
+        return Windows::Management::Deployment::AppInstallerManager{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Deployment::AppInstallerManager) consume_Windows_Management_Deployment_IAppInstallerManagerStatics<D>::GetForSystem() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAppInstallerManagerStatics)->GetForSystem(&result));
+        return Windows::Management::Deployment::AppInstallerManager{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::PackageVersion) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::Version() const
+    {
+        Windows::ApplicationModel::PackageVersion value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->get_Version(put_abi(value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::Version(Windows::ApplicationModel::PackageVersion const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->put_Version(impl::bind_in(value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::AppInstallerUri() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->get_AppInstallerUri(&value));
+        return Windows::Foundation::Uri{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::AppInstallerUri(Windows::Foundation::Uri const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->put_AppInstallerUri(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::OnLaunch() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->get_OnLaunch(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::OnLaunch(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->put_OnLaunch(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::HoursBetweenUpdateChecks() const
+    {
+        uint32_t value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->get_HoursBetweenUpdateChecks(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::HoursBetweenUpdateChecks(uint32_t value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->put_HoursBetweenUpdateChecks(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::ShowPrompt() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->get_ShowPrompt(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::ShowPrompt(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->put_ShowPrompt(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::UpdateBlocksActivation() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->get_UpdateBlocksActivation(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::UpdateBlocksActivation(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->put_UpdateBlocksActivation(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::AutomaticBackgroundTask() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->get_AutomaticBackgroundTask(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::AutomaticBackgroundTask(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->put_AutomaticBackgroundTask(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::ForceUpdateFromAnyVersion() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->get_ForceUpdateFromAnyVersion(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::ForceUpdateFromAnyVersion(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->put_ForceUpdateFromAnyVersion(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::IsAutoRepairEnabled() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->get_IsAutoRepairEnabled(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::IsAutoRepairEnabled(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->put_IsAutoRepairEnabled(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Foundation::Uri>) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::UpdateUris() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->get_UpdateUris(&value));
+        return Windows::Foundation::Collections::IVector<Windows::Foundation::Uri>{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Foundation::Uri>) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::RepairUris() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->get_RepairUris(&value));
+        return Windows::Foundation::Collections::IVector<Windows::Foundation::Uri>{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Foundation::Uri>) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::DependencyPackageUris() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->get_DependencyPackageUris(&value));
+        return Windows::Foundation::Collections::IVector<Windows::Foundation::Uri>{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Foundation::Uri>) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptions<D>::OptionalPackageUris() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptions)->get_OptionalPackageUris(&value));
+        return Windows::Foundation::Collections::IVector<Windows::Foundation::Uri>{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Deployment::AutoUpdateSettingsOptions) consume_Windows_Management_Deployment_IAutoUpdateSettingsOptionsStatics<D>::CreateFromAppInstallerInfo(Windows::ApplicationModel::AppInstallerInfo const& appInstallerInfo) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IAutoUpdateSettingsOptionsStatics)->CreateFromAppInstallerInfo(*(void**)(&appInstallerInfo), &result));
+        return Windows::Management::Deployment::AutoUpdateSettingsOptions{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Management::Deployment::SharedPackageContainerMember>) consume_Windows_Management_Deployment_ICreateSharedPackageContainerOptions<D>::Members() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ICreateSharedPackageContainerOptions)->get_Members(&value));
+        return Windows::Foundation::Collections::IVector<Windows::Management::Deployment::SharedPackageContainerMember>{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Deployment_ICreateSharedPackageContainerOptions<D>::ForceAppShutdown() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ICreateSharedPackageContainerOptions)->get_ForceAppShutdown(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_ICreateSharedPackageContainerOptions<D>::ForceAppShutdown(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ICreateSharedPackageContainerOptions)->put_ForceAppShutdown(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Deployment::SharedPackageContainerCreationCollisionOptions) consume_Windows_Management_Deployment_ICreateSharedPackageContainerOptions<D>::CreateCollisionOption() const
+    {
+        Windows::Management::Deployment::SharedPackageContainerCreationCollisionOptions value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ICreateSharedPackageContainerOptions)->get_CreateCollisionOption(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_ICreateSharedPackageContainerOptions<D>::CreateCollisionOption(Windows::Management::Deployment::SharedPackageContainerCreationCollisionOptions const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ICreateSharedPackageContainerOptions)->put_CreateCollisionOption(static_cast<int32_t>(value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Deployment::SharedPackageContainer) consume_Windows_Management_Deployment_ICreateSharedPackageContainerResult<D>::Container() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ICreateSharedPackageContainerResult)->get_Container(&value));
+        return Windows::Management::Deployment::SharedPackageContainer{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Deployment::SharedPackageContainerOperationStatus) consume_Windows_Management_Deployment_ICreateSharedPackageContainerResult<D>::Status() const
+    {
+        Windows::Management::Deployment::SharedPackageContainerOperationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ICreateSharedPackageContainerResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Management_Deployment_ICreateSharedPackageContainerResult<D>::ExtendedError() const
+    {
+        winrt::hresult value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ICreateSharedPackageContainerResult)->get_ExtendedError(put_abi(value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Deployment_IDeleteSharedPackageContainerOptions<D>::ForceAppShutdown() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IDeleteSharedPackageContainerOptions)->get_ForceAppShutdown(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IDeleteSharedPackageContainerOptions<D>::ForceAppShutdown(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IDeleteSharedPackageContainerOptions)->put_ForceAppShutdown(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Deployment_IDeleteSharedPackageContainerOptions<D>::AllUsers() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IDeleteSharedPackageContainerOptions)->get_AllUsers(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IDeleteSharedPackageContainerOptions<D>::AllUsers(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IDeleteSharedPackageContainerOptions)->put_AllUsers(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Deployment::SharedPackageContainerOperationStatus) consume_Windows_Management_Deployment_IDeleteSharedPackageContainerResult<D>::Status() const
+    {
+        Windows::Management::Deployment::SharedPackageContainerOperationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IDeleteSharedPackageContainerResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Management_Deployment_IDeleteSharedPackageContainerResult<D>::ExtendedError() const
+    {
+        winrt::hresult value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IDeleteSharedPackageContainerResult)->get_ExtendedError(put_abi(value)));
+        return value;
+    }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Deployment_IDeploymentResult<D>::ErrorText() const
     {
         void* value{};
@@ -191,6 +412,38 @@ namespace winrt::impl
         bool value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IDeploymentResult2)->get_IsRegistered(&value));
         return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Deployment_IFindSharedPackageContainerOptions<D>::Name() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IFindSharedPackageContainerOptions)->get_Name(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IFindSharedPackageContainerOptions<D>::Name(param::hstring const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IFindSharedPackageContainerOptions)->put_Name(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Deployment_IFindSharedPackageContainerOptions<D>::PackageFamilyName() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IFindSharedPackageContainerOptions)->get_PackageFamilyName(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IFindSharedPackageContainerOptions<D>::PackageFamilyName(param::hstring const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IFindSharedPackageContainerOptions)->put_PackageFamilyName(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) consume_Windows_Management_Deployment_IPackageAllUserProvisioningOptions<D>::OptionalPackageFamilyNames() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IPackageAllUserProvisioningOptions)->get_OptionalPackageFamilyNames(&value));
+        return Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) consume_Windows_Management_Deployment_IPackageAllUserProvisioningOptions<D>::ProjectionOrderPackageFamilyNames() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IPackageAllUserProvisioningOptions)->get_ProjectionOrderPackageFamilyNames(&value));
+        return Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Management::Deployment::DeploymentResult, Windows::Management::Deployment::DeploymentProgress>) consume_Windows_Management_Deployment_IPackageManager<D>::AddPackageAsync(Windows::Foundation::Uri const& packageUri, param::async_iterable<Windows::Foundation::Uri> const& dependencyPackageUris, Windows::Management::Deployment::DeploymentOptions const& deploymentOptions) const
     {
@@ -285,6 +538,12 @@ namespace winrt::impl
         void* packageInformation{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IPackageManager)->FindPackageByUserSecurityIdPackageFullName(*(void**)(&userSecurityId), *(void**)(&packageFullName), &packageInformation));
         return Windows::ApplicationModel::Package{ packageInformation, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Management::Deployment::DeploymentResult, Windows::Management::Deployment::DeploymentProgress>) consume_Windows_Management_Deployment_IPackageManager10<D>::ProvisionPackageForAllUsersAsync(param::hstring const& mainPackageFamilyName, Windows::Management::Deployment::PackageAllUserProvisioningOptions const& options) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IPackageManager10)->ProvisionPackageForAllUsersWithOptionsAsync(*(void**)(&mainPackageFamilyName), *(void**)(&options), &operation));
+        return Windows::Foundation::IAsyncOperationWithProgress<Windows::Management::Deployment::DeploymentResult, Windows::Management::Deployment::DeploymentProgress>{ operation, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Management::Deployment::DeploymentResult, Windows::Management::Deployment::DeploymentProgress>) consume_Windows_Management_Deployment_IPackageManager2<D>::RemovePackageAsync(param::hstring const& packageFullName, Windows::Management::Deployment::RemovalOptions const& removalOptions) const
     {
@@ -822,6 +1081,96 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IRegisterPackageOptions)->put_DeferRegistrationWhenPackagesAreInUse(value));
     }
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Deployment_ISharedPackageContainer<D>::Name() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ISharedPackageContainer)->get_Name(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Deployment_ISharedPackageContainer<D>::Id() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ISharedPackageContainer)->get_Id(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Management::Deployment::SharedPackageContainerMember>) consume_Windows_Management_Deployment_ISharedPackageContainer<D>::GetMembers() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ISharedPackageContainer)->GetMembers(&result));
+        return Windows::Foundation::Collections::IVector<Windows::Management::Deployment::SharedPackageContainerMember>{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Deployment::UpdateSharedPackageContainerResult) consume_Windows_Management_Deployment_ISharedPackageContainer<D>::RemovePackageFamily(param::hstring const& packageFamilyName, Windows::Management::Deployment::UpdateSharedPackageContainerOptions const& options) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ISharedPackageContainer)->RemovePackageFamily(*(void**)(&packageFamilyName), *(void**)(&options), &result));
+        return Windows::Management::Deployment::UpdateSharedPackageContainerResult{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Deployment::UpdateSharedPackageContainerResult) consume_Windows_Management_Deployment_ISharedPackageContainer<D>::ResetData() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ISharedPackageContainer)->ResetData(&result));
+        return Windows::Management::Deployment::UpdateSharedPackageContainerResult{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Deployment::CreateSharedPackageContainerResult) consume_Windows_Management_Deployment_ISharedPackageContainerManager<D>::CreateContainer(param::hstring const& name, Windows::Management::Deployment::CreateSharedPackageContainerOptions const& options) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ISharedPackageContainerManager)->CreateContainer(*(void**)(&name), *(void**)(&options), &result));
+        return Windows::Management::Deployment::CreateSharedPackageContainerResult{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Deployment::DeleteSharedPackageContainerResult) consume_Windows_Management_Deployment_ISharedPackageContainerManager<D>::DeleteContainer(param::hstring const& id, Windows::Management::Deployment::DeleteSharedPackageContainerOptions const& options) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ISharedPackageContainerManager)->DeleteContainer(*(void**)(&id), *(void**)(&options), &result));
+        return Windows::Management::Deployment::DeleteSharedPackageContainerResult{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Deployment::SharedPackageContainer) consume_Windows_Management_Deployment_ISharedPackageContainerManager<D>::GetContainer(param::hstring const& id) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ISharedPackageContainerManager)->GetContainer(*(void**)(&id), &result));
+        return Windows::Management::Deployment::SharedPackageContainer{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Management::Deployment::SharedPackageContainer>) consume_Windows_Management_Deployment_ISharedPackageContainerManager<D>::FindContainers() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ISharedPackageContainerManager)->FindContainers(&result));
+        return Windows::Foundation::Collections::IVector<Windows::Management::Deployment::SharedPackageContainer>{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Management::Deployment::SharedPackageContainer>) consume_Windows_Management_Deployment_ISharedPackageContainerManager<D>::FindContainers(Windows::Management::Deployment::FindSharedPackageContainerOptions const& options) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ISharedPackageContainerManager)->FindContainersWithOptions(*(void**)(&options), &result));
+        return Windows::Foundation::Collections::IVector<Windows::Management::Deployment::SharedPackageContainer>{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Deployment::SharedPackageContainerManager) consume_Windows_Management_Deployment_ISharedPackageContainerManagerStatics<D>::GetDefault() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ISharedPackageContainerManagerStatics)->GetDefault(&result));
+        return Windows::Management::Deployment::SharedPackageContainerManager{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Deployment::SharedPackageContainerManager) consume_Windows_Management_Deployment_ISharedPackageContainerManagerStatics<D>::GetForUser(param::hstring const& userSid) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ISharedPackageContainerManagerStatics)->GetForUser(*(void**)(&userSid), &result));
+        return Windows::Management::Deployment::SharedPackageContainerManager{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Deployment::SharedPackageContainerManager) consume_Windows_Management_Deployment_ISharedPackageContainerManagerStatics<D>::GetForProvisioning() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ISharedPackageContainerManagerStatics)->GetForProvisioning(&result));
+        return Windows::Management::Deployment::SharedPackageContainerManager{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Management_Deployment_ISharedPackageContainerMember<D>::PackageFamilyName() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ISharedPackageContainerMember)->get_PackageFamilyName(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Deployment::SharedPackageContainerMember) consume_Windows_Management_Deployment_ISharedPackageContainerMemberFactory<D>::CreateInstance(param::hstring const& packageFamilyName) const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::ISharedPackageContainerMemberFactory)->CreateInstance(*(void**)(&packageFamilyName), &value));
+        return Windows::Management::Deployment::SharedPackageContainerMember{ value, take_ownership_from_abi };
+    }
     template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Foundation::Uri>) consume_Windows_Management_Deployment_IStagePackageOptions<D>::DependencyPackageUris() const
     {
         void* value{};
@@ -935,6 +1284,38 @@ namespace winrt::impl
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IStagePackageOptions<D>::AllowUnsigned(bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IStagePackageOptions)->put_AllowUnsigned(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Deployment_IUpdateSharedPackageContainerOptions<D>::ForceAppShutdown() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IUpdateSharedPackageContainerOptions)->get_ForceAppShutdown(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IUpdateSharedPackageContainerOptions<D>::ForceAppShutdown(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IUpdateSharedPackageContainerOptions)->put_ForceAppShutdown(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Management_Deployment_IUpdateSharedPackageContainerOptions<D>::RequirePackagesPresent() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IUpdateSharedPackageContainerOptions)->get_RequirePackagesPresent(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Management_Deployment_IUpdateSharedPackageContainerOptions<D>::RequirePackagesPresent(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IUpdateSharedPackageContainerOptions)->put_RequirePackagesPresent(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Management::Deployment::SharedPackageContainerOperationStatus) consume_Windows_Management_Deployment_IUpdateSharedPackageContainerResult<D>::Status() const
+    {
+        Windows::Management::Deployment::SharedPackageContainerOperationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IUpdateSharedPackageContainerResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Management_Deployment_IUpdateSharedPackageContainerResult<D>::ExtendedError() const
+    {
+        winrt::hresult value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Management::Deployment::IUpdateSharedPackageContainerResult)->get_ExtendedError(put_abi(value)));
+        return value;
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
@@ -1160,6 +1541,361 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, Windows::Management::Deployment::IAppInstallerManager> : produce_base<D, Windows::Management::Deployment::IAppInstallerManager>
+    {
+        int32_t __stdcall SetAutoUpdateSettings(void* packageFamilyName, void* appInstallerInfo) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SetAutoUpdateSettings(*reinterpret_cast<hstring const*>(&packageFamilyName), *reinterpret_cast<Windows::Management::Deployment::AutoUpdateSettingsOptions const*>(&appInstallerInfo));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall ClearAutoUpdateSettings(void* packageFamilyName) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ClearAutoUpdateSettings(*reinterpret_cast<hstring const*>(&packageFamilyName));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall PauseAutoUpdatesUntil(void* packageFamilyName, int64_t dateTime) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().PauseAutoUpdatesUntil(*reinterpret_cast<hstring const*>(&packageFamilyName), *reinterpret_cast<Windows::Foundation::DateTime const*>(&dateTime));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Management::Deployment::IAppInstallerManagerStatics> : produce_base<D, Windows::Management::Deployment::IAppInstallerManagerStatics>
+    {
+        int32_t __stdcall GetDefault(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Management::Deployment::AppInstallerManager>(this->shim().GetDefault());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetForSystem(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Management::Deployment::AppInstallerManager>(this->shim().GetForSystem());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Management::Deployment::IAutoUpdateSettingsOptions> : produce_base<D, Windows::Management::Deployment::IAutoUpdateSettingsOptions>
+    {
+        int32_t __stdcall get_Version(struct struct_Windows_ApplicationModel_PackageVersion* value) noexcept final try
+        {
+            zero_abi<Windows::ApplicationModel::PackageVersion>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::ApplicationModel::PackageVersion>(this->shim().Version());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Version(struct struct_Windows_ApplicationModel_PackageVersion value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Version(*reinterpret_cast<Windows::ApplicationModel::PackageVersion const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_AppInstallerUri(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Foundation::Uri>(this->shim().AppInstallerUri());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_AppInstallerUri(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AppInstallerUri(*reinterpret_cast<Windows::Foundation::Uri const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_OnLaunch(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().OnLaunch());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_OnLaunch(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().OnLaunch(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_HoursBetweenUpdateChecks(uint32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint32_t>(this->shim().HoursBetweenUpdateChecks());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_HoursBetweenUpdateChecks(uint32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().HoursBetweenUpdateChecks(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ShowPrompt(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().ShowPrompt());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ShowPrompt(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ShowPrompt(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_UpdateBlocksActivation(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().UpdateBlocksActivation());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_UpdateBlocksActivation(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().UpdateBlocksActivation(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_AutomaticBackgroundTask(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().AutomaticBackgroundTask());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_AutomaticBackgroundTask(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AutomaticBackgroundTask(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ForceUpdateFromAnyVersion(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().ForceUpdateFromAnyVersion());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ForceUpdateFromAnyVersion(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ForceUpdateFromAnyVersion(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_IsAutoRepairEnabled(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsAutoRepairEnabled());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_IsAutoRepairEnabled(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().IsAutoRepairEnabled(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_UpdateUris(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Foundation::Collections::IVector<Windows::Foundation::Uri>>(this->shim().UpdateUris());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_RepairUris(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Foundation::Collections::IVector<Windows::Foundation::Uri>>(this->shim().RepairUris());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_DependencyPackageUris(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Foundation::Collections::IVector<Windows::Foundation::Uri>>(this->shim().DependencyPackageUris());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_OptionalPackageUris(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Foundation::Collections::IVector<Windows::Foundation::Uri>>(this->shim().OptionalPackageUris());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Management::Deployment::IAutoUpdateSettingsOptionsStatics> : produce_base<D, Windows::Management::Deployment::IAutoUpdateSettingsOptionsStatics>
+    {
+        int32_t __stdcall CreateFromAppInstallerInfo(void* appInstallerInfo, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Management::Deployment::AutoUpdateSettingsOptions>(this->shim().CreateFromAppInstallerInfo(*reinterpret_cast<Windows::ApplicationModel::AppInstallerInfo const*>(&appInstallerInfo)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Management::Deployment::ICreateSharedPackageContainerOptions> : produce_base<D, Windows::Management::Deployment::ICreateSharedPackageContainerOptions>
+    {
+        int32_t __stdcall get_Members(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Foundation::Collections::IVector<Windows::Management::Deployment::SharedPackageContainerMember>>(this->shim().Members());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ForceAppShutdown(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().ForceAppShutdown());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ForceAppShutdown(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ForceAppShutdown(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CreateCollisionOption(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Management::Deployment::SharedPackageContainerCreationCollisionOptions>(this->shim().CreateCollisionOption());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_CreateCollisionOption(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CreateCollisionOption(*reinterpret_cast<Windows::Management::Deployment::SharedPackageContainerCreationCollisionOptions const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Management::Deployment::ICreateSharedPackageContainerResult> : produce_base<D, Windows::Management::Deployment::ICreateSharedPackageContainerResult>
+    {
+        int32_t __stdcall get_Container(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Management::Deployment::SharedPackageContainer>(this->shim().Container());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Status(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Management::Deployment::SharedPackageContainerOperationStatus>(this->shim().Status());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ExtendedError(winrt::hresult* value) noexcept final try
+        {
+            zero_abi<winrt::hresult>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::hresult>(this->shim().ExtendedError());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Management::Deployment::IDeleteSharedPackageContainerOptions> : produce_base<D, Windows::Management::Deployment::IDeleteSharedPackageContainerOptions>
+    {
+        int32_t __stdcall get_ForceAppShutdown(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().ForceAppShutdown());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ForceAppShutdown(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ForceAppShutdown(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_AllUsers(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().AllUsers());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_AllUsers(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AllUsers(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Management::Deployment::IDeleteSharedPackageContainerResult> : produce_base<D, Windows::Management::Deployment::IDeleteSharedPackageContainerResult>
+    {
+        int32_t __stdcall get_Status(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Management::Deployment::SharedPackageContainerOperationStatus>(this->shim().Status());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ExtendedError(winrt::hresult* value) noexcept final try
+        {
+            zero_abi<winrt::hresult>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::hresult>(this->shim().ExtendedError());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, Windows::Management::Deployment::IDeploymentResult> : produce_base<D, Windows::Management::Deployment::IDeploymentResult>
     {
         int32_t __stdcall get_ErrorText(void** value) noexcept final try
@@ -1195,6 +1931,64 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             *value = detach_from<bool>(this->shim().IsRegistered());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Management::Deployment::IFindSharedPackageContainerOptions> : produce_base<D, Windows::Management::Deployment::IFindSharedPackageContainerOptions>
+    {
+        int32_t __stdcall get_Name(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().Name());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Name(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Name(*reinterpret_cast<hstring const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_PackageFamilyName(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().PackageFamilyName());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_PackageFamilyName(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().PackageFamilyName(*reinterpret_cast<hstring const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Management::Deployment::IPackageAllUserProvisioningOptions> : produce_base<D, Windows::Management::Deployment::IPackageAllUserProvisioningOptions>
+    {
+        int32_t __stdcall get_OptionalPackageFamilyNames(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Foundation::Collections::IVector<hstring>>(this->shim().OptionalPackageFamilyNames());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ProjectionOrderPackageFamilyNames(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Foundation::Collections::IVector<hstring>>(this->shim().ProjectionOrderPackageFamilyNames());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1328,6 +2122,20 @@ namespace winrt::impl
             clear_abi(packageInformation);
             typename D::abi_guard guard(this->shim());
             *packageInformation = detach_from<Windows::ApplicationModel::Package>(this->shim().FindPackageForUser(*reinterpret_cast<hstring const*>(&userSecurityId), *reinterpret_cast<hstring const*>(&packageFullName)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Management::Deployment::IPackageManager10> : produce_base<D, Windows::Management::Deployment::IPackageManager10>
+    {
+        int32_t __stdcall ProvisionPackageForAllUsersWithOptionsAsync(void* mainPackageFamilyName, void* options, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<Windows::Foundation::IAsyncOperationWithProgress<Windows::Management::Deployment::DeploymentResult, Windows::Management::Deployment::DeploymentProgress>>(this->shim().ProvisionPackageForAllUsersAsync(*reinterpret_cast<hstring const*>(&mainPackageFamilyName), *reinterpret_cast<Windows::Management::Deployment::PackageAllUserProvisioningOptions const*>(&options)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2136,6 +2944,156 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, Windows::Management::Deployment::ISharedPackageContainer> : produce_base<D, Windows::Management::Deployment::ISharedPackageContainer>
+    {
+        int32_t __stdcall get_Name(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().Name());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Id(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().Id());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetMembers(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Foundation::Collections::IVector<Windows::Management::Deployment::SharedPackageContainerMember>>(this->shim().GetMembers());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall RemovePackageFamily(void* packageFamilyName, void* options, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Management::Deployment::UpdateSharedPackageContainerResult>(this->shim().RemovePackageFamily(*reinterpret_cast<hstring const*>(&packageFamilyName), *reinterpret_cast<Windows::Management::Deployment::UpdateSharedPackageContainerOptions const*>(&options)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall ResetData(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Management::Deployment::UpdateSharedPackageContainerResult>(this->shim().ResetData());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Management::Deployment::ISharedPackageContainerManager> : produce_base<D, Windows::Management::Deployment::ISharedPackageContainerManager>
+    {
+        int32_t __stdcall CreateContainer(void* name, void* options, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Management::Deployment::CreateSharedPackageContainerResult>(this->shim().CreateContainer(*reinterpret_cast<hstring const*>(&name), *reinterpret_cast<Windows::Management::Deployment::CreateSharedPackageContainerOptions const*>(&options)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall DeleteContainer(void* id, void* options, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Management::Deployment::DeleteSharedPackageContainerResult>(this->shim().DeleteContainer(*reinterpret_cast<hstring const*>(&id), *reinterpret_cast<Windows::Management::Deployment::DeleteSharedPackageContainerOptions const*>(&options)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetContainer(void* id, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Management::Deployment::SharedPackageContainer>(this->shim().GetContainer(*reinterpret_cast<hstring const*>(&id)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall FindContainers(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Foundation::Collections::IVector<Windows::Management::Deployment::SharedPackageContainer>>(this->shim().FindContainers());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall FindContainersWithOptions(void* options, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Foundation::Collections::IVector<Windows::Management::Deployment::SharedPackageContainer>>(this->shim().FindContainers(*reinterpret_cast<Windows::Management::Deployment::FindSharedPackageContainerOptions const*>(&options)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Management::Deployment::ISharedPackageContainerManagerStatics> : produce_base<D, Windows::Management::Deployment::ISharedPackageContainerManagerStatics>
+    {
+        int32_t __stdcall GetDefault(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Management::Deployment::SharedPackageContainerManager>(this->shim().GetDefault());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetForUser(void* userSid, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Management::Deployment::SharedPackageContainerManager>(this->shim().GetForUser(*reinterpret_cast<hstring const*>(&userSid)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetForProvisioning(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Management::Deployment::SharedPackageContainerManager>(this->shim().GetForProvisioning());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Management::Deployment::ISharedPackageContainerMember> : produce_base<D, Windows::Management::Deployment::ISharedPackageContainerMember>
+    {
+        int32_t __stdcall get_PackageFamilyName(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().PackageFamilyName());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Management::Deployment::ISharedPackageContainerMemberFactory> : produce_base<D, Windows::Management::Deployment::ISharedPackageContainerMemberFactory>
+    {
+        int32_t __stdcall CreateInstance(void* packageFamilyName, void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Management::Deployment::SharedPackageContainerMember>(this->shim().CreateInstance(*reinterpret_cast<hstring const*>(&packageFamilyName)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, Windows::Management::Deployment::IStagePackageOptions> : produce_base<D, Windows::Management::Deployment::IStagePackageOptions>
     {
         int32_t __stdcall get_DependencyPackageUris(void** value) noexcept final try
@@ -2295,6 +3253,61 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             this->shim().AllowUnsigned(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Management::Deployment::IUpdateSharedPackageContainerOptions> : produce_base<D, Windows::Management::Deployment::IUpdateSharedPackageContainerOptions>
+    {
+        int32_t __stdcall get_ForceAppShutdown(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().ForceAppShutdown());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ForceAppShutdown(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ForceAppShutdown(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_RequirePackagesPresent(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().RequirePackagesPresent());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_RequirePackagesPresent(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().RequirePackagesPresent(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Management::Deployment::IUpdateSharedPackageContainerResult> : produce_base<D, Windows::Management::Deployment::IUpdateSharedPackageContainerResult>
+    {
+        int32_t __stdcall get_Status(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Management::Deployment::SharedPackageContainerOperationStatus>(this->shim().Status());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ExtendedError(winrt::hresult* value) noexcept final try
+        {
+            zero_abi<winrt::hresult>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::hresult>(this->shim().ExtendedError());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2462,6 +3475,38 @@ WINRT_EXPORT namespace winrt::Windows::Management::Deployment
         AddPackageOptions(impl::call_factory_cast<AddPackageOptions(*)(Windows::Foundation::IActivationFactory const&), AddPackageOptions>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<AddPackageOptions>(); }))
     {
     }
+    inline auto AppInstallerManager::GetDefault()
+    {
+        return impl::call_factory_cast<Windows::Management::Deployment::AppInstallerManager(*)(IAppInstallerManagerStatics const&), AppInstallerManager, IAppInstallerManagerStatics>([](IAppInstallerManagerStatics const& f) { return f.GetDefault(); });
+    }
+    inline auto AppInstallerManager::GetForSystem()
+    {
+        return impl::call_factory_cast<Windows::Management::Deployment::AppInstallerManager(*)(IAppInstallerManagerStatics const&), AppInstallerManager, IAppInstallerManagerStatics>([](IAppInstallerManagerStatics const& f) { return f.GetForSystem(); });
+    }
+    inline AutoUpdateSettingsOptions::AutoUpdateSettingsOptions() :
+        AutoUpdateSettingsOptions(impl::call_factory_cast<AutoUpdateSettingsOptions(*)(Windows::Foundation::IActivationFactory const&), AutoUpdateSettingsOptions>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<AutoUpdateSettingsOptions>(); }))
+    {
+    }
+    inline auto AutoUpdateSettingsOptions::CreateFromAppInstallerInfo(Windows::ApplicationModel::AppInstallerInfo const& appInstallerInfo)
+    {
+        return impl::call_factory<AutoUpdateSettingsOptions, IAutoUpdateSettingsOptionsStatics>([&](IAutoUpdateSettingsOptionsStatics const& f) { return f.CreateFromAppInstallerInfo(appInstallerInfo); });
+    }
+    inline CreateSharedPackageContainerOptions::CreateSharedPackageContainerOptions() :
+        CreateSharedPackageContainerOptions(impl::call_factory_cast<CreateSharedPackageContainerOptions(*)(Windows::Foundation::IActivationFactory const&), CreateSharedPackageContainerOptions>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<CreateSharedPackageContainerOptions>(); }))
+    {
+    }
+    inline DeleteSharedPackageContainerOptions::DeleteSharedPackageContainerOptions() :
+        DeleteSharedPackageContainerOptions(impl::call_factory_cast<DeleteSharedPackageContainerOptions(*)(Windows::Foundation::IActivationFactory const&), DeleteSharedPackageContainerOptions>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<DeleteSharedPackageContainerOptions>(); }))
+    {
+    }
+    inline FindSharedPackageContainerOptions::FindSharedPackageContainerOptions() :
+        FindSharedPackageContainerOptions(impl::call_factory_cast<FindSharedPackageContainerOptions(*)(Windows::Foundation::IActivationFactory const&), FindSharedPackageContainerOptions>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<FindSharedPackageContainerOptions>(); }))
+    {
+    }
+    inline PackageAllUserProvisioningOptions::PackageAllUserProvisioningOptions() :
+        PackageAllUserProvisioningOptions(impl::call_factory_cast<PackageAllUserProvisioningOptions(*)(Windows::Foundation::IActivationFactory const&), PackageAllUserProvisioningOptions>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PackageAllUserProvisioningOptions>(); }))
+    {
+    }
     inline PackageManager::PackageManager() :
         PackageManager(impl::call_factory_cast<PackageManager(*)(Windows::Foundation::IActivationFactory const&), PackageManager>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PackageManager>(); }))
     {
@@ -2470,8 +3515,28 @@ WINRT_EXPORT namespace winrt::Windows::Management::Deployment
         RegisterPackageOptions(impl::call_factory_cast<RegisterPackageOptions(*)(Windows::Foundation::IActivationFactory const&), RegisterPackageOptions>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<RegisterPackageOptions>(); }))
     {
     }
+    inline auto SharedPackageContainerManager::GetDefault()
+    {
+        return impl::call_factory_cast<Windows::Management::Deployment::SharedPackageContainerManager(*)(ISharedPackageContainerManagerStatics const&), SharedPackageContainerManager, ISharedPackageContainerManagerStatics>([](ISharedPackageContainerManagerStatics const& f) { return f.GetDefault(); });
+    }
+    inline auto SharedPackageContainerManager::GetForUser(param::hstring const& userSid)
+    {
+        return impl::call_factory<SharedPackageContainerManager, ISharedPackageContainerManagerStatics>([&](ISharedPackageContainerManagerStatics const& f) { return f.GetForUser(userSid); });
+    }
+    inline auto SharedPackageContainerManager::GetForProvisioning()
+    {
+        return impl::call_factory_cast<Windows::Management::Deployment::SharedPackageContainerManager(*)(ISharedPackageContainerManagerStatics const&), SharedPackageContainerManager, ISharedPackageContainerManagerStatics>([](ISharedPackageContainerManagerStatics const& f) { return f.GetForProvisioning(); });
+    }
+    inline SharedPackageContainerMember::SharedPackageContainerMember(param::hstring const& packageFamilyName) :
+        SharedPackageContainerMember(impl::call_factory<SharedPackageContainerMember, ISharedPackageContainerMemberFactory>([&](ISharedPackageContainerMemberFactory const& f) { return f.CreateInstance(packageFamilyName); }))
+    {
+    }
     inline StagePackageOptions::StagePackageOptions() :
         StagePackageOptions(impl::call_factory_cast<StagePackageOptions(*)(Windows::Foundation::IActivationFactory const&), StagePackageOptions>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<StagePackageOptions>(); }))
+    {
+    }
+    inline UpdateSharedPackageContainerOptions::UpdateSharedPackageContainerOptions() :
+        UpdateSharedPackageContainerOptions(impl::call_factory_cast<UpdateSharedPackageContainerOptions(*)(Windows::Foundation::IActivationFactory const&), UpdateSharedPackageContainerOptions>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<UpdateSharedPackageContainerOptions>(); }))
     {
     }
 }
@@ -2479,9 +3544,20 @@ namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Windows::Management::Deployment::IAddPackageOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::IAppInstallerManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::IAppInstallerManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::IAutoUpdateSettingsOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::IAutoUpdateSettingsOptionsStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::ICreateSharedPackageContainerOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::ICreateSharedPackageContainerResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::IDeleteSharedPackageContainerOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::IDeleteSharedPackageContainerResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::IDeploymentResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::IDeploymentResult2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::IFindSharedPackageContainerOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::IPackageManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::IPackageManager10> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::IPackageManager2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::IPackageManager3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::IPackageManager4> : winrt::impl::hash_base {};
@@ -2495,15 +3571,35 @@ namespace std
     template<> struct hash<winrt::Windows::Management::Deployment::IPackageVolume> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::IPackageVolume2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::IRegisterPackageOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::ISharedPackageContainer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::ISharedPackageContainerManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::ISharedPackageContainerManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::ISharedPackageContainerMember> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::ISharedPackageContainerMemberFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::IStagePackageOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::IUpdateSharedPackageContainerOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::IUpdateSharedPackageContainerResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::AddPackageOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::AppInstallerManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::AutoUpdateSettingsOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::CreateSharedPackageContainerOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::CreateSharedPackageContainerResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::DeploymentResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::FindSharedPackageContainerOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::PackageAllUserProvisioningOptions> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::PackageManager> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::PackageManagerDebugSettings> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::PackageUserInformation> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::PackageVolume> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::RegisterPackageOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::SharedPackageContainer> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::SharedPackageContainerManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::SharedPackageContainerMember> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::StagePackageOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerResult> : winrt::impl::hash_base {};
 #endif
 }
 #endif

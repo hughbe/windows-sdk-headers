@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,8 @@
 #ifndef WINRT_Windows_Devices_Haptics_H
 #define WINRT_Windows_Devices_Haptics_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.201201.7"
 #include "winrt/Windows.Devices.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -41,6 +42,66 @@ namespace winrt::impl
     {
         uint16_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics)->get_Release(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::BrushContinuous() const
+    {
+        uint16_t value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_BrushContinuous(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::ChiselMarkerContinuous() const
+    {
+        uint16_t value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_ChiselMarkerContinuous(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::EraserContinuous() const
+    {
+        uint16_t value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_EraserContinuous(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::Error() const
+    {
+        uint16_t value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_Error(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::GalaxyPenContinuous() const
+    {
+        uint16_t value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_GalaxyPenContinuous(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::Hover() const
+    {
+        uint16_t value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_Hover(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::InkContinuous() const
+    {
+        uint16_t value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_InkContinuous(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::MarkerContinuous() const
+    {
+        uint16_t value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_MarkerContinuous(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::PencilContinuous() const
+    {
+        uint16_t value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_PencilContinuous(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::Success() const
+    {
+        uint16_t value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_Success(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Haptics_ISimpleHapticsController<D>::Id() const
@@ -189,6 +250,82 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             *value = detach_from<uint16_t>(this->shim().Release());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2> : produce_base<D, Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2>
+    {
+        int32_t __stdcall get_BrushContinuous(uint16_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint16_t>(this->shim().BrushContinuous());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ChiselMarkerContinuous(uint16_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint16_t>(this->shim().ChiselMarkerContinuous());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_EraserContinuous(uint16_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint16_t>(this->shim().EraserContinuous());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Error(uint16_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint16_t>(this->shim().Error());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_GalaxyPenContinuous(uint16_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint16_t>(this->shim().GalaxyPenContinuous());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Hover(uint16_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint16_t>(this->shim().Hover());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_InkContinuous(uint16_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint16_t>(this->shim().InkContinuous());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_MarkerContinuous(uint16_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint16_t>(this->shim().MarkerContinuous());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_PencilContinuous(uint16_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint16_t>(this->shim().PencilContinuous());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Success(uint16_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint16_t>(this->shim().Success());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -391,6 +528,46 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Haptics
     {
         return impl::call_factory_cast<uint16_t(*)(IKnownSimpleHapticsControllerWaveformsStatics const&), KnownSimpleHapticsControllerWaveforms, IKnownSimpleHapticsControllerWaveformsStatics>([](IKnownSimpleHapticsControllerWaveformsStatics const& f) { return f.Release(); });
     }
+    inline auto KnownSimpleHapticsControllerWaveforms::BrushContinuous()
+    {
+        return impl::call_factory_cast<uint16_t(*)(IKnownSimpleHapticsControllerWaveformsStatics2 const&), KnownSimpleHapticsControllerWaveforms, IKnownSimpleHapticsControllerWaveformsStatics2>([](IKnownSimpleHapticsControllerWaveformsStatics2 const& f) { return f.BrushContinuous(); });
+    }
+    inline auto KnownSimpleHapticsControllerWaveforms::ChiselMarkerContinuous()
+    {
+        return impl::call_factory_cast<uint16_t(*)(IKnownSimpleHapticsControllerWaveformsStatics2 const&), KnownSimpleHapticsControllerWaveforms, IKnownSimpleHapticsControllerWaveformsStatics2>([](IKnownSimpleHapticsControllerWaveformsStatics2 const& f) { return f.ChiselMarkerContinuous(); });
+    }
+    inline auto KnownSimpleHapticsControllerWaveforms::EraserContinuous()
+    {
+        return impl::call_factory_cast<uint16_t(*)(IKnownSimpleHapticsControllerWaveformsStatics2 const&), KnownSimpleHapticsControllerWaveforms, IKnownSimpleHapticsControllerWaveformsStatics2>([](IKnownSimpleHapticsControllerWaveformsStatics2 const& f) { return f.EraserContinuous(); });
+    }
+    inline auto KnownSimpleHapticsControllerWaveforms::Error()
+    {
+        return impl::call_factory_cast<uint16_t(*)(IKnownSimpleHapticsControllerWaveformsStatics2 const&), KnownSimpleHapticsControllerWaveforms, IKnownSimpleHapticsControllerWaveformsStatics2>([](IKnownSimpleHapticsControllerWaveformsStatics2 const& f) { return f.Error(); });
+    }
+    inline auto KnownSimpleHapticsControllerWaveforms::GalaxyPenContinuous()
+    {
+        return impl::call_factory_cast<uint16_t(*)(IKnownSimpleHapticsControllerWaveformsStatics2 const&), KnownSimpleHapticsControllerWaveforms, IKnownSimpleHapticsControllerWaveformsStatics2>([](IKnownSimpleHapticsControllerWaveformsStatics2 const& f) { return f.GalaxyPenContinuous(); });
+    }
+    inline auto KnownSimpleHapticsControllerWaveforms::Hover()
+    {
+        return impl::call_factory_cast<uint16_t(*)(IKnownSimpleHapticsControllerWaveformsStatics2 const&), KnownSimpleHapticsControllerWaveforms, IKnownSimpleHapticsControllerWaveformsStatics2>([](IKnownSimpleHapticsControllerWaveformsStatics2 const& f) { return f.Hover(); });
+    }
+    inline auto KnownSimpleHapticsControllerWaveforms::InkContinuous()
+    {
+        return impl::call_factory_cast<uint16_t(*)(IKnownSimpleHapticsControllerWaveformsStatics2 const&), KnownSimpleHapticsControllerWaveforms, IKnownSimpleHapticsControllerWaveformsStatics2>([](IKnownSimpleHapticsControllerWaveformsStatics2 const& f) { return f.InkContinuous(); });
+    }
+    inline auto KnownSimpleHapticsControllerWaveforms::MarkerContinuous()
+    {
+        return impl::call_factory_cast<uint16_t(*)(IKnownSimpleHapticsControllerWaveformsStatics2 const&), KnownSimpleHapticsControllerWaveforms, IKnownSimpleHapticsControllerWaveformsStatics2>([](IKnownSimpleHapticsControllerWaveformsStatics2 const& f) { return f.MarkerContinuous(); });
+    }
+    inline auto KnownSimpleHapticsControllerWaveforms::PencilContinuous()
+    {
+        return impl::call_factory_cast<uint16_t(*)(IKnownSimpleHapticsControllerWaveformsStatics2 const&), KnownSimpleHapticsControllerWaveforms, IKnownSimpleHapticsControllerWaveformsStatics2>([](IKnownSimpleHapticsControllerWaveformsStatics2 const& f) { return f.PencilContinuous(); });
+    }
+    inline auto KnownSimpleHapticsControllerWaveforms::Success()
+    {
+        return impl::call_factory_cast<uint16_t(*)(IKnownSimpleHapticsControllerWaveformsStatics2 const&), KnownSimpleHapticsControllerWaveforms, IKnownSimpleHapticsControllerWaveformsStatics2>([](IKnownSimpleHapticsControllerWaveformsStatics2 const& f) { return f.Success(); });
+    }
     inline auto VibrationDevice::RequestAccessAsync()
     {
         return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Devices::Haptics::VibrationAccessStatus>(*)(IVibrationDeviceStatics const&), VibrationDevice, IVibrationDeviceStatics>([](IVibrationDeviceStatics const& f) { return f.RequestAccessAsync(); });
@@ -416,6 +593,7 @@ namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Haptics::ISimpleHapticsController> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Haptics::IVibrationDevice> : winrt::impl::hash_base {};

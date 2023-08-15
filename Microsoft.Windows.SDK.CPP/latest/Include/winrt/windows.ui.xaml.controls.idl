@@ -1014,6 +1014,8 @@ namespace Windows
 
                 interface ICalendarView;
 
+                interface ICalendarView2;
+
                 interface ICalendarViewDayItem;
 
                 interface ICalendarViewDayItemChangingEventArgs;
@@ -1027,6 +1029,8 @@ namespace Windows
                 interface ICalendarViewSelectedDatesChangedEventArgs;
 
                 interface ICalendarViewStatics;
+
+                interface ICalendarViewStatics2;
 
                 interface ICandidateWindowBoundsChangedEventArgs;
 
@@ -5174,6 +5178,61 @@ namespace Windows
                     HRESULT SetYearDecadeDisplayDimensions([in] INT32 columns, [in] INT32 rows);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 14.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.CalendarView)]
+                [uuid(F55AB64A-5504-5D9E-9D20-2FFDB88FC56B)]
+                interface ICalendarView2 : IInspectable
+                {
+                    [propget] HRESULT SelectedDisabledBorderBrush([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT SelectedDisabledBorderBrush([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT TodaySelectedInnerBorderBrush([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT TodaySelectedInnerBorderBrush([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT BlackoutStrikethroughBrush([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT BlackoutStrikethroughBrush([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT BlackoutBackground([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT BlackoutBackground([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT CalendarItemHoverBackground([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT CalendarItemHoverBackground([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT CalendarItemPressedBackground([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT CalendarItemPressedBackground([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT CalendarItemDisabledBackground([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT CalendarItemDisabledBackground([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT TodayBackground([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT TodayBackground([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT TodayBlackoutBackground([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT TodayBlackoutBackground([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT TodayHoverBackground([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT TodayHoverBackground([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT TodayPressedBackground([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT TodayPressedBackground([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT TodayDisabledBackground([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT TodayDisabledBackground([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT TodayBlackoutForeground([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT TodayBlackoutForeground([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT SelectedHoverForeground([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT SelectedHoverForeground([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT SelectedPressedForeground([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT SelectedPressedForeground([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT SelectedDisabledForeground([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT SelectedDisabledForeground([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT OutOfScopeHoverForeground([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT OutOfScopeHoverForeground([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT OutOfScopePressedForeground([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT OutOfScopePressedForeground([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT DisabledForeground([out] [retval] Windows.UI.Xaml.Media.Brush** value);
+                    [propput] HRESULT DisabledForeground([in] Windows.UI.Xaml.Media.Brush* value);
+                    [propget] HRESULT DayItemMargin([out] [retval] Windows.UI.Xaml.Thickness* value);
+                    [propput] HRESULT DayItemMargin([in] Windows.UI.Xaml.Thickness value);
+                    [propget] HRESULT MonthYearItemMargin([out] [retval] Windows.UI.Xaml.Thickness* value);
+                    [propput] HRESULT MonthYearItemMargin([in] Windows.UI.Xaml.Thickness value);
+                    [propget] HRESULT FirstOfMonthLabelMargin([out] [retval] Windows.UI.Xaml.Thickness* value);
+                    [propput] HRESULT FirstOfMonthLabelMargin([in] Windows.UI.Xaml.Thickness value);
+                    [propget] HRESULT FirstOfYearDecadeLabelMargin([out] [retval] Windows.UI.Xaml.Thickness* value);
+                    [propput] HRESULT FirstOfYearDecadeLabelMargin([in] Windows.UI.Xaml.Thickness value);
+                    [propget] HRESULT CalendarItemCornerRadius([out] [retval] Windows.UI.Xaml.CornerRadius* value);
+                    [propput] HRESULT CalendarItemCornerRadius([in] Windows.UI.Xaml.CornerRadius value);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                 [exclusiveto(Windows.UI.Xaml.Controls.CalendarViewDayItem)]
                 [uuid(0FDB2DC5-32C1-4B8F-BEFC-017B555B32D2)]
@@ -5287,6 +5346,37 @@ namespace Windows
                     [propget] HRESULT VerticalFirstOfMonthLabelAlignmentProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                     [propget] HRESULT CalendarItemBorderThicknessProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                     [propget] HRESULT CalendarViewDayItemStyleProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 14.0)]
+                [exclusiveto(Windows.UI.Xaml.Controls.CalendarView)]
+                [uuid(F29E5024-B8FB-50C8-8A38-D443ABB37009)]
+                interface ICalendarViewStatics2 : IInspectable
+                {
+                    [propget] HRESULT SelectedDisabledBorderBrushProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT TodaySelectedInnerBorderBrushProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT BlackoutStrikethroughBrushProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT BlackoutBackgroundProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT CalendarItemHoverBackgroundProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT CalendarItemPressedBackgroundProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT CalendarItemDisabledBackgroundProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT TodayBackgroundProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT TodayBlackoutBackgroundProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT TodayHoverBackgroundProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT TodayPressedBackgroundProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT TodayDisabledBackgroundProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT TodayBlackoutForegroundProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT SelectedHoverForegroundProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT SelectedPressedForegroundProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT SelectedDisabledForegroundProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT OutOfScopeHoverForegroundProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT OutOfScopePressedForegroundProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT DisabledForegroundProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT DayItemMarginProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT MonthYearItemMarginProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT FirstOfMonthLabelMarginProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT FirstOfYearDecadeLabelMarginProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
+                    [propget] HRESULT CalendarItemCornerRadiusProperty([out] [retval] Windows.UI.Xaml.DependencyProperty** value);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -14512,10 +14602,12 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
                 [marshaling_behavior(agile)]
                 [static(Windows.UI.Xaml.Controls.ICalendarViewStatics, Windows.Foundation.UniversalApiContract, 1.0)]
+                [static(Windows.UI.Xaml.Controls.ICalendarViewStatics2, Windows.Foundation.UniversalApiContract, 14.0)]
                 [threading(both)]
                 runtimeclass CalendarView : Windows.UI.Xaml.Controls.Control
                 {
                     [default] interface Windows.UI.Xaml.Controls.ICalendarView;
+                    [contract(Windows.Foundation.UniversalApiContract, 14.0)] interface Windows.UI.Xaml.Controls.ICalendarView2;
                 }
 
                 [composable(Windows.UI.Xaml.Controls.ICalendarViewDayItemFactory, public, Windows.Foundation.UniversalApiContract, 1.0)]

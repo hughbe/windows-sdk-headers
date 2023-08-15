@@ -711,6 +711,8 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(_In_ unsigned int *flags, _I
         case FactoryCacheFlags::FactoryCacheDisabled:
             *flags |= DisableCaching;
             break;
+        default:
+            break;
     }
 
     ComPtr<Factory> classFactory;
@@ -802,6 +804,8 @@ inline HRESULT STDMETHODCALLTYPE CreateActivationFactory(_In_ unsigned int *flag
             break;
         case FactoryCacheFlags::FactoryCacheDisabled:
             *flags |= DisableCaching;
+            break;
+        default:
             break;
     }
 
@@ -1286,10 +1290,10 @@ class SimpleSealedAgileActivationFactory WrlFinal : public SimpleAgileActivation
 #define CoCreatableClassWrlCreatorMapIncludeEx(className, serverName) WrlCreatorMapIncludePragmaEx(className##_COM, serverName)
 
 #define InternalWrlCreateCreatorMapEx(className, serverName, runtimeClassName, trustLevel, creatorFunction, section) \
-    __declspec(selectany) ::Microsoft::WRL::Details::FactoryCache __objectFactory__##className##_##serverName = { nullptr, 0 }; \
+    __declspec(selectany) ::Microsoft::WRL::Details::FactoryCache __objectFactory__##className##_##serverName = { nullptr, { 0 } }; \
     extern __declspec(selectany) const ::Microsoft::WRL::Details::CreatorMap __object_##className##_##serverName = { \
         creatorFunction, \
-        runtimeClassName, \
+        { runtimeClassName }, \
         trustLevel, \
         &__objectFactory__##className##_##serverName,\
         L## #serverName}; \
@@ -1297,10 +1301,10 @@ class SimpleSealedAgileActivationFactory WrlFinal : public SimpleAgileActivation
     WrlCreatorMapIncludePragmaEx(className, serverName)
 
 #define InternalWrlCreateCreatorMap(className, runtimeClassName, trustLevel, creatorFunction, section) \
-    __declspec(selectany) ::Microsoft::WRL::Details::FactoryCache __objectFactory__##className = { nullptr, 0 }; \
+    __declspec(selectany) ::Microsoft::WRL::Details::FactoryCache __objectFactory__##className = { nullptr, { 0 } }; \
     extern __declspec(selectany) const ::Microsoft::WRL::Details::CreatorMap __object_##className = { \
         creatorFunction, \
-        runtimeClassName, \
+        { runtimeClassName }, \
         trustLevel, \
         &__objectFactory__##className,\
         nullptr}; \
@@ -1515,7 +1519,8 @@ private:
 #ifndef __WRL_DISABLE_STATIC_INITIALIZE__
     static bool StaticInitialize()
     {
-        return nullptr != &ModuleT::Create();
+        ModuleT::Create();
+        return true;
     }
     static bool isInitialized;
 #endif

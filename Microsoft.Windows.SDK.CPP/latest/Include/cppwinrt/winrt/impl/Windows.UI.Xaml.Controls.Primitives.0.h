@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -29,6 +29,7 @@ WINRT_EXPORT namespace winrt::Windows::UI
 }
 WINRT_EXPORT namespace winrt::Windows::UI::Xaml
 {
+    struct CornerRadius;
     struct DataTemplate;
     struct DependencyObject;
     struct DependencyProperty;
@@ -130,6 +131,11 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
         Inline = 0,
         Overlay = 1,
     };
+    enum class ListViewItemPresenterSelectionIndicatorMode : int32_t
+    {
+        Inline = 0,
+        Overlay = 1,
+    };
     enum class PlacementMode : int32_t
     {
         Bottom = 2,
@@ -137,6 +143,22 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
         Mouse = 7,
         Right = 4,
         Top = 10,
+    };
+    enum class PopupPlacementMode : int32_t
+    {
+        Auto = 0,
+        Top = 1,
+        Bottom = 2,
+        Left = 3,
+        Right = 4,
+        TopEdgeAlignedLeft = 5,
+        TopEdgeAlignedRight = 6,
+        BottomEdgeAlignedLeft = 7,
+        BottomEdgeAlignedRight = 8,
+        LeftEdgeAlignedTop = 9,
+        LeftEdgeAlignedBottom = 10,
+        RightEdgeAlignedTop = 11,
+        RightEdgeAlignedBottom = 12,
     };
     enum class ScrollEventType : int32_t
     {
@@ -241,10 +263,12 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
     struct IListViewItemPresenter;
     struct IListViewItemPresenter2;
     struct IListViewItemPresenter3;
+    struct IListViewItemPresenter4;
     struct IListViewItemPresenterFactory;
     struct IListViewItemPresenterStatics;
     struct IListViewItemPresenterStatics2;
     struct IListViewItemPresenterStatics3;
+    struct IListViewItemPresenterStatics4;
     struct IListViewItemTemplateSettings;
     struct ILoopingSelector;
     struct ILoopingSelectorItem;
@@ -268,9 +292,11 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
     struct IPopup;
     struct IPopup2;
     struct IPopup3;
+    struct IPopup4;
     struct IPopupStatics;
     struct IPopupStatics2;
     struct IPopupStatics3;
+    struct IPopupStatics4;
     struct IProgressBarTemplateSettings;
     struct IProgressRingTemplateSettings;
     struct IRangeBase;
@@ -434,10 +460,12 @@ namespace winrt::impl
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter2>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter3>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterFactory>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics2>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics3>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::IListViewItemTemplateSettings>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::ILoopingSelector>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::ILoopingSelectorItem>{ using type = interface_category; };
@@ -461,9 +489,11 @@ namespace winrt::impl
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::IPopup>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::IPopup2>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::IPopup3>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Controls::Primitives::IPopup4>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::IPopupStatics>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::IPopupStatics2>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::IPopupStatics3>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Controls::Primitives::IPopupStatics4>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::IProgressBarTemplateSettings>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::IProgressRingTemplateSettings>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::IRangeBase>{ using type = interface_category; };
@@ -559,7 +589,9 @@ namespace winrt::impl
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::GeneratorDirection>{ using type = enum_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::GroupHeaderPlacement>{ using type = enum_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterCheckMode>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterSelectionIndicatorMode>{ using type = enum_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::PlacementMode>{ using type = enum_category; };
+    template <> struct category<Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode>{ using type = enum_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::ScrollEventType>{ using type = enum_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::ScrollingIndicatorMode>{ using type = enum_category; };
     template <> struct category<Windows::UI::Xaml::Controls::Primitives::SliderSnapsTo>{ using type = enum_category; };
@@ -636,7 +668,9 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::GeneratorDirection> = L"Windows.UI.Xaml.Controls.Primitives.GeneratorDirection";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::GroupHeaderPlacement> = L"Windows.UI.Xaml.Controls.Primitives.GroupHeaderPlacement";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterCheckMode> = L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenterCheckMode";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterSelectionIndicatorMode> = L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenterSelectionIndicatorMode";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::PlacementMode> = L"Windows.UI.Xaml.Controls.Primitives.PlacementMode";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode> = L"Windows.UI.Xaml.Controls.Primitives.PopupPlacementMode";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::ScrollEventType> = L"Windows.UI.Xaml.Controls.Primitives.ScrollEventType";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::ScrollingIndicatorMode> = L"Windows.UI.Xaml.Controls.Primitives.ScrollingIndicatorMode";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::SliderSnapsTo> = L"Windows.UI.Xaml.Controls.Primitives.SliderSnapsTo";
@@ -709,10 +743,12 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter> = L"Windows.UI.Xaml.Controls.Primitives.IListViewItemPresenter";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter2> = L"Windows.UI.Xaml.Controls.Primitives.IListViewItemPresenter2";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter3> = L"Windows.UI.Xaml.Controls.Primitives.IListViewItemPresenter3";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4> = L"Windows.UI.Xaml.Controls.Primitives.IListViewItemPresenter4";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterFactory> = L"Windows.UI.Xaml.Controls.Primitives.IListViewItemPresenterFactory";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics> = L"Windows.UI.Xaml.Controls.Primitives.IListViewItemPresenterStatics";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics2> = L"Windows.UI.Xaml.Controls.Primitives.IListViewItemPresenterStatics2";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics3> = L"Windows.UI.Xaml.Controls.Primitives.IListViewItemPresenterStatics3";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4> = L"Windows.UI.Xaml.Controls.Primitives.IListViewItemPresenterStatics4";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemTemplateSettings> = L"Windows.UI.Xaml.Controls.Primitives.IListViewItemTemplateSettings";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::ILoopingSelector> = L"Windows.UI.Xaml.Controls.Primitives.ILoopingSelector";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::ILoopingSelectorItem> = L"Windows.UI.Xaml.Controls.Primitives.ILoopingSelectorItem";
@@ -736,9 +772,11 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IPopup> = L"Windows.UI.Xaml.Controls.Primitives.IPopup";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IPopup2> = L"Windows.UI.Xaml.Controls.Primitives.IPopup2";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IPopup3> = L"Windows.UI.Xaml.Controls.Primitives.IPopup3";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IPopup4> = L"Windows.UI.Xaml.Controls.Primitives.IPopup4";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IPopupStatics> = L"Windows.UI.Xaml.Controls.Primitives.IPopupStatics";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IPopupStatics2> = L"Windows.UI.Xaml.Controls.Primitives.IPopupStatics2";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IPopupStatics3> = L"Windows.UI.Xaml.Controls.Primitives.IPopupStatics3";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IPopupStatics4> = L"Windows.UI.Xaml.Controls.Primitives.IPopupStatics4";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IProgressBarTemplateSettings> = L"Windows.UI.Xaml.Controls.Primitives.IProgressBarTemplateSettings";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IProgressRingTemplateSettings> = L"Windows.UI.Xaml.Controls.Primitives.IProgressRingTemplateSettings";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Controls::Primitives::IRangeBase> = L"Windows.UI.Xaml.Controls.Primitives.IRangeBase";
@@ -842,10 +880,12 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter>{ 0xFC8946BD,0xA3A2,0x4969,{ 0x81,0x74,0x25,0xB5,0xD3,0xC2,0x80,0x33 } }; // FC8946BD-A3A2-4969-8174-25B5D3C28033
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter2>{ 0xF5DC5496,0xE122,0x4C57,{ 0xA6,0x25,0xAC,0x4B,0x08,0xFB,0x2D,0x4C } }; // F5DC5496-E122-4C57-A625-AC4B08FB2D4C
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter3>{ 0x36620013,0x0390,0x4E30,{ 0xAD,0x97,0x87,0x44,0x40,0x4F,0x70,0x10 } }; // 36620013-0390-4E30-AD97-8744404F7010
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4>{ 0xDA600AC1,0xADEA,0x5940,{ 0xA1,0x8F,0x57,0x58,0x2F,0x96,0xD9,0x9A } }; // DA600AC1-ADEA-5940-A18F-57582F96D99A
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterFactory>{ 0xE0777CFD,0xF7E4,0x4A67,{ 0x9A,0xC0,0xA9,0x94,0xFC,0xAC,0xD0,0x20 } }; // E0777CFD-F7E4-4A67-9AC0-A994FCACD020
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics>{ 0x6504A55A,0x15DD,0x42FB,{ 0xAA,0x5D,0x2D,0x8C,0xE2,0xE9,0xC2,0x94 } }; // 6504A55A-15DD-42FB-AA5D-2D8CE2E9C294
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics2>{ 0x4CB3B945,0xD24D,0x42A3,{ 0x9E,0x83,0xA8,0x6D,0x06,0x18,0xBF,0x1B } }; // 4CB3B945-D24D-42A3-9E83-A86D0618BF1B
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics3>{ 0xC3D3D11E,0xFA26,0x4CE7,{ 0xA4,0xED,0xFF,0x94,0x8F,0x01,0xB7,0xC0 } }; // C3D3D11E-FA26-4CE7-A4ED-FF948F01B7C0
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4>{ 0x3917159E,0x74A1,0x5E7E,{ 0xA7,0x43,0xE4,0x5B,0xE9,0xFB,0x91,0x9B } }; // 3917159E-74A1-5E7E-A743-E45BE9FB919B
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IListViewItemTemplateSettings>{ 0x67AF84BF,0x8279,0x4686,{ 0x93,0x26,0xCD,0x18,0x9F,0x27,0x57,0x5D } }; // 67AF84BF-8279-4686-9326-CD189F27575D
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::ILoopingSelector>{ 0x4C9A3E04,0x4827,0x49D9,{ 0x88,0x06,0x09,0x39,0x57,0xB0,0xFD,0x21 } }; // 4C9A3E04-4827-49D9-8806-093957B0FD21
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::ILoopingSelectorItem>{ 0xC69714B9,0x27C6,0x4433,{ 0x9D,0x7C,0x0D,0xBF,0xB2,0xF4,0x34,0x4F } }; // C69714B9-27C6-4433-9D7C-0DBFB2F4344F
@@ -869,9 +909,11 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IPopup>{ 0x62418240,0xE6D3,0x4705,{ 0xA1,0xDC,0x39,0x15,0x64,0x56,0xEE,0x29 } }; // 62418240-E6D3-4705-A1DC-39156456EE29
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IPopup2>{ 0x376A8C4C,0xAAC0,0x4B20,{ 0x96,0x6A,0x0B,0x93,0x64,0xFE,0xB4,0xB5 } }; // 376A8C4C-AAC0-4B20-966A-0B9364FEB4B5
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IPopup3>{ 0xF9C46915,0xA65C,0x5F68,{ 0x9F,0x54,0x31,0x0A,0x1B,0x51,0x09,0x5F } }; // F9C46915-A65C-5F68-9F54-310A1B51095F
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IPopup4>{ 0x1870B836,0xDF2F,0x5FC6,{ 0xA5,0xF2,0x74,0x8E,0xD6,0xCE,0x73,0x21 } }; // 1870B836-DF2F-5FC6-A5F2-748ED6CE7321
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IPopupStatics>{ 0x5AE3BF1A,0x6E34,0x40D6,{ 0x8A,0x7F,0xCA,0x82,0x2A,0xAF,0x59,0xE3 } }; // 5AE3BF1A-6E34-40D6-8A7F-CA822AAF59E3
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IPopupStatics2>{ 0x2B9AE9EC,0x55EF,0x43B6,{ 0xB4,0x59,0x12,0xE4,0x0F,0xFA,0x43,0x02 } }; // 2B9AE9EC-55EF-43B6-B459-12E40FFA4302
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IPopupStatics3>{ 0x00789589,0xC580,0x558F,{ 0x94,0x5A,0x7D,0x02,0xEE,0x00,0x4D,0x3E } }; // 00789589-C580-558F-945A-7D02EE004D3E
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IPopupStatics4>{ 0xD1A42C06,0x8BFA,0x5164,{ 0x85,0x54,0x48,0xBF,0xE6,0xBD,0x4C,0xC6 } }; // D1A42C06-8BFA-5164-8554-48BFE6BD4CC6
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IProgressBarTemplateSettings>{ 0x3FE2EA2A,0xE3F2,0x4C2B,{ 0x94,0x88,0x91,0x8D,0x77,0xD2,0xBB,0xE4 } }; // 3FE2EA2A-E3F2-4C2B-9488-918D77D2BBE4
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IProgressRingTemplateSettings>{ 0xB9B675EC,0xC723,0x42E6,{ 0x83,0xE9,0x98,0x26,0x27,0x2B,0xDC,0x0E } }; // B9B675EC-C723-42E6-83E9-9826272BDC0E
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Controls::Primitives::IRangeBase>{ 0xFA002C1A,0x494E,0x46CF,{ 0x91,0xD4,0xE1,0x4A,0x8D,0x79,0x86,0x75 } }; // FA002C1A-494E-46CF-91D4-E14A8D798675
@@ -1737,6 +1779,66 @@ namespace winrt::impl
             virtual int32_t __stdcall put_RevealBackgroundShowsAboveContent(bool) noexcept = 0;
         };
     };
+    template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_SelectedDisabledBackground(void**) noexcept = 0;
+            virtual int32_t __stdcall put_SelectedDisabledBackground(void*) noexcept = 0;
+            virtual int32_t __stdcall get_CheckPressedBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_CheckPressedBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_CheckDisabledBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_CheckDisabledBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxPointerOverBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_CheckBoxPointerOverBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxPressedBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_CheckBoxPressedBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxDisabledBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_CheckBoxDisabledBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxSelectedBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_CheckBoxSelectedBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxSelectedPointerOverBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_CheckBoxSelectedPointerOverBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxSelectedPressedBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_CheckBoxSelectedPressedBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxSelectedDisabledBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_CheckBoxSelectedDisabledBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxBorderBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_CheckBoxBorderBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxPointerOverBorderBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_CheckBoxPointerOverBorderBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxPressedBorderBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_CheckBoxPressedBorderBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxDisabledBorderBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_CheckBoxDisabledBorderBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxCornerRadius(struct struct_Windows_UI_Xaml_CornerRadius*) noexcept = 0;
+            virtual int32_t __stdcall put_CheckBoxCornerRadius(struct struct_Windows_UI_Xaml_CornerRadius) noexcept = 0;
+            virtual int32_t __stdcall get_SelectionIndicatorCornerRadius(struct struct_Windows_UI_Xaml_CornerRadius*) noexcept = 0;
+            virtual int32_t __stdcall put_SelectionIndicatorCornerRadius(struct struct_Windows_UI_Xaml_CornerRadius) noexcept = 0;
+            virtual int32_t __stdcall get_SelectionIndicatorVisualEnabled(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_SelectionIndicatorVisualEnabled(bool) noexcept = 0;
+            virtual int32_t __stdcall get_SelectionIndicatorMode(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_SelectionIndicatorMode(int32_t) noexcept = 0;
+            virtual int32_t __stdcall get_SelectionIndicatorBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_SelectionIndicatorBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_SelectionIndicatorPointerOverBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_SelectionIndicatorPointerOverBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_SelectionIndicatorPressedBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_SelectionIndicatorPressedBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_SelectionIndicatorDisabledBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_SelectionIndicatorDisabledBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedBorderBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_SelectedBorderBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedPressedBorderBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_SelectedPressedBorderBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedDisabledBorderBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_SelectedDisabledBorderBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedInnerBorderBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_SelectedInnerBorderBrush(void*) noexcept = 0;
+            virtual int32_t __stdcall get_PointerOverBorderBrush(void**) noexcept = 0;
+            virtual int32_t __stdcall put_PointerOverBorderBrush(void*) noexcept = 0;
+        };
+    };
     template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterFactory>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -1792,6 +1894,39 @@ namespace winrt::impl
             virtual int32_t __stdcall get_RevealBorderBrushProperty(void**) noexcept = 0;
             virtual int32_t __stdcall get_RevealBorderThicknessProperty(void**) noexcept = 0;
             virtual int32_t __stdcall get_RevealBackgroundShowsAboveContentProperty(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_SelectedDisabledBackgroundProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CheckPressedBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CheckDisabledBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxPointerOverBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxPressedBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxDisabledBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxSelectedBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxSelectedPointerOverBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxSelectedPressedBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxSelectedDisabledBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxBorderBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxPointerOverBorderBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxPressedBorderBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxDisabledBorderBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_CheckBoxCornerRadiusProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SelectionIndicatorCornerRadiusProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SelectionIndicatorVisualEnabledProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SelectionIndicatorModeProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SelectionIndicatorBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SelectionIndicatorPointerOverBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SelectionIndicatorPressedBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SelectionIndicatorDisabledBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedBorderBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedPressedBorderBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedDisabledBorderBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_SelectedInnerBorderBrushProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_PointerOverBorderBrushProperty(void**) noexcept = 0;
         };
     };
     template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IListViewItemTemplateSettings>
@@ -2017,6 +2152,19 @@ namespace winrt::impl
             virtual int32_t __stdcall get_IsConstrainedToRootBounds(bool*) noexcept = 0;
         };
     };
+    template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IPopup4>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_PlacementTarget(void**) noexcept = 0;
+            virtual int32_t __stdcall put_PlacementTarget(void*) noexcept = 0;
+            virtual int32_t __stdcall get_DesiredPlacement(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_DesiredPlacement(int32_t) noexcept = 0;
+            virtual int32_t __stdcall get_ActualPlacement(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall add_ActualPlacementChanged(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_ActualPlacementChanged(winrt::event_token) noexcept = 0;
+        };
+    };
     template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IPopupStatics>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -2041,6 +2189,14 @@ namespace winrt::impl
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall get_ShouldConstrainToRootBoundsProperty(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IPopupStatics4>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_PlacementTargetProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall get_DesiredPlacementProperty(void**) noexcept = 0;
         };
     };
     template <> struct abi<Windows::UI::Xaml::Controls::Primitives::IProgressBarTemplateSettings>
@@ -3318,6 +3474,68 @@ namespace winrt::impl
         template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter3<D>;
     };
     template <typename D>
+    struct consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) SelectedDisabledBackground() const;
+        WINRT_IMPL_AUTO(void) SelectedDisabledBackground(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) CheckPressedBrush() const;
+        WINRT_IMPL_AUTO(void) CheckPressedBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) CheckDisabledBrush() const;
+        WINRT_IMPL_AUTO(void) CheckDisabledBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) CheckBoxPointerOverBrush() const;
+        WINRT_IMPL_AUTO(void) CheckBoxPointerOverBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) CheckBoxPressedBrush() const;
+        WINRT_IMPL_AUTO(void) CheckBoxPressedBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) CheckBoxDisabledBrush() const;
+        WINRT_IMPL_AUTO(void) CheckBoxDisabledBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) CheckBoxSelectedBrush() const;
+        WINRT_IMPL_AUTO(void) CheckBoxSelectedBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) CheckBoxSelectedPointerOverBrush() const;
+        WINRT_IMPL_AUTO(void) CheckBoxSelectedPointerOverBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) CheckBoxSelectedPressedBrush() const;
+        WINRT_IMPL_AUTO(void) CheckBoxSelectedPressedBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) CheckBoxSelectedDisabledBrush() const;
+        WINRT_IMPL_AUTO(void) CheckBoxSelectedDisabledBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) CheckBoxBorderBrush() const;
+        WINRT_IMPL_AUTO(void) CheckBoxBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) CheckBoxPointerOverBorderBrush() const;
+        WINRT_IMPL_AUTO(void) CheckBoxPointerOverBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) CheckBoxPressedBorderBrush() const;
+        WINRT_IMPL_AUTO(void) CheckBoxPressedBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) CheckBoxDisabledBorderBrush() const;
+        WINRT_IMPL_AUTO(void) CheckBoxDisabledBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::CornerRadius) CheckBoxCornerRadius() const;
+        WINRT_IMPL_AUTO(void) CheckBoxCornerRadius(Windows::UI::Xaml::CornerRadius const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::CornerRadius) SelectionIndicatorCornerRadius() const;
+        WINRT_IMPL_AUTO(void) SelectionIndicatorCornerRadius(Windows::UI::Xaml::CornerRadius const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) SelectionIndicatorVisualEnabled() const;
+        WINRT_IMPL_AUTO(void) SelectionIndicatorVisualEnabled(bool value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterSelectionIndicatorMode) SelectionIndicatorMode() const;
+        WINRT_IMPL_AUTO(void) SelectionIndicatorMode(Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterSelectionIndicatorMode const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) SelectionIndicatorBrush() const;
+        WINRT_IMPL_AUTO(void) SelectionIndicatorBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) SelectionIndicatorPointerOverBrush() const;
+        WINRT_IMPL_AUTO(void) SelectionIndicatorPointerOverBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) SelectionIndicatorPressedBrush() const;
+        WINRT_IMPL_AUTO(void) SelectionIndicatorPressedBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) SelectionIndicatorDisabledBrush() const;
+        WINRT_IMPL_AUTO(void) SelectionIndicatorDisabledBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) SelectedBorderBrush() const;
+        WINRT_IMPL_AUTO(void) SelectedBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) SelectedPressedBorderBrush() const;
+        WINRT_IMPL_AUTO(void) SelectedPressedBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) SelectedDisabledBorderBrush() const;
+        WINRT_IMPL_AUTO(void) SelectedDisabledBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) SelectedInnerBorderBrush() const;
+        WINRT_IMPL_AUTO(void) SelectedInnerBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Media::Brush) PointerOverBorderBrush() const;
+        WINRT_IMPL_AUTO(void) PointerOverBorderBrush(Windows::UI::Xaml::Media::Brush const& value) const;
+    };
+    template <> struct consume<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4>
+    {
+        template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenter4<D>;
+    };
+    template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterFactory
     {
         WINRT_IMPL_AUTO(Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter) CreateInstance(Windows::Foundation::IInspectable const& baseInterface, Windows::Foundation::IInspectable& innerInterface) const;
@@ -3381,6 +3599,41 @@ namespace winrt::impl
     template <> struct consume<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics3>
     {
         template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics3<D>;
+    };
+    template <typename D>
+    struct consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) SelectedDisabledBackgroundProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CheckPressedBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CheckDisabledBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CheckBoxPointerOverBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CheckBoxPressedBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CheckBoxDisabledBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CheckBoxSelectedBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CheckBoxSelectedPointerOverBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CheckBoxSelectedPressedBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CheckBoxSelectedDisabledBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CheckBoxBorderBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CheckBoxPointerOverBorderBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CheckBoxPressedBorderBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CheckBoxDisabledBorderBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) CheckBoxCornerRadiusProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) SelectionIndicatorCornerRadiusProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) SelectionIndicatorVisualEnabledProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) SelectionIndicatorModeProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) SelectionIndicatorBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) SelectionIndicatorPointerOverBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) SelectionIndicatorPressedBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) SelectionIndicatorDisabledBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) SelectedBorderBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) SelectedPressedBorderBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) SelectedDisabledBorderBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) SelectedInnerBorderBrushProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) PointerOverBorderBrushProperty() const;
+    };
+    template <> struct consume<Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenterStatics4>
+    {
+        template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemPresenterStatics4<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IListViewItemTemplateSettings
@@ -3658,6 +3911,23 @@ namespace winrt::impl
         template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_IPopup3<D>;
     };
     template <typename D>
+    struct consume_Windows_UI_Xaml_Controls_Primitives_IPopup4
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::FrameworkElement) PlacementTarget() const;
+        WINRT_IMPL_AUTO(void) PlacementTarget(Windows::UI::Xaml::FrameworkElement const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode) DesiredPlacement() const;
+        WINRT_IMPL_AUTO(void) DesiredPlacement(Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode) ActualPlacement() const;
+        WINRT_IMPL_AUTO(winrt::event_token) ActualPlacementChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const;
+        using ActualPlacementChanged_revoker = impl::event_revoker<Windows::UI::Xaml::Controls::Primitives::IPopup4, &impl::abi_t<Windows::UI::Xaml::Controls::Primitives::IPopup4>::remove_ActualPlacementChanged>;
+        [[nodiscard]] ActualPlacementChanged_revoker ActualPlacementChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) ActualPlacementChanged(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<Windows::UI::Xaml::Controls::Primitives::IPopup4>
+    {
+        template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_IPopup4<D>;
+    };
+    template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IPopupStatics
     {
         [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) ChildProperty() const;
@@ -3688,6 +3958,16 @@ namespace winrt::impl
     template <> struct consume<Windows::UI::Xaml::Controls::Primitives::IPopupStatics3>
     {
         template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_IPopupStatics3<D>;
+    };
+    template <typename D>
+    struct consume_Windows_UI_Xaml_Controls_Primitives_IPopupStatics4
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) PlacementTargetProperty() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) DesiredPlacementProperty() const;
+    };
+    template <> struct consume<Windows::UI::Xaml::Controls::Primitives::IPopupStatics4>
+    {
+        template <typename D> using type = consume_Windows_UI_Xaml_Controls_Primitives_IPopupStatics4<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Xaml_Controls_Primitives_IProgressBarTemplateSettings

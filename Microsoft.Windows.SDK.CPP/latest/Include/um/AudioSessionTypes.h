@@ -116,7 +116,6 @@ typedef enum _AUDIO_STREAM_CATEGORY
 //                                                    to convert between the uncompressed format supplied to
 //                                                    IAudioClient::Initialize and the audio engine mix format.
 //
-//
 //     AUDCLNT_SESSIONFLAGS_EXPIREWHENUNOWNED -       Session expires when there are no streams and no owning
 //                                                    session controls.
 //
@@ -124,7 +123,6 @@ typedef enum _AUDIO_STREAM_CATEGORY
 //
 //     AUDCLNT_SESSIONFLAGS_DISPLAY_HIDEWHENEXPIRED - Don't show volume control in the Volume Mixer after the
 //                                                    session expires.
-//
 //
 //
 // AUDCLNT_SYSFXFLAGS (these flags use low word 0x0000FFFF):

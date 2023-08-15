@@ -96,6 +96,13 @@ typedef interface ISpatialAudioClient ISpatialAudioClient;
 #endif 	/* __ISpatialAudioClient_FWD_DEFINED__ */
 
 
+#ifndef __ISpatialAudioClient2_FWD_DEFINED__
+#define __ISpatialAudioClient2_FWD_DEFINED__
+typedef interface ISpatialAudioClient2 ISpatialAudioClient2;
+
+#endif 	/* __ISpatialAudioClient2_FWD_DEFINED__ */
+
+
 /* header files for imported files */
 #include "wtypes.h"
 #include "unknwn.h"
@@ -139,6 +146,14 @@ enum AudioObjectType
     } 	AudioObjectType;
 
 DEFINE_ENUM_FLAG_OPERATORS(AudioObjectType);
+typedef /* [v1_enum] */ 
+enum SPATIAL_AUDIO_STREAM_OPTIONS
+    {
+        SPATIAL_AUDIO_STREAM_OPTIONS_NONE	= 0,
+        SPATIAL_AUDIO_STREAM_OPTIONS_OFFLOAD	= 0x1
+    } 	SPATIAL_AUDIO_STREAM_OPTIONS;
+
+DEFINE_ENUM_FLAG_OPERATORS(SPATIAL_AUDIO_STREAM_OPTIONS);
 
 
 #pragma pack(push, 1)
@@ -152,6 +167,18 @@ typedef struct SpatialAudioObjectRenderStreamActivationParams
     HANDLE EventHandle;
     ISpatialAudioObjectRenderStreamNotify *NotifyObject;
     } 	SpatialAudioObjectRenderStreamActivationParams;
+
+typedef struct SpatialAudioObjectRenderStreamActivationParams2
+    {
+    const WAVEFORMATEX *ObjectFormat;
+    AudioObjectType StaticObjectTypeMask;
+    UINT32 MinDynamicObjectCount;
+    UINT32 MaxDynamicObjectCount;
+    AUDIO_STREAM_CATEGORY Category;
+    HANDLE EventHandle;
+    ISpatialAudioObjectRenderStreamNotify *NotifyObject;
+    SPATIAL_AUDIO_STREAM_OPTIONS Options;
+    } 	SpatialAudioObjectRenderStreamActivationParams2;
 
 
 #pragma pack(pop)
@@ -1143,7 +1170,203 @@ EXTERN_C const IID IID_ISpatialAudioClient;
 #endif 	/* __ISpatialAudioClient_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_spatialaudioclient_0000_0007 */
+#ifndef __ISpatialAudioClient2_INTERFACE_DEFINED__
+#define __ISpatialAudioClient2_INTERFACE_DEFINED__
+
+/* interface ISpatialAudioClient2 */
+/* [local][unique][uuid][object] */ 
+
+
+EXTERN_C const IID IID_ISpatialAudioClient2;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("caabe452-a66a-4bee-a93e-e320463f6a53")
+    ISpatialAudioClient2 : public ISpatialAudioClient
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE IsOffloadCapable( 
+            /* [in] */ AUDIO_STREAM_CATEGORY category,
+            /* [annotation][out] */ 
+            _Out_  BOOL *isOffloadCapable) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetMaxFrameCountForCategory( 
+            /* [in] */ AUDIO_STREAM_CATEGORY category,
+            /* [in] */ BOOL offloadEnabled,
+            /* [annotation][in] */ 
+            _In_  const WAVEFORMATEX *objectFormat,
+            /* [annotation][out] */ 
+            _Out_  UINT32 *frameCountPerBuffer) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct ISpatialAudioClient2Vtbl
+    {
+        BEGIN_INTERFACE
+        
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            ISpatialAudioClient2 * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            ISpatialAudioClient2 * This);
+        
+        DECLSPEC_XFGVIRT(IUnknown, Release)
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            ISpatialAudioClient2 * This);
+        
+        DECLSPEC_XFGVIRT(ISpatialAudioClient, GetStaticObjectPosition)
+        HRESULT ( STDMETHODCALLTYPE *GetStaticObjectPosition )( 
+            ISpatialAudioClient2 * This,
+            /* [annotation][in] */ 
+            _In_  AudioObjectType type,
+            /* [annotation][out] */ 
+            _Out_  float *x,
+            /* [annotation][out] */ 
+            _Out_  float *y,
+            /* [annotation][out] */ 
+            _Out_  float *z);
+        
+        DECLSPEC_XFGVIRT(ISpatialAudioClient, GetNativeStaticObjectTypeMask)
+        HRESULT ( STDMETHODCALLTYPE *GetNativeStaticObjectTypeMask )( 
+            ISpatialAudioClient2 * This,
+            /* [annotation][out] */ 
+            _Out_  AudioObjectType *mask);
+        
+        DECLSPEC_XFGVIRT(ISpatialAudioClient, GetMaxDynamicObjectCount)
+        HRESULT ( STDMETHODCALLTYPE *GetMaxDynamicObjectCount )( 
+            ISpatialAudioClient2 * This,
+            /* [annotation][out] */ 
+            _Out_  UINT32 *value);
+        
+        DECLSPEC_XFGVIRT(ISpatialAudioClient, GetSupportedAudioObjectFormatEnumerator)
+        HRESULT ( STDMETHODCALLTYPE *GetSupportedAudioObjectFormatEnumerator )( 
+            ISpatialAudioClient2 * This,
+            /* [annotation][out] */ 
+            _COM_Outptr_  IAudioFormatEnumerator **enumerator);
+        
+        DECLSPEC_XFGVIRT(ISpatialAudioClient, GetMaxFrameCount)
+        HRESULT ( STDMETHODCALLTYPE *GetMaxFrameCount )( 
+            ISpatialAudioClient2 * This,
+            /* [annotation][in] */ 
+            _In_  const WAVEFORMATEX *objectFormat,
+            /* [annotation][out] */ 
+            _Out_  UINT32 *frameCountPerBuffer);
+        
+        DECLSPEC_XFGVIRT(ISpatialAudioClient, IsAudioObjectFormatSupported)
+        HRESULT ( STDMETHODCALLTYPE *IsAudioObjectFormatSupported )( 
+            ISpatialAudioClient2 * This,
+            /* [annotation][in] */ 
+            _In_  const WAVEFORMATEX *objectFormat);
+        
+        DECLSPEC_XFGVIRT(ISpatialAudioClient, IsSpatialAudioStreamAvailable)
+        HRESULT ( STDMETHODCALLTYPE *IsSpatialAudioStreamAvailable )( 
+            ISpatialAudioClient2 * This,
+            /* [annotation][in] */ 
+            _In_  REFIID streamUuid,
+            /* [annotation][in] */ 
+            _In_opt_  const PROPVARIANT *auxiliaryInfo);
+        
+        DECLSPEC_XFGVIRT(ISpatialAudioClient, ActivateSpatialAudioStream)
+        HRESULT ( STDMETHODCALLTYPE *ActivateSpatialAudioStream )( 
+            ISpatialAudioClient2 * This,
+            /* [annotation][in] */ 
+            _In_  const PROPVARIANT *activationParams,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **stream);
+        
+        DECLSPEC_XFGVIRT(ISpatialAudioClient2, IsOffloadCapable)
+        HRESULT ( STDMETHODCALLTYPE *IsOffloadCapable )( 
+            ISpatialAudioClient2 * This,
+            /* [in] */ AUDIO_STREAM_CATEGORY category,
+            /* [annotation][out] */ 
+            _Out_  BOOL *isOffloadCapable);
+        
+        DECLSPEC_XFGVIRT(ISpatialAudioClient2, GetMaxFrameCountForCategory)
+        HRESULT ( STDMETHODCALLTYPE *GetMaxFrameCountForCategory )( 
+            ISpatialAudioClient2 * This,
+            /* [in] */ AUDIO_STREAM_CATEGORY category,
+            /* [in] */ BOOL offloadEnabled,
+            /* [annotation][in] */ 
+            _In_  const WAVEFORMATEX *objectFormat,
+            /* [annotation][out] */ 
+            _Out_  UINT32 *frameCountPerBuffer);
+        
+        END_INTERFACE
+    } ISpatialAudioClient2Vtbl;
+
+    interface ISpatialAudioClient2
+    {
+        CONST_VTBL struct ISpatialAudioClient2Vtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define ISpatialAudioClient2_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define ISpatialAudioClient2_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define ISpatialAudioClient2_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define ISpatialAudioClient2_GetStaticObjectPosition(This,type,x,y,z)	\
+    ( (This)->lpVtbl -> GetStaticObjectPosition(This,type,x,y,z) ) 
+
+#define ISpatialAudioClient2_GetNativeStaticObjectTypeMask(This,mask)	\
+    ( (This)->lpVtbl -> GetNativeStaticObjectTypeMask(This,mask) ) 
+
+#define ISpatialAudioClient2_GetMaxDynamicObjectCount(This,value)	\
+    ( (This)->lpVtbl -> GetMaxDynamicObjectCount(This,value) ) 
+
+#define ISpatialAudioClient2_GetSupportedAudioObjectFormatEnumerator(This,enumerator)	\
+    ( (This)->lpVtbl -> GetSupportedAudioObjectFormatEnumerator(This,enumerator) ) 
+
+#define ISpatialAudioClient2_GetMaxFrameCount(This,objectFormat,frameCountPerBuffer)	\
+    ( (This)->lpVtbl -> GetMaxFrameCount(This,objectFormat,frameCountPerBuffer) ) 
+
+#define ISpatialAudioClient2_IsAudioObjectFormatSupported(This,objectFormat)	\
+    ( (This)->lpVtbl -> IsAudioObjectFormatSupported(This,objectFormat) ) 
+
+#define ISpatialAudioClient2_IsSpatialAudioStreamAvailable(This,streamUuid,auxiliaryInfo)	\
+    ( (This)->lpVtbl -> IsSpatialAudioStreamAvailable(This,streamUuid,auxiliaryInfo) ) 
+
+#define ISpatialAudioClient2_ActivateSpatialAudioStream(This,activationParams,riid,stream)	\
+    ( (This)->lpVtbl -> ActivateSpatialAudioStream(This,activationParams,riid,stream) ) 
+
+
+#define ISpatialAudioClient2_IsOffloadCapable(This,category,isOffloadCapable)	\
+    ( (This)->lpVtbl -> IsOffloadCapable(This,category,isOffloadCapable) ) 
+
+#define ISpatialAudioClient2_GetMaxFrameCountForCategory(This,category,offloadEnabled,objectFormat,frameCountPerBuffer)	\
+    ( (This)->lpVtbl -> GetMaxFrameCountForCategory(This,category,offloadEnabled,objectFormat,frameCountPerBuffer) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __ISpatialAudioClient2_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_spatialaudioclient_0000_0008 */
 /* [local] */ 
 
 // SpatialAudioClientActivationParams is an optional activation parameter for ISpatialAudioClient
@@ -1194,8 +1417,8 @@ typedef struct SpatialAudioClientActivationParams
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
 
 
-extern RPC_IF_HANDLE __MIDL_itf_spatialaudioclient_0000_0007_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_spatialaudioclient_0000_0007_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_spatialaudioclient_0000_0008_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_spatialaudioclient_0000_0008_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

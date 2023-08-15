@@ -126,10 +126,8 @@ DEFINE_GUID(GUID_DEVICEDUMP_DRIVER_STORAGE_PORT,        0xda82441d,0x7142,0x4bc1
 
 // end_tcioctlguids
 
-
-
-
 #endif
+
 
 //
 // Interface DEVPROPKEY
@@ -202,6 +200,10 @@ extern "C" {
 #define IOCTL_STORAGE_RESERVE                 CTL_CODE(IOCTL_STORAGE_BASE, 0x0204, METHOD_BUFFERED, FILE_READ_ACCESS)
 #define IOCTL_STORAGE_RELEASE                 CTL_CODE(IOCTL_STORAGE_BASE, 0x0205, METHOD_BUFFERED, FILE_READ_ACCESS)
 #define IOCTL_STORAGE_FIND_NEW_DEVICES        CTL_CODE(IOCTL_STORAGE_BASE, 0x0206, METHOD_BUFFERED, FILE_READ_ACCESS)
+
+// end_winioctl
+#define IOCTL_STORAGE_MANAGE_BYPASS_IO        CTL_CODE(IOCTL_STORAGE_BASE, 0x0230, METHOD_BUFFERED, FILE_ANY_ACCESS)
+// begin_winioctl
 
 #define IOCTL_STORAGE_EJECTION_CONTROL        CTL_CODE(IOCTL_STORAGE_BASE, 0x0250, METHOD_BUFFERED, FILE_ANY_ACCESS)
 #define IOCTL_STORAGE_MCN_CONTROL             CTL_CODE(IOCTL_STORAGE_BASE, 0x0251, METHOD_BUFFERED, FILE_ANY_ACCESS)
@@ -1342,6 +1344,10 @@ typedef enum __WRAPPED__ _STORAGE_PORT_CODE_SET {
 #define STORAGE_MINIPORT_DESCRIPTOR_V1_SIZE     RTL_SIZEOF_THROUGH_FIELD(STORAGE_MINIPORT_DESCRIPTOR, IoTimeoutValue)
 #endif
 
+#pragma warning(push)
+#pragma warning(disable:4201) // nameless struct/unions
+#pragma warning(disable:4214) // bit fields other than int to disable this around the struct
+
 typedef struct __WRAPPED__ _STORAGE_MINIPORT_DESCRIPTOR {
 
     __WRAPPED__
@@ -1368,14 +1374,31 @@ typedef struct __WRAPPED__ _STORAGE_MINIPORT_DESCRIPTOR {
     __WRAPPED__
     BOOLEAN ExtraIoInfoSupported;
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_FE)
+
+    __WRAPPED__
+    union {
+        struct {
+            UCHAR LogicalPoFxForDisk : 1;
+            UCHAR Reserved : 7;
+        } DUMMYSTRUCTNAME;
+        UCHAR AsUCHAR;
+    } Flags;
+
+    __WRAPPED__
+    UCHAR   Reserved0[2];
+#else
     __WRAPPED__
     UCHAR   Reserved0[3];
+#endif
 
     __WRAPPED__
     ULONG   Reserved1;
 #endif
 
 } STORAGE_MINIPORT_DESCRIPTOR, *PSTORAGE_MINIPORT_DESCRIPTOR;
+
+#pragma warning(pop)
 
 //
 // Storage identification descriptor.
@@ -2059,9 +2082,12 @@ typedef enum _STORAGE_PROTOCOL_NVME_DATA_TYPE {
 
     NVMeDataTypeIdentify,       // Retrieved by command - IDENTIFY CONTROLLER or IDENTIFY NAMESPACE
                                 // Corresponding values in STORAGE_PROTOCOL_SPECIFIC_DATA,
-                                //      ProtocolDataRequestValue - Defined in NVME_IDENTIFY_CNS_CODES
-                                //      ProtocolDataRequestSubValue - For NVME_IDENTIFY_CNS_SPECIFIC_NAMESPACE,
-                                //                                    specifies namespace Id
+                                //      ProtocolDataRequestValue - CNS as defined in NVME_IDENTIFY_CNS_CODES
+                                //      ProtocolDataRequestSubValue - Namespace Id
+                                //      ProtocolDataRequestSubValue2 - CNS Specific Id (CNSID)
+                                //      ProtocolDataRequestSubValue3 - Controller Id (CNTID)
+                                //      ProtocolDataRequestSubValue4 - Command Set Identifier (CSI)
+
 
     NVMeDataTypeLogPage,        // Retrieved by command - GET LOG PAGE
                                 // Corresponding values in STORAGE_PROTOCOL_SPECIFIC_DATA,
@@ -4636,7 +4662,7 @@ VOID
 DeviceDsmInitializeInput (
     _In_ PDEVICE_DSM_DEFINITION Definition,
     _Out_writes_bytes_(InputLength) PDEVICE_DSM_INPUT Input,
-    _In_ ULONG InputLength,
+    _In_ _In_range_(>=, sizeof(DEVICE_DSM_INPUT)) ULONG InputLength,
     _In_ ULONG Flags,
     _In_reads_bytes_opt_(ParameterBlockLength) PVOID Parameters,
     _In_ ULONG ParameterBlockLength
@@ -4677,7 +4703,7 @@ FORCEINLINE
 BOOLEAN
 DeviceDsmAddDataSetRange (
     _Inout_updates_bytes_(InputLength) PDEVICE_DSM_INPUT Input,
-    _In_ ULONG InputLength,
+    _In_ _In_range_(>=, sizeof(DEVICE_DSM_INPUT)) ULONG InputLength,
     _In_ LONGLONG Offset,
     _In_ ULONGLONG Length
     )
@@ -4740,7 +4766,7 @@ BOOLEAN
 DeviceDsmValidateInput (
     _In_ PDEVICE_DSM_DEFINITION Definition,
     _In_reads_bytes_(InputLength) PDEVICE_DSM_INPUT Input,
-    _In_ _Pre_satisfies_(InputLength >= sizeof(DEVICE_DSM_INPUT)) ULONG InputLength
+    _In_  _In_range_(>=, sizeof(DEVICE_DSM_INPUT)) ULONG InputLength
     )
 {
     ULONG   Max   = 0;
@@ -4909,7 +4935,7 @@ VOID
 DeviceDsmInitializeOutput (
     _In_ PDEVICE_DSM_DEFINITION Definition,
     _Out_writes_bytes_(OutputLength) PDEVICE_DSM_OUTPUT Output,
-    _In_ ULONG OutputLength,
+    _In_  _In_range_(>=, sizeof(DEVICE_DSM_OUTPUT)) ULONG OutputLength,
     _In_ ULONG Flags
     )
 {
@@ -4938,7 +4964,7 @@ BOOLEAN
 DeviceDsmValidateOutput (
     _In_ PDEVICE_DSM_DEFINITION Definition,
     _In_reads_bytes_(OutputLength) PDEVICE_DSM_OUTPUT Output,
-    _In_ _Pre_satisfies_(OutputLength >= sizeof(DEVICE_DSM_OUTPUT)) ULONG OutputLength
+    _In_ _In_range_(>=, sizeof(DEVICE_DSM_OUTPUT)) ULONG OutputLength
     )
 {
     ULONG   Max   = 0;
@@ -6655,6 +6681,252 @@ typedef struct _STORAGE_ATTRIBUTE_MGMT {
 
 } STORAGE_ATTRIBUTE_MGMT, *PSTORAGE_ATTRIBUTE_MGMT;
 
+// end_winioctl
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_CO)
+
+//
+// Defines the bit for each supported features in storage drivers
+// The supported features is defined in "StorageSupportedFeatures" as a DWORD value under
+// "Parameters" registry key of the driver
+//
+
+//
+// Bypass IO feature. If set, the driver understands bypass IO and supports bypass IO related IOCTL(s).
+//
+#define STORAGE_SUPPORTED_FEATURES_BYPASS_IO    0x00000001
+
+//
+// Supported Features Mask. This is "OR" of all defined bits of supported features.
+//
+#define STORAGE_SUPPORTED_FEATURES_MASK         (STORAGE_SUPPORTED_FEATURES_BYPASS_IO)
+
+#pragma warning(push)
+#pragma warning(disable:4201) // nameless struct/unions
+
+//
+//          ======= IOCTL_STORAGE_MANAGE_BYPASS_IO ======
+//
+
+//
+//  This IOCTL is used to control BypassIO operations in all layers of the
+//  volume and storage stacks
+//
+
+//
+//  Defines the various operations supported by the BypassIO IOCTL
+//
+
+typedef enum _BPIO_OPERATIONS {
+
+    //
+    //  This is a request to enable BypassIO for the given volume/disk (device)
+    //  which means a driver may not see all reads/writes for that stack.
+    //
+    //  On the pre-operation, if a driver can support BypassIO for the given
+    //  device it should forward the request down the stack.
+    //
+    //  On the pre-operation if a driver CAN NOT support BypassIO for the given
+    //  device they should complete the FSCTL with STATUS_SUCCESS and update the
+    //  BPIO_OUTPUT structure with appropriate OpStatus, FailingDriverNames,
+    //  and FailureReason reasons.
+    //
+    //  During the post-operation they can see if all drivers below them are
+    //  capable of supporting BypassIO.  If yes, the driver should preserve any
+    //  needed state for the file and continue completion processing. It is the
+    //  drivers responsibility to maintain state to properly handle requests that
+    //  may not be compatible with the BypassIO enabled state.
+    //
+    //  During the post-operation processing if a driver determines they can no
+    //  longer support BypassIO, they can call <TBD> to inform the stack below them
+    //  that BypassIO is now disabled.  They should set appropriate state as to
+    //  why it can not be supported.
+    //
+
+    BPIO_OP_ENABLE = 1,
+
+    //
+    //  This is a request to disable BypassIO for the given volume/disk.  It allows
+    //  a  driver to cleanup any associated BypassIO state.
+    //
+    //  This can be received by a driver that currently does not have BypassIO
+    //  enabled.  It should be ignored.
+    //
+    //  This operation should not be failed.
+    //
+
+    BPIO_OP_DISABLE = 2,
+
+    //
+    //  This is an informational request to see if BypassIO can be enabled for
+    //  the given volume/disk.  This should be processed the same as an ENABLE operation
+    //  with the appropriate fields in the BPIO_OUTPUT structure filled out.  The
+    //  only difference is that the driver does not enter the ENABLE state.
+    //
+
+    BPIO_OP_QUERY = 3
+
+} BPIO_OPERATIONS;
+
+
+//
+//  Defines the BypassIO INPUT flags
+//
+
+typedef enum _BPIO_INFLAGS {
+
+    BPIO_INFL_NONE = 0
+
+} BPIO_INFLAGS;
+DEFINE_ENUM_FLAG_OPERATORS( BPIO_INFLAGS )
+
+//
+//  Defines the INPUT structure for IOCTL_STORAGE_MANAGE_BYPASS_IO
+//
+
+typedef struct _BPIO_INPUT {
+
+    //
+    // Size of this structure serves
+    // as the version.
+    //
+    ULONG Version;
+
+    //
+    // Size of this structure plus
+    // all the variable sized fields.
+    //
+    ULONG Size;
+
+    //
+    //  The BypassIO operation being requested.
+    //
+
+    BPIO_OPERATIONS Operation;
+
+    //
+    //  Input flags for this operation.
+    //
+
+    BPIO_INFLAGS InFlags;
+
+    ULONGLONG Reserved2;
+
+} BPIO_INPUT, *PBPIO_INPUT;
+
+
+//
+//  Defines the BypassIO OUTPUT flags
+//
+
+typedef enum _BPIO_OUTFLAGS {
+
+    BPIO_OUTFL_NONE = 0
+
+} BPIO_OUTFLAGS;
+DEFINE_ENUM_FLAG_OPERATORS( BPIO_OUTFLAGS )
+
+//
+//  This structure defines operation specific outputs for both the ENABLE
+//  and QUERY operations
+//
+
+typedef struct _BPIO_RESULTS {
+
+    //
+    //  A status code that will be available to users which identifies WHY
+    //  the specified driver can't support BypassIO.  This should only be
+    //  set by the first driver to fail the request.
+    //
+
+    LONG OpStatus;      // This should be NTSTATUS but it is not always available
+
+    //
+    //  Receives the name of the driver that failed the request.  For diagnostic
+    //  reasons it is required that drivers store their name when failing an
+    //  ENABLE/QUERY requests.  The name should match the actual name of the driver
+    //  used by the system with extension.  Ex: "ntfs.sys".
+    //
+    //  FailingDriversNameLen contains the length of the string in CHARACTERS.
+    //  No one should assume the string is NULL terminated.
+    //
+
+    USHORT FailingDriverNameLen;
+    WCHAR FailingDriverName[32];
+
+    //
+    //  Receives a reasonable description of why the driver can not support the
+    //  ENABLE/QUERY request.  This string is used for diagnostic reasons and should
+    //  identify the WHY.
+    //
+    //  This string should be in English and does not need to be localized.
+    //
+    //  FailureReasonLen contains the length of the string in CHARACTERS.
+    //  No one should assume the strings is NULL terminated.
+    //
+
+    USHORT FailureReasonLen;
+    WCHAR FailureReason[128];
+
+} BPIO_RESULTS, *PBPIO_RESULTS;
+
+//
+//  Defines the variable sized OUTPUT structure for IOCTL_STORAGE_MANAGE_BYPASS_IO
+//
+
+typedef struct _BPIO_OUTPUT {
+
+    //
+    // Size of this structure serves
+    // as the version.
+    //
+    ULONG Version;
+
+    //
+    // Size of this structure plus
+    // all the variable sized fields.
+    //
+    ULONG Size;
+
+    //
+    //  The BypassIO operation being requested.  This should be set to the
+    //  same value passed in the input structure
+    //
+
+    BPIO_OPERATIONS Operation;
+
+    //
+    //  Output flags for this operation.
+    //
+
+    BPIO_OUTFLAGS OutFlags;
+
+    ULONGLONG Reserved2;    //reserved for future expansion
+
+    //
+    //  This defines operation specific outputs
+    //
+
+    union {
+
+        BPIO_RESULTS Enable;
+        BPIO_RESULTS Query;
+    };
+
+} BPIO_OUTPUT, *PBPIO_OUTPUT;
+
+#define BPIO_OUTPUT_ENABLE_SIZE          (sizeof(BPIO_OUTPUT))
+#define BPIO_OUTPUT_QUERY_SIZE           (sizeof(BPIO_OUTPUT))
+#define BPIO_OUTPUT_DISABLE_SIZE         ((size_t)FIELD_OFFSET(BPIO_OUTPUT, Enable))
+#define BPIO_OUTPUT_VOLUME_DISABLE_SIZE  ((size_t)FIELD_OFFSET(BPIO_OUTPUT, Enable))
+
+#pragma warning(pop)
+
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_CO)
+
+// begin_winioctl
+
+
 #if _MSC_VER >= 1200
 #pragma warning(pop)
 #endif
@@ -6662,7 +6934,6 @@ typedef struct _STORAGE_ATTRIBUTE_MGMT {
 #if defined __cplusplus && !defined __ALT_GENERATOR__
 }
 #endif
-
 
 #endif // _NTDDSTOR_H_
 // end_winioctl

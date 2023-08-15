@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -12,6 +12,10 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
     struct IMemoryBuffer;
     struct MemoryBuffer;
     struct Uri;
+}
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
+{
+    struct IPropertySet;
 }
 WINRT_EXPORT namespace winrt::Windows::Storage
 {
@@ -64,6 +68,7 @@ WINRT_EXPORT namespace winrt::Windows::Storage::Streams
     struct IInputStream;
     struct IInputStreamReference;
     struct IOutputStream;
+    struct IPropertySetSerializer;
     struct IRandomAccessStream;
     struct IRandomAccessStreamReference;
     struct IRandomAccessStreamReferenceStatics;
@@ -99,6 +104,7 @@ namespace winrt::impl
     template <> struct category<Windows::Storage::Streams::IInputStream>{ using type = interface_category; };
     template <> struct category<Windows::Storage::Streams::IInputStreamReference>{ using type = interface_category; };
     template <> struct category<Windows::Storage::Streams::IOutputStream>{ using type = interface_category; };
+    template <> struct category<Windows::Storage::Streams::IPropertySetSerializer>{ using type = interface_category; };
     template <> struct category<Windows::Storage::Streams::IRandomAccessStream>{ using type = interface_category; };
     template <> struct category<Windows::Storage::Streams::IRandomAccessStreamReference>{ using type = interface_category; };
     template <> struct category<Windows::Storage::Streams::IRandomAccessStreamReferenceStatics>{ using type = interface_category; };
@@ -153,6 +159,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::Storage::Streams::IInputStream> = L"Windows.Storage.Streams.IInputStream";
     template <> inline constexpr auto& name_v<Windows::Storage::Streams::IInputStreamReference> = L"Windows.Storage.Streams.IInputStreamReference";
     template <> inline constexpr auto& name_v<Windows::Storage::Streams::IOutputStream> = L"Windows.Storage.Streams.IOutputStream";
+    template <> inline constexpr auto& name_v<Windows::Storage::Streams::IPropertySetSerializer> = L"Windows.Storage.Streams.IPropertySetSerializer";
     template <> inline constexpr auto& name_v<Windows::Storage::Streams::IRandomAccessStream> = L"Windows.Storage.Streams.IRandomAccessStream";
     template <> inline constexpr auto& name_v<Windows::Storage::Streams::IRandomAccessStreamReference> = L"Windows.Storage.Streams.IRandomAccessStreamReference";
     template <> inline constexpr auto& name_v<Windows::Storage::Streams::IRandomAccessStreamReferenceStatics> = L"Windows.Storage.Streams.IRandomAccessStreamReferenceStatics";
@@ -171,6 +178,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::Storage::Streams::IInputStream>{ 0x905A0FE2,0xBC53,0x11DF,{ 0x8C,0x49,0x00,0x1E,0x4F,0xC6,0x86,0xDA } }; // 905A0FE2-BC53-11DF-8C49-001E4FC686DA
     template <> inline constexpr guid guid_v<Windows::Storage::Streams::IInputStreamReference>{ 0x43929D18,0x5EC9,0x4B5A,{ 0x91,0x9C,0x42,0x05,0xB0,0xC8,0x04,0xB6 } }; // 43929D18-5EC9-4B5A-919C-4205B0C804B6
     template <> inline constexpr guid guid_v<Windows::Storage::Streams::IOutputStream>{ 0x905A0FE6,0xBC53,0x11DF,{ 0x8C,0x49,0x00,0x1E,0x4F,0xC6,0x86,0xDA } }; // 905A0FE6-BC53-11DF-8C49-001E4FC686DA
+    template <> inline constexpr guid guid_v<Windows::Storage::Streams::IPropertySetSerializer>{ 0x6E8EBF1C,0xEF3D,0x4376,{ 0xB2,0x0E,0x5B,0xE6,0x38,0xAE,0xAC,0x77 } }; // 6E8EBF1C-EF3D-4376-B20E-5BE638AEAC77
     template <> inline constexpr guid guid_v<Windows::Storage::Streams::IRandomAccessStream>{ 0x905A0FE1,0xBC53,0x11DF,{ 0x8C,0x49,0x00,0x1E,0x4F,0xC6,0x86,0xDA } }; // 905A0FE1-BC53-11DF-8C49-001E4FC686DA
     template <> inline constexpr guid guid_v<Windows::Storage::Streams::IRandomAccessStreamReference>{ 0x33EE3134,0x1DD6,0x4E3A,{ 0x80,0x67,0xD1,0xC1,0x62,0xE8,0x64,0x2B } }; // 33EE3134-1DD6-4E3A-8067-D1C162E8642B
     template <> inline constexpr guid guid_v<Windows::Storage::Streams::IRandomAccessStreamReferenceStatics>{ 0x857309DC,0x3FBF,0x4E7D,{ 0x98,0x6F,0xEF,0x3B,0x1A,0x07,0xA9,0x64 } }; // 857309DC-3FBF-4E7D-986F-EF3B1A07A964
@@ -340,6 +348,14 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall WriteAsync(void*, void**) noexcept = 0;
             virtual int32_t __stdcall FlushAsync(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::Storage::Streams::IPropertySetSerializer>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall Serialize(void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Deserialize(void*, void*) noexcept = 0;
         };
     };
     template <> struct abi<Windows::Storage::Streams::IRandomAccessStream>
@@ -573,6 +589,16 @@ namespace winrt::impl
     template <> struct consume<Windows::Storage::Streams::IOutputStream>
     {
         template <typename D> using type = consume_Windows_Storage_Streams_IOutputStream<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Storage_Streams_IPropertySetSerializer
+    {
+        WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) Serialize(Windows::Foundation::Collections::IPropertySet const& propertySet) const;
+        WINRT_IMPL_AUTO(void) Deserialize(Windows::Foundation::Collections::IPropertySet const& propertySet, Windows::Storage::Streams::IBuffer const& buffer) const;
+    };
+    template <> struct consume<Windows::Storage::Streams::IPropertySetSerializer>
+    {
+        template <typename D> using type = consume_Windows_Storage_Streams_IPropertySetSerializer<D>;
     };
     template <typename D>
     struct consume_Windows_Storage_Streams_IRandomAccessStream

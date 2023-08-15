@@ -1409,40 +1409,43 @@ typedef LPWSAQUERYSET2A LPWSAQUERYSET2;
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#define LUP_DEEP                    0x00000001
-#define LUP_CONTAINERS              0x00000002
-#define LUP_NOCONTAINERS            0x00000004
-#define LUP_NEAREST                 0x00000008
-#define LUP_RETURN_NAME             0x00000010
-#define LUP_RETURN_TYPE             0x00000020
-#define LUP_RETURN_VERSION          0x00000040
-#define LUP_RETURN_COMMENT          0x00000080
-#define LUP_RETURN_ADDR             0x00000100
-#define LUP_RETURN_BLOB             0x00000200
-#define LUP_RETURN_ALIASES          0x00000400
-#define LUP_RETURN_QUERY_STRING     0x00000800
-#define LUP_RETURN_ALL              0x00000FF0
-#define LUP_RES_SERVICE             0x00008000
+#define LUP_DEEP                     0x00000001
+#define LUP_CONTAINERS               0x00000002
+#define LUP_NOCONTAINERS             0x00000004
+#define LUP_NEAREST                  0x00000008
+#define LUP_RETURN_NAME              0x00000010
+#define LUP_RETURN_TYPE              0x00000020
+#define LUP_RETURN_VERSION           0x00000040
+#define LUP_RETURN_COMMENT           0x00000080
+#define LUP_RETURN_ADDR              0x00000100
+#define LUP_RETURN_BLOB              0x00000200
+#define LUP_RETURN_ALIASES           0x00000400
+#define LUP_RETURN_QUERY_STRING      0x00000800
+#define LUP_RETURN_ALL               0x00000FF0
+#define LUP_RES_SERVICE              0x00008000
 
-#define LUP_FLUSHCACHE              0x00001000
-#define LUP_FLUSHPREVIOUS           0x00002000
+#define LUP_FLUSHCACHE               0x00001000
+#define LUP_FLUSHPREVIOUS            0x00002000
 
-#define LUP_NON_AUTHORITATIVE       0x00004000
-#define LUP_SECURE                  0x00008000
-#define LUP_RETURN_PREFERRED_NAMES  0x00010000
-#define LUP_DNS_ONLY                0x00020000
+#define LUP_NON_AUTHORITATIVE        0x00004000
+#define LUP_SECURE                   0x00008000
+#define LUP_RETURN_PREFERRED_NAMES   0x00010000
+#define LUP_DNS_ONLY                 0x00020000
+#define LUP_RETURN_RESPONSE_FLAGS    0x00040000
 
-#define LUP_ADDRCONFIG              0x00100000
-#define LUP_DUAL_ADDR               0x00200000
-#define LUP_FILESERVER              0x00400000
-#define LUP_DISABLE_IDN_ENCODING    0x00800000
-#define LUP_API_ANSI                0x01000000
+#define LUP_ADDRCONFIG               0x00100000
+#define LUP_DUAL_ADDR                0x00200000
+#define LUP_FILESERVER               0x00400000
+#define LUP_DISABLE_IDN_ENCODING     0x00800000
+#define LUP_API_ANSI                 0x01000000
 
-#define LUP_SECURE_WITH_FALLBACK    0x04000000
-#define LUP_REQUIRE_SECURE          0x10000000
-#define LUP_RETURN_TTL              0x20000000
-#define LUP_FORCE_CLEAR_TEXT        0x40000000
-#define LUP_RESOLUTION_HANDLE       0x80000000
+#define LUP_EXTENDED_QUERYSET        0x02000000
+#define LUP_SECURE_WITH_FALLBACK     0x04000000
+#define LUP_EXCLUSIVE_CUSTOM_SERVERS 0x08000000
+#define LUP_REQUIRE_SECURE           0x10000000
+#define LUP_RETURN_TTL               0x20000000
+#define LUP_FORCE_CLEAR_TEXT         0x40000000
+#define LUP_RESOLUTION_HANDLE        0x80000000
 
 /*
  * Return flags

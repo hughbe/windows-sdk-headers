@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -286,6 +286,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Composition
     struct ICompositionShape;
     struct ICompositionShapeFactory;
     struct ICompositionSpriteShape;
+    struct ICompositionSupportsSystemBackdrop;
     struct ICompositionSurface;
     struct ICompositionSurfaceBrush;
     struct ICompositionSurfaceBrush2;
@@ -307,6 +308,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Composition
     struct ICompositor6;
     struct ICompositor7;
     struct ICompositorStatics;
+    struct ICompositorWithBlurredWallpaperBackdropBrush;
     struct ICompositorWithProjectedShadow;
     struct ICompositorWithRadialGradient;
     struct ICompositorWithVisualSurface;
@@ -572,6 +574,7 @@ namespace winrt::impl
     template <> struct category<Windows::UI::Composition::ICompositionShape>{ using type = interface_category; };
     template <> struct category<Windows::UI::Composition::ICompositionShapeFactory>{ using type = interface_category; };
     template <> struct category<Windows::UI::Composition::ICompositionSpriteShape>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Composition::ICompositionSupportsSystemBackdrop>{ using type = interface_category; };
     template <> struct category<Windows::UI::Composition::ICompositionSurface>{ using type = interface_category; };
     template <> struct category<Windows::UI::Composition::ICompositionSurfaceBrush>{ using type = interface_category; };
     template <> struct category<Windows::UI::Composition::ICompositionSurfaceBrush2>{ using type = interface_category; };
@@ -593,6 +596,7 @@ namespace winrt::impl
     template <> struct category<Windows::UI::Composition::ICompositor6>{ using type = interface_category; };
     template <> struct category<Windows::UI::Composition::ICompositor7>{ using type = interface_category; };
     template <> struct category<Windows::UI::Composition::ICompositorStatics>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Composition::ICompositorWithBlurredWallpaperBackdropBrush>{ using type = interface_category; };
     template <> struct category<Windows::UI::Composition::ICompositorWithProjectedShadow>{ using type = interface_category; };
     template <> struct category<Windows::UI::Composition::ICompositorWithRadialGradient>{ using type = interface_category; };
     template <> struct category<Windows::UI::Composition::ICompositorWithVisualSurface>{ using type = interface_category; };
@@ -1002,6 +1006,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::UI::Composition::ICompositionShape> = L"Windows.UI.Composition.ICompositionShape";
     template <> inline constexpr auto& name_v<Windows::UI::Composition::ICompositionShapeFactory> = L"Windows.UI.Composition.ICompositionShapeFactory";
     template <> inline constexpr auto& name_v<Windows::UI::Composition::ICompositionSpriteShape> = L"Windows.UI.Composition.ICompositionSpriteShape";
+    template <> inline constexpr auto& name_v<Windows::UI::Composition::ICompositionSupportsSystemBackdrop> = L"Windows.UI.Composition.ICompositionSupportsSystemBackdrop";
     template <> inline constexpr auto& name_v<Windows::UI::Composition::ICompositionSurface> = L"Windows.UI.Composition.ICompositionSurface";
     template <> inline constexpr auto& name_v<Windows::UI::Composition::ICompositionSurfaceBrush> = L"Windows.UI.Composition.ICompositionSurfaceBrush";
     template <> inline constexpr auto& name_v<Windows::UI::Composition::ICompositionSurfaceBrush2> = L"Windows.UI.Composition.ICompositionSurfaceBrush2";
@@ -1023,6 +1028,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::UI::Composition::ICompositor6> = L"Windows.UI.Composition.ICompositor6";
     template <> inline constexpr auto& name_v<Windows::UI::Composition::ICompositor7> = L"Windows.UI.Composition.ICompositor7";
     template <> inline constexpr auto& name_v<Windows::UI::Composition::ICompositorStatics> = L"Windows.UI.Composition.ICompositorStatics";
+    template <> inline constexpr auto& name_v<Windows::UI::Composition::ICompositorWithBlurredWallpaperBackdropBrush> = L"Windows.UI.Composition.ICompositorWithBlurredWallpaperBackdropBrush";
     template <> inline constexpr auto& name_v<Windows::UI::Composition::ICompositorWithProjectedShadow> = L"Windows.UI.Composition.ICompositorWithProjectedShadow";
     template <> inline constexpr auto& name_v<Windows::UI::Composition::ICompositorWithRadialGradient> = L"Windows.UI.Composition.ICompositorWithRadialGradient";
     template <> inline constexpr auto& name_v<Windows::UI::Composition::ICompositorWithVisualSurface> = L"Windows.UI.Composition.ICompositorWithVisualSurface";
@@ -1180,6 +1186,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::UI::Composition::ICompositionShape>{ 0xB47CE2F7,0x9A88,0x42C4,{ 0x9E,0x87,0x2E,0x50,0x0C,0xA8,0x68,0x8C } }; // B47CE2F7-9A88-42C4-9E87-2E500CA8688C
     template <> inline constexpr guid guid_v<Windows::UI::Composition::ICompositionShapeFactory>{ 0x1DFC36D0,0xB05A,0x44EF,{ 0x82,0xB0,0x12,0x11,0x8B,0xCD,0x4C,0xD0 } }; // 1DFC36D0-B05A-44EF-82B0-12118BCD4CD0
     template <> inline constexpr guid guid_v<Windows::UI::Composition::ICompositionSpriteShape>{ 0x401B61BB,0x0007,0x4363,{ 0xB1,0xF3,0x6B,0xCC,0x00,0x3F,0xB8,0x3E } }; // 401B61BB-0007-4363-B1F3-6BCC003FB83E
+    template <> inline constexpr guid guid_v<Windows::UI::Composition::ICompositionSupportsSystemBackdrop>{ 0x397DAFE4,0xB6C2,0x5BB9,{ 0x95,0x1D,0xF5,0x70,0x7D,0xE8,0xB7,0xBC } }; // 397DAFE4-B6C2-5BB9-951D-F5707DE8B7BC
     template <> inline constexpr guid guid_v<Windows::UI::Composition::ICompositionSurface>{ 0x1527540D,0x42C7,0x47A6,{ 0xA4,0x08,0x66,0x8F,0x79,0xA9,0x0D,0xFB } }; // 1527540D-42C7-47A6-A408-668F79A90DFB
     template <> inline constexpr guid guid_v<Windows::UI::Composition::ICompositionSurfaceBrush>{ 0xAD016D79,0x1E4C,0x4C0D,{ 0x9C,0x29,0x83,0x33,0x8C,0x87,0xC1,0x62 } }; // AD016D79-1E4C-4C0D-9C29-83338C87C162
     template <> inline constexpr guid guid_v<Windows::UI::Composition::ICompositionSurfaceBrush2>{ 0xD27174D5,0x64F5,0x4692,{ 0x9D,0xC7,0x71,0xB6,0x1D,0x7E,0x58,0x80 } }; // D27174D5-64F5-4692-9DC7-71B61D7E5880
@@ -1201,6 +1208,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::UI::Composition::ICompositor6>{ 0x7A38B2BD,0xCEC8,0x4EEB,{ 0x83,0x0F,0xD8,0xD0,0x7A,0xED,0xEB,0xC3 } }; // 7A38B2BD-CEC8-4EEB-830F-D8D07AEDEBC3
     template <> inline constexpr guid guid_v<Windows::UI::Composition::ICompositor7>{ 0xD3483FAD,0x9A12,0x53BA,{ 0xBF,0xC8,0x88,0xB7,0xFF,0x79,0x77,0xC6 } }; // D3483FAD-9A12-53BA-BFC8-88B7FF7977C6
     template <> inline constexpr guid guid_v<Windows::UI::Composition::ICompositorStatics>{ 0x080DB93E,0x121E,0x4D97,{ 0x8B,0x74,0x1D,0xFC,0xF9,0x19,0x87,0xEA } }; // 080DB93E-121E-4D97-8B74-1DFCF91987EA
+    template <> inline constexpr guid guid_v<Windows::UI::Composition::ICompositorWithBlurredWallpaperBackdropBrush>{ 0x0D8FB190,0xF122,0x5B8D,{ 0x9F,0xDD,0x54,0x3B,0x0D,0x8E,0xB7,0xF3 } }; // 0D8FB190-F122-5B8D-9FDD-543B0D8EB7F3
     template <> inline constexpr guid guid_v<Windows::UI::Composition::ICompositorWithProjectedShadow>{ 0xA2E6330E,0x8A60,0x5A38,{ 0xBB,0x85,0xB4,0x4E,0xA9,0x01,0x67,0x7C } }; // A2E6330E-8A60-5A38-BB85-B44EA901677C
     template <> inline constexpr guid guid_v<Windows::UI::Composition::ICompositorWithRadialGradient>{ 0x98B9C1A7,0x8E71,0x4B53,{ 0xB4,0xA8,0x69,0xBA,0x5D,0x19,0xDC,0x5B } }; // 98B9C1A7-8E71-4B53-B4A8-69BA5D19DC5B
     template <> inline constexpr guid guid_v<Windows::UI::Composition::ICompositorWithVisualSurface>{ 0xCFA1658B,0x0123,0x4551,{ 0x88,0x91,0x89,0xBD,0xCC,0x40,0x32,0x2B } }; // CFA1658B-0123-4551-8891-89BDCC40322B
@@ -2251,6 +2259,14 @@ namespace winrt::impl
             virtual int32_t __stdcall put_StrokeThickness(float) noexcept = 0;
         };
     };
+    template <> struct abi<Windows::UI::Composition::ICompositionSupportsSystemBackdrop>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_SystemBackdrop(void**) noexcept = 0;
+            virtual int32_t __stdcall put_SystemBackdrop(void*) noexcept = 0;
+        };
+    };
     template <> struct abi<Windows::UI::Composition::ICompositionSurface>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -2497,6 +2513,13 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall get_MaxGlobalPlaybackRate(float*) noexcept = 0;
             virtual int32_t __stdcall get_MinGlobalPlaybackRate(float*) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::UI::Composition::ICompositorWithBlurredWallpaperBackdropBrush>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall TryCreateBlurredWallpaperBackdropBrush(void**) noexcept = 0;
         };
     };
     template <> struct abi<Windows::UI::Composition::ICompositorWithProjectedShadow>
@@ -4225,6 +4248,16 @@ namespace winrt::impl
         template <typename D> using type = consume_Windows_UI_Composition_ICompositionSpriteShape<D>;
     };
     template <typename D>
+    struct consume_Windows_UI_Composition_ICompositionSupportsSystemBackdrop
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Composition::CompositionBrush) SystemBackdrop() const;
+        WINRT_IMPL_AUTO(void) SystemBackdrop(Windows::UI::Composition::CompositionBrush const& value) const;
+    };
+    template <> struct consume<Windows::UI::Composition::ICompositionSupportsSystemBackdrop>
+    {
+        template <typename D> using type = consume_Windows_UI_Composition_ICompositionSupportsSystemBackdrop<D>;
+    };
+    template <typename D>
     struct consume_Windows_UI_Composition_ICompositionSurface
     {
     };
@@ -4513,6 +4546,15 @@ namespace winrt::impl
     template <> struct consume<Windows::UI::Composition::ICompositorStatics>
     {
         template <typename D> using type = consume_Windows_UI_Composition_ICompositorStatics<D>;
+    };
+    template <typename D>
+    struct consume_Windows_UI_Composition_ICompositorWithBlurredWallpaperBackdropBrush
+    {
+        WINRT_IMPL_AUTO(Windows::UI::Composition::CompositionBackdropBrush) TryCreateBlurredWallpaperBackdropBrush() const;
+    };
+    template <> struct consume<Windows::UI::Composition::ICompositorWithBlurredWallpaperBackdropBrush>
+    {
+        template <typename D> using type = consume_Windows_UI_Composition_ICompositorWithBlurredWallpaperBackdropBrush<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Composition_ICompositorWithProjectedShadow

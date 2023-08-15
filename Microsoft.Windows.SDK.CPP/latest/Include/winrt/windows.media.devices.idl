@@ -105,6 +105,8 @@ namespace Windows
 
             typedef enum AutoFocusRange AutoFocusRange;
 
+            typedef enum CameraOcclusionKind CameraOcclusionKind;
+
             typedef enum CameraStreamState CameraStreamState;
 
             typedef enum CaptureSceneMode CaptureSceneMode;
@@ -163,6 +165,8 @@ namespace Windows
 
             interface IAdvancedVideoCaptureDeviceController;
 
+            interface IAdvancedVideoCaptureDeviceController10;
+
             interface IAdvancedVideoCaptureDeviceController2;
 
             interface IAdvancedVideoCaptureDeviceController3;
@@ -192,6 +196,12 @@ namespace Windows
             interface ICallControl;
 
             interface ICallControlStatics;
+
+            interface ICameraOcclusionInfo;
+
+            interface ICameraOcclusionState;
+
+            interface ICameraOcclusionStateChangedEventArgs;
 
             interface IDefaultAudioDeviceChangedEventArgs;
 
@@ -288,6 +298,12 @@ namespace Windows
             runtimeclass AudioDeviceModulesManager;
 
             runtimeclass CallControl;
+
+            runtimeclass CameraOcclusionInfo;
+
+            runtimeclass CameraOcclusionState;
+
+            runtimeclass CameraOcclusionStateChangedEventArgs;
 
             runtimeclass DefaultAudioCaptureDeviceChangedEventArgs;
 
@@ -474,6 +490,8 @@ namespace Windows
                 interface Windows.Foundation.TypedEventHandler<IInspectable*, Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs*>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.Media.Devices.AudioDeviceModulesManager*, Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs*>;
+
+                interface Windows.Foundation.TypedEventHandler<Windows.Media.Devices.CameraOcclusionInfo*, Windows.Media.Devices.CameraOcclusionStateChangedEventArgs*>;
             }
         }
     }
@@ -514,6 +532,13 @@ namespace Windows
                 FullRange = 0,
                 Macro     = 1,
                 Normal    = 2
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+            enum CameraOcclusionKind
+            {
+                Lid            = 0,
+                CameraHardware = 1
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -794,6 +819,14 @@ namespace Windows
                 HRESULT GetDeviceProperty([in] HSTRING propertyId, [out] [retval] IInspectable** propertyValue);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+            [exclusiveto(Windows.Media.Devices.VideoDeviceController)]
+            [uuid(C621B82D-D6F0-5C1B-A388-A6E938407146)]
+            interface IAdvancedVideoCaptureDeviceController10 : IInspectable
+            {
+                [propget] HRESULT CameraOcclusionInfo([out] [retval] Windows.Media.Devices.CameraOcclusionInfo** value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Media.Devices.VideoDeviceController)]
             [uuid(8BB94F8F-F11A-43DB-B402-11930B80AE56)]
@@ -966,6 +999,34 @@ namespace Windows
             {
                 HRESULT GetDefault([out] [retval] Windows.Media.Devices.CallControl** callControl);
                 HRESULT FromId([in] HSTRING deviceId, [out] [retval] Windows.Media.Devices.CallControl** callControl);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+            [exclusiveto(Windows.Media.Devices.CameraOcclusionInfo)]
+            [uuid(AF6C4AD0-A84D-5DB6-BE58-A5DA21CFE011)]
+            interface ICameraOcclusionInfo : IInspectable
+            {
+                HRESULT GetState([out] [retval] Windows.Media.Devices.CameraOcclusionState** result);
+                HRESULT IsOcclusionKindSupported([in] Windows.Media.Devices.CameraOcclusionKind occlusionKind, [out] [retval] boolean* result);
+                [eventadd] HRESULT StateChanged([in] Windows.Foundation.TypedEventHandler<Windows.Media.Devices.CameraOcclusionInfo*, Windows.Media.Devices.CameraOcclusionStateChangedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT StateChanged([in] EventRegistrationToken token);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+            [exclusiveto(Windows.Media.Devices.CameraOcclusionState)]
+            [uuid(430ADEB8-6842-5E55-9BDE-04B4EF3A8A57)]
+            interface ICameraOcclusionState : IInspectable
+            {
+                [propget] HRESULT IsOccluded([out] [retval] boolean* value);
+                HRESULT IsOcclusionKind([in] Windows.Media.Devices.CameraOcclusionKind occlusionKind, [out] [retval] boolean* result);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+            [exclusiveto(Windows.Media.Devices.CameraOcclusionStateChangedEventArgs)]
+            [uuid(8512D848-C0DE-57CA-A1CA-FB2C3D23DF55)]
+            interface ICameraOcclusionStateChangedEventArgs : IInspectable
+            {
+                [propget] HRESULT State([out] [retval] Windows.Media.Devices.CameraOcclusionState** value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1559,6 +1620,27 @@ namespace Windows
                 [default] interface Windows.Media.Devices.ICallControl;
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass CameraOcclusionInfo
+            {
+                [default] interface Windows.Media.Devices.ICameraOcclusionInfo;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass CameraOcclusionState
+            {
+                [default] interface Windows.Media.Devices.ICameraOcclusionState;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass CameraOcclusionStateChangedEventArgs
+            {
+                [default] interface Windows.Media.Devices.ICameraOcclusionStateChangedEventArgs;
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
             runtimeclass DefaultAudioCaptureDeviceChangedEventArgs
@@ -1813,6 +1895,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7;
                 [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController8;
                 [contract(Windows.Foundation.UniversalApiContract, 12.0)] interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController9;
+                [contract(Windows.Foundation.UniversalApiContract, 13.0)] interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController10;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 4.0)]

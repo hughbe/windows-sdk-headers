@@ -88,7 +88,7 @@
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION)
-#define WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION 0x10000
+#define WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
@@ -103,6 +103,36 @@
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 /* Forward Declarations */
+#ifndef ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace UIAutomation {
+                interface IAutomationConnection;
+            } /* UIAutomation */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection ABI::Windows::UI::UIAutomation::IAutomationConnection
+
+#endif // ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace UIAutomation {
+                interface IAutomationConnectionBoundObject;
+            } /* UIAutomation */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject ABI::Windows::UI::UIAutomation::IAutomationConnectionBoundObject
+
+#endif // ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationElement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationElement_FWD_DEFINED__
 namespace ABI {
@@ -136,6 +166,94 @@ namespace ABI {
 // Parameterized interface forward declarations (C++)
 
 // Collection interface definitions
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace UIAutomation {
+                class AutomationConnection;
+            } /* UIAutomation */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+
+/*
+ *
+ * Interface Windows.UI.UIAutomation.IAutomationConnection
+ *
+ * Introduced to Windows.UI.UIAutomation.UIAutomationContract in version 2.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.UIAutomation.AutomationConnection
+ *
+ */
+#if WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_UIAutomation_IAutomationConnection[] = L"Windows.UI.UIAutomation.IAutomationConnection";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace UIAutomation {
+                MIDL_INTERFACE("aad262ed-0ef4-5d43-97be-a834e27b65b9")
+                IAutomationConnection : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE get_IsRemoteSystem(
+                        boolean* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_AppUserModelId(
+                        HSTRING* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_ExecutableFileName(
+                        HSTRING* value
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_IAutomationConnection = _uuidof(IAutomationConnection);
+            } /* UIAutomation */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection;
+#endif /* !defined(____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_INTERFACE_DEFINED__) */
+#endif // WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION >= 0x20000
+
+/*
+ *
+ * Interface Windows.UI.UIAutomation.IAutomationConnectionBoundObject
+ *
+ * Introduced to Windows.UI.UIAutomation.UIAutomationContract in version 2.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.UIAutomation.AutomationConnectionBoundObject
+ *
+ */
+#if WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_UIAutomation_IAutomationConnectionBoundObject[] = L"Windows.UI.UIAutomation.IAutomationConnectionBoundObject";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace UIAutomation {
+                MIDL_INTERFACE("5e8558fb-ca52-5b65-9830-dd2905816093")
+                IAutomationConnectionBoundObject : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE get_Connection(
+                        ABI::Windows::UI::UIAutomation::IAutomationConnection** value
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_IAutomationConnectionBoundObject = _uuidof(IAutomationConnectionBoundObject);
+            } /* UIAutomation */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject;
+#endif /* !defined(____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_INTERFACE_DEFINED__) */
+#endif // WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION >= 0x20000
+
 /*
  *
  * Interface Windows.UI.UIAutomation.IAutomationElement
@@ -213,6 +331,44 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CUIAutomation_CIAutomationTextRange;
 
 /*
  *
+ * Class Windows.UI.UIAutomation.AutomationConnection
+ *
+ * Introduced to Windows.UI.UIAutomation.UIAutomationContract in version 2.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.UIAutomation.IAutomationConnection ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION >= 0x20000
+#ifndef RUNTIMECLASS_Windows_UI_UIAutomation_AutomationConnection_DEFINED
+#define RUNTIMECLASS_Windows_UI_UIAutomation_AutomationConnection_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_UIAutomation_AutomationConnection[] = L"Windows.UI.UIAutomation.AutomationConnection";
+#endif
+#endif // WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION >= 0x20000
+
+/*
+ *
+ * Class Windows.UI.UIAutomation.AutomationConnectionBoundObject
+ *
+ * Introduced to Windows.UI.UIAutomation.UIAutomationContract in version 2.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.UIAutomation.IAutomationConnectionBoundObject ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION >= 0x20000
+#ifndef RUNTIMECLASS_Windows_UI_UIAutomation_AutomationConnectionBoundObject_DEFINED
+#define RUNTIMECLASS_Windows_UI_UIAutomation_AutomationConnectionBoundObject_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_UIAutomation_AutomationConnectionBoundObject[] = L"Windows.UI.UIAutomation.AutomationConnectionBoundObject";
+#endif
+#endif // WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION >= 0x20000
+
+/*
+ *
  * Class Windows.UI.UIAutomation.AutomationElement
  *
  * Introduced to Windows.UI.UIAutomation.UIAutomationContract in version 1.0
@@ -251,6 +407,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
+#ifndef ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection;
+
+#endif // ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject;
+
+#endif // ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationElement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationElement_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationElement __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationElement;
@@ -266,6 +434,154 @@ typedef interface __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationTextRange __x_A
 // Parameterized interface forward declarations (C)
 
 // Collection interface definitions
+
+/*
+ *
+ * Interface Windows.UI.UIAutomation.IAutomationConnection
+ *
+ * Introduced to Windows.UI.UIAutomation.UIAutomationContract in version 2.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.UIAutomation.AutomationConnection
+ *
+ */
+#if WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_UIAutomation_IAutomationConnection[] = L"Windows.UI.UIAutomation.IAutomationConnection";
+typedef struct __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_IsRemoteSystem)(__x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* get_AppUserModelId)(__x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_ExecutableFileName)(__x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection* This,
+        HSTRING* value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionVtbl;
+
+interface __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_get_IsRemoteSystem(This, value) \
+    ((This)->lpVtbl->get_IsRemoteSystem(This, value))
+
+#define __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_get_AppUserModelId(This, value) \
+    ((This)->lpVtbl->get_AppUserModelId(This, value))
+
+#define __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_get_ExecutableFileName(This, value) \
+    ((This)->lpVtbl->get_ExecutableFileName(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection;
+#endif /* !defined(____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection_INTERFACE_DEFINED__) */
+#endif // WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION >= 0x20000
+
+/*
+ *
+ * Interface Windows.UI.UIAutomation.IAutomationConnectionBoundObject
+ *
+ * Introduced to Windows.UI.UIAutomation.UIAutomationContract in version 2.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.UIAutomation.AutomationConnectionBoundObject
+ *
+ */
+#if WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION >= 0x20000
+#if !defined(____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_UIAutomation_IAutomationConnectionBoundObject[] = L"Windows.UI.UIAutomation.IAutomationConnectionBoundObject";
+typedef struct __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObjectVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Connection)(__x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject* This,
+        __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnection** value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObjectVtbl;
+
+interface __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObjectVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_get_Connection(This, value) \
+    ((This)->lpVtbl->get_Connection(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject;
+#endif /* !defined(____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationConnectionBoundObject_INTERFACE_DEFINED__) */
+#endif // WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION >= 0x20000
 
 /*
  *
@@ -409,6 +725,44 @@ interface __x_ABI_CWindows_CUI_CUIAutomation_CIAutomationTextRange
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CUIAutomation_CIAutomationTextRange;
 #endif /* !defined(____x_ABI_CWindows_CUI_CUIAutomation_CIAutomationTextRange_INTERFACE_DEFINED__) */
 #endif // WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION >= 0x10000
+
+/*
+ *
+ * Class Windows.UI.UIAutomation.AutomationConnection
+ *
+ * Introduced to Windows.UI.UIAutomation.UIAutomationContract in version 2.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.UIAutomation.IAutomationConnection ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION >= 0x20000
+#ifndef RUNTIMECLASS_Windows_UI_UIAutomation_AutomationConnection_DEFINED
+#define RUNTIMECLASS_Windows_UI_UIAutomation_AutomationConnection_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_UIAutomation_AutomationConnection[] = L"Windows.UI.UIAutomation.AutomationConnection";
+#endif
+#endif // WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION >= 0x20000
+
+/*
+ *
+ * Class Windows.UI.UIAutomation.AutomationConnectionBoundObject
+ *
+ * Introduced to Windows.UI.UIAutomation.UIAutomationContract in version 2.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.UIAutomation.IAutomationConnectionBoundObject ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION >= 0x20000
+#ifndef RUNTIMECLASS_Windows_UI_UIAutomation_AutomationConnectionBoundObject_DEFINED
+#define RUNTIMECLASS_Windows_UI_UIAutomation_AutomationConnectionBoundObject_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_UIAutomation_AutomationConnectionBoundObject[] = L"Windows.UI.UIAutomation.AutomationConnectionBoundObject";
+#endif
+#endif // WINDOWS_UI_UIAUTOMATION_UIAUTOMATIONCONTRACT_VERSION >= 0x20000
 
 /*
  *

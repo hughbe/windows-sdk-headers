@@ -209,21 +209,21 @@ typedef DWORD MilMatrix3x2D;
 
 #endif
 #ifndef MILTYPES_DEFINED
-struct MilRectD
+typedef struct MilRectD
 {
     DOUBLE left;
     DOUBLE top;
     DOUBLE right;
     DOUBLE bottom;
-};
+} MilRectD;
 
-struct MilPoint2D
+typedef struct MilPoint2D
 {
     DOUBLE X;
     DOUBLE Y;
-};
+} MilPoint2D;
 
-struct MilMatrix3x2D
+typedef struct MilMatrix3x2D
 {
     DOUBLE S_11;
     DOUBLE S_12;
@@ -231,7 +231,7 @@ struct MilMatrix3x2D
     DOUBLE S_22;
     DOUBLE DX;
     DOUBLE DY;
-};
+} MilMatrix3x2D;
 #endif // MILTYPES_DEFINED
 
 typedef MilPoint2D MIL_2DPOINTD;

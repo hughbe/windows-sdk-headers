@@ -453,6 +453,9 @@ EXTERN_C const IID IID_ICoreWindowAdapterInterop;
         virtual /* [propget] */ HRESULT STDMETHODCALLTYPE get_HoloViewClientAdapter( 
             /* [retval][out] */ __RPC__deref_out_opt IUnknown **value) = 0;
         
+        virtual /* [propget] */ HRESULT STDMETHODCALLTYPE get_PositionerClientAdapter( 
+            /* [retval][out] */ __RPC__deref_out_opt IUnknown **value) = 0;
+        
         virtual /* [propget] */ HRESULT STDMETHODCALLTYPE get_SystemNavigationClientAdapter( 
             /* [retval][out] */ __RPC__deref_out_opt IUnknown **value) = 0;
         
@@ -522,6 +525,11 @@ EXTERN_C const IID IID_ICoreWindowAdapterInterop;
             __RPC__in ICoreWindowAdapterInterop * This,
             /* [retval][out] */ __RPC__deref_out_opt IUnknown **value);
         
+        DECLSPEC_XFGVIRT(ICoreWindowAdapterInterop, get_PositionerClientAdapter)
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_PositionerClientAdapter )( 
+            __RPC__in ICoreWindowAdapterInterop * This,
+            /* [retval][out] */ __RPC__deref_out_opt IUnknown **value);
+        
         DECLSPEC_XFGVIRT(ICoreWindowAdapterInterop, get_SystemNavigationClientAdapter)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_SystemNavigationClientAdapter )( 
             __RPC__in ICoreWindowAdapterInterop * This,
@@ -581,6 +589,9 @@ EXTERN_C const IID IID_ICoreWindowAdapterInterop;
 
 #define ICoreWindowAdapterInterop_get_HoloViewClientAdapter(This,value)	\
     ( (This)->lpVtbl -> get_HoloViewClientAdapter(This,value) ) 
+
+#define ICoreWindowAdapterInterop_get_PositionerClientAdapter(This,value)	\
+    ( (This)->lpVtbl -> get_PositionerClientAdapter(This,value) ) 
 
 #define ICoreWindowAdapterInterop_get_SystemNavigationClientAdapter(This,value)	\
     ( (This)->lpVtbl -> get_SystemNavigationClientAdapter(This,value) ) 

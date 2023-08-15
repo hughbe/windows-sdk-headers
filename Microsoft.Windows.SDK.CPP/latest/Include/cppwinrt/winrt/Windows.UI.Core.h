@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,12 +6,14 @@
 #ifndef WINRT_Windows_UI_Core_H
 #define WINRT_Windows_UI_Core_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.201201.7"
 #include "winrt/Windows.UI.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.System.2.h"
 #include "winrt/impl/Windows.UI.2.h"
+#include "winrt/impl/Windows.UI.Composition.2.h"
 #include "winrt/impl/Windows.UI.Input.2.h"
 #include "winrt/impl/Windows.UI.Popups.2.h"
 #include "winrt/impl/Windows.UI.Core.2.h"
@@ -234,6 +236,52 @@ namespace winrt::impl
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_ICoreDispatcherWithTaskPriority<D>::StopProcessEvents() const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::ICoreDispatcherWithTaskPriority)->StopProcessEvents());
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Core_ICoreIndependentInputSourceController<D>::IsTransparentForUncontrolledInput() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::ICoreIndependentInputSourceController)->get_IsTransparentForUncontrolledInput(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_ICoreIndependentInputSourceController<D>::IsTransparentForUncontrolledInput(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::ICoreIndependentInputSourceController)->put_IsTransparentForUncontrolledInput(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Core_ICoreIndependentInputSourceController<D>::IsPalmRejectionEnabled() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::ICoreIndependentInputSourceController)->get_IsPalmRejectionEnabled(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_ICoreIndependentInputSourceController<D>::IsPalmRejectionEnabled(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::ICoreIndependentInputSourceController)->put_IsPalmRejectionEnabled(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Core::CoreIndependentInputSource) consume_Windows_UI_Core_ICoreIndependentInputSourceController<D>::Source() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::ICoreIndependentInputSourceController)->get_Source(&value));
+        return Windows::UI::Core::CoreIndependentInputSource{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_ICoreIndependentInputSourceController<D>::SetControlledInput(Windows::UI::Core::CoreInputDeviceTypes const& inputTypes) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::ICoreIndependentInputSourceController)->SetControlledInput(static_cast<uint32_t>(inputTypes)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Core_ICoreIndependentInputSourceController<D>::SetControlledInput(Windows::UI::Core::CoreInputDeviceTypes const& inputTypes, Windows::UI::Core::CoreIndependentInputFilters const& required, Windows::UI::Core::CoreIndependentInputFilters const& excluded) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::ICoreIndependentInputSourceController)->SetControlledInputWithFilters(static_cast<uint32_t>(inputTypes), static_cast<uint32_t>(required), static_cast<uint32_t>(excluded)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Core::CoreIndependentInputSourceController) consume_Windows_UI_Core_ICoreIndependentInputSourceControllerStatics<D>::CreateForVisual(Windows::UI::Composition::Visual const& visual) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::ICoreIndependentInputSourceControllerStatics)->CreateForVisual(*(void**)(&visual), &result));
+        return Windows::UI::Core::CoreIndependentInputSourceController{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Core::CoreIndependentInputSourceController) consume_Windows_UI_Core_ICoreIndependentInputSourceControllerStatics<D>::CreateForIVisualElement(Windows::UI::Composition::IVisualElement const& visualElement) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Core::ICoreIndependentInputSourceControllerStatics)->CreateForIVisualElement(*(void**)(&visualElement), &result));
+        return Windows::UI::Core::CoreIndependentInputSourceController{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(Windows::UI::Core::CoreDispatcher) consume_Windows_UI_Core_ICoreInputSourceBase<D>::Dispatcher() const
     {
@@ -1639,6 +1687,84 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             this->shim().StopProcessEvents();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::UI::Core::ICoreIndependentInputSourceController> : produce_base<D, Windows::UI::Core::ICoreIndependentInputSourceController>
+    {
+        int32_t __stdcall get_IsTransparentForUncontrolledInput(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsTransparentForUncontrolledInput());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_IsTransparentForUncontrolledInput(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().IsTransparentForUncontrolledInput(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_IsPalmRejectionEnabled(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsPalmRejectionEnabled());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_IsPalmRejectionEnabled(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().IsPalmRejectionEnabled(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Source(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Core::CoreIndependentInputSource>(this->shim().Source());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetControlledInput(uint32_t inputTypes) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SetControlledInput(*reinterpret_cast<Windows::UI::Core::CoreInputDeviceTypes const*>(&inputTypes));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetControlledInputWithFilters(uint32_t inputTypes, uint32_t required, uint32_t excluded) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SetControlledInput(*reinterpret_cast<Windows::UI::Core::CoreInputDeviceTypes const*>(&inputTypes), *reinterpret_cast<Windows::UI::Core::CoreIndependentInputFilters const*>(&required), *reinterpret_cast<Windows::UI::Core::CoreIndependentInputFilters const*>(&excluded));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::UI::Core::ICoreIndependentInputSourceControllerStatics> : produce_base<D, Windows::UI::Core::ICoreIndependentInputSourceControllerStatics>
+    {
+        int32_t __stdcall CreateForVisual(void* visual, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::UI::Core::CoreIndependentInputSourceController>(this->shim().CreateForVisual(*reinterpret_cast<Windows::UI::Composition::Visual const*>(&visual)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateForIVisualElement(void* visualElement, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::UI::Core::CoreIndependentInputSourceController>(this->shim().CreateForIVisualElement(*reinterpret_cast<Windows::UI::Composition::IVisualElement const*>(&visualElement)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3074,6 +3200,37 @@ namespace winrt::impl
 }
 WINRT_EXPORT namespace winrt::Windows::UI::Core
 {
+    constexpr auto operator|(CoreIndependentInputFilters const left, CoreIndependentInputFilters const right) noexcept
+    {
+        return static_cast<CoreIndependentInputFilters>(impl::to_underlying_type(left) | impl::to_underlying_type(right));
+    }
+    constexpr auto operator|=(CoreIndependentInputFilters& left, CoreIndependentInputFilters const right) noexcept
+    {
+        left = left | right;
+        return left;
+    }
+    constexpr auto operator&(CoreIndependentInputFilters const left, CoreIndependentInputFilters const right) noexcept
+    {
+        return static_cast<CoreIndependentInputFilters>(impl::to_underlying_type(left) & impl::to_underlying_type(right));
+    }
+    constexpr auto operator&=(CoreIndependentInputFilters& left, CoreIndependentInputFilters const right) noexcept
+    {
+        left = left & right;
+        return left;
+    }
+    constexpr auto operator~(CoreIndependentInputFilters const value) noexcept
+    {
+        return static_cast<CoreIndependentInputFilters>(~impl::to_underlying_type(value));
+    }
+    constexpr auto operator^(CoreIndependentInputFilters const left, CoreIndependentInputFilters const right) noexcept
+    {
+        return static_cast<CoreIndependentInputFilters>(impl::to_underlying_type(left) ^ impl::to_underlying_type(right));
+    }
+    constexpr auto operator^=(CoreIndependentInputFilters& left, CoreIndependentInputFilters const right) noexcept
+    {
+        left = left ^ right;
+        return left;
+    }
     constexpr auto operator|(CoreInputDeviceTypes const left, CoreInputDeviceTypes const right) noexcept
     {
         return static_cast<CoreInputDeviceTypes>(impl::to_underlying_type(left) | impl::to_underlying_type(right));
@@ -3139,6 +3296,14 @@ WINRT_EXPORT namespace winrt::Windows::UI::Core
     inline CoreCursor::CoreCursor(Windows::UI::Core::CoreCursorType const& type, uint32_t id) :
         CoreCursor(impl::call_factory<CoreCursor, ICoreCursorFactory>([&](ICoreCursorFactory const& f) { return f.CreateCursor(type, id); }))
     {
+    }
+    inline auto CoreIndependentInputSourceController::CreateForVisual(Windows::UI::Composition::Visual const& visual)
+    {
+        return impl::call_factory<CoreIndependentInputSourceController, ICoreIndependentInputSourceControllerStatics>([&](ICoreIndependentInputSourceControllerStatics const& f) { return f.CreateForVisual(visual); });
+    }
+    inline auto CoreIndependentInputSourceController::CreateForIVisualElement(Windows::UI::Composition::IVisualElement const& visualElement)
+    {
+        return impl::call_factory<CoreIndependentInputSourceController, ICoreIndependentInputSourceControllerStatics>([&](ICoreIndependentInputSourceControllerStatics const& f) { return f.CreateForIVisualElement(visualElement); });
     }
     inline auto CoreWindow::GetForCurrentThread()
     {
@@ -3234,6 +3399,8 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Core::ICoreDispatcher> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Core::ICoreDispatcher2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Core::ICoreDispatcherWithTaskPriority> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::ICoreIndependentInputSourceController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::ICoreIndependentInputSourceControllerStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Core::ICoreInputSourceBase> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Core::ICoreKeyboardInputSource> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Core::ICoreKeyboardInputSource2> : winrt::impl::hash_base {};
@@ -3280,6 +3447,7 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Core::CoreCursor> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Core::CoreDispatcher> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Core::CoreIndependentInputSource> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Core::CoreIndependentInputSourceController> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Core::CoreWindow> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Core::CoreWindowDialog> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Core::CoreWindowEventArgs> : winrt::impl::hash_base {};
@@ -3321,7 +3489,7 @@ WINRT_EXPORT namespace winrt
             {
             }
 
-            void await_suspend(std::experimental::coroutine_handle<> handle) const
+            void await_suspend(impl::coroutine_handle<> handle) const
             {
                 m_dispatcher.RunAsync(m_priority, [handle]
                     {
@@ -3338,7 +3506,7 @@ WINRT_EXPORT namespace winrt
         return awaitable{ dispatcher, priority };
     };
 
-#ifdef __cpp_coroutines
+#ifdef WINRT_IMPL_COROUTINES
     inline auto operator co_await(Windows::UI::Core::CoreDispatcher const& dispatcher)
     {
         return resume_foreground(dispatcher);

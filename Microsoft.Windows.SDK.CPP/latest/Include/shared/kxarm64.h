@@ -440,7 +440,7 @@ __FuncArea SETS OriginalArea
 
         EPILOG_NOP adrp    x16, __os_arm64x_dispatch_ret
         EPILOG_NOP ldr     x16, [x16, __os_arm64x_dispatch_ret]
-        EPILOG_NOP br      x16
+        EPILOG_END br      x16
 
         NESTED_END
 
@@ -475,7 +475,7 @@ __FuncArea SETS OriginalArea
 
         EPILOG_NOP adrp    x16, __os_arm64x_dispatch_ret
         EPILOG_NOP ldr     x16, [x16, __os_arm64x_dispatch_ret]
-        EPILOG_NOP br      x16
+        EPILOG_END br      x16
 
         NESTED_END
 
@@ -1006,9 +1006,18 @@ ValidLabel SETS "$ValidTarget"
         GENERATE_EXCEPTION_FRAME
         PROLOG_SAVE_REG_PAIR x19, x20, #-96!
         PROLOG_SAVE_REG_PAIR x21, x22, #16
+#if !defined(_M_ARM64EC)
         PROLOG_SAVE_REG_PAIR x23, x24, #32
+#else
+        PROLOG_NOP stp       xzr, xzr, [sp, #32]
+#endif
         PROLOG_SAVE_REG_PAIR x25, x26, #48
+#if !defined(_M_ARM64EC)
         PROLOG_SAVE_REG_PAIR x27, x28, #64
+#else
+        PROLOG_SAVE_REG      x27, #64
+        PROLOG_NOP str       xzr, [sp, #72]
+#endif
         PROLOG_SAVE_REG_PAIR fp, lr, #80
         MEND
 
@@ -1021,9 +1030,15 @@ ValidLabel SETS "$ValidTarget"
         MACRO
         RESTORE_EXCEPTION_STATE
         EPILOG_RESTORE_REG_PAIR fp, lr, #80
+#if !defined(_M_ARM64EC)
         EPILOG_RESTORE_REG_PAIR x27, x28, #64
+#else
+        EPILOG_RESTORE_REG      x27 , #64
+#endif
         EPILOG_RESTORE_REG_PAIR x25, x26, #48
+#if !defined(_M_ARM64EC)
         EPILOG_RESTORE_REG_PAIR x23, x24, #32
+#endif
         EPILOG_RESTORE_REG_PAIR x21, x22, #16
         EPILOG_RESTORE_REG_PAIR x19, x20, #96!
         MEND
@@ -1061,88 +1076,5 @@ ValidLabel SETS "$ValidTarget"
         ubfx   $xT2, $xAddress, #12, #3 ; index to the 4K page within the 8*4K span
         lsr    $xT1, $xT1, $xT2
         tst    $xT1, #1                 ; test the specific page
-
-        MEND
-
-        ;
-        ; Convert NZCV flags in the $Nzcv register into equivalent
-        ; AMD64 EFLAGS in the $Eflags register. The source register
-        ; is consumed as part of this operation.
-        ;
-
-        MACRO
-        CONVERT_NZCV_TO_EFLAGS $Eflags, $Nzcv
-
-        mov     $Eflags, #0x0202                ; start with IF=1 and hardcoded bit 1 set
-
-        lsr     $Nzcv, $Nzcv, #21               ; move SS (21) flag to bottom
-        bfi     $Eflags, $Nzcv, #8, #1          ; insert at bit 8 (T)
-        lsr     $Nzcv, $Nzcv, #7                ; move V (28) flag to bottom
-        bfi     $Eflags, $Nzcv, #11, #1         ; insert at bit 11 (O)
-        lsr     $Nzcv, $Nzcv, #1                ; move C (29) flag to bottom
-        bfi     $Eflags, $Nzcv, #0, #1          ; insert at bit 0 (C)
-        lsr     $Nzcv, $Nzcv, #1                ; move Z:N (30:31) flags to bottom
-        bfi     $Eflags, $Nzcv, #6, #2          ; insert at bits 6:7 (Z:S)
-
-        MEND
-
-        ;
-        ; Convert control and status flags in FPCR and FPSR formats
-        ; (in $Fpcr and $Fpsr registers) into a combined AMD64 MXCSR
-        ; register. The two source registers are consumed as part of
-        ; this operation.
-        ;
-
-        MACRO
-        CONVERT_FPCR_FPSR_TO_MXCSR $Mxcsr, $Fpcr, $Fpsr
-
-        ;
-        ; Status flags map 1:1, if set indicates an exception occured.
-        ;
-
-        and     $Mxcsr, $Fpsr, #1               ; MXCSR.IE[0] = FPSR.IOC[0]
-        lsr     $Fpsr, $Fpsr, #1                ; remove low bit
-        bfi     $Mxcsr, $Fpsr, #2, #4           ; MXCSR.ZE/OE/UE/PE[2:6] = FPSR.DZC/OFC/UFC/IXC[1:4]
-        lsr     $Fpsr, $Fpsr, #6                ; remove those bits and the next 2
-        bfi     $Mxcsr, $Fpsr, #1, #1           ; MXCSR.DE[1] = FPSR.IDC[7]
-
-        ;
-        ; Exception enable bit map 1:1, however on X64 set means mask (disable)
-        ; while on ARM64 set means enable the exception.  Thus the bit inversion.
-        ;
-
-        lsr     $Fpcr, $Fpcr, #8                ; skip low 8 bits
-        eor     $Fpcr, $Fpcr, #0xff             ; invert the masking bits
-        bfi     $Mxcsr, $Fpcr, #7, #1           ; MXCSR.IM[7] = ~FPCR.IOE[8]
-        lsr     $Fpcr, $Fpcr, #1                ; remove low bit
-        bfi     $Mxcsr, $Fpcr, #9, #4           ; MXCSR.ZM/OM/UM/PM[9:12] = ~FPCR.DZE/OFE/UFE/IXE[9:12]
-        lsr     $Fpcr, $Fpcr, #6                ; remove those bits and the next 2
-        bfi     $Mxcsr, $Fpcr, #8, #1           ; MXCSR.DM[8] = ~FPCR.IDE[15]
-
-        ;
-        ; Denormals Are Zeros has not direct mapping on ARM64, use the FZ16 bit
-        ; since half-precision floats do not exist in SSE.
-        ;
-
-        lsr     $Fpcr, $Fpcr, #4                ; move bit 19 down low
-        bfi     $Mxcsr, $Fpcr, #6, #1           ; MXCSR.DAZ[6] = FPCR.FZ[19]
-
-        ;
-        ; Rounding modes are the same on X64 and ARM64 except bit swapped in representation.
-        ; X64: 00=nearest 01=down 10=up 11=truncate
-        ; A64: 00=nearest 10=down 01=up 11=truncate
-        ;
-
-        lsr     $Fpcr, $Fpcr, #3                ; move bit 22 down low
-        bfi     $Mxcsr, $Fpcr, #14, #1          ; MXCSR.RC[13:14](upper) = FPCR.RMODE[22:23](lower)
-        lsr     $Fpcr, $Fpcr, #1                ; get upper bit of rmode in LSB
-        bfi     $Mxcsr, $Fpcr, #13, #1          ; MXCSR.RC[13:14](lower) = FPCR.RMODE[22:23](upper)
-
-        ;
-        ; Flush To Zero bit maps 1:1
-        ;
-
-        lsr     $Fpcr, $Fpcr, #1                ; shift bit 24 down low
-        bfi     $Mxcsr, $Fpcr, #15, #1          ; MXCSR.FZ = FPCR.FZ
 
         MEND

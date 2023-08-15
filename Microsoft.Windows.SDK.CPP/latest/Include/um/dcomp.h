@@ -160,6 +160,81 @@ STDAPI DCompositionAttachMouseDragToHwnd(
     _In_ BOOL enable
     );
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_CO)
+
+
+//+-----------------------------------------------------------------------------
+//
+//  Function:
+//      DCompositionGetCurrentFrameId
+//
+//  Synopsis:
+//      Returns the frameId of the most recently started composition frame.
+//
+//------------------------------------------------------------------------------
+STDAPI DCompositionGetFrameId(
+    _In_ COMPOSITION_FRAME_ID_TYPE frameIdType,
+    _Out_ COMPOSITION_FRAME_ID* frameId);
+
+//+-----------------------------------------------------------------------------
+//
+//  Function:
+//      DCompositionGetStatistics
+//
+//  Synopsis:
+//      Returns statistics for the requested frame, as well as an optional list
+//      of all target ids that existed at that time.
+//
+//------------------------------------------------------------------------------
+STDAPI DCompositionGetStatistics(
+    _In_ COMPOSITION_FRAME_ID frameId,
+    _Out_ COMPOSITION_FRAME_STATS* frameStats,
+    _In_ UINT targetIdCount,
+    _Out_writes_opt_(targetCount) COMPOSITION_TARGET_ID* targetIds,
+    _Out_opt_ UINT* actualTargetIdCount);
+
+//+-----------------------------------------------------------------------------
+//
+//  Function:
+//      DCompositionGetCompositorStatistics
+//
+//  Synopsis:
+//      Returns compositor target statistics for the requested frame.
+//
+//------------------------------------------------------------------------------
+STDAPI DCompositionGetTargetStatistics(
+    _In_ COMPOSITION_FRAME_ID frameId,
+    _In_ const COMPOSITION_TARGET_ID* targetId,
+    _Out_ COMPOSITION_TARGET_STATS* targetStats);
+
+//+-----------------------------------------------------------------------------
+//
+//  Function:
+//      DCompositionBoostCompositorClock
+//
+//  Synopsis:
+//      Requests compositor to temporarily increase framerate.
+//
+//------------------------------------------------------------------------------
+STDAPI DCompositionBoostCompositorClock(
+    _In_ BOOL enable);
+
+//+-----------------------------------------------------------------------------
+//
+//  Function:
+//      DCompositionWaitForCompositorClock
+//
+//  Synopsis:
+//      Waits for a compositor clock tick, other events, or a timeout.
+//
+//------------------------------------------------------------------------------
+STDAPI_(DWORD) DCompositionWaitForCompositorClock(
+    _In_range_(0, DCOMPOSITION_MAX_WAITFORCOMPOSITORCLOCK_OBJECTS) UINT count,
+    _In_reads_opt_(count) const HANDLE* handles,
+    _In_ DWORD timeoutInMs);
+
+#endif  // (NTDDI_VERSION >= NTDDI_WIN10_CO)
+
 //+-----------------------------------------------------------------------------
 //
 //  Interface:

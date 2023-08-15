@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -22,6 +22,11 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Calls::Background
     {
         PhoneIncomingCallDismissedTriggerDetails(std::nullptr_t) noexcept {}
         PhoneIncomingCallDismissedTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallDismissedTriggerDetails(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PhoneIncomingCallNotificationTriggerDetails : Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallNotificationTriggerDetails
+    {
+        PhoneIncomingCallNotificationTriggerDetails(std::nullptr_t) noexcept {}
+        PhoneIncomingCallNotificationTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallNotificationTriggerDetails(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) PhoneLineChangedTriggerDetails : Windows::ApplicationModel::Calls::Background::IPhoneLineChangedTriggerDetails
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,13 +9,35 @@
 #include "winrt/impl/Windows.UI.ViewManagement.Core.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::ViewManagement::Core
 {
+    struct __declspec(empty_bases) CoreFrameworkInputView : Windows::UI::ViewManagement::Core::ICoreFrameworkInputView
+    {
+        CoreFrameworkInputView(std::nullptr_t) noexcept {}
+        CoreFrameworkInputView(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::ViewManagement::Core::ICoreFrameworkInputView(ptr, take_ownership_from_abi) {}
+        static auto GetForUIContext(Windows::UI::UIContext const& context);
+        static auto GetForCurrentView();
+    };
+    struct __declspec(empty_bases) CoreFrameworkInputViewAnimationStartingEventArgs : Windows::UI::ViewManagement::Core::ICoreFrameworkInputViewAnimationStartingEventArgs
+    {
+        CoreFrameworkInputViewAnimationStartingEventArgs(std::nullptr_t) noexcept {}
+        CoreFrameworkInputViewAnimationStartingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::ViewManagement::Core::ICoreFrameworkInputViewAnimationStartingEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) CoreFrameworkInputViewOcclusionsChangedEventArgs : Windows::UI::ViewManagement::Core::ICoreFrameworkInputViewOcclusionsChangedEventArgs
+    {
+        CoreFrameworkInputViewOcclusionsChangedEventArgs(std::nullptr_t) noexcept {}
+        CoreFrameworkInputViewOcclusionsChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::ViewManagement::Core::ICoreFrameworkInputViewOcclusionsChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) CoreInputView : Windows::UI::ViewManagement::Core::ICoreInputView,
-        impl::require<CoreInputView, Windows::UI::ViewManagement::Core::ICoreInputView2, Windows::UI::ViewManagement::Core::ICoreInputView3, Windows::UI::ViewManagement::Core::ICoreInputView4>
+        impl::require<CoreInputView, Windows::UI::ViewManagement::Core::ICoreInputView2, Windows::UI::ViewManagement::Core::ICoreInputView3, Windows::UI::ViewManagement::Core::ICoreInputView4, Windows::UI::ViewManagement::Core::ICoreInputView5>
     {
         CoreInputView(std::nullptr_t) noexcept {}
         CoreInputView(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::ViewManagement::Core::ICoreInputView(ptr, take_ownership_from_abi) {}
         static auto GetForCurrentView();
         static auto GetForUIContext(Windows::UI::UIContext const& context);
+    };
+    struct __declspec(empty_bases) CoreInputViewAnimationStartingEventArgs : Windows::UI::ViewManagement::Core::ICoreInputViewAnimationStartingEventArgs
+    {
+        CoreInputViewAnimationStartingEventArgs(std::nullptr_t) noexcept {}
+        CoreInputViewAnimationStartingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::ViewManagement::Core::ICoreInputViewAnimationStartingEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) CoreInputViewHidingEventArgs : Windows::UI::ViewManagement::Core::ICoreInputViewHidingEventArgs
     {

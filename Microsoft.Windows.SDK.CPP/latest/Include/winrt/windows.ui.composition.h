@@ -92,7 +92,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xc0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xe0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -1504,6 +1504,21 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CICompositionSpriteShape_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                interface ICompositionSupportsSystemBackdrop;
+            } /* Composition */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop ABI::Windows::UI::Composition::ICompositionSupportsSystemBackdrop
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CICompositionSurface_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CICompositionSurface_FWD_DEFINED__
 namespace ABI {
@@ -1818,6 +1833,21 @@ namespace ABI {
 #define __x_ABI_CWindows_CUI_CComposition_CICompositorStatics ABI::Windows::UI::Composition::ICompositorStatics
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CICompositorStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                interface ICompositorWithBlurredWallpaperBackdropBrush;
+            } /* Composition */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush ABI::Windows::UI::Composition::ICompositorWithBlurredWallpaperBackdropBrush
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CICompositorWithProjectedShadow_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CICompositorWithProjectedShadow_FWD_DEFINED__
@@ -9992,6 +10022,43 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CICompositionSpriteShap
 
 /*
  *
+ * Interface Windows.UI.Composition.ICompositionSupportsSystemBackdrop
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if !defined(____x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_ICompositionSupportsSystemBackdrop[] = L"Windows.UI.Composition.ICompositionSupportsSystemBackdrop";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                MIDL_INTERFACE("397dafe4-b6c2-5bb9-951d-f5707de8b7bc")
+                ICompositionSupportsSystemBackdrop : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE get_SystemBackdrop(
+                        ABI::Windows::UI::Composition::ICompositionBrush** value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE put_SystemBackdrop(
+                        ABI::Windows::UI::Composition::ICompositionBrush* value
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_ICompositionSupportsSystemBackdrop = _uuidof(ICompositionSupportsSystemBackdrop);
+            } /* Composition */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop;
+#endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+/*
+ *
  * Interface Windows.UI.Composition.ICompositionSurface
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 2.0
@@ -11078,6 +11145,42 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CICompositorStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CICompositorStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
+
+/*
+ *
+ * Interface Windows.UI.Composition.ICompositorWithBlurredWallpaperBackdropBrush
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Composition.Compositor
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if !defined(____x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_ICompositorWithBlurredWallpaperBackdropBrush[] = L"Windows.UI.Composition.ICompositorWithBlurredWallpaperBackdropBrush";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                MIDL_INTERFACE("0d8fb190-f122-5b8d-9fdd-543b0d8eb7f3")
+                ICompositorWithBlurredWallpaperBackdropBrush : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE TryCreateBlurredWallpaperBackdropBrush(
+                        ABI::Windows::UI::Composition::ICompositionBackdropBrush** result
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_ICompositorWithBlurredWallpaperBackdropBrush = _uuidof(ICompositorWithBlurredWallpaperBackdropBrush);
+            } /* Composition */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush;
+#endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
 
 /*
  *
@@ -15434,6 +15537,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.Composition.ICompositorWithRadialGradient
  *    Windows.UI.Composition.ICompositorWithVisualSurface
  *    Windows.UI.Composition.ICompositor7
+ *    Windows.UI.Composition.ICompositorWithBlurredWallpaperBackdropBrush
  *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
@@ -16863,6 +16967,12 @@ typedef interface __x_ABI_CWindows_CUI_CComposition_CICompositionSpriteShape __x
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CICompositionSpriteShape_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop __x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop;
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CICompositionSurface_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CICompositionSurface_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CComposition_CICompositionSurface __x_ABI_CWindows_CUI_CComposition_CICompositionSurface;
@@ -16988,6 +17098,12 @@ typedef interface __x_ABI_CWindows_CUI_CComposition_CICompositor7 __x_ABI_CWindo
 typedef interface __x_ABI_CWindows_CUI_CComposition_CICompositorStatics __x_ABI_CWindows_CUI_CComposition_CICompositorStatics;
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CICompositorStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush __x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush;
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CICompositorWithProjectedShadow_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CICompositorWithProjectedShadow_FWD_DEFINED__
@@ -28555,6 +28671,78 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CICompositionSpriteShap
 
 /*
  *
+ * Interface Windows.UI.Composition.ICompositionSupportsSystemBackdrop
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if !defined(____x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_ICompositionSupportsSystemBackdrop[] = L"Windows.UI.Composition.ICompositionSupportsSystemBackdrop";
+typedef struct __x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdropVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_SystemBackdrop)(__x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop* This,
+        __x_ABI_CWindows_CUI_CComposition_CICompositionBrush** value);
+    HRESULT (STDMETHODCALLTYPE* put_SystemBackdrop)(__x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop* This,
+        __x_ABI_CWindows_CUI_CComposition_CICompositionBrush* value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdropVtbl;
+
+interface __x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdropVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_get_SystemBackdrop(This, value) \
+    ((This)->lpVtbl->get_SystemBackdrop(This, value))
+
+#define __x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_put_SystemBackdrop(This, value) \
+    ((This)->lpVtbl->put_SystemBackdrop(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop;
+#endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CICompositionSupportsSystemBackdrop_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+
+/*
+ *
  * Interface Windows.UI.Composition.ICompositionSurface
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 2.0
@@ -30536,6 +30724,75 @@ interface __x_ABI_CWindows_CUI_CComposition_CICompositorStatics
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CICompositorStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CICompositorStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
+
+/*
+ *
+ * Interface Windows.UI.Composition.ICompositorWithBlurredWallpaperBackdropBrush
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Composition.Compositor
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
+#if !defined(____x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_ICompositorWithBlurredWallpaperBackdropBrush[] = L"Windows.UI.Composition.ICompositorWithBlurredWallpaperBackdropBrush";
+typedef struct __x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrushVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* TryCreateBlurredWallpaperBackdropBrush)(__x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush* This,
+        __x_ABI_CWindows_CUI_CComposition_CICompositionBackdropBrush** result);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrushVtbl;
+
+interface __x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrushVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_TryCreateBlurredWallpaperBackdropBrush(This, result) \
+    ((This)->lpVtbl->TryCreateBlurredWallpaperBackdropBrush(This, result))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush;
+#endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CICompositorWithBlurredWallpaperBackdropBrush_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
 
 /*
  *
@@ -37433,6 +37690,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.Composition.ICompositorWithRadialGradient
  *    Windows.UI.Composition.ICompositorWithVisualSurface
  *    Windows.UI.Composition.ICompositor7
+ *    Windows.UI.Composition.ICompositorWithBlurredWallpaperBackdropBrush
  *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment

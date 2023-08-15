@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -16,7 +16,8 @@ WINRT_EXPORT namespace winrt::Windows::UI::Input::Inking::Core
         CoreIncrementalInkStroke(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Input::Inking::Core::ICoreIncrementalInkStroke(ptr, take_ownership_from_abi) {}
         CoreIncrementalInkStroke(Windows::UI::Input::Inking::InkDrawingAttributes const& drawingAttributes, Windows::Foundation::Numerics::float3x2 const& pointTransform);
     };
-    struct __declspec(empty_bases) CoreInkIndependentInputSource : Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSource
+    struct __declspec(empty_bases) CoreInkIndependentInputSource : Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSource,
+        impl::require<CoreInkIndependentInputSource, Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSource2>
     {
         CoreInkIndependentInputSource(std::nullptr_t) noexcept {}
         CoreInkIndependentInputSource(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSource(ptr, take_ownership_from_abi) {}

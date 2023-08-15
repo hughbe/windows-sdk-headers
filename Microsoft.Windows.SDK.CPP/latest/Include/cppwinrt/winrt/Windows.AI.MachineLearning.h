@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,8 @@
 #ifndef WINRT_Windows_AI_MachineLearning_H
 #define WINRT_Windows_AI_MachineLearning_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.201201.7"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Graphics.2.h"
@@ -40,6 +41,12 @@ namespace winrt::impl
     {
         uint32_t value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::AI::MachineLearning::IImageFeatureDescriptor)->get_Height(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::AI::MachineLearning::LearningModelPixelRange) consume_Windows_AI_MachineLearning_IImageFeatureDescriptor2<D>::PixelRange() const
+    {
+        Windows::AI::MachineLearning::LearningModelPixelRange value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::AI::MachineLearning::IImageFeatureDescriptor2)->get_PixelRange(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(Windows::Media::VideoFrame) consume_Windows_AI_MachineLearning_IImageFeatureValue<D>::VideoFrame() const
@@ -941,6 +948,19 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             *value = detach_from<uint32_t>(this->shim().Height());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::AI::MachineLearning::IImageFeatureDescriptor2> : produce_base<D, Windows::AI::MachineLearning::IImageFeatureDescriptor2>
+    {
+        int32_t __stdcall get_PixelRange(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::AI::MachineLearning::LearningModelPixelRange>(this->shim().PixelRange());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2849,6 +2869,7 @@ namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Windows::AI::MachineLearning::IImageFeatureDescriptor> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::AI::MachineLearning::IImageFeatureDescriptor2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::MachineLearning::IImageFeatureValue> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::MachineLearning::IImageFeatureValueStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::AI::MachineLearning::ILearningModel> : winrt::impl::hash_base {};

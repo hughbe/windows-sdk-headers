@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,8 @@
 #ifndef WINRT_Windows_ApplicationModel_Calls_Background_H
 #define WINRT_Windows_ApplicationModel_Calls_Background_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.201201.7"
 #include "winrt/Windows.ApplicationModel.Calls.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.ApplicationModel.Calls.Background.2.h"
@@ -77,6 +78,18 @@ namespace winrt::impl
         Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedReason value{};
         check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallDismissedTriggerDetails)->get_Reason(reinterpret_cast<int32_t*>(&value)));
         return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_ApplicationModel_Calls_Background_IPhoneIncomingCallNotificationTriggerDetails<D>::LineId() const
+    {
+        winrt::guid value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallNotificationTriggerDetails)->get_LineId(put_abi(value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Calls_Background_IPhoneIncomingCallNotificationTriggerDetails<D>::CallId() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallNotificationTriggerDetails)->get_CallId(&value));
+        return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_ApplicationModel_Calls_Background_IPhoneLineChangedTriggerDetails<D>::LineId() const
     {
@@ -217,6 +230,27 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallNotificationTriggerDetails> : produce_base<D, Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallNotificationTriggerDetails>
+    {
+        int32_t __stdcall get_LineId(winrt::guid* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::guid>(this->shim().LineId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CallId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().CallId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, Windows::ApplicationModel::Calls::Background::IPhoneLineChangedTriggerDetails> : produce_base<D, Windows::ApplicationModel::Calls::Background::IPhoneLineChangedTriggerDetails>
     {
         int32_t __stdcall get_LineId(winrt::guid* result) noexcept final try
@@ -311,11 +345,13 @@ namespace std
     template<> struct hash<winrt::Windows::ApplicationModel::Calls::Background::IPhoneCallBlockedTriggerDetails> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::Calls::Background::IPhoneCallOriginDataRequestTriggerDetails> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallDismissedTriggerDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Calls::Background::IPhoneIncomingCallNotificationTriggerDetails> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::Calls::Background::IPhoneLineChangedTriggerDetails> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::Calls::Background::IPhoneNewVoicemailMessageTriggerDetails> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallNotificationTriggerDetails> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails> : winrt::impl::hash_base {};
 #endif

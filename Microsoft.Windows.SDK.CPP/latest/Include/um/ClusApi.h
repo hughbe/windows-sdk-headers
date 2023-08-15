@@ -1,4 +1,4 @@
-﻿
+
 /*++
 
 Copyright (c) 1996 Microsoft Corporation.  All rights reserved.
@@ -36,6 +36,7 @@ Revision History:
 #define NT10_MAJOR_VERSION          9
 #define NT11_MAJOR_VERSION          10
 #define NT12_MAJOR_VERSION          11
+#define NT13_MAJOR_VERSION          12
 
 // NT10 cluster upgrade versions (eg technical previews)
 #define WS2016_TP4_UPGRADE_VERSION  6
@@ -52,6 +53,9 @@ Revision History:
 #define NINETEEN_H2_UPGRADE_VERSION  2
 #define MN_UPGRADE_VERSION           3
 #define FE_UPGRADE_VERSION           4
+
+// NT13 upgrade versions
+#define CA_UPGRADE_VERSION           1
 
 #define HCI_UPGRADE_BIT 0x8000
 
@@ -3036,18 +3040,18 @@ CLUSTER_RESOURCE_STATE
 WINAPI
 GetClusterResourceState(
     _In_ HRESOURCE hResource,
-    _Out_writes_to_opt_(*lpcchNodeName, *lpcchNodeName + 1) LPWSTR lpszNodeName,
+    _Out_writes_to_opt_(*lpcchNodeName, *lpcchNodeName) LPWSTR lpszNodeName,
     _Inout_opt_ LPDWORD lpcchNodeName,
-    _Out_writes_to_opt_(*lpcchGroupName, *lpcchGroupName + 1) LPWSTR lpszGroupName,
+    _Out_writes_to_opt_(*lpcchGroupName, *lpcchGroupName) LPWSTR lpszGroupName,
     _Inout_opt_ LPDWORD lpcchGroupName
     );
 
 typedef CLUSTER_RESOURCE_STATE
 (WINAPI * PCLUSAPI_GET_CLUSTER_RESOURCE_STATE)(
     _In_ HRESOURCE hResource,
-    _Out_writes_to_opt_(*lpcchNodeName, *lpcchNodeName + 1) LPWSTR lpszNodeName,
+    _Out_writes_to_opt_(*lpcchNodeName, *lpcchNodeName) LPWSTR lpszNodeName,
     _Inout_opt_ LPDWORD lpcchNodeName,
-    _Out_writes_to_opt_(*lpcchGroupName, *lpcchGroupName + 1) LPWSTR lpszGroupName,
+    _Out_writes_to_opt_(*lpcchGroupName, *lpcchGroupName) LPWSTR lpszGroupName,
     _Inout_opt_ LPDWORD lpcchGroupName
     );
 
@@ -4976,6 +4980,9 @@ typedef enum CLUSCTL_CLUSTER_CODES {
 
         CLUSCTL_CLUSTER_FORCE_FLUSH_DB = 
             CLUSCTL_CLUSTER_CODE( CLCTL_FORCE_DB_FLUSH ),
+
+       CLUSCTL_CLUSTER_GET_CLMUSR_TOKEN =
+               CLUSCTL_CLUSTER_CODE( CLCTL_NETNAME_GET_VIRTUAL_SERVER_TOKEN ),
 
 } CLUSCTL_CLUSTER_CODES;
 
@@ -7324,6 +7331,8 @@ typedef DWORD
 #define CLUSREG_NAME_RESTYPE_DUMP_SERVICES      L"DumpServices"
 #define CLUSREG_NAME_RESTYPE_ENABLED_EVENT_LOGS L"EnabledEventLogs"
 #define CLUSREG_NAME_RESTYPE_MAX_MONITORS       L"MaximumMonitors"
+#define CLUSREG_NAME_RESTYPE_WPR_START_AFTER    L"WprStartAfter"
+#define CLUSREG_NAME_RESTYPE_WPR_PROFILES       L"WprProfiles"
 
 //
 // Network common property names

@@ -695,7 +695,7 @@ typedef enum {
     NVME_FEATURE_READONLY_WRITETHROUGH_MODE             = 0xC2, // This is from OCP NVMe Cloud SSD spec.
     NVME_FEATURE_CLEAR_PCIE_CORRECTABLE_ERROR_COUNTERS  = 0xC3, // This is from OCP NVMe Cloud SSD spec.
     NVME_FEATURE_ENABLE_IEEE1667_SILO                   = 0xC4, // This is from OCP NVMe Cloud SSD spec.
-    NVME_FEATURE_PLP_HEALTH_MONITOR                     = 0Xc5, // This is from OCP NVMe Cloud SSD spec.
+    NVME_FEATURE_PLP_HEALTH_MONITOR                     = 0xC5, // This is from OCP NVMe Cloud SSD spec.
 
 } NVME_FEATURES;
 

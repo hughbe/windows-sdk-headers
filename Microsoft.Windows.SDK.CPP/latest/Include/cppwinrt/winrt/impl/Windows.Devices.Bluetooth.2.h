@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -27,7 +27,7 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Bluetooth
         static auto FromParts(Windows::Devices::Bluetooth::BluetoothMajorClass const& majorClass, Windows::Devices::Bluetooth::BluetoothMinorClass const& minorClass, Windows::Devices::Bluetooth::BluetoothServiceCapabilities const& serviceCapabilities);
     };
     struct __declspec(empty_bases) BluetoothDevice : Windows::Devices::Bluetooth::IBluetoothDevice,
-        impl::require<BluetoothDevice, Windows::Foundation::IClosable, Windows::Devices::Bluetooth::IBluetoothDevice2, Windows::Devices::Bluetooth::IBluetoothDevice3, Windows::Devices::Bluetooth::IBluetoothDevice4, Windows::Devices::Bluetooth::IBluetoothDevice5>
+        impl::require<BluetoothDevice, Windows::Devices::Bluetooth::IBluetoothDevice2, Windows::Devices::Bluetooth::IBluetoothDevice3, Windows::Devices::Bluetooth::IBluetoothDevice4, Windows::Devices::Bluetooth::IBluetoothDevice5, Windows::Foundation::IClosable>
     {
         BluetoothDevice(std::nullptr_t) noexcept {}
         BluetoothDevice(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::IBluetoothDevice(ptr, take_ownership_from_abi) {}
@@ -112,8 +112,23 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Bluetooth
         [[nodiscard]] static auto LocationPod();
         [[nodiscard]] static auto LocationNavigationPod();
     };
+    struct __declspec(empty_bases) BluetoothLEConnectionParameters : Windows::Devices::Bluetooth::IBluetoothLEConnectionParameters
+    {
+        BluetoothLEConnectionParameters(std::nullptr_t) noexcept {}
+        BluetoothLEConnectionParameters(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::IBluetoothLEConnectionParameters(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) BluetoothLEConnectionPhy : Windows::Devices::Bluetooth::IBluetoothLEConnectionPhy
+    {
+        BluetoothLEConnectionPhy(std::nullptr_t) noexcept {}
+        BluetoothLEConnectionPhy(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::IBluetoothLEConnectionPhy(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) BluetoothLEConnectionPhyInfo : Windows::Devices::Bluetooth::IBluetoothLEConnectionPhyInfo
+    {
+        BluetoothLEConnectionPhyInfo(std::nullptr_t) noexcept {}
+        BluetoothLEConnectionPhyInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::IBluetoothLEConnectionPhyInfo(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) BluetoothLEDevice : Windows::Devices::Bluetooth::IBluetoothLEDevice,
-        impl::require<BluetoothLEDevice, Windows::Foundation::IClosable, Windows::Devices::Bluetooth::IBluetoothLEDevice2, Windows::Devices::Bluetooth::IBluetoothLEDevice3, Windows::Devices::Bluetooth::IBluetoothLEDevice4, Windows::Devices::Bluetooth::IBluetoothLEDevice5>
+        impl::require<BluetoothLEDevice, Windows::Devices::Bluetooth::IBluetoothLEDevice2, Windows::Devices::Bluetooth::IBluetoothLEDevice3, Windows::Devices::Bluetooth::IBluetoothLEDevice4, Windows::Devices::Bluetooth::IBluetoothLEDevice5, Windows::Devices::Bluetooth::IBluetoothLEDevice6, Windows::Foundation::IClosable>
     {
         BluetoothLEDevice(std::nullptr_t) noexcept {}
         BluetoothLEDevice(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::IBluetoothLEDevice(ptr, take_ownership_from_abi) {}
@@ -127,6 +142,20 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Bluetooth
         static auto GetDeviceSelectorFromBluetoothAddress(uint64_t bluetoothAddress, Windows::Devices::Bluetooth::BluetoothAddressType const& bluetoothAddressType);
         static auto GetDeviceSelectorFromAppearance(Windows::Devices::Bluetooth::BluetoothLEAppearance const& appearance);
         static auto FromBluetoothAddressAsync(uint64_t bluetoothAddress, Windows::Devices::Bluetooth::BluetoothAddressType const& bluetoothAddressType);
+    };
+    struct __declspec(empty_bases) BluetoothLEPreferredConnectionParameters : Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParameters
+    {
+        BluetoothLEPreferredConnectionParameters(std::nullptr_t) noexcept {}
+        BluetoothLEPreferredConnectionParameters(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParameters(ptr, take_ownership_from_abi) {}
+        [[nodiscard]] static auto Balanced();
+        [[nodiscard]] static auto ThroughputOptimized();
+        [[nodiscard]] static auto PowerOptimized();
+    };
+    struct __declspec(empty_bases) BluetoothLEPreferredConnectionParametersRequest : Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParametersRequest,
+        impl::require<BluetoothLEPreferredConnectionParametersRequest, Windows::Foundation::IClosable>
+    {
+        BluetoothLEPreferredConnectionParametersRequest(std::nullptr_t) noexcept {}
+        BluetoothLEPreferredConnectionParametersRequest(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParametersRequest(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) BluetoothSignalStrengthFilter : Windows::Devices::Bluetooth::IBluetoothSignalStrengthFilter
     {

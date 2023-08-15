@@ -356,6 +356,8 @@ namespace Windows
 
             interface ICompositionSpriteShape;
 
+            interface ICompositionSupportsSystemBackdrop;
+
             interface ICompositionSurface;
 
             interface ICompositionSurfaceBrush;
@@ -397,6 +399,8 @@ namespace Windows
             interface ICompositor7;
 
             interface ICompositorStatics;
+
+            interface ICompositorWithBlurredWallpaperBackdropBrush;
 
             interface ICompositorWithProjectedShadow;
 
@@ -1990,6 +1994,14 @@ namespace Windows
                 [propput] HRESULT StrokeThickness([in] FLOAT value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+            [uuid(397DAFE4-B6C2-5BB9-951D-F5707DE8B7BC)]
+            interface ICompositionSupportsSystemBackdrop : IInspectable
+            {
+                [propget] HRESULT SystemBackdrop([out] [retval] Windows.UI.Composition.CompositionBrush** value);
+                [propput] HRESULT SystemBackdrop([in] Windows.UI.Composition.CompositionBrush* value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
             [uuid(1527540D-42C7-47A6-A408-668F79A90DFB)]
             interface ICompositionSurface : IInspectable
@@ -2255,6 +2267,14 @@ namespace Windows
             {
                 [propget] HRESULT MaxGlobalPlaybackRate([out] [retval] FLOAT* value);
                 [propget] HRESULT MinGlobalPlaybackRate([out] [retval] FLOAT* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+            [exclusiveto(Windows.UI.Composition.Compositor)]
+            [uuid(0D8FB190-F122-5B8D-9FDD-543B0D8EB7F3)]
+            interface ICompositorWithBlurredWallpaperBackdropBrush : IInspectable
+            {
+                HRESULT TryCreateBlurredWallpaperBackdropBrush([out] [retval] Windows.UI.Composition.CompositionBackdropBrush** result);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 8.0)]
@@ -3548,6 +3568,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Composition.ICompositorWithRadialGradient;
                 [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Composition.ICompositorWithVisualSurface;
                 [contract(Windows.Foundation.UniversalApiContract, 12.0)] interface Windows.UI.Composition.ICompositor7;
+                [contract(Windows.Foundation.UniversalApiContract, 13.0)] interface Windows.UI.Composition.ICompositorWithBlurredWallpaperBackdropBrush;
                 interface Windows.Foundation.IClosable;
             }
 

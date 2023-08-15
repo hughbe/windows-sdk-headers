@@ -4589,7 +4589,8 @@ typedef enum _KERB_PROTOCOL_MESSAGE_TYPE {
 #endif
 #if (_WIN32_WINNT >= 0x0A00)
     KerbRetrieveKeyTabMessage,
-    KerbRefreshPolicyMessage
+    KerbRefreshPolicyMessage,
+    KerbPrintCloudKerberosDebugMessage,
 #endif
 } KERB_PROTOCOL_MESSAGE_TYPE, *PKERB_PROTOCOL_MESSAGE_TYPE;
 
@@ -4954,6 +4955,32 @@ typedef struct _KERB_REFRESH_POLICY_RESPONSE
     KERB_PROTOCOL_MESSAGE_TYPE  MessageType;
     ULONG                       Flags;
 } KERB_REFRESH_POLICY_RESPONSE, *PKERB_REFRESH_POLICY_RESPONSE;
+
+typedef struct _KERB_CLOUD_KERBEROS_DEBUG_REQUEST
+{
+    KERB_PROTOCOL_MESSAGE_TYPE MessageType;
+    LUID LogonId;
+} KERB_CLOUD_KERBEROS_DEBUG_REQUEST, *PKERB_CLOUD_KERBEROS_DEBUG_REQUEST;
+
+typedef struct _KERB_CLOUD_KERBEROS_DEBUG_RESPONSE
+{
+    KERB_PROTOCOL_MESSAGE_TYPE MessageType;
+    ULONG Version;
+    ULONG Length; // specified in bytes
+    ULONG Data[ANYSIZE_ARRAY];
+} KERB_CLOUD_KERBEROS_DEBUG_RESPONSE, *PKERB_CLOUD_KERBEROS_DEBUG_RESPONSE;
+
+#define KERB_CLOUD_KERBEROS_DEBUG_DATA_VERSION 0
+
+typedef struct _KERB_CLOUD_KERBEROS_DEBUG_DATA_V0
+{
+    int EnabledByPolicy : 1;
+    int AsRepCallbackPresent : 1;
+    int AsRepCallbackUsed : 1;
+    int CloudReferralTgtAvailable : 1;
+    int SpnOracleConfigured : 1;
+    int KdcProxyPresent : 1;
+} KERB_CLOUD_KERBEROS_DEBUG_DATA_V0, *PKERB_CLOUD_KERBEROS_DEBUG_DATA_V0;
 
 #endif
 

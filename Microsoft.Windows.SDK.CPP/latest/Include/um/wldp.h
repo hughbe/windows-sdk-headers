@@ -36,8 +36,11 @@ Abstract:
 #define WLDP_QUERYWINDOWSLOCKDOWNRESTRICTION_FN "WldpQueryWindowsLockdownRestriction"
 #define WLDP_ISAPPAPPROVEDBYPOLICY_FN       "WldpIsAppApprovedByPolicy"
 #define WLDP_QUERYPOLICYSETTINGENABLED_FN   "WldpQueryPolicySettingEnabled"
+#define WLDP_QUERYPOLICYSETTINGENABLED2_FN   "WldpQueryPolicySettingEnabled2"
 #define WLDP_ISWCOSPRODUCTIONCONFIGURATION_FN     "WldpIsWcosProductionConfiguration"
 #define WLDP_RESETWCOSPRODUCTIONCONFIGURATION_FN     "WldpResetWcosProductionConfiguration"
+#define WLDP_ISPRODUCTIONCONFIGURATION_FN   "WldpIsProductionConfiguration"
+#define WLDP_RESETPRODUCTIONCONFIGURATION_FN   "WldpResetProductionConfiguration"
 
 //
 //  Policy state bits.
@@ -436,20 +439,51 @@ typedef HRESULT(WINAPI *PWLDP_QUERYPOLICYSETTINGENABLED_API)(
     _Out_ PBOOL Enabled
     );
 
+HRESULT
+WINAPI
+WldpQueryPolicySettingEnabled2(
+    _In_ PCWSTR SettingString,
+    _Out_ PBOOL Enabled
+);
+
+typedef HRESULT(WINAPI *PWLDP_QUERYPOLICYSETTINGENABLED2_API)(
+    _In_ PCWSTR Setting,
+    _Out_ PBOOL Enabled
+    );
+
 //
-//    This function checks the security watermark state of the system
+//    This function checks the security watermark state of 10x system
 //
-STDAPI
+HRESULT
+WINAPI
 WldpIsWcosProductionConfiguration(
     _Out_ PBOOL IsProductionConfiguration
 );
 
 typedef HRESULT(WINAPI *PWLDP_ISWCOSPRODUCTIONCONFIGURATION_API)(_Out_ PBOOL IsProductionConfiguration);
 
-STDAPI
+HRESULT
+WINAPI
 WldpResetWcosProductionConfiguration();
 
 typedef HRESULT(WINAPI *PWLDP_RESETWCOSPRODUCTIONCONFIGURATION_API)();
+
+//
+//    This function checks the security configuration state of the non-10x system
+//
+HRESULT
+WINAPI
+WldpIsProductionConfiguration(
+    _Out_ PBOOL IsProductionConfiguration
+);
+
+typedef HRESULT(WINAPI *PWLDP_ISPRODUCTIONCONFIGURATION_API)(_Out_ PBOOL IsProductionConfiguration);
+
+HRESULT
+WINAPI
+WldpResetProductionConfiguration(VOID);
+
+typedef HRESULT(WINAPI *PWLDP_RESETPRODUCTIONCONFIGURATION_API)(VOID);
 
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_MN */
 

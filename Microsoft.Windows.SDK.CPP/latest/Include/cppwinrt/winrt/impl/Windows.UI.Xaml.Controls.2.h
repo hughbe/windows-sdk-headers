@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -393,7 +393,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
     };
     struct __declspec(empty_bases) CalendarView : Windows::UI::Xaml::Controls::ICalendarView,
         impl::base<CalendarView, Windows::UI::Xaml::Controls::Control, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
-        impl::require<CalendarView, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::Controls::IControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides6, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+        impl::require<CalendarView, Windows::UI::Xaml::Controls::ICalendarView2, Windows::UI::Xaml::Controls::IControl, Windows::UI::Xaml::Controls::IControl2, Windows::UI::Xaml::Controls::IControl3, Windows::UI::Xaml::Controls::IControl4, Windows::UI::Xaml::Controls::IControl5, Windows::UI::Xaml::Controls::IControl7, Windows::UI::Xaml::Controls::IControlProtected, Windows::UI::Xaml::Controls::IControlOverrides, Windows::UI::Xaml::Controls::IControlOverrides6, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
     {
         CalendarView(std::nullptr_t) noexcept {}
         CalendarView(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::ICalendarView(ptr, take_ownership_from_abi) {}
@@ -449,6 +449,30 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
         [[nodiscard]] static auto VerticalFirstOfMonthLabelAlignmentProperty();
         [[nodiscard]] static auto CalendarItemBorderThicknessProperty();
         [[nodiscard]] static auto CalendarViewDayItemStyleProperty();
+        [[nodiscard]] static auto SelectedDisabledBorderBrushProperty();
+        [[nodiscard]] static auto TodaySelectedInnerBorderBrushProperty();
+        [[nodiscard]] static auto BlackoutStrikethroughBrushProperty();
+        [[nodiscard]] static auto BlackoutBackgroundProperty();
+        [[nodiscard]] static auto CalendarItemHoverBackgroundProperty();
+        [[nodiscard]] static auto CalendarItemPressedBackgroundProperty();
+        [[nodiscard]] static auto CalendarItemDisabledBackgroundProperty();
+        [[nodiscard]] static auto TodayBackgroundProperty();
+        [[nodiscard]] static auto TodayBlackoutBackgroundProperty();
+        [[nodiscard]] static auto TodayHoverBackgroundProperty();
+        [[nodiscard]] static auto TodayPressedBackgroundProperty();
+        [[nodiscard]] static auto TodayDisabledBackgroundProperty();
+        [[nodiscard]] static auto TodayBlackoutForegroundProperty();
+        [[nodiscard]] static auto SelectedHoverForegroundProperty();
+        [[nodiscard]] static auto SelectedPressedForegroundProperty();
+        [[nodiscard]] static auto SelectedDisabledForegroundProperty();
+        [[nodiscard]] static auto OutOfScopeHoverForegroundProperty();
+        [[nodiscard]] static auto OutOfScopePressedForegroundProperty();
+        [[nodiscard]] static auto DisabledForegroundProperty();
+        [[nodiscard]] static auto DayItemMarginProperty();
+        [[nodiscard]] static auto MonthYearItemMarginProperty();
+        [[nodiscard]] static auto FirstOfMonthLabelMarginProperty();
+        [[nodiscard]] static auto FirstOfYearDecadeLabelMarginProperty();
+        [[nodiscard]] static auto CalendarItemCornerRadiusProperty();
     };
     struct __declspec(empty_bases) CalendarViewDayItem : Windows::UI::Xaml::Controls::ICalendarViewDayItem,
         impl::base<CalendarViewDayItem, Windows::UI::Xaml::Controls::Control, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,

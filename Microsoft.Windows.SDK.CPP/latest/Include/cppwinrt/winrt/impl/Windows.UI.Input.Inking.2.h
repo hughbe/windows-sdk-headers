@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -22,7 +22,8 @@ WINRT_EXPORT namespace winrt::Windows::UI::Input::Inking
         InkDrawingAttributesPencilProperties(std::nullptr_t) noexcept {}
         InkDrawingAttributesPencilProperties(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Input::Inking::IInkDrawingAttributesPencilProperties(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) InkInputConfiguration : Windows::UI::Input::Inking::IInkInputConfiguration
+    struct __declspec(empty_bases) InkInputConfiguration : Windows::UI::Input::Inking::IInkInputConfiguration,
+        impl::require<InkInputConfiguration, Windows::UI::Input::Inking::IInkInputConfiguration2>
     {
         InkInputConfiguration(std::nullptr_t) noexcept {}
         InkInputConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Input::Inking::IInkInputConfiguration(ptr, take_ownership_from_abi) {}
@@ -88,7 +89,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Input::Inking
         InkRecognizerContainer();
     };
     struct __declspec(empty_bases) InkStroke : Windows::UI::Input::Inking::IInkStroke,
-        impl::require<InkStroke, Windows::UI::Input::Inking::IInkStroke2, Windows::UI::Input::Inking::IInkStroke3>
+        impl::require<InkStroke, Windows::UI::Input::Inking::IInkStroke2, Windows::UI::Input::Inking::IInkStroke3, Windows::UI::Input::Inking::IInkStroke4>
     {
         InkStroke(std::nullptr_t) noexcept {}
         InkStroke(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Input::Inking::IInkStroke(ptr, take_ownership_from_abi) {}

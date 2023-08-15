@@ -271,13 +271,23 @@ Abstract:
 
 // end_ntoshvp
 
+#ifndef X86_CACHE_ALIGNMENT_SIZE
+#define X86_CACHE_ALIGNMENT_SIZE 64
+#endif
+
+#ifndef ARM_CACHE_ALIGNMENT_SIZE
+#define ARM_CACHE_ALIGNMENT_SIZE 128
+#endif
+
 #ifndef SYSTEM_CACHE_ALIGNMENT_SIZE
 #if defined(_AMD64_) || defined(_X86_)
-#define SYSTEM_CACHE_ALIGNMENT_SIZE 64
+#define SYSTEM_CACHE_ALIGNMENT_SIZE X86_CACHE_ALIGNMENT_SIZE
+#elif defined(_ARM64_) || defined(_ARM_)
+#define SYSTEM_CACHE_ALIGNMENT_SIZE ARM_CACHE_ALIGNMENT_SIZE
 #else
-#define SYSTEM_CACHE_ALIGNMENT_SIZE 128
+#error Must define a target architecture.
 #endif
-#endif
+#endif // SYSTEM_CACHE_ALIGNMENT_SIZE
 
 #ifndef DECLSPEC_CACHEALIGN
 #define DECLSPEC_CACHEALIGN DECLSPEC_ALIGN(SYSTEM_CACHE_ALIGNMENT_SIZE)
@@ -384,7 +394,7 @@ Abstract:
 #endif
 
 #ifndef DECLSPEC_CHPE_PATCHABLE
-#if defined (_M_HYBRID)
+#if defined (_M_HYBRID) || defined(_M_ARM64EC)
 #define DECLSPEC_CHPE_PATCHABLE  __declspec(hybrid_patchable)
 #else
 #define DECLSPEC_CHPE_PATCHABLE
@@ -848,11 +858,19 @@ typedef _Return_type_success_(return >= 0) long HRESULT;
     #else
         #define WIN_NOEXCEPT throw()
     #endif
+
+    // 'noexcept' on typedefs is invalid prior to C++17
+    #if _MSVC_LANG >= 201703
+        #define WIN_NOEXCEPT_PFN noexcept
+    #else
+        #define WIN_NOEXCEPT_PFN
+    #endif
 #else
     #define EXTERN_C       extern
     #define EXTERN_C_START
     #define EXTERN_C_END
     #define WIN_NOEXCEPT
+    #define WIN_NOEXCEPT_PFN
 #endif
 
 #if defined(_WIN32) || defined(_MPPC_)
@@ -2469,6 +2487,10 @@ typedef _Enum_is_bitflag_ enum _SUITE_TYPE {
 #define PRODUCT_XBOX_ERAOS                          0x000000C3
 #define PRODUCT_XBOX_DURANGOHOSTOS                  0x000000C4
 #define PRODUCT_XBOX_SCARLETTHOSTOS                 0x000000C5
+#define PRODUCT_AZURE_SERVER_CLOUDHOST              0x000000C7
+#define PRODUCT_AZURE_SERVER_CLOUDMOS               0x000000C8
+#define PRODUCT_CLOUDEDITIONN                       0x000000CA
+#define PRODUCT_CLOUDEDITION                        0x000000CB
 #define PRODUCT_AZURESTACKHCI_SERVER_CORE           0x00000196
 #define PRODUCT_DATACENTER_SERVER_AZURE_EDITION     0x00000197
 #define PRODUCT_DATACENTER_SERVER_CORE_AZURE_EDITION 0x00000198

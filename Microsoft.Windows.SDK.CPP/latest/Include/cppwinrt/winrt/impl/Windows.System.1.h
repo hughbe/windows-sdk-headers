@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -155,6 +155,13 @@ WINRT_EXPORT namespace winrt::Windows::System
         IAppUriHandlerHost(std::nullptr_t = nullptr) noexcept {}
         IAppUriHandlerHost(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) IAppUriHandlerHost2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IAppUriHandlerHost2>
+    {
+        IAppUriHandlerHost2(std::nullptr_t = nullptr) noexcept {}
+        IAppUriHandlerHost2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IAppUriHandlerHostFactory :
         Windows::Foundation::IInspectable,
         impl::consume_t<IAppUriHandlerHostFactory>
@@ -169,6 +176,13 @@ WINRT_EXPORT namespace winrt::Windows::System
         IAppUriHandlerRegistration(std::nullptr_t = nullptr) noexcept {}
         IAppUriHandlerRegistration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) IAppUriHandlerRegistration2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IAppUriHandlerRegistration2>
+    {
+        IAppUriHandlerRegistration2(std::nullptr_t = nullptr) noexcept {}
+        IAppUriHandlerRegistration2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IAppUriHandlerRegistrationManager :
         Windows::Foundation::IInspectable,
         impl::consume_t<IAppUriHandlerRegistrationManager>
@@ -176,12 +190,26 @@ WINRT_EXPORT namespace winrt::Windows::System
         IAppUriHandlerRegistrationManager(std::nullptr_t = nullptr) noexcept {}
         IAppUriHandlerRegistrationManager(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) IAppUriHandlerRegistrationManager2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IAppUriHandlerRegistrationManager2>
+    {
+        IAppUriHandlerRegistrationManager2(std::nullptr_t = nullptr) noexcept {}
+        IAppUriHandlerRegistrationManager2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IAppUriHandlerRegistrationManagerStatics :
         Windows::Foundation::IInspectable,
         impl::consume_t<IAppUriHandlerRegistrationManagerStatics>
     {
         IAppUriHandlerRegistrationManagerStatics(std::nullptr_t = nullptr) noexcept {}
         IAppUriHandlerRegistrationManagerStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IAppUriHandlerRegistrationManagerStatics2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IAppUriHandlerRegistrationManagerStatics2>
+    {
+        IAppUriHandlerRegistrationManagerStatics2(std::nullptr_t = nullptr) noexcept {}
+        IAppUriHandlerRegistrationManagerStatics2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IDateTimeSettingsStatics :
         Windows::Foundation::IInspectable,
@@ -252,6 +280,13 @@ WINRT_EXPORT namespace winrt::Windows::System
     {
         IKnownUserPropertiesStatics(std::nullptr_t = nullptr) noexcept {}
         IKnownUserPropertiesStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IKnownUserPropertiesStatics2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IKnownUserPropertiesStatics2>
+    {
+        IKnownUserPropertiesStatics2(std::nullptr_t = nullptr) noexcept {}
+        IKnownUserPropertiesStatics2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ILaunchUriResult :
         Windows::Foundation::IInspectable,
@@ -449,6 +484,13 @@ WINRT_EXPORT namespace winrt::Windows::System
     {
         IUser(std::nullptr_t = nullptr) noexcept {}
         IUser(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IUser2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IUser2>
+    {
+        IUser2(std::nullptr_t = nullptr) noexcept {}
+        IUser2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IUserAuthenticationStatusChangeDeferral :
         Windows::Foundation::IInspectable,

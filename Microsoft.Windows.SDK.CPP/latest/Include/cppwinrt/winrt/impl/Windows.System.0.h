@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -182,6 +182,20 @@ WINRT_EXPORT namespace winrt::Windows::System
     {
         Shutdown = 0,
         Restart = 1,
+    };
+    enum class UserAgeConsentGroup : int32_t
+    {
+        Child = 0,
+        Minor = 1,
+        Adult = 2,
+    };
+    enum class UserAgeConsentResult : int32_t
+    {
+        NotEnforced = 0,
+        Included = 1,
+        NotIncluded = 2,
+        Unknown = 3,
+        Ambiguous = 4,
     };
     enum class UserAuthenticationStatus : int32_t
     {
@@ -422,10 +436,14 @@ WINRT_EXPORT namespace winrt::Windows::System
     struct IAppResourceGroupMemoryReport;
     struct IAppResourceGroupStateReport;
     struct IAppUriHandlerHost;
+    struct IAppUriHandlerHost2;
     struct IAppUriHandlerHostFactory;
     struct IAppUriHandlerRegistration;
+    struct IAppUriHandlerRegistration2;
     struct IAppUriHandlerRegistrationManager;
+    struct IAppUriHandlerRegistrationManager2;
     struct IAppUriHandlerRegistrationManagerStatics;
+    struct IAppUriHandlerRegistrationManagerStatics2;
     struct IDateTimeSettingsStatics;
     struct IDispatcherQueue;
     struct IDispatcherQueue2;
@@ -436,6 +454,7 @@ WINRT_EXPORT namespace winrt::Windows::System
     struct IDispatcherQueueTimer;
     struct IFolderLauncherOptions;
     struct IKnownUserPropertiesStatics;
+    struct IKnownUserPropertiesStatics2;
     struct ILaunchUriResult;
     struct ILauncherOptions;
     struct ILauncherOptions2;
@@ -464,6 +483,7 @@ WINRT_EXPORT namespace winrt::Windows::System
     struct ITimeZoneSettingsStatics;
     struct ITimeZoneSettingsStatics2;
     struct IUser;
+    struct IUser2;
     struct IUserAuthenticationStatusChangeDeferral;
     struct IUserAuthenticationStatusChangingEventArgs;
     struct IUserChangedEventArgs;
@@ -546,10 +566,14 @@ namespace winrt::impl
     template <> struct category<Windows::System::IAppResourceGroupMemoryReport>{ using type = interface_category; };
     template <> struct category<Windows::System::IAppResourceGroupStateReport>{ using type = interface_category; };
     template <> struct category<Windows::System::IAppUriHandlerHost>{ using type = interface_category; };
+    template <> struct category<Windows::System::IAppUriHandlerHost2>{ using type = interface_category; };
     template <> struct category<Windows::System::IAppUriHandlerHostFactory>{ using type = interface_category; };
     template <> struct category<Windows::System::IAppUriHandlerRegistration>{ using type = interface_category; };
+    template <> struct category<Windows::System::IAppUriHandlerRegistration2>{ using type = interface_category; };
     template <> struct category<Windows::System::IAppUriHandlerRegistrationManager>{ using type = interface_category; };
+    template <> struct category<Windows::System::IAppUriHandlerRegistrationManager2>{ using type = interface_category; };
     template <> struct category<Windows::System::IAppUriHandlerRegistrationManagerStatics>{ using type = interface_category; };
+    template <> struct category<Windows::System::IAppUriHandlerRegistrationManagerStatics2>{ using type = interface_category; };
     template <> struct category<Windows::System::IDateTimeSettingsStatics>{ using type = interface_category; };
     template <> struct category<Windows::System::IDispatcherQueue>{ using type = interface_category; };
     template <> struct category<Windows::System::IDispatcherQueue2>{ using type = interface_category; };
@@ -560,6 +584,7 @@ namespace winrt::impl
     template <> struct category<Windows::System::IDispatcherQueueTimer>{ using type = interface_category; };
     template <> struct category<Windows::System::IFolderLauncherOptions>{ using type = interface_category; };
     template <> struct category<Windows::System::IKnownUserPropertiesStatics>{ using type = interface_category; };
+    template <> struct category<Windows::System::IKnownUserPropertiesStatics2>{ using type = interface_category; };
     template <> struct category<Windows::System::ILaunchUriResult>{ using type = interface_category; };
     template <> struct category<Windows::System::ILauncherOptions>{ using type = interface_category; };
     template <> struct category<Windows::System::ILauncherOptions2>{ using type = interface_category; };
@@ -588,6 +613,7 @@ namespace winrt::impl
     template <> struct category<Windows::System::ITimeZoneSettingsStatics>{ using type = interface_category; };
     template <> struct category<Windows::System::ITimeZoneSettingsStatics2>{ using type = interface_category; };
     template <> struct category<Windows::System::IUser>{ using type = interface_category; };
+    template <> struct category<Windows::System::IUser2>{ using type = interface_category; };
     template <> struct category<Windows::System::IUserAuthenticationStatusChangeDeferral>{ using type = interface_category; };
     template <> struct category<Windows::System::IUserAuthenticationStatusChangingEventArgs>{ using type = interface_category; };
     template <> struct category<Windows::System::IUserChangedEventArgs>{ using type = interface_category; };
@@ -661,6 +687,8 @@ namespace winrt::impl
     template <> struct category<Windows::System::ProcessorArchitecture>{ using type = enum_category; };
     template <> struct category<Windows::System::RemoteLaunchUriStatus>{ using type = enum_category; };
     template <> struct category<Windows::System::ShutdownKind>{ using type = enum_category; };
+    template <> struct category<Windows::System::UserAgeConsentGroup>{ using type = enum_category; };
+    template <> struct category<Windows::System::UserAgeConsentResult>{ using type = enum_category; };
     template <> struct category<Windows::System::UserAuthenticationStatus>{ using type = enum_category; };
     template <> struct category<Windows::System::UserPictureSize>{ using type = enum_category; };
     template <> struct category<Windows::System::UserType>{ using type = enum_category; };
@@ -731,6 +759,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::System::ProcessorArchitecture> = L"Windows.System.ProcessorArchitecture";
     template <> inline constexpr auto& name_v<Windows::System::RemoteLaunchUriStatus> = L"Windows.System.RemoteLaunchUriStatus";
     template <> inline constexpr auto& name_v<Windows::System::ShutdownKind> = L"Windows.System.ShutdownKind";
+    template <> inline constexpr auto& name_v<Windows::System::UserAgeConsentGroup> = L"Windows.System.UserAgeConsentGroup";
+    template <> inline constexpr auto& name_v<Windows::System::UserAgeConsentResult> = L"Windows.System.UserAgeConsentResult";
     template <> inline constexpr auto& name_v<Windows::System::UserAuthenticationStatus> = L"Windows.System.UserAuthenticationStatus";
     template <> inline constexpr auto& name_v<Windows::System::UserPictureSize> = L"Windows.System.UserPictureSize";
     template <> inline constexpr auto& name_v<Windows::System::UserType> = L"Windows.System.UserType";
@@ -759,10 +789,14 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::System::IAppResourceGroupMemoryReport> = L"Windows.System.IAppResourceGroupMemoryReport";
     template <> inline constexpr auto& name_v<Windows::System::IAppResourceGroupStateReport> = L"Windows.System.IAppResourceGroupStateReport";
     template <> inline constexpr auto& name_v<Windows::System::IAppUriHandlerHost> = L"Windows.System.IAppUriHandlerHost";
+    template <> inline constexpr auto& name_v<Windows::System::IAppUriHandlerHost2> = L"Windows.System.IAppUriHandlerHost2";
     template <> inline constexpr auto& name_v<Windows::System::IAppUriHandlerHostFactory> = L"Windows.System.IAppUriHandlerHostFactory";
     template <> inline constexpr auto& name_v<Windows::System::IAppUriHandlerRegistration> = L"Windows.System.IAppUriHandlerRegistration";
+    template <> inline constexpr auto& name_v<Windows::System::IAppUriHandlerRegistration2> = L"Windows.System.IAppUriHandlerRegistration2";
     template <> inline constexpr auto& name_v<Windows::System::IAppUriHandlerRegistrationManager> = L"Windows.System.IAppUriHandlerRegistrationManager";
+    template <> inline constexpr auto& name_v<Windows::System::IAppUriHandlerRegistrationManager2> = L"Windows.System.IAppUriHandlerRegistrationManager2";
     template <> inline constexpr auto& name_v<Windows::System::IAppUriHandlerRegistrationManagerStatics> = L"Windows.System.IAppUriHandlerRegistrationManagerStatics";
+    template <> inline constexpr auto& name_v<Windows::System::IAppUriHandlerRegistrationManagerStatics2> = L"Windows.System.IAppUriHandlerRegistrationManagerStatics2";
     template <> inline constexpr auto& name_v<Windows::System::IDateTimeSettingsStatics> = L"Windows.System.IDateTimeSettingsStatics";
     template <> inline constexpr auto& name_v<Windows::System::IDispatcherQueue> = L"Windows.System.IDispatcherQueue";
     template <> inline constexpr auto& name_v<Windows::System::IDispatcherQueue2> = L"Windows.System.IDispatcherQueue2";
@@ -773,6 +807,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::System::IDispatcherQueueTimer> = L"Windows.System.IDispatcherQueueTimer";
     template <> inline constexpr auto& name_v<Windows::System::IFolderLauncherOptions> = L"Windows.System.IFolderLauncherOptions";
     template <> inline constexpr auto& name_v<Windows::System::IKnownUserPropertiesStatics> = L"Windows.System.IKnownUserPropertiesStatics";
+    template <> inline constexpr auto& name_v<Windows::System::IKnownUserPropertiesStatics2> = L"Windows.System.IKnownUserPropertiesStatics2";
     template <> inline constexpr auto& name_v<Windows::System::ILaunchUriResult> = L"Windows.System.ILaunchUriResult";
     template <> inline constexpr auto& name_v<Windows::System::ILauncherOptions> = L"Windows.System.ILauncherOptions";
     template <> inline constexpr auto& name_v<Windows::System::ILauncherOptions2> = L"Windows.System.ILauncherOptions2";
@@ -801,6 +836,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::System::ITimeZoneSettingsStatics> = L"Windows.System.ITimeZoneSettingsStatics";
     template <> inline constexpr auto& name_v<Windows::System::ITimeZoneSettingsStatics2> = L"Windows.System.ITimeZoneSettingsStatics2";
     template <> inline constexpr auto& name_v<Windows::System::IUser> = L"Windows.System.IUser";
+    template <> inline constexpr auto& name_v<Windows::System::IUser2> = L"Windows.System.IUser2";
     template <> inline constexpr auto& name_v<Windows::System::IUserAuthenticationStatusChangeDeferral> = L"Windows.System.IUserAuthenticationStatusChangeDeferral";
     template <> inline constexpr auto& name_v<Windows::System::IUserAuthenticationStatusChangingEventArgs> = L"Windows.System.IUserAuthenticationStatusChangingEventArgs";
     template <> inline constexpr auto& name_v<Windows::System::IUserChangedEventArgs> = L"Windows.System.IUserChangedEventArgs";
@@ -834,10 +870,14 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::System::IAppResourceGroupMemoryReport>{ 0x2C8C06B1,0x7DB1,0x4C51,{ 0xA2,0x25,0x7F,0xAE,0x2D,0x49,0xE4,0x31 } }; // 2C8C06B1-7DB1-4C51-A225-7FAE2D49E431
     template <> inline constexpr guid guid_v<Windows::System::IAppResourceGroupStateReport>{ 0x52849F18,0x2F70,0x4236,{ 0xAB,0x40,0xD0,0x4D,0xB0,0xC7,0xB9,0x31 } }; // 52849F18-2F70-4236-AB40-D04DB0C7B931
     template <> inline constexpr guid guid_v<Windows::System::IAppUriHandlerHost>{ 0x5D50CAC5,0x92D2,0x5409,{ 0xB5,0x6F,0x7F,0x73,0xE1,0x0E,0xA4,0xC3 } }; // 5D50CAC5-92D2-5409-B56F-7F73E10EA4C3
+    template <> inline constexpr guid guid_v<Windows::System::IAppUriHandlerHost2>{ 0x3A0BEE95,0x29E4,0x51BF,{ 0x80,0x95,0xA3,0xC0,0x68,0xE3,0xC7,0x2A } }; // 3A0BEE95-29E4-51BF-8095-A3C068E3C72A
     template <> inline constexpr guid guid_v<Windows::System::IAppUriHandlerHostFactory>{ 0x257C3C96,0xCE04,0x5F98,{ 0x96,0xBB,0x3E,0xBD,0x3E,0x92,0x75,0xBB } }; // 257C3C96-CE04-5F98-96BB-3EBD3E9275BB
     template <> inline constexpr guid guid_v<Windows::System::IAppUriHandlerRegistration>{ 0x6F73AEB1,0x4569,0x5C3F,{ 0x9B,0xA0,0x99,0x12,0x3E,0xEA,0x32,0xC3 } }; // 6F73AEB1-4569-5C3F-9BA0-99123EEA32C3
+    template <> inline constexpr guid guid_v<Windows::System::IAppUriHandlerRegistration2>{ 0xD54DAC97,0xCB39,0x5F1F,{ 0x88,0x3E,0x01,0x85,0x37,0x30,0xBD,0x6D } }; // D54DAC97-CB39-5F1F-883E-01853730BD6D
     template <> inline constexpr guid guid_v<Windows::System::IAppUriHandlerRegistrationManager>{ 0xE62C9A52,0xAC94,0x5750,{ 0xAC,0x1B,0x6C,0xFB,0x6F,0x25,0x02,0x63 } }; // E62C9A52-AC94-5750-AC1B-6CFB6F250263
+    template <> inline constexpr guid guid_v<Windows::System::IAppUriHandlerRegistrationManager2>{ 0xBDDFCAF1,0xB51A,0x5E69,{ 0xAE,0xFD,0x70,0x88,0xD9,0xF2,0xB1,0x23 } }; // BDDFCAF1-B51A-5E69-AEFD-7088D9F2B123
     template <> inline constexpr guid guid_v<Windows::System::IAppUriHandlerRegistrationManagerStatics>{ 0xD5CEDD9F,0x5729,0x5B76,{ 0xA1,0xD4,0x02,0x85,0xF2,0x95,0xC1,0x24 } }; // D5CEDD9F-5729-5B76-A1D4-0285F295C124
+    template <> inline constexpr guid guid_v<Windows::System::IAppUriHandlerRegistrationManagerStatics2>{ 0x14F78379,0x6890,0x5080,{ 0x90,0xA7,0x98,0x82,0x4A,0x7F,0x07,0x9E } }; // 14F78379-6890-5080-90A7-98824A7F079E
     template <> inline constexpr guid guid_v<Windows::System::IDateTimeSettingsStatics>{ 0x5D2150D1,0x47EE,0x48AB,{ 0xA5,0x2B,0x9F,0x19,0x54,0x27,0x8D,0x82 } }; // 5D2150D1-47EE-48AB-A52B-9F1954278D82
     template <> inline constexpr guid guid_v<Windows::System::IDispatcherQueue>{ 0x603E88E4,0xA338,0x4FFE,{ 0xA4,0x57,0xA5,0xCF,0xB9,0xCE,0xB8,0x99 } }; // 603E88E4-A338-4FFE-A457-A5CFB9CEB899
     template <> inline constexpr guid guid_v<Windows::System::IDispatcherQueue2>{ 0xC822C647,0x30EF,0x506E,{ 0xBD,0x1E,0xA6,0x47,0xAE,0x66,0x75,0xFF } }; // C822C647-30EF-506E-BD1E-A647AE6675FF
@@ -848,6 +888,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::System::IDispatcherQueueTimer>{ 0x5FEABB1D,0xA31C,0x4727,{ 0xB1,0xAC,0x37,0x45,0x46,0x49,0xD5,0x6A } }; // 5FEABB1D-A31C-4727-B1AC-37454649D56A
     template <> inline constexpr guid guid_v<Windows::System::IFolderLauncherOptions>{ 0xBB91C27D,0x6B87,0x432A,{ 0xBD,0x04,0x77,0x6C,0x6F,0x5F,0xB2,0xAB } }; // BB91C27D-6B87-432A-BD04-776C6F5FB2AB
     template <> inline constexpr guid guid_v<Windows::System::IKnownUserPropertiesStatics>{ 0x7755911A,0x70C5,0x48E5,{ 0xB6,0x37,0x5B,0xA3,0x44,0x1E,0x4E,0xE4 } }; // 7755911A-70C5-48E5-B637-5BA3441E4EE4
+    template <> inline constexpr guid guid_v<Windows::System::IKnownUserPropertiesStatics2>{ 0x5B450782,0xF620,0x577E,{ 0xB1,0xB3,0xDD,0x56,0x64,0x4D,0x79,0xB1 } }; // 5B450782-F620-577E-B1B3-DD56644D79B1
     template <> inline constexpr guid guid_v<Windows::System::ILaunchUriResult>{ 0xEC27A8DF,0xF6D5,0x45CA,{ 0x91,0x3A,0x70,0xA4,0x0C,0x5C,0x82,0x21 } }; // EC27A8DF-F6D5-45CA-913A-70A40C5C8221
     template <> inline constexpr guid guid_v<Windows::System::ILauncherOptions>{ 0xBAFA21D8,0xB071,0x4CD8,{ 0x85,0x3E,0x34,0x12,0x03,0xE5,0x57,0xD3 } }; // BAFA21D8-B071-4CD8-853E-341203E557D3
     template <> inline constexpr guid guid_v<Windows::System::ILauncherOptions2>{ 0x3BA08EB4,0x6E40,0x4DCE,{ 0xA1,0xA3,0x2F,0x53,0x95,0x0A,0xFB,0x49 } }; // 3BA08EB4-6E40-4DCE-A1A3-2F53950AFB49
@@ -876,6 +917,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::System::ITimeZoneSettingsStatics>{ 0x9B3B2BEA,0xA101,0x41AE,{ 0x9F,0xBD,0x02,0x87,0x28,0xBA,0xB7,0x3D } }; // 9B3B2BEA-A101-41AE-9FBD-028728BAB73D
     template <> inline constexpr guid guid_v<Windows::System::ITimeZoneSettingsStatics2>{ 0x555C0DB8,0x39A8,0x49FA,{ 0xB4,0xF6,0xA2,0xC7,0xFC,0x28,0x42,0xEC } }; // 555C0DB8-39A8-49FA-B4F6-A2C7FC2842EC
     template <> inline constexpr guid guid_v<Windows::System::IUser>{ 0xDF9A26C6,0xE746,0x4BCD,{ 0xB5,0xD4,0x12,0x01,0x03,0xC4,0x20,0x9B } }; // DF9A26C6-E746-4BCD-B5D4-120103C4209B
+    template <> inline constexpr guid guid_v<Windows::System::IUser2>{ 0x98BA5628,0xA6E3,0x518E,{ 0x89,0xD9,0xD3,0xB2,0xB1,0x99,0x1A,0x10 } }; // 98BA5628-A6E3-518E-89D9-D3B2B1991A10
     template <> inline constexpr guid guid_v<Windows::System::IUserAuthenticationStatusChangeDeferral>{ 0x88B59568,0xBB30,0x42FB,{ 0xA2,0x70,0xE9,0x90,0x2E,0x40,0xEF,0xA7 } }; // 88B59568-BB30-42FB-A270-E9902E40EFA7
     template <> inline constexpr guid guid_v<Windows::System::IUserAuthenticationStatusChangingEventArgs>{ 0x8C030F28,0xA711,0x4C1E,{ 0xAB,0x48,0x04,0x17,0x9C,0x15,0x93,0x8F } }; // 8C030F28-A711-4C1E-AB48-04179C15938F
     template <> inline constexpr guid guid_v<Windows::System::IUserChangedEventArgs>{ 0x086459DC,0x18C6,0x48DB,{ 0xBC,0x99,0x72,0x4F,0xB9,0x20,0x3C,0xCC } }; // 086459DC-18C6-48DB-BC99-724FB9203CCC
@@ -1121,6 +1163,14 @@ namespace winrt::impl
             virtual int32_t __stdcall put_Name(void*) noexcept = 0;
         };
     };
+    template <> struct abi<Windows::System::IAppUriHandlerHost2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IsEnabled(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_IsEnabled(bool) noexcept = 0;
+        };
+    };
     template <> struct abi<Windows::System::IAppUriHandlerHostFactory>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -1138,6 +1188,15 @@ namespace winrt::impl
             virtual int32_t __stdcall SetAppAddedHostsAsync(void*, void**) noexcept = 0;
         };
     };
+    template <> struct abi<Windows::System::IAppUriHandlerRegistration2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall GetAllHosts(void**) noexcept = 0;
+            virtual int32_t __stdcall UpdateHosts(void*) noexcept = 0;
+            virtual int32_t __stdcall get_PackageFamilyName(void**) noexcept = 0;
+        };
+    };
     template <> struct abi<Windows::System::IAppUriHandlerRegistrationManager>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -1146,12 +1205,27 @@ namespace winrt::impl
             virtual int32_t __stdcall TryGetRegistration(void*, void**) noexcept = 0;
         };
     };
+    template <> struct abi<Windows::System::IAppUriHandlerRegistrationManager2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_PackageFamilyName(void**) noexcept = 0;
+        };
+    };
     template <> struct abi<Windows::System::IAppUriHandlerRegistrationManagerStatics>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall GetDefault(void**) noexcept = 0;
             virtual int32_t __stdcall GetForUser(void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::System::IAppUriHandlerRegistrationManagerStatics2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall GetForPackage(void*, void**) noexcept = 0;
+            virtual int32_t __stdcall GetForPackageForUser(void*, void*, void**) noexcept = 0;
         };
     };
     template <> struct abi<Windows::System::IDateTimeSettingsStatics>
@@ -1245,6 +1319,13 @@ namespace winrt::impl
             virtual int32_t __stdcall get_PrincipalName(void**) noexcept = 0;
             virtual int32_t __stdcall get_DomainName(void**) noexcept = 0;
             virtual int32_t __stdcall get_SessionInitiationProtocolUri(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::System::IKnownUserPropertiesStatics2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_AgeEnforcementRegion(void**) noexcept = 0;
         };
     };
     template <> struct abi<Windows::System::ILaunchUriResult>
@@ -1521,6 +1602,13 @@ namespace winrt::impl
             virtual int32_t __stdcall GetPropertyAsync(void*, void**) noexcept = 0;
             virtual int32_t __stdcall GetPropertiesAsync(void*, void**) noexcept = 0;
             virtual int32_t __stdcall GetPictureAsync(int32_t, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::System::IUser2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall CheckUserAgeConsentGroupAsync(int32_t, void**) noexcept = 0;
         };
     };
     template <> struct abi<Windows::System::IUserAuthenticationStatusChangeDeferral>
@@ -1895,6 +1983,16 @@ namespace winrt::impl
         template <typename D> using type = consume_Windows_System_IAppUriHandlerHost<D>;
     };
     template <typename D>
+    struct consume_Windows_System_IAppUriHandlerHost2
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnabled() const;
+        WINRT_IMPL_AUTO(void) IsEnabled(bool value) const;
+    };
+    template <> struct consume<Windows::System::IAppUriHandlerHost2>
+    {
+        template <typename D> using type = consume_Windows_System_IAppUriHandlerHost2<D>;
+    };
+    template <typename D>
     struct consume_Windows_System_IAppUriHandlerHostFactory
     {
         WINRT_IMPL_AUTO(Windows::System::AppUriHandlerHost) CreateInstance(param::hstring const& name) const;
@@ -1916,6 +2014,17 @@ namespace winrt::impl
         template <typename D> using type = consume_Windows_System_IAppUriHandlerRegistration<D>;
     };
     template <typename D>
+    struct consume_Windows_System_IAppUriHandlerRegistration2
+    {
+        WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::System::AppUriHandlerHost>) GetAllHosts() const;
+        WINRT_IMPL_AUTO(void) UpdateHosts(param::iterable<Windows::System::AppUriHandlerHost> const& hosts) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PackageFamilyName() const;
+    };
+    template <> struct consume<Windows::System::IAppUriHandlerRegistration2>
+    {
+        template <typename D> using type = consume_Windows_System_IAppUriHandlerRegistration2<D>;
+    };
+    template <typename D>
     struct consume_Windows_System_IAppUriHandlerRegistrationManager
     {
         [[nodiscard]] WINRT_IMPL_AUTO(Windows::System::User) User() const;
@@ -1926,6 +2035,15 @@ namespace winrt::impl
         template <typename D> using type = consume_Windows_System_IAppUriHandlerRegistrationManager<D>;
     };
     template <typename D>
+    struct consume_Windows_System_IAppUriHandlerRegistrationManager2
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) PackageFamilyName() const;
+    };
+    template <> struct consume<Windows::System::IAppUriHandlerRegistrationManager2>
+    {
+        template <typename D> using type = consume_Windows_System_IAppUriHandlerRegistrationManager2<D>;
+    };
+    template <typename D>
     struct consume_Windows_System_IAppUriHandlerRegistrationManagerStatics
     {
         WINRT_IMPL_AUTO(Windows::System::AppUriHandlerRegistrationManager) GetDefault() const;
@@ -1934,6 +2052,16 @@ namespace winrt::impl
     template <> struct consume<Windows::System::IAppUriHandlerRegistrationManagerStatics>
     {
         template <typename D> using type = consume_Windows_System_IAppUriHandlerRegistrationManagerStatics<D>;
+    };
+    template <typename D>
+    struct consume_Windows_System_IAppUriHandlerRegistrationManagerStatics2
+    {
+        WINRT_IMPL_AUTO(Windows::System::AppUriHandlerRegistrationManager) GetForPackage(param::hstring const& packageFamilyName) const;
+        WINRT_IMPL_AUTO(Windows::System::AppUriHandlerRegistrationManager) GetForPackageForUser(param::hstring const& packageFamilyName, Windows::System::User const& user) const;
+    };
+    template <> struct consume<Windows::System::IAppUriHandlerRegistrationManagerStatics2>
+    {
+        template <typename D> using type = consume_Windows_System_IAppUriHandlerRegistrationManagerStatics2<D>;
     };
     template <typename D>
     struct consume_Windows_System_IDateTimeSettingsStatics
@@ -2053,6 +2181,15 @@ namespace winrt::impl
     template <> struct consume<Windows::System::IKnownUserPropertiesStatics>
     {
         template <typename D> using type = consume_Windows_System_IKnownUserPropertiesStatics<D>;
+    };
+    template <typename D>
+    struct consume_Windows_System_IKnownUserPropertiesStatics2
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) AgeEnforcementRegion() const;
+    };
+    template <> struct consume<Windows::System::IKnownUserPropertiesStatics2>
+    {
+        template <typename D> using type = consume_Windows_System_IKnownUserPropertiesStatics2<D>;
     };
     template <typename D>
     struct consume_Windows_System_ILaunchUriResult
@@ -2391,6 +2528,15 @@ namespace winrt::impl
     template <> struct consume<Windows::System::IUser>
     {
         template <typename D> using type = consume_Windows_System_IUser<D>;
+    };
+    template <typename D>
+    struct consume_Windows_System_IUser2
+    {
+        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::System::UserAgeConsentResult>) CheckUserAgeConsentGroupAsync(Windows::System::UserAgeConsentGroup const& consentGroup) const;
+    };
+    template <> struct consume<Windows::System::IUser2>
+    {
+        template <typename D> using type = consume_Windows_System_IUser2<D>;
     };
     template <typename D>
     struct consume_Windows_System_IUserAuthenticationStatusChangeDeferral

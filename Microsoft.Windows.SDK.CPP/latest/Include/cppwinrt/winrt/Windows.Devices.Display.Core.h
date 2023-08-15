@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,8 @@
 #ifndef WINRT_Windows_Devices_Display_Core_H
 #define WINRT_Windows_Devices_Display_Core_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.201201.7"
 #include "winrt/Windows.Devices.Display.h"
 #include "winrt/impl/Windows.Devices.Display.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -111,6 +112,12 @@ namespace winrt::impl
         bool result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::Core::IDisplayDevice)->IsCapabilitySupported(static_cast<int32_t>(capability), &result));
         return result;
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Display::Core::DisplayScanout) consume_Windows_Devices_Display_Core_IDisplayDevice2<D>::CreateSimpleScanoutWithDirtyRectsAndOptions(Windows::Devices::Display::Core::DisplaySource const& source, Windows::Devices::Display::Core::DisplaySurface const& surface, uint32_t subresourceIndex, uint32_t syncInterval, param::iterable<Windows::Graphics::RectInt32> const& dirtyRects, Windows::Devices::Display::Core::DisplayScanoutOptions const& options) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::Core::IDisplayDevice2)->CreateSimpleScanoutWithDirtyRectsAndOptions(*(void**)(&source), *(void**)(&surface), subresourceIndex, syncInterval, *(void**)(&dirtyRects), static_cast<uint32_t>(options), &result));
+        return Windows::Devices::Display::Core::DisplayScanout{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Display::Core::DisplayTarget>) consume_Windows_Devices_Display_Core_IDisplayManager<D>::GetCurrentTargets() const
     {
@@ -370,6 +377,12 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::Core::IDisplayModeInfo)->get_Properties(&value));
         return Windows::Foundation::Collections::IMapView<winrt::guid, Windows::Foundation::IInspectable>{ value, take_ownership_from_abi };
     }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Display::Core::DisplayPresentationRate) consume_Windows_Devices_Display_Core_IDisplayModeInfo2<D>::PhysicalPresentationRate() const
+    {
+        Windows::Devices::Display::Core::DisplayPresentationRate value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::Core::IDisplayModeInfo2)->get_PhysicalPresentationRate(put_abi(value)));
+        return value;
+    }
     template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Display::Core::DisplayView) consume_Windows_Devices_Display_Core_IDisplayPath<D>::View() const
     {
         void* value{};
@@ -494,6 +507,16 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::Core::IDisplayPath)->get_Properties(&value));
         return Windows::Foundation::Collections::IMap<winrt::guid, Windows::Foundation::IInspectable>{ value, take_ownership_from_abi };
     }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Devices::Display::Core::DisplayPresentationRate>) consume_Windows_Devices_Display_Core_IDisplayPath2<D>::PhysicalPresentationRate() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::Core::IDisplayPath2)->get_PhysicalPresentationRate(&value));
+        return Windows::Foundation::IReference<Windows::Devices::Display::Core::DisplayPresentationRate>{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Display_Core_IDisplayPath2<D>::PhysicalPresentationRate(Windows::Foundation::IReference<Windows::Devices::Display::Core::DisplayPresentationRate> const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::Core::IDisplayPath2)->put_PhysicalPresentationRate(*(void**)(&value)));
+    }
     template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Display_Core_IDisplayPrimaryDescription<D>::Width() const
     {
         uint32_t value{};
@@ -565,6 +588,26 @@ namespace winrt::impl
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::Core::IDisplaySource)->GetMetadata(impl::bind_in(Key), &result));
         return Windows::Storage::Streams::IBuffer{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Display::Core::DisplaySourceStatus) consume_Windows_Devices_Display_Core_IDisplaySource2<D>::Status() const
+    {
+        Windows::Devices::Display::Core::DisplaySourceStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::Core::IDisplaySource2)->get_Status(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Display_Core_IDisplaySource2<D>::StatusChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Display::Core::DisplaySource, Windows::Foundation::IInspectable> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::Core::IDisplaySource2)->add_StatusChanged(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> typename consume_Windows_Devices_Display_Core_IDisplaySource2<D>::StatusChanged_revoker consume_Windows_Devices_Display_Core_IDisplaySource2<D>::StatusChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Display::Core::DisplaySource, Windows::Foundation::IInspectable> const& handler) const
+    {
+        return impl::make_event_revoker<D, StatusChanged_revoker>(this, StatusChanged(handler));
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Display_Core_IDisplaySource2<D>::StatusChanged(winrt::event_token const& token) const noexcept
+    {
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Devices::Display::Core::IDisplaySource2)->remove_StatusChanged(impl::bind_in(token)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Display_Core_IDisplayState<D>::IsReadOnly() const
     {
@@ -752,6 +795,10 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::Core::IDisplayTask)->SetWait(*(void**)(&readyFence), readyFenceValue));
     }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Display_Core_IDisplayTask2<D>::SetSignal(Windows::Devices::Display::Core::DisplayTaskSignalKind const& signalKind, Windows::Devices::Display::Core::DisplayFence const& fence) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::Core::IDisplayTask2)->SetSignal(static_cast<int32_t>(signalKind), *(void**)(&fence)));
+    }
     template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Display::Core::DisplayTask) consume_Windows_Devices_Display_Core_IDisplayTaskPool<D>::CreateTask() const
     {
         void* result{};
@@ -761,6 +808,30 @@ namespace winrt::impl
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Display_Core_IDisplayTaskPool<D>::ExecuteTask(Windows::Devices::Display::Core::DisplayTask const& task) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::Core::IDisplayTaskPool)->ExecuteTask(*(void**)(&task)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Display::Core::DisplayTaskResult) consume_Windows_Devices_Display_Core_IDisplayTaskPool2<D>::TryExecuteTask(Windows::Devices::Display::Core::DisplayTask const& task) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::Core::IDisplayTaskPool2)->TryExecuteTask(*(void**)(&task), &result));
+        return Windows::Devices::Display::Core::DisplayTaskResult{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Display::Core::DisplayPresentStatus) consume_Windows_Devices_Display_Core_IDisplayTaskResult<D>::PresentStatus() const
+    {
+        Windows::Devices::Display::Core::DisplayPresentStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::Core::IDisplayTaskResult)->get_PresentStatus(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_Devices_Display_Core_IDisplayTaskResult<D>::PresentId() const
+    {
+        uint64_t value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::Core::IDisplayTaskResult)->get_PresentId(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Display::Core::DisplaySourceStatus) consume_Windows_Devices_Display_Core_IDisplayTaskResult<D>::SourceStatus() const
+    {
+        Windows::Devices::Display::Core::DisplaySourceStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::Core::IDisplayTaskResult)->get_SourceStatus(reinterpret_cast<int32_t*>(&value)));
+        return value;
     }
     template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Display::Core::DisplayPath>) consume_Windows_Devices_Display_Core_IDisplayView<D>::Paths() const
     {
@@ -970,6 +1041,20 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             *result = detach_from<bool>(this->shim().IsCapabilitySupported(*reinterpret_cast<Windows::Devices::Display::Core::DisplayDeviceCapability const*>(&capability)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Devices::Display::Core::IDisplayDevice2> : produce_base<D, Windows::Devices::Display::Core::IDisplayDevice2>
+    {
+        int32_t __stdcall CreateSimpleScanoutWithDirtyRectsAndOptions(void* source, void* surface, uint32_t subresourceIndex, uint32_t syncInterval, void* dirtyRects, uint32_t options, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Devices::Display::Core::DisplayScanout>(this->shim().CreateSimpleScanoutWithDirtyRectsAndOptions(*reinterpret_cast<Windows::Devices::Display::Core::DisplaySource const*>(&source), *reinterpret_cast<Windows::Devices::Display::Core::DisplaySurface const*>(&surface), subresourceIndex, syncInterval, *reinterpret_cast<Windows::Foundation::Collections::IIterable<Windows::Graphics::RectInt32> const*>(&dirtyRects), *reinterpret_cast<Windows::Devices::Display::Core::DisplayScanoutOptions const*>(&options)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1357,6 +1442,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, Windows::Devices::Display::Core::IDisplayModeInfo2> : produce_base<D, Windows::Devices::Display::Core::IDisplayModeInfo2>
+    {
+        int32_t __stdcall get_PhysicalPresentationRate(struct struct_Windows_Devices_Display_Core_DisplayPresentationRate* value) noexcept final try
+        {
+            zero_abi<Windows::Devices::Display::Core::DisplayPresentationRate>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Devices::Display::Core::DisplayPresentationRate>(this->shim().PhysicalPresentationRate());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, Windows::Devices::Display::Core::IDisplayPath> : produce_base<D, Windows::Devices::Display::Core::IDisplayPath>
     {
         int32_t __stdcall get_View(void** value) noexcept final try
@@ -1540,6 +1639,27 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, Windows::Devices::Display::Core::IDisplayPath2> : produce_base<D, Windows::Devices::Display::Core::IDisplayPath2>
+    {
+        int32_t __stdcall get_PhysicalPresentationRate(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Foundation::IReference<Windows::Devices::Display::Core::DisplayPresentationRate>>(this->shim().PhysicalPresentationRate());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_PhysicalPresentationRate(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().PhysicalPresentationRate(*reinterpret_cast<Windows::Foundation::IReference<Windows::Devices::Display::Core::DisplayPresentationRate> const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, Windows::Devices::Display::Core::IDisplayPrimaryDescription> : produce_base<D, Windows::Devices::Display::Core::IDisplayPrimaryDescription>
     {
         int32_t __stdcall get_Width(uint32_t* value) noexcept final try
@@ -1656,6 +1776,33 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Devices::Display::Core::IDisplaySource2> : produce_base<D, Windows::Devices::Display::Core::IDisplaySource2>
+    {
+        int32_t __stdcall get_Status(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Devices::Display::Core::DisplaySourceStatus>(this->shim().Status());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_StatusChanged(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().StatusChanged(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Devices::Display::Core::DisplaySource, Windows::Foundation::IInspectable> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_StatusChanged(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().StatusChanged(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
     };
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
@@ -1930,6 +2077,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, Windows::Devices::Display::Core::IDisplayTask2> : produce_base<D, Windows::Devices::Display::Core::IDisplayTask2>
+    {
+        int32_t __stdcall SetSignal(int32_t signalKind, void* fence) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SetSignal(*reinterpret_cast<Windows::Devices::Display::Core::DisplayTaskSignalKind const*>(&signalKind), *reinterpret_cast<Windows::Devices::Display::Core::DisplayFence const*>(&fence));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, Windows::Devices::Display::Core::IDisplayTaskPool> : produce_base<D, Windows::Devices::Display::Core::IDisplayTaskPool>
     {
         int32_t __stdcall CreateTask(void** result) noexcept final try
@@ -1944,6 +2104,47 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             this->shim().ExecuteTask(*reinterpret_cast<Windows::Devices::Display::Core::DisplayTask const*>(&task));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Devices::Display::Core::IDisplayTaskPool2> : produce_base<D, Windows::Devices::Display::Core::IDisplayTaskPool2>
+    {
+        int32_t __stdcall TryExecuteTask(void* task, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Devices::Display::Core::DisplayTaskResult>(this->shim().TryExecuteTask(*reinterpret_cast<Windows::Devices::Display::Core::DisplayTask const*>(&task)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Devices::Display::Core::IDisplayTaskResult> : produce_base<D, Windows::Devices::Display::Core::IDisplayTaskResult>
+    {
+        int32_t __stdcall get_PresentStatus(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Devices::Display::Core::DisplayPresentStatus>(this->shim().PresentStatus());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_PresentId(uint64_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint64_t>(this->shim().PresentId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SourceStatus(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Devices::Display::Core::DisplaySourceStatus>(this->shim().SourceStatus());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2166,6 +2367,37 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Display::Core
         left = left ^ right;
         return left;
     }
+    constexpr auto operator|(DisplayScanoutOptions const left, DisplayScanoutOptions const right) noexcept
+    {
+        return static_cast<DisplayScanoutOptions>(impl::to_underlying_type(left) | impl::to_underlying_type(right));
+    }
+    constexpr auto operator|=(DisplayScanoutOptions& left, DisplayScanoutOptions const right) noexcept
+    {
+        left = left | right;
+        return left;
+    }
+    constexpr auto operator&(DisplayScanoutOptions const left, DisplayScanoutOptions const right) noexcept
+    {
+        return static_cast<DisplayScanoutOptions>(impl::to_underlying_type(left) & impl::to_underlying_type(right));
+    }
+    constexpr auto operator&=(DisplayScanoutOptions& left, DisplayScanoutOptions const right) noexcept
+    {
+        left = left & right;
+        return left;
+    }
+    constexpr auto operator~(DisplayScanoutOptions const value) noexcept
+    {
+        return static_cast<DisplayScanoutOptions>(~impl::to_underlying_type(value));
+    }
+    constexpr auto operator^(DisplayScanoutOptions const left, DisplayScanoutOptions const right) noexcept
+    {
+        return static_cast<DisplayScanoutOptions>(impl::to_underlying_type(left) ^ impl::to_underlying_type(right));
+    }
+    constexpr auto operator^=(DisplayScanoutOptions& left, DisplayScanoutOptions const right) noexcept
+    {
+        left = left ^ right;
+        return left;
+    }
     constexpr auto operator|(DisplayStateApplyOptions const left, DisplayStateApplyOptions const right) noexcept
     {
         return static_cast<DisplayStateApplyOptions>(impl::to_underlying_type(left) | impl::to_underlying_type(right));
@@ -2259,6 +2491,7 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayAdapter> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayAdapterStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayDevice> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayDevice2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayFence> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayManager> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayManagerChangedEventArgs> : winrt::impl::hash_base {};
@@ -2268,18 +2501,24 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayManagerResultWithState> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayManagerStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayModeInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayModeInfo2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayPath> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayPath2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayPrimaryDescription> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayPrimaryDescriptionFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayPrimaryDescriptionStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayScanout> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplaySource> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplaySource2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayState> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayStateOperationResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplaySurface> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayTarget> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayTask> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayTask2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayTaskPool> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayTaskPool2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayTaskResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayView> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayWireFormat> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::IDisplayWireFormatFactory> : winrt::impl::hash_base {};
@@ -2304,6 +2543,7 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Display::Core::DisplayTarget> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::DisplayTask> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::DisplayTaskPool> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Display::Core::DisplayTaskResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::DisplayView> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::DisplayWireFormat> : winrt::impl::hash_base {};
 #endif

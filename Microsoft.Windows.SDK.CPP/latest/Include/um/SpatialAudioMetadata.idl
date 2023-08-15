@@ -70,6 +70,21 @@ typedef struct SpatialAudioObjectRenderStreamForMetadataActivationParams
     ISpatialAudioObjectRenderStreamNotify* NotifyObject;
 } SpatialAudioObjectRenderStreamForMetadataActivationParams;
 
+typedef struct SpatialAudioObjectRenderStreamForMetadataActivationParams2
+{
+    WAVEFORMATEX const* ObjectFormat;           // Format descriptor for a single spatial audio objects. All objects must have the same format and must be of type WAVEFORMATEX or WAVEFORMATEXTENSIBLE.
+    AudioObjectType StaticObjectTypeMask;       // (static channel bed mask) mask of static audio object type that are allowed
+    UINT32 MinDynamicObjectCount;               // Minimum number of dynamic audio objects. If at least this count cannot be granted, no dynamic objects will be granted.
+    UINT32 MaxDynamicObjectCount;               // Maximum number of dynamic audio objects that can be activated via ISpatialAudioObjectRenderStreamForMetadata.
+    AUDIO_STREAM_CATEGORY Category;             // Specifies the category of the audio stream and its spatial audio objects.
+    HANDLE EventHandle;                         // event that will signal the need for more audio data. This handle will be duplicated internally before getting used
+    GUID MetadataFormatId;                      // Specifies the metadataFormat that for the currently active spatial rendering engine
+    UINT32 MaxMetadataItemCount;                // Maximum number of metadata Items Per FrameCount
+    PROPVARIANT const* MetadataActivationParams;
+    ISpatialAudioObjectRenderStreamNotify* NotifyObject;
+    SPATIAL_AUDIO_STREAM_OPTIONS Options;
+} SpatialAudioObjectRenderStreamForMetadataActivationParams2;
+
 #pragma pack(pop)
 
 [

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,8 @@
 #ifndef WINRT_Windows_UI_Xaml_Automation_H
 #define WINRT_Windows_UI_Xaml_Automation_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.201201.7"
 #include "winrt/Windows.UI.Xaml.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.UI.Xaml.2.h"
@@ -749,6 +750,22 @@ namespace winrt::impl
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Automation_IAutomationPropertiesStatics8<D>::SetIsDialog(Windows::UI::Xaml::DependencyObject const& element, bool value) const
     {
         check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Automation::IAutomationPropertiesStatics8)->SetIsDialog(*(void**)(&element), value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Automation_IAutomationPropertiesStatics9<D>::AutomationControlTypeProperty() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Automation::IAutomationPropertiesStatics9)->get_AutomationControlTypeProperty(&value));
+        return Windows::UI::Xaml::DependencyProperty{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Automation::Peers::AutomationControlType) consume_Windows_UI_Xaml_Automation_IAutomationPropertiesStatics9<D>::GetAutomationControlType(Windows::UI::Xaml::UIElement const& element) const
+    {
+        Windows::UI::Xaml::Automation::Peers::AutomationControlType result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Automation::IAutomationPropertiesStatics9)->GetAutomationControlType(*(void**)(&element), reinterpret_cast<int32_t*>(&result)));
+        return result;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Automation_IAutomationPropertiesStatics9<D>::SetAutomationControlType(Windows::UI::Xaml::UIElement const& element, Windows::UI::Xaml::Automation::Peers::AutomationControlType const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Xaml::Automation::IAutomationPropertiesStatics9)->SetAutomationControlType(*(void**)(&element), static_cast<int32_t>(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(Windows::UI::Xaml::Automation::AutomationProperty) consume_Windows_UI_Xaml_Automation_IDockPatternIdentifiersStatics<D>::DockPositionProperty() const
     {
@@ -2284,6 +2301,34 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, Windows::UI::Xaml::Automation::IAutomationPropertiesStatics9> : produce_base<D, Windows::UI::Xaml::Automation::IAutomationPropertiesStatics9>
+    {
+        int32_t __stdcall get_AutomationControlTypeProperty(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::UI::Xaml::DependencyProperty>(this->shim().AutomationControlTypeProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetAutomationControlType(void* element, int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::UI::Xaml::Automation::Peers::AutomationControlType>(this->shim().GetAutomationControlType(*reinterpret_cast<Windows::UI::Xaml::UIElement const*>(&element)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetAutomationControlType(void* element, int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SetAutomationControlType(*reinterpret_cast<Windows::UI::Xaml::UIElement const*>(&element), *reinterpret_cast<Windows::UI::Xaml::Automation::Peers::AutomationControlType const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, Windows::UI::Xaml::Automation::IAutomationProperty> : produce_base<D, Windows::UI::Xaml::Automation::IAutomationProperty>
     {
     };
@@ -3554,6 +3599,18 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Automation
     {
         impl::call_factory<AutomationProperties, IAutomationPropertiesStatics8>([&](IAutomationPropertiesStatics8 const& f) { return f.SetIsDialog(element, value); });
     }
+    inline auto AutomationProperties::AutomationControlTypeProperty()
+    {
+        return impl::call_factory_cast<Windows::UI::Xaml::DependencyProperty(*)(IAutomationPropertiesStatics9 const&), AutomationProperties, IAutomationPropertiesStatics9>([](IAutomationPropertiesStatics9 const& f) { return f.AutomationControlTypeProperty(); });
+    }
+    inline auto AutomationProperties::GetAutomationControlType(Windows::UI::Xaml::UIElement const& element)
+    {
+        return impl::call_factory<AutomationProperties, IAutomationPropertiesStatics9>([&](IAutomationPropertiesStatics9 const& f) { return f.GetAutomationControlType(element); });
+    }
+    inline auto AutomationProperties::SetAutomationControlType(Windows::UI::Xaml::UIElement const& element, Windows::UI::Xaml::Automation::Peers::AutomationControlType const& value)
+    {
+        impl::call_factory<AutomationProperties, IAutomationPropertiesStatics9>([&](IAutomationPropertiesStatics9 const& f) { return f.SetAutomationControlType(element, value); });
+    }
     inline auto DockPatternIdentifiers::DockPositionProperty()
     {
         return impl::call_factory_cast<Windows::UI::Xaml::Automation::AutomationProperty(*)(IDockPatternIdentifiersStatics const&), DockPatternIdentifiers, IDockPatternIdentifiersStatics>([](IDockPatternIdentifiersStatics const& f) { return f.DockPositionProperty(); });
@@ -3837,6 +3894,7 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Xaml::Automation::IAutomationPropertiesStatics6> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Automation::IAutomationPropertiesStatics7> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Automation::IAutomationPropertiesStatics8> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Xaml::Automation::IAutomationPropertiesStatics9> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Automation::IAutomationProperty> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Automation::IDockPatternIdentifiers> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Automation::IDockPatternIdentifiersStatics> : winrt::impl::hash_base {};

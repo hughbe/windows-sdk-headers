@@ -666,6 +666,30 @@ typedef struct CWMAudioGFXAPO CWMAudioGFXAPO;
 #endif 	/* __CWMAudioGFXAPO_FWD_DEFINED__ */
 
 
+#ifndef __CWMAudioCAPXLFXAPO_FWD_DEFINED__
+#define __CWMAudioCAPXLFXAPO_FWD_DEFINED__
+
+#ifdef __cplusplus
+typedef class CWMAudioCAPXLFXAPO CWMAudioCAPXLFXAPO;
+#else
+typedef struct CWMAudioCAPXLFXAPO CWMAudioCAPXLFXAPO;
+#endif /* __cplusplus */
+
+#endif 	/* __CWMAudioCAPXLFXAPO_FWD_DEFINED__ */
+
+
+#ifndef __CWMAudioCAPXGFXAPO_FWD_DEFINED__
+#define __CWMAudioCAPXGFXAPO_FWD_DEFINED__
+
+#ifdef __cplusplus
+typedef class CWMAudioCAPXGFXAPO CWMAudioCAPXGFXAPO;
+#else
+typedef struct CWMAudioCAPXGFXAPO CWMAudioCAPXGFXAPO;
+#endif /* __cplusplus */
+
+#endif 	/* __CWMAudioCAPXGFXAPO_FWD_DEFINED__ */
+
+
 #ifndef __CWMAudioSpdTxDMO_FWD_DEFINED__
 #define __CWMAudioSpdTxDMO_FWD_DEFINED__
 
@@ -5552,6 +5576,22 @@ EXTERN_C const CLSID CLSID_CWMAudioGFXAPO;
 
 class DECLSPEC_UUID("637c490d-eee3-4c0a-973f-371958802da2")
 CWMAudioGFXAPO;
+#endif
+
+EXTERN_C const CLSID CLSID_CWMAudioCAPXLFXAPO;
+
+#ifdef __cplusplus
+
+class DECLSPEC_UUID("C9453E73-8C5C-4463-9984-AF8BAB2F5447")
+CWMAudioCAPXLFXAPO;
+#endif
+
+EXTERN_C const CLSID CLSID_CWMAudioCAPXGFXAPO;
+
+#ifdef __cplusplus
+
+class DECLSPEC_UUID("13AB3EBD-137E-4903-9D89-60BE8277FD17")
+CWMAudioCAPXGFXAPO;
 #endif
 
 EXTERN_C const CLSID CLSID_CWMAudioSpdTxDMO;

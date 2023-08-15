@@ -92,7 +92,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xc0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xe0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -690,6 +690,7 @@ namespace ABI {
                 enum GraphicsCaptureAccessKind : int
                 {
                     GraphicsCaptureAccessKind_Borderless = 0,
+                    GraphicsCaptureAccessKind_Programmatic = 1,
                 };
             } /* Capture */
         } /* Graphics */
@@ -1850,6 +1851,7 @@ typedef enum __x_ABI_CWindows_CGraphics_CCapture_CGraphicsCaptureAccessKind __x_
 enum __x_ABI_CWindows_CGraphics_CCapture_CGraphicsCaptureAccessKind
 {
     GraphicsCaptureAccessKind_Borderless = 0,
+    GraphicsCaptureAccessKind_Programmatic = 1,
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xc0000
 

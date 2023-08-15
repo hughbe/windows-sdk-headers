@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -62,6 +62,11 @@ WINRT_EXPORT namespace winrt::Windows::Media::Devices
         FullRange = 0,
         Macro = 1,
         Normal = 2,
+    };
+    enum class CameraOcclusionKind : int32_t
+    {
+        Lid = 0,
+        CameraHardware = 1,
     };
     enum class CameraStreamState : int32_t
     {
@@ -250,6 +255,7 @@ WINRT_EXPORT namespace winrt::Windows::Media::Devices
     struct IAdvancedPhotoCaptureSettings;
     struct IAdvancedPhotoControl;
     struct IAdvancedVideoCaptureDeviceController;
+    struct IAdvancedVideoCaptureDeviceController10;
     struct IAdvancedVideoCaptureDeviceController2;
     struct IAdvancedVideoCaptureDeviceController3;
     struct IAdvancedVideoCaptureDeviceController4;
@@ -265,6 +271,9 @@ WINRT_EXPORT namespace winrt::Windows::Media::Devices
     struct IAudioDeviceModulesManagerFactory;
     struct ICallControl;
     struct ICallControlStatics;
+    struct ICameraOcclusionInfo;
+    struct ICameraOcclusionState;
+    struct ICameraOcclusionStateChangedEventArgs;
     struct IDefaultAudioDeviceChangedEventArgs;
     struct IDialRequestedEventArgs;
     struct IDigitalWindowBounds;
@@ -313,6 +322,9 @@ WINRT_EXPORT namespace winrt::Windows::Media::Devices
     struct AudioDeviceModuleNotificationEventArgs;
     struct AudioDeviceModulesManager;
     struct CallControl;
+    struct CameraOcclusionInfo;
+    struct CameraOcclusionState;
+    struct CameraOcclusionStateChangedEventArgs;
     struct DefaultAudioCaptureDeviceChangedEventArgs;
     struct DefaultAudioRenderDeviceChangedEventArgs;
     struct DialRequestedEventArgs;
@@ -359,6 +371,7 @@ namespace winrt::impl
     template <> struct category<Windows::Media::Devices::IAdvancedPhotoCaptureSettings>{ using type = interface_category; };
     template <> struct category<Windows::Media::Devices::IAdvancedPhotoControl>{ using type = interface_category; };
     template <> struct category<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController>{ using type = interface_category; };
+    template <> struct category<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10>{ using type = interface_category; };
     template <> struct category<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2>{ using type = interface_category; };
     template <> struct category<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3>{ using type = interface_category; };
     template <> struct category<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4>{ using type = interface_category; };
@@ -374,6 +387,9 @@ namespace winrt::impl
     template <> struct category<Windows::Media::Devices::IAudioDeviceModulesManagerFactory>{ using type = interface_category; };
     template <> struct category<Windows::Media::Devices::ICallControl>{ using type = interface_category; };
     template <> struct category<Windows::Media::Devices::ICallControlStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Media::Devices::ICameraOcclusionInfo>{ using type = interface_category; };
+    template <> struct category<Windows::Media::Devices::ICameraOcclusionState>{ using type = interface_category; };
+    template <> struct category<Windows::Media::Devices::ICameraOcclusionStateChangedEventArgs>{ using type = interface_category; };
     template <> struct category<Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>{ using type = interface_category; };
     template <> struct category<Windows::Media::Devices::IDialRequestedEventArgs>{ using type = interface_category; };
     template <> struct category<Windows::Media::Devices::IDigitalWindowBounds>{ using type = interface_category; };
@@ -422,6 +438,9 @@ namespace winrt::impl
     template <> struct category<Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs>{ using type = class_category; };
     template <> struct category<Windows::Media::Devices::AudioDeviceModulesManager>{ using type = class_category; };
     template <> struct category<Windows::Media::Devices::CallControl>{ using type = class_category; };
+    template <> struct category<Windows::Media::Devices::CameraOcclusionInfo>{ using type = class_category; };
+    template <> struct category<Windows::Media::Devices::CameraOcclusionState>{ using type = class_category; };
+    template <> struct category<Windows::Media::Devices::CameraOcclusionStateChangedEventArgs>{ using type = class_category; };
     template <> struct category<Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs>{ using type = class_category; };
     template <> struct category<Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs>{ using type = class_category; };
     template <> struct category<Windows::Media::Devices::DialRequestedEventArgs>{ using type = class_category; };
@@ -461,6 +480,7 @@ namespace winrt::impl
     template <> struct category<Windows::Media::Devices::AdvancedPhotoMode>{ using type = enum_category; };
     template <> struct category<Windows::Media::Devices::AudioDeviceRole>{ using type = enum_category; };
     template <> struct category<Windows::Media::Devices::AutoFocusRange>{ using type = enum_category; };
+    template <> struct category<Windows::Media::Devices::CameraOcclusionKind>{ using type = enum_category; };
     template <> struct category<Windows::Media::Devices::CameraStreamState>{ using type = enum_category; };
     template <> struct category<Windows::Media::Devices::CaptureSceneMode>{ using type = enum_category; };
     template <> struct category<Windows::Media::Devices::CaptureUse>{ using type = enum_category; };
@@ -494,6 +514,9 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs> = L"Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::AudioDeviceModulesManager> = L"Windows.Media.Devices.AudioDeviceModulesManager";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::CallControl> = L"Windows.Media.Devices.CallControl";
+    template <> inline constexpr auto& name_v<Windows::Media::Devices::CameraOcclusionInfo> = L"Windows.Media.Devices.CameraOcclusionInfo";
+    template <> inline constexpr auto& name_v<Windows::Media::Devices::CameraOcclusionState> = L"Windows.Media.Devices.CameraOcclusionState";
+    template <> inline constexpr auto& name_v<Windows::Media::Devices::CameraOcclusionStateChangedEventArgs> = L"Windows.Media.Devices.CameraOcclusionStateChangedEventArgs";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs> = L"Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs> = L"Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::DialRequestedEventArgs> = L"Windows.Media.Devices.DialRequestedEventArgs";
@@ -533,6 +556,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::Media::Devices::AdvancedPhotoMode> = L"Windows.Media.Devices.AdvancedPhotoMode";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::AudioDeviceRole> = L"Windows.Media.Devices.AudioDeviceRole";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::AutoFocusRange> = L"Windows.Media.Devices.AutoFocusRange";
+    template <> inline constexpr auto& name_v<Windows::Media::Devices::CameraOcclusionKind> = L"Windows.Media.Devices.CameraOcclusionKind";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::CameraStreamState> = L"Windows.Media.Devices.CameraStreamState";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::CaptureSceneMode> = L"Windows.Media.Devices.CaptureSceneMode";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::CaptureUse> = L"Windows.Media.Devices.CaptureUse";
@@ -558,6 +582,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::Media::Devices::IAdvancedPhotoCaptureSettings> = L"Windows.Media.Devices.IAdvancedPhotoCaptureSettings";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::IAdvancedPhotoControl> = L"Windows.Media.Devices.IAdvancedPhotoControl";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController> = L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController";
+    template <> inline constexpr auto& name_v<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10> = L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController10";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2> = L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3> = L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController3";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4> = L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4";
@@ -573,6 +598,9 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::Media::Devices::IAudioDeviceModulesManagerFactory> = L"Windows.Media.Devices.IAudioDeviceModulesManagerFactory";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::ICallControl> = L"Windows.Media.Devices.ICallControl";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::ICallControlStatics> = L"Windows.Media.Devices.ICallControlStatics";
+    template <> inline constexpr auto& name_v<Windows::Media::Devices::ICameraOcclusionInfo> = L"Windows.Media.Devices.ICameraOcclusionInfo";
+    template <> inline constexpr auto& name_v<Windows::Media::Devices::ICameraOcclusionState> = L"Windows.Media.Devices.ICameraOcclusionState";
+    template <> inline constexpr auto& name_v<Windows::Media::Devices::ICameraOcclusionStateChangedEventArgs> = L"Windows.Media.Devices.ICameraOcclusionStateChangedEventArgs";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs> = L"Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::IDialRequestedEventArgs> = L"Windows.Media.Devices.IDialRequestedEventArgs";
     template <> inline constexpr auto& name_v<Windows::Media::Devices::IDigitalWindowBounds> = L"Windows.Media.Devices.IDigitalWindowBounds";
@@ -621,6 +649,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::Media::Devices::IAdvancedPhotoCaptureSettings>{ 0x08F3863A,0x0018,0x445B,{ 0x93,0xD2,0x64,0x6D,0x1C,0x5E,0xD0,0x5C } }; // 08F3863A-0018-445B-93D2-646D1C5ED05C
     template <> inline constexpr guid guid_v<Windows::Media::Devices::IAdvancedPhotoControl>{ 0xC5B15486,0x9001,0x4682,{ 0x93,0x09,0x68,0xEA,0xE0,0x08,0x0E,0xEC } }; // C5B15486-9001-4682-9309-68EAE0080EEC
     template <> inline constexpr guid guid_v<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController>{ 0xDE6FF4D3,0x2B96,0x4583,{ 0x80,0xAB,0xB5,0xB0,0x1D,0xC6,0xA8,0xD7 } }; // DE6FF4D3-2B96-4583-80AB-B5B01DC6A8D7
+    template <> inline constexpr guid guid_v<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10>{ 0xC621B82D,0xD6F0,0x5C1B,{ 0xA3,0x88,0xA6,0xE9,0x38,0x40,0x71,0x46 } }; // C621B82D-D6F0-5C1B-A388-A6E938407146
     template <> inline constexpr guid guid_v<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2>{ 0x8BB94F8F,0xF11A,0x43DB,{ 0xB4,0x02,0x11,0x93,0x0B,0x80,0xAE,0x56 } }; // 8BB94F8F-F11A-43DB-B402-11930B80AE56
     template <> inline constexpr guid guid_v<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3>{ 0xA98B8F34,0xEE0D,0x470C,{ 0xB9,0xF0,0x42,0x29,0xC4,0xBB,0xD0,0x89 } }; // A98B8F34-EE0D-470C-B9F0-4229C4BBD089
     template <> inline constexpr guid guid_v<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4>{ 0xEA9FBFAF,0xD371,0x41C3,{ 0x9A,0x17,0x82,0x4A,0x87,0xEB,0xDF,0xD2 } }; // EA9FBFAF-D371-41C3-9A17-824A87EBDFD2
@@ -636,6 +665,9 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::Media::Devices::IAudioDeviceModulesManagerFactory>{ 0x8DB03670,0xE64D,0x4773,{ 0x96,0xC0,0xBC,0x7E,0xBF,0x0E,0x06,0x3F } }; // 8DB03670-E64D-4773-96C0-BC7EBF0E063F
     template <> inline constexpr guid guid_v<Windows::Media::Devices::ICallControl>{ 0xA520D0D6,0xAE8D,0x45DB,{ 0x80,0x11,0xCA,0x49,0xD3,0xB3,0xE5,0x78 } }; // A520D0D6-AE8D-45DB-8011-CA49D3B3E578
     template <> inline constexpr guid guid_v<Windows::Media::Devices::ICallControlStatics>{ 0x03945AD5,0x85AB,0x40E1,{ 0xAF,0x19,0x56,0xC9,0x43,0x03,0xB0,0x19 } }; // 03945AD5-85AB-40E1-AF19-56C94303B019
+    template <> inline constexpr guid guid_v<Windows::Media::Devices::ICameraOcclusionInfo>{ 0xAF6C4AD0,0xA84D,0x5DB6,{ 0xBE,0x58,0xA5,0xDA,0x21,0xCF,0xE0,0x11 } }; // AF6C4AD0-A84D-5DB6-BE58-A5DA21CFE011
+    template <> inline constexpr guid guid_v<Windows::Media::Devices::ICameraOcclusionState>{ 0x430ADEB8,0x6842,0x5E55,{ 0x9B,0xDE,0x04,0xB4,0xEF,0x3A,0x8A,0x57 } }; // 430ADEB8-6842-5E55-9BDE-04B4EF3A8A57
+    template <> inline constexpr guid guid_v<Windows::Media::Devices::ICameraOcclusionStateChangedEventArgs>{ 0x8512D848,0xC0DE,0x57CA,{ 0xA1,0xCA,0xFB,0x2C,0x3D,0x23,0xDF,0x55 } }; // 8512D848-C0DE-57CA-A1CA-FB2C3D23DF55
     template <> inline constexpr guid guid_v<Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>{ 0x110F882F,0x1C05,0x4657,{ 0xA1,0x8E,0x47,0xC9,0xB6,0x9F,0x07,0xAB } }; // 110F882F-1C05-4657-A18E-47C9B69F07AB
     template <> inline constexpr guid guid_v<Windows::Media::Devices::IDialRequestedEventArgs>{ 0x037B929E,0x953C,0x4286,{ 0x88,0x66,0x4F,0x0F,0x37,0x6C,0x85,0x5A } }; // 037B929E-953C-4286-8866-4F0F376C855A
     template <> inline constexpr guid guid_v<Windows::Media::Devices::IDigitalWindowBounds>{ 0xDD4F21DD,0xD173,0x5C6B,{ 0x8C,0x25,0xBD,0xD2,0x6D,0x51,0x22,0xB1 } }; // DD4F21DD-D173-5C6B-8C25-BDD26D5122B1
@@ -688,6 +720,9 @@ namespace winrt::impl
     template <> struct default_interface<Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs>{ using type = Windows::Media::Devices::IAudioDeviceModuleNotificationEventArgs; };
     template <> struct default_interface<Windows::Media::Devices::AudioDeviceModulesManager>{ using type = Windows::Media::Devices::IAudioDeviceModulesManager; };
     template <> struct default_interface<Windows::Media::Devices::CallControl>{ using type = Windows::Media::Devices::ICallControl; };
+    template <> struct default_interface<Windows::Media::Devices::CameraOcclusionInfo>{ using type = Windows::Media::Devices::ICameraOcclusionInfo; };
+    template <> struct default_interface<Windows::Media::Devices::CameraOcclusionState>{ using type = Windows::Media::Devices::ICameraOcclusionState; };
+    template <> struct default_interface<Windows::Media::Devices::CameraOcclusionStateChangedEventArgs>{ using type = Windows::Media::Devices::ICameraOcclusionStateChangedEventArgs; };
     template <> struct default_interface<Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs>{ using type = Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs; };
     template <> struct default_interface<Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs>{ using type = Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs; };
     template <> struct default_interface<Windows::Media::Devices::DialRequestedEventArgs>{ using type = Windows::Media::Devices::IDialRequestedEventArgs; };
@@ -747,6 +782,13 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall SetDeviceProperty(void*, void*) noexcept = 0;
             virtual int32_t __stdcall GetDeviceProperty(void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_CameraOcclusionInfo(void**) noexcept = 0;
         };
     };
     template <> struct abi<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2>
@@ -904,6 +946,31 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall GetDefault(void**) noexcept = 0;
             virtual int32_t __stdcall FromId(void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::Media::Devices::ICameraOcclusionInfo>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall GetState(void**) noexcept = 0;
+            virtual int32_t __stdcall IsOcclusionKindSupported(int32_t, bool*) noexcept = 0;
+            virtual int32_t __stdcall add_StateChanged(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_StateChanged(winrt::event_token) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::Media::Devices::ICameraOcclusionState>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IsOccluded(bool*) noexcept = 0;
+            virtual int32_t __stdcall IsOcclusionKind(int32_t, bool*) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::Media::Devices::ICameraOcclusionStateChangedEventArgs>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_State(void**) noexcept = 0;
         };
     };
     template <> struct abi<Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>
@@ -1459,6 +1526,15 @@ namespace winrt::impl
         template <typename D> using type = consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController<D>;
     };
     template <typename D>
+    struct consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController10
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Media::Devices::CameraOcclusionInfo) CameraOcclusionInfo() const;
+    };
+    template <> struct consume<Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10>
+    {
+        template <typename D> using type = consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController10<D>;
+    };
+    template <typename D>
     struct consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2
     {
         [[nodiscard]] WINRT_IMPL_AUTO(Windows::Media::Devices::LowLagPhotoSequenceControl) LowLagPhotoSequence() const;
@@ -1658,6 +1734,39 @@ namespace winrt::impl
     template <> struct consume<Windows::Media::Devices::ICallControlStatics>
     {
         template <typename D> using type = consume_Windows_Media_Devices_ICallControlStatics<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Media_Devices_ICameraOcclusionInfo
+    {
+        WINRT_IMPL_AUTO(Windows::Media::Devices::CameraOcclusionState) GetState() const;
+        WINRT_IMPL_AUTO(bool) IsOcclusionKindSupported(Windows::Media::Devices::CameraOcclusionKind const& occlusionKind) const;
+        WINRT_IMPL_AUTO(winrt::event_token) StateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Devices::CameraOcclusionInfo, Windows::Media::Devices::CameraOcclusionStateChangedEventArgs> const& handler) const;
+        using StateChanged_revoker = impl::event_revoker<Windows::Media::Devices::ICameraOcclusionInfo, &impl::abi_t<Windows::Media::Devices::ICameraOcclusionInfo>::remove_StateChanged>;
+        [[nodiscard]] StateChanged_revoker StateChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Devices::CameraOcclusionInfo, Windows::Media::Devices::CameraOcclusionStateChangedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(void) StateChanged(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<Windows::Media::Devices::ICameraOcclusionInfo>
+    {
+        template <typename D> using type = consume_Windows_Media_Devices_ICameraOcclusionInfo<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Media_Devices_ICameraOcclusionState
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsOccluded() const;
+        WINRT_IMPL_AUTO(bool) IsOcclusionKind(Windows::Media::Devices::CameraOcclusionKind const& occlusionKind) const;
+    };
+    template <> struct consume<Windows::Media::Devices::ICameraOcclusionState>
+    {
+        template <typename D> using type = consume_Windows_Media_Devices_ICameraOcclusionState<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Media_Devices_ICameraOcclusionStateChangedEventArgs
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Media::Devices::CameraOcclusionState) State() const;
+    };
+    template <> struct consume<Windows::Media::Devices::ICameraOcclusionStateChangedEventArgs>
+    {
+        template <typename D> using type = consume_Windows_Media_Devices_ICameraOcclusionStateChangedEventArgs<D>;
     };
     template <typename D>
     struct consume_Windows_Media_Devices_IDefaultAudioDeviceChangedEventArgs

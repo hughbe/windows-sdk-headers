@@ -71,6 +71,8 @@ namespace Windows
 
             interface IGeocoordinateWithPositionSourceTimestamp;
 
+            interface IGeocoordinateWithRemoteSource;
+
             interface IGeolocator;
 
             interface IGeolocator2;
@@ -429,6 +431,14 @@ namespace Windows
                 [propget] HRESULT PositionSourceTimestamp([out] [retval] Windows.Foundation.IReference<Windows.Foundation.DateTime>** value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 14.0)]
+            [exclusiveto(Windows.Devices.Geolocation.Geocoordinate)]
+            [uuid(397CEBD7-EE38-5F3B-8900-C4A7BC9CF953)]
+            interface IGeocoordinateWithRemoteSource : IInspectable
+            {
+                [propget] HRESULT IsRemoteSource([out] [retval] boolean* value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Devices.Geolocation.Geolocator)]
             [uuid(A9C3BF62-4524-4989-8AA9-DE019D2E551F)]
@@ -662,6 +672,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Devices.Geolocation.IGeocoordinateWithPositionData;
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Devices.Geolocation.IGeocoordinateWithPoint;
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Devices.Geolocation.IGeocoordinateWithPositionSourceTimestamp;
+                [contract(Windows.Foundation.UniversalApiContract, 14.0)] interface Windows.Devices.Geolocation.IGeocoordinateWithRemoteSource;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]

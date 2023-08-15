@@ -1752,7 +1752,12 @@ Abstract:
 * The app %1!ws! is required for this VPN connection. Please download it in the Microsoft Store or contact your IT administrators.
 */
 
-#define RASBASEEND                                 (RASBASE+276)
+#define ERROR_ACTION_REQUIRED                      (RASBASE+277)
+/*
+* The connection requires an input state from the user.
+*/
+
+#define RASBASEEND                                 (RASBASE+277)
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion

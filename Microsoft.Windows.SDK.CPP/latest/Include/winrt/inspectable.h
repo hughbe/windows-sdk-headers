@@ -214,7 +214,7 @@ extern "C++"
 {
     template<typename T> _Post_equal_to_(pp) _Post_satisfies_(return == pp) void** IID_INS_ARGS_Helper(T** pp) 
     {
-        static_cast<IInspectable*>(*pp);    // make sure everyone derives from IInspectable
+        (void)static_cast<IInspectable*>(*pp);    // make sure everyone derives from IInspectable
         return reinterpret_cast<void**>(pp);
     }
 }

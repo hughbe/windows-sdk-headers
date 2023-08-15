@@ -857,6 +857,25 @@ __ComputedCodes SETS "0xE4"
 
         MEND
 
+
+        ;
+        ; Macro for generic end of epilog such as direct
+        ; (b) or indirect (br) tail calls.
+        ; 
+
+        MACRO
+        EPILOG_END $O1,$O2,$O3,$O4
+
+__ComputedCodes SETS "0xE4"
+
+        __DeclareEpilogStart
+        __EmitRunningLabelAndOpcode $O1,$O2,$O3,$O4
+        __AppendEpilogCodes
+        __DeclareEpilogEnd
+
+        MEND
+
+
         ;
         ; Emit an opcode indicating that the unwind address of this function
         ; will be at the next instruction after a call rather than the call

@@ -110,13 +110,6 @@ typedef interface IWTSProtocolLogonErrorRedirector IWTSProtocolLogonErrorRedirec
 #endif 	/* __IWTSProtocolLogonErrorRedirector_FWD_DEFINED__ */
 
 
-#ifndef __IWRdsRemoteFXGraphicsConnection_FWD_DEFINED__
-#define __IWRdsRemoteFXGraphicsConnection_FWD_DEFINED__
-typedef interface IWRdsRemoteFXGraphicsConnection IWRdsRemoteFXGraphicsConnection;
-
-#endif 	/* __IWRdsRemoteFXGraphicsConnection_FWD_DEFINED__ */
-
-
 #ifndef __IWRdsProtocolSettings_FWD_DEFINED__
 #define __IWRdsProtocolSettings_FWD_DEFINED__
 typedef interface IWRdsProtocolSettings IWRdsProtocolSettings;
@@ -1537,105 +1530,9 @@ EXTERN_C const IID IID_IWTSProtocolLogonErrorRedirector;
 #endif 	/* __IWTSProtocolLogonErrorRedirector_INTERFACE_DEFINED__ */
 
 
-#ifndef __IWRdsRemoteFXGraphicsConnection_INTERFACE_DEFINED__
-#define __IWRdsRemoteFXGraphicsConnection_INTERFACE_DEFINED__
-
-/* interface IWRdsRemoteFXGraphicsConnection */
-/* [unique][uuid][object] */ 
-
-
-EXTERN_C const IID IID_IWRdsRemoteFXGraphicsConnection;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("0FAD5DCF-C6D3-423c-B097-163D6A676151")
-    IWRdsRemoteFXGraphicsConnection : public IUnknown
-    {
-    public:
-        virtual HRESULT STDMETHODCALLTYPE EnableRemoteFXGraphics( 
-            /* [out] */ __RPC__out BOOL *pEnableRemoteFXGraphics) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE GetVirtualChannelTransport( 
-            /* [out] */ __RPC__deref_out_opt IUnknown **ppTransport) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct IWRdsRemoteFXGraphicsConnectionVtbl
-    {
-        BEGIN_INTERFACE
-        
-        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            __RPC__in IWRdsRemoteFXGraphicsConnection * This,
-            /* [in] */ __RPC__in REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        DECLSPEC_XFGVIRT(IUnknown, AddRef)
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            __RPC__in IWRdsRemoteFXGraphicsConnection * This);
-        
-        DECLSPEC_XFGVIRT(IUnknown, Release)
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            __RPC__in IWRdsRemoteFXGraphicsConnection * This);
-        
-        DECLSPEC_XFGVIRT(IWRdsRemoteFXGraphicsConnection, EnableRemoteFXGraphics)
-        HRESULT ( STDMETHODCALLTYPE *EnableRemoteFXGraphics )( 
-            __RPC__in IWRdsRemoteFXGraphicsConnection * This,
-            /* [out] */ __RPC__out BOOL *pEnableRemoteFXGraphics);
-        
-        DECLSPEC_XFGVIRT(IWRdsRemoteFXGraphicsConnection, GetVirtualChannelTransport)
-        HRESULT ( STDMETHODCALLTYPE *GetVirtualChannelTransport )( 
-            __RPC__in IWRdsRemoteFXGraphicsConnection * This,
-            /* [out] */ __RPC__deref_out_opt IUnknown **ppTransport);
-        
-        END_INTERFACE
-    } IWRdsRemoteFXGraphicsConnectionVtbl;
-
-    interface IWRdsRemoteFXGraphicsConnection
-    {
-        CONST_VTBL struct IWRdsRemoteFXGraphicsConnectionVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IWRdsRemoteFXGraphicsConnection_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IWRdsRemoteFXGraphicsConnection_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IWRdsRemoteFXGraphicsConnection_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IWRdsRemoteFXGraphicsConnection_EnableRemoteFXGraphics(This,pEnableRemoteFXGraphics)	\
-    ( (This)->lpVtbl -> EnableRemoteFXGraphics(This,pEnableRemoteFXGraphics) ) 
-
-#define IWRdsRemoteFXGraphicsConnection_GetVirtualChannelTransport(This,ppTransport)	\
-    ( (This)->lpVtbl -> GetVirtualChannelTransport(This,ppTransport) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IWRdsRemoteFXGraphicsConnection_INTERFACE_DEFINED__ */
-
-
-/* interface __MIDL_itf_wtsprotocol_0000_0010 */
+/* interface __MIDL_itf_wtsprotocol_0000_0009 */
 /* [local] */ 
 
-#pragma deprecated(IWRdsRemoteFXGraphicsConnection)
 
 
 
@@ -1648,8 +1545,8 @@ EXTERN_C const IID IID_IWRdsRemoteFXGraphicsConnection;
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0010_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0010_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0009_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0009_v0_0_s_ifspec;
 
 #ifndef __IWRdsProtocolSettings_INTERFACE_DEFINED__
 #define __IWRdsProtocolSettings_INTERFACE_DEFINED__
@@ -3113,14 +3010,14 @@ EXTERN_C const IID IID_IWRdsProtocolLogonErrorRedirector;
 #endif 	/* __IWRdsProtocolLogonErrorRedirector_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_wtsprotocol_0000_0020 */
+/* interface __MIDL_itf_wtsprotocol_0000_0019 */
 /* [local] */ 
 
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0020_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0020_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0019_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0019_v0_0_s_ifspec;
 
 #ifndef __IWRdsWddmIddProps_INTERFACE_DEFINED__
 #define __IWRdsWddmIddProps_INTERFACE_DEFINED__
@@ -3243,14 +3140,14 @@ EXTERN_C const IID IID_IWRdsWddmIddProps;
 #endif 	/* __IWRdsWddmIddProps_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_wtsprotocol_0000_0021 */
+/* interface __MIDL_itf_wtsprotocol_0000_0020 */
 /* [local] */ 
 
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0021_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0021_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0020_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0020_v0_0_s_ifspec;
 
 #ifndef __IWRdsProtocolConnectionSettings_INTERFACE_DEFINED__
 #define __IWRdsProtocolConnectionSettings_INTERFACE_DEFINED__
@@ -3351,14 +3248,14 @@ EXTERN_C const IID IID_IWRdsProtocolConnectionSettings;
 #endif 	/* __IWRdsProtocolConnectionSettings_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_wtsprotocol_0000_0022 */
+/* interface __MIDL_itf_wtsprotocol_0000_0021 */
 /* [local] */ 
 
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0022_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0022_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0021_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0021_v0_0_s_ifspec;
 
 #ifndef __IWRdsEnhancedFastReconnectArbitrator_INTERFACE_DEFINED__
 #define __IWRdsEnhancedFastReconnectArbitrator_INTERFACE_DEFINED__
@@ -3448,15 +3345,15 @@ EXTERN_C const IID IID_IWRdsEnhancedFastReconnectArbitrator;
 #endif 	/* __IWRdsEnhancedFastReconnectArbitrator_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_wtsprotocol_0000_0023 */
+/* interface __MIDL_itf_wtsprotocol_0000_0022 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0023_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0023_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0022_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0022_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

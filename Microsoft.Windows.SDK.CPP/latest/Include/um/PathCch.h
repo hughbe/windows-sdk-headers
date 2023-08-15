@@ -57,6 +57,11 @@ typedef enum PATHCCH_OPTIONS
 
     // When combining or normalizing a path ensure there is a trailing backslash.
     PATHCCH_ENSURE_TRAILING_SLASH = 0x020,
+
+    // Convert forward slashes to back slashes and collapse multiple slashes.
+    // This is needed to to support sub-path or identity comparisons.
+    PATHCCH_CANONICALIZE_SLASHES = 0x040,
+
 } PATHCCH_OPTIONS;
 DEFINE_ENUM_FLAG_OPERATORS(PATHCCH_OPTIONS)
 

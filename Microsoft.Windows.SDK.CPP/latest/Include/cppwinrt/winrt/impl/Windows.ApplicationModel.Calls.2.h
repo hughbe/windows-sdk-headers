@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -45,6 +45,12 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Calls
     {
         MuteChangeEventArgs(std::nullptr_t) noexcept {}
         MuteChangeEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Calls::IMuteChangeEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PhoneCall : Windows::ApplicationModel::Calls::IPhoneCall
+    {
+        PhoneCall(std::nullptr_t) noexcept {}
+        PhoneCall(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Calls::IPhoneCall(ptr, take_ownership_from_abi) {}
+        static auto GetFromId(param::hstring const& callId);
     };
     struct PhoneCallBlocking
     {
@@ -95,6 +101,11 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Calls
         PhoneCallHistoryStore(std::nullptr_t) noexcept {}
         PhoneCallHistoryStore(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Calls::IPhoneCallHistoryStore(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) PhoneCallInfo : Windows::ApplicationModel::Calls::IPhoneCallInfo
+    {
+        PhoneCallInfo(std::nullptr_t) noexcept {}
+        PhoneCallInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Calls::IPhoneCallInfo(ptr, take_ownership_from_abi) {}
+    };
     struct PhoneCallManager
     {
         PhoneCallManager() = delete;
@@ -123,6 +134,11 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Calls
         PhoneCallVideoCapabilitiesManager() = delete;
         static auto GetCapabilitiesAsync(param::hstring const& phoneNumber);
     };
+    struct __declspec(empty_bases) PhoneCallsResult : Windows::ApplicationModel::Calls::IPhoneCallsResult
+    {
+        PhoneCallsResult(std::nullptr_t) noexcept {}
+        PhoneCallsResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Calls::IPhoneCallsResult(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) PhoneDialOptions : Windows::ApplicationModel::Calls::IPhoneDialOptions
     {
         PhoneDialOptions(std::nullptr_t) noexcept {}
@@ -130,7 +146,7 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Calls
         PhoneDialOptions();
     };
     struct __declspec(empty_bases) PhoneLine : Windows::ApplicationModel::Calls::IPhoneLine,
-        impl::require<PhoneLine, Windows::ApplicationModel::Calls::IPhoneLine2>
+        impl::require<PhoneLine, Windows::ApplicationModel::Calls::IPhoneLine2, Windows::ApplicationModel::Calls::IPhoneLine3>
     {
         PhoneLine(std::nullptr_t) noexcept {}
         PhoneLine(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Calls::IPhoneLine(ptr, take_ownership_from_abi) {}
@@ -146,7 +162,13 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Calls
         PhoneLineConfiguration(std::nullptr_t) noexcept {}
         PhoneLineConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Calls::IPhoneLineConfiguration(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PhoneLineTransportDevice : Windows::ApplicationModel::Calls::IPhoneLineTransportDevice
+    struct __declspec(empty_bases) PhoneLineDialResult : Windows::ApplicationModel::Calls::IPhoneLineDialResult
+    {
+        PhoneLineDialResult(std::nullptr_t) noexcept {}
+        PhoneLineDialResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Calls::IPhoneLineDialResult(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PhoneLineTransportDevice : Windows::ApplicationModel::Calls::IPhoneLineTransportDevice,
+        impl::require<PhoneLineTransportDevice, Windows::ApplicationModel::Calls::IPhoneLineTransportDevice2>
     {
         PhoneLineTransportDevice(std::nullptr_t) noexcept {}
         PhoneLineTransportDevice(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Calls::IPhoneLineTransportDevice(ptr, take_ownership_from_abi) {}

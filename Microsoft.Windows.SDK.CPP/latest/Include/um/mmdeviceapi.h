@@ -103,6 +103,20 @@ typedef interface IActivateAudioInterfaceAsyncOperation IActivateAudioInterfaceA
 #endif 	/* __IActivateAudioInterfaceAsyncOperation_FWD_DEFINED__ */
 
 
+#ifndef __IAudioSystemEffectsPropertyChangeNotificationClient_FWD_DEFINED__
+#define __IAudioSystemEffectsPropertyChangeNotificationClient_FWD_DEFINED__
+typedef interface IAudioSystemEffectsPropertyChangeNotificationClient IAudioSystemEffectsPropertyChangeNotificationClient;
+
+#endif 	/* __IAudioSystemEffectsPropertyChangeNotificationClient_FWD_DEFINED__ */
+
+
+#ifndef __IAudioSystemEffectsPropertyStore_FWD_DEFINED__
+#define __IAudioSystemEffectsPropertyStore_FWD_DEFINED__
+typedef interface IAudioSystemEffectsPropertyStore IAudioSystemEffectsPropertyStore;
+
+#endif 	/* __IAudioSystemEffectsPropertyStore_FWD_DEFINED__ */
+
+
 #ifndef __MMDeviceEnumerator_FWD_DEFINED__
 #define __MMDeviceEnumerator_FWD_DEFINED__
 
@@ -1217,12 +1231,291 @@ typedef /* [public] */ struct __MIDL___MIDL_itf_mmdeviceapi_0000_0008_0001
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
-#pragma region Desktop and Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#pragma region Desktop and Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_APP)
+typedef /* [public][public] */ 
+enum __MIDL___MIDL_itf_mmdeviceapi_0000_0008_0002
+    {
+        AUDIO_SYSTEMEFFECTS_PROPERTYSTORE_TYPE_DEFAULT	= 0,
+        AUDIO_SYSTEMEFFECTS_PROPERTYSTORE_TYPE_USER	= 1,
+        AUDIO_SYSTEMEFFECTS_PROPERTYSTORE_TYPE_VOLATILE	= 2,
+        AUDIO_SYSTEMEFFECTS_PROPERTYSTORE_TYPE_ENUM_COUNT	= ( AUDIO_SYSTEMEFFECTS_PROPERTYSTORE_TYPE_VOLATILE + 1 ) 
+    } 	AUDIO_SYSTEMEFFECTS_PROPERTYSTORE_TYPE;
+
 
 
 extern RPC_IF_HANDLE __MIDL_itf_mmdeviceapi_0000_0008_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_mmdeviceapi_0000_0008_v0_0_s_ifspec;
+
+#ifndef __IAudioSystemEffectsPropertyChangeNotificationClient_INTERFACE_DEFINED__
+#define __IAudioSystemEffectsPropertyChangeNotificationClient_INTERFACE_DEFINED__
+
+/* interface IAudioSystemEffectsPropertyChangeNotificationClient */
+/* [unique][helpstring][nonextensible][uuid][local][object] */ 
+
+
+EXTERN_C const IID IID_IAudioSystemEffectsPropertyChangeNotificationClient;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("20049D40-56D5-400E-A2EF-385599FEED49")
+    IAudioSystemEffectsPropertyChangeNotificationClient : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE OnPropertyChanged( 
+            /* [annotation][in] */ 
+            _In_  AUDIO_SYSTEMEFFECTS_PROPERTYSTORE_TYPE type,
+            /* [annotation][in] */ 
+            _In_  const PROPERTYKEY key) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAudioSystemEffectsPropertyChangeNotificationClientVtbl
+    {
+        BEGIN_INTERFACE
+        
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IAudioSystemEffectsPropertyChangeNotificationClient * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IAudioSystemEffectsPropertyChangeNotificationClient * This);
+        
+        DECLSPEC_XFGVIRT(IUnknown, Release)
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IAudioSystemEffectsPropertyChangeNotificationClient * This);
+        
+        DECLSPEC_XFGVIRT(IAudioSystemEffectsPropertyChangeNotificationClient, OnPropertyChanged)
+        HRESULT ( STDMETHODCALLTYPE *OnPropertyChanged )( 
+            IAudioSystemEffectsPropertyChangeNotificationClient * This,
+            /* [annotation][in] */ 
+            _In_  AUDIO_SYSTEMEFFECTS_PROPERTYSTORE_TYPE type,
+            /* [annotation][in] */ 
+            _In_  const PROPERTYKEY key);
+        
+        END_INTERFACE
+    } IAudioSystemEffectsPropertyChangeNotificationClientVtbl;
+
+    interface IAudioSystemEffectsPropertyChangeNotificationClient
+    {
+        CONST_VTBL struct IAudioSystemEffectsPropertyChangeNotificationClientVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAudioSystemEffectsPropertyChangeNotificationClient_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAudioSystemEffectsPropertyChangeNotificationClient_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAudioSystemEffectsPropertyChangeNotificationClient_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAudioSystemEffectsPropertyChangeNotificationClient_OnPropertyChanged(This,type,key)	\
+    ( (This)->lpVtbl -> OnPropertyChanged(This,type,key) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAudioSystemEffectsPropertyChangeNotificationClient_INTERFACE_DEFINED__ */
+
+
+#ifndef __IAudioSystemEffectsPropertyStore_INTERFACE_DEFINED__
+#define __IAudioSystemEffectsPropertyStore_INTERFACE_DEFINED__
+
+/* interface IAudioSystemEffectsPropertyStore */
+/* [unique][helpstring][nonextensible][uuid][local][object] */ 
+
+
+EXTERN_C const IID IID_IAudioSystemEffectsPropertyStore;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("302AE7F9-D7E0-43E4-971B-1F8293613D2A")
+    IAudioSystemEffectsPropertyStore : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE OpenDefaultPropertyStore( 
+            /* [annotation][in] */ 
+            _In_  DWORD stgmAccess,
+            /* [annotation][out] */ 
+            _COM_Outptr_  IPropertyStore **propStore) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE OpenUserPropertyStore( 
+            /* [annotation][in] */ 
+            _In_  DWORD stgmAccess,
+            /* [annotation][out] */ 
+            _COM_Outptr_  IPropertyStore **propStore) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE OpenVolatilePropertyStore( 
+            /* [annotation][in] */ 
+            _In_  DWORD stgmAccess,
+            /* [annotation][out] */ 
+            _COM_Outptr_  IPropertyStore **propStore) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE ResetUserPropertyStore( void) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE ResetVolatilePropertyStore( void) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE RegisterPropertyChangeNotification( 
+            /* [annotation][in] */ 
+            _In_  IAudioSystemEffectsPropertyChangeNotificationClient *callback) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE UnregisterPropertyChangeNotification( 
+            /* [annotation][in] */ 
+            _In_  IAudioSystemEffectsPropertyChangeNotificationClient *callback) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAudioSystemEffectsPropertyStoreVtbl
+    {
+        BEGIN_INTERFACE
+        
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IAudioSystemEffectsPropertyStore * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IAudioSystemEffectsPropertyStore * This);
+        
+        DECLSPEC_XFGVIRT(IUnknown, Release)
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IAudioSystemEffectsPropertyStore * This);
+        
+        DECLSPEC_XFGVIRT(IAudioSystemEffectsPropertyStore, OpenDefaultPropertyStore)
+        HRESULT ( STDMETHODCALLTYPE *OpenDefaultPropertyStore )( 
+            IAudioSystemEffectsPropertyStore * This,
+            /* [annotation][in] */ 
+            _In_  DWORD stgmAccess,
+            /* [annotation][out] */ 
+            _COM_Outptr_  IPropertyStore **propStore);
+        
+        DECLSPEC_XFGVIRT(IAudioSystemEffectsPropertyStore, OpenUserPropertyStore)
+        HRESULT ( STDMETHODCALLTYPE *OpenUserPropertyStore )( 
+            IAudioSystemEffectsPropertyStore * This,
+            /* [annotation][in] */ 
+            _In_  DWORD stgmAccess,
+            /* [annotation][out] */ 
+            _COM_Outptr_  IPropertyStore **propStore);
+        
+        DECLSPEC_XFGVIRT(IAudioSystemEffectsPropertyStore, OpenVolatilePropertyStore)
+        HRESULT ( STDMETHODCALLTYPE *OpenVolatilePropertyStore )( 
+            IAudioSystemEffectsPropertyStore * This,
+            /* [annotation][in] */ 
+            _In_  DWORD stgmAccess,
+            /* [annotation][out] */ 
+            _COM_Outptr_  IPropertyStore **propStore);
+        
+        DECLSPEC_XFGVIRT(IAudioSystemEffectsPropertyStore, ResetUserPropertyStore)
+        HRESULT ( STDMETHODCALLTYPE *ResetUserPropertyStore )( 
+            IAudioSystemEffectsPropertyStore * This);
+        
+        DECLSPEC_XFGVIRT(IAudioSystemEffectsPropertyStore, ResetVolatilePropertyStore)
+        HRESULT ( STDMETHODCALLTYPE *ResetVolatilePropertyStore )( 
+            IAudioSystemEffectsPropertyStore * This);
+        
+        DECLSPEC_XFGVIRT(IAudioSystemEffectsPropertyStore, RegisterPropertyChangeNotification)
+        HRESULT ( STDMETHODCALLTYPE *RegisterPropertyChangeNotification )( 
+            IAudioSystemEffectsPropertyStore * This,
+            /* [annotation][in] */ 
+            _In_  IAudioSystemEffectsPropertyChangeNotificationClient *callback);
+        
+        DECLSPEC_XFGVIRT(IAudioSystemEffectsPropertyStore, UnregisterPropertyChangeNotification)
+        HRESULT ( STDMETHODCALLTYPE *UnregisterPropertyChangeNotification )( 
+            IAudioSystemEffectsPropertyStore * This,
+            /* [annotation][in] */ 
+            _In_  IAudioSystemEffectsPropertyChangeNotificationClient *callback);
+        
+        END_INTERFACE
+    } IAudioSystemEffectsPropertyStoreVtbl;
+
+    interface IAudioSystemEffectsPropertyStore
+    {
+        CONST_VTBL struct IAudioSystemEffectsPropertyStoreVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAudioSystemEffectsPropertyStore_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAudioSystemEffectsPropertyStore_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAudioSystemEffectsPropertyStore_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAudioSystemEffectsPropertyStore_OpenDefaultPropertyStore(This,stgmAccess,propStore)	\
+    ( (This)->lpVtbl -> OpenDefaultPropertyStore(This,stgmAccess,propStore) ) 
+
+#define IAudioSystemEffectsPropertyStore_OpenUserPropertyStore(This,stgmAccess,propStore)	\
+    ( (This)->lpVtbl -> OpenUserPropertyStore(This,stgmAccess,propStore) ) 
+
+#define IAudioSystemEffectsPropertyStore_OpenVolatilePropertyStore(This,stgmAccess,propStore)	\
+    ( (This)->lpVtbl -> OpenVolatilePropertyStore(This,stgmAccess,propStore) ) 
+
+#define IAudioSystemEffectsPropertyStore_ResetUserPropertyStore(This)	\
+    ( (This)->lpVtbl -> ResetUserPropertyStore(This) ) 
+
+#define IAudioSystemEffectsPropertyStore_ResetVolatilePropertyStore(This)	\
+    ( (This)->lpVtbl -> ResetVolatilePropertyStore(This) ) 
+
+#define IAudioSystemEffectsPropertyStore_RegisterPropertyChangeNotification(This,callback)	\
+    ( (This)->lpVtbl -> RegisterPropertyChangeNotification(This,callback) ) 
+
+#define IAudioSystemEffectsPropertyStore_UnregisterPropertyChangeNotification(This,callback)	\
+    ( (This)->lpVtbl -> UnregisterPropertyChangeNotification(This,callback) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAudioSystemEffectsPropertyStore_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_mmdeviceapi_0000_0010 */
+/* [local] */ 
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_APP) */
+#pragma endregion
+#pragma region Desktop and Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+
+
+extern RPC_IF_HANDLE __MIDL_itf_mmdeviceapi_0000_0010_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mmdeviceapi_0000_0010_v0_0_s_ifspec;
 
 
 #ifndef __MMDeviceAPILib_LIBRARY_DEFINED__
@@ -1243,15 +1536,15 @@ MMDeviceEnumerator;
 #endif
 #endif /* __MMDeviceAPILib_LIBRARY_DEFINED__ */
 
-/* interface __MIDL_itf_mmdeviceapi_0000_0009 */
+/* interface __MIDL_itf_mmdeviceapi_0000_0011 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mmdeviceapi_0000_0009_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mmdeviceapi_0000_0009_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mmdeviceapi_0000_0011_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mmdeviceapi_0000_0011_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

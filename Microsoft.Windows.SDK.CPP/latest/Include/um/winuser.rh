@@ -780,7 +780,6 @@ Revision History:
 #define WM_GETDPISCALEDSIZE             0x02E4
 #endif /* WINVER >= 0x0605 */
 
-
 #define WM_CUT                          0x0300
 #define WM_COPY                         0x0301
 #define WM_PASTE                        0x0302

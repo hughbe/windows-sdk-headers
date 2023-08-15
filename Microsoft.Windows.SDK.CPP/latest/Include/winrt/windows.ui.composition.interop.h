@@ -130,10 +130,10 @@ DECLARE_INTERFACE_IID_(IVisualInteractionSourceInterop, IUnknown, "11F62CD1-2F9D
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
+
 namespace Desktop {
 
-    typedef interface IDesktopWindowTarget IDesktopWindowTarget;
-
+typedef interface IDesktopWindowTarget IDesktopWindowTarget;
 
 #undef INTERFACE
 #define INTERFACE ICompositionCapabilitiesInteropFactory
@@ -144,7 +144,6 @@ DECLARE_INTERFACE_IID_(ICompositionCapabilitiesInteropFactory, IInspectable, "2C
         _COM_Outptr_ ICompositionCapabilities ** result
         ) PURE;
 };
-
 
 #undef INTERFACE
 #define INTERFACE ICompositorDesktopInterop
@@ -171,8 +170,8 @@ DECLARE_INTERFACE_IID_(IDesktopWindowTargetInterop, IUnknown, "35DBF59E-E3F9-45B
         ) PURE;
 };
 
-
 } // namespace Desktop
+
 
 } // namespace Composition
 } // namespace UI

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -50,7 +50,8 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel
         static auto GetFromAppUserModelId(param::hstring const& appUserModelId);
         static auto GetFromAppUserModelIdForUser(Windows::System::User const& user, param::hstring const& appUserModelId);
     };
-    struct __declspec(empty_bases) AppInstallerInfo : Windows::ApplicationModel::IAppInstallerInfo
+    struct __declspec(empty_bases) AppInstallerInfo : Windows::ApplicationModel::IAppInstallerInfo,
+        impl::require<AppInstallerInfo, Windows::ApplicationModel::IAppInstallerInfo2>
     {
         AppInstallerInfo(std::nullptr_t) noexcept {}
         AppInstallerInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::IAppInstallerInfo(ptr, take_ownership_from_abi) {}
@@ -76,6 +77,11 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel
         EnteredBackgroundEventArgs(std::nullptr_t) noexcept {}
         EnteredBackgroundEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::IEnteredBackgroundEventArgs(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) FullTrustProcessLaunchResult : Windows::ApplicationModel::IFullTrustProcessLaunchResult
+    {
+        FullTrustProcessLaunchResult(std::nullptr_t) noexcept {}
+        FullTrustProcessLaunchResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::IFullTrustProcessLaunchResult(ptr, take_ownership_from_abi) {}
+    };
     struct FullTrustProcessLauncher
     {
         FullTrustProcessLauncher() = delete;
@@ -83,6 +89,8 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel
         static auto LaunchFullTrustProcessForCurrentAppAsync(param::hstring const& parameterGroupId);
         static auto LaunchFullTrustProcessForAppAsync(param::hstring const& fullTrustPackageRelativeAppId);
         static auto LaunchFullTrustProcessForAppAsync(param::hstring const& fullTrustPackageRelativeAppId, param::hstring const& parameterGroupId);
+        static auto LaunchFullTrustProcessForCurrentAppWithArgumentsAsync(param::hstring const& commandLine);
+        static auto LaunchFullTrustProcessForAppWithArgumentsAsync(param::hstring const& fullTrustPackageRelativeAppId, param::hstring const& commandLine);
     };
     struct __declspec(empty_bases) LeavingBackgroundEventArgs : Windows::ApplicationModel::ILeavingBackgroundEventArgs
     {

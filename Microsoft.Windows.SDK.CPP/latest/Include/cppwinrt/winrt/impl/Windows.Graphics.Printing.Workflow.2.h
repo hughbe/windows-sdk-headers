@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,6 +6,7 @@
 #ifndef WINRT_Windows_Graphics_Printing_Workflow_2_H
 #define WINRT_Windows_Graphics_Printing_Workflow_2_H
 #include "winrt/impl/Windows.ApplicationModel.Activation.1.h"
+#include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.Graphics.Printing.Workflow.1.h"
 WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::Workflow
 {
@@ -19,7 +20,8 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::Workflow
         PrintWorkflowBackgroundSetupRequestedEventArgs(std::nullptr_t) noexcept {}
         PrintWorkflowBackgroundSetupRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowBackgroundSetupRequestedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PrintWorkflowConfiguration : Windows::Graphics::Printing::Workflow::IPrintWorkflowConfiguration
+    struct __declspec(empty_bases) PrintWorkflowConfiguration : Windows::Graphics::Printing::Workflow::IPrintWorkflowConfiguration,
+        impl::require<PrintWorkflowConfiguration, Windows::Graphics::Printing::Workflow::IPrintWorkflowConfiguration2>
     {
         PrintWorkflowConfiguration(std::nullptr_t) noexcept {}
         PrintWorkflowConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowConfiguration(ptr, take_ownership_from_abi) {}
@@ -34,15 +36,77 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::Workflow
         PrintWorkflowForegroundSetupRequestedEventArgs(std::nullptr_t) noexcept {}
         PrintWorkflowForegroundSetupRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowForegroundSetupRequestedEventArgs(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) PrintWorkflowJobActivatedEventArgs : Windows::Graphics::Printing::Workflow::IPrintWorkflowJobActivatedEventArgs,
+        impl::require<PrintWorkflowJobActivatedEventArgs, Windows::ApplicationModel::Activation::IActivatedEventArgs, Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser>
+    {
+        PrintWorkflowJobActivatedEventArgs(std::nullptr_t) noexcept {}
+        PrintWorkflowJobActivatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowJobActivatedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PrintWorkflowJobBackgroundSession : Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession
+    {
+        PrintWorkflowJobBackgroundSession(std::nullptr_t) noexcept {}
+        PrintWorkflowJobBackgroundSession(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PrintWorkflowJobNotificationEventArgs : Windows::Graphics::Printing::Workflow::IPrintWorkflowJobNotificationEventArgs
+    {
+        PrintWorkflowJobNotificationEventArgs(std::nullptr_t) noexcept {}
+        PrintWorkflowJobNotificationEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowJobNotificationEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PrintWorkflowJobStartingEventArgs : Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs
+    {
+        PrintWorkflowJobStartingEventArgs(std::nullptr_t) noexcept {}
+        PrintWorkflowJobStartingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PrintWorkflowJobTriggerDetails : Windows::Graphics::Printing::Workflow::IPrintWorkflowJobTriggerDetails
+    {
+        PrintWorkflowJobTriggerDetails(std::nullptr_t) noexcept {}
+        PrintWorkflowJobTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowJobTriggerDetails(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PrintWorkflowJobUISession : Windows::Graphics::Printing::Workflow::IPrintWorkflowJobUISession
+    {
+        PrintWorkflowJobUISession(std::nullptr_t) noexcept {}
+        PrintWorkflowJobUISession(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowJobUISession(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) PrintWorkflowObjectModelSourceFileContent : Windows::Graphics::Printing::Workflow::IPrintWorkflowObjectModelSourceFileContent
     {
         PrintWorkflowObjectModelSourceFileContent(std::nullptr_t) noexcept {}
         PrintWorkflowObjectModelSourceFileContent(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowObjectModelSourceFileContent(ptr, take_ownership_from_abi) {}
+        explicit PrintWorkflowObjectModelSourceFileContent(Windows::Storage::Streams::IInputStream const& xpsStream);
     };
     struct __declspec(empty_bases) PrintWorkflowObjectModelTargetPackage : Windows::Graphics::Printing::Workflow::IPrintWorkflowObjectModelTargetPackage
     {
         PrintWorkflowObjectModelTargetPackage(std::nullptr_t) noexcept {}
         PrintWorkflowObjectModelTargetPackage(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowObjectModelTargetPackage(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PrintWorkflowPdlConverter : Windows::Graphics::Printing::Workflow::IPrintWorkflowPdlConverter
+    {
+        PrintWorkflowPdlConverter(std::nullptr_t) noexcept {}
+        PrintWorkflowPdlConverter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowPdlConverter(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PrintWorkflowPdlDataAvailableEventArgs : Windows::Graphics::Printing::Workflow::IPrintWorkflowPdlDataAvailableEventArgs
+    {
+        PrintWorkflowPdlDataAvailableEventArgs(std::nullptr_t) noexcept {}
+        PrintWorkflowPdlDataAvailableEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowPdlDataAvailableEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PrintWorkflowPdlModificationRequestedEventArgs : Windows::Graphics::Printing::Workflow::IPrintWorkflowPdlModificationRequestedEventArgs
+    {
+        PrintWorkflowPdlModificationRequestedEventArgs(std::nullptr_t) noexcept {}
+        PrintWorkflowPdlModificationRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowPdlModificationRequestedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PrintWorkflowPdlSourceContent : Windows::Graphics::Printing::Workflow::IPrintWorkflowPdlSourceContent
+    {
+        PrintWorkflowPdlSourceContent(std::nullptr_t) noexcept {}
+        PrintWorkflowPdlSourceContent(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowPdlSourceContent(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PrintWorkflowPdlTargetStream : Windows::Graphics::Printing::Workflow::IPrintWorkflowPdlTargetStream
+    {
+        PrintWorkflowPdlTargetStream(std::nullptr_t) noexcept {}
+        PrintWorkflowPdlTargetStream(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowPdlTargetStream(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PrintWorkflowPrinterJob : Windows::Graphics::Printing::Workflow::IPrintWorkflowPrinterJob
+    {
+        PrintWorkflowPrinterJob(std::nullptr_t) noexcept {}
+        PrintWorkflowPrinterJob(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowPrinterJob(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) PrintWorkflowSourceContent : Windows::Graphics::Printing::Workflow::IPrintWorkflowSourceContent
     {
@@ -83,6 +147,11 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::Workflow
     {
         PrintWorkflowUIActivatedEventArgs(std::nullptr_t) noexcept {}
         PrintWorkflowUIActivatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowUIActivatedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PrintWorkflowUILauncher : Windows::Graphics::Printing::Workflow::IPrintWorkflowUILauncher
+    {
+        PrintWorkflowUILauncher(std::nullptr_t) noexcept {}
+        PrintWorkflowUILauncher(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Printing::Workflow::IPrintWorkflowUILauncher(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) PrintWorkflowXpsDataAvailableEventArgs : Windows::Graphics::Printing::Workflow::IPrintWorkflowXpsDataAvailableEventArgs
     {

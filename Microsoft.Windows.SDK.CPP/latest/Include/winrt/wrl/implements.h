@@ -2388,7 +2388,7 @@ unsigned long RuntimeClassImpl<RuntimeClassFlagsT, true, true, false, I0, TInter
 }
 
 template <class RuntimeClassFlagsT, typename I0, typename ...TInterfaces>
-HRESULT RuntimeClassImpl<RuntimeClassFlagsT, true, true, false, I0, TInterfaces...>::GetWeakReference(_Outptr_ IWeakReference **weakReference)
+COM_DECLSPEC_NOTHROW HRESULT RuntimeClassImpl<RuntimeClassFlagsT, true, true, false, I0, TInterfaces...>::GetWeakReference(_Outptr_ IWeakReference **weakReference)
 {
     WeakReferenceImpl* weakRef = nullptr;
     INT_PTR encodedWeakRef = 0;
@@ -2473,13 +2473,18 @@ public:
         // Allocate memory with operator new(size, nothrow) only
         // This will allow developer to override one operator only
         // to enable different memory allocation model
-        buffer_ = (char*) (operator new (sizeof(T), std::nothrow));
-        return buffer_;
+#ifdef __cpp_aligned_new
+        if constexpr (alignof(T) > __STDCPP_DEFAULT_NEW_ALIGNMENT__) 
+        {
+            return buffer_ = (char*) operator new (sizeof(T), static_cast<std::align_val_t>(alignof(T)), ::std::nothrow);
+        }
+#endif // /std:c++17 or later
+        return buffer_ = (char*) operator new (sizeof(T), ::std::nothrow);
     }
 
     void Detach() throw()
     {
-        buffer_ = nullptr;
+        buffer_ = nullptr;  
     }
 private:
     char* buffer_;
@@ -2567,7 +2572,7 @@ namespace Details
         { \
             return trustLevel; \
         } \
-        STDMETHOD(GetRuntimeClassName)(_Out_ HSTRING* runtimeName) \
+        STDMETHOD(GetRuntimeClassName)(_Out_ HSTRING* runtimeName) override \
         { \
             *runtimeName = nullptr; \
             HRESULT hr = S_OK; \
@@ -2578,7 +2583,7 @@ namespace Details
             } \
             return hr; \
         } \
-        STDMETHOD(GetTrustLevel)(_Out_ ::TrustLevel* trustLvl) \
+        STDMETHOD(GetTrustLevel)(_Out_ ::TrustLevel* trustLvl) override \
         { \
             *trustLvl = trustLevel; \
             return S_OK; \
@@ -2586,22 +2591,22 @@ namespace Details
         STDMETHOD(GetIids)(_Out_ ULONG *iidCount, \
             _When_(*iidCount == 0, _At_(*iids, _Post_null_)) \
             _When_(*iidCount > 0, _At_(*iids, _Post_notnull_)) \
-            _Result_nullonfailure_ IID **iids) \
+            _Result_nullonfailure_ IID **iids) override \
         { \
             return RuntimeClassT::GetIids(iidCount, iids); \
         } \
-        STDMETHOD(QueryInterface)(REFIID riid, _Outptr_result_nullonfailure_ void **ppvObject) \
+        STDMETHOD(QueryInterface)(REFIID riid, _Outptr_result_nullonfailure_ void **ppvObject) override \
         { \
             bool handled = false; \
             HRESULT hr = this->CustomQueryInterface(riid, ppvObject, &handled); \
             if (FAILED(hr) || handled) return hr; \
             return RuntimeClassT::QueryInterface(riid, ppvObject); \
         } \
-        STDMETHOD_(ULONG, Release)() \
+        STDMETHOD_(ULONG, Release)() override \
         { \
             return RuntimeClassT::Release(); \
         } \
-        STDMETHOD_(ULONG, AddRef)() \
+        STDMETHOD_(ULONG, AddRef)() override \
         { \
             return RuntimeClassT::AddRef(); \
         } \

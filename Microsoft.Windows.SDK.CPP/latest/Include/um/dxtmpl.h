@@ -75,8 +75,8 @@ inline void DXDestructElements(TYPE* pElements, int nCount)
 {
     _ASSERT( ( nCount == 0 ||
                DXIsValidAddress( pElements, nCount * sizeof(TYPE), TRUE  ) ) );
-    pElements;  // not used
-    nCount; // not used
+    (void)pElements;  // not used
+    (void)nCount; // not used
 
     // default does nothing
 }

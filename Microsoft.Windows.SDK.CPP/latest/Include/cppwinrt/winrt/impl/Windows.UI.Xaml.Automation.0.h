@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -18,6 +18,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml
 WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Automation::Peers
 {
     enum class AccessibilityView : int32_t;
+    enum class AutomationControlType : int32_t;
     enum class AutomationHeadingLevel : int32_t;
     enum class AutomationLandmarkType : int32_t;
     enum class AutomationLiveSetting : int32_t;
@@ -246,6 +247,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Automation
     struct IAutomationPropertiesStatics6;
     struct IAutomationPropertiesStatics7;
     struct IAutomationPropertiesStatics8;
+    struct IAutomationPropertiesStatics9;
     struct IAutomationProperty;
     struct IDockPatternIdentifiers;
     struct IDockPatternIdentifiersStatics;
@@ -338,6 +340,7 @@ namespace winrt::impl
     template <> struct category<Windows::UI::Xaml::Automation::IAutomationPropertiesStatics6>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Automation::IAutomationPropertiesStatics7>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Automation::IAutomationPropertiesStatics8>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Xaml::Automation::IAutomationPropertiesStatics9>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Automation::IAutomationProperty>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Automation::IDockPatternIdentifiers>{ using type = interface_category; };
     template <> struct category<Windows::UI::Xaml::Automation::IDockPatternIdentifiersStatics>{ using type = interface_category; };
@@ -494,6 +497,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Automation::IAutomationPropertiesStatics6> = L"Windows.UI.Xaml.Automation.IAutomationPropertiesStatics6";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Automation::IAutomationPropertiesStatics7> = L"Windows.UI.Xaml.Automation.IAutomationPropertiesStatics7";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Automation::IAutomationPropertiesStatics8> = L"Windows.UI.Xaml.Automation.IAutomationPropertiesStatics8";
+    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Automation::IAutomationPropertiesStatics9> = L"Windows.UI.Xaml.Automation.IAutomationPropertiesStatics9";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Automation::IAutomationProperty> = L"Windows.UI.Xaml.Automation.IAutomationProperty";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Automation::IDockPatternIdentifiers> = L"Windows.UI.Xaml.Automation.IDockPatternIdentifiers";
     template <> inline constexpr auto& name_v<Windows::UI::Xaml::Automation::IDockPatternIdentifiersStatics> = L"Windows.UI.Xaml.Automation.IDockPatternIdentifiersStatics";
@@ -558,6 +562,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Automation::IAutomationPropertiesStatics6>{ 0xC61E030F,0xEB49,0x4E5D,{ 0xB0,0x12,0x4C,0x1C,0x96,0xC3,0x90,0x1B } }; // C61E030F-EB49-4E5D-B012-4C1C96C3901B
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Automation::IAutomationPropertiesStatics7>{ 0xF7E98BF3,0x8F91,0x4068,{ 0xA4,0xAD,0xB7,0xB4,0x02,0xD1,0x0A,0x2C } }; // F7E98BF3-8F91-4068-A4AD-B7B402D10A2C
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Automation::IAutomationPropertiesStatics8>{ 0x432ECA20,0x171A,0x560D,{ 0x85,0x24,0x3E,0x65,0x1D,0x3A,0xD6,0xCA } }; // 432ECA20-171A-560D-8524-3E651D3AD6CA
+    template <> inline constexpr guid guid_v<Windows::UI::Xaml::Automation::IAutomationPropertiesStatics9>{ 0x2F20B1D1,0x87B2,0x5562,{ 0x80,0x77,0xDA,0x59,0x3E,0xDA,0xFD,0x2D } }; // 2F20B1D1-87B2-5562-8077-DA593EDAFD2D
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Automation::IAutomationProperty>{ 0xB627195B,0x3227,0x4E16,{ 0x95,0x34,0xDD,0xEC,0xE3,0x0D,0xDB,0x46 } }; // B627195B-3227-4E16-9534-DDECE30DDB46
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Automation::IDockPatternIdentifiers>{ 0xCCD7F4E6,0xE4F9,0x47FF,{ 0xBD,0xE7,0x37,0x8B,0x11,0xF7,0x8E,0x09 } }; // CCD7F4E6-E4F9-47FF-BDE7-378B11F78E09
     template <> inline constexpr guid guid_v<Windows::UI::Xaml::Automation::IDockPatternIdentifiersStatics>{ 0x2B87245C,0xED80,0x4FE5,{ 0x8E,0xB4,0x70,0x8A,0x39,0xC8,0x41,0xE5 } }; // 2B87245C-ED80-4FE5-8EB4-708A39C841E5
@@ -891,6 +896,15 @@ namespace winrt::impl
             virtual int32_t __stdcall get_IsDialogProperty(void**) noexcept = 0;
             virtual int32_t __stdcall GetIsDialog(void*, bool*) noexcept = 0;
             virtual int32_t __stdcall SetIsDialog(void*, bool) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::UI::Xaml::Automation::IAutomationPropertiesStatics9>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_AutomationControlTypeProperty(void**) noexcept = 0;
+            virtual int32_t __stdcall GetAutomationControlType(void*, int32_t*) noexcept = 0;
+            virtual int32_t __stdcall SetAutomationControlType(void*, int32_t) noexcept = 0;
         };
     };
     template <> struct abi<Windows::UI::Xaml::Automation::IAutomationProperty>
@@ -1517,6 +1531,17 @@ namespace winrt::impl
     template <> struct consume<Windows::UI::Xaml::Automation::IAutomationPropertiesStatics8>
     {
         template <typename D> using type = consume_Windows_UI_Xaml_Automation_IAutomationPropertiesStatics8<D>;
+    };
+    template <typename D>
+    struct consume_Windows_UI_Xaml_Automation_IAutomationPropertiesStatics9
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Xaml::DependencyProperty) AutomationControlTypeProperty() const;
+        WINRT_IMPL_AUTO(Windows::UI::Xaml::Automation::Peers::AutomationControlType) GetAutomationControlType(Windows::UI::Xaml::UIElement const& element) const;
+        WINRT_IMPL_AUTO(void) SetAutomationControlType(Windows::UI::Xaml::UIElement const& element, Windows::UI::Xaml::Automation::Peers::AutomationControlType const& value) const;
+    };
+    template <> struct consume<Windows::UI::Xaml::Automation::IAutomationPropertiesStatics9>
+    {
+        template <typename D> using type = consume_Windows_UI_Xaml_Automation_IAutomationPropertiesStatics9<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Xaml_Automation_IAutomationProperty

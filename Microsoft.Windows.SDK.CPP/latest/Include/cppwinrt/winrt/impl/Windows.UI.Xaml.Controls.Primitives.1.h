@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -470,6 +470,13 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
         IListViewItemPresenter3(std::nullptr_t = nullptr) noexcept {}
         IListViewItemPresenter3(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) IListViewItemPresenter4 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IListViewItemPresenter4>
+    {
+        IListViewItemPresenter4(std::nullptr_t = nullptr) noexcept {}
+        IListViewItemPresenter4(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IListViewItemPresenterFactory :
         Windows::Foundation::IInspectable,
         impl::consume_t<IListViewItemPresenterFactory>
@@ -497,6 +504,13 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
     {
         IListViewItemPresenterStatics3(std::nullptr_t = nullptr) noexcept {}
         IListViewItemPresenterStatics3(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IListViewItemPresenterStatics4 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IListViewItemPresenterStatics4>
+    {
+        IListViewItemPresenterStatics4(std::nullptr_t = nullptr) noexcept {}
+        IListViewItemPresenterStatics4(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IListViewItemTemplateSettings :
         Windows::Foundation::IInspectable,
@@ -659,6 +673,13 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
         IPopup3(std::nullptr_t = nullptr) noexcept {}
         IPopup3(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) IPopup4 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPopup4>
+    {
+        IPopup4(std::nullptr_t = nullptr) noexcept {}
+        IPopup4(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IPopupStatics :
         Windows::Foundation::IInspectable,
         impl::consume_t<IPopupStatics>
@@ -679,6 +700,13 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
     {
         IPopupStatics3(std::nullptr_t = nullptr) noexcept {}
         IPopupStatics3(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPopupStatics4 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPopupStatics4>
+    {
+        IPopupStatics4(std::nullptr_t = nullptr) noexcept {}
+        IPopupStatics4(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IProgressBarTemplateSettings :
         Windows::Foundation::IInspectable,

@@ -1669,6 +1669,20 @@ typedef struct
     unsigned long long      cbLogicalFileSize;          //  Logical file size
 } JET_RBSINFOMISC;
 
+typedef struct
+{
+    long                    lGenMinRevertStart;         // Min log generation across databases at start of revert.
+    long                    lGenMaxRevertStart;         // Max log generation across databases at start of revert.
+
+    long                    lGenMinRevertEnd;           // Min log generation across databases at end of revert.
+    long                    lGenMaxRevertEnd;           // Max log generation across databases at end of revert.
+
+    JET_LOGTIME             logtimeRevertFrom;          // The time we started reverting from. We will skip adding reverting to time as the caller already gets that info as part of prepare call.
+
+    unsigned long long      cSecRevert;                 // Total secs spent in revert process.
+    unsigned long long      cPagesReverted;             // Total pages reverted across all the database files as part of the revert.
+} JET_RBSREVERTINFOMISC;
+
 /************************************************************************/
 /*************************     JET CONSTANTS     ************************/
 /************************************************************************/
@@ -2037,7 +2051,7 @@ typedef enum
 #define JET_paramDefragmentSequentialBTrees     160 //  Turn on/off automatic sequential B-tree defragmentation tasks (On by default, but also requires JET_SPACEHINTS flags / JET_bitRetrieveHintTableScan* to trigger on any given tables).
 #define JET_paramDefragmentSequentialBTreesDensityCheckFrequency    161 //  Determine how frequently B-tree density is checked
 #define JET_paramIOThrottlingTimeQuanta         162 //  Max time (in MS) that the I/O throttling mechanism gives a task to run for it to be considered 'completed'.
-#define JET_paramLVChunkSizeMost                163 //  Max LV chuck size supported wrt the chosen page size (R/O)
+#define JET_paramLVChunkSizeMost                163 //  Max LV chunk size supported wrt the chosen page size (R/O)
 #define JET_paramMaxCoalesceReadSize            164 //  Max number of bytes that can be grouped for a coalesced read operation.
 #define JET_paramMaxCoalesceWriteSize           165 //  Max number of bytes that can be grouped for a coalesced write operation.
 #define JET_paramMaxCoalesceReadGapSize         166 //  Max number of bytes that can be gapped for a coalesced read IO operation.
@@ -2109,10 +2123,13 @@ typedef enum
 
 #if ( JET_VERSION >= 0x0A01 )
 #define JET_paramUseFlushForWriteDurability     214 //  This controls whether ESE uses Flush or FUA to make sure a write to disk is durable.
-#endif // JET_VERSION >= 0x0A01
 
 #define JET_paramEnableRBS                      215 // Turns on revert snapshot. Not an ESE flight as we will let the variant be controlled outside ESE (like HA can enable this when lag is disabled)
-#define JET_paramRBSFilePath                    216 //  path to the revert snapshot directory
+#define JET_paramRBSFilePath                    216 // path to the revert snapshot directory
+
+#endif // JET_VERSION >= 0x0A01
+
+
 #define JET_paramMaxValueInvalid                217 //  This is not a valid parameter. It can change from release to release!
 
 
@@ -2126,7 +2143,7 @@ typedef enum
 #define JET_sesparamTransactionLevel        4099    //  Retrieves (read-only, no set) the current number of nested levels of transactions begun.  0 = not in a transaction.
 #define JET_sesparamOperationContext        4100    //  a client context that the engine uses to track and trace operations (such as IOs)
 #define JET_sesparamCorrelationID           4101    //  an ID that is logged in traces and can be used by clients to correlate ESE actions with their activity
-#define JET_sesparamMaxValueInvalid         4109    //  This is not a valid session parameter. It can change from release to release!
+#define JET_sesparamMaxValueInvalid         4110    //  This is not a valid session parameter. It can change from release to release!
 
 typedef struct
 {
@@ -2816,14 +2833,29 @@ typedef struct
 
     //  supported file types (returned from JetGetDatabaseFileInfo with JET_DbInfoFileType)
 
-#define JET_filetypeUnknown         0
-#define JET_filetypeDatabase        1
-#define JET_filetypeLog             3
-#define JET_filetypeCheckpoint      4
-#define JET_filetypeTempDatabase    5
-#define JET_filetypeFlushMap        7
+#define JET_filetypeUnknown                 0
+#define JET_filetypeDatabase                1
+#define JET_filetypeLog                     3
+#define JET_filetypeCheckpoint              4
+#define JET_filetypeTempDatabase            5
+#define JET_filetypeFlushMap                7
 
 #endif // JET_VERSION >= 0x0600
+
+    /* RBS revert states */
+
+#if ( JET_VERSION >= 0x0A01 )
+#define JET_revertstateNone                 0   // Revert has not yet started/default state.
+#define JET_revertstateInProgress           1   // Revert snapshots are currently being applied to the databases.
+#define JET_revertstateCopingLogs           2   // The required logs to bring databases to a clean state are being copied to the log directory after revert.
+#define JET_revertstateCompleted            3   // Revert snapshots have been finished applying.
+#endif // JET_VERSION >= 0x0A01
+
+    /* RBS revert grbits */
+
+#if ( JET_VERSION >= 0x0A01 )
+#define JET_bitDeleteAllExistingLogs  0x00000001  /* Delete all the existing log files at the end of revert. */
+#endif // JET_VERSION >= 0x0A01
 
     /* Column data types */
 
@@ -3555,13 +3587,6 @@ typedef struct
 #define JET_errFlushMapDatabaseMismatch     -1919 /* The persisted flush map and the database do not match. */
 #define JET_errFlushMapUnrecoverable        -1920 /* The persisted flush map cannot be reconstructed. */
 
-#define JET_errRBSFileCorrupt               -1921  /* RBS file is corrupt */ // TODO vakishan: Why are there gaps between the used ids? Is it a range for each module? 
-#define JET_errRBSHeaderCorrupt             -1922  /* RBS header is corrupt */
-#define JET_errRBSDbMismatch                -1923  /* RBS is out of sync with the database file */
-#define errRBSAttachInfoNotFound            -1924  /* Couldn't find the RBS attach info we wanted */
-#define JET_errBadRBSVersion                -1925  /* Version of revert snapshot file is not compatible with Jet version */
-#define JET_errOutOfRBSSpace                -1926  /* Revert snapshot file has reached its maximum size */
-#define JET_errRBSInvalidSign               -1927  /* RBS signature is not set in the RBS header */
 
 #define JET_wrnDefragAlreadyRunning          2000 /* Online defrag already running on specified database */
 #define JET_wrnDefragNotRunning              2001 /* Online defrag not running on specified database */

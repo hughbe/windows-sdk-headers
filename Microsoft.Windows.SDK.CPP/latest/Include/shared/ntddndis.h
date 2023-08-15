@@ -25,6 +25,7 @@ Notes:
 
         Version     First available in
         ------------------------------------------------------------------
+        686         Windows 10, cobalt release
         685         Windows 10, iron release
         684         Windows 10, vibranium release
         683         Windows 10, version 1903
@@ -836,6 +837,18 @@ typedef struct _NDIS_PCI_DEVICE_CUSTOM_PROPERTIES
 #define OID_GEN_CO_DEVICE_PROFILE               OID_GEN_DEVICE_PROFILE
 #define OID_GEN_CO_BYTES_XMIT_OUTSTANDING       0x00020221
 
+
+#if (NDIS_SUPPORT_NDIS686)
+
+//
+// Optional OIDs to handle network multiple PF feature.
+//
+#define OID_KDNET_ENUMERATE_PFS                 0x00020222
+#define OID_KDNET_ADD_PF                        0x00020223
+#define OID_KDNET_REMOVE_PF                     0x00020224
+#define OID_KDNET_QUERY_PF_INFORMATION          0x00020225
+
+#endif // (NDIS_SUPPORT_NDIS686)
 
 //
 // 802.3 Objects (Ethernet)

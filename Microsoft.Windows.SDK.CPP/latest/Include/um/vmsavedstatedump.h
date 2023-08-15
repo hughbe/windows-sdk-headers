@@ -141,6 +141,39 @@ ReleaseSavedStateFiles(
 //------       and getting memory from already loaded saved state file(s).           ------//
 //-----------------------------------------------------------------------------------------//
 
+/// Queries for the virtual trust levels enabled on the guest's partition at the time the saved state file was generated.
+///
+/// \param  vmSavedStateDumpHandle  Supplies a handle to a dump provider instance.
+/// \retval virtualTrustLevels      Returns a bitmap representing enabled virtual trust levels, where lower bit 0
+///                                 corresponds to virtual trust level 0, and so on.
+///
+/// \return HRESULT.
+///
+HRESULT
+WINAPI
+GetGuestEnabledVirtualTrustLevels(
+    VM_SAVED_STATE_DUMP_HANDLE vmSavedStateDumpHandle,
+    _Out_ UINT32* virtualTrustLevels
+    );
+
+
+/// Returns the Guest OS information as interpreted when parsing the VM saved partition state blob.
+///
+/// \param  vmSavedStateDumpHandle  Supplies a handle to a dump provider instance.
+/// \param  virtualTrustLevel       Supplies the guest partition VTL to query the OS Id from.
+/// \retval guestOsInfo             Returns the Guest OS information.
+///
+/// \returns HRESULT.
+///
+HRESULT
+WINAPI
+GetGuestOsInfo(
+    VM_SAVED_STATE_DUMP_HANDLE vmSavedStateDumpHandle,
+    UINT8 virtualTrustLevel,
+    _Out_ GUEST_OS_INFO* guestOsInfo
+    );
+
+
 /// Queries for the Virtual Processor count for a given VmSavedStateDump.
 ///
 /// \param  vmSavedStateDumpHandle  Supplies a handle to a dump provider instance.
@@ -195,18 +228,18 @@ ForceArchitecture(
 /// Queries for the current Virtual Trust Level the virtual processor was running at the time the
 /// saved state file was generated.
 ///
-/// \param  VmSavedStateDumpHandle  Supplies a handle to a dump provider instance.
-/// \param  VpId                    Supplies the VP to query.
-/// \retval VirtualTrustLevel       Returns the Virtual Trust Level of the supplied vp.
+/// \param  vmSavedStateDumpHandle  Supplies a handle to a dump provider instance.
+/// \param  vpId                    Supplies the VP to query.
+/// \retval virtualTrustLevel       Returns the Virtual Trust Level of the supplied vp.
 ///
 /// \return HRESULT.
 ///
 HRESULT
 WINAPI
 GetActiveVirtualTrustLevel(
-    _In_    VM_SAVED_STATE_DUMP_HANDLE      VmSavedStateDumpHandle,
-    _In_    UINT32                          VpId,
-    _Out_   UINT32*                         VirtualTrustLevel
+    VM_SAVED_STATE_DUMP_HANDLE vmSavedStateDumpHandle,
+    UINT32 vpId,
+    _Out_ UINT8* virtualTrustLevel
     );
 
 
@@ -215,20 +248,17 @@ GetActiveVirtualTrustLevel(
 ///
 /// \param  vmSavedStateDumpHandle  Supplies a handle to a dump provider instance.
 /// \param  vpId                    Supplies the VP to query.
-/// \retval virtualTrustLevels      Supplies a buffer with the virtual trust levels enabled on the VP.
-/// \retval virtualTrustLevelCount  Supplies the size of the VirtualTrustLevelss buffer. If this count is lower than
-///                                 what the vp really has, then it returns the expected count. If it was
-///                                 higher than what the guest has, then it returns the exact count.
+/// \retval virtualTrustLevels      Returns a bitmap representing enabled virtual trust levels, where lower bit 0
+///                                 corresponds to virtual trust level 0, and so on.
 ///
 /// \return HRESULT.
 ///
 HRESULT
 WINAPI
 GetEnabledVirtualTrustLevels(
-    _In_    VM_SAVED_STATE_DUMP_HANDLE      vmSavedStateDumpHandle,
-    _In_    UINT32                          vpId,
-    _Out_   UINT32*                         virtualTrustLevels,
-    _Inout_ UINT64*                         virtualTrustLevelCount
+    VM_SAVED_STATE_DUMP_HANDLE vmSavedStateDumpHandle,
+    UINT32 vpId,
+    UINT32* virtualTrustLevels
     );
 
 
@@ -246,9 +276,9 @@ GetEnabledVirtualTrustLevels(
 HRESULT
 WINAPI
 ForceActiveVirtualTrustLevel(
-    _In_    VM_SAVED_STATE_DUMP_HANDLE      vmSavedStateDumpHandle,
-    _In_    UINT32                          vpId,
-    _In_    UINT32                          virtualTrustLevel
+    VM_SAVED_STATE_DUMP_HANDLE vmSavedStateDumpHandle,
+    UINT32 vpId,
+    UINT8 virtualTrustLevel
     );
 
 
@@ -266,9 +296,9 @@ ForceActiveVirtualTrustLevel(
 HRESULT
 WINAPI
 IsActiveVirtualTrustLevelEnabled(
-    _In_    VM_SAVED_STATE_DUMP_HANDLE      vmSavedStateDumpHandle,
-    _In_    UINT32                          vpId,
-    _Out_   BOOL*                           activeVirtualTrustLevelEnabled
+    VM_SAVED_STATE_DUMP_HANDLE vmSavedStateDumpHandle,
+    UINT32 vpId,
+    _Out_ BOOL* activeVirtualTrustLevelEnabled
     );
 
 
@@ -282,8 +312,8 @@ IsActiveVirtualTrustLevelEnabled(
 HRESULT
 WINAPI
 IsNestedVirtualizationEnabled(
-    _In_    VM_SAVED_STATE_DUMP_HANDLE      vmSavedStateDumpHandle,
-    _Out_   BOOL*                           enabled
+    VM_SAVED_STATE_DUMP_HANDLE vmSavedStateDumpHandle,
+    _Out_ BOOL* enabled
     );
 
 
@@ -298,9 +328,9 @@ IsNestedVirtualizationEnabled(
 HRESULT
 WINAPI
 GetNestedVirtualizationMode(
-    _In_    VM_SAVED_STATE_DUMP_HANDLE      vmSavedStateDumpHandle,
-    _In_    UINT32                          vpId,
-    _Out_   BOOL*                           enabled
+    VM_SAVED_STATE_DUMP_HANDLE vmSavedStateDumpHandle,
+    UINT32 vpId,
+    _Out_ BOOL* enabled
     );
 
 
@@ -322,10 +352,10 @@ GetNestedVirtualizationMode(
 HRESULT
 WINAPI
 ForceNestedHostMode(
-    _In_    VM_SAVED_STATE_DUMP_HANDLE      vmSavedStateDumpHandle,
-    _In_    UINT32                          vpId,
-    _In_    BOOL                            hostMode,
-    _Out_opt_ BOOL*                         oldMode
+    VM_SAVED_STATE_DUMP_HANDLE vmSavedStateDumpHandle,
+    UINT32 vpId,
+    BOOL hostMode,
+    _Out_opt_ BOOL* oldMode
     );
 
 
@@ -347,12 +377,11 @@ InKernelSpace(
 
 
 /// Queries for a specific register value for a given VP in a VmSavedStateDump.
-/// Callers must specify architecture and register ID in parameter Register, and this function
-/// returns the register value through it.
 ///
 /// \param  vmSavedStateDumpHandle  Supplies a handle to a dump provider instance.
 /// \param  vpId                    Supplies the Virtual Processor Id.
-/// \retval vpRegister              Supplies the register architecture and ID, and returns the value.
+/// \param  registerId              Supplies the register ID to query.
+/// \retval registerValue           Returns the register value.
 ///
 /// \return HRESULT.
 ///
@@ -361,7 +390,8 @@ WINAPI
 GetRegisterValue(
     VM_SAVED_STATE_DUMP_HANDLE vmSavedStateDumpHandle,
     UINT32 vpId,
-    _Inout_ VIRTUAL_PROCESSOR_REGISTER* vpRegister
+    DWORD registerId,
+    _Out_ VIRTUAL_PROCESSOR_REGISTER* registerValue
     );
 
 
@@ -424,19 +454,18 @@ ReadGuestPhysicalAddress(
     );
 
 
-/// Translates a virtual address to a pysical address using information found in the
+/// Translates a virtual address to a physical address using information found in the
 /// guest's memory and processor's state.
 ///
 /// \param  vmSavedStateDumpHandle  Supplies a handle to a dump provider instance.
 /// \param  vpId                    Supplies the VP from where the virtual address is read.
 /// \param  virtualAddress          Supplies the virtual address to translate.
 /// \retval physicalAddress         Returns the physical address assigned to the supplied virtual address.
+/// \retval unmappedRegionSize      In case the given VA is not mapped, optionally returns the size of the
+///                                 region that is not mapped.
 ///
 /// \return HRESULT on any error.
-///         VM_SAVED_STATE_DUMP_E_PXE_NOT_PRESENT - Failed to read Page Map Level 4 entry (pxe) for a virtual address.
-///         VM_SAVED_STATE_DUMP_E_PDPTE_NOT_PRESENT - Failed to read Page Directory Page Table entry (pdpte) for a virtual address.
-///         VM_SAVED_STATE_DUMP_E_PDE_NOT_PRESENT - Failed to read Page Directory entry (pde) for a virtual address.
-///         VM_SAVED_STATE_DUMP_E_PTE_NOT_PRESENT - Failed to read Page Table entry (pte) for a virtual address.
+///         VM_SAVED_STATE_DUMP_E_VA_NOT_MAPPED - The given virtual address is not mapped to a physical address.
 ///
 HRESULT
 WINAPI
@@ -444,7 +473,8 @@ GuestVirtualAddressToPhysicalAddress(
     VM_SAVED_STATE_DUMP_HANDLE vmSavedStateDumpHandle,
     UINT32 vpId,
     const GUEST_VIRTUAL_ADDRESS virtualAddress,
-    _Out_ GUEST_PHYSICAL_ADDRESS* physicalAddress
+    _Out_ GUEST_PHYSICAL_ADDRESS* physicalAddress,
+    _Out_opt_ GUEST_VIRTUAL_ADDRESS*  unmappedRegionSize
     );
 
 //------------------------------------------------------------------------//
@@ -608,7 +638,7 @@ WINAPI
 LoadSavedStateSymbolProvider(
     VM_SAVED_STATE_DUMP_HANDLE vmSavedStateDumpHandle,
     _In_opt_  LPCWSTR userSymbols,
-    _In_ BOOL force
+    BOOL force
     );
 
 

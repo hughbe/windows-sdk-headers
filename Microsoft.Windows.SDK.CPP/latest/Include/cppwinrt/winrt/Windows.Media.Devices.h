@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -6,7 +6,8 @@
 #ifndef WINRT_Windows_Media_Devices_H
 #define WINRT_Windows_Media_Devices_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.200609.3"), "Mismatched C++/WinRT headers.");
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.201201.7"
 #include "winrt/Windows.Media.h"
 #include "winrt/impl/Windows.Devices.Enumeration.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -59,6 +60,12 @@ namespace winrt::impl
         void* propertyValue{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController)->GetDeviceProperty(*(void**)(&propertyId), &propertyValue));
         return Windows::Foundation::IInspectable{ propertyValue, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::CameraOcclusionInfo) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController10<D>::CameraOcclusionInfo() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10)->get_CameraOcclusionInfo(&value));
+        return Windows::Media::Devices::CameraOcclusionInfo{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::LowLagPhotoSequenceControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::LowLagPhotoSequence() const
     {
@@ -463,6 +470,50 @@ namespace winrt::impl
         void* callControl{};
         check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICallControlStatics)->FromId(*(void**)(&deviceId), &callControl));
         return Windows::Media::Devices::CallControl{ callControl, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::CameraOcclusionState) consume_Windows_Media_Devices_ICameraOcclusionInfo<D>::GetState() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICameraOcclusionInfo)->GetState(&result));
+        return Windows::Media::Devices::CameraOcclusionState{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_ICameraOcclusionInfo<D>::IsOcclusionKindSupported(Windows::Media::Devices::CameraOcclusionKind const& occlusionKind) const
+    {
+        bool result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICameraOcclusionInfo)->IsOcclusionKindSupported(static_cast<int32_t>(occlusionKind), &result));
+        return result;
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Devices_ICameraOcclusionInfo<D>::StateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Devices::CameraOcclusionInfo, Windows::Media::Devices::CameraOcclusionStateChangedEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICameraOcclusionInfo)->add_StateChanged(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> typename consume_Windows_Media_Devices_ICameraOcclusionInfo<D>::StateChanged_revoker consume_Windows_Media_Devices_ICameraOcclusionInfo<D>::StateChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Devices::CameraOcclusionInfo, Windows::Media::Devices::CameraOcclusionStateChangedEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, StateChanged_revoker>(this, StateChanged(handler));
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ICameraOcclusionInfo<D>::StateChanged(winrt::event_token const& token) const noexcept
+    {
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Devices::ICameraOcclusionInfo)->remove_StateChanged(impl::bind_in(token)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_ICameraOcclusionState<D>::IsOccluded() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICameraOcclusionState)->get_IsOccluded(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_ICameraOcclusionState<D>::IsOcclusionKind(Windows::Media::Devices::CameraOcclusionKind const& occlusionKind) const
+    {
+        bool result{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICameraOcclusionState)->IsOcclusionKind(static_cast<int32_t>(occlusionKind), &result));
+        return result;
+    }
+    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Devices::CameraOcclusionState) consume_Windows_Media_Devices_ICameraOcclusionStateChangedEventArgs<D>::State() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Devices::ICameraOcclusionStateChangedEventArgs)->get_State(&value));
+        return Windows::Media::Devices::CameraOcclusionState{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Devices_IDefaultAudioDeviceChangedEventArgs<D>::Id() const
     {
@@ -1969,6 +2020,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10> : produce_base<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10>
+    {
+        int32_t __stdcall get_CameraOcclusionInfo(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Media::Devices::CameraOcclusionInfo>(this->shim().CameraOcclusionInfo());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2> : produce_base<D, Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2>
     {
         int32_t __stdcall get_LowLagPhotoSequence(void** value) noexcept final try
@@ -2556,6 +2621,75 @@ namespace winrt::impl
             clear_abi(callControl);
             typename D::abi_guard guard(this->shim());
             *callControl = detach_from<Windows::Media::Devices::CallControl>(this->shim().FromId(*reinterpret_cast<hstring const*>(&deviceId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Media::Devices::ICameraOcclusionInfo> : produce_base<D, Windows::Media::Devices::ICameraOcclusionInfo>
+    {
+        int32_t __stdcall GetState(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<Windows::Media::Devices::CameraOcclusionState>(this->shim().GetState());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall IsOcclusionKindSupported(int32_t occlusionKind, bool* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<bool>(this->shim().IsOcclusionKindSupported(*reinterpret_cast<Windows::Media::Devices::CameraOcclusionKind const*>(&occlusionKind)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_StateChanged(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().StateChanged(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Devices::CameraOcclusionInfo, Windows::Media::Devices::CameraOcclusionStateChangedEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_StateChanged(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().StateChanged(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Media::Devices::ICameraOcclusionState> : produce_base<D, Windows::Media::Devices::ICameraOcclusionState>
+    {
+        int32_t __stdcall get_IsOccluded(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsOccluded());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall IsOcclusionKind(int32_t occlusionKind, bool* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<bool>(this->shim().IsOcclusionKind(*reinterpret_cast<Windows::Media::Devices::CameraOcclusionKind const*>(&occlusionKind)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, Windows::Media::Devices::ICameraOcclusionStateChangedEventArgs> : produce_base<D, Windows::Media::Devices::ICameraOcclusionStateChangedEventArgs>
+    {
+        int32_t __stdcall get_State(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<Windows::Media::Devices::CameraOcclusionState>(this->shim().State());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4778,6 +4912,7 @@ namespace std
     template<> struct hash<winrt::Windows::Media::Devices::IAdvancedPhotoCaptureSettings> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::IAdvancedPhotoControl> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4> : winrt::impl::hash_base {};
@@ -4793,6 +4928,9 @@ namespace std
     template<> struct hash<winrt::Windows::Media::Devices::IAudioDeviceModulesManagerFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::ICallControl> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::ICallControlStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::ICameraOcclusionInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::ICameraOcclusionState> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::ICameraOcclusionStateChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::IDialRequestedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::IDigitalWindowBounds> : winrt::impl::hash_base {};
@@ -4841,6 +4979,9 @@ namespace std
     template<> struct hash<winrt::Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::AudioDeviceModulesManager> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::CallControl> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::CameraOcclusionInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::CameraOcclusionState> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::CameraOcclusionStateChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::DialRequestedEventArgs> : winrt::impl::hash_base {};

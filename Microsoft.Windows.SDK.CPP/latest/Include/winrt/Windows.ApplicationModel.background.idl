@@ -329,6 +329,8 @@ namespace Windows
 
             interface IBackgroundExecutionManagerStatics2;
 
+            interface IBackgroundExecutionManagerStatics3;
+
             interface IBackgroundTask;
 
             interface IBackgroundTaskBuilder;
@@ -986,6 +988,16 @@ namespace Windows
             interface IBackgroundExecutionManagerStatics2 : IInspectable
             {
                 [overload("RequestAccessKindAsync")] HRESULT RequestAccessKindAsync([in] Windows.ApplicationModel.Background.BackgroundAccessRequestKind requestedAccess, [in] HSTRING reason, [out] [retval] Windows.Foundation.IAsyncOperation<boolean>** operation);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 13.0)]
+            [exclusiveto(Windows.ApplicationModel.Background.BackgroundExecutionManager)]
+            [uuid(98A5D3F6-5A25-5B6C-9192-D77A43DFEDC4)]
+            interface IBackgroundExecutionManagerStatics3 : IInspectable
+            {
+                HRESULT RequestAccessKindForModernStandbyAsync([in] Windows.ApplicationModel.Background.BackgroundAccessRequestKind requestedAccess, [in] HSTRING reason, [out] [retval] Windows.Foundation.IAsyncOperation<boolean>** operation);
+                [overload("GetAccessStatusForModernStandby")] HRESULT GetAccessStatusForModernStandby([out] [retval] Windows.ApplicationModel.Background.BackgroundAccessStatus* result);
+                [overload("GetAccessStatusForModernStandby")] HRESULT GetAccessStatusForModernStandbyForApplication([in] HSTRING applicationId, [out] [retval] Windows.ApplicationModel.Background.BackgroundAccessStatus* result);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1850,6 +1862,7 @@ namespace Windows
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [static(Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics, Windows.Foundation.UniversalApiContract, 1.0)]
             [static(Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics2, Windows.Foundation.UniversalApiContract, 6.0)]
+            [static(Windows.ApplicationModel.Background.IBackgroundExecutionManagerStatics3, Windows.Foundation.UniversalApiContract, 13.0)]
             runtimeclass BackgroundExecutionManager
             {
             }

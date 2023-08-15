@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.streaming.internal.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0229 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0231 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -132,7 +132,7 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
+#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
@@ -168,7 +168,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xc0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xe0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -456,7 +456,7 @@ namespace ABI {
                         
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IMediaRendererBrokerStatics=_uuidof(IMediaRendererBrokerStatics);
+                    MIDL_CONST_ID IID & IID_IMediaRendererBrokerStatics=_uuidof(IMediaRendererBrokerStatics);
                     
                 } /* Internal */
             } /* Streaming */

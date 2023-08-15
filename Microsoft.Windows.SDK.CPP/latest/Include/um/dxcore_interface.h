@@ -1,6 +1,7 @@
 //
 // DXCore Interface
-// Copyright (C) Microsoft Corporation. All rights reserved.
+// Copyright (C) Microsoft Corporation.
+// Licensed under the MIT license.
 //
 
 #ifndef __dxcore_interface_h__
@@ -10,6 +11,8 @@
 #include "windows.h"
 #include "ole2.h"
 #endif /*COM_NO_WINDOWS_H*/
+
+#include <stdint.h>
 
 #ifdef __cplusplus
 

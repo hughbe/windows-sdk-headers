@@ -294,6 +294,19 @@ typedef struct _SMB_USE_OPTION_COMPRESSION_PARAMETERS {
     USHORT Reserved;
 } SMB_USE_OPTION_COMPRESSION_PARAMETERS, *PSMB_USE_OPTION_COMPRESSION_PARAMETERS;
 
+typedef struct _SMB_TREE_CONNECT_PARAMETERS {
+    ULONG EABufferOffset;  // relative offset 
+    DWORD EABufferLen;
+    ULONG CreateOptions;
+    ULONG TreeConnectAttributes;
+} SMB_TREE_CONNECT_PARAMETERS, *PSMB_TREE_CONNECT_PARAMETERS;
+
+typedef struct _USE_OPTION_PROPERTIES {
+    ULONG Tag;
+    PVOID pInfo;
+    size_t Length;
+} USE_OPTION_PROPERTIES, *PUSE_OPTION_PROPERTIES;
+
 #ifdef __cplusplus
 }
 #endif

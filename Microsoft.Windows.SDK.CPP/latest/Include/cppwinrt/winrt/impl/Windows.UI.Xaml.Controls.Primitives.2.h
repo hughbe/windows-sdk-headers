@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -342,7 +342,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
     };
     struct __declspec(empty_bases) ListViewItemPresenter : Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter,
         impl::base<ListViewItemPresenter, Windows::UI::Xaml::Controls::ContentPresenter, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
-        impl::require<ListViewItemPresenter, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter2, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter3, Windows::UI::Xaml::Controls::IContentPresenter, Windows::UI::Xaml::Controls::IContentPresenter2, Windows::UI::Xaml::Controls::IContentPresenter3, Windows::UI::Xaml::Controls::IContentPresenter4, Windows::UI::Xaml::Controls::IContentPresenter5, Windows::UI::Xaml::Controls::IContentPresenterOverrides, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+        impl::require<ListViewItemPresenter, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter2, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter3, Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter4, Windows::UI::Xaml::Controls::IContentPresenter, Windows::UI::Xaml::Controls::IContentPresenter2, Windows::UI::Xaml::Controls::IContentPresenter3, Windows::UI::Xaml::Controls::IContentPresenter4, Windows::UI::Xaml::Controls::IContentPresenter5, Windows::UI::Xaml::Controls::IContentPresenterOverrides, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
     {
         ListViewItemPresenter(std::nullptr_t) noexcept {}
         ListViewItemPresenter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::Primitives::IListViewItemPresenter(ptr, take_ownership_from_abi) {}
@@ -379,6 +379,33 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
         [[nodiscard]] static auto RevealBorderBrushProperty();
         [[nodiscard]] static auto RevealBorderThicknessProperty();
         [[nodiscard]] static auto RevealBackgroundShowsAboveContentProperty();
+        [[nodiscard]] static auto SelectedDisabledBackgroundProperty();
+        [[nodiscard]] static auto CheckPressedBrushProperty();
+        [[nodiscard]] static auto CheckDisabledBrushProperty();
+        [[nodiscard]] static auto CheckBoxPointerOverBrushProperty();
+        [[nodiscard]] static auto CheckBoxPressedBrushProperty();
+        [[nodiscard]] static auto CheckBoxDisabledBrushProperty();
+        [[nodiscard]] static auto CheckBoxSelectedBrushProperty();
+        [[nodiscard]] static auto CheckBoxSelectedPointerOverBrushProperty();
+        [[nodiscard]] static auto CheckBoxSelectedPressedBrushProperty();
+        [[nodiscard]] static auto CheckBoxSelectedDisabledBrushProperty();
+        [[nodiscard]] static auto CheckBoxBorderBrushProperty();
+        [[nodiscard]] static auto CheckBoxPointerOverBorderBrushProperty();
+        [[nodiscard]] static auto CheckBoxPressedBorderBrushProperty();
+        [[nodiscard]] static auto CheckBoxDisabledBorderBrushProperty();
+        [[nodiscard]] static auto CheckBoxCornerRadiusProperty();
+        [[nodiscard]] static auto SelectionIndicatorCornerRadiusProperty();
+        [[nodiscard]] static auto SelectionIndicatorVisualEnabledProperty();
+        [[nodiscard]] static auto SelectionIndicatorModeProperty();
+        [[nodiscard]] static auto SelectionIndicatorBrushProperty();
+        [[nodiscard]] static auto SelectionIndicatorPointerOverBrushProperty();
+        [[nodiscard]] static auto SelectionIndicatorPressedBrushProperty();
+        [[nodiscard]] static auto SelectionIndicatorDisabledBrushProperty();
+        [[nodiscard]] static auto SelectedBorderBrushProperty();
+        [[nodiscard]] static auto SelectedPressedBorderBrushProperty();
+        [[nodiscard]] static auto SelectedDisabledBorderBrushProperty();
+        [[nodiscard]] static auto SelectedInnerBorderBrushProperty();
+        [[nodiscard]] static auto PointerOverBorderBrushProperty();
     };
     struct __declspec(empty_bases) ListViewItemTemplateSettings : Windows::UI::Xaml::Controls::Primitives::IListViewItemTemplateSettings,
         impl::base<ListViewItemTemplateSettings, Windows::UI::Xaml::DependencyObject>,
@@ -483,7 +510,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
     };
     struct __declspec(empty_bases) Popup : Windows::UI::Xaml::Controls::Primitives::IPopup,
         impl::base<Popup, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
-        impl::require<Popup, Windows::UI::Xaml::Controls::Primitives::IPopup2, Windows::UI::Xaml::Controls::Primitives::IPopup3, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+        impl::require<Popup, Windows::UI::Xaml::Controls::Primitives::IPopup2, Windows::UI::Xaml::Controls::Primitives::IPopup3, Windows::UI::Xaml::Controls::Primitives::IPopup4, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
     {
         Popup(std::nullptr_t) noexcept {}
         Popup(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Controls::Primitives::IPopup(ptr, take_ownership_from_abi) {}
@@ -496,6 +523,8 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
         [[nodiscard]] static auto IsLightDismissEnabledProperty();
         [[nodiscard]] static auto LightDismissOverlayModeProperty();
         [[nodiscard]] static auto ShouldConstrainToRootBoundsProperty();
+        [[nodiscard]] static auto PlacementTargetProperty();
+        [[nodiscard]] static auto DesiredPlacementProperty();
     };
     struct __declspec(empty_bases) ProgressBarTemplateSettings : Windows::UI::Xaml::Controls::Primitives::IProgressBarTemplateSettings,
         impl::base<ProgressBarTemplateSettings, Windows::UI::Xaml::DependencyObject>,

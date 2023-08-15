@@ -5064,7 +5064,7 @@ FwpmNetEventSubscribe4(
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS5)
 
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_FE)
+#if (NTDDI_VERSION >= NTDDI_WIN10_CO)
 ///////////////////////////////////////////////////////////////////////////////
 //
 // Functions for Tracking Dynamic Keyword Changes
@@ -5094,7 +5094,7 @@ WINAPI
 FwpmDynamicKeywordUnsubscribe0(
    _In_ HANDLE subscriptionHandle
    );
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_FE)
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_CO)
 
 
 #if (NTDDI_VERSION >= NTDDI_WIN7)

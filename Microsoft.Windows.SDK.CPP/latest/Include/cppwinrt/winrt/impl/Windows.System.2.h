@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -102,24 +102,29 @@ WINRT_EXPORT namespace winrt::Windows::System
         AppResourceGroupStateReport(std::nullptr_t) noexcept {}
         AppResourceGroupStateReport(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppResourceGroupStateReport(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) AppUriHandlerHost : Windows::System::IAppUriHandlerHost
+    struct __declspec(empty_bases) AppUriHandlerHost : Windows::System::IAppUriHandlerHost,
+        impl::require<AppUriHandlerHost, Windows::System::IAppUriHandlerHost2>
     {
         AppUriHandlerHost(std::nullptr_t) noexcept {}
         AppUriHandlerHost(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppUriHandlerHost(ptr, take_ownership_from_abi) {}
         AppUriHandlerHost();
         explicit AppUriHandlerHost(param::hstring const& name);
     };
-    struct __declspec(empty_bases) AppUriHandlerRegistration : Windows::System::IAppUriHandlerRegistration
+    struct __declspec(empty_bases) AppUriHandlerRegistration : Windows::System::IAppUriHandlerRegistration,
+        impl::require<AppUriHandlerRegistration, Windows::System::IAppUriHandlerRegistration2>
     {
         AppUriHandlerRegistration(std::nullptr_t) noexcept {}
         AppUriHandlerRegistration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppUriHandlerRegistration(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) AppUriHandlerRegistrationManager : Windows::System::IAppUriHandlerRegistrationManager
+    struct __declspec(empty_bases) AppUriHandlerRegistrationManager : Windows::System::IAppUriHandlerRegistrationManager,
+        impl::require<AppUriHandlerRegistrationManager, Windows::System::IAppUriHandlerRegistrationManager2>
     {
         AppUriHandlerRegistrationManager(std::nullptr_t) noexcept {}
         AppUriHandlerRegistrationManager(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppUriHandlerRegistrationManager(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
         static auto GetForUser(Windows::System::User const& user);
+        static auto GetForPackage(param::hstring const& packageFamilyName);
+        static auto GetForPackageForUser(param::hstring const& packageFamilyName, Windows::System::User const& user);
     };
     struct DateTimeSettings
     {
@@ -168,6 +173,7 @@ WINRT_EXPORT namespace winrt::Windows::System
         [[nodiscard]] static auto PrincipalName();
         [[nodiscard]] static auto DomainName();
         [[nodiscard]] static auto SessionInitiationProtocolUri();
+        [[nodiscard]] static auto AgeEnforcementRegion();
     };
     struct __declspec(empty_bases) LaunchUriResult : Windows::System::ILaunchUriResult
     {
@@ -299,7 +305,8 @@ WINRT_EXPORT namespace winrt::Windows::System
         static auto ChangeTimeZoneByDisplayName(param::hstring const& timeZoneDisplayName);
         static auto AutoUpdateTimeZoneAsync(Windows::Foundation::TimeSpan const& timeout);
     };
-    struct __declspec(empty_bases) User : Windows::System::IUser
+    struct __declspec(empty_bases) User : Windows::System::IUser,
+        impl::require<User, Windows::System::IUser2>
     {
         User(std::nullptr_t) noexcept {}
         User(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IUser(ptr, take_ownership_from_abi) {}

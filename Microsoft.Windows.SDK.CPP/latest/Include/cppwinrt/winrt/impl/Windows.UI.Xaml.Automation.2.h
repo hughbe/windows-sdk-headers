@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -159,6 +159,9 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Automation
         [[nodiscard]] static auto IsDialogProperty();
         static auto GetIsDialog(Windows::UI::Xaml::DependencyObject const& element);
         static auto SetIsDialog(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto AutomationControlTypeProperty();
+        static auto GetAutomationControlType(Windows::UI::Xaml::UIElement const& element);
+        static auto SetAutomationControlType(Windows::UI::Xaml::UIElement const& element, Windows::UI::Xaml::Automation::Peers::AutomationControlType const& value);
     };
     struct __declspec(empty_bases) AutomationProperty : Windows::UI::Xaml::Automation::IAutomationProperty
     {

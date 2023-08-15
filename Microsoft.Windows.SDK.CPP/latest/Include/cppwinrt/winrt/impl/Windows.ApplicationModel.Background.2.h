@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -101,6 +101,9 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Background
         static auto GetAccessStatus();
         static auto GetAccessStatus(param::hstring const& applicationId);
         static auto RequestAccessKindAsync(Windows::ApplicationModel::Background::BackgroundAccessRequestKind const& requestedAccess, param::hstring const& reason);
+        static auto RequestAccessKindForModernStandbyAsync(Windows::ApplicationModel::Background::BackgroundAccessRequestKind const& requestedAccess, param::hstring const& reason);
+        static auto GetAccessStatusForModernStandby();
+        static auto GetAccessStatusForModernStandby(param::hstring const& applicationId);
     };
     struct __declspec(empty_bases) BackgroundTaskBuilder : Windows::ApplicationModel::Background::IBackgroundTaskBuilder,
         impl::require<BackgroundTaskBuilder, Windows::ApplicationModel::Background::IBackgroundTaskBuilder2, Windows::ApplicationModel::Background::IBackgroundTaskBuilder3, Windows::ApplicationModel::Background::IBackgroundTaskBuilder4, Windows::ApplicationModel::Background::IBackgroundTaskBuilder5>

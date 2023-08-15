@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -381,6 +381,12 @@ WINRT_EXPORT namespace winrt::Windows::UI::WebUI
     {
         WebUINavigatedOperation(std::nullptr_t) noexcept {}
         WebUINavigatedOperation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::WebUI::IWebUINavigatedOperation(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) WebUIPhoneCallActivatedEventArgs : Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs,
+        impl::require<WebUIPhoneCallActivatedEventArgs, Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser, Windows::UI::WebUI::IActivatedEventArgsDeferral>
+    {
+        WebUIPhoneCallActivatedEventArgs(std::nullptr_t) noexcept {}
+        WebUIPhoneCallActivatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) WebUIPrint3DWorkflowActivatedEventArgs : Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs,
         impl::require<WebUIPrint3DWorkflowActivatedEventArgs, Windows::UI::WebUI::IActivatedEventArgsDeferral>

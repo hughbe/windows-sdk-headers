@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -25,6 +25,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Composition
 }
 WINRT_EXPORT namespace winrt::Windows::UI::Core
 {
+    struct CoreCursor;
     struct PointerEventArgs;
 }
 WINRT_EXPORT namespace winrt::Windows::UI::Input::Inking
@@ -45,6 +46,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Input::Inking::Core
     struct ICoreIncrementalInkStroke;
     struct ICoreIncrementalInkStrokeFactory;
     struct ICoreInkIndependentInputSource;
+    struct ICoreInkIndependentInputSource2;
     struct ICoreInkIndependentInputSourceStatics;
     struct ICoreInkPresenterHost;
     struct ICoreWetStrokeUpdateEventArgs;
@@ -61,6 +63,7 @@ namespace winrt::impl
     template <> struct category<Windows::UI::Input::Inking::Core::ICoreIncrementalInkStroke>{ using type = interface_category; };
     template <> struct category<Windows::UI::Input::Inking::Core::ICoreIncrementalInkStrokeFactory>{ using type = interface_category; };
     template <> struct category<Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSource>{ using type = interface_category; };
+    template <> struct category<Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSource2>{ using type = interface_category; };
     template <> struct category<Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSourceStatics>{ using type = interface_category; };
     template <> struct category<Windows::UI::Input::Inking::Core::ICoreInkPresenterHost>{ using type = interface_category; };
     template <> struct category<Windows::UI::Input::Inking::Core::ICoreWetStrokeUpdateEventArgs>{ using type = interface_category; };
@@ -81,6 +84,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::Core::ICoreIncrementalInkStroke> = L"Windows.UI.Input.Inking.Core.ICoreIncrementalInkStroke";
     template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::Core::ICoreIncrementalInkStrokeFactory> = L"Windows.UI.Input.Inking.Core.ICoreIncrementalInkStrokeFactory";
     template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSource> = L"Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource";
+    template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSource2> = L"Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSource2";
     template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSourceStatics> = L"Windows.UI.Input.Inking.Core.ICoreInkIndependentInputSourceStatics";
     template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::Core::ICoreInkPresenterHost> = L"Windows.UI.Input.Inking.Core.ICoreInkPresenterHost";
     template <> inline constexpr auto& name_v<Windows::UI::Input::Inking::Core::ICoreWetStrokeUpdateEventArgs> = L"Windows.UI.Input.Inking.Core.ICoreWetStrokeUpdateEventArgs";
@@ -89,6 +93,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::Core::ICoreIncrementalInkStroke>{ 0xFDA015D3,0x9D66,0x4F7D,{ 0xA5,0x7F,0xCC,0x70,0xB9,0xCF,0xAA,0x76 } }; // FDA015D3-9D66-4F7D-A57F-CC70B9CFAA76
     template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::Core::ICoreIncrementalInkStrokeFactory>{ 0xD7C59F46,0x8DA8,0x4F70,{ 0x97,0x51,0xE5,0x3B,0xB6,0xDF,0x45,0x96 } }; // D7C59F46-8DA8-4F70-9751-E53BB6DF4596
     template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSource>{ 0x39B38DA9,0x7639,0x4499,{ 0xA5,0xB5,0x19,0x1D,0x00,0xE3,0x5B,0x16 } }; // 39B38DA9-7639-4499-A5B5-191D00E35B16
+    template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSource2>{ 0x2846B012,0x0B59,0x5BB9,{ 0xA3,0xC5,0xBE,0xCB,0x7C,0xF0,0x3A,0x33 } }; // 2846B012-0B59-5BB9-A3C5-BECB7CF03A33
     template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSourceStatics>{ 0x73E6011B,0x80C0,0x4DFB,{ 0x9B,0x66,0x10,0xBA,0x7F,0x3F,0x9C,0x84 } }; // 73E6011B-80C0-4DFB-9B66-10BA7F3F9C84
     template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::Core::ICoreInkPresenterHost>{ 0x396E89E6,0x7D55,0x4617,{ 0x9E,0x58,0x68,0xC7,0x0C,0x91,0x69,0xB9 } }; // 396E89E6-7D55-4617-9E58-68C70C9169B9
     template <> inline constexpr guid guid_v<Windows::UI::Input::Inking::Core::ICoreWetStrokeUpdateEventArgs>{ 0xFB07D14C,0x3380,0x457A,{ 0xA9,0x87,0x99,0x13,0x57,0x89,0x6C,0x1B } }; // FB07D14C-3380-457A-A987-991357896C1B
@@ -136,6 +141,14 @@ namespace winrt::impl
             virtual int32_t __stdcall add_PointerLost(void*, winrt::event_token*) noexcept = 0;
             virtual int32_t __stdcall remove_PointerLost(winrt::event_token) noexcept = 0;
             virtual int32_t __stdcall get_InkPresenter(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSource2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_PointerCursor(void**) noexcept = 0;
+            virtual int32_t __stdcall put_PointerCursor(void*) noexcept = 0;
         };
     };
     template <> struct abi<Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSourceStatics>
@@ -246,6 +259,16 @@ namespace winrt::impl
     template <> struct consume<Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSource>
     {
         template <typename D> using type = consume_Windows_UI_Input_Inking_Core_ICoreInkIndependentInputSource<D>;
+    };
+    template <typename D>
+    struct consume_Windows_UI_Input_Inking_Core_ICoreInkIndependentInputSource2
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::CoreCursor) PointerCursor() const;
+        WINRT_IMPL_AUTO(void) PointerCursor(Windows::UI::Core::CoreCursor const& value) const;
+    };
+    template <> struct consume<Windows::UI::Input::Inking::Core::ICoreInkIndependentInputSource2>
+    {
+        template <typename D> using type = consume_Windows_UI_Input_Inking_Core_ICoreInkIndependentInputSource2<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Input_Inking_Core_ICoreInkIndependentInputSourceStatics

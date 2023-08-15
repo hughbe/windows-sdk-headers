@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.200609.3
+// C++/WinRT v2.0.201201.7
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -75,6 +75,13 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Bluetooth
         DisabledByUser = 7,
         ConsentRequired = 8,
         TransportNotSupported = 9,
+    };
+    enum class BluetoothLEPreferredConnectionParametersRequestStatus : int32_t
+    {
+        Unspecified = 0,
+        Success = 1,
+        DeviceNotAvailable = 2,
+        AccessDenied = 3,
     };
     enum class BluetoothMajorClass : int32_t
     {
@@ -195,13 +202,20 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Bluetooth
     struct IBluetoothLEAppearanceCategoriesStatics;
     struct IBluetoothLEAppearanceStatics;
     struct IBluetoothLEAppearanceSubcategoriesStatics;
+    struct IBluetoothLEConnectionParameters;
+    struct IBluetoothLEConnectionPhy;
+    struct IBluetoothLEConnectionPhyInfo;
     struct IBluetoothLEDevice;
     struct IBluetoothLEDevice2;
     struct IBluetoothLEDevice3;
     struct IBluetoothLEDevice4;
     struct IBluetoothLEDevice5;
+    struct IBluetoothLEDevice6;
     struct IBluetoothLEDeviceStatics;
     struct IBluetoothLEDeviceStatics2;
+    struct IBluetoothLEPreferredConnectionParameters;
+    struct IBluetoothLEPreferredConnectionParametersRequest;
+    struct IBluetoothLEPreferredConnectionParametersStatics;
     struct IBluetoothSignalStrengthFilter;
     struct IBluetoothUuidHelperStatics;
     struct BluetoothAdapter;
@@ -211,7 +225,12 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Bluetooth
     struct BluetoothLEAppearance;
     struct BluetoothLEAppearanceCategories;
     struct BluetoothLEAppearanceSubcategories;
+    struct BluetoothLEConnectionParameters;
+    struct BluetoothLEConnectionPhy;
+    struct BluetoothLEConnectionPhyInfo;
     struct BluetoothLEDevice;
+    struct BluetoothLEPreferredConnectionParameters;
+    struct BluetoothLEPreferredConnectionParametersRequest;
     struct BluetoothSignalStrengthFilter;
     struct BluetoothUuidHelper;
 }
@@ -236,13 +255,20 @@ namespace winrt::impl
     template <> struct category<Windows::Devices::Bluetooth::IBluetoothLEAppearanceCategoriesStatics>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Bluetooth::IBluetoothLEAppearanceStatics>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Bluetooth::IBluetoothLEAppearanceSubcategoriesStatics>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Bluetooth::IBluetoothLEConnectionParameters>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Bluetooth::IBluetoothLEConnectionPhy>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Bluetooth::IBluetoothLEConnectionPhyInfo>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Bluetooth::IBluetoothLEDevice>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Bluetooth::IBluetoothLEDevice2>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Bluetooth::IBluetoothLEDevice3>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Bluetooth::IBluetoothLEDevice4>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Bluetooth::IBluetoothLEDevice5>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Bluetooth::IBluetoothLEDevice6>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Bluetooth::IBluetoothLEDeviceStatics>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Bluetooth::IBluetoothLEDeviceStatics2>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParameters>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParametersRequest>{ using type = interface_category; };
+    template <> struct category<Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParametersStatics>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Bluetooth::IBluetoothSignalStrengthFilter>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Bluetooth::IBluetoothUuidHelperStatics>{ using type = interface_category; };
     template <> struct category<Windows::Devices::Bluetooth::BluetoothAdapter>{ using type = class_category; };
@@ -252,13 +278,19 @@ namespace winrt::impl
     template <> struct category<Windows::Devices::Bluetooth::BluetoothLEAppearance>{ using type = class_category; };
     template <> struct category<Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories>{ using type = class_category; };
     template <> struct category<Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Bluetooth::BluetoothLEConnectionParameters>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Bluetooth::BluetoothLEConnectionPhy>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Bluetooth::BluetoothLEConnectionPhyInfo>{ using type = class_category; };
     template <> struct category<Windows::Devices::Bluetooth::BluetoothLEDevice>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters>{ using type = class_category; };
+    template <> struct category<Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequest>{ using type = class_category; };
     template <> struct category<Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter>{ using type = class_category; };
     template <> struct category<Windows::Devices::Bluetooth::BluetoothUuidHelper>{ using type = class_category; };
     template <> struct category<Windows::Devices::Bluetooth::BluetoothAddressType>{ using type = enum_category; };
     template <> struct category<Windows::Devices::Bluetooth::BluetoothCacheMode>{ using type = enum_category; };
     template <> struct category<Windows::Devices::Bluetooth::BluetoothConnectionStatus>{ using type = enum_category; };
     template <> struct category<Windows::Devices::Bluetooth::BluetoothError>{ using type = enum_category; };
+    template <> struct category<Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequestStatus>{ using type = enum_category; };
     template <> struct category<Windows::Devices::Bluetooth::BluetoothMajorClass>{ using type = enum_category; };
     template <> struct category<Windows::Devices::Bluetooth::BluetoothMinorClass>{ using type = enum_category; };
     template <> struct category<Windows::Devices::Bluetooth::BluetoothServiceCapabilities>{ using type = enum_category; };
@@ -269,13 +301,19 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothLEAppearance> = L"Windows.Devices.Bluetooth.BluetoothLEAppearance";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories> = L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories> = L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories";
+    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothLEConnectionParameters> = L"Windows.Devices.Bluetooth.BluetoothLEConnectionParameters";
+    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothLEConnectionPhy> = L"Windows.Devices.Bluetooth.BluetoothLEConnectionPhy";
+    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothLEConnectionPhyInfo> = L"Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothLEDevice> = L"Windows.Devices.Bluetooth.BluetoothLEDevice";
+    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters> = L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters";
+    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequest> = L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequest";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter> = L"Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothUuidHelper> = L"Windows.Devices.Bluetooth.BluetoothUuidHelper";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothAddressType> = L"Windows.Devices.Bluetooth.BluetoothAddressType";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothCacheMode> = L"Windows.Devices.Bluetooth.BluetoothCacheMode";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothConnectionStatus> = L"Windows.Devices.Bluetooth.BluetoothConnectionStatus";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothError> = L"Windows.Devices.Bluetooth.BluetoothError";
+    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequestStatus> = L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequestStatus";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothMajorClass> = L"Windows.Devices.Bluetooth.BluetoothMajorClass";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothMinorClass> = L"Windows.Devices.Bluetooth.BluetoothMinorClass";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::BluetoothServiceCapabilities> = L"Windows.Devices.Bluetooth.BluetoothServiceCapabilities";
@@ -298,13 +336,20 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothLEAppearanceCategoriesStatics> = L"Windows.Devices.Bluetooth.IBluetoothLEAppearanceCategoriesStatics";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothLEAppearanceStatics> = L"Windows.Devices.Bluetooth.IBluetoothLEAppearanceStatics";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothLEAppearanceSubcategoriesStatics> = L"Windows.Devices.Bluetooth.IBluetoothLEAppearanceSubcategoriesStatics";
+    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothLEConnectionParameters> = L"Windows.Devices.Bluetooth.IBluetoothLEConnectionParameters";
+    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothLEConnectionPhy> = L"Windows.Devices.Bluetooth.IBluetoothLEConnectionPhy";
+    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothLEConnectionPhyInfo> = L"Windows.Devices.Bluetooth.IBluetoothLEConnectionPhyInfo";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothLEDevice> = L"Windows.Devices.Bluetooth.IBluetoothLEDevice";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothLEDevice2> = L"Windows.Devices.Bluetooth.IBluetoothLEDevice2";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothLEDevice3> = L"Windows.Devices.Bluetooth.IBluetoothLEDevice3";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothLEDevice4> = L"Windows.Devices.Bluetooth.IBluetoothLEDevice4";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothLEDevice5> = L"Windows.Devices.Bluetooth.IBluetoothLEDevice5";
+    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothLEDevice6> = L"Windows.Devices.Bluetooth.IBluetoothLEDevice6";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothLEDeviceStatics> = L"Windows.Devices.Bluetooth.IBluetoothLEDeviceStatics";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothLEDeviceStatics2> = L"Windows.Devices.Bluetooth.IBluetoothLEDeviceStatics2";
+    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParameters> = L"Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParameters";
+    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParametersRequest> = L"Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParametersRequest";
+    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParametersStatics> = L"Windows.Devices.Bluetooth.IBluetoothLEPreferredConnectionParametersStatics";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothSignalStrengthFilter> = L"Windows.Devices.Bluetooth.IBluetoothSignalStrengthFilter";
     template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::IBluetoothUuidHelperStatics> = L"Windows.Devices.Bluetooth.IBluetoothUuidHelperStatics";
     template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothAdapter>{ 0x7974F04C,0x5F7A,0x4A34,{ 0x92,0x25,0xA8,0x55,0xF8,0x4B,0x1A,0x8B } }; // 7974F04C-5F7A-4A34-9225-A855F84B1A8B
@@ -326,13 +371,20 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothLEAppearanceCategoriesStatics>{ 0x6D4D54FE,0x046A,0x4185,{ 0xAA,0xB6,0x82,0x4C,0xF0,0x61,0x08,0x61 } }; // 6D4D54FE-046A-4185-AAB6-824CF0610861
     template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothLEAppearanceStatics>{ 0xA193C0C7,0x4504,0x4F4A,{ 0x9B,0xA5,0xCD,0x10,0x54,0xE5,0xE0,0x65 } }; // A193C0C7-4504-4F4A-9BA5-CD1054E5E065
     template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothLEAppearanceSubcategoriesStatics>{ 0xE57BA606,0x2144,0x415A,{ 0x83,0x12,0x71,0xCC,0xF2,0x91,0xF8,0xD1 } }; // E57BA606-2144-415A-8312-71CCF291F8D1
+    template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothLEConnectionParameters>{ 0x33CB0771,0x8DA9,0x508F,{ 0xA3,0x66,0x1C,0xA3,0x88,0xC9,0x29,0xAB } }; // 33CB0771-8DA9-508F-A366-1CA388C929AB
+    template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothLEConnectionPhy>{ 0x781E5E48,0x621E,0x5A7E,{ 0x8B,0xE6,0x1B,0x95,0x61,0xFF,0x63,0xC9 } }; // 781E5E48-621E-5A7E-8BE6-1B9561FF63C9
+    template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothLEConnectionPhyInfo>{ 0x9A100BDD,0x602E,0x5C27,{ 0xA1,0xAE,0xB2,0x30,0x01,0x5A,0x63,0x94 } }; // 9A100BDD-602E-5C27-A1AE-B230015A6394
     template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothLEDevice>{ 0xB5EE2F7B,0x4AD8,0x4642,{ 0xAC,0x48,0x80,0xA0,0xB5,0x00,0xE8,0x87 } }; // B5EE2F7B-4AD8-4642-AC48-80A0B500E887
     template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothLEDevice2>{ 0x26F062B3,0x7AEE,0x4D31,{ 0xBA,0xBA,0xB1,0xB9,0x77,0x5F,0x59,0x16 } }; // 26F062B3-7AEE-4D31-BABA-B1B9775F5916
     template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothLEDevice3>{ 0xAEE9E493,0x44AC,0x40DC,{ 0xAF,0x33,0xB2,0xC1,0x3C,0x01,0xCA,0x46 } }; // AEE9E493-44AC-40DC-AF33-B2C13C01CA46
     template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothLEDevice4>{ 0x2B605031,0x2248,0x4B2F,{ 0xAC,0xF0,0x7C,0xEE,0x36,0xFC,0x58,0x70 } }; // 2B605031-2248-4B2F-ACF0-7CEE36FC5870
     template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothLEDevice5>{ 0x9D6A1260,0x5287,0x458E,{ 0x95,0xBA,0x17,0xC8,0xB7,0xBB,0x32,0x6E } }; // 9D6A1260-5287-458E-95BA-17C8B7BB326E
+    template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothLEDevice6>{ 0xCA7190EF,0x0CAE,0x573C,{ 0xA1,0xCA,0xE1,0xFC,0x5B,0xFC,0x39,0xE2 } }; // CA7190EF-0CAE-573C-A1CA-E1FC5BFC39E2
     template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothLEDeviceStatics>{ 0xC8CF1A19,0xF0B6,0x4BF0,{ 0x86,0x89,0x41,0x30,0x3D,0xE2,0xD9,0xF4 } }; // C8CF1A19-F0B6-4BF0-8689-41303DE2D9F4
     template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothLEDeviceStatics2>{ 0x5F12C06B,0x3BAC,0x43E8,{ 0xAD,0x16,0x56,0x32,0x71,0xBD,0x41,0xC2 } }; // 5F12C06B-3BAC-43E8-AD16-563271BD41C2
+    template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParameters>{ 0xF2F44344,0x7372,0x5F7B,{ 0x9B,0x34,0x29,0xC9,0x44,0xF5,0xA7,0x15 } }; // F2F44344-7372-5F7B-9B34-29C944F5A715
+    template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParametersRequest>{ 0x8A375276,0xA528,0x5266,{ 0xB6,0x61,0xCC,0xE6,0xA5,0xFF,0x97,0x39 } }; // 8A375276-A528-5266-B661-CCE6A5FF9739
+    template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParametersStatics>{ 0x0E3E8EDC,0x2751,0x55AA,{ 0xA8,0x38,0x8F,0xAE,0xEE,0x81,0x8D,0x72 } }; // 0E3E8EDC-2751-55AA-A838-8FAEEE818D72
     template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothSignalStrengthFilter>{ 0xDF7B7391,0x6BB5,0x4CFE,{ 0x90,0xB1,0x5D,0x73,0x24,0xED,0xCF,0x7F } }; // DF7B7391-6BB5-4CFE-90B1-5D7324EDCF7F
     template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::IBluetoothUuidHelperStatics>{ 0x17DF0CD8,0xCF74,0x4B21,{ 0xAF,0xE6,0xF5,0x7A,0x11,0xBC,0xDE,0xA0 } }; // 17DF0CD8-CF74-4B21-AFE6-F57A11BCDEA0
     template <> struct default_interface<Windows::Devices::Bluetooth::BluetoothAdapter>{ using type = Windows::Devices::Bluetooth::IBluetoothAdapter; };
@@ -340,7 +392,12 @@ namespace winrt::impl
     template <> struct default_interface<Windows::Devices::Bluetooth::BluetoothDevice>{ using type = Windows::Devices::Bluetooth::IBluetoothDevice; };
     template <> struct default_interface<Windows::Devices::Bluetooth::BluetoothDeviceId>{ using type = Windows::Devices::Bluetooth::IBluetoothDeviceId; };
     template <> struct default_interface<Windows::Devices::Bluetooth::BluetoothLEAppearance>{ using type = Windows::Devices::Bluetooth::IBluetoothLEAppearance; };
+    template <> struct default_interface<Windows::Devices::Bluetooth::BluetoothLEConnectionParameters>{ using type = Windows::Devices::Bluetooth::IBluetoothLEConnectionParameters; };
+    template <> struct default_interface<Windows::Devices::Bluetooth::BluetoothLEConnectionPhy>{ using type = Windows::Devices::Bluetooth::IBluetoothLEConnectionPhy; };
+    template <> struct default_interface<Windows::Devices::Bluetooth::BluetoothLEConnectionPhyInfo>{ using type = Windows::Devices::Bluetooth::IBluetoothLEConnectionPhyInfo; };
     template <> struct default_interface<Windows::Devices::Bluetooth::BluetoothLEDevice>{ using type = Windows::Devices::Bluetooth::IBluetoothLEDevice; };
+    template <> struct default_interface<Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters>{ using type = Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParameters; };
+    template <> struct default_interface<Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequest>{ using type = Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParametersRequest; };
     template <> struct default_interface<Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter>{ using type = Windows::Devices::Bluetooth::IBluetoothSignalStrengthFilter; };
     template <> struct abi<Windows::Devices::Bluetooth::IBluetoothAdapter>
     {
@@ -568,6 +625,32 @@ namespace winrt::impl
             virtual int32_t __stdcall get_LocationNavigationPod(uint16_t*) noexcept = 0;
         };
     };
+    template <> struct abi<Windows::Devices::Bluetooth::IBluetoothLEConnectionParameters>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_LinkTimeout(uint16_t*) noexcept = 0;
+            virtual int32_t __stdcall get_ConnectionLatency(uint16_t*) noexcept = 0;
+            virtual int32_t __stdcall get_ConnectionInterval(uint16_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::Devices::Bluetooth::IBluetoothLEConnectionPhy>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_TransmitInfo(void**) noexcept = 0;
+            virtual int32_t __stdcall get_ReceiveInfo(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::Devices::Bluetooth::IBluetoothLEConnectionPhyInfo>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IsUncoded1MPhy(bool*) noexcept = 0;
+            virtual int32_t __stdcall get_IsUncoded2MPhy(bool*) noexcept = 0;
+            virtual int32_t __stdcall get_IsCodedPhy(bool*) noexcept = 0;
+        };
+    };
     template <> struct abi<Windows::Devices::Bluetooth::IBluetoothLEDevice>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -621,6 +704,19 @@ namespace winrt::impl
             virtual int32_t __stdcall get_WasSecureConnectionUsedForPairing(bool*) noexcept = 0;
         };
     };
+    template <> struct abi<Windows::Devices::Bluetooth::IBluetoothLEDevice6>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall GetConnectionParameters(void**) noexcept = 0;
+            virtual int32_t __stdcall GetConnectionPhy(void**) noexcept = 0;
+            virtual int32_t __stdcall RequestPreferredConnectionParameters(void*, void**) noexcept = 0;
+            virtual int32_t __stdcall add_ConnectionParametersChanged(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_ConnectionParametersChanged(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall add_ConnectionPhyChanged(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_ConnectionPhyChanged(winrt::event_token) noexcept = 0;
+        };
+    };
     template <> struct abi<Windows::Devices::Bluetooth::IBluetoothLEDeviceStatics>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -641,6 +737,32 @@ namespace winrt::impl
             virtual int32_t __stdcall GetDeviceSelectorFromBluetoothAddressWithBluetoothAddressType(uint64_t, int32_t, void**) noexcept = 0;
             virtual int32_t __stdcall GetDeviceSelectorFromAppearance(void*, void**) noexcept = 0;
             virtual int32_t __stdcall FromBluetoothAddressWithBluetoothAddressTypeAsync(uint64_t, int32_t, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParameters>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_LinkTimeout(uint16_t*) noexcept = 0;
+            virtual int32_t __stdcall get_ConnectionLatency(uint16_t*) noexcept = 0;
+            virtual int32_t __stdcall get_MinConnectionInterval(uint16_t*) noexcept = 0;
+            virtual int32_t __stdcall get_MaxConnectionInterval(uint16_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParametersRequest>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Status(int32_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParametersStatics>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Balanced(void**) noexcept = 0;
+            virtual int32_t __stdcall get_ThroughputOptimized(void**) noexcept = 0;
+            virtual int32_t __stdcall get_PowerOptimized(void**) noexcept = 0;
         };
     };
     template <> struct abi<Windows::Devices::Bluetooth::IBluetoothSignalStrengthFilter>
@@ -936,6 +1058,38 @@ namespace winrt::impl
         template <typename D> using type = consume_Windows_Devices_Bluetooth_IBluetoothLEAppearanceSubcategoriesStatics<D>;
     };
     template <typename D>
+    struct consume_Windows_Devices_Bluetooth_IBluetoothLEConnectionParameters
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) LinkTimeout() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) ConnectionLatency() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) ConnectionInterval() const;
+    };
+    template <> struct consume<Windows::Devices::Bluetooth::IBluetoothLEConnectionParameters>
+    {
+        template <typename D> using type = consume_Windows_Devices_Bluetooth_IBluetoothLEConnectionParameters<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Devices_Bluetooth_IBluetoothLEConnectionPhy
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothLEConnectionPhyInfo) TransmitInfo() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothLEConnectionPhyInfo) ReceiveInfo() const;
+    };
+    template <> struct consume<Windows::Devices::Bluetooth::IBluetoothLEConnectionPhy>
+    {
+        template <typename D> using type = consume_Windows_Devices_Bluetooth_IBluetoothLEConnectionPhy<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Devices_Bluetooth_IBluetoothLEConnectionPhyInfo
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsUncoded1MPhy() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsUncoded2MPhy() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsCodedPhy() const;
+    };
+    template <> struct consume<Windows::Devices::Bluetooth::IBluetoothLEConnectionPhyInfo>
+    {
+        template <typename D> using type = consume_Windows_Devices_Bluetooth_IBluetoothLEConnectionPhyInfo<D>;
+    };
+    template <typename D>
     struct consume_Windows_Devices_Bluetooth_IBluetoothLEDevice
     {
         [[nodiscard]] WINRT_IMPL_AUTO(hstring) DeviceId() const;
@@ -1005,6 +1159,25 @@ namespace winrt::impl
         template <typename D> using type = consume_Windows_Devices_Bluetooth_IBluetoothLEDevice5<D>;
     };
     template <typename D>
+    struct consume_Windows_Devices_Bluetooth_IBluetoothLEDevice6
+    {
+        WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothLEConnectionParameters) GetConnectionParameters() const;
+        WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothLEConnectionPhy) GetConnectionPhy() const;
+        WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequest) RequestPreferredConnectionParameters(Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters const& preferredConnectionParameters) const;
+        WINRT_IMPL_AUTO(winrt::event_token) ConnectionParametersChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::BluetoothLEDevice, Windows::Foundation::IInspectable> const& handler) const;
+        using ConnectionParametersChanged_revoker = impl::event_revoker<Windows::Devices::Bluetooth::IBluetoothLEDevice6, &impl::abi_t<Windows::Devices::Bluetooth::IBluetoothLEDevice6>::remove_ConnectionParametersChanged>;
+        [[nodiscard]] ConnectionParametersChanged_revoker ConnectionParametersChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::BluetoothLEDevice, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) ConnectionParametersChanged(winrt::event_token const& token) const noexcept;
+        WINRT_IMPL_AUTO(winrt::event_token) ConnectionPhyChanged(Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::BluetoothLEDevice, Windows::Foundation::IInspectable> const& handler) const;
+        using ConnectionPhyChanged_revoker = impl::event_revoker<Windows::Devices::Bluetooth::IBluetoothLEDevice6, &impl::abi_t<Windows::Devices::Bluetooth::IBluetoothLEDevice6>::remove_ConnectionPhyChanged>;
+        [[nodiscard]] ConnectionPhyChanged_revoker ConnectionPhyChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Devices::Bluetooth::BluetoothLEDevice, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) ConnectionPhyChanged(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<Windows::Devices::Bluetooth::IBluetoothLEDevice6>
+    {
+        template <typename D> using type = consume_Windows_Devices_Bluetooth_IBluetoothLEDevice6<D>;
+    };
+    template <typename D>
     struct consume_Windows_Devices_Bluetooth_IBluetoothLEDeviceStatics
     {
         WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::BluetoothLEDevice>) FromIdAsync(param::hstring const& deviceId) const;
@@ -1029,6 +1202,38 @@ namespace winrt::impl
     template <> struct consume<Windows::Devices::Bluetooth::IBluetoothLEDeviceStatics2>
     {
         template <typename D> using type = consume_Windows_Devices_Bluetooth_IBluetoothLEDeviceStatics2<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Devices_Bluetooth_IBluetoothLEPreferredConnectionParameters
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) LinkTimeout() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) ConnectionLatency() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) MinConnectionInterval() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(uint16_t) MaxConnectionInterval() const;
+    };
+    template <> struct consume<Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParameters>
+    {
+        template <typename D> using type = consume_Windows_Devices_Bluetooth_IBluetoothLEPreferredConnectionParameters<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Devices_Bluetooth_IBluetoothLEPreferredConnectionParametersRequest
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequestStatus) Status() const;
+    };
+    template <> struct consume<Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParametersRequest>
+    {
+        template <typename D> using type = consume_Windows_Devices_Bluetooth_IBluetoothLEPreferredConnectionParametersRequest<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Devices_Bluetooth_IBluetoothLEPreferredConnectionParametersStatics
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters) Balanced() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters) ThroughputOptimized() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters) PowerOptimized() const;
+    };
+    template <> struct consume<Windows::Devices::Bluetooth::IBluetoothLEPreferredConnectionParametersStatics>
+    {
+        template <typename D> using type = consume_Windows_Devices_Bluetooth_IBluetoothLEPreferredConnectionParametersStatics<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Bluetooth_IBluetoothSignalStrengthFilter

@@ -904,7 +904,7 @@ __inline bool GetDefaultMailClientExePath(HKEY hkeyRoot, _Out_ PWSTR* exePath)
                 if (REG_EXPAND_SZ == valueType)
                 {
                     lResult = ExpandEnvironmentStringsW(shellCommand, expandedPath, ARRAYSIZE(expandedPath));
-                    if (lResult > 0 && lResult <= ARRAYSIZE(shellCommand))
+                    if (lResult > 0 && lResult <= static_cast<LRESULT>(ARRAYSIZE(shellCommand)))
                     {
                         wcscpy_s(shellCommand, ARRAYSIZE(shellCommand), expandedPath);
                     }

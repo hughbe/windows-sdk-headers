@@ -2160,6 +2160,7 @@ DnsQuery_W(
 
 #if !defined ( USE_PRIVATE_DNS_ADDR ) || defined (MIDL_PASS)
 #define DNS_QUERY_REQUEST_VERSION1  0x1
+#define DNS_QUERY_REQUEST_VERSION2  0x2
 #endif
 
 #define DNS_QUERY_RESULTS_VERSION1  0x1
@@ -2227,7 +2228,112 @@ DnsCancelQuery(
     _In_        PDNS_QUERY_CANCEL    pCancelHandle
     );
 
+#define DNS_QUERY_REQUEST_VERSION3  0x3
+
+#define DNS_CUSTOM_SERVER_TYPE_UDP 0x1
+#define DNS_CUSTOM_SERVER_TYPE_DOH 0x2
+
+#define DNS_CUSTOM_SERVER_UDP_FALLBACK 0x1
+
+#pragma warning(push)
+#pragma warning(disable: 4201) // nameless struct/unions
+
+#ifdef MIDL_PASS
+
+typedef struct _DNS_CUSTOM_SERVER
+{
+    DWORD    dwServerType;
+    ULONG64  ullFlags;
+
+    [switch_type(DWORD)]
+    [switch_is(dwServerType)]
+    union
+    {
+        [case(DNS_CUSTOM_SERVER_TYPE_DOH)] PWSTR  pwszTemplate;
+        [case(DNS_CUSTOM_SERVER_TYPE_UDP)] ;
+    };
+
+    CHAR MaxSa[DNS_ADDR_MAX_SOCKADDR_LENGTH];
+} DNS_CUSTOM_SERVER;
+
+#else
+
+typedef struct _DNS_CUSTOM_SERVER
+{
+    DWORD    dwServerType;
+    ULONG64  ullFlags;
+
+    union
+    {
+        PWSTR pwszTemplate;
+    };
+
+    union
+    {
+#ifdef _WS2TCPIP_H_
+        SOCKADDR_INET ServerAddr;
 #endif
+        CHAR          MaxSa[DNS_ADDR_MAX_SOCKADDR_LENGTH];
+    };
+} DNS_CUSTOM_SERVER;
+
+#endif // MIDL_PASS
+
+#pragma warning(pop)
+
+typedef struct _DNS_QUERY_REQUEST3
+{
+    ULONG           Version;
+    PCWSTR          QueryName;
+    WORD            QueryType;
+    ULONG64         QueryOptions;
+    PDNS_ADDR_ARRAY pDnsServerList;
+    ULONG           InterfaceIndex;
+    PDNS_QUERY_COMPLETION_ROUTINE   pQueryCompletionCallback;
+    PVOID           pQueryContext;
+    BOOL            IsNetworkQueryRequired;
+    DWORD           RequiredNetworkIndex;
+    DWORD           cCustomServers;
+
+#ifdef MIDL_PASS
+    [size_is(cCustomServers)]
+#endif
+    _Field_size_(cCustomServers)
+    DNS_CUSTOM_SERVER *pCustomServers;
+}
+DNS_QUERY_REQUEST3, *PDNS_QUERY_REQUEST3;
+
+#define DNS_APP_SETTINGS_VERSION1 0x1
+
+#define DNS_APP_SETTINGS_EXCLUSIVE_SERVERS 0x1
+
+typedef struct _DNS_APPLICATION_SETTINGS
+{
+    ULONG Version;
+    ULONG64 Flags;
+} DNS_APPLICATION_SETTINGS;
+
+VOID
+DnsFreeCustomServers(
+    _Inout_  DWORD               *pcServers,
+    _Inout_  DNS_CUSTOM_SERVER   **ppServers
+    );
+
+DWORD
+DnsGetApplicationSettings(
+    _Out_                              DWORD                    *pcServers,
+    _Outptr_result_buffer_(*pcServers) DNS_CUSTOM_SERVER        **ppDefaultServers,
+    _Out_opt_                          DNS_APPLICATION_SETTINGS *pSettings
+    );
+
+DWORD
+DnsSetApplicationSettings(
+    _In_                 DWORD                           cServers,
+    _In_reads_(cServers) const DNS_CUSTOM_SERVER         *pServers,
+    _In_opt_             const DNS_APPLICATION_SETTINGS  *pSettings
+    );
+
+#endif // !defined ( USE_PRIVATE_DNS_ADDR ) || defined (MIDL_PASS)
 
 //
 //  DNS Update API
