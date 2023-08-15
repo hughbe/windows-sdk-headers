@@ -1299,24 +1299,24 @@ typedef WINHTTP_STATUS_CALLBACK * LPWINHTTP_STATUS_CALLBACK;
 #define HTTP_STATUS_LAST                HTTP_STATUS_VERSION_NOT_SUP
 
 //
-// flags for CrackUrl() and CombineUrl()
+// Flags for CrackUrl() and CombineUrl()
 //
 
-#define ICU_NO_ENCODE   0x20000000  // Don't convert unsafe characters to escape sequence
-#define ICU_DECODE      0x10000000  // Convert %XX escape sequences to characters
-#define ICU_NO_META     0x08000000  // Don't convert .. etc. meta path sequences
-#define ICU_ENCODE_SPACES_ONLY 0x04000000  // Encode spaces only
-#define ICU_BROWSER_MODE 0x02000000 // Special encode/decode rules for browser
-#define ICU_ENCODE_PERCENT      0x00001000      // Encode any percent (ASCII25)
-
-        // signs encountered, default is to not encode percent.
+#define ICU_NO_ENCODE               0x20000000  // Don't convert unsafe characters to escape sequence
+#define ICU_DECODE                  0x10000000  // Convert %XX escape sequences to characters
+#define ICU_NO_META                 0x08000000  // Don't convert .. etc. meta path sequences
+#define ICU_ENCODE_SPACES_ONLY      0x04000000  // Encode spaces only
+#define ICU_BROWSER_MODE            0x02000000  // Special encode/decode rules for browser
+#define ICU_ENCODE_PERCENT          0x00001000  // Encode any percent (ASCII25) signs encountered, default is to not encode percent.
 
 //
-// flags for WinHttpCrackUrl() and WinHttpCreateUrl()
+// Flags for WinHttpCrackUrl() and WinHttpCreateUrl()
 //
-#define ICU_ESCAPE      0x80000000  // (un)escape URL characters
-#define ICU_ESCAPE_AUTHORITY 0x00002000 //causes InternetCreateUrlA to escape chars in authority components (user, pwd, host)
-#define ICU_REJECT_USERPWD  0x00004000  // rejects usrls whick have username/pwd sections
+
+#define ICU_ESCAPE                  0x80000000  // (Un)escape URL characters
+#define ICU_INCLUDE_DEFAULT_PORT    0x00008000  // Include default port numbers in URLs
+#define ICU_REJECT_USERPWD          0x00004000  // Rejects URLs whick have username/pwd sections
+#define ICU_ESCAPE_AUTHORITY        0x00002000  // Escape chars in authority components (user, pwd, host)
 
 // WinHttpOpen dwAccessType values (also for WINHTTP_PROXY_INFO::dwAccessType)
 #define WINHTTP_ACCESS_TYPE_DEFAULT_PROXY               0
@@ -1335,7 +1335,7 @@ typedef WINHTTP_STATUS_CALLBACK * LPWINHTTP_STATUS_CALLBACK;
 #define WINHTTP_DEFAULT_ACCEPT_TYPES   NULL
 
 //
-// values for dwModifiers parameter of WinHttpAddRequestHeaders()
+// Values for dwModifiers parameter of WinHttpAddRequestHeaders()
 //
 
 #define WINHTTP_ADDREQ_INDEX_MASK      0x0000FFFF

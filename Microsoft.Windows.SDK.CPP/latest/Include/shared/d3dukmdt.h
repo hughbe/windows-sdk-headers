@@ -1791,13 +1791,17 @@ typedef struct _D3DDDI_SYNCHRONIZATIONOBJECT_FLAGS
             // When set, indicates that the fence should be placed in GPU local memory if possible.
             UINT LocalMemoryPreferred                           :  1;
 
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_2)
             // When set, the waiters for a shared sync object on CPU will be unblocked
             // only when the shared sync object is finally destroyed. By default, CPU
             // waiters are unblocked when a local sync object is destroyed, but the main
             // shared sync object is still opened by another local sync object.
             UINT UnwaitCpuWaitersOnlyOnDestroy                  :  1;
-
             UINT Reserved                                       : 20;
+#else
+            UINT Reserved                                       : 21;
+#endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_2)
+
 #else
 
             UINT Reserved                                       : 22;

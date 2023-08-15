@@ -1313,7 +1313,8 @@ typedef struct _STORAGE_MINIPORT_DESCRIPTOR {
     union {
         struct {
             UCHAR LogicalPoFxForDisk : 1;
-            UCHAR Reserved : 7;
+            UCHAR ForwardIo : 1;
+            UCHAR Reserved : 6;
         } DUMMYSTRUCTNAME;
         UCHAR AsUCHAR;
     } Flags;
@@ -6605,6 +6606,7 @@ typedef struct _STORAGE_ATTRIBUTE_MGMT {
 // Bypass IO feature. If set, the driver understands bypass IO and supports bypass IO related IOCTL(s).
 //
 #define STORAGE_SUPPORTED_FEATURES_BYPASS_IO    0x00000001
+
 
 //
 // Supported Features Mask. This is "OR" of all defined bits of supported features.

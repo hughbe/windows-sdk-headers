@@ -1478,7 +1478,8 @@ typedef struct _STORAGE_MINIPORT_DESCRIPTOR {
     union {
         struct {
             BYTE  LogicalPoFxForDisk : 1;
-            BYTE  Reserved : 7;
+            BYTE  ForwardIo : 1;
+            BYTE  Reserved : 6;
         } DUMMYSTRUCTNAME;
         BYTE  AsBYTE ;
     } Flags;
