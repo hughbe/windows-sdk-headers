@@ -120,7 +120,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x100000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x110000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_UI_SHELL_SECURITYAPPMANAGERCONTRACT_VERSION)
@@ -601,7 +601,7 @@ namespace ABI {
 } /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 #ifndef DEF___FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintSupport__CPrintSupportExtensionSession_Windows__CGraphics__CPrinting__CPrintSupport__CPrintSupportCommunicationErrorDetectedEventArgs_USE
 #define DEF___FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintSupport__CPrintSupportExtensionSession_Windows__CGraphics__CPrinting__CPrintSupport__CPrintSupportCommunicationErrorDetectedEventArgs_USE
@@ -626,7 +626,7 @@ typedef ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintSupport::Print
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintSupport__CPrintSupportExtensionSession_Windows__CGraphics__CPrinting__CPrintSupport__CPrintSupportCommunicationErrorDetectedEventArgs_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
 
 namespace ABI {
@@ -1042,10 +1042,10 @@ namespace ABI {
  *
  * Struct Windows.Graphics.Printing.PrintSupport.IppCommunicationErrorKind
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 namespace ABI {
     namespace Windows {
         namespace Graphics {
@@ -1063,16 +1063,16 @@ namespace ABI {
         } /* Graphics */
     } /* Windows */
 } /* ABI */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
  * Struct Windows.Graphics.Printing.PrintSupport.IppPrinterCommunicationKind
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 namespace ABI {
     namespace Windows {
         namespace Graphics {
@@ -1090,7 +1090,7 @@ namespace ABI {
         } /* Graphics */
     } /* Windows */
 } /* ABI */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
@@ -1147,12 +1147,12 @@ namespace ABI {
  *
  * Interface Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportCommunicationErrorDetectedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportCommunicationErrorDetectedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_PrintSupport_IPrintSupportCommunicationErrorDetectedEventArgs[] = L"Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs";
@@ -1188,7 +1188,7 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportCommunicationErrorDetectedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportCommunicationErrorDetectedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
@@ -1289,12 +1289,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrin
  *
  * Interface Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession3
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportExtensionSession3_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportExtensionSession3_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession3[] = L"Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession3";
@@ -1325,7 +1325,7 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportExtensionSession3;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportExtensionSession3_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
@@ -1369,12 +1369,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrin
  *
  * Interface Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationConfiguration
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportIppCommunicationConfiguration_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportIppCommunicationConfiguration_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_PrintSupport_IPrintSupportIppCommunicationConfiguration[] = L"Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationConfiguration";
@@ -1410,18 +1410,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportIppCommunicationConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportIppCommunicationConfiguration_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
  * Interface Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationTimeouts
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportIppCommunicationTimeouts_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportIppCommunicationTimeouts_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_PrintSupport_IPrintSupportIppCommunicationTimeouts[] = L"Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationTimeouts";
@@ -1463,7 +1463,7 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportIppCommunicationTimeouts;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportIppCommunicationTimeouts_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
@@ -1563,12 +1563,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrin
  *
  * Interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportPrintDeviceCapabilitiesChangedEventArgs3_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportPrintDeviceCapabilitiesChangedEventArgs3_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3[] = L"Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3";
@@ -1595,7 +1595,7 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportPrintDeviceCapabilitiesChangedEventArgs3;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportPrintDeviceCapabilitiesChangedEventArgs3_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
@@ -1961,7 +1961,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrin
  *
  * Class Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs ** Default Interface **
@@ -1969,12 +1969,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrin
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintSupport_PrintSupportCommunicationErrorDetectedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintSupport_PrintSupportCommunicationErrorDetectedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintSupport_PrintSupportCommunicationErrorDetectedEventArgs[] = L"Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
@@ -2020,7 +2020,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationConfiguration ** Default Interface **
@@ -2028,18 +2028,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintSupport_PrintSupportIppCommunicationConfiguration_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintSupport_PrintSupportIppCommunicationConfiguration_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintSupport_PrintSupportIppCommunicationConfiguration[] = L"Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
  * Class Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationTimeouts ** Default Interface **
@@ -2047,12 +2047,12 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintSupport_PrintSupportIppCommunicationTimeouts_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintSupport_PrintSupportIppCommunicationTimeouts_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintSupport_PrintSupportIppCommunicationTimeouts[] = L"Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
@@ -2621,7 +2621,7 @@ interface __FIIterable_1_Windows__CGraphics__CPrinting__CPrintSupport__CPrintSup
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintSupport__CPrintSupportExtensionSession_Windows__CGraphics__CPrinting__CPrintSupport__CPrintSupportCommunicationErrorDetectedEventArgs_INTERFACE_DEFINED__)
 #define ____FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintSupport__CPrintSupportExtensionSession_Windows__CGraphics__CPrinting__CPrintSupport__CPrintSupportCommunicationErrorDetectedEventArgs_INTERFACE_DEFINED__
 
@@ -2668,7 +2668,7 @@ interface __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintSupport__
 #endif /* COBJMACROS */
 
 #endif // ____FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintSupport__CPrintSupportExtensionSession_Windows__CGraphics__CPrinting__CPrintSupport__CPrintSupportCommunicationErrorDetectedEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
@@ -2886,10 +2886,10 @@ typedef enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CWorkflowPrintTi
  *
  * Struct Windows.Graphics.Printing.PrintSupport.IppCommunicationErrorKind
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIppCommunicationErrorKind
 {
     IppCommunicationErrorKind_Other = 0,
@@ -2897,16 +2897,16 @@ enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIppCommunicationErrorKi
     IppCommunicationErrorKind_ConnectionError = 2,
     IppCommunicationErrorKind_AccessDenied = 3,
 };
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
  * Struct Windows.Graphics.Printing.PrintSupport.IppPrinterCommunicationKind
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIppPrinterCommunicationKind
 {
     IppPrinterCommunicationKind_Network = 0,
@@ -2914,7 +2914,7 @@ enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIppPrinterCommunication
     IppPrinterCommunicationKind_PrinterConnection = 2,
     IppPrinterCommunicationKind_UniversalPrint = 3,
 };
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
@@ -2951,12 +2951,12 @@ enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CWorkflowPrintTicketVali
  *
  * Interface Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportCommunicationErrorDetectedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportCommunicationErrorDetectedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_PrintSupport_IPrintSupportCommunicationErrorDetectedEventArgs[] = L"Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs";
@@ -3029,7 +3029,7 @@ interface __x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportCommu
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportCommunicationErrorDetectedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportCommunicationErrorDetectedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
@@ -3205,12 +3205,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrin
  *
  * Interface Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession3
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportExtensionSession3_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportExtensionSession3_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_PrintSupport_IPrintSupportExtensionSession3[] = L"Windows.Graphics.Printing.PrintSupport.IPrintSupportExtensionSession3";
@@ -3274,7 +3274,7 @@ interface __x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportExten
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportExtensionSession3;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportExtensionSession3_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
@@ -3349,12 +3349,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrin
  *
  * Interface Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationConfiguration
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportIppCommunicationConfiguration_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportIppCommunicationConfiguration_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_PrintSupport_IPrintSupportIppCommunicationConfiguration[] = L"Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationConfiguration";
@@ -3427,18 +3427,18 @@ interface __x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportIppCo
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportIppCommunicationConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportIppCommunicationConfiguration_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
  * Interface Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationTimeouts
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportIppCommunicationTimeouts_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportIppCommunicationTimeouts_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_PrintSupport_IPrintSupportIppCommunicationTimeouts[] = L"Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationTimeouts";
@@ -3521,7 +3521,7 @@ interface __x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportIppCo
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportIppCommunicationTimeouts;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportIppCommunicationTimeouts_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
@@ -3695,12 +3695,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrin
  *
  * Interface Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportPrintDeviceCapabilitiesChangedEventArgs3_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportPrintDeviceCapabilitiesChangedEventArgs3_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_PrintSupport_IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3[] = L"Windows.Graphics.Printing.PrintSupport.IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3";
@@ -3758,7 +3758,7 @@ interface __x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportPrint
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportPrintDeviceCapabilitiesChangedEventArgs3;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrintSupportPrintDeviceCapabilitiesChangedEventArgs3_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
@@ -4408,7 +4408,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrin
  *
  * Class Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.PrintSupport.IPrintSupportCommunicationErrorDetectedEventArgs ** Default Interface **
@@ -4416,12 +4416,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CPrintSupport_CIPrin
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintSupport_PrintSupportCommunicationErrorDetectedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintSupport_PrintSupportCommunicationErrorDetectedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintSupport_PrintSupportCommunicationErrorDetectedEventArgs[] = L"Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
@@ -4467,7 +4467,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationConfiguration ** Default Interface **
@@ -4475,18 +4475,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintSupport_PrintSupportIppCommunicationConfiguration_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintSupport_PrintSupportIppCommunicationConfiguration_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintSupport_PrintSupportIppCommunicationConfiguration[] = L"Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *
  * Class Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.PrintSupport.IPrintSupportIppCommunicationTimeouts ** Default Interface **
@@ -4494,12 +4494,12 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintSupport_PrintSupportIppCommunicationTimeouts_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintSupport_PrintSupportIppCommunicationTimeouts_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintSupport_PrintSupportIppCommunicationTimeouts[] = L"Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 
 /*
  *

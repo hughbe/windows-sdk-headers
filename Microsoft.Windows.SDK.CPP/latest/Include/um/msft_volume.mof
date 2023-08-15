@@ -183,7 +183,7 @@ class MSFT_Volume : MSFT_StorageObject {
         Boolean NoTrim,
 
         [In]
-        Boolean DeveloperVolume,
+        Boolean DevDrive,
 
         [In]
         Boolean SHA256Checksums,

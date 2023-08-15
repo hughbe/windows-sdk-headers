@@ -1972,7 +1972,12 @@ typedef struct _DXGK_NODEMETADATA_FLAGS
             UINT RingBufferFenceRelease     :  1;
             UINT SupportTrackedWorkload     :  1;
             UINT UserModeSubmission         :  1;
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_2)
+            UINT SupportBuildTestCommandBuffer :  1;
+            UINT Reserved                   : 11;
+#else
             UINT Reserved                   : 12;
+#endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_2)
 
             UINT MaxInFlightHwQueueBuffers  : 16;
 

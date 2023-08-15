@@ -92,7 +92,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x100000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x110000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
@@ -141,6 +141,23 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteDesktop {
+                namespace Input {
+                    interface IRemoteTextConnection2;
+                } /* Input */
+            } /* RemoteDesktop */
+        } /* System */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2 ABI::Windows::System::RemoteDesktop::Input::IRemoteTextConnection2
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory_FWD_DEFINED__
 namespace ABI {
@@ -158,22 +175,22 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_FWD_DEFINED__
-#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_FWD_DEFINED__
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_FWD_DEFINED__
 namespace ABI {
     namespace Windows {
         namespace System {
             namespace RemoteDesktop {
                 namespace Input {
-                    interface IRemoteTextKeyRedirector;
+                    interface IRemoteTextConnectionFactory2;
                 } /* Input */
             } /* RemoteDesktop */
         } /* System */
     } /* Windows */
 } /* ABI */
-#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector ABI::Windows::System::RemoteDesktop::Input::IRemoteTextKeyRedirector
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2 ABI::Windows::System::RemoteDesktop::Input::IRemoteTextConnectionFactory2
 
-#endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_FWD_DEFINED__
+#endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_FWD_DEFINED__
 
 // Parameterized interface forward declarations (C++)
 
@@ -196,7 +213,19 @@ namespace ABI {
         namespace System {
             namespace RemoteDesktop {
                 namespace Input {
-                    typedef enum RedirectedKeyEventFlags : unsigned int RedirectedKeyEventFlags;
+                    typedef enum RemoteKeyEventFlags : unsigned int RemoteKeyEventFlags;
+                } /* Input */
+            } /* RemoteDesktop */
+        } /* System */
+    } /* Windows */
+} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteDesktop {
+                namespace Input {
+                    typedef enum RemoteTextConnectionOptions : unsigned int RemoteTextConnectionOptions;
                 } /* Input */
             } /* RemoteDesktop */
         } /* System */
@@ -217,7 +246,7 @@ namespace ABI {
 
 /*
  *
- * Struct Windows.System.RemoteDesktop.Input.RedirectedKeyEventFlags
+ * Struct Windows.System.RemoteDesktop.Input.RemoteKeyEventFlags
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
  *
@@ -228,13 +257,43 @@ namespace ABI {
         namespace System {
             namespace RemoteDesktop {
                 namespace Input {
-                    enum RedirectedKeyEventFlags : unsigned int
+                    enum RemoteKeyEventFlags : unsigned int
                     {
-                        RedirectedKeyEventFlags_None = 0,
-                        RedirectedKeyEventFlags_KeyUp = 0x1,
+                        RemoteKeyEventFlags_None = 0,
+                        RemoteKeyEventFlags_KeyUp = 0x1,
+                        RemoteKeyEventFlags_Repeat = 0x2,
+                        RemoteKeyEventFlags_Extended = 0x4,
+                        RemoteKeyEventFlags_Extended1 = 0x8,
                     };
 
-                    DEFINE_ENUM_FLAG_OPERATORS(RedirectedKeyEventFlags)
+                    DEFINE_ENUM_FLAG_OPERATORS(RemoteKeyEventFlags)
+                } /* Input */
+            } /* RemoteDesktop */
+        } /* System */
+    } /* Windows */
+} /* ABI */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+
+/*
+ *
+ * Struct Windows.System.RemoteDesktop.Input.RemoteTextConnectionOptions
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteDesktop {
+                namespace Input {
+                    enum RemoteTextConnectionOptions : unsigned int
+                    {
+                        RemoteTextConnectionOptions_None = 0,
+                        RemoteTextConnectionOptions_SpeculativeKeyProcessing = 0x1,
+                    };
+
+                    DEFINE_ENUM_FLAG_OPERATORS(RemoteTextConnectionOptions)
                 } /* Input */
             } /* RemoteDesktop */
         } /* System */
@@ -332,6 +391,45 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTe
 
 /*
  *
+ * Interface Windows.System.RemoteDesktop.Input.IRemoteTextConnection2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Input.RemoteTextConnection
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Input_IRemoteTextConnection2[] = L"Windows.System.RemoteDesktop.Input.IRemoteTextConnection2";
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteDesktop {
+                namespace Input {
+                    MIDL_INTERFACE("b7b95dc6-02f1-538a-802a-c9916a830184")
+                    IRemoteTextConnection2 : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE DoSpeculativeKeyProcessing(
+                            UINT16 scanCode,
+                            ABI::Windows::System::RemoteDesktop::Input::RemoteKeyEventFlags flags
+                            ) = 0;
+                    };
+
+                    MIDL_CONST_ID IID& IID_IRemoteTextConnection2 = __uuidof(IRemoteTextConnection2);
+                } /* Input */
+            } /* RemoteDesktop */
+        } /* System */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+
+/*
+ *
  * Interface Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
@@ -372,41 +470,43 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTe
 
 /*
  *
- * Interface Windows.System.RemoteDesktop.Input.IRemoteTextKeyRedirector
+ * Interface Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory2
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
  *
- * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Input.RemoteTextKeyRedirector
+ * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Input.RemoteTextConnection
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
-#if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Input_IRemoteTextKeyRedirector[] = L"Windows.System.RemoteDesktop.Input.IRemoteTextKeyRedirector";
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Input_IRemoteTextConnectionFactory2[] = L"Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory2";
 namespace ABI {
     namespace Windows {
         namespace System {
             namespace RemoteDesktop {
                 namespace Input {
-                    MIDL_INTERFACE("83ba066c-27d7-5e98-8a73-f81fe08e3e84")
-                    IRemoteTextKeyRedirector : public IInspectable
+                    MIDL_INTERFACE("9425c7d9-ed9b-5d00-99cc-b0b8dc9e4c60")
+                    IRemoteTextConnectionFactory2 : public IInspectable
                     {
                     public:
-                        virtual HRESULT STDMETHODCALLTYPE RedirectKeyEvent(
-                            UINT16 scanCode,
-                            ABI::Windows::System::RemoteDesktop::Input::RedirectedKeyEventFlags keyFlags
+                        virtual HRESULT STDMETHODCALLTYPE CreateInstance(
+                            GUID connectionId,
+                            ABI::Windows::System::RemoteDesktop::Input::IRemoteTextConnectionDataHandler* pduForwarder,
+                            ABI::Windows::System::RemoteDesktop::Input::RemoteTextConnectionOptions options,
+                            ABI::Windows::System::RemoteDesktop::Input::IRemoteTextConnection** value
                             ) = 0;
                     };
 
-                    MIDL_CONST_ID IID& IID_IRemoteTextKeyRedirector = __uuidof(IRemoteTextKeyRedirector);
+                    MIDL_CONST_ID IID& IID_IRemoteTextConnectionFactory2 = __uuidof(IRemoteTextConnectionFactory2);
                 } /* Input */
             } /* RemoteDesktop */
         } /* System */
     } /* Windows */
 } /* ABI */
 
-EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector;
-#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_INTERFACE_DEFINED__) */
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
 /*
@@ -417,9 +517,11 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTe
  *
  * RuntimeClass can be activated.
  *   Type can be activated via the Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory interface starting with version 13.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via the Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory2 interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.System.RemoteDesktop.Input.IRemoteTextConnection ** Default Interface **
+ *    Windows.System.RemoteDesktop.Input.IRemoteTextConnection2
  *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
@@ -433,31 +535,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTe
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteDesktop_Input_RemoteTextConnection[] = L"Windows.System.RemoteDesktop.Input.RemoteTextConnection";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
-
-/*
- *
- * Class Windows.System.RemoteDesktop.Input.RemoteTextKeyRedirector
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
- *
- * RuntimeClass can be activated.
- *   Type can be activated via RoActivateInstance starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
- *
- * Class implements the following interfaces:
- *    Windows.System.RemoteDesktop.Input.IRemoteTextKeyRedirector ** Default Interface **
- *    Windows.Foundation.IClosable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
-#ifndef RUNTIMECLASS_Windows_System_RemoteDesktop_Input_RemoteTextKeyRedirector_DEFINED
-#define RUNTIMECLASS_Windows_System_RemoteDesktop_Input_RemoteTextKeyRedirector_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteDesktop_Input_RemoteTextKeyRedirector[] = L"Windows.System.RemoteDesktop.Input.RemoteTextKeyRedirector";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -473,17 +550,23 @@ typedef interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextCon
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2 __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2;
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory;
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_FWD_DEFINED__
-#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector;
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2 __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2;
 
-#endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_FWD_DEFINED__
+#endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_FWD_DEFINED__
 
 // Parameterized interface forward declarations (C)
 
@@ -495,20 +578,40 @@ typedef interface __x_ABI_CWindows_CFoundation_CIClosable __x_ABI_CWindows_CFoun
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
 
-typedef enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRedirectedKeyEventFlags __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRedirectedKeyEventFlags;
+typedef enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteKeyEventFlags __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteKeyEventFlags;
+
+typedef enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteTextConnectionOptions __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteTextConnectionOptions;
 
 /*
  *
- * Struct Windows.System.RemoteDesktop.Input.RedirectedKeyEventFlags
+ * Struct Windows.System.RemoteDesktop.Input.RemoteKeyEventFlags
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
-enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRedirectedKeyEventFlags
+enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteKeyEventFlags
 {
-    RedirectedKeyEventFlags_None = 0,
-    RedirectedKeyEventFlags_KeyUp = 0x1,
+    RemoteKeyEventFlags_None = 0,
+    RemoteKeyEventFlags_KeyUp = 0x1,
+    RemoteKeyEventFlags_Repeat = 0x2,
+    RemoteKeyEventFlags_Extended = 0x4,
+    RemoteKeyEventFlags_Extended1 = 0x8,
+};
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+
+/*
+ *
+ * Struct Windows.System.RemoteDesktop.Input.RemoteTextConnectionOptions
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteTextConnectionOptions
+{
+    RemoteTextConnectionOptions_None = 0,
+    RemoteTextConnectionOptions_SpeculativeKeyProcessing = 0x1,
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
@@ -656,6 +759,76 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTe
 
 /*
  *
+ * Interface Windows.System.RemoteDesktop.Input.IRemoteTextConnection2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Input.RemoteTextConnection
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Input_IRemoteTextConnection2[] = L"Windows.System.RemoteDesktop.Input.IRemoteTextConnection2";
+typedef struct __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* DoSpeculativeKeyProcessing)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2* This,
+        UINT16 scanCode,
+        enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteKeyEventFlags flags);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2Vtbl;
+
+interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_DoSpeculativeKeyProcessing(This, scanCode, flags) \
+    ((This)->lpVtbl->DoSpeculativeKeyProcessing(This, scanCode, flags))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+
+/*
+ *
  * Interface Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
@@ -727,72 +900,74 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTe
 
 /*
  *
- * Interface Windows.System.RemoteDesktop.Input.IRemoteTextKeyRedirector
+ * Interface Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory2
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
  *
- * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Input.RemoteTextKeyRedirector
+ * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Input.RemoteTextConnection
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
-#if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Input_IRemoteTextKeyRedirector[] = L"Windows.System.RemoteDesktop.Input.IRemoteTextKeyRedirector";
-typedef struct __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirectorVtbl
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Input_IRemoteTextConnectionFactory2[] = L"Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory2";
+typedef struct __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2Vtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector* This,
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2* This,
         REFIID riid,
         void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector* This,
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2* This,
         ULONG* iidCount,
         IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector* This,
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2* This,
         HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector* This,
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2* This,
         TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* RedirectKeyEvent)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector* This,
-        UINT16 scanCode,
-        enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRedirectedKeyEventFlags keyFlags);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2* This,
+        GUID connectionId,
+        __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionDataHandler* pduForwarder,
+        enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteTextConnectionOptions options,
+        __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection** value);
 
     END_INTERFACE
-} __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirectorVtbl;
+} __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2Vtbl;
 
-interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector
+interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirectorVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2Vtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_QueryInterface(This, riid, ppvObject) \
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_QueryInterface(This, riid, ppvObject) \
     ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_AddRef(This) \
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_AddRef(This) \
     ((This)->lpVtbl->AddRef(This))
 
-#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_Release(This) \
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_Release(This) \
     ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_GetIids(This, iidCount, iids) \
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_GetIids(This, iidCount, iids) \
     ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_GetRuntimeClassName(This, className) \
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_GetRuntimeClassName(This, className) \
     ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_GetTrustLevel(This, trustLevel) \
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_GetTrustLevel(This, trustLevel) \
     ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_RedirectKeyEvent(This, scanCode, keyFlags) \
-    ((This)->lpVtbl->RedirectKeyEvent(This, scanCode, keyFlags))
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_CreateInstance(This, connectionId, pduForwarder, options, value) \
+    ((This)->lpVtbl->CreateInstance(This, connectionId, pduForwarder, options, value))
 
 #endif /* COBJMACROS */
 
-EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector;
-#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextKeyRedirector_INTERFACE_DEFINED__) */
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnectionFactory2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
 /*
@@ -803,9 +978,11 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTe
  *
  * RuntimeClass can be activated.
  *   Type can be activated via the Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory interface starting with version 13.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via the Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory2 interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.System.RemoteDesktop.Input.IRemoteTextConnection ** Default Interface **
+ *    Windows.System.RemoteDesktop.Input.IRemoteTextConnection2
  *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
@@ -819,31 +996,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTe
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteDesktop_Input_RemoteTextConnection[] = L"Windows.System.RemoteDesktop.Input.RemoteTextConnection";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
-
-/*
- *
- * Class Windows.System.RemoteDesktop.Input.RemoteTextKeyRedirector
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
- *
- * RuntimeClass can be activated.
- *   Type can be activated via RoActivateInstance starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
- *
- * Class implements the following interfaces:
- *    Windows.System.RemoteDesktop.Input.IRemoteTextKeyRedirector ** Default Interface **
- *    Windows.Foundation.IClosable
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
-#ifndef RUNTIMECLASS_Windows_System_RemoteDesktop_Input_RemoteTextKeyRedirector_DEFINED
-#define RUNTIMECLASS_Windows_System_RemoteDesktop_Input_RemoteTextKeyRedirector_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteDesktop_Input_RemoteTextKeyRedirector[] = L"Windows.System.RemoteDesktop.Input.RemoteTextKeyRedirector";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

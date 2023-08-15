@@ -5794,14 +5794,21 @@ YieldProcessor (
 #pragma intrinsic(__iso_volatile_store16)
 #pragma intrinsic(__iso_volatile_store32)
 #pragma intrinsic(__iso_volatile_store64)
-#pragma intrinsic(__ldapr8)
-#pragma intrinsic(__ldapr16)
-#pragma intrinsic(__ldapr32)
-#pragma intrinsic(__ldapr64)
+#pragma intrinsic(__ldar8)
+#pragma intrinsic(__ldar16)
+#pragma intrinsic(__ldar32)
+#pragma intrinsic(__ldar64)
 #pragma intrinsic(__stlr8)
 #pragma intrinsic(__stlr16)
 #pragma intrinsic(__stlr32)
 #pragma intrinsic(__stlr64)
+
+#if _MSC_FULL_VER >= 193632407
+#pragma intrinsic(__load_acquire8)
+#pragma intrinsic(__load_acquire16)
+#pragma intrinsic(__load_acquire32)
+#pragma intrinsic(__load_acquire64)
+#endif // _MSC_FULL_VER >= 193632407
 
 //
 //
@@ -5821,12 +5828,20 @@ ReadAcquire8 (
 
     CHAR Value;
 
-#if defined(__ARM64_FEAT_LRCPC__)
-    Value = (CHAR)__ldapr8((unsigned __int8 volatile*)Source);
-#else
+#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+
     Value = __iso_volatile_load8(Source);
     __dmb(_ARM64_BARRIER_ISH);
+
+#else // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+
+#if _MSC_FULL_VER >= 193632407
+    Value = (CHAR)__load_acquire8((unsigned __int8 volatile*)Source);
+#else
+    Value = (CHAR)__ldar8((unsigned __int8 volatile*)Source);
 #endif
+
+#endif // !defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
 
     return Value;
 }
@@ -5854,11 +5869,11 @@ WriteRelease8 (
 
 {
 
-#if defined(__ARM64_FEAT_LRCPC__)
-    __stlr8((unsigned __int8 volatile*)Destination, (unsigned __int8)Value);
-#else
+#if defined(__MS_ARM64_DMB_ACQUIRE_RELEASE__)
     __dmb(_ARM64_BARRIER_ISH);
     __iso_volatile_store8(Destination, Value);
+#else
+    __stlr8((unsigned __int8 volatile*)Destination, (unsigned __int8)Value);
 #endif
 
     return;
@@ -5887,12 +5902,20 @@ ReadAcquire16 (
 
     SHORT Value;
 
-#if defined(__ARM64_FEAT_LRCPC__)
-    Value = (SHORT)__ldapr16((unsigned __int16 volatile*)Source);
-#else
+#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+
     Value = __iso_volatile_load16(Source);
     __dmb(_ARM64_BARRIER_ISH);
+
+#else // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+
+#if _MSC_FULL_VER >= 193632407
+    Value = (SHORT)__load_acquire16((unsigned __int16 volatile*)Source);
+#else
+    Value = (SHORT)__ldar16((unsigned __int16 volatile*)Source);
 #endif
+
+#endif // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
 
     return Value;
 }
@@ -5920,11 +5943,11 @@ WriteRelease16 (
 
 {
 
-#if defined(__ARM64_FEAT_LRCPC__)
-    __stlr16((unsigned __int16 volatile*)Destination, (unsigned __int16)Value);
-#else
+#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
     __dmb(_ARM64_BARRIER_ISH);
     __iso_volatile_store16(Destination, Value);
+#else
+    __stlr16((unsigned __int16 volatile*)Destination, (unsigned __int16)Value);
 #endif
 
     return;
@@ -5953,12 +5976,20 @@ ReadAcquire (
 
     LONG Value;
 
-#if defined(__ARM64_FEAT_LRCPC__)
-    Value = (LONG)__ldapr32((unsigned __int32 volatile*)Source);
-#else
+#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+
     Value = __iso_volatile_load32((int *)Source);
     __dmb(_ARM64_BARRIER_ISH);
+
+#else // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+
+#if _MSC_FULL_VER >= 193632407
+    Value = (LONG)__load_acquire32((unsigned __int32 volatile*)Source);
+#else
+    Value = (LONG)__ldar32((unsigned __int32 volatile*)Source);
 #endif
+
+#endif // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
 
     return Value;
 }
@@ -5986,11 +6017,11 @@ WriteRelease (
 
 {
 
-#if defined(__ARM64_FEAT_LRCPC__)
-    __stlr32((unsigned __int32 volatile*)Destination, (unsigned __int32)Value);
-#else
+#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
     __dmb(_ARM64_BARRIER_ISH);
     __iso_volatile_store32((int *)Destination, Value);
+#else
+    __stlr32((unsigned __int32 volatile*)Destination, (unsigned __int32)Value);
 #endif
 
     return;
@@ -6019,12 +6050,20 @@ ReadAcquire64 (
 
     LONG64 Value;
 
-#if defined(__ARM64_FEAT_LRCPC__)
-    Value = (LONG64)__ldapr64((unsigned __int64 volatile*)Source);
-#else
+#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+
     Value = __iso_volatile_load64(Source);
     __dmb(_ARM64_BARRIER_ISH);
+
+#else // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+
+#if _MSC_FULL_VER >= 193632407
+    Value = (LONG64)__load_acquire64((unsigned __int64 volatile*)Source);
+#else
+    Value = (LONG64)__ldar64((unsigned __int64 volatile*)Source);
 #endif
+
+#endif // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
 
     return Value;
 }
@@ -6052,11 +6091,11 @@ WriteRelease64 (
 
 {
 
-#if defined(__ARM64_FEAT_LRCPC__)
-    __stlr64((unsigned __int64 volatile*)Destination, (unsigned __int64)Value);
-#else
+#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
     __dmb(_ARM64_BARRIER_ISH);
     __iso_volatile_store64(Destination, Value);
+#else
+    __stlr64((unsigned __int64 volatile*)Destination, (unsigned __int64)Value);
 #endif
 
     return;
@@ -15981,19 +16020,38 @@ DEFINE_GUID( GUID_STANDBY_RESERVE_TIME, 0x468FE7E5, 0x1158, 0x46EC, 0x88, 0xbc, 
 DEFINE_GUID(GUID_STANDBY_RESET_PERCENT, 0x49cb11a5, 0x56e2, 0x4afb, 0x9d, 0x38, 0x3d, 0xf4, 0x78, 0x72, 0xe2, 0x1b);
 
 //
-// Defines a guid to control Human Presence Sensor Adaptive Display Timeout.
+// Defines a guid to control Human Presence Sensor Adaptive Away Display Timeout.
 //
 // {0A7D6AB6-AC83-4AD1-8282-ECA5B58308F3}
 //
-DEFINE_GUID(GUID_HUPR_ADAPTIVE_DISPLAY_TIMEOUT, 0x0A7D6AB6, 0xAC83, 0x4AD1, 0x82, 0x82, 0xEC, 0xA5, 0xB5, 0x83, 0x08, 0xF3);
+DEFINE_GUID(GUID_HUPR_ADAPTIVE_AWAY_DISPLAY_TIMEOUT, 0x0A7D6AB6, 0xAC83, 0x4AD1, 0x82, 0x82, 0xEC, 0xA5, 0xB5, 0x83, 0x08, 0xF3);
+
+#define GUID_HUPR_ADAPTIVE_DISPLAY_TIMEOUT GUID_HUPR_ADAPTIVE_AWAY_DISPLAY_TIMEOUT
 
 //
-// Defines a guid to control Human Presence Sensor Adaptive Dim Timeout;
+// Defines a guid to control Human Presence Sensor Adaptive Inattentive Dim Timeout;
 //
 // {CF8C6097-12B8-4279-BBDD-44601EE5209D}
 //
 
-DEFINE_GUID(GUID_HUPR_ADAPTIVE_DIM_TIMEOUT, 0xCF8C6097, 0x12B8, 0x4279, 0xBB, 0xDD, 0x44, 0x60, 0x1E, 0xE5, 0x20, 0x9D);
+DEFINE_GUID(GUID_HUPR_ADAPTIVE_INATTENTIVE_DIM_TIMEOUT, 0xCF8C6097, 0x12B8, 0x4279, 0xBB, 0xDD, 0x44, 0x60, 0x1E, 0xE5, 0x20, 0x9D);
+
+#define GUID_HUPR_ADAPTIVE_DIM_TIMEOUT GUID_HUPR_ADAPTIVE_INATTENTIVE_DIM_TIMEOUT
+
+//
+// Defines a guid to control Human Presence Sensor Adaptive Inattentive Display Timeout.
+//
+// {EE16691E-6AB3-4619-BB48-1C77C9357E5A}
+//
+DEFINE_GUID(GUID_HUPR_ADAPTIVE_INATTENTIVE_DISPLAY_TIMEOUT, 0xEE16691E, 0x6AB3, 0x4619, 0xBB, 0x48, 0x1C, 0x77, 0xC9, 0x35, 0x7E, 0x5A);
+
+//
+// Defines a guid to control Human Presence Sensor Adaptive Away Dim Timeout;
+//
+// {A79C8E0E-F271-482D-8F8A-5DB9A18312DE}
+//
+
+DEFINE_GUID(GUID_HUPR_ADAPTIVE_AWAY_DIM_TIMEOUT, 0xA79C8E0E, 0xF271, 0x482D, 0x8F, 0x8A, 0x5D, 0xB9, 0xA1, 0x83, 0x12, 0xDE);
 
 //
 // Defines a guid for enabling/disabling standby (S1-S3) states. This does not
@@ -20685,6 +20743,7 @@ typedef struct _IMAGE_DEBUG_DIRECTORY {
 #define IMAGE_DLLCHARACTERISTICS_EX_CET_DYNAMIC_APIS_ALLOW_IN_PROC              0x08
 #define IMAGE_DLLCHARACTERISTICS_EX_CET_RESERVED_1                              0x10  // Reserved for CET policy *downgrade* only!
 #define IMAGE_DLLCHARACTERISTICS_EX_CET_RESERVED_2                              0x20  // Reserved for CET policy *downgrade* only!
+#define IMAGE_DLLCHARACTERISTICS_EX_FORWARD_CFI_COMPAT                          0x40
 #define IMAGE_DLLCHARACTERISTICS_EX_HOTPATCH_COMPATIBLE                         0x80
 
 
@@ -21855,6 +21914,7 @@ typedef struct _RTL_BARRIER {
 #define FAST_FAIL_PATCH_CALLBACK_FAILED             68
 #define FAST_FAIL_NTDLL_PATCH_FAILED                69
 #define FAST_FAIL_INVALID_FLS_DATA                  70
+#define FAST_FAIL_ASAN_ERROR                        71         // Known to Asan, must retain value 71
 #define FAST_FAIL_INVALID_FAST_FAIL_CODE            0xFFFFFFFF
 
 #if _MSC_VER >= 1610

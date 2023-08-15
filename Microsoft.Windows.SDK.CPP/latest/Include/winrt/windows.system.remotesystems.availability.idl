@@ -46,7 +46,7 @@ namespace Windows
         {
             namespace Availability
             {
-                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 17.0)]
                 [exclusiveto(Windows.System.RemoteSystems.Availability.RemoteSystemAvailability)]
                 [experimental]
                 [uuid(C00D31B3-F989-501D-8CE1-5F767215821E)]
@@ -59,10 +59,10 @@ namespace Windows
                     HRESULT GetAllEnabledCloudPCIds([out] [retval] Windows.Foundation.Collections.IVectorView<HSTRING>** result);
                 }
 
-                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 17.0)]
                 [experimental]
                 [marshaling_behavior(agile)]
-                [static(Windows.System.RemoteSystems.Availability.IRemoteSystemAvailabilityStatics, Windows.Foundation.UniversalApiContract, 16.0)]
+                [static(Windows.System.RemoteSystems.Availability.IRemoteSystemAvailabilityStatics, Windows.Foundation.UniversalApiContract, 17.0)]
                 [threading(both)]
                 runtimeclass RemoteSystemAvailability
                 {

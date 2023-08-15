@@ -598,6 +598,7 @@ typedef struct _NCRYPT_TPM_PLATFORM_ATTESTATION_STATEMENT
 
 #define NCRYPT_REGISTER_NOTIFY_FLAG             0x00000001  // NCryptNotifyChangeKey
 #define NCRYPT_UNREGISTER_NOTIFY_FLAG           0x00000002  // NCryptNotifyChangeKey
+#define NCRYPT_VBS_UNAVAILABLE_NOTIFY_FLAG      0x00000004  // NCryptNotifyChangeKey
 #define NCRYPT_NO_KEY_VALIDATION                BCRYPT_NO_KEY_VALIDATION
 #define NCRYPT_MACHINE_KEY_FLAG                 0x00000020  // same as CAPI CRYPT_MACHINE_KEYSET
 #define NCRYPT_SILENT_FLAG                      0x00000040  // same as CAPI CRYPT_SILENT
@@ -1387,6 +1388,7 @@ NCryptTranslateHandle(
 // NCryptNotifyChangeKey flags
 #define NCRYPT_REGISTER_NOTIFY_FLAG     0x00000001
 #define NCRYPT_UNREGISTER_NOTIFY_FLAG   0x00000002
+#define NCRYPT_VBS_UNAVAILABLE_NOTIFY_FLAG 0x00000004
 #define NCRYPT_MACHINE_KEY_FLAG         0x00000020
 
 #pragma region Desktop Family or OneCore Family

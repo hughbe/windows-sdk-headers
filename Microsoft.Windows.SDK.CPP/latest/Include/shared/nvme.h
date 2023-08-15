@@ -3753,11 +3753,15 @@ typedef struct {
 
     UCHAR               VendorInfoAvailable;    // Vendor Specific Information Available
 
-    UCHAR               Reserved0[3];
+    UCHAR               TRTYPE;         // NVMEOF_TRANSPORT_TYPE
+
+    UCHAR               Reserved0[2];
 
     ULONGLONG           CommandSpecificInfo;    // This field contains command specific information. If used, the command definition specifies the information returned.
 
-    UCHAR               Reserved1[24];
+    USHORT              TransportTypeSpecificInfo; // This field contains the transport type specific error information.
+
+    UCHAR               Reserved1[22];
 
 } NVME_ERROR_INFO_LOG, *PNVME_ERROR_INFO_LOG;
 

@@ -901,6 +901,11 @@ typedef struct _HTTP_PROTECTION_LEVEL_INFO
 // sending a GOAWAY frame and will cause the client to move to a different
 // connection.
 //
+// HTTP_SEND_RESPONSE_FLAG_AUTOMATIC_CHUNKING - This flag instructs the
+// http.sys to add chunk encoding automatically.
+// HTTP_SEND_RESPONSE_FLAG_MORE_DATA must be specified as well. The caller
+// must not add Transfer-Encoding: Chunked header.
+//
 
 #define HTTP_SEND_RESPONSE_FLAG_DISCONNECT          0x00000001
 #define HTTP_SEND_RESPONSE_FLAG_MORE_DATA           0x00000002
@@ -909,6 +914,7 @@ typedef struct _HTTP_PROTECTION_LEVEL_INFO
 #define HTTP_SEND_RESPONSE_FLAG_PROCESS_RANGES      0x00000020
 #define HTTP_SEND_RESPONSE_FLAG_OPAQUE              0x00000040
 #define HTTP_SEND_RESPONSE_FLAG_GOAWAY              0x00000100
+#define HTTP_SEND_RESPONSE_FLAG_AUTOMATIC_CHUNKING  0x00000200
 
 
 //

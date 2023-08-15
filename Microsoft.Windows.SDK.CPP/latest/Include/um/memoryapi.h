@@ -1157,6 +1157,95 @@ QueryPartitionInformation(
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_FE)
 
+// *TODO* Needs to update NTDDT_WIN11_ZN to Gallium when available
+//        https://microsoft.visualstudio.com/DefaultCollection/OS/_workitems/edit/44048827
+#if (NTDDI_VERSION >= NTDDI_WIN11_ZN)
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
+WINBASEAPI
+_Success_(return != FALSE)
+BOOL
+WINAPI
+GetMemoryNumaClosestInitiatorNode(
+    _In_ ULONG MemoryNodeNumber,
+    _Out_ ULONG* ProcessorNodeNumber
+    );
+
+#define WIN32_MEMORY_NUMA_PERFORMANCE_ALL_TARGET_NODE   0xffffffff
+
+#define WIN32_MEMORY_NUMA_PERFORMANCE_READ_LATENCY      0x1
+#define WIN32_MEMORY_NUMA_PERFORMANCE_READ_BANDWIDTH    0x2
+#define WIN32_MEMORY_NUMA_PERFORMANCE_WRITE_LATENCY     0x4
+#define WIN32_MEMORY_NUMA_PERFORMANCE_WRITE_BANDWIDTH   0x8
+
+typedef struct _WIN32_MEMORY_NUMA_PERFORMANCE_ENTRY {
+
+    //
+    // The initiator processor node. The performance value is the measurement of operations from the
+    // initiator processor node to the target memory node.
+    // This value is 0-based.
+    //
+    ULONG InitiatorNodeNumber;
+
+    //
+    // The target memory node. This value is 0-based.
+    //
+    ULONG TargetNodeNumber;
+
+    //
+    // DataType should be one of the WIN32_MEMROY_NUMA_PERFORMANCE_* types
+    //
+    UCHAR DataType;
+
+    struct {
+
+        //
+        // The performance value is achieved with a minimum transfer size.
+        //
+        UCHAR MinTransferSizeToAchieveValues : 1;
+
+        //
+        // The performance value is achieved with non sequential transfers.
+        //
+        UCHAR NonSequentialTransfers : 1;
+
+        UCHAR Reserved : 6;
+    } Flags;
+
+    //
+    // Minimum transfer size, only valid when MinTransferSizeToAchieveValues is 1.
+    // 0 means byte-aligned (any alignment).
+    //
+    ULONGLONG MinTransferSizeInBytes;
+
+    //
+    // EntryValue is latency or bandwidth depends on the DataType.
+    // Latency unit is picoseconds. Bandwidth unit is MB/s.
+    //
+    ULONGLONG EntryValue;
+} WIN32_MEMORY_NUMA_PERFORMANCE_ENTRY;
+
+typedef struct _WIN32_MEMORY_NUMA_PERFORMANCE_INFORMATION_OUTPUT {
+    ULONG EntryCount;
+
+    WIN32_MEMORY_NUMA_PERFORMANCE_ENTRY PerformanceEntries[ANYSIZE_ARRAY];
+} WIN32_MEMORY_NUMA_PERFORMANCE_INFORMATION_OUTPUT;
+
+BOOL
+WINAPI
+GetMemoryNumaPerformanceInformation(
+    _In_ ULONG NodeNumber,
+    _In_ UCHAR DataType,
+    _Outptr_ WIN32_MEMORY_NUMA_PERFORMANCE_INFORMATION_OUTPUT** PerfInfo
+    );
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#endif // (NTDDI_VERSION >= NTDDI_WIN11_ZN)
+
 #if _MSC_VER >= 1200
 #pragma warning(pop)
 #endif

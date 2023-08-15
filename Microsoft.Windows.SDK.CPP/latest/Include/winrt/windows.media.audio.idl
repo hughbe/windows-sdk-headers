@@ -634,14 +634,14 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 16.0)]
             [exclusiveto(Windows.Media.Audio.AudioEffectsPackConfiguration)]
-            [uuid(52B24CFF-5817-5B2D-9A4F-CF925CE91F6D)]
+            [uuid(71D7627D-70C1-536C-A8F8-6F98015A7F06)]
             interface IAudioEffectsPackConfiguration : IInspectable
             {
                 [propget] HRESULT DeviceId([out] [retval] HSTRING* value);
                 [propget] HRESULT EffectsPackId([out] [retval] HSTRING* value);
                 [propget] HRESULT Status([out] [retval] Windows.Media.Audio.AudioEffectsPackStatus* value);
-                [eventadd] HRESULT ConfigurationChanged([in] Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioEffectsPackConfiguration*, IInspectable*>* handler, [out] [retval] EventRegistrationToken* token);
-                [eventremove] HRESULT ConfigurationChanged([in] EventRegistrationToken token);
+                [eventadd] HRESULT StatusChanged([in] Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioEffectsPackConfiguration*, IInspectable*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT StatusChanged([in] EventRegistrationToken token);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 16.0)]

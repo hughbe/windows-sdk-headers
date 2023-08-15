@@ -322,7 +322,7 @@ namespace Windows
                     UserCanceled = 1
                 };
 
-                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 17.0)]
                 enum PrintWorkflowJobIssueKind
                 {
                     Other                = 0,
@@ -344,7 +344,7 @@ namespace Windows
                     XpsToPdf  = 0,
                     XpsToPwgr = 1,
                     XpsToPclm = 2,
-                    [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                    [contract(Windows.Foundation.UniversalApiContract, 17.0)]
                     XpsToTiff = 3
                 };
 
@@ -471,7 +471,7 @@ namespace Windows
                     HRESULT Start();
                 }
 
-                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 17.0)]
                 [exclusiveto(Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession)]
                 [uuid(592AADAF-EF26-5A55-AD21-5F63FFCF8366)]
                 interface IPrintWorkflowJobBackgroundSession2 : IInspectable
@@ -480,7 +480,7 @@ namespace Windows
                     [eventremove] HRESULT JobIssueDetected([in] EventRegistrationToken token);
                 }
 
-                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 17.0)]
                 [exclusiveto(Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs)]
                 [uuid(DE58A46E-E41E-550A-A9FB-4B1F93FB9D98)]
                 interface IPrintWorkflowJobIssueDetectedEventArgs : IInspectable
@@ -516,7 +516,7 @@ namespace Windows
                     HRESULT GetDeferral([out] [retval] Windows.Foundation.Deferral** result);
                 }
 
-                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 17.0)]
                 [exclusiveto(Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs)]
                 [uuid(7DEDED67-D3DC-5B23-8690-4EBFC0F0914A)]
                 interface IPrintWorkflowJobStartingEventArgs2 : IInspectable
@@ -802,10 +802,10 @@ namespace Windows
                 runtimeclass PrintWorkflowJobBackgroundSession
                 {
                     [default] interface Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession;
-                    [contract(Windows.Foundation.UniversalApiContract, 16.0)] interface Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession2;
+                    [contract(Windows.Foundation.UniversalApiContract, 17.0)] interface Windows.Graphics.Printing.Workflow.IPrintWorkflowJobBackgroundSession2;
                 }
 
-                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 17.0)]
                 [marshaling_behavior(agile)]
                 runtimeclass PrintWorkflowJobIssueDetectedEventArgs
                 {
@@ -824,7 +824,7 @@ namespace Windows
                 runtimeclass PrintWorkflowJobStartingEventArgs
                 {
                     [default] interface Windows.Graphics.Printing.Workflow.IPrintWorkflowJobStartingEventArgs;
-                    [contract(Windows.Foundation.UniversalApiContract, 16.0)] interface Windows.Graphics.Printing.Workflow.IPrintWorkflowJobStartingEventArgs2;
+                    [contract(Windows.Foundation.UniversalApiContract, 17.0)] interface Windows.Graphics.Printing.Workflow.IPrintWorkflowJobStartingEventArgs2;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 13.0)]

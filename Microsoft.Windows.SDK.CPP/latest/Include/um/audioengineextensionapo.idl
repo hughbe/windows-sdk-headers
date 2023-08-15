@@ -70,6 +70,16 @@ typedef struct APOInitSystemEffects3
     BOOL                InitializeForDiscoveryOnly;
 } APOInitSystemEffects3;
 
+//-----------------------------------------------------------------------------
+// Description: This structure contains expanded information pertaining to the
+// configuration of the loopback provided to the AEC.
+//
+typedef struct AcousticEchoCanceller_Reference_Input
+{
+    APOInitSystemEffects3 apoInitSystemEffects;
+    APO_REFERENCE_STREAM_PROPERTIES streamProperties;
+} AcousticEchoCanceller_Reference_Input;
+
 //
 // Interface used by the threading framework to get the work queue id.
 //

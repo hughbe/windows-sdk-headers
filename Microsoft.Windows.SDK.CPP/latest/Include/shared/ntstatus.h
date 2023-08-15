@@ -150,7 +150,8 @@ Notes:
 #define FACILITY_PLATFORM_MANIFEST       0xEB
 #define FACILITY_APP_EXEC                0xEC
 #define FACILITY_UNIONFS                 0xED
-#define FACILITY_MAXIMUM_VALUE           0xEE
+#define FACILITY_PLATFORM_RUNTIME_MECHANISM 0xEE
+#define FACILITY_MAXIMUM_VALUE           0xEF
 
 
 //
@@ -18819,6 +18820,27 @@ Notes:
 //
 #define STATUS_GRAPHICS_SESSION_TYPE_CHANGE_IN_PROGRESS ((NTSTATUS)0xC01E05E8L)
 
+//
+//   Basic Display Driver shared status codes {0x0600..0x06DF}
+//
+//
+// MessageId: STATUS_GRAPHICS_UNKNOWN_BIOS_FRAME_BUFFER_NOT_FOUND
+//
+// MessageText:
+//
+// The Basic Display Driver cannot start because there is no frame buffer found, and the system cannot determine if the system is BIOS-compatible.
+//
+#define STATUS_GRAPHICS_UNKNOWN_BIOS_FRAME_BUFFER_NOT_FOUND ((NTSTATUS)0xC01E0600L)
+
+//
+// MessageId: STATUS_GRAPHICS_UEFI_FRAME_BUFFER_NOT_FOUND
+//
+// MessageText:
+//
+// The Basic Display Driver cannot start because there is no frame buffer found from UEFI or from a previously running graphics driver.
+//
+#define STATUS_GRAPHICS_UEFI_FRAME_BUFFER_NOT_FOUND ((NTSTATUS)0xC01E0601L)
+
 
 //
 // Full Volume Encryption Error codes (fvevol.sys)
@@ -26694,6 +26716,128 @@ Notes:
 // The completion queue does not have enough free space, to post completions, for all entries being submitted.
 //
 #define STATUS_IORING_COMPLETION_QUEUE_TOO_FULL ((NTSTATUS)0xC0460008L)
+
+/*++
+
+ PRM specific messages.
+
+--*/
+//
+// MessageId: STATUS_PRM_HANDLER_NOT_FOUND
+//
+// MessageText:
+//
+// The specified PRM handler was not found.
+//
+#define STATUS_PRM_HANDLER_NOT_FOUND     ((NTSTATUS)0xC0EE0200L)
+
+//
+// MessageId: STATUS_PRM_CONCURRENT_OPERATION
+//
+// MessageText:
+//
+// The PRM call cannot be serviced due to a concurrent PRM operation.
+//
+#define STATUS_PRM_CONCURRENT_OPERATION  ((NTSTATUS)0xC0EE0202L)
+
+//
+// MessageId: STATUS_PRM_MODULE_UPDATE_PENDING
+//
+// MessageText:
+//
+// The PRM call failed due to a pending module update.
+//
+#define STATUS_PRM_MODULE_UPDATE_PENDING ((NTSTATUS)0xC0EE0203L)
+
+//
+// MessageId: STATUS_PRM_MODULE_LOCKED
+//
+// MessageText:
+//
+// The PRM lock operation failed because the module is already locked.
+//
+#define STATUS_PRM_MODULE_LOCKED         ((NTSTATUS)0xC0EE0204L)
+
+//
+// MessageId: STATUS_PRM_UPDATE_INCOMPATIBLE_VERSION
+//
+// MessageText:
+//
+// The PRM update module version number is too small to be applied.
+//
+#define STATUS_PRM_UPDATE_INCOMPATIBLE_VERSION ((NTSTATUS)0xC0EE0205L)
+
+//
+// MessageId: STATUS_PRM_UPDATE_MODULE_MISMATCH
+//
+// MessageText:
+//
+// The PRM update module does not match the current version.
+//
+#define STATUS_PRM_UPDATE_MODULE_MISMATCH ((NTSTATUS)0xC0EE0206L)
+
+//
+// MessageId: STATUS_PRM_UPDATE_MODULE_NOT_FOUND
+//
+// MessageText:
+//
+// The PRM update is not applicable to the base PRM implementation.
+//
+#define STATUS_PRM_UPDATE_MODULE_NOT_FOUND ((NTSTATUS)0xC0EE0207L)
+
+//
+// MessageId: STATUS_PRM_UPDATE_MISSING_EXPORT
+//
+// MessageText:
+//
+// A handler export from the PRM update module cannot be found.
+//
+#define STATUS_PRM_UPDATE_MISSING_EXPORT ((NTSTATUS)0xC0EE0208L)
+
+//
+// MessageId: STATUS_PRM_UPDATE_MODULE_LOCKED
+//
+// MessageText:
+//
+// The PRM update cannot be applied due to an outstanding PRM transaction. 
+//
+#define STATUS_PRM_UPDATE_MODULE_LOCKED  ((NTSTATUS)0xC0EE0209L)
+
+//
+// MessageId: STATUS_PRM_UPDATE_BAD_SIGNATURE
+//
+// MessageText:
+//
+// The PRM update cannot be applied due to a bad PRM module signature.
+//
+#define STATUS_PRM_UPDATE_BAD_SIGNATURE  ((NTSTATUS)0xC0EE020AL)
+
+//
+// MessageId: STATUS_PRM_UPDATE_VERSION_MISMATCH
+//
+// MessageText:
+//
+// The PRM update service provided module version does not match that present in the actual update module header.
+//
+#define STATUS_PRM_UPDATE_VERSION_MISMATCH ((NTSTATUS)0xC0EE020BL)
+
+//
+// MessageId: STATUS_PRM_MODULE_UNLOCKED
+//
+// MessageText:
+//
+// The PRM unlock operation failed because the module is already unlocked.
+//
+#define STATUS_PRM_MODULE_UNLOCKED       ((NTSTATUS)0xC0EE020CL)
+
+//
+// MessageId: STATUS_PRM_INTERFACE_INACCESSIBLE
+//
+// MessageText:
+//
+// The PRM driver interface is currently not accessible.
+//
+#define STATUS_PRM_INTERFACE_INACCESSIBLE ((NTSTATUS)0xC0EE020DL)
 
 //
 // Map a WIN32 error value into an NTSTATUS

@@ -16,6 +16,13 @@ WINRT_EXPORT namespace winrt::Windows::System::RemoteDesktop::Input
         IRemoteTextConnection(std::nullptr_t = nullptr) noexcept {}
         IRemoteTextConnection(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) IRemoteTextConnection2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRemoteTextConnection2>
+    {
+        IRemoteTextConnection2(std::nullptr_t = nullptr) noexcept {}
+        IRemoteTextConnection2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IRemoteTextConnectionFactory :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IRemoteTextConnectionFactory>
@@ -23,12 +30,12 @@ WINRT_EXPORT namespace winrt::Windows::System::RemoteDesktop::Input
         IRemoteTextConnectionFactory(std::nullptr_t = nullptr) noexcept {}
         IRemoteTextConnectionFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) IRemoteTextKeyRedirector :
+    struct __declspec(empty_bases) IRemoteTextConnectionFactory2 :
         winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IRemoteTextKeyRedirector>
+        impl::consume_t<IRemoteTextConnectionFactory2>
     {
-        IRemoteTextKeyRedirector(std::nullptr_t = nullptr) noexcept {}
-        IRemoteTextKeyRedirector(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IRemoteTextConnectionFactory2(std::nullptr_t = nullptr) noexcept {}
+        IRemoteTextConnectionFactory2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

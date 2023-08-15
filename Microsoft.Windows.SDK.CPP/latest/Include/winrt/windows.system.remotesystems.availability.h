@@ -92,7 +92,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x100000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x110000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
@@ -208,7 +208,7 @@ typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
  *
  * Interface Windows.System.RemoteSystems.Availability.IRemoteSystemAvailabilityStatics
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
@@ -216,7 +216,7 @@ typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
  *
  */
 #if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CAvailability_CIRemoteSystemAvailabilityStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CRemoteSystems_CAvailability_CIRemoteSystemAvailabilityStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteSystems_Availability_IRemoteSystemAvailabilityStatics[] = L"Windows.System.RemoteSystems.Availability.IRemoteSystemAvailabilityStatics";
@@ -257,19 +257,19 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CAvailability_CIRemoteSystemAvailabilityStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CAvailability_CIRemoteSystemAvailabilityStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
  * Class Windows.System.RemoteSystems.Availability.RemoteSystemAvailability
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.System.RemoteSystems.Availability.IRemoteSystemAvailabilityStatics interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.System.RemoteSystems.Availability.IRemoteSystemAvailabilityStatics interface starting with version 17.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -277,12 +277,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CAvailability_CIR
  *
  */
 #if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #ifndef RUNTIMECLASS_Windows_System_RemoteSystems_Availability_RemoteSystemAvailability_DEFINED
 #define RUNTIMECLASS_Windows_System_RemoteSystems_Availability_RemoteSystemAvailability_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteSystems_Availability_RemoteSystemAvailability[] = L"Windows.System.RemoteSystems.Availability.RemoteSystemAvailability";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 #else // !defined(__cplusplus)
@@ -525,7 +525,7 @@ interface __FIVectorView_1_HSTRING
  *
  * Interface Windows.System.RemoteSystems.Availability.IRemoteSystemAvailabilityStatics
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
@@ -533,7 +533,7 @@ interface __FIVectorView_1_HSTRING
  *
  */
 #if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CAvailability_CIRemoteSystemAvailabilityStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CRemoteSystems_CAvailability_CIRemoteSystemAvailabilityStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteSystems_Availability_IRemoteSystemAvailabilityStatics[] = L"Windows.System.RemoteSystems.Availability.IRemoteSystemAvailabilityStatics";
@@ -613,19 +613,19 @@ interface __x_ABI_CWindows_CSystem_CRemoteSystems_CAvailability_CIRemoteSystemAv
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CAvailability_CIRemoteSystemAvailabilityStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteSystems_CAvailability_CIRemoteSystemAvailabilityStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
  * Class Windows.System.RemoteSystems.Availability.RemoteSystemAvailability
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.System.RemoteSystems.Availability.IRemoteSystemAvailabilityStatics interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.System.RemoteSystems.Availability.IRemoteSystemAvailabilityStatics interface starting with version 17.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -633,12 +633,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteSystems_CAvailability_CIR
  *
  */
 #if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #ifndef RUNTIMECLASS_Windows_System_RemoteSystems_Availability_RemoteSystemAvailability_DEFINED
 #define RUNTIMECLASS_Windows_System_RemoteSystems_Availability_RemoteSystemAvailability_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteSystems_Availability_RemoteSystemAvailability[] = L"Windows.System.RemoteSystems.Availability.RemoteSystemAvailability";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 #endif // defined(__cplusplus)

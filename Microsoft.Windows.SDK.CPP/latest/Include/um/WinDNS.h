@@ -2567,6 +2567,7 @@ DNS_QUERY_REQUEST3, *PDNS_QUERY_REQUEST3;
 #define DNS_PROTOCOL_TCP            2
 #define DNS_PROTOCOL_DOH            3
 #define DNS_PROTOCOL_DOT            4
+#define DNS_PROTOCOL_NO_WIRE        5
 
 #define DNS_QUERY_RAW_RESULTS_VERSION1  0x1
 

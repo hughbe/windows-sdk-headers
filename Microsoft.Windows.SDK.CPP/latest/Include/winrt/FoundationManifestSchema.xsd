@@ -230,16 +230,9 @@
         </xs:complexType>
       </xs:element>
       <xs:choice minOccurs="0" maxOccurs="129">
-        <xs:element name="PackageDependency">
-          <xs:complexType>
-            <xs:attribute name="Name" type="t:ST_PackageName" use="required"/>
-            <xs:attribute name="Publisher" type="t:ST_Publisher_2010_v2" use="required"/>
-            <xs:attribute name="MinVersion" type="t:ST_VersionQuad" use="required"/>
-            <xs:attribute name="MaxMajorVersionTested" type="xs:unsignedShort" use="optional"/>
-            <xs:attribute ref="uap6:Optional" use="optional"/>
-          </xs:complexType>
-        </xs:element>
+        <xs:element name="PackageDependency" type="CT_PackageDependency"/>
         <xs:element ref="uap13:HostRuntimeDependency"/>
+        <xs:element ref="uap17:PackageDependency"/>
       </xs:choice>
       <xs:element ref="MainPackageDependencyChoice" minOccurs="0" maxOccurs="1"/>
       <xs:element ref="MainPackageDependencyChoice2" minOccurs="0" maxOccurs="1000"/>
@@ -505,5 +498,12 @@
     </xs:complexType>
   </xs:element>
 
+  <xs:complexType name="CT_PackageDependency">
+    <xs:attribute name="Name" type="t:ST_PackageName" use="required"/>
+    <xs:attribute name="Publisher" type="t:ST_Publisher_2010_v2" use="required"/>
+    <xs:attribute name="MinVersion" type="t:ST_VersionQuad" use="required"/>
+    <xs:attribute name="MaxMajorVersionTested" type="xs:unsignedShort" use="optional"/>
+    <xs:attribute ref="uap6:Optional" use="optional"/>
+  </xs:complexType>
 </xs:schema>
 

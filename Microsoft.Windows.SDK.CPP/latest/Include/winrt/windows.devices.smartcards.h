@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x100000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x110000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
@@ -7102,8 +7102,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Devices.SmartCards.SmartCardEmulatorContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Devices.SmartCards.SmartCardEmulatorContract API contract
  *   Type can be activated via the Windows.Devices.SmartCards.ISmartCardAppletIdGroupFactory interface starting with version 1.0 of the Windows.Devices.SmartCards.SmartCardEmulatorContract API contract
+ *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Devices.SmartCards.SmartCardEmulatorContract API contract
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Devices.SmartCards.ISmartCardAppletIdGroupStatics interface starting with version 1.0 of the Windows.Devices.SmartCards.SmartCardEmulatorContract API contract
@@ -7460,9 +7460,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Devices.SmartCards.SmartCardEmulatorContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.SmartCards.ISmartCardEmulatorStatics3 interface starting with version 5.0 of the Windows.Devices.SmartCards.SmartCardEmulatorContract API contract
- *   Static Methods exist on the Windows.Devices.SmartCards.ISmartCardEmulatorStatics interface starting with version 1.0 of the Windows.Devices.SmartCards.SmartCardEmulatorContract API contract
  *   Static Methods exist on the Windows.Devices.SmartCards.ISmartCardEmulatorStatics2 interface starting with version 1.0 of the Windows.Devices.SmartCards.SmartCardEmulatorContract API contract
+ *   Static Methods exist on the Windows.Devices.SmartCards.ISmartCardEmulatorStatics interface starting with version 1.0 of the Windows.Devices.SmartCards.SmartCardEmulatorContract API contract
+ *   Static Methods exist on the Windows.Devices.SmartCards.ISmartCardEmulatorStatics3 interface starting with version 5.0 of the Windows.Devices.SmartCards.SmartCardEmulatorContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.SmartCards.ISmartCardEmulator ** Default Interface **
@@ -7618,8 +7618,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.SmartCards.ISmartCardProvisioningStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.SmartCards.ISmartCardProvisioningStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.SmartCards.ISmartCardProvisioningStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.SmartCards.ISmartCardProvisioning ** Default Interface **
@@ -19103,8 +19103,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Devices.SmartCards.SmartCardEmulatorContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Devices.SmartCards.SmartCardEmulatorContract API contract
  *   Type can be activated via the Windows.Devices.SmartCards.ISmartCardAppletIdGroupFactory interface starting with version 1.0 of the Windows.Devices.SmartCards.SmartCardEmulatorContract API contract
+ *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Devices.SmartCards.SmartCardEmulatorContract API contract
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Devices.SmartCards.ISmartCardAppletIdGroupStatics interface starting with version 1.0 of the Windows.Devices.SmartCards.SmartCardEmulatorContract API contract
@@ -19461,9 +19461,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Devices.SmartCards.SmartCardEmulatorContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.SmartCards.ISmartCardEmulatorStatics3 interface starting with version 5.0 of the Windows.Devices.SmartCards.SmartCardEmulatorContract API contract
- *   Static Methods exist on the Windows.Devices.SmartCards.ISmartCardEmulatorStatics interface starting with version 1.0 of the Windows.Devices.SmartCards.SmartCardEmulatorContract API contract
  *   Static Methods exist on the Windows.Devices.SmartCards.ISmartCardEmulatorStatics2 interface starting with version 1.0 of the Windows.Devices.SmartCards.SmartCardEmulatorContract API contract
+ *   Static Methods exist on the Windows.Devices.SmartCards.ISmartCardEmulatorStatics interface starting with version 1.0 of the Windows.Devices.SmartCards.SmartCardEmulatorContract API contract
+ *   Static Methods exist on the Windows.Devices.SmartCards.ISmartCardEmulatorStatics3 interface starting with version 5.0 of the Windows.Devices.SmartCards.SmartCardEmulatorContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.SmartCards.ISmartCardEmulator ** Default Interface **
@@ -19619,8 +19619,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.SmartCards.ISmartCardProvisioningStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Devices.SmartCards.ISmartCardProvisioningStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Devices.SmartCards.ISmartCardProvisioningStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Devices.SmartCards.ISmartCardProvisioning ** Default Interface **

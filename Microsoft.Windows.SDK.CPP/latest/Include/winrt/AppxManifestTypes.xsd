@@ -1725,5 +1725,11 @@
     </xs:restriction>
   </xs:simpleType>
 
+  <xs:simpleType name="ST_PackageDependencyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="install"/>
+      <xs:enumeration value="installAndRuntime"/>
+    </xs:restriction>
+  </xs:simpleType>
 </xs:schema>
 

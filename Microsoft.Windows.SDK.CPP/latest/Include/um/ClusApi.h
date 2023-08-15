@@ -1,4 +1,4 @@
-
+﻿
 /*++
 
 Copyright (c) 1996 Microsoft Corporation.  All rights reserved.
@@ -93,9 +93,13 @@ Revision History:
 // starting with CU use convention of 0x0000 + 2 digit major version + 2 digit minor version
 // ie NT13_MAJOR_VERSION = 12 = 0x0C, CU_UPGRADE_VERSION = 3 = 0x03
 #define CLUSAPI_VERSION_CU           0x00000C03
+#define CLUSAPI_VERSION_ZN           0x00000C04
+
 
 #if (!defined(CLUSAPI_VERSION))
-#if (!defined(NTDDI_VERSION) || (NTDDI_VERSION >= NTDDI_WIN10_CU))
+#if (!defined(NTDDI_VERSION) || (NTDDI_VERSION >= NTDDI_WIN10_ZN))
+#define CLUSAPI_VERSION  CLUSAPI_VERSION_ZN
+#elif (!defined(NTDDI_VERSION) || (NTDDI_VERSION >= NTDDI_WIN10_CU))
 #define CLUSAPI_VERSION CLUSAPI_VERSION_CU
 #elif (!defined(NTDDI_VERSION) || (NTDDI_VERSION >= NTDDI_WIN10_NI))
 #define CLUSAPI_VERSION CLUSAPI_VERSION_NI
@@ -156,6 +160,11 @@ typedef struct _HREGBATCHPORT *HREGBATCHPORT;
 typedef struct _HREGBATCHNOTIFICATION *HREGBATCHNOTIFICATION;
 typedef struct _HREGREADBATCH *HREGREADBATCH;
 typedef struct _HREGREADBATCHREPLY *HREGREADBATCHREPLY;
+typedef struct _HKEYVALUEBATCH *HKEYVALUEBATCH;
+typedef struct _HKEYVALUEBATCHNOTIFICATION *HKEYVALUEBATCHNOTIFICATION;
+typedef struct _HKEYVALUEREADBATCH *HKEYVALUEREADBATCH;
+typedef struct _HKEYVALUEREADBATCHREPLY *HKEYVALUEREADBATCHREPLY;
+typedef struct _HKEYVALUESTORE *HKEYVALUESTORE;
 
 #if (CLUSAPI_VERSION >= CLUSAPI_VERSION_SERVER2008R2)
 typedef struct _HNODEENUMEX *HNODEENUMEX;
@@ -401,6 +410,7 @@ typedef enum {
     ClusGroupTypeInfrastructureFileServer = 122,
     ClusGroupTypeCoreSddc           = 123,
     ClusGroupTypeUserManager        = 124,
+    ClusGroupTypeKeyValueStoreManager = 125,
     ClusGroupTypeUnknown            = 9999
 } CLUSGROUP_TYPE, *PCLUSGROUP_TYPE;
 
@@ -467,6 +477,13 @@ typedef enum
     CLUS_AFFINITY_RULE_MIN = CLUS_AFFINITY_RULE_NONE,
     CLUS_AFFINITY_RULE_MAX = CLUS_AFFINITY_RULE_DIFFERENT_NODE,
 } CLUS_AFFINITY_RULE_TYPE;
+
+typedef enum
+{
+    CLUS_ADAPTER_EXCLUSION_TYPE_IPPREFIX = 0,
+    CLUS_ADAPTER_EXCLUSION_TYPE_DESCRIPTION = 1,
+    CLUS_ADAPTER_EXCLUSION_TYPE_FRIENDLYNAME = 2,
+} CLUS_ADAPTER_EXCLUSION_TYPE;
 
 #define CLUS_GRP_MOVE_ALLOWED 0
 #define CLUS_GRP_MOVE_LOCKED  1
@@ -1455,6 +1472,9 @@ typedef enum CLUSTER_ENUM {
     CLUSTER_ENUM_GROUP                  = 0x00000008,
     CLUSTER_ENUM_NETWORK                = 0x00000010,
     CLUSTER_ENUM_NETINTERFACE           = 0x00000020,
+    #if (CLUSAPI_VERSION >= CLUSAPI_VERSION_ZN)
+    CLUSTER_ENUM_CAPACITY_NODE          = 0x10000000,
+    #endif
     CLUSTER_ENUM_SHARED_VOLUME_GROUP    = 0x20000000,
     CLUSTER_ENUM_SHARED_VOLUME_RESOURCE = 0x40000000,
     CLUSTER_ENUM_INTERNAL_NETWORK       = 0x80000000,
@@ -7345,7 +7365,7 @@ GetClusterNetInterfaceEx(
     _In_ HCLUSTER hCluster,
     _In_ LPCWSTR lpszNodeName,
     _In_ LPCWSTR lpszNetworkName,
-    _Out_writes_to_(*lpmszInterfaceNameList, *lpcbInterfaceListBufSize) LPWSTR lpmszInterfaceNameList,
+    _Out_writes_to_(*lpcbInterfaceListBufSize, *lpcbInterfaceListBufSize) LPWSTR lpmszInterfaceNameList,
     _Inout_ LPDWORD lpcbInterfaceListBufSize
 );
 
@@ -8375,6 +8395,9 @@ typedef DWORD
 #define CLUS_RES_NAME_SCALEOUT_MASTER           L"Scaleout Master"
 #define CLUS_RES_NAME_SCALEOUT_WORKER           L"Scaleout Worker"
 
+#define CLUS_RESTYPE_NAME_KEY_VALUE_STORE       L"Key Value Store"
+
+
 //
 // Cluster common property names
 //
@@ -8436,6 +8459,8 @@ typedef DWORD
 #define CLUSREG_NAME_PLACEMENT_OPTIONS             L"PlacementOptions"
 #define CLUSREG_NAME_ENABLED_EVENT_LOGS            L"EnabledEventLogs"
 #define CLUSREG_NAME_MAX_PARALLEL_MIGRATIONS       L"MaximumParallelMigrations"
+#define CLUSREG_NAME_ACCELERATED_NETWORKING_ENABLED      L"AcceleratedNetworkingEnabled"
+#define CLUSREG_NAME_ACCELERATED_NETWORKING_NODE_RESERVE L"AcceleratedNetworkingNodeReserve"
 
 //
 // Properties and defaults for single and multi subnet delays and thresholds.
@@ -8860,6 +8885,12 @@ typedef DWORD
 #define CLUS_NAME_RES_TYPE_MINIMUM_LOG_SIZE             L"MinimumLogSizeInBytes"
 #define CLUS_NAME_RES_TYPE_UNIT_LOG_SIZE_CHANGE         L"UnitOfLogSizeChangeInBytes"
 #define CLUS_NAME_RES_TYPE_LOG_MULTIPLE                 L"LogSizeMultiple"
+
+// Key Value Store
+#define CLUSREG_NAME_KEYVALUESTORE_NAME                 L"KeyValueStores"
+#define CLUSREG_NAME_KEYVALUESTORE_MANAGERNAME          L"ManagerName"
+#define CLUSREG_NAME_KEYVALUESTORE_MANAGERPATH          L"ManagerPath"
+
 
 typedef enum PLACEMENT_OPTIONS {
     PLACEMENT_OPTIONS_MIN_VALUE                     = 0x00000000,

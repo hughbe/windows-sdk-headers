@@ -82,6 +82,7 @@
 #define SZ_KEY_ADDFILTER             TEXT("AddFilter")
 #define SZ_KEY_FILTERLEVEL           TEXT("FilterLevel")
 #define SZ_KEY_FILTERPOSITION        TEXT("FilterPosition")
+#define SZ_KEY_ADDCOMPONENT          TEXT("AddComponent")
 
 // These are here for compatability with SetupX
 // They are registry keys, and are not used by SetupAPI
@@ -256,6 +257,11 @@
 #define INFSTR_KEY_COM_CLASS_THREADING_MODEL TEXT("ThreadingModel")
 
 //
+// Used in components section
+//
+#define INFSTR_KEY_COMPONENTIDS         TEXT("ComponentIds")
+
+//
 // Used for channel attributes in event channel section
 //
 #define INFSTR_KEY_CHANNEL_ACCESS       TEXT("Access")
@@ -352,6 +358,7 @@
 #define INFSTR_SUBKEY_EVENTS            TEXT("Events")
 #define INFSTR_SUBKEY_COM               TEXT("COM")
 #define INFSTR_SUBKEY_FILTERS           TEXT("Filters")
+#define INFSTR_SUBKEY_COMPONENTS        TEXT("Components")
 
 // Control Section
 #define INFSTR_CONTROLFLAGS_SECTION         TEXT("ControlFlags")
@@ -431,4 +438,3 @@
 #pragma endregion
 
 #endif  //_INC_INFSTR
-

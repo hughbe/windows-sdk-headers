@@ -56,19 +56,19 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioEffectsPackConfiguration<D>::ConfigurationChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration, winrt::Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> auto consume_Windows_Media_Audio_IAudioEffectsPackConfiguration<D>::StatusChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration)->add_ConfigurationChanged(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration)->add_StatusChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Audio_IAudioEffectsPackConfiguration<D>::ConfigurationChanged_revoker consume_Windows_Media_Audio_IAudioEffectsPackConfiguration<D>::ConfigurationChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration, winrt::Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_Media_Audio_IAudioEffectsPackConfiguration<D>::StatusChanged_revoker consume_Windows_Media_Audio_IAudioEffectsPackConfiguration<D>::StatusChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
-        return impl::make_event_revoker<D, ConfigurationChanged_revoker>(this, ConfigurationChanged(handler));
+        return impl::make_event_revoker<D, StatusChanged_revoker>(this, StatusChanged(handler));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioEffectsPackConfiguration<D>::ConfigurationChanged(winrt::event_token const& token) const noexcept
+    template <typename D> auto consume_Windows_Media_Audio_IAudioEffectsPackConfiguration<D>::StatusChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration)->remove_ConfigurationChanged(impl::bind_in(token));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration)->remove_StatusChanged(impl::bind_in(token));
     }
     template <typename D> auto consume_Windows_Media_Audio_IAudioEffectsPackConfigurationStatics<D>::GetForDeviceId(param::hstring const& effectsPackId, param::hstring const& deviceId) const
     {
@@ -1721,18 +1721,18 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall add_ConfigurationChanged(void* handler, winrt::event_token* token) noexcept final try
+        int32_t __stdcall add_StatusChanged(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().ConfigurationChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().StatusChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall remove_ConfigurationChanged(winrt::event_token token) noexcept final
+        int32_t __stdcall remove_StatusChanged(winrt::event_token token) noexcept final
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().ConfigurationChanged(*reinterpret_cast<winrt::event_token const*>(&token));
+            this->shim().StatusChanged(*reinterpret_cast<winrt::event_token const*>(&token));
             return 0;
         }
     };

@@ -92,7 +92,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x100000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x110000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
@@ -363,7 +363,7 @@ namespace ABI {
  *
  * Interface Windows.System.RemoteDesktop.Provider.ICloudPCDisplayInfo
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
@@ -371,7 +371,7 @@ namespace ABI {
  *
  */
 #if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCDisplayInfo_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCDisplayInfo_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_ICloudPCDisplayInfo[] = L"Windows.System.RemoteDesktop.Provider.ICloudPCDisplayInfo";
@@ -401,14 +401,14 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCDisplayInfo;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCDisplayInfo_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
  * Interface Windows.System.RemoteDesktop.Provider.ICloudPCDisplayInfoFactory
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
@@ -416,7 +416,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloud
  *
  */
 #if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCDisplayInfoFactory_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCDisplayInfoFactory_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_ICloudPCDisplayInfoFactory[] = L"Windows.System.RemoteDesktop.Provider.ICloudPCDisplayInfoFactory";
@@ -444,14 +444,14 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCDisplayInfoFactory;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCDisplayInfoFactory_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
  * Interface Windows.System.RemoteDesktop.Provider.ICloudPCHostService
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
@@ -459,7 +459,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloud
  *
  */
 #if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCHostService_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCHostService_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_ICloudPCHostService[] = L"Windows.System.RemoteDesktop.Provider.ICloudPCHostService";
@@ -497,14 +497,14 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCHostService;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCHostService_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
  * Interface Windows.System.RemoteDesktop.Provider.ICloudPCHostServiceStatics
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
@@ -512,7 +512,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloud
  *
  */
 #if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCHostServiceStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCHostServiceStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_ICloudPCHostServiceStatics[] = L"Windows.System.RemoteDesktop.Provider.ICloudPCHostServiceStatics";
@@ -540,7 +540,7 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCHostServiceStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCHostServiceStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
@@ -585,7 +585,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemot
  *
  * Interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo2
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
@@ -593,7 +593,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemot
  *
  */
 #if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionInfo2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionInfo2_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_IRemoteDesktopConnectionInfo2[] = L"Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo2";
@@ -631,7 +631,7 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionInfo2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionInfo2_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
@@ -678,12 +678,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemot
  *
  * Class Windows.System.RemoteDesktop.Provider.CloudPCDisplayInfo
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
  * RuntimeClass can be activated.
- *   Type can be activated via the Windows.System.RemoteDesktop.Provider.ICloudPCDisplayInfoFactory interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via the Windows.System.RemoteDesktop.Provider.ICloudPCDisplayInfoFactory interface starting with version 17.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.System.RemoteDesktop.Provider.ICloudPCDisplayInfo ** Default Interface **
@@ -694,24 +694,24 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemot
  *
  */
 #if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #ifndef RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_CloudPCDisplayInfo_DEFINED
 #define RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_CloudPCDisplayInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteDesktop_Provider_CloudPCDisplayInfo[] = L"Windows.System.RemoteDesktop.Provider.CloudPCDisplayInfo";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
  * Class Windows.System.RemoteDesktop.Provider.CloudPCHostService
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.System.RemoteDesktop.Provider.ICloudPCHostServiceStatics interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.System.RemoteDesktop.Provider.ICloudPCHostServiceStatics interface starting with version 17.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.System.RemoteDesktop.Provider.ICloudPCHostService ** Default Interface **
@@ -722,12 +722,12 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #ifndef RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_CloudPCHostService_DEFINED
 #define RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_CloudPCHostService_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteDesktop_Provider_CloudPCHostService[] = L"Windows.System.RemoteDesktop.Provider.CloudPCHostService";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
@@ -881,7 +881,7 @@ enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CRemoteDesktopConnectionS
  *
  * Interface Windows.System.RemoteDesktop.Provider.ICloudPCDisplayInfo
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
@@ -889,7 +889,7 @@ enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CRemoteDesktopConnectionS
  *
  */
 #if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCDisplayInfo_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCDisplayInfo_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_ICloudPCDisplayInfo[] = L"Windows.System.RemoteDesktop.Provider.ICloudPCDisplayInfo";
@@ -952,14 +952,14 @@ interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCDisplayInfo
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCDisplayInfo;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCDisplayInfo_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
  * Interface Windows.System.RemoteDesktop.Provider.ICloudPCDisplayInfoFactory
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
@@ -967,7 +967,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloud
  *
  */
 #if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCDisplayInfoFactory_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCDisplayInfoFactory_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_ICloudPCDisplayInfoFactory[] = L"Windows.System.RemoteDesktop.Provider.ICloudPCDisplayInfoFactory";
@@ -1026,14 +1026,14 @@ interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCDisplayInfo
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCDisplayInfoFactory;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCDisplayInfoFactory_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
  * Interface Windows.System.RemoteDesktop.Provider.ICloudPCHostService
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
@@ -1041,7 +1041,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloud
  *
  */
 #if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCHostService_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCHostService_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_ICloudPCHostService[] = L"Windows.System.RemoteDesktop.Provider.ICloudPCHostService";
@@ -1119,14 +1119,14 @@ interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCHostService
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCHostService;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCHostService_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
  * Interface Windows.System.RemoteDesktop.Provider.ICloudPCHostServiceStatics
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
@@ -1134,7 +1134,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloud
  *
  */
 #if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCHostServiceStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCHostServiceStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_ICloudPCHostServiceStatics[] = L"Windows.System.RemoteDesktop.Provider.ICloudPCHostServiceStatics";
@@ -1193,7 +1193,7 @@ interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCHostService
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCHostServiceStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CICloudPCHostServiceStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
@@ -1269,7 +1269,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemot
  *
  * Interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo2
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
@@ -1277,7 +1277,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemot
  *
  */
 #if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionInfo2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionInfo2_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_IRemoteDesktopConnectionInfo2[] = L"Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo2";
@@ -1355,7 +1355,7 @@ interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConne
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionInfo2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionInfo2_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
@@ -1433,12 +1433,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemot
  *
  * Class Windows.System.RemoteDesktop.Provider.CloudPCDisplayInfo
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
  * RuntimeClass can be activated.
- *   Type can be activated via the Windows.System.RemoteDesktop.Provider.ICloudPCDisplayInfoFactory interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via the Windows.System.RemoteDesktop.Provider.ICloudPCDisplayInfoFactory interface starting with version 17.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.System.RemoteDesktop.Provider.ICloudPCDisplayInfo ** Default Interface **
@@ -1449,24 +1449,24 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemot
  *
  */
 #if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #ifndef RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_CloudPCDisplayInfo_DEFINED
 #define RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_CloudPCDisplayInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteDesktop_Provider_CloudPCDisplayInfo[] = L"Windows.System.RemoteDesktop.Provider.CloudPCDisplayInfo";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
  * Class Windows.System.RemoteDesktop.Provider.CloudPCHostService
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 17.0
  *
  * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.System.RemoteDesktop.Provider.ICloudPCHostServiceStatics interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.System.RemoteDesktop.Provider.ICloudPCHostServiceStatics interface starting with version 17.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.System.RemoteDesktop.Provider.ICloudPCHostService ** Default Interface **
@@ -1477,12 +1477,12 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #ifndef RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_CloudPCHostService_DEFINED
 #define RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_CloudPCHostService_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteDesktop_Provider_CloudPCHostService[] = L"Windows.System.RemoteDesktop.Provider.CloudPCHostService";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x110000
 #endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*

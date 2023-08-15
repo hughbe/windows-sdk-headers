@@ -210,6 +210,7 @@
 #define FACILITY_XBOX                    2339
 #define FACILITY_GAME                    2340
 #define FACILITY_USERMODE_UNIONFS        2341
+#define FACILITY_USERMODE_PRM            2342
 #define FACILITY_PIX                     2748
 
 
@@ -44993,6 +44994,27 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 //
 #define ERROR_GRAPHICS_SESSION_TYPE_CHANGE_IN_PROGRESS _HRESULT_TYPEDEF_(0xC02605E8L)
 
+//
+//   Basic Display Driver shared error codes {0x2600..0x26DF}
+//
+//
+// MessageId: ERROR_GRAPHICS_UNKNOWN_BIOS_FRAME_BUFFER_NOT_FOUND
+//
+// MessageText:
+//
+// The Basic Display Driver cannot start because there is no frame buffer found, and the system cannot determine if the system is BIOS-compatible.
+//
+#define ERROR_GRAPHICS_UNKNOWN_BIOS_FRAME_BUFFER_NOT_FOUND _HRESULT_TYPEDEF_(0xC0262600L)
+
+//
+// MessageId: ERROR_GRAPHICS_UEFI_FRAME_BUFFER_NOT_FOUND
+//
+// MessageText:
+//
+// The Basic Display Driver cannot start because there is no frame buffer found from UEFI or from a previously running graphics driver.
+//
+#define ERROR_GRAPHICS_UEFI_FRAME_BUFFER_NOT_FOUND _HRESULT_TYPEDEF_(0xC0262601L)
+
 
 // FACILITY_NAP
 
@@ -65297,5 +65319,127 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 // There are too many layers to construct this union.
 //
 #define UNIONFS_E_TOO_MANY_LAYERS        _HRESULT_TYPEDEF_(0x89250009L)
+
+
+//
+// PRM Error codes
+//
+
+//
+// MessageId: ERROR_PRM_HANDLER_NOT_FOUND
+//
+// MessageText:
+//
+// The specified PRM handler was not found.
+//
+#define ERROR_PRM_HANDLER_NOT_FOUND      _HRESULT_TYPEDEF_(0xC9260200L)
+
+//
+// MessageId: ERROR_PRM_CONCURRENT_OPERATION
+//
+// MessageText:
+//
+// The PRM call cannot be serviced due to a concurrent PRM operation.
+//
+#define ERROR_PRM_CONCURRENT_OPERATION   _HRESULT_TYPEDEF_(0xC9260202L)
+
+//
+// MessageId: ERROR_PRM_MODULE_UPDATE_PENDING
+//
+// MessageText:
+//
+// The PRM call failed due to a pending module update.
+//
+#define ERROR_PRM_MODULE_UPDATE_PENDING  _HRESULT_TYPEDEF_(0xC9260203L)
+
+//
+// MessageId: ERROR_PRM_MODULE_LOCKED
+//
+// MessageText:
+//
+// The PRM lock operation failed because the module is already locked.
+//
+#define ERROR_PRM_MODULE_LOCKED          _HRESULT_TYPEDEF_(0xC9260204L)
+
+//
+// MessageId: ERROR_PRM_UPDATE_INCOMPATIBLE_VERSION
+//
+// MessageText:
+//
+// The PRM update module version number is too small to be applied.
+//
+#define ERROR_PRM_UPDATE_INCOMPATIBLE_VERSION _HRESULT_TYPEDEF_(0xC9260205L)
+
+//
+// MessageId: ERROR_PRM_UPDATE_MODULE_MISMATCH
+//
+// MessageText:
+//
+// The PRM update module does not match the current version.
+//
+#define ERROR_PRM_UPDATE_MODULE_MISMATCH _HRESULT_TYPEDEF_(0xC9260206L)
+
+//
+// MessageId: ERROR_PRM_UPDATE_MODULE_NOT_FOUND
+//
+// MessageText:
+//
+// The PRM update is not applicable to the base PRM implementation.
+//
+#define ERROR_PRM_UPDATE_MODULE_NOT_FOUND _HRESULT_TYPEDEF_(0xC9260207L)
+
+//
+// MessageId: ERROR_PRM_UPDATE_MISSING_EXPORT
+//
+// MessageText:
+//
+// A handler export from the PRM update module cannot be found.
+//
+#define ERROR_PRM_UPDATE_MISSING_EXPORT  _HRESULT_TYPEDEF_(0xC9260208L)
+
+//
+// MessageId: ERROR_PRM_UPDATE_MODULE_LOCKED
+//
+// MessageText:
+//
+// The PRM update cannot be applied due to an outstanding PRM transaction. 
+//
+#define ERROR_PRM_UPDATE_MODULE_LOCKED   _HRESULT_TYPEDEF_(0xC9260209L)
+
+//
+// MessageId: ERROR_PRM_UPDATE_BAD_SIGNATURE
+//
+// MessageText:
+//
+// The PRM update cannot be applied due to a bad PRM module signature.
+//
+#define ERROR_PRM_UPDATE_BAD_SIGNATURE   _HRESULT_TYPEDEF_(0xC926020AL)
+
+//
+// MessageId: ERROR_PRM_UPDATE_VERSION_MISMATCH
+//
+// MessageText:
+//
+// The PRM update service provided module version does not match that present in the actual update module header.
+//
+#define ERROR_PRM_UPDATE_VERSION_MISMATCH _HRESULT_TYPEDEF_(0xC926020BL)
+
+//
+// MessageId: ERROR_PRM_MODULE_UNLOCKED
+//
+// MessageText:
+//
+// The PRM unlock operation failed because the module is already unlocked.
+//
+#define ERROR_PRM_MODULE_UNLOCKED        _HRESULT_TYPEDEF_(0xC926020CL)
+
+//
+// MessageId: ERROR_PRM_INTERFACE_INACCESSIBLE
+//
+// MessageText:
+//
+// The PRM driver interface is currently not accessible.
+//
+#define ERROR_PRM_INTERFACE_INACCESSIBLE _HRESULT_TYPEDEF_(0xC926020DL)
 
 #endif//_WINERROR_

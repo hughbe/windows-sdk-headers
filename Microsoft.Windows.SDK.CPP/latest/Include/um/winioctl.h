@@ -6633,7 +6633,8 @@ typedef struct _STORAGE_PROTOCOL_COMMAND {
     DWORD   Reserved0;
 
     DWORD   FixedProtocolReturnData;        // return data, optional. Some protocol, such as NVMe, may return a small amount data (DWORD0 from completion queue entry) without the need of separate device data transfer.
-    DWORD   Reserved1[3];
+    DWORD   FixedProtocolReturnData2;       // return data2, optional. Some protocol, such as NVMe, may return a small amount data (DWORD1 from completion queue entry) without the need of separate device data transfer.
+    DWORD   Reserved1[2];
 
     _Field_size_bytes_full_(CommandLength) BYTE  Command[ANYSIZE_ARRAY];
 
@@ -6675,7 +6676,7 @@ typedef struct _STORAGE_PROTOCOL_COMMAND {
 //  1.  When flag STORAGE_PROTOCOL_COMMAND_FLAG_ADAPTER_REQUEST is set, or the request is sent through adapter, namespace Id from "Command" field is used;
 //      otherwise, the underneath driver should determine namespace Id from the device that receives the command.
 //  2.  When a command fails, the "ErrorCode" field contains value from NVMe Completion Queue Entry - DW3 - Status Field.
-//  3.  "CommandLength" field must have value of 64. e.g. STORAGE_PROTOCOL_COMMAND_LENGTH_NVME.
+//  3.  "CommandLength" field must have value of 64. i.e. STORAGE_PROTOCOL_COMMAND_LENGTH_NVME.
 //  4.  "CommandSpecific" field must have value of either STORAGE_PROTOCOL_SPECIFIC_NVME_ADMIN_COMMAND, or STORAGE_PROTOCOL_SPECIFIC_NVME_NVM_COMMAND.
 //  5.  When a command succeeds, field "FixedProtocolReturnData" may contain value from NVMe Completion Queue Entry - DW0.
 //

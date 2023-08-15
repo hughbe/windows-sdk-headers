@@ -83,7 +83,7 @@ namespace Windows
                     Disconnected    = 3
                 };
 
-                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 17.0)]
                 [exclusiveto(Windows.System.RemoteDesktop.Provider.CloudPCDisplayInfo)]
                 [experimental]
                 [uuid(6C858DE8-1095-5C6E-913F-2E800C29FC53)]
@@ -93,7 +93,7 @@ namespace Windows
                     [propput] HRESULT Name([in] HSTRING value);
                 }
 
-                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 17.0)]
                 [exclusiveto(Windows.System.RemoteDesktop.Provider.CloudPCDisplayInfo)]
                 [experimental]
                 [uuid(97DB7D7D-90D7-5A31-814D-1E9AED6586AE)]
@@ -102,7 +102,7 @@ namespace Windows
                     HRESULT CreateInstance([in] HSTRING name, [out] [retval] Windows.System.RemoteDesktop.Provider.CloudPCDisplayInfo** value);
                 }
 
-                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 17.0)]
                 [exclusiveto(Windows.System.RemoteDesktop.Provider.CloudPCHostService)]
                 [experimental]
                 [uuid(593AA68B-29E0-5C1B-A9DB-F6D58EAAC33F)]
@@ -115,7 +115,7 @@ namespace Windows
                     [eventremove] HRESULT SwitchToLocalPC([in] EventRegistrationToken token);
                 }
 
-                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 17.0)]
                 [exclusiveto(Windows.System.RemoteDesktop.Provider.CloudPCHostService)]
                 [experimental]
                 [uuid(B756145E-85C0-5D54-8A68-4D92BBA93365)]
@@ -132,7 +132,7 @@ namespace Windows
                     HRESULT SetConnectionStatus([in] Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionStatus value);
                 }
 
-                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 17.0)]
                 [exclusiveto(Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo)]
                 [experimental]
                 [uuid(8A260CF2-195D-5CD8-97FB-A2B1C5E51261)]
@@ -153,8 +153,8 @@ namespace Windows
                     HRESULT GetForLaunchUri([in] Windows.Foundation.Uri* launchUri, [in] Windows.UI.WindowId windowId, [out] [retval] Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo** result);
                 }
 
-                [activatable(Windows.System.RemoteDesktop.Provider.ICloudPCDisplayInfoFactory, Windows.Foundation.UniversalApiContract, 16.0)]
-                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [activatable(Windows.System.RemoteDesktop.Provider.ICloudPCDisplayInfoFactory, Windows.Foundation.UniversalApiContract, 17.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 17.0)]
                 [experimental]
                 [marshaling_behavior(agile)]
                 [threading(both)]
@@ -163,10 +163,10 @@ namespace Windows
                     [default] [experimental] interface Windows.System.RemoteDesktop.Provider.ICloudPCDisplayInfo;
                 }
 
-                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 17.0)]
                 [experimental]
                 [marshaling_behavior(agile)]
-                [static(Windows.System.RemoteDesktop.Provider.ICloudPCHostServiceStatics, Windows.Foundation.UniversalApiContract, 16.0)]
+                [static(Windows.System.RemoteDesktop.Provider.ICloudPCHostServiceStatics, Windows.Foundation.UniversalApiContract, 17.0)]
                 [threading(both)]
                 runtimeclass CloudPCHostService
                 {
@@ -180,7 +180,7 @@ namespace Windows
                 runtimeclass RemoteDesktopConnectionInfo
                 {
                     [default] interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo;
-                    [contract(Windows.Foundation.UniversalApiContract, 16.0)] [experimental] interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo2;
+                    [contract(Windows.Foundation.UniversalApiContract, 17.0)] [experimental] interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo2;
                 }
             }
         }

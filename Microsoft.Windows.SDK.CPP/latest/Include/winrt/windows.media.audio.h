@@ -92,7 +92,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x100000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x110000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
@@ -2114,7 +2114,7 @@ namespace ABI {
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("7241034c-5920-5b76-80c4-46e9b4dfbbce"))
+struct __declspec(uuid("41cdcf69-8822-5062-af8b-68e32ef9884d"))
 ITypedEventHandler<ABI::Windows::Media::Audio::AudioEffectsPackConfiguration*, IInspectable*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Audio::AudioEffectsPackConfiguration*, ABI::Windows::Media::Audio::IAudioEffectsPackConfiguration*>, IInspectable*>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -3525,7 +3525,7 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Audio {
-                MIDL_INTERFACE("52b24cff-5817-5b2d-9a4f-cf925ce91f6d")
+                MIDL_INTERFACE("71d7627d-70c1-536c-a8f8-6f98015a7f06")
                 IAudioEffectsPackConfiguration : public IInspectable
                 {
                 public:
@@ -3538,11 +3538,11 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE get_Status(
                         ABI::Windows::Media::Audio::AudioEffectsPackStatus* value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE add_ConfigurationChanged(
+                    virtual HRESULT STDMETHODCALLTYPE add_StatusChanged(
                         __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioEffectsPackConfiguration_IInspectable* handler,
                         EventRegistrationToken* token
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_ConfigurationChanged(
+                    virtual HRESULT STDMETHODCALLTYPE remove_StatusChanged(
                         EventRegistrationToken token
                         ) = 0;
                 };
@@ -6958,8 +6958,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via the Windows.Media.Audio.IAudioNodeEmitterFactory interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Type can be activated via RoActivateInstance starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via the Windows.Media.Audio.IAudioNodeEmitterFactory interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Media.Audio.IAudioNodeEmitter ** Default Interface **
@@ -11075,10 +11075,10 @@ typedef struct __x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationVtb
         HSTRING* value);
     HRESULT (STDMETHODCALLTYPE* get_Status)(__x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration* This,
         enum __x_ABI_CWindows_CMedia_CAudio_CAudioEffectsPackStatus* value);
-    HRESULT (STDMETHODCALLTYPE* add_ConfigurationChanged)(__x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration* This,
+    HRESULT (STDMETHODCALLTYPE* add_StatusChanged)(__x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration* This,
         __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioEffectsPackConfiguration_IInspectable* handler,
         EventRegistrationToken* token);
-    HRESULT (STDMETHODCALLTYPE* remove_ConfigurationChanged)(__x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration* This,
+    HRESULT (STDMETHODCALLTYPE* remove_StatusChanged)(__x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration* This,
         EventRegistrationToken token);
 
     END_INTERFACE
@@ -11118,11 +11118,11 @@ interface __x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration_get_Status(This, value) \
     ((This)->lpVtbl->get_Status(This, value))
 
-#define __x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration_add_ConfigurationChanged(This, handler, token) \
-    ((This)->lpVtbl->add_ConfigurationChanged(This, handler, token))
+#define __x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration_add_StatusChanged(This, handler, token) \
+    ((This)->lpVtbl->add_StatusChanged(This, handler, token))
 
-#define __x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration_remove_ConfigurationChanged(This, token) \
-    ((This)->lpVtbl->remove_ConfigurationChanged(This, token))
+#define __x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration_remove_StatusChanged(This, token) \
+    ((This)->lpVtbl->remove_StatusChanged(This, token))
 
 #endif /* COBJMACROS */
 
@@ -17101,8 +17101,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via the Windows.Media.Audio.IAudioNodeEmitterFactory interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Type can be activated via RoActivateInstance starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via the Windows.Media.Audio.IAudioNodeEmitterFactory interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Media.Audio.IAudioNodeEmitter ** Default Interface **

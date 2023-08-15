@@ -511,7 +511,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics2> = L"Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics2";
     template <> inline constexpr guid guid_v<winrt::Windows::Media::Audio::IAudioDeviceInputNode>{ 0xB01B6BE1,0x6F4E,0x49E2,{ 0xAC,0x01,0x55,0x9D,0x62,0xBE,0xB3,0xA9 } }; // B01B6BE1-6F4E-49E2-AC01-559D62BEB3A9
     template <> inline constexpr guid guid_v<winrt::Windows::Media::Audio::IAudioDeviceOutputNode>{ 0x362EDBFF,0xFF1C,0x4434,{ 0x9E,0x0F,0xBD,0x2E,0xF5,0x22,0xAC,0x82 } }; // 362EDBFF-FF1C-4434-9E0F-BD2EF522AC82
-    template <> inline constexpr guid guid_v<winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration>{ 0x52B24CFF,0x5817,0x5B2D,{ 0x9A,0x4F,0xCF,0x92,0x5C,0xE9,0x1F,0x6D } }; // 52B24CFF-5817-5B2D-9A4F-CF925CE91F6D
+    template <> inline constexpr guid guid_v<winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration>{ 0x71D7627D,0x70C1,0x536C,{ 0xA8,0xF8,0x6F,0x98,0x01,0x5A,0x7F,0x06 } }; // 71D7627D-70C1-536C-A8F8-6F98015A7F06
     template <> inline constexpr guid guid_v<winrt::Windows::Media::Audio::IAudioEffectsPackConfigurationStatics>{ 0x61C20413,0x530C,0x55FF,{ 0xBA,0x2B,0x8E,0x68,0xA9,0xB5,0x6A,0x04 } }; // 61C20413-530C-55FF-BA2B-8E68A9B56A04
     template <> inline constexpr guid guid_v<winrt::Windows::Media::Audio::IAudioFileInputNode>{ 0x905B67C8,0x6F65,0x4CD4,{ 0x88,0x90,0x46,0x94,0x84,0x3C,0x27,0x6D } }; // 905B67C8-6F65-4CD4-8890-4694843C276D
     template <> inline constexpr guid guid_v<winrt::Windows::Media::Audio::IAudioFileOutputNode>{ 0x50E01980,0x5166,0x4093,{ 0x80,0xF8,0xAD,0xA0,0x00,0x89,0xE9,0xCF } }; // 50E01980-5166-4093-80F8-ADA00089E9CF
@@ -636,8 +636,8 @@ namespace winrt::impl
             virtual int32_t __stdcall get_DeviceId(void**) noexcept = 0;
             virtual int32_t __stdcall get_EffectsPackId(void**) noexcept = 0;
             virtual int32_t __stdcall get_Status(int32_t*) noexcept = 0;
-            virtual int32_t __stdcall add_ConfigurationChanged(void*, winrt::event_token*) noexcept = 0;
-            virtual int32_t __stdcall remove_ConfigurationChanged(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall add_StatusChanged(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_StatusChanged(winrt::event_token) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Media::Audio::IAudioEffectsPackConfigurationStatics>
@@ -1337,10 +1337,10 @@ namespace winrt::impl
         [[nodiscard]] auto DeviceId() const;
         [[nodiscard]] auto EffectsPackId() const;
         [[nodiscard]] auto Status() const;
-        auto ConfigurationChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        using ConfigurationChanged_revoker = impl::event_revoker<winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration, &impl::abi_t<winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration>::remove_ConfigurationChanged>;
-        [[nodiscard]] ConfigurationChanged_revoker ConfigurationChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration, winrt::Windows::Foundation::IInspectable> const& handler) const;
-        auto ConfigurationChanged(winrt::event_token const& token) const noexcept;
+        auto StatusChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        using StatusChanged_revoker = impl::event_revoker<winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration, &impl::abi_t<winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration>::remove_StatusChanged>;
+        [[nodiscard]] StatusChanged_revoker StatusChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto StatusChanged(winrt::event_token const& token) const noexcept;
     };
     template <> struct consume<winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration>
     {

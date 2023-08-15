@@ -261,6 +261,12 @@ typedef struct APOInitSystemEffects3
     BOOL InitializeForDiscoveryOnly;
     } 	APOInitSystemEffects3;
 
+typedef struct AcousticEchoCanceller_Reference_Input
+    {
+    APOInitSystemEffects3 apoInitSystemEffects;
+    APO_REFERENCE_STREAM_PROPERTIES streamProperties;
+    } 	AcousticEchoCanceller_Reference_Input;
+
 
 
 extern RPC_IF_HANDLE __MIDL_itf_audioengineextensionapo_0000_0001_v0_0_c_ifspec;
