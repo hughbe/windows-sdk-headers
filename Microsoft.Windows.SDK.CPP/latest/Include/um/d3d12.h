@@ -458,6 +458,27 @@ typedef interface ID3D12SDKConfiguration ID3D12SDKConfiguration;
 #endif 	/* __ID3D12SDKConfiguration_FWD_DEFINED__ */
 
 
+#ifndef __ID3D12SDKConfiguration1_FWD_DEFINED__
+#define __ID3D12SDKConfiguration1_FWD_DEFINED__
+typedef interface ID3D12SDKConfiguration1 ID3D12SDKConfiguration1;
+
+#endif 	/* __ID3D12SDKConfiguration1_FWD_DEFINED__ */
+
+
+#ifndef __ID3D12DeviceFactory_FWD_DEFINED__
+#define __ID3D12DeviceFactory_FWD_DEFINED__
+typedef interface ID3D12DeviceFactory ID3D12DeviceFactory;
+
+#endif 	/* __ID3D12DeviceFactory_FWD_DEFINED__ */
+
+
+#ifndef __ID3D12DeviceConfiguration_FWD_DEFINED__
+#define __ID3D12DeviceConfiguration_FWD_DEFINED__
+typedef interface ID3D12DeviceConfiguration ID3D12DeviceConfiguration;
+
+#endif 	/* __ID3D12DeviceConfiguration_FWD_DEFINED__ */
+
+
 #ifndef __ID3D12GraphicsCommandList5_FWD_DEFINED__
 #define __ID3D12GraphicsCommandList5_FWD_DEFINED__
 typedef interface ID3D12GraphicsCommandList5 ID3D12GraphicsCommandList5;
@@ -487,8 +508,8 @@ typedef interface ID3D12GraphicsCommandList8 ID3D12GraphicsCommandList8;
 
 
 /* header files for imported files */
-#include "OAIdl.h"
-#include "OCIdl.h"
+#include "oaidl.h"
+#include "ocidl.h"
 #include "dxgicommon.h"
 #include "dxgiformat.h"
 #include "d3dcommon.h"
@@ -1425,6 +1446,7 @@ typedef struct D3D12_BOX
 typedef 
 enum D3D12_COMPARISON_FUNC
     {
+        D3D12_COMPARISON_FUNC_NONE	= 0,
         D3D12_COMPARISON_FUNC_NEVER	= 1,
         D3D12_COMPARISON_FUNC_LESS	= 2,
         D3D12_COMPARISON_FUNC_EQUAL	= 3,
@@ -23699,6 +23721,7 @@ DEFINE_GUID(CLSID_D3D12Debug,                        0xf2352aeb, 0xdd84, 0x49fe,
 DEFINE_GUID(CLSID_D3D12Tools,                        0xe38216b1, 0x3c8c, 0x4833, 0xaa, 0x09, 0x0a, 0x06, 0xb6, 0x5d, 0x96, 0xc8);
 DEFINE_GUID(CLSID_D3D12DeviceRemovedExtendedData,    0x4a75bbc4, 0x9ff4, 0x4ad8, 0x9f, 0x18, 0xab, 0xae, 0x84, 0xdc, 0x5f, 0xf2);
 DEFINE_GUID(CLSID_D3D12SDKConfiguration,             0x7cda6aca, 0xa03e, 0x49c8, 0x94, 0x58, 0x03, 0x34, 0xd2, 0x0e, 0x07, 0xce);
+DEFINE_GUID(CLSID_D3D12DeviceFactory,                0x114863bf, 0xc386, 0x4aee, 0xb3, 0x9d, 0x8f, 0x0b, 0xbb, 0x06, 0x29, 0x55);
 
 typedef HRESULT (WINAPI* PFN_D3D12_GET_INTERFACE)( _In_ REFCLSID, _In_ REFIID, _COM_Outptr_opt_ void** );
 
@@ -23794,7 +23817,455 @@ EXTERN_C const IID IID_ID3D12SDKConfiguration;
 #endif 	/* __ID3D12SDKConfiguration_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_d3d12_0000_0058 */
+#ifndef __ID3D12SDKConfiguration1_INTERFACE_DEFINED__
+#define __ID3D12SDKConfiguration1_INTERFACE_DEFINED__
+
+/* interface ID3D12SDKConfiguration1 */
+/* [unique][local][object][uuid] */ 
+
+
+EXTERN_C const IID IID_ID3D12SDKConfiguration1;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("8aaf9303-ad25-48b9-9a57-d9c37e009d9f")
+    ID3D12SDKConfiguration1 : public ID3D12SDKConfiguration
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE CreateDeviceFactory( 
+            UINT SDKVersion,
+            _In_  LPCSTR SDKPath,
+            REFIID riid,
+            _COM_Outptr_  void **ppvFactory) = 0;
+        
+        virtual void STDMETHODCALLTYPE FreeUnusedSDKs( void) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct ID3D12SDKConfiguration1Vtbl
+    {
+        BEGIN_INTERFACE
+        
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            ID3D12SDKConfiguration1 * This,
+            REFIID riid,
+            _COM_Outptr_  void **ppvObject);
+        
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            ID3D12SDKConfiguration1 * This);
+        
+        DECLSPEC_XFGVIRT(IUnknown, Release)
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            ID3D12SDKConfiguration1 * This);
+        
+        DECLSPEC_XFGVIRT(ID3D12SDKConfiguration, SetSDKVersion)
+        HRESULT ( STDMETHODCALLTYPE *SetSDKVersion )( 
+            ID3D12SDKConfiguration1 * This,
+            UINT SDKVersion,
+            _In_z_  LPCSTR SDKPath);
+        
+        DECLSPEC_XFGVIRT(ID3D12SDKConfiguration1, CreateDeviceFactory)
+        HRESULT ( STDMETHODCALLTYPE *CreateDeviceFactory )( 
+            ID3D12SDKConfiguration1 * This,
+            UINT SDKVersion,
+            _In_  LPCSTR SDKPath,
+            REFIID riid,
+            _COM_Outptr_  void **ppvFactory);
+        
+        DECLSPEC_XFGVIRT(ID3D12SDKConfiguration1, FreeUnusedSDKs)
+        void ( STDMETHODCALLTYPE *FreeUnusedSDKs )( 
+            ID3D12SDKConfiguration1 * This);
+        
+        END_INTERFACE
+    } ID3D12SDKConfiguration1Vtbl;
+
+    interface ID3D12SDKConfiguration1
+    {
+        CONST_VTBL struct ID3D12SDKConfiguration1Vtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define ID3D12SDKConfiguration1_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define ID3D12SDKConfiguration1_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define ID3D12SDKConfiguration1_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define ID3D12SDKConfiguration1_SetSDKVersion(This,SDKVersion,SDKPath)	\
+    ( (This)->lpVtbl -> SetSDKVersion(This,SDKVersion,SDKPath) ) 
+
+
+#define ID3D12SDKConfiguration1_CreateDeviceFactory(This,SDKVersion,SDKPath,riid,ppvFactory)	\
+    ( (This)->lpVtbl -> CreateDeviceFactory(This,SDKVersion,SDKPath,riid,ppvFactory) ) 
+
+#define ID3D12SDKConfiguration1_FreeUnusedSDKs(This)	\
+    ( (This)->lpVtbl -> FreeUnusedSDKs(This) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __ID3D12SDKConfiguration1_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_d3d12_0000_0059 */
+/* [local] */ 
+
+typedef 
+enum D3D12_DEVICE_FACTORY_FLAGS
+    {
+        D3D12_DEVICE_FACTORY_FLAG_NONE	= 0,
+        D3D12_DEVICE_FACTORY_FLAG_ALLOW_RETURNING_EXISTING_DEVICE	= 0x1,
+        D3D12_DEVICE_FACTORY_FLAG_ALLOW_RETURNING_INCOMPATIBLE_EXISTING_DEVICE	= 0x2,
+        D3D12_DEVICE_FACTORY_FLAG_DISALLOW_STORING_NEW_DEVICE_AS_SINGLETON	= 0x4
+    } 	D3D12_DEVICE_FACTORY_FLAGS;
+
+DEFINE_ENUM_FLAG_OPERATORS( D3D12_DEVICE_FACTORY_FLAGS );
+
+
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0059_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0059_v0_0_s_ifspec;
+
+#ifndef __ID3D12DeviceFactory_INTERFACE_DEFINED__
+#define __ID3D12DeviceFactory_INTERFACE_DEFINED__
+
+/* interface ID3D12DeviceFactory */
+/* [unique][local][object][uuid] */ 
+
+
+EXTERN_C const IID IID_ID3D12DeviceFactory;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("cd310fac-c78c-413d-a799-3da46a952cb7")
+    ID3D12DeviceFactory : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE InitializeFromGlobalState( void) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE ApplyToGlobalState( void) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE SetFlags( 
+            D3D12_DEVICE_FACTORY_FLAGS flags) = 0;
+        
+        virtual D3D12_DEVICE_FACTORY_FLAGS STDMETHODCALLTYPE GetFlags( void) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetConfigurationInterface( 
+            REFCLSID clsid,
+            REFIID iid,
+            _COM_Outptr_  void **ppv) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE EnableExperimentalFeatures( 
+            UINT NumFeatures,
+            _In_reads_(NumFeatures)  const IID *pIIDs,
+            _In_reads_opt_(NumFeatures)  void *pConfigurationStructs,
+            _In_reads_opt_(NumFeatures)  UINT *pConfigurationStructSizes) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE CreateDevice( 
+            _In_opt_  IUnknown *adapter,
+            REFIID riid,
+            _COM_Outptr_opt_  void **ppvDevice) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct ID3D12DeviceFactoryVtbl
+    {
+        BEGIN_INTERFACE
+        
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            ID3D12DeviceFactory * This,
+            REFIID riid,
+            _COM_Outptr_  void **ppvObject);
+        
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            ID3D12DeviceFactory * This);
+        
+        DECLSPEC_XFGVIRT(IUnknown, Release)
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            ID3D12DeviceFactory * This);
+        
+        DECLSPEC_XFGVIRT(ID3D12DeviceFactory, InitializeFromGlobalState)
+        HRESULT ( STDMETHODCALLTYPE *InitializeFromGlobalState )( 
+            ID3D12DeviceFactory * This);
+        
+        DECLSPEC_XFGVIRT(ID3D12DeviceFactory, ApplyToGlobalState)
+        HRESULT ( STDMETHODCALLTYPE *ApplyToGlobalState )( 
+            ID3D12DeviceFactory * This);
+        
+        DECLSPEC_XFGVIRT(ID3D12DeviceFactory, SetFlags)
+        HRESULT ( STDMETHODCALLTYPE *SetFlags )( 
+            ID3D12DeviceFactory * This,
+            D3D12_DEVICE_FACTORY_FLAGS flags);
+        
+        DECLSPEC_XFGVIRT(ID3D12DeviceFactory, GetFlags)
+        D3D12_DEVICE_FACTORY_FLAGS ( STDMETHODCALLTYPE *GetFlags )( 
+            ID3D12DeviceFactory * This);
+        
+        DECLSPEC_XFGVIRT(ID3D12DeviceFactory, GetConfigurationInterface)
+        HRESULT ( STDMETHODCALLTYPE *GetConfigurationInterface )( 
+            ID3D12DeviceFactory * This,
+            REFCLSID clsid,
+            REFIID iid,
+            _COM_Outptr_  void **ppv);
+        
+        DECLSPEC_XFGVIRT(ID3D12DeviceFactory, EnableExperimentalFeatures)
+        HRESULT ( STDMETHODCALLTYPE *EnableExperimentalFeatures )( 
+            ID3D12DeviceFactory * This,
+            UINT NumFeatures,
+            _In_reads_(NumFeatures)  const IID *pIIDs,
+            _In_reads_opt_(NumFeatures)  void *pConfigurationStructs,
+            _In_reads_opt_(NumFeatures)  UINT *pConfigurationStructSizes);
+        
+        DECLSPEC_XFGVIRT(ID3D12DeviceFactory, CreateDevice)
+        HRESULT ( STDMETHODCALLTYPE *CreateDevice )( 
+            ID3D12DeviceFactory * This,
+            _In_opt_  IUnknown *adapter,
+            REFIID riid,
+            _COM_Outptr_opt_  void **ppvDevice);
+        
+        END_INTERFACE
+    } ID3D12DeviceFactoryVtbl;
+
+    interface ID3D12DeviceFactory
+    {
+        CONST_VTBL struct ID3D12DeviceFactoryVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define ID3D12DeviceFactory_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define ID3D12DeviceFactory_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define ID3D12DeviceFactory_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define ID3D12DeviceFactory_InitializeFromGlobalState(This)	\
+    ( (This)->lpVtbl -> InitializeFromGlobalState(This) ) 
+
+#define ID3D12DeviceFactory_ApplyToGlobalState(This)	\
+    ( (This)->lpVtbl -> ApplyToGlobalState(This) ) 
+
+#define ID3D12DeviceFactory_SetFlags(This,flags)	\
+    ( (This)->lpVtbl -> SetFlags(This,flags) ) 
+
+#define ID3D12DeviceFactory_GetFlags(This)	\
+    ( (This)->lpVtbl -> GetFlags(This) ) 
+
+#define ID3D12DeviceFactory_GetConfigurationInterface(This,clsid,iid,ppv)	\
+    ( (This)->lpVtbl -> GetConfigurationInterface(This,clsid,iid,ppv) ) 
+
+#define ID3D12DeviceFactory_EnableExperimentalFeatures(This,NumFeatures,pIIDs,pConfigurationStructs,pConfigurationStructSizes)	\
+    ( (This)->lpVtbl -> EnableExperimentalFeatures(This,NumFeatures,pIIDs,pConfigurationStructs,pConfigurationStructSizes) ) 
+
+#define ID3D12DeviceFactory_CreateDevice(This,adapter,riid,ppvDevice)	\
+    ( (This)->lpVtbl -> CreateDevice(This,adapter,riid,ppvDevice) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __ID3D12DeviceFactory_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_d3d12_0000_0060 */
+/* [local] */ 
+
+typedef 
+enum D3D12_DEVICE_FLAGS
+    {
+        D3D12_DEVICE_FLAG_NONE	= 0,
+        D3D12_DEVICE_FLAG_DEBUG_LAYER_ENABLED	= 0x1,
+        D3D12_DEVICE_FLAG_GPU_BASED_VALIDATION_ENABLED	= 0x2,
+        D3D12_DEVICE_FLAG_SYNCHRONIZED_COMMAND_QUEUE_VALIDATION_DISABLED	= 0x4,
+        D3D12_DEVICE_FLAG_DRED_AUTO_BREADCRUMBS_ENABLED	= 0x8,
+        D3D12_DEVICE_FLAG_DRED_PAGE_FAULT_REPORTING_ENABLED	= 0x10,
+        D3D12_DEVICE_FLAG_DRED_WATSON_REPORTING_ENABLED	= 0x20,
+        D3D12_DEVICE_FLAG_DRED_BREADCRUMB_CONTEXT_ENABLED	= 0x40,
+        D3D12_DEVICE_FLAG_DRED_USE_MARKERS_ONLY_BREADCRUMBS	= 0x80,
+        D3D12_DEVICE_FLAG_SHADER_INSTRUMENTATION_ENABLED	= 0x100,
+        D3D12_DEVICE_FLAG_AUTO_DEBUG_NAME_ENABLED	= 0x200,
+        D3D12_DEVICE_FLAG_FORCE_LEGACY_STATE_VALIDATION	= 0x400
+    } 	D3D12_DEVICE_FLAGS;
+
+DEFINE_ENUM_FLAG_OPERATORS( D3D12_DEVICE_FLAGS );
+typedef struct D3D12_DEVICE_CONFIGURATION_DESC
+    {
+    D3D12_DEVICE_FLAGS Flags;
+    UINT GpuBasedValidationFlags;
+    UINT SDKVersion;
+    UINT NumEnabledExperimentalFeatures;
+    } 	D3D12_DEVICE_CONFIGURATION_DESC;
+
+
+
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0060_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0060_v0_0_s_ifspec;
+
+#ifndef __ID3D12DeviceConfiguration_INTERFACE_DEFINED__
+#define __ID3D12DeviceConfiguration_INTERFACE_DEFINED__
+
+/* interface ID3D12DeviceConfiguration */
+/* [unique][local][object][uuid] */ 
+
+
+EXTERN_C const IID IID_ID3D12DeviceConfiguration;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("78dbf87b-f766-422b-a61c-c8c446bdb9ad")
+    ID3D12DeviceConfiguration : public IUnknown
+    {
+    public:
+        virtual D3D12_DEVICE_CONFIGURATION_DESC STDMETHODCALLTYPE GetDesc( void) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetEnabledExperimentalFeatures( 
+            _Out_writes_(NumGuids)  GUID *pGuids,
+            UINT NumGuids) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE SerializeVersionedRootSignature( 
+            _In_  const D3D12_VERSIONED_ROOT_SIGNATURE_DESC *pDesc,
+            _COM_Outptr_  ID3DBlob **ppResult,
+            _Always_(_Outptr_opt_result_maybenull_)  ID3DBlob **ppError) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE CreateVersionedRootSignatureDeserializer( 
+            _In_reads_bytes_(Size)  const void *pBlob,
+            SIZE_T Size,
+            REFIID riid,
+            _COM_Outptr_  void **ppvDeserializer) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct ID3D12DeviceConfigurationVtbl
+    {
+        BEGIN_INTERFACE
+        
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            ID3D12DeviceConfiguration * This,
+            REFIID riid,
+            _COM_Outptr_  void **ppvObject);
+        
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            ID3D12DeviceConfiguration * This);
+        
+        DECLSPEC_XFGVIRT(IUnknown, Release)
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            ID3D12DeviceConfiguration * This);
+        
+        DECLSPEC_XFGVIRT(ID3D12DeviceConfiguration, GetDesc)
+        D3D12_DEVICE_CONFIGURATION_DESC *( STDMETHODCALLTYPE *GetDesc )( 
+            ID3D12DeviceConfiguration * This,
+            D3D12_DEVICE_CONFIGURATION_DESC * RetVal);
+        
+        DECLSPEC_XFGVIRT(ID3D12DeviceConfiguration, GetEnabledExperimentalFeatures)
+        HRESULT ( STDMETHODCALLTYPE *GetEnabledExperimentalFeatures )( 
+            ID3D12DeviceConfiguration * This,
+            _Out_writes_(NumGuids)  GUID *pGuids,
+            UINT NumGuids);
+        
+        DECLSPEC_XFGVIRT(ID3D12DeviceConfiguration, SerializeVersionedRootSignature)
+        HRESULT ( STDMETHODCALLTYPE *SerializeVersionedRootSignature )( 
+            ID3D12DeviceConfiguration * This,
+            _In_  const D3D12_VERSIONED_ROOT_SIGNATURE_DESC *pDesc,
+            _COM_Outptr_  ID3DBlob **ppResult,
+            _Always_(_Outptr_opt_result_maybenull_)  ID3DBlob **ppError);
+        
+        DECLSPEC_XFGVIRT(ID3D12DeviceConfiguration, CreateVersionedRootSignatureDeserializer)
+        HRESULT ( STDMETHODCALLTYPE *CreateVersionedRootSignatureDeserializer )( 
+            ID3D12DeviceConfiguration * This,
+            _In_reads_bytes_(Size)  const void *pBlob,
+            SIZE_T Size,
+            REFIID riid,
+            _COM_Outptr_  void **ppvDeserializer);
+        
+        END_INTERFACE
+    } ID3D12DeviceConfigurationVtbl;
+
+    interface ID3D12DeviceConfiguration
+    {
+        CONST_VTBL struct ID3D12DeviceConfigurationVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define ID3D12DeviceConfiguration_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define ID3D12DeviceConfiguration_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define ID3D12DeviceConfiguration_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define ID3D12DeviceConfiguration_GetDesc(This,RetVal)	\
+    ( (This)->lpVtbl -> GetDesc(This,RetVal) ) 
+
+#define ID3D12DeviceConfiguration_GetEnabledExperimentalFeatures(This,pGuids,NumGuids)	\
+    ( (This)->lpVtbl -> GetEnabledExperimentalFeatures(This,pGuids,NumGuids) ) 
+
+#define ID3D12DeviceConfiguration_SerializeVersionedRootSignature(This,pDesc,ppResult,ppError)	\
+    ( (This)->lpVtbl -> SerializeVersionedRootSignature(This,pDesc,ppResult,ppError) ) 
+
+#define ID3D12DeviceConfiguration_CreateVersionedRootSignatureDeserializer(This,pBlob,Size,riid,ppvDeserializer)	\
+    ( (This)->lpVtbl -> CreateVersionedRootSignatureDeserializer(This,pBlob,Size,riid,ppvDeserializer) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+
+
+
+
+#endif 	/* __ID3D12DeviceConfiguration_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_d3d12_0000_0061 */
 /* [local] */ 
 
 typedef 
@@ -23834,8 +24305,8 @@ enum D3D12_SHADING_RATE_COMBINER
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0058_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0058_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0061_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0061_v0_0_s_ifspec;
 
 #ifndef __ID3D12GraphicsCommandList5_INTERFACE_DEFINED__
 #define __ID3D12GraphicsCommandList5_INTERFACE_DEFINED__
@@ -24670,7 +25141,7 @@ EXTERN_C const IID IID_ID3D12GraphicsCommandList5;
 #endif 	/* __ID3D12GraphicsCommandList5_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_d3d12_0000_0059 */
+/* interface __MIDL_itf_d3d12_0000_0062 */
 /* [local] */ 
 
 typedef struct D3D12_DISPATCH_MESH_ARGUMENTS
@@ -24682,8 +25153,8 @@ typedef struct D3D12_DISPATCH_MESH_ARGUMENTS
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0059_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0059_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0062_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0062_v0_0_s_ifspec;
 
 #ifndef __ID3D12GraphicsCommandList6_INTERFACE_DEFINED__
 #define __ID3D12GraphicsCommandList6_INTERFACE_DEFINED__
@@ -27239,7 +27710,7 @@ EXTERN_C const IID IID_ID3D12GraphicsCommandList8;
 #endif 	/* __ID3D12GraphicsCommandList8_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_d3d12_0000_0062 */
+/* interface __MIDL_itf_d3d12_0000_0065 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
@@ -27302,14 +27773,17 @@ DEFINE_GUID(IID_ID3D12Device11,0x5405c344,0xd457,0x444e,0xb4,0xdd,0x23,0x66,0xe4
 DEFINE_GUID(IID_ID3D12VirtualizationGuestDevice,0xbc66d368,0x7373,0x4943,0x87,0x57,0xfc,0x87,0xdc,0x79,0xe4,0x76);
 DEFINE_GUID(IID_ID3D12Tools,0x7071e1f0,0xe84b,0x4b33,0x97,0x4f,0x12,0xfa,0x49,0xde,0x65,0xc5);
 DEFINE_GUID(IID_ID3D12SDKConfiguration,0xe9eb5314,0x33aa,0x42b2,0xa7,0x18,0xd7,0x7f,0x58,0xb1,0xf1,0xc7);
+DEFINE_GUID(IID_ID3D12SDKConfiguration1,0x8aaf9303,0xad25,0x48b9,0x9a,0x57,0xd9,0xc3,0x7e,0x00,0x9d,0x9f);
+DEFINE_GUID(IID_ID3D12DeviceFactory,0xcd310fac,0xc78c,0x413d,0xa7,0x99,0x3d,0xa4,0x6a,0x95,0x2c,0xb7);
+DEFINE_GUID(IID_ID3D12DeviceConfiguration,0x78dbf87b,0xf766,0x422b,0xa6,0x1c,0xc8,0xc4,0x46,0xbd,0xb9,0xad);
 DEFINE_GUID(IID_ID3D12GraphicsCommandList5,0x55050859,0x4024,0x474c,0x87,0xf5,0x64,0x72,0xea,0xee,0x44,0xea);
 DEFINE_GUID(IID_ID3D12GraphicsCommandList6,0xc3827890,0xe548,0x4cfa,0x96,0xcf,0x56,0x89,0xa9,0x37,0x0f,0x80);
 DEFINE_GUID(IID_ID3D12GraphicsCommandList7,0xdd171223,0x8b61,0x4769,0x90,0xe3,0x16,0x0c,0xcd,0xe4,0xe2,0xc1);
 DEFINE_GUID(IID_ID3D12GraphicsCommandList8,0xee936ef9,0x599d,0x4d28,0x93,0x8e,0x23,0xc4,0xad,0x05,0xce,0x51);
 
 
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0062_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0062_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0065_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0065_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

@@ -6,6 +6,11 @@
 #pragma once
 #ifndef WINRT_Windows_Media_ClosedCaptioning_0_H
 #define WINRT_Windows_Media_ClosedCaptioning_0_H
+WINRT_EXPORT namespace winrt::Windows::Foundation
+{
+    template <typename T> struct __declspec(empty_bases) EventHandler;
+    struct EventRegistrationToken;
+}
 WINRT_EXPORT namespace winrt::Windows::UI
 {
     struct Color;
@@ -61,11 +66,13 @@ WINRT_EXPORT namespace winrt::Windows::Media::ClosedCaptioning
         SmallCapitals = 7,
     };
     struct IClosedCaptionPropertiesStatics;
+    struct IClosedCaptionPropertiesStatics2;
     struct ClosedCaptionProperties;
 }
 namespace winrt::impl
 {
     template <> struct category<winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties>{ using type = class_category; };
     template <> struct category<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionColor>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionEdgeEffect>{ using type = enum_category; };
@@ -79,7 +86,9 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionSize> = L"Windows.Media.ClosedCaptioning.ClosedCaptionSize";
     template <> inline constexpr auto& name_v<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionStyle> = L"Windows.Media.ClosedCaptioning.ClosedCaptionStyle";
     template <> inline constexpr auto& name_v<winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics> = L"Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics";
+    template <> inline constexpr auto& name_v<winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics2> = L"Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2";
     template <> inline constexpr guid guid_v<winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics>{ 0x10AA1F84,0xCC30,0x4141,{ 0xB5,0x03,0x52,0x72,0x28,0x9E,0x0C,0x20 } }; // 10AA1F84-CC30-4141-B503-5272289E0C20
+    template <> inline constexpr guid guid_v<winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics2>{ 0xD151E9B3,0x4E31,0x57F9,{ 0x8E,0x2F,0x4A,0x79,0x54,0x6E,0x6B,0x6B } }; // D151E9B3-4E31-57F9-8E2F-4A79546E6B6B
     template <> struct abi<winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -96,6 +105,14 @@ namespace winrt::impl
             virtual int32_t __stdcall get_RegionColor(int32_t*) noexcept = 0;
             virtual int32_t __stdcall get_ComputedRegionColor(struct struct_Windows_UI_Color*) noexcept = 0;
             virtual int32_t __stdcall get_RegionOpacity(int32_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall add_PropertiesChanged(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_PropertiesChanged(winrt::event_token) noexcept = 0;
         };
     };
     template <typename D>
@@ -117,6 +134,18 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics>
     {
         template <typename D> using type = consume_Windows_Media_ClosedCaptioning_IClosedCaptionPropertiesStatics<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Media_ClosedCaptioning_IClosedCaptionPropertiesStatics2
+    {
+        auto PropertiesChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        using PropertiesChanged_revoker = impl::event_revoker<winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics2, &impl::abi_t<winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics2>::remove_PropertiesChanged>;
+        [[nodiscard]] PropertiesChanged_revoker PropertiesChanged(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        auto PropertiesChanged(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics2>
+    {
+        template <typename D> using type = consume_Windows_Media_ClosedCaptioning_IClosedCaptionPropertiesStatics2<D>;
     };
 }
 #endif

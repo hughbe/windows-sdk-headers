@@ -726,6 +726,7 @@ typedef struct _SCSI_PNP_REQUEST_BLOCK {
 #define SRB_FUNCTION_DUMP_POINTERS          0x26
 #define SRB_FUNCTION_FREE_DUMP_POINTERS     0x27
 
+
 //
 // Define extended SRB function that will be used to identify a new
 // type of SRB that is not a SCSI_REQUEST_BLOCK. A
@@ -738,6 +739,7 @@ typedef struct _SCSI_PNP_REQUEST_BLOCK {
 
 #define SRB_FUNCTION_GET_DUMP_INFO          0x2a
 #define SRB_FUNCTION_FREE_DUMP_INFO         0x2b
+#define SRB_FUNCTION_NVMEOF_OPERATION       0x2c
 
 // begin_storport
 

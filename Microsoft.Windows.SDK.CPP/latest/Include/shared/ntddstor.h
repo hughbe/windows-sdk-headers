@@ -746,6 +746,7 @@ typedef enum _STORAGE_BUS_TYPE {
     BusTypeNvme,
     BusTypeSCM,
     BusTypeUfs,
+    BusTypeNvmeof,
     BusTypeMax,
     BusTypeMaxReserved = 0x7F
 } STORAGE_BUS_TYPE, *PSTORAGE_BUS_TYPE;
@@ -2963,6 +2964,7 @@ typedef ULONG DEVICE_DATA_MANAGEMENT_SET_ACTION, DEVICE_DSM_ACTION;
 #define DeviceDsmAction_GetFreeSpace            (0x0000001Bu | DeviceDsmActionFlag_NonDestructive)
 #define DeviceDsmAction_ConversionQuery         (0x0000001Cu | DeviceDsmActionFlag_NonDestructive)
 #define DeviceDsmAction_VdtSet                  (0x0000001Du)
+#define DeviceDsmAction_QueryPreferLocalRepair  (0x0000001Eu | DeviceDsmActionFlag_NonDestructive)
 
 //
 // DEVICE_DSM_INPUT.Flags
@@ -3551,6 +3553,34 @@ typedef struct _DEVICE_DATA_SET_REPAIR_OUTPUT {
                                     TRUE,                                    \
                                     __alignof(DEVICE_DSM_REPAIR_OUTPUT),     \
                                     sizeof(DEVICE_DSM_REPAIR_OUTPUT)}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// DeviceDsmAction_QueryPreferLocalRepair
+//
+
+typedef struct _DEVICE_DSM_QUERY_PREFER_LOCAL_REPAIR_OUTPUT {
+
+    ULONG Version;
+    BOOLEAN PreferLocalRepair;
+
+} DEVICE_DSM_QUERY_PREFER_LOCAL_REPAIR_OUTPUT, *PDEVICE_DSM_QUERY_PREFER_LOCAL_REPAIR_OUTPUT;
+
+//
+// SingleRange    - No
+// ParameterBlock - No
+// Output         - Yes
+// OutputBlock    - Yes
+//
+
+#define DeviceDsmDefinition_QueryPreferLocalRepair {DeviceDsmAction_QueryPreferLocalRepair, \
+                                                    FALSE,                                  \
+                                                    0,                                      \
+                                                    0,                                      \
+                                                    TRUE,                                   \
+                                                    __alignof(DEVICE_DSM_QUERY_PREFER_LOCAL_REPAIR_OUTPUT), \
+                                                    sizeof(DEVICE_DSM_QUERY_PREFER_LOCAL_REPAIR_OUTPUT)}
 
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -15026,6 +15026,7 @@ typedef struct tagRAWMOUSE {
 #if(WINVER >= 0x0600)
 #define MOUSE_MOVE_NOCOALESCE    0x08  // do not coalesce mouse moves
 #endif /* WINVER >= 0x0600 */
+// NOTE: 0x100 is already claimed by MOUSE_TERMSRV_SRC_SHADOW in ntddmou.w
 
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)

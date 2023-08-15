@@ -1,20 +1,7 @@
-/*++
+// Copyright (C) Microsoft Corporation. All rights reserved.
+//
+// This file contains declaration for Network Diagnostics Framework (NDF) client API
 
-Copyright (c) 2005  Microsoft Corporation
-
-Module Name  : NDF.h
-
-Abstract:
-
-This file contains declaration for Network Diagnostics Framework (NDF) client API
-
-Author:
-
-Tin Qian (tinqian) 07-08-2005
-
-Revision history:
-
---*/
 #pragma once
 #include <winapifamily.h>
 

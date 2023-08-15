@@ -209,6 +209,7 @@
 #define FACILITY_SYNCENGINE              2050
 #define FACILITY_XBOX                    2339
 #define FACILITY_GAME                    2340
+#define FACILITY_USERMODE_UNIONFS        2341
 #define FACILITY_PIX                     2748
 
 
@@ -29412,6 +29413,15 @@
 // The package family's auto update settings are being managed at system priority and cannot be changed at default priority. Please contact your system administrator for help with the error.
 //
 #define ERROR_APPINSTALLER_IS_MANAGED_BY_SYSTEM 15672L
+
+//
+// MessageId: ERROR_SERVICE_BLOCKED_BY_SYSPREP_IN_PROGRESS
+//
+// MessageText:
+//
+// Service is not available while sysprep is running.
+//
+#define ERROR_SERVICE_BLOCKED_BY_SYSPREP_IN_PROGRESS 15673L
 
 //////////////////////////
 //                      //
@@ -64934,5 +64944,82 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 // The completion queue does not have enough free space, to post completions, for all entries being submitted.
 //
 #define IORING_E_COMPLETION_QUEUE_TOO_FULL _HRESULT_TYPEDEF_(0x80460008L)
+
+
+//
+// UnionFS Error codes
+//
+
+//
+// MessageId: UNIONFS_E_CANNOT_CROSS_UNION
+//
+// MessageText:
+//
+// This operation is not allowed across unions.
+//
+#define UNIONFS_E_CANNOT_CROSS_UNION     _HRESULT_TYPEDEF_(0x89250001L)
+
+//
+// MessageId: UNIONFS_E_CANNOT_EXIT_UNION
+//
+// MessageText:
+//
+// This operation is not allowed to have a destination outside of a union.
+//
+#define UNIONFS_E_CANNOT_EXIT_UNION      _HRESULT_TYPEDEF_(0x89250002L)
+
+//
+// MessageId: UNIONFS_E_CANNOT_PRESERVE_LINK
+//
+// MessageText:
+//
+// This file has one or more hard links in the scratch layer.
+//
+#define UNIONFS_E_CANNOT_PRESERVE_LINK   _HRESULT_TYPEDEF_(0x89250003L)
+
+//
+// MessageId: UNIONFS_E_INVALID_TOMBSTONE_STATE
+//
+// MessageText:
+//
+// The tombstone cannot be created in or transitioned to the given state.
+//
+#define UNIONFS_E_INVALID_TOMBSTONE_STATE _HRESULT_TYPEDEF_(0x89250004L)
+
+//
+// MessageId: UNIONFS_E_LAYERS_PRESENT
+//
+// MessageText:
+//
+// This union has attached layers preventing this operation.
+//
+#define UNIONFS_E_LAYERS_PRESENT         _HRESULT_TYPEDEF_(0x89250005L)
+
+//
+// MessageId: UNIONFS_E_NESTED_LAYER
+//
+// MessageText:
+//
+// A union layer root cannot be a descendant of another layer root.
+//
+#define UNIONFS_E_NESTED_LAYER           _HRESULT_TYPEDEF_(0x89250006L)
+
+//
+// MessageId: UNIONFS_E_UNION_DUPLICATE_ID
+//
+// MessageText:
+//
+// A union with this union ID already exists.
+//
+#define UNIONFS_E_UNION_DUPLICATE_ID     _HRESULT_TYPEDEF_(0x89250007L)
+
+//
+// MessageId: UNIONFS_E_INACTIVE_UNION
+//
+// MessageText:
+//
+// The union this operation is being performed on is inactive.
+//
+#define UNIONFS_E_INACTIVE_UNION         _HRESULT_TYPEDEF_(0x89250008L)
 
 #endif//_WINERROR_

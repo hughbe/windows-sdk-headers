@@ -254,8 +254,9 @@ DEFINE_DEVPROPKEY(DEVPKEY_Storage_Gpt_Name,           0x4d1ebee8, 0x803, 0x4774,
 #define FILE_DEVICE_EVENT_COLLECTOR     0x0000005f
 #define FILE_DEVICE_USB4                0x00000060
 #define FILE_DEVICE_SOUNDWIRE           0x00000061
-#define FILE_DEVICE_SVM                 0x00000062
-#define FILE_DEVICE_HARDWARE_ACCELERATOR 0x00000063
+#define FILE_DEVICE_FABRIC_NVME         0x00000062
+#define FILE_DEVICE_SVM                 0x00000063
+#define FILE_DEVICE_HARDWARE_ACCELERATOR 0x00000064
 
 //
 // Macro definition for defining IOCTL and FSCTL function control codes.  Note
@@ -916,6 +917,7 @@ typedef enum _STORAGE_BUS_TYPE {
     BusTypeNvme,
     BusTypeSCM,
     BusTypeUfs,
+    BusTypeNvmeof,
     BusTypeMax,
     BusTypeMaxReserved = 0x7F
 } STORAGE_BUS_TYPE, *PSTORAGE_BUS_TYPE;
@@ -3125,6 +3127,7 @@ typedef DWORD DEVICE_DATA_MANAGEMENT_SET_ACTION, DEVICE_DSM_ACTION;
 #define DeviceDsmAction_GetFreeSpace            (0x0000001Bu | DeviceDsmActionFlag_NonDestructive)
 #define DeviceDsmAction_ConversionQuery         (0x0000001Cu | DeviceDsmActionFlag_NonDestructive)
 #define DeviceDsmAction_VdtSet                  (0x0000001Du)
+#define DeviceDsmAction_QueryPreferLocalRepair  (0x0000001Eu | DeviceDsmActionFlag_NonDestructive)
 
 //
 // DEVICE_DSM_INPUT.Flags
@@ -3713,6 +3716,34 @@ typedef struct _DEVICE_DATA_SET_REPAIR_OUTPUT {
                                     TRUE,                                    \
                                     __alignof(DEVICE_DSM_REPAIR_OUTPUT),     \
                                     sizeof(DEVICE_DSM_REPAIR_OUTPUT)}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// DeviceDsmAction_QueryPreferLocalRepair
+//
+
+typedef struct _DEVICE_DSM_QUERY_PREFER_LOCAL_REPAIR_OUTPUT {
+
+    DWORD Version;
+    BOOLEAN PreferLocalRepair;
+
+} DEVICE_DSM_QUERY_PREFER_LOCAL_REPAIR_OUTPUT, *PDEVICE_DSM_QUERY_PREFER_LOCAL_REPAIR_OUTPUT;
+
+//
+// SingleRange    - No
+// ParameterBlock - No
+// Output         - Yes
+// OutputBlock    - Yes
+//
+
+#define DeviceDsmDefinition_QueryPreferLocalRepair {DeviceDsmAction_QueryPreferLocalRepair, \
+                                                    FALSE,                                  \
+                                                    0,                                      \
+                                                    0,                                      \
+                                                    TRUE,                                   \
+                                                    __alignof(DEVICE_DSM_QUERY_PREFER_LOCAL_REPAIR_OUTPUT), \
+                                                    sizeof(DEVICE_DSM_QUERY_PREFER_LOCAL_REPAIR_OUTPUT)}
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -10956,15 +10987,14 @@ typedef enum _CHANGER_DEVICE_PROBLEM_TYPE {
 #define FSCTL_REFS_QUERY_VOLUME_COMPRESSION_INFO  CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 278, METHOD_BUFFERED, FILE_ANY_ACCESS)
 #endif
 #if (NTDDI_VERSION >= NTDDI_WIN10_NI)
-#define FSCTL_DUPLICATE_CLUSTER                 CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 279, METHOD_BUFFERED, FILE_ANY_ACCESS)
-#define FSCTL_CREATE_LCN_WEAK_REFERENCE         CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 280, METHOD_BUFFERED, FILE_ANY_ACCESS)
-#define FSCTL_DELETE_LCN_WEAK_REFERENCE         CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 281, METHOD_BUFFERED, FILE_ANY_ACCESS)
-#define FSCTL_QUERY_LCN_WEAK_REFERENCE          CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 282, METHOD_BUFFERED, FILE_ANY_ACCESS)
-#define FSCTL_DELETE_LCN_WEAK_REFERENCES        CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 283, METHOD_BUFFERED, FILE_ANY_ACCESS)
-#endif
-#if (NTDDI_VERSION >= NTDDI_WIN10_NI)
-#define FSCTL_REFS_SET_VOLUME_DEDUP_INFO        CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 284, METHOD_BUFFERED, FILE_ANY_ACCESS)
-#define FSCTL_REFS_QUERY_VOLUME_DEDUP_INFO      CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 285, METHOD_BUFFERED, FILE_ANY_ACCESS)
+#define FSCTL_DUPLICATE_CLUSTER                     CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 279, METHOD_BUFFERED, FILE_ANY_ACCESS)
+#define FSCTL_CREATE_LCN_WEAK_REFERENCE             CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 280, METHOD_BUFFERED, FILE_ANY_ACCESS)
+#define FSCTL_CLEAR_LCN_WEAK_REFERENCE              CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 281, METHOD_BUFFERED, FILE_ANY_ACCESS)
+#define FSCTL_QUERY_LCN_WEAK_REFERENCE              CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 282, METHOD_BUFFERED, FILE_ANY_ACCESS)
+#define FSCTL_CLEAR_ALL_LCN_WEAK_REFERENCES         CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 283, METHOD_BUFFERED, FILE_ANY_ACCESS)
+#define FSCTL_REFS_SET_VOLUME_DEDUP_INFO            CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 284, METHOD_BUFFERED, FILE_ANY_ACCESS)
+#define FSCTL_REFS_QUERY_VOLUME_DEDUP_INFO          CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 285, METHOD_BUFFERED, FILE_ANY_ACCESS)
+#define FSCTL_REFS_QUERY_VOLUME_TOTAL_SHARED_LCNS   CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 286, METHOD_BUFFERED, FILE_ANY_ACCESS)
 #endif
 //
 // AVIO IOCTLS.

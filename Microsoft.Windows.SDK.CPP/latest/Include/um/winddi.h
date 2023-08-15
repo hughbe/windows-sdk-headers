@@ -1,3 +1,4 @@
+
 /*++
 
 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -1178,7 +1179,7 @@ typedef struct  tagCDDDXGK_REDIRBITMAPPRESENTINFO
 //
 //     * The CMY_INVERTED Mode has all non-black, non white indices centered
 //       and even distributed within the total 256 palette indices.  For
-//       example; if a CMY=333 levels then it has total 3x3x3=27 indices,
+//       example, if a CMY=333 levels then it has total 3x3x3=27 indices,
 //       these 27 indices will be centered by packing 114 black indices at
 //       begining and packing 114 white indices at end to ensure that ROP
 //       will be correct rendered.
@@ -1588,6 +1589,8 @@ typedef struct _FONTOBJ
     PVOID      pvConsumer;
     PVOID      pvProducer;
 } FONTOBJ;
+
+
 
 typedef struct _BLENDOBJ
 {

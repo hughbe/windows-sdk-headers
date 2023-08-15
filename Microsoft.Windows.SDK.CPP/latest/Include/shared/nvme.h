@@ -33,6 +33,51 @@ Revision:
 #pragma warning(disable:4201)   // nameless struct/union
 #pragma warning(disable:4200)   // zero-sized array in struct/union
 
+////////////////////////////////////////////////////////////////////////
+//
+// NVMe definitions based on 2.0 spec
+//
+
+#define NVME_NQN_MAX_LEN                 256
+#define NVME_NQN_NAME_MAX_LEN            223
+
+//
+// NVMe Property Offset defined in
+// the Controller Properties section
+//
+typedef enum _NVME_PROPERTY_OFFSET {
+
+    NvmePropCAP     = 0x000, // Controller Capabilities
+    NvmePropVS      = 0x008, // Version
+    NvmePropINTMS   = 0x00C, // Interrupt Mask Set
+    NvmePropINTMC   = 0x00F, // Interrupt Mask Clear
+    NvmePropCC      = 0x014, // Controller Configuration
+    NvmePropCSTS    = 0x01C, // Controller Status
+    NvmePropNSSR    = 0x020, // NVM Subsystem Reset
+    NvmePropAQA     = 0x024, // Admin Queue Attributes
+    NvmePropASQ     = 0x028, // Admin Submission Queue Base Address
+    NvmePropACQ     = 0x030, // Admin Completion Queue Base Address
+    NvmePropCMBLOC  = 0x038, // Controller Memory Buffer Location
+    NvmePropCMBSZ   = 0x03C, // Controller Memory Buffer Size
+    NvmePropBPINFO  = 0x040, // Boot Partition Information
+    NvmePropBPRSEL  = 0x044, // Boot Partition Read Select
+    NvmePropBPMBL   = 0x048, // Boot Partition Memory Buffer Location
+    NvmePropCMBMSC  = 0x050, // Controller Memory Buffer Memory Space Control
+    NvmePropCMBSTS  = 0x058, // Controller Memory Buffer Status
+    NvmePropCMBEBS  = 0x05C, // Controller Memory Buffer Elasticity Buffer Size
+    NvmePropCMBSWTP = 0x060, // Controller Memory Buffer Sustained Write Throughput
+    NvmePropNSSD    = 0x064, // NVM Subsystem Shutdown
+    NvmePropCRTO    = 0x068, // Controller Ready Timeouts
+    NvmePropPMRCAP  = 0xE00, // Persistent Memory Capabilities
+    NvmePropPMRCTL  = 0xE04, // Persistent Memory Region Control
+    NvmePropPMRSTS  = 0xE08, // Persistent Memory Region Status
+    NvmePropPMREBS  = 0xE0C, // Persistent Memory Region Elasticity Buffer Size
+    NvmePropPMRSWTP = 0xE10, // Persistent Memory Region Sustained Write Throughput
+    NvmePropPMRMSCL = 0xE14, // Persistent Memory Region Controller Memory Space Control Lower
+    NvmePropPMRMSCU = 0xE18  // Persistent Memory Region Controller Memory Space Control Upper
+
+} NVME_PROPERTY_OFFSET;
+
 //
 // 3.1.1  Offset 00h: CAP (Controller Capabilities)
 //
@@ -345,7 +390,7 @@ typedef union {
 
         USHORT  SC          : 8;        // Status Code (SC)
         USHORT  SCT         : 3;        // Status Code Type (SCT)
-        USHORT  Reserved    : 2;
+        USHORT  CRD         : 2;        // Command Retry Delay (CRD)
         USHORT  M           : 1;        // More (M)
         USHORT  DNR         : 1;        // Do Not Retry (DNR)
     } DUMMYSTRUCTNAME;
@@ -5417,6 +5462,670 @@ typedef struct {
     CHAR SerialNumber[20];
 
 } NVME_SCSI_NAME_STRING, *PNVME_SCSI_NAME_STRING;
+
+////////////////////////////////////////////////////////////////////////
+//
+// NVMe SGL definitions based on 2.0 spec
+//
+
+//
+// SGL Descriptor Type defined in
+// the Scatter Gather List section
+//
+typedef enum _NVME_SGL_DESC_TYPE {
+
+    NvmeSglDescTypeDataBlock          = 0x0,
+    NvmeSglDescTypeBitBucket          = 0x1,
+    NvmeSglDescTypeSegment            = 0x2,
+    NvmeSglDescTypeLastSegment        = 0x3,
+    NvmeSglDescTypeKeyedDataBlock     = 0x4,
+    NvmeSglDescTypeTransportDataBlock = 0x5,
+    NvmeSglDescTypeMax                = 0xF
+
+} NVME_SGL_DESC_TYPE;
+
+//
+// SGL Descriptor Sub Type defined in
+// the Scatter Gather List section
+//
+typedef enum _NVME_SGL_DESC_SUBTYPE {
+
+    NvmeSglDescSubtypeAddress    = 0x0,
+    NvmeSglDescSubtypeOffset     = 0x1,
+    NvmeSglDescSubtypeTransportA = 0xA,
+    NvmeSglDescSubtypeTransportB = 0xB,
+    NvmeSglDescSubtypeTransportC = 0xC,
+    NvmeSglDescSubtypeTransportD = 0xD,
+    NvmeSglDescSubtypeTransportE = 0xE,
+    NvmeSglDescSubtypeTransportF = 0xF
+
+} NVME_SGL_DESC_SUBTYPE;
+
+//
+// General NVMe SGL Descriptor
+//
+typedef struct _NVME_SGL_DESC {
+
+    UCHAR Reserved0[15];
+
+    union {
+        struct {
+
+            UCHAR SubType : 4;
+            UCHAR Type    : 4;
+        };
+
+        UCHAR AsUchar;
+
+    } Identifier;
+
+} NVME_SGL_DESC, *PNVME_SGL_DESC;
+
+//
+// NVMe SGL Data Block descriptor
+//
+typedef struct _NVME_SGL_DATABLOCK_DESC {
+
+    ULONGLONG Address;
+    ULONG Length;
+    UCHAR Reserved0[3];
+
+    union {
+        struct {
+
+            UCHAR SubType : 4;
+
+            _Field_range_(NvmeSglDescTypeDataBlock, NvmeSglDescTypeDataBlock)
+            UCHAR Type    : 4;
+        };
+
+        UCHAR AsUchar;
+
+    } Identifier;
+
+} NVME_SGL_DATABLOCK_DESC, *PNVME_SGL_DATABLOCK_DESC;
+
+//
+// NVMe SGL Bit Bucket descriptor
+//
+typedef struct _NVME_SGL_BITBUCKET_DESC {
+
+    ULONGLONG Reserved0;
+    ULONG Length;
+    UCHAR Reserved1[3];
+
+    union {
+        struct {
+
+            UCHAR SubType : 4;
+
+            _Field_range_(NvmeSglDescTypeBitBucket, NvmeSglDescTypeBitBucket)
+            UCHAR Type    : 4;
+        };
+
+        UCHAR AsUchar;
+
+    } Identifier;
+
+} NVME_SGL_BITBUCKET_DESC, *PNVME_SGL_BITBUCKET_DESC;
+
+//
+// NVMe SGL Segment descriptor
+//
+typedef struct _NVME_SGL_SEGMENT_DESC {
+
+    ULONGLONG Address;
+    ULONG Length;
+    UCHAR Reserved0[3];
+
+    union {
+        struct {
+
+            UCHAR SubType : 4;
+
+            _Field_range_(NvmeSglDescTypeSegment, NvmeSglDescTypeSegment)
+            UCHAR Type    : 4;
+        };
+
+        UCHAR AsUchar;
+
+    } Identifier;
+
+} NVME_SGL_SEGMENT_DESC, *PNVME_SGL_SEGMENT_DESC;
+
+//
+// NVMe SGL Last Segment descriptor
+//
+typedef struct _NVME_SGL_LASTSEG_DESC {
+
+    ULONGLONG Address;
+    ULONG Length;
+    UCHAR Reserved0[3];
+
+    union {
+        struct {
+
+            UCHAR SubType : 4;
+
+            _Field_range_(NvmeSglDescTypeLastSegment, NvmeSglDescTypeLastSegment)
+            UCHAR Type    : 4;
+        };
+
+        UCHAR AsUchar;
+
+    } Identifier;
+
+} NVME_SGL_LASTSEG_DESC, *PNVME_SGL_LASTSEG_DESC;
+
+//
+// NVMe SGL Keyed Data Block descriptor
+//
+typedef struct _NVME_SGL_KEYDATABLOCK_DESC {
+
+    ULONGLONG Address;
+    UCHAR Length[3];
+    UCHAR Key[4];
+
+    union {
+        struct {
+
+            UCHAR SubType : 4;
+
+            _Field_range_(NvmeSglDescTypeKeyedDataBlock, NvmeSglDescTypeKeyedDataBlock)
+            UCHAR Type    : 4;
+        };
+
+        UCHAR AsUchar;
+
+    } Identifier;
+
+} NVME_SGL_KEYDATABLOCK_DESC, *PNVME_SGL_KEYDATABLOCK_DESC;
+
+//
+// NVMe SGL Transport Data Block descriptor
+//
+typedef struct _NVME_SGL_TRANSPORTDATA_DESC {
+
+    ULONGLONG Address;
+    ULONG Length;
+    UCHAR Reserved0[3];
+
+    union {
+        struct {
+
+            UCHAR SubType : 4;
+
+            _Field_range_(NvmeSglDescTypeTransportDataBlock, NvmeSglDescTypeTransportDataBlock)
+            UCHAR Type    : 4;
+        };
+
+        UCHAR AsUchar;
+
+    } Identifier;
+
+} NVME_SGL_TRANSPORTDATA_DESC, *PNVME_SGL_TRANSPORTDATA_DESC;
+
+////////////////////////////////////////////////////////////////////////
+//
+// NVMe over Fabrics definitions based on 2.0 spec
+//
+
+#define NVMEOF_TRANSPORT_ADDR_MAX_LEN      256
+#define NVMEOF_TRANSPORT_SERVID_MAX_LEN    32
+#define NVMEOF_TRANSPORT_SAS_MAX_LEN       256
+
+#define NVMEOF_DISCOVERY_NQN               "nqn.2014-08.org.nvmexpress.discovery"
+#define NVMEOF_DISCOVERY_LOG_VERSION_0     0;
+
+#define NVMEOF_ADMINQ_MIN_DEPTH            32;
+#define NVMEOF_NUM_AEN_DISC_CTRL           1; // Number of AEN commands for Discovery controller
+#define NVMEOF_NUM_AEN_IO_CTRL             1; // Number of AEN commands for IO controller
+
+//
+// Transport type (TRTYPE) defined in the
+// Get Log Page - Discovery Log Page Entry
+//
+typedef enum _NVMEOF_TRANSPORT_TYPE {
+
+    NvmeofTransportUnknown  = 0,
+    NvmeofTransportRdma     = 1,
+    NvmeofTransportFC       = 2,
+    NvmeofTransportTcp      = 3,
+    NvmeofTransportLoopback = 244,
+    NvmeofTransportMax      = 255
+
+} NVMEOF_TRANSPORT_TYPE;
+
+//
+// Address family (ADRFAM) defined in the
+// Get Log Page - Discovery Log Page Entry
+//
+typedef enum _NVMEOF_ADDRESS_FAMILY {
+
+    NvmeofAddressUnknown  = 0,
+    NvmeofAddressIPv4     = 1,
+    NvmeofAddressIPv6     = 2,
+    NvmeofAddressIB       = 3,
+    NvmeofAddressFC       = 4,
+    NvmeofAddressLoopback = 244,
+    NvmeofAddressMax      = 255
+
+} NVMEOF_ADDRESS_FAMILY;
+
+//
+// Subsystem type (SUBTYPE) defined in the
+// Get Log Page - Discovery Log Page Entry
+//
+typedef enum _NVMEOF_SUBSYSTEM_TYPE {
+
+    NvmeofSubsysTypeUnknown   = 0,
+    NvmeofSubsysTypeDiscovery = 1,
+    NvmeofSubsysTypeIo        = 2,
+    NvmeofSubsysTypeMax       = 255
+
+} NVMEOF_SUBSYSTEM_TYPE;
+
+//
+// Fabric secure channel requirement in the
+// Transport requirements (TREQ) field in the
+// Get Log Page - Discovery Log Page Entry
+//
+typedef enum _NVMEOF_SECURE_CHANNEL {
+
+    NvmeofFSCUnspecified = 0,
+    NvmeofFSCRequired    = 1,
+    NvmeofFSCNotRequired = 2,
+    NvmeofFSCReserved    = 3
+
+} NVMEOF_SECURE_CHANNEL;
+
+//
+// NVMe Fabrics Command Capsule
+//
+typedef struct _NVMEOF_FABRICS_COMMAND {
+
+    UCHAR OPC;          // Opcode (7Fh)
+    UCHAR PSDT;         // PRP or SGL for data transfer
+    USHORT CID;         // Command Identifier
+    UCHAR FCTYPE;       // Fabrics Command Type
+    UCHAR Reserved[35]; // Byte 5:39
+    UCHAR Specific[24]; // Byte 40:63 - Command Type Specific
+
+} NVMEOF_FABRICS_COMMAND, *PNVMEOF_FABRICS_COMMAND;
+
+//
+// NVMe Fabrics Response Capsule
+//
+typedef struct _NVMEOF_FABRICS_RESPONSE {
+
+    UCHAR Specific[8]; // Byte 0:7 - Response Type Specific
+    USHORT SQHD;       // SQ Head Pointer
+    USHORT Reserved;   // Byte 10:11
+    USHORT CID;        // Command Identifier
+    USHORT STS;        // Status - NVME_COMMAND_STATUS
+
+} NVMEOF_FABRICS_RESPONSE, *PNVMEOF_FABRICS_RESPONSE;
+
+//
+// NVMeoF Connect Command
+//
+typedef struct _NVMEOF_CONNECT_COMMAND {
+
+    UCHAR OPC; // Opcode (7Fh)
+    UCHAR Reserved0;
+    USHORT CID; // Command Identifier
+    UCHAR FCTYPE; // Fabrics Command Type, set to 01h
+    UCHAR Reserved1[19];
+    NVME_SGL_DESC SGL1; // SGL descriptor that describes the entire data transfer
+    USHORT RECFMT; // Format of connect command capsule
+    USHORT QID; // Queue Identifier for the Admin Queue or I/O Queue to be created
+    USHORT SQSIZE; // Size of submission queue to be created
+
+    union {
+
+        struct {
+
+            UCHAR PriorityClass : 2;
+            UCHAR SqFlowControlDisable : 1;
+            UCHAR IoQueueDeletion : 1;
+            UCHAR Reserved : 4; 
+        } DUMMYSTRUCTNAME;
+
+        UCHAR AsUchar;
+
+    } CATTR; // Connection attributes
+
+    UCHAR Reserved2;
+    ULONG KATO; // Keep Alive Timeout, valid only for Admin Queue, reserved for IO Queue
+    UCHAR Reserved3[12];
+
+} NVMEOF_CONNECT_COMMAND, *PNVMEOF_CONNECT_COMMAND;
+
+C_ASSERT(sizeof(NVMEOF_CONNECT_COMMAND) == 64);
+
+//
+// NVMeoF Connect Command Data
+//
+typedef struct _NVMEOF_CONNECT_DATA {
+
+    UCHAR HOSTID[NVME_EXTENDED_HOST_IDENTIFIER_SIZE];
+    USHORT CNTLID;
+    UCHAR Reserved0[238];
+    UCHAR SUBNQN[NVME_NQN_MAX_LEN];
+    UCHAR HOSTNQN[NVME_NQN_MAX_LEN];
+    UCHAR Reserved1[256];
+
+} NVMEOF_CONNECT_DATA, *PNVMEOF_CONNECT_DATA;
+
+C_ASSERT(sizeof(NVMEOF_CONNECT_DATA) == 1024);
+
+//
+// NVMeoF Connect Response
+//
+typedef struct _NVMEOF_CONNECT_RESPONSE {
+
+    union {
+
+        struct {
+
+            USHORT CNTLID;
+
+            union {
+
+                struct {
+
+                    USHORT Obsolete : 1;
+                    USHORT ATR : 1;
+                    USHORT ASCR : 1;
+                    USHORT Reserved : 13;
+                };
+
+                USHORT AsUshort;
+
+            } AUTHREQ;
+
+        } Success;
+
+        ULONG AsUlong;
+
+    } SCSpecific; // Status Code Specific
+
+    ULONG Reserved0;
+    USHORT SQHD; // Current Submission Queue Head pointer if SQ flow control is enabled
+    USHORT Reserved1;
+    USHORT CID; // Command Identifier
+    USHORT STS; // Status
+
+} NVMEOF_CONNECT_RESPONSE, *PNVMEOF_CONNECT_RESPONSE;
+
+C_ASSERT(sizeof(NVMEOF_CONNECT_RESPONSE) == 16);
+
+//
+// NVMeoF Disconnect Command
+//
+typedef struct _NVMEOF_DISCONNECT_COMMAND {
+
+    UCHAR OPC; // Opcode (7Fh)
+    UCHAR Reserved0;
+    USHORT CID; // Command Identifier
+    UCHAR FCTYPE; // Fabrics Command Type, set to 08h
+    UCHAR Reserved1[19]; // Byte 5:23
+    NVME_SGL_DATABLOCK_DESC SGL1;
+    USHORT RECFMT; // Format of connect command capsule
+    UCHAR Reserved2[22];
+
+} NVMEOF_DISCONNECT_COMMAND, *PNVMEOF_DISCONNECT_COMMAND;
+
+C_ASSERT(sizeof(NVMEOF_DISCONNECT_COMMAND) == 64);
+
+//
+// NVMeoF Disconnect Response
+//
+typedef struct _NVMEOF_DISCONNECT_RESPONSE {
+
+    ULONGLONG Reserved0;
+    USHORT SQHD; // Current Submission Queue Head pointer for the associated Submission Queue
+    USHORT Reserved1;
+    USHORT CID; // Command Identifier
+    USHORT STS; // Status
+
+} NVMEOF_DISCONNECT_RESPONSE, *PNVMEOF_DISCONNECT_RESPONSE;
+
+C_ASSERT(sizeof(NVMEOF_DISCONNECT_RESPONSE) == 16);
+
+//
+// NVMeoF Property Get Command
+//
+
+#define NVMEOF_PROPERTY_SIZE_4Bytes        0x00
+#define NVMEOF_PROPERTY_SIZE_8Bytes        0x01
+
+typedef struct _NVMEOF_PROPERTY_GET_COMMAND {
+
+    UCHAR OPC; // Opcode (7Fh)
+    UCHAR Reserved0;
+    USHORT CID; // Command Identifier
+    UCHAR FCTYPE; // Fabrics Command Type, set to 04h
+    UCHAR Reserved1[35]; // Byte 5:39
+
+    struct {
+
+        UCHAR PropertySize : 3;
+        UCHAR Reserved : 5;
+    } ATTRIB; // Attributes for the Property Get command
+
+    UCHAR Reserved2[3];
+    ULONG OFST; // Offset to the property to get
+    UCHAR Reserved3[16];
+
+} NVMEOF_PROPERTY_GET_COMMAND, *PNVMEOF_PROPERTY_GET_COMMAND;
+
+C_ASSERT(sizeof(NVMEOF_PROPERTY_GET_COMMAND) == 64);
+
+//
+// NVMeoF Property Get Response
+//
+typedef struct _NVMEOF_PROPERTY_GET_RESPONSE {
+
+    union {
+
+        struct {
+
+            ULONG Value;
+            ULONG Reserved;
+        } FourBytes;
+
+        ULONGLONG EightBytes;
+
+    } VALUE; // Value returned for the property
+
+    USHORT SQHD; // Current Submission Queue Head pointer for the associated Submission Queue
+    USHORT Reserved0;
+    USHORT CID; // Command Identifier
+    USHORT STS; // Status
+
+} NVMEOF_PROPERTY_GET_RESPONSE, *PNVMEOF_PROPERTY_GET_RESPONSE;
+
+C_ASSERT(sizeof(NVMEOF_PROPERTY_GET_RESPONSE) == 16);
+
+//
+// NVMeoF Property Set Command
+//
+typedef struct _NVMEOF_PROPERTY_SET_COMMAND {
+
+    UCHAR OPC; // Opcode (7Fh)
+    UCHAR Reserved0;
+    USHORT CID; // Command Identifier
+    UCHAR FCTYPE; // Fabrics Command Type, set to 00h
+    UCHAR Reserved1[35]; // Byte 5:39
+
+    struct {
+
+        UCHAR PropertySize : 3;
+        UCHAR Reserved : 5;
+    } ATTRIB; // Attributes for the Property Set command
+
+    UCHAR Reserved2[3];
+    ULONG OFST; // Offset to the property to get
+
+    union {
+
+        struct {
+
+            ULONG Value;
+            ULONG Reserved;
+        } FourBytes;
+
+        ULONGLONG EightBytes;
+
+    } VALUE; // Value to set for the property
+
+    UCHAR Reserved3[8];
+
+} NVMEOF_PROPERTY_SET_COMMAND, *PNVMEOF_PROPERTY_SET_COMMAND;
+
+C_ASSERT(sizeof(NVMEOF_PROPERTY_SET_COMMAND) == 64);
+
+//
+// NVMeoF Property Set Response
+//
+typedef struct _NVMEOF_PROPERTY_SET_RESPONSE {
+
+    ULONGLONG Reserved0;
+    USHORT SQHD; // Current Submission Queue Head pointer for the associated Submission Queue
+    USHORT Reserved1;
+    USHORT CID; // Command Identifier
+    USHORT STS; // Status
+
+} NVMEOF_PROPERTY_SET_RESPONSE, *PNVMEOF_PROPERTY_SET_RESPONSE;
+
+C_ASSERT(sizeof(NVMEOF_PROPERTY_SET_RESPONSE) == 16);
+
+//
+// NVMeoF Authenticate Receive Command
+//
+typedef struct _NVMEOF_AUTH_RECEIVE_COMMAND {
+
+    UCHAR OPC; // Opcode (7Fh)
+    UCHAR Reserved0;
+    USHORT CID; // Command Identifier
+    UCHAR FCTYPE; // Fabrics Command Type, set to 06h
+    UCHAR Reserved1[19]; // Byte 5:23
+    NVME_SGL_DESC SGL1; // SGL descriptor that describes the entire data transfer
+    UCHAR Reserved2;
+    UCHAR SPSP0; // Bits 07:00 of Security Protocol Specific field as defined in SPC-5
+    UCHAR SPSP1; // Bits 15:08 of Security Protocol Specific field as defined in SPC-5
+    UCHAR SECP; // Security protocol as defined in SPC-5
+    ULONG AL; // Allocation Length, specific to the Security Protocol as defined in SPC-5 where INC_512 is cleared to '0'
+
+    UCHAR Reserved3[16];
+
+} NVMEOF_AUTH_RECEIVE_COMMAND, *PNVMEOF_AUTH_RECEIVE_COMMAND;
+
+C_ASSERT(sizeof(NVMEOF_AUTH_RECEIVE_COMMAND) == 64);
+
+//
+// NVMeoF Authenticate Receive Response
+//
+typedef struct _NVMEOF_AUTH_RECEIVE_RESPONSE {
+
+    ULONGLONG Reserved0;
+    USHORT SQHD; // Current Submission Queue Head pointer for the associated Submission Queue
+    USHORT Reserved1;
+    USHORT CID; // Command Identifier
+    USHORT STS; // Status
+
+} NVMEOF_AUTH_RECEIVE_RESPONSE, *PNVMEOF_AUTH_RECEIVE_RESPONSE;
+
+C_ASSERT(sizeof(NVMEOF_AUTH_RECEIVE_RESPONSE) == 16);
+
+//
+// NVMeoF Authenticate Send Command
+//
+typedef struct _NVMEOF_AUTH_SEND_COMMAND {
+
+    UCHAR OPC; // Opcode (7Fh)
+    UCHAR Reserved0;
+    USHORT CID; // Command Identifier
+    UCHAR FCTYPE; // Fabrics Command Type, set to 05h
+    UCHAR Reserved1[19]; // Byte 5:23
+    NVME_SGL_DESC SGL1; // SGL descriptor that describes the entire data transfer
+    UCHAR Reserved2;
+    UCHAR SPSP0; // Bits 07:00 of Security Protocol Specific field as defined in SPC-5
+    UCHAR SPSP1; // Bits 15:08 of Security Protocol Specific field as defined in SPC-5
+    UCHAR SECP; // Security protocol as defined in SPC-5
+    ULONG TL; // Transfer Length, specific to the Security Protocol as defined in SPC-5 where INC_512 is cleared to '0'
+
+    UCHAR Reserved3[16];
+
+} NVMEOF_AUTH_SEND_COMMAND, *PNVMEOF_AUTH_SEND_COMMAND;
+
+C_ASSERT(sizeof(NVMEOF_AUTH_SEND_COMMAND) == 64);
+
+//
+// NVMeoF Authenticate Send Response
+//
+typedef struct _NVMEOF_AUTH_SEND_RESPONSE {
+
+    ULONGLONG Reserved0;
+    USHORT SQHD; // Current Submission Queue Head pointer for the associated Submission Queue
+    USHORT Reserved1;
+    USHORT CID; // Command Identifier
+    USHORT STS; // Status
+
+} NVMEOF_AUTH_SEND_RESPONSE, *PNVMEOF_AUTH_SEND_RESPONSE;
+
+C_ASSERT(sizeof(NVMEOF_AUTH_SEND_RESPONSE) == 16);
+
+//
+// NVMeoF Discovery Log Page and Entry
+//
+typedef struct _NVMEOF_DISC_LPE {
+
+    UCHAR TRTYPE;  // NVMEOF_TRANSPORT_TYPE
+    UCHAR ADRFAM;  // NVMEOF_ADDRESS_FAMILY
+    UCHAR SUBTYPE; // NVMEOF_SUBSYSTEM_TYPE
+
+    union {
+
+        struct {
+
+            UCHAR FabricSecureChannel : 2; // NVMEOF_SECURE_CHANNEL
+            UCHAR SqFlowControlDisable : 1;
+            UCHAR Reserved : 5; 
+        } DUMMYSTRUCTNAME;
+
+        UCHAR AsUchar;
+
+    } TREQ;        // Transport Requirements
+
+    USHORT PORTID; // Subsystem Port Id
+    USHORT CNTLID; // Controller Id
+                   // If subsystem supports dynamic controller model the value will be FFFFh.
+                   // If subsystem supports static controller model and value is FFFEh, the
+                   //   host should remember the controller Id returned by Connect command.
+                   // If subsystem supports static controller model and value is between
+                   // 0h and FFEFh, then a specific controller is specified.
+    USHORT ASQSZ;  // Maximum size of an Admin Submission Queue, minimum value of 32
+    UCHAR Reserved0[22];
+    UCHAR TRSVCID[NVMEOF_TRANSPORT_SERVID_MAX_LEN]; // NVMe Transport service identifier
+    UCHAR Reserved1[192];
+    UCHAR SUBNQN[NVME_NQN_MAX_LEN]; // NQN that uniquely identifies the NVM subsystem
+    UCHAR TRADDR[NVMEOF_TRANSPORT_ADDR_MAX_LEN]; // Address of the NVM subsystem for Connect
+    UCHAR TSAS[NVMEOF_TRANSPORT_SAS_MAX_LEN]; // Transport specific information of the address
+
+} NVMEOF_DISC_LPE, *PNVMEOF_DISC_LPE;
+
+
+typedef struct _NVMEOF_DISC_LOGPAGE {
+
+    ULONGLONG GENCTR; // Version of the discovery information starting at 0h and incrementing
+    ULONGLONG NUMREC; // Number of records contained in the log
+    USHORT RECFMT; // Format of the Discovery Log Page
+    UCHAR Reserved0[1006];
+    NVMEOF_DISC_LPE Entries[ANYSIZE_ARRAY]; // Discovery Log Page entries
+
+} NVMEOF_DISC_LOGPAGE;
 
 #if _MSC_VER >= 1200
 #pragma warning(pop)

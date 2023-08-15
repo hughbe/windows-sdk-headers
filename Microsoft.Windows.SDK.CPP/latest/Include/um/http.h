@@ -1684,8 +1684,8 @@ typedef enum _HTTP_REQUEST_INFO_TYPE
     HttpRequestInfoTypeTcpInfoV0,
     HttpRequestInfoTypeRequestSizing,
     HttpRequestInfoTypeQuicStats,
-    HttpRequestInfoTypeTcpInfoV1
-
+    HttpRequestInfoTypeTcpInfoV1,
+    HttpRequestInfoTypeQuicStatsV2
 } HTTP_REQUEST_INFO_TYPE, *PHTTP_REQUEST_INFO_TYPE;
 
 typedef struct _HTTP_REQUEST_INFO
@@ -2692,7 +2692,8 @@ typedef enum _HTTP_REQUEST_PROPERTY
     HttpRequestPropertySni,
     HttpRequestPropertyStreamError,
     HttpRequestPropertyWskApiTimings,
-    HttpRequestPropertyQuicApiTimings
+    HttpRequestPropertyQuicApiTimings,
+    HttpRequestPropertyQuicStatsV2
 } HTTP_REQUEST_PROPERTY, *PHTTP_REQUEST_PROPERTY;
 
 typedef struct _HTTP_QUERY_REQUEST_QUALIFIER_TCP

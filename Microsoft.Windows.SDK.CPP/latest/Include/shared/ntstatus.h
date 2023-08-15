@@ -149,7 +149,8 @@ Notes:
 #define FACILITY_LICENSING               0xEA
 #define FACILITY_PLATFORM_MANIFEST       0xEB
 #define FACILITY_APP_EXEC                0xEC
-#define FACILITY_MAXIMUM_VALUE           0xED
+#define FACILITY_UNIONFS                 0xED
+#define FACILITY_MAXIMUM_VALUE           0xEE
 
 
 //
@@ -12732,6 +12733,83 @@ Notes:
  End of File Snap specific messages.
 
 --*/
+
+//
+//  UnionFS error values
+//
+
+//
+// MessageId: STATUS_UNIONFS_CANNOT_CROSS_UNION
+//
+// MessageText:
+//
+// This operation is not allowed across unions.
+//
+#define STATUS_UNIONFS_CANNOT_CROSS_UNION ((NTSTATUS)0xC0ED0001L)
+
+//
+// MessageId: STATUS_UNIONFS_CANNOT_EXIT_UNION
+//
+// MessageText:
+//
+// This operation is not allowed to have a destination outside of a union.
+//
+#define STATUS_UNIONFS_CANNOT_EXIT_UNION ((NTSTATUS)0xC0ED0002L)
+
+//
+// MessageId: STATUS_UNIONFS_CANNOT_PRESERVE_LINK
+//
+// MessageText:
+//
+// This file has one or more hard links in the scratch layer.
+//
+#define STATUS_UNIONFS_CANNOT_PRESERVE_LINK ((NTSTATUS)0xC0ED0003L)
+
+//
+// MessageId: STATUS_UNIONFS_INVALID_TOMBSTONE_STATE
+//
+// MessageText:
+//
+// The tombstone cannot be created in or transitioned to the given state.
+//
+#define STATUS_UNIONFS_INVALID_TOMBSTONE_STATE ((NTSTATUS)0xC0ED0004L)
+
+//
+// MessageId: STATUS_UNIONFS_LAYERS_PRESENT
+//
+// MessageText:
+//
+// This union has attached layers preventing this operation.
+//
+#define STATUS_UNIONFS_LAYERS_PRESENT    ((NTSTATUS)0xC0ED0005L)
+
+//
+// MessageId: STATUS_UNIONFS_NESTED_LAYER
+//
+// MessageText:
+//
+// A union layer root cannot be a descendant of another layer root.
+//
+#define STATUS_UNIONFS_NESTED_LAYER      ((NTSTATUS)0xC0ED0006L)
+
+//
+// MessageId: STATUS_UNIONFS_UNION_DUPLICATE_ID
+//
+// MessageText:
+//
+// A union with this union ID already exists.
+//
+#define STATUS_UNIONFS_UNION_DUPLICATE_ID ((NTSTATUS)0xC0ED0007L)
+
+//
+// MessageId: STATUS_UNIONFS_INACTIVE_UNION
+//
+// MessageText:
+//
+// The union this operation is being performed on is inactive.
+//
+#define STATUS_UNIONFS_INACTIVE_UNION    ((NTSTATUS)0xC0ED0008L)
+
 
 //     **** New SYSTEM error codes can be inserted here ****
 

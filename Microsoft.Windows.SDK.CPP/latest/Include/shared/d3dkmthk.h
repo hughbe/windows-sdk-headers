@@ -5181,6 +5181,23 @@ typedef struct _D3DKMT_CREATESYNCFILE
 	D3DKMT_ALIGN64 UINT64   hSyncFile;	            // out: File descriptor on Android or a NT handle on Windows (when implemented)
 } D3DKMT_CREATESYNCFILE;
 
+typedef struct _D3DKMT_WAITSYNCFILE
+{
+    D3DKMT_ALIGN64 UINT64   hSyncFile;	            // in:  Sync file descriptor on Android or a NT handle on Windows (when implemented)
+    D3DKMT_HANDLE           hContext;               // in:  Context where the wait needs to be inserted
+    UINT                    Reserved;               // in:  Reserved for future use
+} D3DKMT_WAITSYNCFILE;
+
+typedef struct _D3DKMT_OPENSYNCOBJECTFROMSYNCFILE
+{
+    D3DKMT_ALIGN64 UINT64   hSyncFile;	            // in:  Sync file descriptor on Android or a NT handle on Windows (when implemented)
+    D3DKMT_HANDLE           hDevice;                // in:  Device fot the sync object
+    D3DKMT_HANDLE           hSyncObject;            // out: Monitored sync object handle
+    D3DKMT_ALIGN64 UINT64   FenceValue;	            // out: Fence value, associated with the sync file
+    D3DKMT_PTR(VOID*,       FenceValueCPUVirtualAddress);               // out: Read-only mapping of the fence value for the CPU
+    D3DKMT_ALIGN64 D3DGPU_VIRTUAL_ADDRESS FenceValueGPUVirtualAddress;  // out: Read/write mapping of the fence value for the GPU
+} D3DKMT_OPENSYNCOBJECTFROMSYNCFILE;
+
 
 typedef struct _D3DKMT_TRIMNOTIFICATION
 {
@@ -5972,6 +5989,8 @@ EXTERN_C _Check_return_ NTSTATUS APIENTRY D3DKMTCancelPresents(_In_ D3DKMT_CANCE
 
 EXTERN_C _Check_return_ NTSTATUS APIENTRY D3DKMTShareObjectWithHost(_Inout_ D3DKMT_SHAREOBJECTWITHHOST*);
 EXTERN_C _Check_return_ NTSTATUS APIENTRY D3DKMTCreateSyncFile(_Inout_ D3DKMT_CREATESYNCFILE*);
+EXTERN_C _Check_return_ NTSTATUS APIENTRY D3DKMTWaitSyncFile(_In_ CONST D3DKMT_WAITSYNCFILE*);
+EXTERN_C _Check_return_ NTSTATUS APIENTRY D3DKMTOpenSyncObjectFromSyncFile(_Inout_ D3DKMT_OPENSYNCOBJECTFROMSYNCFILE*);
 
 // Used in WSL to close the internal file descriptor to /dev/dxg
 EXTERN_C VOID APIENTRY D3DKMTCloseDxCoreDevice();
