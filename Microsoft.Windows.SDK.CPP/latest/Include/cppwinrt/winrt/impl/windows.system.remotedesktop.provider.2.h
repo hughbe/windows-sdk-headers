@@ -17,7 +17,8 @@ WINRT_EXPORT namespace winrt::Windows::System::RemoteDesktop::Provider
         CloudPCDisplayInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::System::RemoteDesktop::Provider::ICloudPCDisplayInfo(ptr, take_ownership_from_abi) {}
         explicit CloudPCDisplayInfo(param::hstring const& name);
     };
-    struct __declspec(empty_bases) CloudPCHostService : winrt::Windows::System::RemoteDesktop::Provider::ICloudPCHostService
+    struct __declspec(empty_bases) CloudPCHostService : winrt::Windows::System::RemoteDesktop::Provider::ICloudPCHostService,
+        impl::require<CloudPCHostService, winrt::Windows::Foundation::IClosable>
     {
         CloudPCHostService(std::nullptr_t) noexcept {}
         CloudPCHostService(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::System::RemoteDesktop::Provider::ICloudPCHostService(ptr, take_ownership_from_abi) {}

@@ -17,6 +17,8 @@ namespace Windows
 {
     namespace Foundation
     {
+        interface IClosable;
+
         apicontract UniversalApiContract;
 
         runtimeclass Uri;
@@ -171,6 +173,7 @@ namespace Windows
                 runtimeclass CloudPCHostService
                 {
                     [default] [experimental] interface Windows.System.RemoteDesktop.Provider.ICloudPCHostService;
+                    interface Windows.Foundation.IClosable;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 15.0)]

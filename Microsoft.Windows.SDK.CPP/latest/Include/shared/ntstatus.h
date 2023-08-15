@@ -11935,6 +11935,42 @@ Notes:
 //
 #define STATUS_LOCAL_POLICY_MODIFICATION_NOT_SUPPORTED ((NTSTATUS)0xC000A08AL)
 
+//
+// MessageId: STATUS_POLICY_CONTROLLED_ACCOUNT
+//
+// MessageText:
+//
+// The account is controlled by external policy and cannot be modified.
+//
+#define STATUS_POLICY_CONTROLLED_ACCOUNT ((NTSTATUS)0xC000A08BL)
+
+//
+// MessageId: STATUS_LAPS_LEGACY_SCHEMA_MISSING
+//
+// MessageText:
+//
+// The Local Administrator Password Solution password update operation failed because the legacy LAPS schema needs to be added to Active Directory.
+//
+#define STATUS_LAPS_LEGACY_SCHEMA_MISSING ((NTSTATUS)0xC000A08CL)
+
+//
+// MessageId: STATUS_LAPS_SCHEMA_MISSING
+//
+// MessageText:
+//
+// The Local Administrator Password Solution password update operation failed because the Windows LAPS schema needs to be added to Active Directory.
+//
+#define STATUS_LAPS_SCHEMA_MISSING       ((NTSTATUS)0xC000A08DL)
+
+//
+// MessageId: STATUS_LAPS_ENCRYPTION_REQUIRES_2016_DFL
+//
+// MessageText:
+//
+// The Local Administrator Password Solution encrypted password update operation failed because Active Directory is not yet running at the minimum required domain functional level (2016).
+//
+#define STATUS_LAPS_ENCRYPTION_REQUIRES_2016_DFL ((NTSTATUS)0xC000A08EL)
+
 /*++
 
  MessageId's 0xa100 - 0xa120 (inclusive) are for the SMB Hash Generation Service.

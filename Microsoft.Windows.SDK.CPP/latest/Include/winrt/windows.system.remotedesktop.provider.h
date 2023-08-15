@@ -255,6 +255,19 @@ typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #endif /* DEF___FIEventHandler_1_IInspectable_USE */
 
 
+#ifndef ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
+#define ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Foundation {
+            interface IClosable;
+        } /* Foundation */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
+
+#endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
+
 namespace ABI {
     namespace Windows {
         namespace Foundation {
@@ -715,6 +728,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.System.RemoteDesktop.Provider.ICloudPCHostService ** Default Interface **
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -849,6 +863,12 @@ interface __FIEventHandler_1_IInspectable
 #endif /* COBJMACROS */
 
 #endif // ____FIEventHandler_1_IInspectable_INTERFACE_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
+#define ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CFoundation_CIClosable __x_ABI_CWindows_CFoundation_CIClosable;
+
+#endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -1470,6 +1490,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.System.RemoteDesktop.Provider.ICloudPCHostService ** Default Interface **
+ *    Windows.Foundation.IClosable
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *

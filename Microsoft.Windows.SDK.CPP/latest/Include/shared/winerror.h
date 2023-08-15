@@ -22350,6 +22350,42 @@
 //
 #define ERROR_LOCAL_POLICY_MODIFICATION_NOT_SUPPORTED 8653L
 
+//
+// MessageId: ERROR_POLICY_CONTROLLED_ACCOUNT
+//
+// MessageText:
+//
+// The account is controlled by external policy and cannot be modified.
+//
+#define ERROR_POLICY_CONTROLLED_ACCOUNT  8654L
+
+//
+// MessageId: ERROR_LAPS_LEGACY_SCHEMA_MISSING
+//
+// MessageText:
+//
+// The Local Administrator Password Solution password update operation failed because the legacy LAPS schema needs to be added to Active Directory.
+//
+#define ERROR_LAPS_LEGACY_SCHEMA_MISSING 8655L
+
+//
+// MessageId: ERROR_LAPS_SCHEMA_MISSING
+//
+// MessageText:
+//
+// The Local Administrator Password Solution password update operation failed because the Windows LAPS schema needs to be added to Active Directory.
+//
+#define ERROR_LAPS_SCHEMA_MISSING        8656L
+
+//
+// MessageId: ERROR_LAPS_ENCRYPTION_REQUIRES_2016_DFL
+//
+// MessageText:
+//
+// The Local Administrator Password Solution encrypted password update operation failed because Active Directory is not yet running at the minimum required domain functional level (2016).
+//
+#define ERROR_LAPS_ENCRYPTION_REQUIRES_2016_DFL 8657L
+
 
 ///////////////////////////////////////////////////
 //                                                /

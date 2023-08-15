@@ -6554,6 +6554,14 @@ DEFINE_PROPERTYKEY(PKEY_MsGraph_DriveId, 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9,
 DEFINE_PROPERTYKEY(PKEY_MsGraph_ItemId, 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29, 4);
 #define INIT_PKEY_MsGraph_ItemId { { 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29 }, 4 }
 
+//  Name:     System.MsGraph.RecommendationReason -- PKEY_MsGraph_RecommendationReason
+//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
+//  FormatID: {4F85567E-FFF0-4DF5-B1D9-98B314FF0729}, 8
+//
+//  The JSON object representing information about the reason marker for a recommended item
+DEFINE_PROPERTYKEY(PKEY_MsGraph_RecommendationReason, 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29, 8);
+#define INIT_PKEY_MsGraph_RecommendationReason { { 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29 }, 8 }
+
 //  Name:     System.MsGraph.RecommendationReferenceId -- PKEY_MsGraph_RecommendationReferenceId
 //  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
 //  FormatID: {4F85567E-FFF0-4DF5-B1D9-98B314FF0729}, 5
