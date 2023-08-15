@@ -460,6 +460,8 @@ typedef enum D3D12_COMMAND_LIST_TYPE
     D3D12_COMMAND_LIST_TYPE_VIDEO_PROCESS   = 5,
     D3D12_COMMAND_LIST_TYPE_VIDEO_ENCODE    = 6,
 
+    D3D12_COMMAND_LIST_TYPE_NONE            = -1,
+
 } D3D12_COMMAND_LIST_TYPE;
 
 typedef enum D3D12_COMMAND_QUEUE_FLAGS
@@ -5698,7 +5700,7 @@ typedef enum D3D12_DEVICE_FACTORY_FLAGS
 } D3D12_DEVICE_FACTORY_FLAGS;
 cpp_quote("DEFINE_ENUM_FLAG_OPERATORS( D3D12_DEVICE_FACTORY_FLAGS );")
 
-[uuid(cd310fac-c78c-413d-a799-3da46a952cb7), object, local, pointer_default(unique)]
+[uuid(61f307d3-d34e-4e7c-8374-3ba4de23cccb), object, local, pointer_default(unique)]
 interface ID3D12DeviceFactory
     : IUnknown
 {
@@ -5712,6 +5714,7 @@ interface ID3D12DeviceFactory
         REFCLSID clsid,
         REFIID   iid,
         [annotation("_COM_Outptr_")] void **ppv);
+
     HRESULT EnableExperimentalFeatures(
        UINT      NumFeatures,
        [annotation("_In_reads_(NumFeatures)")]     const IID *pIIDs,
@@ -5720,6 +5723,7 @@ interface ID3D12DeviceFactory
 
     HRESULT CreateDevice(
         [annotation("_In_opt_")] IUnknown *adapter,
+        D3D_FEATURE_LEVEL FeatureLevel,
         REFIID riid,
         [annotation("_COM_Outptr_opt_")] void **ppvDevice);
 };
@@ -5917,7 +5921,7 @@ cpp_quote( "DEFINE_GUID(IID_ID3D12VirtualizationGuestDevice,0xbc66d368,0x7373,0x
 cpp_quote( "DEFINE_GUID(IID_ID3D12Tools,0x7071e1f0,0xe84b,0x4b33,0x97,0x4f,0x12,0xfa,0x49,0xde,0x65,0xc5);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12SDKConfiguration,0xe9eb5314,0x33aa,0x42b2,0xa7,0x18,0xd7,0x7f,0x58,0xb1,0xf1,0xc7);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12SDKConfiguration1,0x8aaf9303,0xad25,0x48b9,0x9a,0x57,0xd9,0xc3,0x7e,0x00,0x9d,0x9f);" )
-cpp_quote( "DEFINE_GUID(IID_ID3D12DeviceFactory,0xcd310fac,0xc78c,0x413d,0xa7,0x99,0x3d,0xa4,0x6a,0x95,0x2c,0xb7);" )
+cpp_quote( "DEFINE_GUID(IID_ID3D12DeviceFactory,0x61f307d3,0xd34e,0x4e7c,0x83,0x74,0x3b,0xa4,0xde,0x23,0xcc,0xcb);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12DeviceConfiguration,0x78dbf87b,0xf766,0x422b,0xa6,0x1c,0xc8,0xc4,0x46,0xbd,0xb9,0xad);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12GraphicsCommandList5,0x55050859,0x4024,0x474c,0x87,0xf5,0x64,0x72,0xea,0xee,0x44,0xea);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12GraphicsCommandList6,0xc3827890,0xe548,0x4cfa,0x96,0xcf,0x56,0x89,0xa9,0x37,0x0f,0x80);" )

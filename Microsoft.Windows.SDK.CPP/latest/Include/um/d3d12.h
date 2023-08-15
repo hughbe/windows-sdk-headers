@@ -1337,7 +1337,8 @@ enum D3D12_COMMAND_LIST_TYPE
         D3D12_COMMAND_LIST_TYPE_COPY	= 3,
         D3D12_COMMAND_LIST_TYPE_VIDEO_DECODE	= 4,
         D3D12_COMMAND_LIST_TYPE_VIDEO_PROCESS	= 5,
-        D3D12_COMMAND_LIST_TYPE_VIDEO_ENCODE	= 6
+        D3D12_COMMAND_LIST_TYPE_VIDEO_ENCODE	= 6,
+        D3D12_COMMAND_LIST_TYPE_NONE	= -1
     } 	D3D12_COMMAND_LIST_TYPE;
 
 typedef 
@@ -23954,7 +23955,7 @@ EXTERN_C const IID IID_ID3D12DeviceFactory;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
     
-    MIDL_INTERFACE("cd310fac-c78c-413d-a799-3da46a952cb7")
+    MIDL_INTERFACE("61f307d3-d34e-4e7c-8374-3ba4de23cccb")
     ID3D12DeviceFactory : public IUnknown
     {
     public:
@@ -23980,6 +23981,7 @@ EXTERN_C const IID IID_ID3D12DeviceFactory;
         
         virtual HRESULT STDMETHODCALLTYPE CreateDevice( 
             _In_opt_  IUnknown *adapter,
+            D3D_FEATURE_LEVEL FeatureLevel,
             REFIID riid,
             _COM_Outptr_opt_  void **ppvDevice) = 0;
         
@@ -24042,6 +24044,7 @@ EXTERN_C const IID IID_ID3D12DeviceFactory;
         HRESULT ( STDMETHODCALLTYPE *CreateDevice )( 
             ID3D12DeviceFactory * This,
             _In_opt_  IUnknown *adapter,
+            D3D_FEATURE_LEVEL FeatureLevel,
             REFIID riid,
             _COM_Outptr_opt_  void **ppvDevice);
         
@@ -24086,8 +24089,8 @@ EXTERN_C const IID IID_ID3D12DeviceFactory;
 #define ID3D12DeviceFactory_EnableExperimentalFeatures(This,NumFeatures,pIIDs,pConfigurationStructs,pConfigurationStructSizes)	\
     ( (This)->lpVtbl -> EnableExperimentalFeatures(This,NumFeatures,pIIDs,pConfigurationStructs,pConfigurationStructSizes) ) 
 
-#define ID3D12DeviceFactory_CreateDevice(This,adapter,riid,ppvDevice)	\
-    ( (This)->lpVtbl -> CreateDevice(This,adapter,riid,ppvDevice) ) 
+#define ID3D12DeviceFactory_CreateDevice(This,adapter,FeatureLevel,riid,ppvDevice)	\
+    ( (This)->lpVtbl -> CreateDevice(This,adapter,FeatureLevel,riid,ppvDevice) ) 
 
 #endif /* COBJMACROS */
 
@@ -27774,7 +27777,7 @@ DEFINE_GUID(IID_ID3D12VirtualizationGuestDevice,0xbc66d368,0x7373,0x4943,0x87,0x
 DEFINE_GUID(IID_ID3D12Tools,0x7071e1f0,0xe84b,0x4b33,0x97,0x4f,0x12,0xfa,0x49,0xde,0x65,0xc5);
 DEFINE_GUID(IID_ID3D12SDKConfiguration,0xe9eb5314,0x33aa,0x42b2,0xa7,0x18,0xd7,0x7f,0x58,0xb1,0xf1,0xc7);
 DEFINE_GUID(IID_ID3D12SDKConfiguration1,0x8aaf9303,0xad25,0x48b9,0x9a,0x57,0xd9,0xc3,0x7e,0x00,0x9d,0x9f);
-DEFINE_GUID(IID_ID3D12DeviceFactory,0xcd310fac,0xc78c,0x413d,0xa7,0x99,0x3d,0xa4,0x6a,0x95,0x2c,0xb7);
+DEFINE_GUID(IID_ID3D12DeviceFactory,0x61f307d3,0xd34e,0x4e7c,0x83,0x74,0x3b,0xa4,0xde,0x23,0xcc,0xcb);
 DEFINE_GUID(IID_ID3D12DeviceConfiguration,0x78dbf87b,0xf766,0x422b,0xa6,0x1c,0xc8,0xc4,0x46,0xbd,0xb9,0xad);
 DEFINE_GUID(IID_ID3D12GraphicsCommandList5,0x55050859,0x4024,0x474c,0x87,0xf5,0x64,0x72,0xea,0xee,0x44,0xea);
 DEFINE_GUID(IID_ID3D12GraphicsCommandList6,0xc3827890,0xe548,0x4cfa,0x96,0xcf,0x56,0x89,0xa9,0x37,0x0f,0x80);
