@@ -50,7 +50,7 @@
 #define DXGKDDI_INTERFACE_VERSION_WDDM2_8    0xD001
 #define DXGKDDI_INTERFACE_VERSION_WDDM2_9    0xE003
 #define DXGKDDI_INTERFACE_VERSION_WDDM3_0    0xF003
-#define DXGKDDI_INTERFACE_VERSION_WDDM3_1   0x10002
+#define DXGKDDI_INTERFACE_VERSION_WDDM3_1   0x10003
 
 
 #define IS_OFFICIAL_DDI_INTERFACE_VERSION(version)                 \
@@ -136,7 +136,7 @@
 #define D3D_UMD_INTERFACE_VERSION_WDDM3_0       D3D_UMD_INTERFACE_VERSION_WDDM3_0_1
 
 #define D3D_UMD_INTERFACE_VERSION_WDDM3_1_1     0x10000
-#define D3D_UMD_INTERFACE_VERSION_WDDM3_1       D3D_UMD_INTERFACE_VERSION_WDDM3_0_1
+#define D3D_UMD_INTERFACE_VERSION_WDDM3_1       D3D_UMD_INTERFACE_VERSION_WDDM3_1_1
 
 // Components which depend on D3D_UMD_INTERFACE_VERSION need to be updated, static assert validation present.
 // Search for D3D_UMD_INTERFACE_VERSION across all depots to ensure all dependencies are updated.
@@ -1772,7 +1772,18 @@ typedef struct _D3DDDI_SYNCHRONIZATIONOBJECT_FLAGS
             // When set, the fence can be signaled by KMD.
             // The flag can be used only with D3DDDI_CPU_NOTIFICATION objects.
             UINT SignalByKmd                                    :  1;
+
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)
+
+            // When set, indicates that the fence should be placed in GPU local memory if possible.
+            UINT LocalMemoryPreferred                           :  1;
+            UINT Reserved                                       : 21;
+#else
+
             UINT Reserved                                       : 22;
+
+#endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)
+
 #else
             UINT Reserved                                       : 23;
 #endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_0)
@@ -1854,6 +1865,34 @@ typedef struct _D3DDDI_SYNCHRONIZATIONOBJECTINFO2
     D3DKMT_HANDLE  SharedHandle;                    // out: global shared handle (when requested to be shared)
 
 } D3DDDI_SYNCHRONIZATIONOBJECTINFO2;
+
+#if ((DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1) || \
+     (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM3_1))
+
+typedef struct _D3DDDI_NATIVEFENCEMAPPING
+{
+    D3DKMT_PTR(VOID*,                       CurrentValueCpuVa);     // Read-only mapping of the current value for the CPU
+    D3DKMT_ALIGN64 D3DGPU_VIRTUAL_ADDRESS   CurrentValueGpuVa;      // Read/write mapping of the current value for the GPU in the current process address space
+    D3DKMT_ALIGN64 D3DGPU_VIRTUAL_ADDRESS   MonitoredValueGpuVa;    // Read/write mapping of the monitored value for the GPU in the current process address space
+} D3DDDI_NATIVEFENCEMAPPING;
+
+typedef struct _D3DDDI_CREATENATIVEFENCEINFO
+{
+    D3DKMT_ALIGN64 UINT64                   InitialFenceValue;      // in: initial fence value.
+
+    D3DKMT_PTR(_Field_size_bytes_(PrivateDriverDataSize)
+    PVOID,                                  pPrivateDriverData);    // in: Private driver data to pass to KMD CreateNativeFence call
+    UINT                                    PrivateDriverDataSize;  // in: size of pPrivateDriverData array in bytes
+
+    UINT                                    EngineAffinity;         // in: Defines physical adapters where the GPU VA is mapped
+    D3DDDI_SYNCHRONIZATIONOBJECT_FLAGS      Flags;                  // in: Flags.
+
+    D3DKMT_HANDLE                           hSyncObject;            // out: Handle to sync object in this process.
+
+    D3DDDI_NATIVEFENCEMAPPING               NativeFenceMapping;     // out: process mapping information for the native fence
+} D3DDDI_CREATENATIVEFENCEINFO;
+
+#endif // >= 3_1
 
 #if ((DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_0) || \
      (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_0))

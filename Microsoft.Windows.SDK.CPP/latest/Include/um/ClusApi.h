@@ -8706,6 +8706,8 @@ typedef DWORD
 #define CLUSREG_NAME_FILESHR_IS_DFS_ROOT            L"IsDfsRoot"
 #define CLUSREG_NAME_FILESHR_SHARE_FLAGS            L"ShareFlags"
 #define CLUSREG_NAME_FILESHR_CA_TIMEOUT             L"CATimeout"
+#define CLUSREG_NAME_FILESHR_QOS_FLOWSCOPE          L"QosFlowScope"
+#define CLUSREG_NAME_FILESHR_QOS_POLICYID           L"QosPolicyId"
 
 //
 // DHCP Service

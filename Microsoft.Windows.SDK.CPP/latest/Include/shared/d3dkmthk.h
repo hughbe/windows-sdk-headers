@@ -134,6 +134,16 @@ typedef struct _D3DKMT_CREATESYNCHRONIZATIONOBJECT2
     D3DKMT_HANDLE                           hSyncObject;    // out: Handle to the synchronization object created.
 } D3DKMT_CREATESYNCHRONIZATIONOBJECT2;
 
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)
+
+typedef struct _D3DKMT_CREATENATIVEFENCE
+{
+    D3DKMT_HANDLE                   hDevice;        // in:  Handle to the device.
+    D3DDDI_CREATENATIVEFENCEINFO    Info;           // in/out: Attributes of the synchronization object.
+} D3DKMT_CREATENATIVEFENCE;
+
+#endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)
+
 typedef struct _D3DKMT_DESTROYSYNCHRONIZATIONOBJECT
 {
     D3DKMT_HANDLE               hSyncObject;                // in:  Identifies the synchronization objects being destroyed.
@@ -1541,6 +1551,23 @@ typedef struct _D3DKMT_OPENSYNCOBJECTFROMNTHANDLE2
 
 } D3DKMT_OPENSYNCOBJECTFROMNTHANDLE2;
 
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)
+
+typedef struct _D3DKMT_OPENNATIVEFENCEFROMNTHANDLE
+{
+    D3DKMT_PTR(HANDLE,                  hNtHandle);         // in : NT handle for the sync object.
+    D3DKMT_HANDLE                       hDevice;            // in : Device handle to use this sync object on.
+
+    UINT                                EngineAffinity;     // in: Defines physical adapters where the GPU VA is mapped
+    D3DDDI_SYNCHRONIZATIONOBJECT_FLAGS  Flags;              // in: Flags.
+
+    D3DKMT_HANDLE                       hSyncObject;        // out: Handle to sync object in this process.
+
+    D3DDDI_NATIVEFENCEMAPPING           NativeFenceMapping; // out: process mapping information for the native fence
+} D3DKMT_OPENNATIVEFENCEFROMNTHANDLE;
+
+#endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)
+
 typedef struct _D3DKMT_OPENSYNCOBJECTNTHANDLEFROMNAME
 {
     DWORD                          dwDesiredAccess;
@@ -2262,6 +2289,9 @@ typedef enum _KMTQUERYADAPTERINFOTYPE
      KMTQAITYPE_WSAUMDIMAGENAME             = 78,
      KMTQAITYPE_VGPUINTERFACEID             = 79,
 #endif // DXGKDDI_INTERFACE_VERSION_WDDM3_0
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)
+     KMTQAITYPE_WDDM_3_1_CAPS               = 80,
+#endif // DXGKDDI_INTERFACE_VERSION_WDDM3_1
 // If a new enum will be used by DXGI or D3D11 software driver code, update the test content in the area.
 // Search for KMTQAITYPE_PARAVIRTUALIZATION_RENDER in directx\dxg\dxgi\unittests for references.
 } KMTQUERYADAPTERINFOTYPE;
@@ -5505,6 +5535,9 @@ typedef _Check_return_ NTSTATUS (APIENTRY *PFND3DKMT_CANCELPRESENTS)(_In_ D3DKMT
 #if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)
 
 
+typedef _Check_return_ NTSTATUS (APIENTRY *PFND3DKMT_CREATENATIVEFENCE)(_Inout_ D3DKMT_CREATENATIVEFENCE*);
+typedef _Check_return_ NTSTATUS (APIENTRY *PFND3DKMT_OPENNATIVEFENCEFROMNTHANDLE)(_Inout_ D3DKMT_OPENNATIVEFENCEFROMNTHANDLE*);
+
 #endif
 
 #if !defined(D3DKMDT_SPECIAL_MULTIPLATFORM_TOOL)
@@ -5775,6 +5808,9 @@ EXTERN_C VOID APIENTRY D3DKMTCloseDxCoreDevice();
 
 #if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)
 
+
+EXTERN_C _Check_return_ NTSTATUS APIENTRY D3DKMTCreateNativeFence(_Inout_ D3DKMT_CREATENATIVEFENCE*);
+EXTERN_C _Check_return_ NTSTATUS APIENTRY D3DKMTOpenNativeFenceFromNtHandle(_Inout_ D3DKMT_OPENNATIVEFENCEFROMNTHANDLE*);
 
 #endif
 

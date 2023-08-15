@@ -47,15 +47,6 @@ Abstract:
 #define HVSOCKET_CONNECT_TIMEOUT_MAX   300000
 
 //
-// HVSOCKET_CONTAINER_PASSTHRU:
-// Input:
-// Type: ULONG.
-// Description:
-// Set container passthru flag, non-zero value indicates pass thru.
-//
-#define HVSOCKET_CONTAINER_PASSTHRU     0x02
-
-//
 // HVSOCKET_CONNECTED_SUSPEND:
 // Input:
 // Type: ULONG.

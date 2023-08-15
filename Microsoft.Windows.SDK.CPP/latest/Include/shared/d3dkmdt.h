@@ -2186,6 +2186,23 @@ typedef struct _D3DKMT_WDDM_3_0_CAPS
 
 #endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_0)
 
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)
+
+typedef struct _D3DKMT_WDDM_3_1_CAPS
+{
+    union
+    {
+        struct
+        {
+            UINT    NativeGpuFenceSupported :   1;    // Specifies whether native GPU fence is supported by this GPU
+            UINT    Reserved                :  31;
+        };
+        UINT Value;
+    };
+} D3DKMT_WDDM_3_1_CAPS;
+
+#endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)
+
 
 typedef struct _D3DKMT_TRACKEDWORKLOAD_SUPPORT
 {

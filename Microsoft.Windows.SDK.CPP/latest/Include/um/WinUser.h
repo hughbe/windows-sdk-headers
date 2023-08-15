@@ -15945,6 +15945,13 @@ SetProcessRestrictionExemption(
 
 #if(WINVER >= 0x0607)
 
+WINUSERAPI
+BOOL
+WINAPI
+SetAdditionalForegroundBoostProcesses(HWND topLevelWindow,
+                                      DWORD processHandleCount,
+                                      _In_reads_(processHandleCount) HANDLE *processHandleArray);
+
 /* TOOLTIP_DISMISS_FLAGS:
  *
  * These are flags used with the RegisterForTooltipDismissNotification API.

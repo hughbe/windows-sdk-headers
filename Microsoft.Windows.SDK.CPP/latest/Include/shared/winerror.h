@@ -52120,6 +52120,33 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 #define ERROR_HV_INSUFFICIENT_CONTIGUOUS_MEMORY_MIRRORING _NDIS_ERROR_TYPEDEF_(0xC0350082L)
 
 //
+// MessageId: ERROR_HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY
+//
+// MessageText:
+//
+// There is not enough contiguous memory in the root partition's pool to complete the operation.
+//
+#define ERROR_HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY _NDIS_ERROR_TYPEDEF_(0xC0350083L)
+
+//
+// MessageId: ERROR_HV_INSUFFICIENT_ROOT_MEMORY_MIRRORING
+//
+// MessageText:
+//
+// There is not enough memory in the root partition's pool to complete the mirroring operation.
+//
+#define ERROR_HV_INSUFFICIENT_ROOT_MEMORY_MIRRORING _NDIS_ERROR_TYPEDEF_(0xC0350084L)
+
+//
+// MessageId: ERROR_HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY_MIRRORING
+//
+// MessageText:
+//
+// There is not enough contiguous memory in the root partition's pool to complete the mirroring operation.
+//
+#define ERROR_HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY_MIRRORING _NDIS_ERROR_TYPEDEF_(0xC0350085L)
+
+//
 // MessageId: ERROR_HV_NOT_PRESENT
 //
 // MessageText:
@@ -52548,6 +52575,24 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 // Memory type not supported for requested operation.
 //
 #define ERROR_VID_MEMORY_TYPE_NOT_SUPPORTED _NDIS_ERROR_TYPEDEF_(0xC037002EL)
+
+//
+// MessageId: ERROR_VID_INSUFFICIENT_RESOURCES_WITHDRAW
+//
+// MessageText:
+//
+// Failed to withdraw memory.
+//
+#define ERROR_VID_INSUFFICIENT_RESOURCES_WITHDRAW _NDIS_ERROR_TYPEDEF_(0xC037002FL)
+
+//
+// MessageId: ERROR_VID_PROCESS_ALREADY_SET
+//
+// MessageText:
+//
+// The process has already been set.
+//
+#define ERROR_VID_PROCESS_ALREADY_SET    _NDIS_ERROR_TYPEDEF_(0xC0370030L)
 
 //
 // Host compute service errors (0x0100-0x01ff)

@@ -1460,6 +1460,53 @@ typedef VOID (WINAPI *PEVENT_CALLBACK)( PEVENT_TRACE pEvent );
 
 typedef VOID (WINAPI *PEVENT_RECORD_CALLBACK) (PEVENT_RECORD EventRecord);
 
+typedef struct ETW_BUFFER_HEADER {
+    ULONG Reserved1[4];
+    LARGE_INTEGER TimeStamp; // Time of flush
+    ULONG Reserved2[4];
+    ETW_BUFFER_CONTEXT ClientContext;
+    ULONG Reserved3;
+    ULONG FilledBytes; // Number of bytes written to the buffer.  Essentially the filled length of the buffer.
+    ULONG Reserved4[5];
+} ETW_BUFFER_HEADER;
+
+// Structure passed to the BufferCallback containing information on the
+// current state of the processing session.
+typedef struct ETW_BUFFER_CALLBACK_INFORMATION {
+    TRACEHANDLE TraceHandle;
+    const TRACE_LOGFILE_HEADER* LogfileHeader;
+    ULONG BuffersRead;
+} ETW_BUFFER_CALLBACK_INFORMATION;
+
+typedef BOOL (WINAPI *PETW_BUFFER_CALLBACK) (
+    _In_reads_bytes_(BufferSize) const ETW_BUFFER_HEADER* Buffer,
+    _In_ ULONG BufferSize,
+    _In_ const ETW_BUFFER_CALLBACK_INFORMATION* ConsumerInfo,
+    _In_opt_ void* CallbackContext);
+
+typedef enum ETW_PROCESS_TRACE_MODES {
+    ETW_PROCESS_TRACE_MODE_NONE = 0,
+    ETW_PROCESS_TRACE_MODE_RAW_TIMESTAMP = 0x00000001
+} ETW_PROCESS_TRACE_MODES;
+
+// Configuration options to pass into OpenTrace style functions.
+typedef struct ETW_OPEN_TRACE_OPTIONS {
+    ETW_PROCESS_TRACE_MODES ProcessTraceModes;
+
+    // This callback will be called for each event in time order.
+    // If left NULL, all event playback code will be bypassed.
+    PEVENT_RECORD_CALLBACK  EventCallback;
+    void* EventCallbackContext;
+
+    // This callback will get called once buffer processing is complete.
+    PETW_BUFFER_CALLBACK BufferCallback;
+    void* BufferCallbackContext;
+} ETW_OPEN_TRACE_OPTIONS;
+
+typedef VOID (WINAPI *PETW_BUFFER_COMPLETION_CALLBACK) (
+    _In_ const ETW_BUFFER_HEADER* Buffer,
+    _In_opt_ void* CallbackContext);
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
@@ -1565,7 +1612,6 @@ struct _EVENT_TRACE_LOGFILEA {
 #if _MSC_VER >= 1200
 #pragma warning(pop)
 #endif
-
 
 //
 // Define generic structures
@@ -2591,6 +2637,81 @@ ULONG
 WMIAPI
 CloseTrace (
     _In_ TRACEHANDLE TraceHandle
+    );
+
+EXTERN_C
+ETW_APP_DECLSPEC_DEPRECATED
+_Success_(return != INVALID_PROCESSTRACE_HANDLE)
+TRACEHANDLE
+WMIAPI
+OpenTraceFromBufferStream(
+    _In_ const ETW_OPEN_TRACE_OPTIONS* Options,
+    _In_ PETW_BUFFER_COMPLETION_CALLBACK BufferCompletionCallback,
+    _In_opt_ void* BufferCompletionContext
+    );
+
+EXTERN_C
+ETW_APP_DECLSPEC_DEPRECATED
+_Success_(return != INVALID_PROCESSTRACE_HANDLE)
+TRACEHANDLE
+WMIAPI
+OpenTraceFromRealTimeLogger(
+    _In_ PCWSTR LoggerName,
+    _In_ const ETW_OPEN_TRACE_OPTIONS* Options,
+    _Out_opt_ TRACE_LOGFILE_HEADER* LogFileHeader
+    );
+
+EXTERN_C
+ETW_APP_DECLSPEC_DEPRECATED
+_Success_(return != INVALID_PROCESSTRACE_HANDLE)
+TRACEHANDLE
+WMIAPI
+OpenTraceFromRealTimeLoggerWithAllocationOptions(
+    _In_ PCWSTR LoggerName,
+    _In_ const ETW_OPEN_TRACE_OPTIONS* Options,
+    _In_ ULONG_PTR AllocationSize,
+    _In_opt_ HANDLE MemoryPartitionHandle,
+    _Out_opt_ TRACE_LOGFILE_HEADER* LogFileHeader
+    );
+
+EXTERN_C
+ETW_APP_DECLSPEC_DEPRECATED
+_Success_(return != INVALID_PROCESSTRACE_HANDLE)
+TRACEHANDLE
+WMIAPI
+OpenTraceFromFile(
+    _In_ PCWSTR LogFileName,
+    _In_ const ETW_OPEN_TRACE_OPTIONS* Options,
+    _Out_opt_ TRACE_LOGFILE_HEADER* LogFileHeader
+    );
+
+EXTERN_C
+ETW_APP_DECLSPEC_DEPRECATED
+_Success_(return == ERROR_SUCCESS)
+ULONG
+WMIAPI
+ProcessTraceBufferIncrementReference(
+    _In_ TRACEHANDLE TraceHandle,
+    _In_ const ETW_BUFFER_HEADER* Buffer
+    );
+
+EXTERN_C
+ETW_APP_DECLSPEC_DEPRECATED
+_Success_(return == ERROR_SUCCESS)
+ULONG
+WMIAPI
+ProcessTraceBufferDecrementReference(
+    _In_ const ETW_BUFFER_HEADER* Buffer
+    );
+
+EXTERN_C
+ETW_APP_DECLSPEC_DEPRECATED
+_Success_(return == ERROR_SUCCESS)
+ULONG
+WMIAPI
+ProcessTraceAddBufferToBufferStream(
+    _In_ TRACEHANDLE TraceHandle,
+    _In_ const ETW_BUFFER_HEADER* Buffer
     );
 
 //

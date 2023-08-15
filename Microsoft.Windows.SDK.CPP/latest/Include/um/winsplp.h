@@ -1103,6 +1103,19 @@ typedef struct _PRINTPROVIDOR
         _Outptr_result_bytebuffer_(*ippResponseBufferSize) BYTE** ippResponseBuffer
         );
 
+    HRESULT (*fpIppCreateJobOnPrinterWithAttributes)
+    (
+        _In_ HANDLE hPrinter,
+        _In_ DWORD jobId,
+        _In_ PCWSTR pdlFormat,
+        _In_ DWORD jobAttributesBufferSize,
+        _In_reads_bytes_(jobAttributesBufferSize) PBYTE jobAttributeGroupBuffer,
+        _In_ DWORD operationAttributesBufferSize,
+        _In_reads_bytes_opt_(operationAttributesBufferSize) PBYTE operationAttributeGroupBuffer,
+        _Out_ PDWORD ippResponseBufferSize,
+        _Outptr_result_bytebuffer_(*ippResponseBufferSize) PBYTE* ippResponseBuffer
+        );
+
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_19H1)
 }
 PRINTPROVIDOR, *LPPRINTPROVIDOR;

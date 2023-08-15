@@ -22736,6 +22736,33 @@ Notes:
 #define STATUS_HV_INSUFFICIENT_CONTIGUOUS_MEMORY_MIRRORING ((NTSTATUS)0xC0350082L)
 
 //
+// MessageId: STATUS_HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY
+//
+// MessageText:
+//
+// There is not enough contiguous memory in the root partition's pool to complete the operation.
+//
+#define STATUS_HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY ((NTSTATUS)0xC0350083L)
+
+//
+// MessageId: STATUS_HV_INSUFFICIENT_ROOT_MEMORY_MIRRORING
+//
+// MessageText:
+//
+// There is not enough memory in the root partition's pool to complete the mirroring operation.
+//
+#define STATUS_HV_INSUFFICIENT_ROOT_MEMORY_MIRRORING ((NTSTATUS)0xC0350084L)
+
+//
+// MessageId: STATUS_HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY_MIRRORING
+//
+// MessageText:
+//
+// There is not enough contiguous memory in the root partition's pool to complete the mirroring operation.
+//
+#define STATUS_HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY_MIRRORING ((NTSTATUS)0xC0350085L)
+
+//
 // MessageId: STATUS_HV_NOT_PRESENT
 //
 // MessageText:
@@ -23167,6 +23194,24 @@ Notes:
 // Memory type not supported for requested operation.
 //
 #define STATUS_VID_MEMORY_TYPE_NOT_SUPPORTED ((NTSTATUS)0xC037002EL)
+
+//
+// MessageId: STATUS_VID_INSUFFICIENT_RESOURCES_WITHDRAW
+//
+// MessageText:
+//
+// Failed to withdraw memory.
+//
+#define STATUS_VID_INSUFFICIENT_RESOURCES_WITHDRAW ((NTSTATUS)0xC037002FL)
+
+//
+// MessageId: STATUS_VID_PROCESS_ALREADY_SET
+//
+// MessageText:
+//
+// The process has already been set.
+//
+#define STATUS_VID_PROCESS_ALREADY_SET   ((NTSTATUS)0xC0370030L)
 
 //
 // Warnings:

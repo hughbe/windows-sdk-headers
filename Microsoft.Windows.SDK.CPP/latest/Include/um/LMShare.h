@@ -310,6 +310,7 @@ typedef struct _SERVER_ALIAS_INFO_0 {
 #define SHARE_PASSWD_PARMNUM          9
 #define SHARE_FILE_SD_PARMNUM       501
 #define SHARE_SERVER_PARMNUM        503
+#define SHARE_QOS_POLICY_PARMNUM    504
 
 //
 // Single-field infolevels for NetShareSetInfo.

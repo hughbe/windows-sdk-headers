@@ -5406,9 +5406,12 @@ typedef struct _SCOPE_TABLE_ARM64 {
 // Temporary workaround for C++ bug: 64-bit bit test intrinsics are
 // not honoring the full 64-bit wide index, so pre-process the index
 // down to a qword base and a bit index 0-63 before calling through 
-// to the true intrinsic.
+// to the true intrinsic. This issue was fixed as of compiler build
+// 19.28.29395.7.
 //
+#if defined(_MSC_FULL_VER) && (_MSC_FULL_VER < 192829395 || (_MSC_FULL_VER == 192829395 && _MSC_BUILD < 7))
 #define __ARM64_COMPILER_BITTEST64_WORKAROUND
+#endif
 
 #if !defined(__ARM64_COMPILER_BITTEST64_WORKAROUND)
 #define BitTest64 _bittest64
@@ -21508,6 +21511,40 @@ memcpy_inline (
 #define RtlFillMemory(Destination,Length,Fill) memset((Destination),(Fill),(Length))
 #define RtlZeroMemory(Destination,Length) memset((Destination),0,(Length))
 
+#if !defined(MIDL_PASS)
+
+FORCEINLINE
+int
+RtlConstantTimeEqualMemory(
+    const void* v1,
+    const void* v2,
+    unsigned long len
+    )
+{
+    char x = 0;
+
+    // Use volatile to prevent compiler from optimizing read
+    volatile const char* p1 = (volatile const char*) v1;
+    volatile const char* p2 = (volatile const char*) v2;
+
+    for (unsigned long i = 0; i < len; i += 1) {
+
+#if !defined(_M_CEE) && (defined(_M_ARM) || defined(_M_ARM64) || defined(_M_ARM64EC))
+
+        x |= __iso_volatile_load8(&p1[i]) ^ __iso_volatile_load8(&p2[i]);
+
+#else
+
+        x |= p1[i] ^ p2[i];
+
+#endif
+
+    }
+
+    return x == 0;
+}
+
+#endif
 
 #if !defined(MIDL_PASS)
 
@@ -21564,12 +21601,14 @@ RtlSecureZeroMemory(
 #define SEF_AI_USE_EXTRA_PARAMS           0x800
 #define SEF_AVOID_OWNER_RESTRICTION       0x1000
 #define SEF_FORCE_USER_MODE               0x2000
+#define SEF_NORMALIZE_OUTPUT_DESCRIPTOR   0x4000
 
 #define SEF_MACL_VALID_FLAGS              (SEF_MACL_NO_WRITE_UP   | \
                                            SEF_MACL_NO_READ_UP    | \
                                            SEF_MACL_NO_EXECUTE_UP)
 
 // end_wdm
+// end_ntifs
 // begin_ntosifs
 
 typedef struct _MESSAGE_RESOURCE_ENTRY {
