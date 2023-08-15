@@ -287,6 +287,21 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CUI_CShell_CITaskbarManager2_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Shell {
+                interface ITaskbarManagerDesktopAppSupportStatics;
+            } /* Shell */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics ABI::Windows::UI::Shell::ITaskbarManagerDesktopAppSupportStatics
+
+#endif // ____x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CShell_CITaskbarManagerStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CShell_CITaskbarManagerStatics_FWD_DEFINED__
 namespace ABI {
@@ -1689,6 +1704,39 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CITaskbarManager2;
 
 /*
  *
+ * Interface Windows.UI.Shell.ITaskbarManagerDesktopAppSupportStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Shell.TaskbarManager
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Shell_ITaskbarManagerDesktopAppSupportStatics[] = L"Windows.UI.Shell.ITaskbarManagerDesktopAppSupportStatics";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Shell {
+                MIDL_INTERFACE("cdfefd63-e879-4134-b9a7-8283f05f9480")
+                ITaskbarManagerDesktopAppSupportStatics : public IInspectable
+                {
+                public:
+                };
+
+                extern MIDL_CONST_ID IID& IID_ITaskbarManagerDesktopAppSupportStatics = _uuidof(ITaskbarManagerDesktopAppSupportStatics);
+            } /* Shell */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics;
+#endif /* !defined(____x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
  * Interface Windows.UI.Shell.ITaskbarManagerStatics
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
@@ -2366,6 +2414,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Shell.ITaskbarManagerDesktopAppSupportStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Shell.ITaskbarManagerStatics interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
@@ -2644,6 +2693,12 @@ typedef interface __x_ABI_CWindows_CUI_CShell_CITaskbarManager __x_ABI_CWindows_
 typedef interface __x_ABI_CWindows_CUI_CShell_CITaskbarManager2 __x_ABI_CWindows_CUI_CShell_CITaskbarManager2;
 
 #endif // ____x_ABI_CWindows_CUI_CShell_CITaskbarManager2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics __x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics;
+
+#endif // ____x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CShell_CITaskbarManagerStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CShell_CITaskbarManagerStatics_FWD_DEFINED__
@@ -4508,6 +4563,70 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CITaskbarManager2;
 
 /*
  *
+ * Interface Windows.UI.Shell.ITaskbarManagerDesktopAppSupportStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Shell.TaskbarManager
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Shell_ITaskbarManagerDesktopAppSupportStatics[] = L"Windows.UI.Shell.ITaskbarManagerDesktopAppSupportStatics";
+typedef struct __x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStaticsVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics* This,
+        TrustLevel* trustLevel);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStaticsVtbl;
+
+interface __x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStaticsVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics;
+#endif /* !defined(____x_ABI_CWindows_CUI_CShell_CITaskbarManagerDesktopAppSupportStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
  * Interface Windows.UI.Shell.ITaskbarManagerStatics
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
@@ -5648,6 +5767,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
  *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Shell.ITaskbarManagerDesktopAppSupportStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Shell.ITaskbarManagerStatics interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:

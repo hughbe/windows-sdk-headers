@@ -117,6 +117,8 @@ namespace Windows
 
             interface ITaskbarManager2;
 
+            interface ITaskbarManagerDesktopAppSupportStatics;
+
             interface ITaskbarManagerStatics;
 
             interface IWindowTab;
@@ -369,6 +371,13 @@ namespace Windows
                 HRESULT TryUnpinSecondaryTileAsync([in] HSTRING tileId, [out] [retval] Windows.Foundation.IAsyncOperation<boolean>** operation);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.UI.Shell.TaskbarManager)]
+            [uuid(CDFEFD63-E879-4134-B9A7-8283F05F9480)]
+            interface ITaskbarManagerDesktopAppSupportStatics : IInspectable
+            {
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 5.0)]
             [exclusiveto(Windows.UI.Shell.TaskbarManager)]
             [uuid(DB32AB74-DE52-4FE6-B7B6-95FF9F8395DF)]
@@ -549,6 +558,7 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 5.0)]
             [marshaling_behavior(agile)]
+            [static(Windows.UI.Shell.ITaskbarManagerDesktopAppSupportStatics, Windows.Foundation.UniversalApiContract, 15.0)]
             [static(Windows.UI.Shell.ITaskbarManagerStatics, Windows.Foundation.UniversalApiContract, 5.0)]
             [threading(both)]
             runtimeclass TaskbarManager
