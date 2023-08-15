@@ -26271,6 +26271,15 @@ Notes:
 #define STATUS_IORING_CORRUPT            ((NTSTATUS)0xC0460007L)
 
 //
+// MessageId: STATUS_IORING_COMPLETION_QUEUE_TOO_FULL
+//
+// MessageText:
+//
+// The completion queue does not have enough free space, to post completions, for all entries being submitted.
+//
+#define STATUS_IORING_COMPLETION_QUEUE_TOO_FULL ((NTSTATUS)0xC0460008L)
+
+//
 // Map a WIN32 error value into an NTSTATUS
 // Note: This assumes that WIN32 errors fall in the range -32k to 32k.
 //

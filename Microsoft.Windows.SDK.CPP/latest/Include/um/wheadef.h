@@ -52,6 +52,7 @@ typedef enum _WHEA_ERROR_SOURCE_TYPE {
     WheaErrSrcTypePMEM         = 0x0f,    // ARS PMEM Error Source
     WheaErrSrcTypeDeviceDriver = 0x10,    // Device Driver Error Source
     WheaErrSrcTypeSea          = 0x11,    // Arm Sync External Abort
+    WheaErrSrcTypeSei          = 0x12,    // Arm Sync External Abort
     WheaErrSrcTypeMax
 } WHEA_ERROR_SOURCE_TYPE, *PWHEA_ERROR_SOURCE_TYPE;
 

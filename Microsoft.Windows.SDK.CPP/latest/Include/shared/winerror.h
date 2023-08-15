@@ -64693,4 +64693,13 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 //
 #define IORING_E_CORRUPT                 _HRESULT_TYPEDEF_(0x80460007L)
 
+//
+// MessageId: IORING_E_COMPLETION_QUEUE_TOO_FULL
+//
+// MessageText:
+//
+// The completion queue does not have enough free space, to post completions, for all entries being submitted.
+//
+#define IORING_E_COMPLETION_QUEUE_TOO_FULL _HRESULT_TYPEDEF_(0x80460008L)
+
 #endif//_WINERROR_

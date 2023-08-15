@@ -20,7 +20,7 @@ Abstract:
 extern "C" {
 #endif
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_CO)
+#if defined(NTDDI_WIN10_CO) && (NTDDI_VERSION >= NTDDI_WIN10_CO)
 
 typedef enum IORING_VERSION {
 
@@ -35,6 +35,11 @@ typedef enum IORING_VERSION {
     /// around this issue.
     /// </remarks>
     IORING_VERSION_2,
+
+#if defined(NTDDI_WIN10_NI) && (NTDDI_VERSION >= NTDDI_WIN10_NI)
+    /// <summary>Major update; Adds write, FLUSH and DRAIN support</summary>
+    IORING_VERSION_3,
+#endif
 } IORING_VERSION;
 
 /// <summary>
@@ -124,11 +129,13 @@ typedef enum IORING_OP_CODE {
     /// </remarks>
     IORING_OP_CANCEL,
 
+#if defined(NTDDI_WIN10_NI) && (NTDDI_VERSION >= NTDDI_WIN10_NI)
     /// <summary>Write to a file from a buffer</summary>
     IORING_OP_WRITE,
 
     /// <summary>Flush buffers for a file</summary>
     IORING_OP_FLUSH,
+#endif
 } IORING_OP_CODE;
 
 /// <summary>Buffer data for registering buffers with an IoRing</summary>

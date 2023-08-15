@@ -5800,8 +5800,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics2 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5884,8 +5884,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.ApplicationModel.FullTrustAppContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.ApplicationModel.IFullTrustProcessLauncherStatics2 interface starting with version 2.0 of the Windows.ApplicationModel.FullTrustAppContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.IFullTrustProcessLauncherStatics interface starting with version 1.0 of the Windows.ApplicationModel.FullTrustAppContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.IFullTrustProcessLauncherStatics2 interface starting with version 2.0 of the Windows.ApplicationModel.FullTrustAppContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15905,8 +15905,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics2 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15989,8 +15989,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.ApplicationModel.FullTrustAppContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.ApplicationModel.IFullTrustProcessLauncherStatics2 interface starting with version 2.0 of the Windows.ApplicationModel.FullTrustAppContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.IFullTrustProcessLauncherStatics interface starting with version 1.0 of the Windows.ApplicationModel.FullTrustAppContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.IFullTrustProcessLauncherStatics2 interface starting with version 2.0 of the Windows.ApplicationModel.FullTrustAppContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *

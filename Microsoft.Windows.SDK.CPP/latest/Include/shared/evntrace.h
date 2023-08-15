@@ -2711,7 +2711,8 @@ ULONG
 WMIAPI
 ProcessTraceAddBufferToBufferStream(
     _In_ TRACEHANDLE TraceHandle,
-    _In_ const ETW_BUFFER_HEADER* Buffer
+    _In_reads_bytes_(BufferSize) const ETW_BUFFER_HEADER* Buffer,
+    _In_ ULONG BufferSize
     );
 
 //

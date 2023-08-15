@@ -4396,7 +4396,10 @@ typedef struct _DISPATCHER_CONTEXT_ARM64EC {
     DWORD64 ImageBase;
     PRUNTIME_FUNCTION FunctionEntry;
     DWORD64 EstablisherFrame;
-    DWORD64 TargetIp;
+    union {
+        DWORD64 TargetIp;
+        DWORD64 TargetPc;
+    } DUMMYUNIONNAME;
     PCONTEXT ContextRecord;
     PEXCEPTION_ROUTINE LanguageHandler;
     PVOID HandlerData;

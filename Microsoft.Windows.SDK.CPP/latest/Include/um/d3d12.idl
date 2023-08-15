@@ -361,7 +361,7 @@ const UINT D3D12_REQ_TEXTURECUBE_DIMENSION = 16384;
 const UINT D3D12_RESINFO_INSTRUCTION_MISSING_COMPONENT_RETVAL = 0;
 const UINT D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES = 0xffffffff;
 const UINT D3D12_RS_SET_SHADING_RATE_COMBINER_COUNT = 2;
-const UINT D3D12_SDK_VERSION = 600;
+const UINT D3D12_SDK_VERSION = 601;
 const UINT D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES = 32;
 const UINT D3D12_SHADER_MAJOR_VERSION = 5;
 const UINT D3D12_SHADER_MAX_INSTANCES = 65535;
@@ -1419,6 +1419,7 @@ typedef struct D3D12_FEATURE_DATA_D3D12_OPTIONS13
     [annotation("_Out_")] BOOL UnrestrictedVertexElementAlignmentSupported;
     [annotation("_Out_")] BOOL InvertedViewportHeightFlipsYSupported;
     [annotation("_Out_")] BOOL InvertedViewportDepthFlipsZSupported;
+    [annotation("_Out_")] BOOL TextureCopyBetweenDimensionsSupported;
 } D3D12_FEATURE_DATA_D3D12_OPTIONS13;
 
 
@@ -5273,16 +5274,6 @@ typedef struct D3D12_BUFFER_BARRIER
     UINT64 Size;
 } D3D12_BUFFER_BARRIER;
 
-typedef struct D3D12_RESOURCE_STATE_BARRIER
-{
-    D3D12_RESOURCE_STATES State;
-    [annotation("_In_")] ID3D12Resource *pResource;
-    UINT Subresource;
-    D3D12_BARRIER_SYNC Sync;
-    D3D12_BARRIER_ACCESS Access;
-    D3D12_BARRIER_LAYOUT Layout;
-} D3D12_RESOURCE_STATE_BARRIER;
-
 typedef struct D3D12_BARRIER_GROUP
 {
     D3D12_BARRIER_TYPE Type;
@@ -5292,7 +5283,6 @@ typedef struct D3D12_BARRIER_GROUP
         [annotation("_In_reads_(NumBarriers)")] const D3D12_GLOBAL_BARRIER *pGlobalBarriers;
         [annotation("_In_reads_(NumBarriers)")] const D3D12_TEXTURE_BARRIER *pTextureBarriers;
         [annotation("_In_reads_(NumBarriers)")] const D3D12_BUFFER_BARRIER *pBufferBarriers;
-        [annotation("_In_reads_(NumBarriers)")] const D3D12_RESOURCE_STATE_BARRIER *pStateBarriers;
     };
 } D3D12_BARRIER_GROUP;
 

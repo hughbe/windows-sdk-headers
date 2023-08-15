@@ -316,7 +316,7 @@ namespace Windows
 
             interface ICompositionObjectStatics;
 
-            interface ICompositionObject_AnimationController;
+            interface ICompositionObjectWithAnimationController;
 
             interface ICompositionPath;
 
@@ -400,9 +400,9 @@ namespace Windows
 
             interface ICompositor7;
 
-            interface ICompositorCreateAnimationController;
-
             interface ICompositorStatics;
+
+            interface ICompositorWithAnimationController;
 
             interface ICompositorWithBlurredWallpaperBackdropBrush;
 
@@ -1755,9 +1755,9 @@ namespace Windows
             [exclusiveto(Windows.UI.Composition.CompositionObject)]
             [experimental]
             [uuid(9CE15258-074F-44C9-8903-284394E28D67)]
-            interface ICompositionObject_AnimationController : IInspectable
+            interface ICompositionObjectWithAnimationController : IInspectable
             {
-                [overload("StartAnimation")] HRESULT StartAndAddAnimationToController([in] HSTRING propertyName, [in] Windows.UI.Composition.CompositionAnimation* animation, [in] Windows.UI.Composition.AnimationController* animationController);
+                [overload("StartAnimation")] HRESULT StartAnimationWithController([in] HSTRING propertyName, [in] Windows.UI.Composition.CompositionAnimation* animation, [in] Windows.UI.Composition.AnimationController* animationController);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
@@ -2273,15 +2273,6 @@ namespace Windows
                 [overload("CreateRectangleClip")] HRESULT CreateRectangleClipWithSidesAndRadius([in] FLOAT left, [in] FLOAT top, [in] FLOAT right, [in] FLOAT bottom, [in] Windows.Foundation.Numerics.Vector2 topLeftRadius, [in] Windows.Foundation.Numerics.Vector2 topRightRadius, [in] Windows.Foundation.Numerics.Vector2 bottomRightRadius, [in] Windows.Foundation.Numerics.Vector2 bottomLeftRadius, [out] [retval] Windows.UI.Composition.RectangleClip** result);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 14.0)]
-            [exclusiveto(Windows.UI.Composition.Compositor)]
-            [experimental]
-            [uuid(9E487B57-621E-4780-9F06-03AE0ABA5D59)]
-            interface ICompositorCreateAnimationController : IInspectable
-            {
-                HRESULT CreateAnimationController([out] [retval] Windows.UI.Composition.AnimationController** result);
-            }
-
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
             [exclusiveto(Windows.UI.Composition.Compositor)]
             [uuid(080DB93E-121E-4D97-8B74-1DFCF91987EA)]
@@ -2289,6 +2280,15 @@ namespace Windows
             {
                 [propget] HRESULT MaxGlobalPlaybackRate([out] [retval] FLOAT* value);
                 [propget] HRESULT MinGlobalPlaybackRate([out] [retval] FLOAT* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 14.0)]
+            [exclusiveto(Windows.UI.Composition.Compositor)]
+            [experimental]
+            [uuid(9E487B57-621E-4780-9F06-03AE0ABA5D59)]
+            interface ICompositorWithAnimationController : IInspectable
+            {
+                HRESULT CreateAnimationController([out] [retval] Windows.UI.Composition.AnimationController** result);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 13.0)]
@@ -3369,7 +3369,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)] interface Windows.UI.Composition.ICompositionObject2;
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.UI.Composition.ICompositionObject3;
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)] interface Windows.UI.Composition.ICompositionObject4;
-                [contract(Windows.Foundation.UniversalApiContract, 14.0)] [experimental] interface Windows.UI.Composition.ICompositionObject_AnimationController;
+                [contract(Windows.Foundation.UniversalApiContract, 14.0)] [experimental] interface Windows.UI.Composition.ICompositionObjectWithAnimationController;
                 interface Windows.Foundation.IClosable;
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)] interface Windows.UI.Composition.IAnimationObject;
             }
@@ -3592,7 +3592,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.Composition.ICompositorWithVisualSurface;
                 [contract(Windows.Foundation.UniversalApiContract, 12.0)] interface Windows.UI.Composition.ICompositor7;
                 [contract(Windows.Foundation.UniversalApiContract, 13.0)] interface Windows.UI.Composition.ICompositorWithBlurredWallpaperBackdropBrush;
-                [contract(Windows.Foundation.UniversalApiContract, 14.0)] [experimental] interface Windows.UI.Composition.ICompositorCreateAnimationController;
+                [contract(Windows.Foundation.UniversalApiContract, 14.0)] [experimental] interface Windows.UI.Composition.ICompositorWithAnimationController;
                 interface Windows.Foundation.IClosable;
             }
 

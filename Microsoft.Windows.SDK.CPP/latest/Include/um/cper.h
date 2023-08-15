@@ -2117,6 +2117,11 @@ typedef struct _WHEA_SEA_SECTION {
     BOOLEAN WasKernel;
 } WHEA_SEA_SECTION, *PWHEA_SEA_SECTION;
 
+typedef struct _WHEA_SEI_SECTION {
+    ULONG Esr;
+    ULONG64 Far;
+} WHEA_SEI_SECTION, *PWHEA_SEI_SECTION;
+
 #include <poppack.h>
 
 #pragma warning(pop)
