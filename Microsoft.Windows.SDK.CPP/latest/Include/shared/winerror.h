@@ -42305,6 +42305,15 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 #define MENROLL_E_MDM_NOT_CONFIGURED     _HRESULT_TYPEDEF_(0x80180031L)
 
 //
+// MessageId: MENROLL_E_CUSTOMSERVERERROR
+//
+// MessageText:
+//
+// The server responded with a custom error string, see DeviceManagement-Enterprise-Diagnostics for details.
+//
+#define MENROLL_E_CUSTOMSERVERERROR      _HRESULT_TYPEDEF_(0x80180032L)
+
+//
 // FACILITY_WER
 //
 //

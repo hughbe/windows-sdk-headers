@@ -1115,20 +1115,20 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_FWD_DEFINED__
+#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_FWD_DEFINED__
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Sensors {
-                interface IHumanPresenceSensorExtensionPlugin;
+                interface IHumanPresenceSensorExtension;
             } /* Sensors */
         } /* Devices */
     } /* Windows */
 } /* ABI */
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin ABI::Windows::Devices::Sensors::IHumanPresenceSensorExtensionPlugin
+#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension ABI::Windows::Devices::Sensors::IHumanPresenceSensorExtension
 
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_FWD_DEFINED__
+#endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading_FWD_DEFINED__
@@ -8694,47 +8694,47 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2
 
 /*
  *
- * Interface Windows.Devices.Sensors.IHumanPresenceSensorExtensionPlugin
+ * Interface Windows.Devices.Sensors.IHumanPresenceSensorExtension
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IHumanPresenceSensorExtensionPlugin[] = L"Windows.Devices.Sensors.IHumanPresenceSensorExtensionPlugin";
+#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IHumanPresenceSensorExtension[] = L"Windows.Devices.Sensors.IHumanPresenceSensorExtension";
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Sensors {
-                MIDL_INTERFACE("1df6595d-d9de-5ea5-9b6b-aa71324ce426")
-                IHumanPresenceSensorExtensionPlugin : public IInspectable
+                MIDL_INTERFACE("3e526a71-2d1d-5d43-8a8e-a434a8242ef0")
+                IHumanPresenceSensorExtension : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE Initialize(
-                        HSTRING DeviceId
+                        HSTRING deviceId
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Start(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ProcessReading(
-                        ABI::Windows::Devices::Sensors::IHumanPresenceSensorReading* Reading,
+                        ABI::Windows::Devices::Sensors::IHumanPresenceSensorReading* reading,
                         ABI::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate** result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ProcessReadingTimeoutExpired(
-                        ABI::Windows::Devices::Sensors::IHumanPresenceSensorReading* Reading
+                        ABI::Windows::Devices::Sensors::IHumanPresenceSensorReading* reading
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Stop(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Uninitialize(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Reset(void) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IHumanPresenceSensorExtensionPlugin = _uuidof(IHumanPresenceSensorExtensionPlugin);
+                extern MIDL_CONST_ID IID& IID_IHumanPresenceSensorExtension = _uuidof(IHumanPresenceSensorExtension);
             } /* Sensors */
         } /* Devices */
     } /* Windows */
 } /* ABI */
 
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_INTERFACE_DEFINED__) */
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
@@ -14008,11 +14008,11 @@ typedef interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2 __x_
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin;
+#ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension;
 
-#endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_FWD_DEFINED__
+#endif // ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading_FWD_DEFINED__
@@ -25880,96 +25880,96 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensor2
 
 /*
  *
- * Interface Windows.Devices.Sensors.IHumanPresenceSensorExtensionPlugin
+ * Interface Windows.Devices.Sensors.IHumanPresenceSensorExtension
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IHumanPresenceSensorExtensionPlugin[] = L"Windows.Devices.Sensors.IHumanPresenceSensorExtensionPlugin";
-typedef struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPluginVtbl
+#if !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_IHumanPresenceSensorExtension[] = L"Windows.Devices.Sensors.IHumanPresenceSensorExtension";
+typedef struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin* This,
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This,
         REFIID riid,
         void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin* This,
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This,
         ULONG* iidCount,
         IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin* This,
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This,
         HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin* This,
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This,
         TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* Initialize)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin* This,
-        HSTRING DeviceId);
-    HRESULT (STDMETHODCALLTYPE* Start)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin* This);
-    HRESULT (STDMETHODCALLTYPE* ProcessReading)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin* This,
-        __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading* Reading,
+    HRESULT (STDMETHODCALLTYPE* Initialize)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This,
+        HSTRING deviceId);
+    HRESULT (STDMETHODCALLTYPE* Start)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This);
+    HRESULT (STDMETHODCALLTYPE* ProcessReading)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This,
+        __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading* reading,
         __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReadingUpdate** result);
-    HRESULT (STDMETHODCALLTYPE* ProcessReadingTimeoutExpired)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin* This,
-        __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading* Reading);
-    HRESULT (STDMETHODCALLTYPE* Stop)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin* This);
-    HRESULT (STDMETHODCALLTYPE* Uninitialize)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin* This);
-    HRESULT (STDMETHODCALLTYPE* Reset)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin* This);
+    HRESULT (STDMETHODCALLTYPE* ProcessReadingTimeoutExpired)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This,
+        __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorReading* reading);
+    HRESULT (STDMETHODCALLTYPE* Stop)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This);
+    HRESULT (STDMETHODCALLTYPE* Uninitialize)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This);
+    HRESULT (STDMETHODCALLTYPE* Reset)(__x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension* This);
 
     END_INTERFACE
-} __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPluginVtbl;
+} __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionVtbl;
 
-interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin
+interface __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPluginVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_QueryInterface(This, riid, ppvObject) \
+#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_QueryInterface(This, riid, ppvObject) \
     ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_AddRef(This) \
+#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_AddRef(This) \
     ((This)->lpVtbl->AddRef(This))
 
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_Release(This) \
+#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_Release(This) \
     ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_GetIids(This, iidCount, iids) \
+#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_GetIids(This, iidCount, iids) \
     ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_GetRuntimeClassName(This, className) \
+#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_GetRuntimeClassName(This, className) \
     ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_GetTrustLevel(This, trustLevel) \
+#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_GetTrustLevel(This, trustLevel) \
     ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_Initialize(This, DeviceId) \
-    ((This)->lpVtbl->Initialize(This, DeviceId))
+#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_Initialize(This, deviceId) \
+    ((This)->lpVtbl->Initialize(This, deviceId))
 
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_Start(This) \
+#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_Start(This) \
     ((This)->lpVtbl->Start(This))
 
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_ProcessReading(This, Reading, result) \
-    ((This)->lpVtbl->ProcessReading(This, Reading, result))
+#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_ProcessReading(This, reading, result) \
+    ((This)->lpVtbl->ProcessReading(This, reading, result))
 
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_ProcessReadingTimeoutExpired(This, Reading) \
-    ((This)->lpVtbl->ProcessReadingTimeoutExpired(This, Reading))
+#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_ProcessReadingTimeoutExpired(This, reading) \
+    ((This)->lpVtbl->ProcessReadingTimeoutExpired(This, reading))
 
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_Stop(This) \
+#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_Stop(This) \
     ((This)->lpVtbl->Stop(This))
 
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_Uninitialize(This) \
+#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_Uninitialize(This) \
     ((This)->lpVtbl->Uninitialize(This))
 
-#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_Reset(This) \
+#define __x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_Reset(This) \
     ((This)->lpVtbl->Reset(This))
 
 #endif /* COBJMACROS */
 
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtensionPlugin_INTERFACE_DEFINED__) */
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CIHumanPresenceSensorExtension_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*

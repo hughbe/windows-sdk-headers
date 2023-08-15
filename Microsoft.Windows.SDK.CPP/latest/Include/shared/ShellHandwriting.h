@@ -683,6 +683,7 @@ EXTERN_C const IID IID_IHandwritingInputRoutingCallback;
 /* [local] */ 
 
 HRESULT WINAPI RegisterHandwritingInputRoutingCallback(IHandwritingInputRoutingCallback * callback);
+HRESULT WINAPI GetHandwritingStrokeIdForPointer(_In_ UINT32 pointerId, _Out_ UINT64* handwritingStrokeId);
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 #endif // NTDDI_WIN10_NI

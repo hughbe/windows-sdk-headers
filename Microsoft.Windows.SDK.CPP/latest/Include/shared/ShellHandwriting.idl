@@ -127,6 +127,7 @@ interface IHandwritingInputRoutingCallback : IUnknown
 };
 
 cpp_quote("HRESULT WINAPI RegisterHandwritingInputRoutingCallback(IHandwritingInputRoutingCallback * callback);")
+cpp_quote("HRESULT WINAPI GetHandwritingStrokeIdForPointer(_In_ UINT32 pointerId, _Out_ UINT64* handwritingStrokeId);")
 
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion

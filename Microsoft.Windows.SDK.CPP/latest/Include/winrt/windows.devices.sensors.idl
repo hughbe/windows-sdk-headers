@@ -200,7 +200,7 @@ namespace Windows
 
             interface IHumanPresenceSensor2;
 
-            interface IHumanPresenceSensorExtensionPlugin;
+            interface IHumanPresenceSensorExtension;
 
             interface IHumanPresenceSensorReading;
 
@@ -1383,13 +1383,13 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 15.0)]
-            [uuid(1DF6595D-D9DE-5EA5-9B6B-AA71324CE426)]
-            interface IHumanPresenceSensorExtensionPlugin : IInspectable
+            [uuid(3E526A71-2D1D-5D43-8A8E-A434A8242EF0)]
+            interface IHumanPresenceSensorExtension : IInspectable
             {
-                HRESULT Initialize([in] HSTRING DeviceId);
+                HRESULT Initialize([in] HSTRING deviceId);
                 HRESULT Start();
-                HRESULT ProcessReading([in] Windows.Devices.Sensors.HumanPresenceSensorReading* Reading, [out] [retval] Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate** result);
-                HRESULT ProcessReadingTimeoutExpired([in] Windows.Devices.Sensors.HumanPresenceSensorReading* Reading);
+                HRESULT ProcessReading([in] Windows.Devices.Sensors.HumanPresenceSensorReading* reading, [out] [retval] Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate** result);
+                HRESULT ProcessReadingTimeoutExpired([in] Windows.Devices.Sensors.HumanPresenceSensorReading* reading);
                 HRESULT Stop();
                 HRESULT Uninitialize();
                 HRESULT Reset();
