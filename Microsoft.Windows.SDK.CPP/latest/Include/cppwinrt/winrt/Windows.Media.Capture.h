@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Media_Capture_H
 #define WINRT_Windows_Media_Capture_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Media.h"
 #include "winrt/impl/Windows.Devices.Enumeration.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -79,7 +79,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAdvancedPhotoCapture<D>::OptionalReferencePhotoCaptured(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAdvancedPhotoCapture)->remove_OptionalReferencePhotoCaptured(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAdvancedPhotoCapture)->remove_OptionalReferencePhotoCaptured(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAdvancedPhotoCapture<D>::AllPhotosCaptured(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AdvancedPhotoCapture, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -93,7 +93,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAdvancedPhotoCapture<D>::AllPhotosCaptured(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAdvancedPhotoCapture)->remove_AllPhotosCaptured(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAdvancedPhotoCapture)->remove_AllPhotosCaptured(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IAdvancedPhotoCapture<D>::FinishAsync() const
     {
@@ -169,7 +169,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::HeartbeatRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastBackgroundService)->remove_HeartbeatRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastBackgroundService)->remove_HeartbeatRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Capture_IAppBroadcastBackgroundService<D>::TitleId() const
     {
@@ -213,7 +213,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastTitleChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastBackgroundService2)->remove_BroadcastTitleChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastBackgroundService2)->remove_BroadcastTitleChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastLanguageChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastBackgroundService, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -227,7 +227,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastLanguageChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastBackgroundService2)->remove_BroadcastLanguageChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastBackgroundService2)->remove_BroadcastLanguageChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastChannelChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastBackgroundService, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -241,7 +241,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundService2<D>::BroadcastChannelChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastBackgroundService2)->remove_BroadcastChannelChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastBackgroundService2)->remove_BroadcastChannelChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::AppBroadcastSignInState) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::SignInState() const
     {
@@ -297,7 +297,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo<D>::SignInStateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo)->remove_SignInStateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo)->remove_SignInStateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo2<D>::UserNameChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -311,7 +311,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceSignInInfo2<D>::UserNameChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo2)->remove_UserNameChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceSignInInfo2)->remove_UserNameChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::AppBroadcastStreamState) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::StreamState() const
     {
@@ -367,7 +367,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::StreamStateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->remove_StreamStateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->remove_StreamStateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::VideoEncodingResolutionChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -381,7 +381,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::VideoEncodingResolutionChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->remove_VideoEncodingResolutionChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->remove_VideoEncodingResolutionChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::VideoEncodingBitrateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -395,7 +395,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo<D>::VideoEncodingBitrateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->remove_VideoEncodingBitrateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastBackgroundServiceStreamInfo)->remove_VideoEncodingBitrateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastBackgroundServiceStreamInfo2<D>::ReportProblemWithStream() const
     {
@@ -671,7 +671,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastPreview<D>::PreviewStateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastPreview)->remove_PreviewStateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastPreview)->remove_PreviewStateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::AppBroadcastPreviewStreamReader) consume_Windows_Media_Capture_IAppBroadcastPreview<D>::PreviewStreamReader() const
     {
@@ -739,7 +739,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastPreviewStreamReader<D>::VideoFrameArrived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastPreviewStreamReader)->remove_VideoFrameArrived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastPreviewStreamReader)->remove_VideoFrameArrived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader) consume_Windows_Media_Capture_IAppBroadcastPreviewStreamVideoFrame<D>::VideoHeader() const
     {
@@ -1073,7 +1073,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastState<D>::ViewerCountChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastState)->remove_ViewerCountChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastState)->remove_ViewerCountChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastState<D>::MicrophoneCaptureStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastState, winrt::Windows::Media::Capture::AppBroadcastMicrophoneCaptureStateChangedEventArgs> const& value) const
     {
@@ -1087,7 +1087,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastState<D>::MicrophoneCaptureStateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastState)->remove_MicrophoneCaptureStateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastState)->remove_MicrophoneCaptureStateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastState<D>::CameraCaptureStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastState, winrt::Windows::Media::Capture::AppBroadcastCameraCaptureStateChangedEventArgs> const& value) const
     {
@@ -1101,7 +1101,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastState<D>::CameraCaptureStateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastState)->remove_CameraCaptureStateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastState)->remove_CameraCaptureStateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastState<D>::PlugInStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastState, winrt::Windows::Media::Capture::AppBroadcastPlugInStateChangedEventArgs> const& handler) const
     {
@@ -1115,7 +1115,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastState<D>::PlugInStateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastState)->remove_PlugInStateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastState)->remove_PlugInStateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastState<D>::StreamStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastState, winrt::Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs> const& handler) const
     {
@@ -1129,7 +1129,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastState<D>::StreamStateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastState)->remove_StreamStateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastState)->remove_StreamStateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastState<D>::CaptureTargetClosed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastState, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1143,7 +1143,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastState<D>::CaptureTargetClosed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastState)->remove_CaptureTargetClosed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastState)->remove_CaptureTargetClosed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::AppBroadcastStreamAudioHeader) consume_Windows_Media_Capture_IAppBroadcastStreamAudioFrame<D>::AudioHeader() const
     {
@@ -1253,7 +1253,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::AudioFrameArrived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastStreamReader)->remove_AudioFrameArrived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastStreamReader)->remove_AudioFrameArrived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::VideoFrameArrived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppBroadcastStreamReader, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1267,7 +1267,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppBroadcastStreamReader<D>::VideoFrameArrived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastStreamReader)->remove_VideoFrameArrived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppBroadcastStreamReader)->remove_VideoFrameArrived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::AppBroadcastStreamState) consume_Windows_Media_Capture_IAppBroadcastStreamStateChangedEventArgs<D>::StreamState() const
     {
@@ -1359,7 +1359,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCapture<D>::CapturingChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppCapture)->remove_CapturingChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppCapture)->remove_CapturingChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureAlternateShortcutKeys<D>::ToggleGameBarKey(winrt::Windows::System::VirtualKey const& value) const
     {
@@ -1593,7 +1593,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureMetadataWriter<D>::MetadataPurged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppCaptureMetadataWriter)->remove_MetadataPurged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppCaptureMetadataWriter)->remove_MetadataPurged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::AppCaptureMicrophoneCaptureState) consume_Windows_Media_Capture_IAppCaptureMicrophoneCaptureStateChangedEventArgs<D>::State() const
     {
@@ -1653,7 +1653,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::StateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppCaptureRecordOperation)->remove_StateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppCaptureRecordOperation)->remove_StateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::DurationGenerated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppCaptureRecordOperation, winrt::Windows::Media::Capture::AppCaptureDurationGeneratedEventArgs> const& value) const
     {
@@ -1667,7 +1667,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::DurationGenerated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppCaptureRecordOperation)->remove_DurationGenerated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppCaptureRecordOperation)->remove_DurationGenerated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::FileGenerated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppCaptureRecordOperation, winrt::Windows::Media::Capture::AppCaptureFileGeneratedEventArgs> const& value) const
     {
@@ -1681,7 +1681,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureRecordOperation<D>::FileGenerated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppCaptureRecordOperation)->remove_FileGenerated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppCaptureRecordOperation)->remove_FileGenerated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::AppCaptureRecordingState) consume_Windows_Media_Capture_IAppCaptureRecordingStateChangedEventArgs<D>::State() const
     {
@@ -2035,7 +2035,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureState<D>::MicrophoneCaptureStateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppCaptureState)->remove_MicrophoneCaptureStateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppCaptureState)->remove_MicrophoneCaptureStateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IAppCaptureState<D>::CaptureTargetClosed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::AppCaptureState, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -2049,7 +2049,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IAppCaptureState<D>::CaptureTargetClosed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppCaptureState)->remove_CaptureTargetClosed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IAppCaptureState)->remove_CaptureTargetClosed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::AppCapture) consume_Windows_Media_Capture_IAppCaptureStatics<D>::GetForCurrentView() const
     {
@@ -2351,7 +2351,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IGameBarServices<D>::CommandReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IGameBarServices)->remove_CommandReceived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IGameBarServices)->remove_CommandReceived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::GameBarCommand) consume_Windows_Media_Capture_IGameBarServicesCommandEventArgs<D>::Command() const
     {
@@ -2377,7 +2377,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IGameBarServicesManager<D>::GameBarServicesCreated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IGameBarServicesManager)->remove_GameBarServicesCreated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IGameBarServicesManager)->remove_GameBarServicesCreated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::GameBarServices) consume_Windows_Media_Capture_IGameBarServicesManagerGameBarServicesCreatedEventArgs<D>::GameBarServices() const
     {
@@ -2499,7 +2499,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_ILowLagPhotoSequenceCapture<D>::PhotoCaptured(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::ILowLagPhotoSequenceCapture)->remove_PhotoCaptured(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::ILowLagPhotoSequenceCapture)->remove_PhotoCaptured(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_Media_Capture_IMediaCapture<D>::InitializeAsync() const
     {
@@ -2589,7 +2589,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCapture<D>::Failed(winrt::event_token const& eventCookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IMediaCapture)->remove_Failed(impl::bind_in(eventCookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IMediaCapture)->remove_Failed(impl::bind_in(eventCookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IMediaCapture<D>::RecordLimitationExceeded(winrt::Windows::Media::Capture::RecordLimitationExceededEventHandler const& recordLimitationExceededEventHandler) const
     {
@@ -2603,7 +2603,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCapture<D>::RecordLimitationExceeded(winrt::event_token const& eventCookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IMediaCapture)->remove_RecordLimitationExceeded(impl::bind_in(eventCookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IMediaCapture)->remove_RecordLimitationExceeded(impl::bind_in(eventCookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::MediaCaptureSettings) consume_Windows_Media_Capture_IMediaCapture<D>::MediaCaptureSettings() const
     {
@@ -2713,7 +2713,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCapture3<D>::FocusChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IMediaCapture3)->remove_FocusChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IMediaCapture3)->remove_FocusChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_IMediaCapture3<D>::PhotoConfirmationCaptured(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::MediaCapture, winrt::Windows::Media::Capture::PhotoConfirmationCapturedEventArgs> const& handler) const
     {
@@ -2727,7 +2727,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCapture3<D>::PhotoConfirmationCaptured(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IMediaCapture3)->remove_PhotoConfirmationCaptured(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IMediaCapture3)->remove_PhotoConfirmationCaptured(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::IMediaExtension>) consume_Windows_Media_Capture_IMediaCapture4<D>::AddAudioEffectAsync(winrt::Windows::Media::Effects::IAudioEffectDefinition const& definition) const
     {
@@ -2765,7 +2765,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCapture4<D>::CameraStreamStateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IMediaCapture4)->remove_CameraStreamStateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IMediaCapture4)->remove_CameraStreamStateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Devices::CameraStreamState) consume_Windows_Media_Capture_IMediaCapture4<D>::CameraStreamState() const
     {
@@ -2797,7 +2797,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCapture4<D>::ThermalStatusChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IMediaCapture4)->remove_ThermalStatusChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IMediaCapture4)->remove_ThermalStatusChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::MediaCaptureThermalStatus) consume_Windows_Media_Capture_IMediaCapture4<D>::ThermalStatus() const
     {
@@ -2865,7 +2865,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCapture6<D>::CaptureDeviceExclusiveControlStatusChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IMediaCapture6)->remove_CaptureDeviceExclusiveControlStatusChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IMediaCapture6)->remove_CaptureDeviceExclusiveControlStatusChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader>) consume_Windows_Media_Capture_IMediaCapture6<D>::CreateMultiSourceFrameReaderAsync(param::async_iterable<winrt::Windows::Media::Capture::Frames::MediaFrameSource> const& inputSources) const
     {
@@ -3119,7 +3119,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureRelativePanelWatcher<D>::Changed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IMediaCaptureRelativePanelWatcher)->remove_Changed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::IMediaCaptureRelativePanelWatcher)->remove_Changed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_IMediaCaptureRelativePanelWatcher<D>::Start() const
     {
@@ -8800,6 +8800,8 @@ namespace std
     template<> struct hash<winrt::Windows::Media::Capture::PhotoCapturedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Capture::PhotoConfirmationCapturedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Capture::VideoStreamConfiguration> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

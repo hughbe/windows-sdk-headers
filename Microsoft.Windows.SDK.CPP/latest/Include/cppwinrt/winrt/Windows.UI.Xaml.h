@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_UI_Xaml_H
 #define WINRT_Windows_UI_Xaml_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.UI.h"
 #include "winrt/impl/Windows.ApplicationModel.2.h"
 #include "winrt/impl/Windows.ApplicationModel.Activation.2.h"
@@ -112,7 +112,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplication<D>::UnhandledException(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IApplication)->remove_UnhandledException(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IApplication)->remove_UnhandledException(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IApplication<D>::Suspending(winrt::Windows::UI::Xaml::SuspendingEventHandler const& handler) const
     {
@@ -126,7 +126,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplication<D>::Suspending(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IApplication)->remove_Suspending(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IApplication)->remove_Suspending(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IApplication<D>::Resuming(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -140,7 +140,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplication<D>::Resuming(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IApplication)->remove_Resuming(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IApplication)->remove_Resuming(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplication<D>::Exit() const
     {
@@ -178,7 +178,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplication2<D>::LeavingBackground(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IApplication2)->remove_LeavingBackground(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IApplication2)->remove_LeavingBackground(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IApplication2<D>::EnteredBackground(winrt::Windows::UI::Xaml::EnteredBackgroundEventHandler const& handler) const
     {
@@ -192,7 +192,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IApplication2<D>::EnteredBackground(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IApplication2)->remove_EnteredBackground(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IApplication2)->remove_EnteredBackground(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::ApplicationHighContrastAdjustment) consume_Windows_UI_Xaml_IApplication3<D>::HighContrastAdjustment() const
     {
@@ -834,7 +834,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDebugSettings<D>::BindingFailed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IDebugSettings)->remove_BindingFailed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IDebugSettings)->remove_BindingFailed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IDebugSettings2<D>::EnableRedrawRegions() const
     {
@@ -990,7 +990,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDispatcherTimer<D>::Tick(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IDispatcherTimer)->remove_Tick(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IDispatcherTimer)->remove_Tick(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IDispatcherTimer<D>::Start() const
     {
@@ -1598,7 +1598,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::Loaded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IFrameworkElement)->remove_Loaded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IFrameworkElement)->remove_Loaded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IFrameworkElement<D>::Unloaded(winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const
     {
@@ -1612,7 +1612,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::Unloaded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IFrameworkElement)->remove_Unloaded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IFrameworkElement)->remove_Unloaded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IFrameworkElement<D>::SizeChanged(winrt::Windows::UI::Xaml::SizeChangedEventHandler const& handler) const
     {
@@ -1626,7 +1626,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::SizeChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IFrameworkElement)->remove_SizeChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IFrameworkElement)->remove_SizeChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IFrameworkElement<D>::LayoutUpdated(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1640,7 +1640,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement<D>::LayoutUpdated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IFrameworkElement)->remove_LayoutUpdated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IFrameworkElement)->remove_LayoutUpdated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_IFrameworkElement<D>::FindName(param::hstring const& name) const
     {
@@ -1674,7 +1674,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement2<D>::DataContextChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IFrameworkElement2)->remove_DataContextChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IFrameworkElement2)->remove_DataContextChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Data::BindingExpression) consume_Windows_UI_Xaml_IFrameworkElement2<D>::GetBindingExpression(winrt::Windows::UI::Xaml::DependencyProperty const& dp) const
     {
@@ -1694,7 +1694,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement3<D>::Loading(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IFrameworkElement3)->remove_Loading(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IFrameworkElement3)->remove_Loading(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IFrameworkElement4<D>::AllowFocusOnInteraction() const
     {
@@ -1784,7 +1784,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement6<D>::ActualThemeChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IFrameworkElement6)->remove_ActualThemeChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IFrameworkElement6)->remove_ActualThemeChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IFrameworkElement7<D>::IsLoaded() const
     {
@@ -1804,7 +1804,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IFrameworkElement7<D>::EffectiveViewportChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IFrameworkElement7)->remove_EffectiveViewportChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IFrameworkElement7)->remove_EffectiveViewportChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::FrameworkElement) consume_Windows_UI_Xaml_IFrameworkElementFactory<D>::CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
     {
@@ -2638,7 +2638,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::KeyUp(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_KeyUp(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_KeyUp(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::KeyDown(winrt::Windows::UI::Xaml::Input::KeyEventHandler const& handler) const
     {
@@ -2652,7 +2652,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::KeyDown(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_KeyDown(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_KeyDown(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::GotFocus(winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const
     {
@@ -2666,7 +2666,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::GotFocus(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_GotFocus(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_GotFocus(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::LostFocus(winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const
     {
@@ -2680,7 +2680,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::LostFocus(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_LostFocus(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_LostFocus(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::DragEnter(winrt::Windows::UI::Xaml::DragEventHandler const& handler) const
     {
@@ -2694,7 +2694,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::DragEnter(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_DragEnter(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_DragEnter(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::DragLeave(winrt::Windows::UI::Xaml::DragEventHandler const& handler) const
     {
@@ -2708,7 +2708,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::DragLeave(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_DragLeave(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_DragLeave(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::DragOver(winrt::Windows::UI::Xaml::DragEventHandler const& handler) const
     {
@@ -2722,7 +2722,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::DragOver(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_DragOver(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_DragOver(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::Drop(winrt::Windows::UI::Xaml::DragEventHandler const& handler) const
     {
@@ -2736,7 +2736,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::Drop(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_Drop(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_Drop(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::PointerPressed(winrt::Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
     {
@@ -2750,7 +2750,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::PointerPressed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_PointerPressed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_PointerPressed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::PointerMoved(winrt::Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
     {
@@ -2764,7 +2764,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::PointerMoved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_PointerMoved(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_PointerMoved(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::PointerReleased(winrt::Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
     {
@@ -2778,7 +2778,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::PointerReleased(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_PointerReleased(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_PointerReleased(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::PointerEntered(winrt::Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
     {
@@ -2792,7 +2792,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::PointerEntered(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_PointerEntered(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_PointerEntered(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::PointerExited(winrt::Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
     {
@@ -2806,7 +2806,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::PointerExited(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_PointerExited(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_PointerExited(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::PointerCaptureLost(winrt::Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
     {
@@ -2820,7 +2820,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::PointerCaptureLost(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_PointerCaptureLost(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_PointerCaptureLost(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::PointerCanceled(winrt::Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
     {
@@ -2834,7 +2834,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::PointerCanceled(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_PointerCanceled(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_PointerCanceled(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::PointerWheelChanged(winrt::Windows::UI::Xaml::Input::PointerEventHandler const& handler) const
     {
@@ -2848,7 +2848,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::PointerWheelChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_PointerWheelChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_PointerWheelChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::Tapped(winrt::Windows::UI::Xaml::Input::TappedEventHandler const& handler) const
     {
@@ -2862,7 +2862,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::Tapped(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_Tapped(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_Tapped(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::DoubleTapped(winrt::Windows::UI::Xaml::Input::DoubleTappedEventHandler const& handler) const
     {
@@ -2876,7 +2876,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::DoubleTapped(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_DoubleTapped(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_DoubleTapped(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::Holding(winrt::Windows::UI::Xaml::Input::HoldingEventHandler const& handler) const
     {
@@ -2890,7 +2890,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::Holding(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_Holding(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_Holding(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::RightTapped(winrt::Windows::UI::Xaml::Input::RightTappedEventHandler const& handler) const
     {
@@ -2904,7 +2904,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::RightTapped(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_RightTapped(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_RightTapped(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationStarting(winrt::Windows::UI::Xaml::Input::ManipulationStartingEventHandler const& handler) const
     {
@@ -2918,7 +2918,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationStarting(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_ManipulationStarting(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_ManipulationStarting(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationInertiaStarting(winrt::Windows::UI::Xaml::Input::ManipulationInertiaStartingEventHandler const& handler) const
     {
@@ -2932,7 +2932,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationInertiaStarting(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_ManipulationInertiaStarting(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_ManipulationInertiaStarting(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationStarted(winrt::Windows::UI::Xaml::Input::ManipulationStartedEventHandler const& handler) const
     {
@@ -2946,7 +2946,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationStarted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_ManipulationStarted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_ManipulationStarted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationDelta(winrt::Windows::UI::Xaml::Input::ManipulationDeltaEventHandler const& handler) const
     {
@@ -2960,7 +2960,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationDelta(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_ManipulationDelta(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_ManipulationDelta(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationCompleted(winrt::Windows::UI::Xaml::Input::ManipulationCompletedEventHandler const& handler) const
     {
@@ -2974,7 +2974,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::ManipulationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_ManipulationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement)->remove_ManipulationCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement<D>::Measure(winrt::Windows::Foundation::Size const& availableSize) const
     {
@@ -3110,7 +3110,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement3<D>::DragStarting(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement3)->remove_DragStarting(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement3)->remove_DragStarting(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement3<D>::DropCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::DropCompletedEventArgs> const& handler) const
     {
@@ -3124,7 +3124,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement3<D>::DropCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement3)->remove_DropCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement3)->remove_DropCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::DataTransfer::DataPackageOperation>) consume_Windows_UI_Xaml_IUIElement3<D>::StartDragAsync(winrt::Windows::UI::Input::PointerPoint const& pointerPoint) const
     {
@@ -3194,7 +3194,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement4<D>::ContextRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement4)->remove_ContextRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement4)->remove_ContextRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement4<D>::ContextCanceled(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::RoutedEventArgs> const& handler) const
     {
@@ -3208,7 +3208,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement4<D>::ContextCanceled(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement4)->remove_ContextCanceled(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement4)->remove_ContextCanceled(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyDisplayRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs> const& handler) const
     {
@@ -3222,7 +3222,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyDisplayRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement4)->remove_AccessKeyDisplayRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement4)->remove_AccessKeyDisplayRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyDisplayDismissed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs> const& handler) const
     {
@@ -3236,7 +3236,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyDisplayDismissed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement4)->remove_AccessKeyDisplayDismissed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement4)->remove_AccessKeyDisplayDismissed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyInvoked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs> const& handler) const
     {
@@ -3250,7 +3250,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement4<D>::AccessKeyInvoked(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement4)->remove_AccessKeyInvoked(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement4)->remove_AccessKeyInvoked(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Xaml::Media::XamlLight>) consume_Windows_UI_Xaml_IUIElement5<D>::Lights() const
     {
@@ -3370,7 +3370,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::GettingFocus(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement5)->remove_GettingFocus(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement5)->remove_GettingFocus(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement5<D>::LosingFocus(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::Input::LosingFocusEventArgs> const& handler) const
     {
@@ -3384,7 +3384,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::LosingFocus(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement5)->remove_LosingFocus(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement5)->remove_LosingFocus(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement5<D>::NoFocusCandidateFound(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::Input::NoFocusCandidateFoundEventArgs> const& handler) const
     {
@@ -3398,7 +3398,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::NoFocusCandidateFound(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement5)->remove_NoFocusCandidateFound(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement5)->remove_NoFocusCandidateFound(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement5<D>::StartBringIntoView() const
     {
@@ -3426,7 +3426,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement7<D>::CharacterReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement7)->remove_CharacterReceived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement7)->remove_CharacterReceived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement7<D>::ProcessKeyboardAccelerators(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::UIElement, winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs> const& handler) const
     {
@@ -3440,7 +3440,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement7<D>::ProcessKeyboardAccelerators(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement7)->remove_ProcessKeyboardAccelerators(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement7)->remove_ProcessKeyboardAccelerators(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement7<D>::PreviewKeyDown(winrt::Windows::UI::Xaml::Input::KeyEventHandler const& handler) const
     {
@@ -3454,7 +3454,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement7<D>::PreviewKeyDown(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement7)->remove_PreviewKeyDown(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement7)->remove_PreviewKeyDown(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IUIElement7<D>::PreviewKeyUp(winrt::Windows::UI::Xaml::Input::KeyEventHandler const& handler) const
     {
@@ -3468,7 +3468,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement7<D>::PreviewKeyUp(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement7)->remove_PreviewKeyUp(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement7)->remove_PreviewKeyUp(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement7<D>::TryInvokeKeyboardAccelerator(winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs const& args) const
     {
@@ -3516,7 +3516,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IUIElement8<D>::BringIntoViewRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement8)->remove_BringIntoViewRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IUIElement8)->remove_BringIntoViewRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_IUIElement9<D>::CanBeScrollAnchor() const
     {
@@ -4264,7 +4264,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IVisualStateGroup<D>::CurrentStateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IVisualStateGroup)->remove_CurrentStateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IVisualStateGroup)->remove_CurrentStateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IVisualStateGroup<D>::CurrentStateChanging(winrt::Windows::UI::Xaml::VisualStateChangedEventHandler const& handler) const
     {
@@ -4278,7 +4278,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IVisualStateGroup<D>::CurrentStateChanging(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IVisualStateGroup)->remove_CurrentStateChanging(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IVisualStateGroup)->remove_CurrentStateChanging(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::VisualStateManager) consume_Windows_UI_Xaml_IVisualStateManagerFactory<D>::CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
     {
@@ -4430,7 +4430,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IWindow<D>::Activated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IWindow)->remove_Activated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IWindow)->remove_Activated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IWindow<D>::Closed(winrt::Windows::UI::Xaml::WindowClosedEventHandler const& handler) const
     {
@@ -4444,7 +4444,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IWindow<D>::Closed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IWindow)->remove_Closed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IWindow)->remove_Closed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IWindow<D>::SizeChanged(winrt::Windows::UI::Xaml::WindowSizeChangedEventHandler const& handler) const
     {
@@ -4458,7 +4458,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IWindow<D>::SizeChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IWindow)->remove_SizeChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IWindow)->remove_SizeChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_IWindow<D>::VisibilityChanged(winrt::Windows::UI::Xaml::WindowVisibilityChangedEventHandler const& handler) const
     {
@@ -4472,7 +4472,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IWindow<D>::VisibilityChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IWindow)->remove_VisibilityChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IWindow)->remove_VisibilityChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IWindow<D>::Activate() const
     {
@@ -4552,7 +4552,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_IXamlRoot<D>::Changed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IXamlRoot)->remove_Changed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::IXamlRoot)->remove_Changed(impl::bind_in(token));
     }
     template <typename H> struct delegate<winrt::Windows::UI::Xaml::ApplicationInitializationCallback, H> final : implements_delegate<winrt::Windows::UI::Xaml::ApplicationInitializationCallback, H>
     {
@@ -14158,6 +14158,8 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Xaml::WindowCreatedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::XamlRoot> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::XamlRootChangedEventArgs> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

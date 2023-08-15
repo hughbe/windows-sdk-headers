@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_ApplicationModel_SocialInfo_Provider_H
 #define WINRT_Windows_ApplicationModel_SocialInfo_Provider_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.ApplicationModel.SocialInfo.h"
 #include "winrt/impl/Windows.ApplicationModel.SocialInfo.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -321,6 +321,8 @@ namespace std
     template<> struct hash<winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialFeedUpdater> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

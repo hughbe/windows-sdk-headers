@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,10 +11,10 @@
 #include "winrt/impl/Windows.UI.Xaml.Input.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Input
 {
-    struct DoubleTappedEventHandler : Windows::Foundation::IUnknown
+    struct DoubleTappedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         DoubleTappedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        DoubleTappedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        DoubleTappedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> DoubleTappedEventHandler(L lambda);
         template <typename F> DoubleTappedEventHandler(F* function);
         template <typename O, typename M> DoubleTappedEventHandler(O* object, M method);
@@ -22,10 +22,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Input
         template <typename O, typename M> DoubleTappedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Input::DoubleTappedRoutedEventArgs const& e) const;
     };
-    struct HoldingEventHandler : Windows::Foundation::IUnknown
+    struct HoldingEventHandler : winrt::Windows::Foundation::IUnknown
     {
         HoldingEventHandler(std::nullptr_t = nullptr) noexcept {}
-        HoldingEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        HoldingEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> HoldingEventHandler(L lambda);
         template <typename F> HoldingEventHandler(F* function);
         template <typename O, typename M> HoldingEventHandler(O* object, M method);
@@ -33,10 +33,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Input
         template <typename O, typename M> HoldingEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Input::HoldingRoutedEventArgs const& e) const;
     };
-    struct KeyEventHandler : Windows::Foundation::IUnknown
+    struct KeyEventHandler : winrt::Windows::Foundation::IUnknown
     {
         KeyEventHandler(std::nullptr_t = nullptr) noexcept {}
-        KeyEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        KeyEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> KeyEventHandler(L lambda);
         template <typename F> KeyEventHandler(F* function);
         template <typename O, typename M> KeyEventHandler(O* object, M method);
@@ -44,10 +44,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Input
         template <typename O, typename M> KeyEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs const& e) const;
     };
-    struct ManipulationCompletedEventHandler : Windows::Foundation::IUnknown
+    struct ManipulationCompletedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         ManipulationCompletedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        ManipulationCompletedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        ManipulationCompletedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> ManipulationCompletedEventHandler(L lambda);
         template <typename F> ManipulationCompletedEventHandler(F* function);
         template <typename O, typename M> ManipulationCompletedEventHandler(O* object, M method);
@@ -55,10 +55,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Input
         template <typename O, typename M> ManipulationCompletedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Input::ManipulationCompletedRoutedEventArgs const& e) const;
     };
-    struct ManipulationDeltaEventHandler : Windows::Foundation::IUnknown
+    struct ManipulationDeltaEventHandler : winrt::Windows::Foundation::IUnknown
     {
         ManipulationDeltaEventHandler(std::nullptr_t = nullptr) noexcept {}
-        ManipulationDeltaEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        ManipulationDeltaEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> ManipulationDeltaEventHandler(L lambda);
         template <typename F> ManipulationDeltaEventHandler(F* function);
         template <typename O, typename M> ManipulationDeltaEventHandler(O* object, M method);
@@ -66,10 +66,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Input
         template <typename O, typename M> ManipulationDeltaEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Input::ManipulationDeltaRoutedEventArgs const& e) const;
     };
-    struct ManipulationInertiaStartingEventHandler : Windows::Foundation::IUnknown
+    struct ManipulationInertiaStartingEventHandler : winrt::Windows::Foundation::IUnknown
     {
         ManipulationInertiaStartingEventHandler(std::nullptr_t = nullptr) noexcept {}
-        ManipulationInertiaStartingEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        ManipulationInertiaStartingEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> ManipulationInertiaStartingEventHandler(L lambda);
         template <typename F> ManipulationInertiaStartingEventHandler(F* function);
         template <typename O, typename M> ManipulationInertiaStartingEventHandler(O* object, M method);
@@ -77,10 +77,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Input
         template <typename O, typename M> ManipulationInertiaStartingEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs const& e) const;
     };
-    struct ManipulationStartedEventHandler : Windows::Foundation::IUnknown
+    struct ManipulationStartedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         ManipulationStartedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        ManipulationStartedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        ManipulationStartedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> ManipulationStartedEventHandler(L lambda);
         template <typename F> ManipulationStartedEventHandler(F* function);
         template <typename O, typename M> ManipulationStartedEventHandler(O* object, M method);
@@ -88,10 +88,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Input
         template <typename O, typename M> ManipulationStartedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs const& e) const;
     };
-    struct ManipulationStartingEventHandler : Windows::Foundation::IUnknown
+    struct ManipulationStartingEventHandler : winrt::Windows::Foundation::IUnknown
     {
         ManipulationStartingEventHandler(std::nullptr_t = nullptr) noexcept {}
-        ManipulationStartingEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        ManipulationStartingEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> ManipulationStartingEventHandler(L lambda);
         template <typename F> ManipulationStartingEventHandler(F* function);
         template <typename O, typename M> ManipulationStartingEventHandler(O* object, M method);
@@ -99,10 +99,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Input
         template <typename O, typename M> ManipulationStartingEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Input::ManipulationStartingRoutedEventArgs const& e) const;
     };
-    struct PointerEventHandler : Windows::Foundation::IUnknown
+    struct PointerEventHandler : winrt::Windows::Foundation::IUnknown
     {
         PointerEventHandler(std::nullptr_t = nullptr) noexcept {}
-        PointerEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        PointerEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> PointerEventHandler(L lambda);
         template <typename F> PointerEventHandler(F* function);
         template <typename O, typename M> PointerEventHandler(O* object, M method);
@@ -110,10 +110,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Input
         template <typename O, typename M> PointerEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e) const;
     };
-    struct RightTappedEventHandler : Windows::Foundation::IUnknown
+    struct RightTappedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         RightTappedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        RightTappedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        RightTappedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> RightTappedEventHandler(L lambda);
         template <typename F> RightTappedEventHandler(F* function);
         template <typename O, typename M> RightTappedEventHandler(O* object, M method);
@@ -121,10 +121,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Input
         template <typename O, typename M> RightTappedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Input::RightTappedRoutedEventArgs const& e) const;
     };
-    struct TappedEventHandler : Windows::Foundation::IUnknown
+    struct TappedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         TappedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        TappedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        TappedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> TappedEventHandler(L lambda);
         template <typename F> TappedEventHandler(F* function);
         template <typename O, typename M> TappedEventHandler(O* object, M method);

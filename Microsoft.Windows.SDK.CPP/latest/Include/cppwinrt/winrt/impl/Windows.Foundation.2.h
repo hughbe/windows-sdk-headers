@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,10 +10,10 @@
 #include "winrt/impl/Windows.Foundation.1.h"
 WINRT_EXPORT namespace winrt::Windows::Foundation
 {
-    struct AsyncActionCompletedHandler : Windows::Foundation::IUnknown
+    struct AsyncActionCompletedHandler : winrt::Windows::Foundation::IUnknown
     {
         AsyncActionCompletedHandler(std::nullptr_t = nullptr) noexcept {}
-        AsyncActionCompletedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        AsyncActionCompletedHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> AsyncActionCompletedHandler(L lambda);
         template <typename F> AsyncActionCompletedHandler(F* function);
         template <typename O, typename M> AsyncActionCompletedHandler(O* object, M method);
@@ -22,11 +22,11 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
         auto operator()(winrt::Windows::Foundation::IAsyncAction const& asyncInfo, winrt::Windows::Foundation::AsyncStatus const& asyncStatus) const;
     };
     template <typename TProgress>
-    struct AsyncActionProgressHandler : Windows::Foundation::IUnknown
+    struct AsyncActionProgressHandler : winrt::Windows::Foundation::IUnknown
     {
         static_assert(impl::has_category_v<TProgress>, "TProgress must be WinRT type.");
         AsyncActionProgressHandler(std::nullptr_t = nullptr) noexcept {}
-        AsyncActionProgressHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        AsyncActionProgressHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> AsyncActionProgressHandler(L lambda);
         template <typename F> AsyncActionProgressHandler(F* function);
         template <typename O, typename M> AsyncActionProgressHandler(O* object, M method);
@@ -35,11 +35,11 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
         auto operator()(winrt::Windows::Foundation::IAsyncActionWithProgress<TProgress> const& asyncInfo, impl::param_type<TProgress> const& progressInfo) const;
     };
     template <typename TProgress>
-    struct AsyncActionWithProgressCompletedHandler : Windows::Foundation::IUnknown
+    struct AsyncActionWithProgressCompletedHandler : winrt::Windows::Foundation::IUnknown
     {
         static_assert(impl::has_category_v<TProgress>, "TProgress must be WinRT type.");
         AsyncActionWithProgressCompletedHandler(std::nullptr_t = nullptr) noexcept {}
-        AsyncActionWithProgressCompletedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        AsyncActionWithProgressCompletedHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> AsyncActionWithProgressCompletedHandler(L lambda);
         template <typename F> AsyncActionWithProgressCompletedHandler(F* function);
         template <typename O, typename M> AsyncActionWithProgressCompletedHandler(O* object, M method);
@@ -48,11 +48,11 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
         auto operator()(winrt::Windows::Foundation::IAsyncActionWithProgress<TProgress> const& asyncInfo, winrt::Windows::Foundation::AsyncStatus const& asyncStatus) const;
     };
     template <typename TResult>
-    struct AsyncOperationCompletedHandler : Windows::Foundation::IUnknown
+    struct AsyncOperationCompletedHandler : winrt::Windows::Foundation::IUnknown
     {
         static_assert(impl::has_category_v<TResult>, "TResult must be WinRT type.");
         AsyncOperationCompletedHandler(std::nullptr_t = nullptr) noexcept {}
-        AsyncOperationCompletedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        AsyncOperationCompletedHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> AsyncOperationCompletedHandler(L lambda);
         template <typename F> AsyncOperationCompletedHandler(F* function);
         template <typename O, typename M> AsyncOperationCompletedHandler(O* object, M method);
@@ -61,12 +61,12 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
         auto operator()(winrt::Windows::Foundation::IAsyncOperation<TResult> const& asyncInfo, winrt::Windows::Foundation::AsyncStatus const& asyncStatus) const;
     };
     template <typename TResult, typename TProgress>
-    struct AsyncOperationProgressHandler : Windows::Foundation::IUnknown
+    struct AsyncOperationProgressHandler : winrt::Windows::Foundation::IUnknown
     {
         static_assert(impl::has_category_v<TResult>, "TResult must be WinRT type.");
         static_assert(impl::has_category_v<TProgress>, "TProgress must be WinRT type.");
         AsyncOperationProgressHandler(std::nullptr_t = nullptr) noexcept {}
-        AsyncOperationProgressHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        AsyncOperationProgressHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> AsyncOperationProgressHandler(L lambda);
         template <typename F> AsyncOperationProgressHandler(F* function);
         template <typename O, typename M> AsyncOperationProgressHandler(O* object, M method);
@@ -75,12 +75,12 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
         auto operator()(winrt::Windows::Foundation::IAsyncOperationWithProgress<TResult, TProgress> const& asyncInfo, impl::param_type<TProgress> const& progressInfo) const;
     };
     template <typename TResult, typename TProgress>
-    struct AsyncOperationWithProgressCompletedHandler : Windows::Foundation::IUnknown
+    struct AsyncOperationWithProgressCompletedHandler : winrt::Windows::Foundation::IUnknown
     {
         static_assert(impl::has_category_v<TResult>, "TResult must be WinRT type.");
         static_assert(impl::has_category_v<TProgress>, "TProgress must be WinRT type.");
         AsyncOperationWithProgressCompletedHandler(std::nullptr_t = nullptr) noexcept {}
-        AsyncOperationWithProgressCompletedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        AsyncOperationWithProgressCompletedHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> AsyncOperationWithProgressCompletedHandler(L lambda);
         template <typename F> AsyncOperationWithProgressCompletedHandler(F* function);
         template <typename O, typename M> AsyncOperationWithProgressCompletedHandler(O* object, M method);
@@ -88,10 +88,10 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
         template <typename O, typename M> AsyncOperationWithProgressCompletedHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IAsyncOperationWithProgress<TResult, TProgress> const& asyncInfo, winrt::Windows::Foundation::AsyncStatus const& asyncStatus) const;
     };
-    struct DeferralCompletedHandler : Windows::Foundation::IUnknown
+    struct DeferralCompletedHandler : winrt::Windows::Foundation::IUnknown
     {
         DeferralCompletedHandler(std::nullptr_t = nullptr) noexcept {}
-        DeferralCompletedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        DeferralCompletedHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> DeferralCompletedHandler(L lambda);
         template <typename F> DeferralCompletedHandler(F* function);
         template <typename O, typename M> DeferralCompletedHandler(O* object, M method);
@@ -100,11 +100,11 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
         auto operator()() const;
     };
     template <typename T>
-    struct EventHandler : Windows::Foundation::IUnknown
+    struct EventHandler : winrt::Windows::Foundation::IUnknown
     {
         static_assert(impl::has_category_v<T>, "T must be WinRT type.");
         EventHandler(std::nullptr_t = nullptr) noexcept {}
-        EventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        EventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> EventHandler(L lambda);
         template <typename F> EventHandler(F* function);
         template <typename O, typename M> EventHandler(O* object, M method);
@@ -113,12 +113,12 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, impl::param_type<T> const& args) const;
     };
     template <typename TSender, typename TResult>
-    struct TypedEventHandler : Windows::Foundation::IUnknown
+    struct TypedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         static_assert(impl::has_category_v<TSender>, "TSender must be WinRT type.");
         static_assert(impl::has_category_v<TResult>, "TResult must be WinRT type.");
         TypedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        TypedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        TypedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> TypedEventHandler(L lambda);
         template <typename F> TypedEventHandler(F* function);
         template <typename O, typename M> TypedEventHandler(O* object, M method);

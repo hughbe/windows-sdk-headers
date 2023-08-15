@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_ApplicationModel_Store_H
 #define WINRT_Windows_ApplicationModel_Store_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.ApplicationModel.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -254,7 +254,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Store_ILicenseInformation<D>::LicenseChanged(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Store::ILicenseInformation)->remove_LicenseChanged(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Store::ILicenseInformation)->remove_LicenseChanged(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Store_IListingInformation<D>::CurrentMarket() const
     {
@@ -1473,6 +1473,8 @@ namespace std
     template<> struct hash<winrt::Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::Store::PurchaseResults> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::Store::UnfulfilledConsumable> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

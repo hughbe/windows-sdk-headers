@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Networking_XboxLive_H
 #define WINRT_Windows_Networking_XboxLive_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Networking.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -29,7 +29,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_XboxLive_IXboxLiveDeviceAddress<D>::SnapshotChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::XboxLive::IXboxLiveDeviceAddress)->remove_SnapshotChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::XboxLive::IXboxLiveDeviceAddress)->remove_SnapshotChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Networking_XboxLive_IXboxLiveDeviceAddress<D>::GetSnapshotAsBase64() const
     {
@@ -113,7 +113,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_XboxLive_IXboxLiveEndpointPair<D>::StateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::XboxLive::IXboxLiveEndpointPair)->remove_StateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::XboxLive::IXboxLiveEndpointPair)->remove_StateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_Networking_XboxLive_IXboxLiveEndpointPair<D>::DeleteAsync() const
     {
@@ -231,7 +231,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_XboxLive_IXboxLiveEndpointPairTemplate<D>::InboundEndpointPairCreated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::XboxLive::IXboxLiveEndpointPairTemplate)->remove_InboundEndpointPairCreated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::XboxLive::IXboxLiveEndpointPairTemplate)->remove_InboundEndpointPairCreated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationResult>) consume_Windows_Networking_XboxLive_IXboxLiveEndpointPairTemplate<D>::CreateEndpointPairAsync(winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress const& deviceAddress) const
     {
@@ -1352,6 +1352,8 @@ namespace std
     template<> struct hash<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePayloadResult> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

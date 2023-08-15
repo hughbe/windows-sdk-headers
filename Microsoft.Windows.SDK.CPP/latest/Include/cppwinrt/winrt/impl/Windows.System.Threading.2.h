@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,10 +10,10 @@
 #include "winrt/impl/Windows.System.Threading.1.h"
 WINRT_EXPORT namespace winrt::Windows::System::Threading
 {
-    struct TimerDestroyedHandler : Windows::Foundation::IUnknown
+    struct TimerDestroyedHandler : winrt::Windows::Foundation::IUnknown
     {
         TimerDestroyedHandler(std::nullptr_t = nullptr) noexcept {}
-        TimerDestroyedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        TimerDestroyedHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> TimerDestroyedHandler(L lambda);
         template <typename F> TimerDestroyedHandler(F* function);
         template <typename O, typename M> TimerDestroyedHandler(O* object, M method);
@@ -21,10 +21,10 @@ WINRT_EXPORT namespace winrt::Windows::System::Threading
         template <typename O, typename M> TimerDestroyedHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::System::Threading::ThreadPoolTimer const& timer) const;
     };
-    struct TimerElapsedHandler : Windows::Foundation::IUnknown
+    struct TimerElapsedHandler : winrt::Windows::Foundation::IUnknown
     {
         TimerElapsedHandler(std::nullptr_t = nullptr) noexcept {}
-        TimerElapsedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        TimerElapsedHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> TimerElapsedHandler(L lambda);
         template <typename F> TimerElapsedHandler(F* function);
         template <typename O, typename M> TimerElapsedHandler(O* object, M method);
@@ -32,10 +32,10 @@ WINRT_EXPORT namespace winrt::Windows::System::Threading
         template <typename O, typename M> TimerElapsedHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::System::Threading::ThreadPoolTimer const& timer) const;
     };
-    struct WorkItemHandler : Windows::Foundation::IUnknown
+    struct WorkItemHandler : winrt::Windows::Foundation::IUnknown
     {
         WorkItemHandler(std::nullptr_t = nullptr) noexcept {}
-        WorkItemHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        WorkItemHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> WorkItemHandler(L lambda);
         template <typename F> WorkItemHandler(F* function);
         template <typename O, typename M> WorkItemHandler(O* object, M method);

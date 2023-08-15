@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_UI_ViewManagement_Core_H
 #define WINRT_Windows_UI_ViewManagement_Core_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.UI.ViewManagement.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -28,7 +28,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_ICoreFrameworkInputView<D>::PrimaryViewAnimationStarting(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::Core::ICoreFrameworkInputView)->remove_PrimaryViewAnimationStarting(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::Core::ICoreFrameworkInputView)->remove_PrimaryViewAnimationStarting(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_ViewManagement_Core_ICoreFrameworkInputView<D>::OcclusionsChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputView, winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewOcclusionsChangedEventArgs> const& handler) const
     {
@@ -42,7 +42,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_ICoreFrameworkInputView<D>::OcclusionsChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::Core::ICoreFrameworkInputView)->remove_OcclusionsChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::Core::ICoreFrameworkInputView)->remove_OcclusionsChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion>) consume_Windows_UI_ViewManagement_Core_ICoreFrameworkInputViewAnimationStartingEventArgs<D>::Occlusions() const
     {
@@ -98,7 +98,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_ICoreInputView<D>::OcclusionsChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::Core::ICoreInputView)->remove_OcclusionsChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::Core::ICoreInputView)->remove_OcclusionsChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion>) consume_Windows_UI_ViewManagement_Core_ICoreInputView<D>::GetCoreInputViewOcclusions() const
     {
@@ -130,7 +130,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_ICoreInputView2<D>::XYFocusTransferringFromPrimaryView(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::Core::ICoreInputView2)->remove_XYFocusTransferringFromPrimaryView(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::Core::ICoreInputView2)->remove_XYFocusTransferringFromPrimaryView(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_ViewManagement_Core_ICoreInputView2<D>::XYFocusTransferredToPrimaryView(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::Core::CoreInputView, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -144,7 +144,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_ICoreInputView2<D>::XYFocusTransferredToPrimaryView(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::Core::ICoreInputView2)->remove_XYFocusTransferredToPrimaryView(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::Core::ICoreInputView2)->remove_XYFocusTransferredToPrimaryView(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_ViewManagement_Core_ICoreInputView2<D>::TryTransferXYFocusToPrimaryView(winrt::Windows::Foundation::Rect const& origin, winrt::Windows::UI::ViewManagement::Core::CoreInputViewXYFocusTransferDirection const& direction) const
     {
@@ -182,7 +182,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_ICoreInputView4<D>::PrimaryViewShowing(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::Core::ICoreInputView4)->remove_PrimaryViewShowing(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::Core::ICoreInputView4)->remove_PrimaryViewShowing(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_ViewManagement_Core_ICoreInputView4<D>::PrimaryViewHiding(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::Core::CoreInputView, winrt::Windows::UI::ViewManagement::Core::CoreInputViewHidingEventArgs> const& handler) const
     {
@@ -196,7 +196,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_ICoreInputView4<D>::PrimaryViewHiding(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::Core::ICoreInputView4)->remove_PrimaryViewHiding(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::Core::ICoreInputView4)->remove_PrimaryViewHiding(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_ViewManagement_Core_ICoreInputView5<D>::IsKindSupported(winrt::Windows::UI::ViewManagement::Core::CoreInputViewKind const& type) const
     {
@@ -216,7 +216,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_ICoreInputView5<D>::SupportedKindsChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::Core::ICoreInputView5)->remove_SupportedKindsChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::Core::ICoreInputView5)->remove_SupportedKindsChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_ViewManagement_Core_ICoreInputView5<D>::PrimaryViewAnimationStarting(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::Core::CoreInputView, winrt::Windows::UI::ViewManagement::Core::CoreInputViewAnimationStartingEventArgs> const& handler) const
     {
@@ -230,7 +230,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_Core_ICoreInputView5<D>::PrimaryViewAnimationStarting(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::Core::ICoreInputView5)->remove_PrimaryViewAnimationStarting(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::Core::ICoreInputView5)->remove_PrimaryViewAnimationStarting(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion>) consume_Windows_UI_ViewManagement_Core_ICoreInputViewAnimationStartingEventArgs<D>::Occlusions() const
     {
@@ -955,6 +955,8 @@ namespace std
     template<> struct hash<winrt::Windows::UI::ViewManagement::Core::CoreInputViewShowingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::ViewManagement::Core::UISettingsController> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

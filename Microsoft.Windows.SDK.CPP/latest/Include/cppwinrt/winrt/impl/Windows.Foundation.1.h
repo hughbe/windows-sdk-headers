@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -148,13 +148,25 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
         static_assert(impl::has_category_v<T>, "T must be WinRT type.");
         IReference(std::nullptr_t = nullptr) noexcept {}
         IReference(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-        IReference(T const& value) : IReference<T>(impl::reference_traits<T>::make(value))
+        IReference(T const& value) : IReference(impl::reference_traits<T>::make(value))
         {
         }
-
+        IReference(std::optional<T> const& value) : IReference(value ? IReference(value.value()) : nullptr)
+        {
+        }
+        operator std::optional<T>() const
+        {
+            if (*this)
+            {
+                return this->Value();
+            }
+            else
+            {
+                return std::nullopt;
+            }
+        }
     private:
-
-        IReference<T>(IInspectable const& value) : IReference<T>(value.as<IReference<T>>())
+        IReference(IInspectable const& value) : IReference(value.as<IReference>())
         {
         }
     };
@@ -225,4 +237,13 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
     template <typename T>
     bool operator!=(IReference<T> const& left, IReference<T> const& right);
 }
+
+#ifdef __cpp_lib_format
+template <>
+struct std::formatter<winrt::Windows::Foundation::IStringable, wchar_t> : std::formatter<winrt::hstring, wchar_t>
+{
+    template <typename FormatContext>
+    auto format(winrt::Windows::Foundation::IStringable const& obj, FormatContext& fc);
+};
+#endif
 #endif

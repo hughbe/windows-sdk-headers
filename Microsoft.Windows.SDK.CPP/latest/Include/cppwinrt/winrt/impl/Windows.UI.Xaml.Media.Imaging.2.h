@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -13,10 +13,10 @@
 #include "winrt/impl/Windows.UI.Xaml.Media.Imaging.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Media::Imaging
 {
-    struct DownloadProgressEventHandler : Windows::Foundation::IUnknown
+    struct DownloadProgressEventHandler : winrt::Windows::Foundation::IUnknown
     {
         DownloadProgressEventHandler(std::nullptr_t = nullptr) noexcept {}
-        DownloadProgressEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        DownloadProgressEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> DownloadProgressEventHandler(L lambda);
         template <typename F> DownloadProgressEventHandler(F* function);
         template <typename O, typename M> DownloadProgressEventHandler(O* object, M method);

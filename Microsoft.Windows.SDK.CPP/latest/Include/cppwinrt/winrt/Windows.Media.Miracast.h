@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Media_Miracast_H
 #define WINRT_Windows_Media_Miracast_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Media.h"
 #include "winrt/impl/Windows.ApplicationModel.Core.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -73,7 +73,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Miracast_IMiracastReceiver<D>::StatusChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Miracast::IMiracastReceiver)->remove_StatusChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Miracast::IMiracastReceiver)->remove_StatusChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Miracast::MiracastReceiverSession) consume_Windows_Media_Miracast_IMiracastReceiver<D>::CreateSession(winrt::Windows::ApplicationModel::Core::CoreApplicationView const& view) const
     {
@@ -213,7 +213,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Miracast_IMiracastReceiverCursorImageChannel<D>::ImageStreamChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Miracast::IMiracastReceiverCursorImageChannel)->remove_ImageStreamChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Miracast::IMiracastReceiverCursorImageChannel)->remove_ImageStreamChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Miracast_IMiracastReceiverCursorImageChannel<D>::PositionChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannel, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -227,7 +227,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Miracast_IMiracastReceiverCursorImageChannel<D>::PositionChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Miracast::IMiracastReceiverCursorImageChannel)->remove_PositionChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Miracast::IMiracastReceiverCursorImageChannel)->remove_PositionChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Miracast_IMiracastReceiverCursorImageChannelSettings<D>::IsEnabled() const
     {
@@ -299,7 +299,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Miracast_IMiracastReceiverGameControllerDevice<D>::Changed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Miracast::IMiracastReceiverGameControllerDevice)->remove_Changed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Miracast::IMiracastReceiverGameControllerDevice)->remove_Changed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Miracast::MiracastReceiverKeyboardDevice) consume_Windows_Media_Miracast_IMiracastReceiverInputDevices<D>::Keyboard() const
     {
@@ -347,7 +347,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Miracast_IMiracastReceiverKeyboardDevice<D>::Changed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Miracast::IMiracastReceiverKeyboardDevice)->remove_Changed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Miracast::IMiracastReceiverKeyboardDevice)->remove_Changed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Miracast::MiracastReceiverConnection) consume_Windows_Media_Miracast_IMiracastReceiverMediaSourceCreatedEventArgs<D>::Connection() const
     {
@@ -385,7 +385,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Miracast_IMiracastReceiverSession<D>::ConnectionCreated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Miracast::IMiracastReceiverSession)->remove_ConnectionCreated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Miracast::IMiracastReceiverSession)->remove_ConnectionCreated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Miracast_IMiracastReceiverSession<D>::MediaSourceCreated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiverSession, winrt::Windows::Media::Miracast::MiracastReceiverMediaSourceCreatedEventArgs> const& handler) const
     {
@@ -399,7 +399,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Miracast_IMiracastReceiverSession<D>::MediaSourceCreated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Miracast::IMiracastReceiverSession)->remove_MediaSourceCreated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Miracast::IMiracastReceiverSession)->remove_MediaSourceCreated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Miracast_IMiracastReceiverSession<D>::Disconnected(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiverSession, winrt::Windows::Media::Miracast::MiracastReceiverDisconnectedEventArgs> const& handler) const
     {
@@ -413,7 +413,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Miracast_IMiracastReceiverSession<D>::Disconnected(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Miracast::IMiracastReceiverSession)->remove_Disconnected(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Miracast::IMiracastReceiverSession)->remove_Disconnected(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Miracast_IMiracastReceiverSession<D>::AllowConnectionTakeover() const
     {
@@ -1578,6 +1578,8 @@ namespace std
     template<> struct hash<winrt::Windows::Media::Miracast::MiracastReceiverStreamControl> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Miracast::MiracastTransmitter> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

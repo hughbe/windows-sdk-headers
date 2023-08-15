@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_UI_Xaml_Media_H
 #define WINRT_Windows_UI_Xaml_Media_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.UI.Xaml.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -472,7 +472,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Media_ICompositionTargetStatics<D>::Rendering(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::ICompositionTargetStatics)->remove_Rendering(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::ICompositionTargetStatics)->remove_Rendering(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Media_ICompositionTargetStatics<D>::SurfaceContentsLost(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -486,7 +486,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Media_ICompositionTargetStatics<D>::SurfaceContentsLost(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::ICompositionTargetStatics)->remove_SurfaceContentsLost(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::ICompositionTargetStatics)->remove_SurfaceContentsLost(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Media_ICompositionTargetStatics3<D>::Rendered(winrt::Windows::Foundation::EventHandler<winrt::Windows::UI::Xaml::Media::RenderedEventArgs> const& handler) const
     {
@@ -500,7 +500,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Media_ICompositionTargetStatics3<D>::Rendered(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::ICompositionTargetStatics3)->remove_Rendered(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::ICompositionTargetStatics3)->remove_Rendered(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) consume_Windows_UI_Xaml_Media_IEllipseGeometry<D>::Center() const
     {
@@ -806,7 +806,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Media_IImageBrush<D>::ImageFailed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::IImageBrush)->remove_ImageFailed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::IImageBrush)->remove_ImageFailed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Media_IImageBrush<D>::ImageOpened(winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const
     {
@@ -820,7 +820,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Media_IImageBrush<D>::ImageOpened(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::IImageBrush)->remove_ImageOpened(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::IImageBrush)->remove_ImageOpened(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::DependencyProperty) consume_Windows_UI_Xaml_Media_IImageBrushStatics<D>::ImageSourceProperty() const
     {
@@ -950,7 +950,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Media_ILoadedImageSurface<D>::LoadCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::ILoadedImageSurface)->remove_LoadCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::ILoadedImageSurface)->remove_LoadCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::LoadedImageSurface) consume_Windows_UI_Xaml_Media_ILoadedImageSurfaceStatics<D>::StartLoadFromUri(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Foundation::Size const& desiredMaxSize) const
     {
@@ -7051,6 +7051,8 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Xaml::Media::VisualTreeHelper> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Media::XamlCompositionBrushBase> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Media::XamlLight> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

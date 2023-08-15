@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -14,10 +14,10 @@
 #include "winrt/impl/Windows.Storage.1.h"
 WINRT_EXPORT namespace winrt::Windows::Storage
 {
-    struct ApplicationDataSetVersionHandler : Windows::Foundation::IUnknown
+    struct ApplicationDataSetVersionHandler : winrt::Windows::Foundation::IUnknown
     {
         ApplicationDataSetVersionHandler(std::nullptr_t = nullptr) noexcept {}
-        ApplicationDataSetVersionHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        ApplicationDataSetVersionHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> ApplicationDataSetVersionHandler(L lambda);
         template <typename F> ApplicationDataSetVersionHandler(F* function);
         template <typename O, typename M> ApplicationDataSetVersionHandler(O* object, M method);
@@ -25,10 +25,10 @@ WINRT_EXPORT namespace winrt::Windows::Storage
         template <typename O, typename M> ApplicationDataSetVersionHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Storage::SetVersionRequest const& setVersionRequest) const;
     };
-    struct StreamedFileDataRequestedHandler : Windows::Foundation::IUnknown
+    struct StreamedFileDataRequestedHandler : winrt::Windows::Foundation::IUnknown
     {
         StreamedFileDataRequestedHandler(std::nullptr_t = nullptr) noexcept {}
-        StreamedFileDataRequestedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        StreamedFileDataRequestedHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> StreamedFileDataRequestedHandler(L lambda);
         template <typename F> StreamedFileDataRequestedHandler(F* function);
         template <typename O, typename M> StreamedFileDataRequestedHandler(O* object, M method);

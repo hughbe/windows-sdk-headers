@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -14,10 +14,10 @@
 #include "winrt/impl/Windows.ApplicationModel.DataTransfer.1.h"
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::DataTransfer
 {
-    struct DataProviderHandler : Windows::Foundation::IUnknown
+    struct DataProviderHandler : winrt::Windows::Foundation::IUnknown
     {
         DataProviderHandler(std::nullptr_t = nullptr) noexcept {}
-        DataProviderHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        DataProviderHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> DataProviderHandler(L lambda);
         template <typename F> DataProviderHandler(F* function);
         template <typename O, typename M> DataProviderHandler(O* object, M method);
@@ -25,10 +25,10 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::DataTransfer
         template <typename O, typename M> DataProviderHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::ApplicationModel::DataTransfer::DataProviderRequest const& request) const;
     };
-    struct ShareProviderHandler : Windows::Foundation::IUnknown
+    struct ShareProviderHandler : winrt::Windows::Foundation::IUnknown
     {
         ShareProviderHandler(std::nullptr_t = nullptr) noexcept {}
-        ShareProviderHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        ShareProviderHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> ShareProviderHandler(L lambda);
         template <typename F> ShareProviderHandler(F* function);
         template <typename O, typename M> ShareProviderHandler(O* object, M method);

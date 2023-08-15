@@ -4591,6 +4591,24 @@ Notes:
 #define USB4_HARDWARE_VIOLATION          ((ULONG)0x000001F2L)
 
 //
+// MessageId: IORING
+//
+// MessageText:
+//
+//  IORING
+//
+#define IORING                           ((ULONG)0x000001F3L)
+
+//
+// MessageId: MDL_CACHE
+//
+// MessageText:
+//
+//  MDL_CACHE
+//
+#define MDL_CACHE                        ((ULONG)0x000001F4L)
+
+//
 // MessageId: XBOX_VMCTRL_CS_TIMEOUT
 //
 // MessageText:

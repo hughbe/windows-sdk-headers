@@ -91,6 +91,8 @@ namespace Windows
 
             interface IIsolatedWindowsEnvironmentOptions2;
 
+            interface IIsolatedWindowsEnvironmentOptions3;
+
             interface IIsolatedWindowsEnvironmentOwnerRegistrationData;
 
             interface IIsolatedWindowsEnvironmentOwnerRegistrationResult;
@@ -226,7 +228,9 @@ namespace Windows
             {
                 None  = 0x0,
                 Text  = 0x1,
-                Image = 0x2
+                Image = 0x2,
+                [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 4.0)]
+                Rtf   = 0x4
             };
 
             [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 1.0)]
@@ -532,6 +536,19 @@ namespace Windows
                 [propput] HRESULT WindowAnnotationOverride([in] HSTRING value);
             }
 
+            [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 4.0)]
+            [exclusiveto(Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions)]
+            [uuid(98D5AA23-161F-4CD9-8A9C-269B30122B0D)]
+            interface IIsolatedWindowsEnvironmentOptions3 : IInspectable
+            {
+                [propget] HRESULT AllowedClipboardFormatsToEnvironment([out] [retval] Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats* value);
+                [propput] HRESULT AllowedClipboardFormatsToEnvironment([in] Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats value);
+                [propget] HRESULT AllowedClipboardFormatsToHost([out] [retval] Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats* value);
+                [propput] HRESULT AllowedClipboardFormatsToHost([in] Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats value);
+                [propget] HRESULT CreationPriority([out] [retval] Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority* value);
+                [propput] HRESULT CreationPriority([in] Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority value);
+            }
+
             [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 1.0)]
             [exclusiveto(Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData)]
             [uuid(F888EC22-E8CF-56C0-B1DF-90AF4AD80E84)]
@@ -725,6 +742,7 @@ namespace Windows
             {
                 [default] interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions;
                 [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 3.0)] interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions2;
+                [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 4.0)] interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3;
             }
 
             [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 1.0)]

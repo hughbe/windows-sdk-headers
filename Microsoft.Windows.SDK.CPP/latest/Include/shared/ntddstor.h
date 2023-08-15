@@ -959,7 +959,6 @@ typedef enum _STORAGE_PROPERTY_ID {
     StorageDeviceLedStateProperty,
     StorageDeviceSelfEncryptionProperty = 64,
     StorageFruIdProperty,
-    StorageDeviceCommandDurationLimitProperty,
 } STORAGE_PROPERTY_ID, *PSTORAGE_PROPERTY_ID;
 
 
@@ -2874,84 +2873,6 @@ typedef struct _STORAGE_FRU_ID_DESCRIPTOR {
     UCHAR Identifier[ANYSIZE_ARRAY];
 
 } STORAGE_FRU_ID_DESCRIPTOR, *PSTORAGE_FRU_ID_DESCRIPTOR;
-
-//
-// Parameters for StorageDeviceCommandDurationLimitProperty
-//
-
-#define STORAGE_COMMAND_LIMIT_DURATION_COUNT    7
-
-typedef enum _STORAGE_COMMAND_PRIORITY {
-    StorageCommandPriorityNone = 0,
-
-    StorageCommandHighPriority,
-    StorageCommandNormalPriority,
-    StorageCommandLowPriority,
-    StorageCommandVeryLowPriority,
-
-    StorageCommandPriorityMax
-} STORAGE_COMMAND_PRIORITY, *PSTORAGE_COMMAND_PRIORITY;
-
-typedef struct _STORAGE_COMMAND_LIMIT_DURATIONS {
-    STORAGE_COMMAND_PRIORITY CommandPriority;
-    ULONGLONG MaxInactiveTimeInNSec;
-    ULONGLONG MaxActiveTimeInNSec;      // Reserved for set command duration limit property
-    ULONGLONG DurationGuideLineInNSec;  // Reserved for set command duration limit property
-} STORAGE_COMMAND_LIMIT_DURATIONS, *PSTORAGE_COMMAND_LIMIT_DURATIONS;
-
-typedef enum _STORAGE_COMMAND_DURATION_LIMIT_MODE_PAGE {
-    CommandDurationLimitAMode = 0,
-    CommandDurationLimitBMode,
-    CommandDurationLimitT2AMode,
-    CommandDurationLimitT2BMode,
-
-    CommandDurationLimitModeMax
-} STORAGE_COMMAND_DURATION_LIMIT_MODE_PAGE, *PSTORAGE_COMMAND_DURATION_LIMIT_MODE_PAGE;
-
-typedef enum _STORAGE_COMMAND_DURATION_LIMIT_SUPPORTED_COMMAND {
-    CommandDurationLimitSupportedCommandRead16,
-    CommandDurationLimitSupportedCommandWrite16,
-
-    CommandDurationLimitSupportedCommandMax
-} STORAGE_COMMAND_DURATION_LIMIT_SUPPORTED_COMMAND, *PSTORAGE_COMMAND_DURATION_LIMIT_SUPPORTED_COMMAND;
-
-typedef struct _STORAGE_COMMAND_DURATION_LIMIT_INFO {
-
-    ULONG Command       : 4;    // STORAGE_COMMAND_DURATION_LIMIT_SUPPORTED_COMMAND
-    ULONG ModePage      : 4;    // STORAGE_COMMAND_DURATION_LIMIT_MODE_PAGE
-    ULONG Enabled       : 1;    // Indicate if command duration limit is enabled for this command; Reserved for set command duration limit info property
-    ULONG Reserved      : 23;
-
-    STORAGE_COMMAND_LIMIT_DURATIONS CommandLimitDurations[STORAGE_COMMAND_LIMIT_DURATION_COUNT];
-} STORAGE_COMMAND_DURATION_LIMIT_INFO, *PSTORAGE_COMMAND_DURATION_LIMIT_INFO;
-
-//
-// Input/Output buffer for StorageDeviceCommandDurationLimitProperty
-// NOTE: When set the command duration limit properties, the durations
-// in each CommandDurationLimitInfo are required to be in ascending order,
-// and Command and ModePage must match as in the queried data.
-//
-typedef struct _STORAGE_DEVICE_COMMAND_DURATION_LIMIT_PROPERTY {
-
-    //
-    // Sizeof(STORAGE_DEVICE_COMMAND_DURATION_LIMIT_PROPERTY)
-    //
-    ULONG Version;
-
-    //
-    // Total size of the data.
-    // Should be >= sizeof(STORAGE_DEVICE_COMMAND_DURATION_LIMIT_PROPERTY)
-    //
-    ULONG Size;
-
-    //
-    // The number of elements in the CommandDurationLimitInfo field.
-    //
-    ULONG CommandDurationLimitInfoCount;
-
-    STORAGE_COMMAND_DURATION_LIMIT_INFO CommandDurationLimitInfo[ANYSIZE_ARRAY];
-
-} STORAGE_DEVICE_COMMAND_DURATION_LIMIT_PROPERTY, *PSTORAGE_DEVICE_COMMAND_DURATION_LIMIT_PROPERTY;
 
 
 ////////////////////////////////////////////////////////////////////////////////

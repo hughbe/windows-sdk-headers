@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_System_RemoteSystems_H
 #define WINRT_Windows_System_RemoteSystems_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.System.h"
 #include "winrt/impl/Windows.ApplicationModel.AppService.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -367,7 +367,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSession<D>::Disconnected(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSession)->remove_Disconnected(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSession)->remove_Disconnected(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher) consume_Windows_System_RemoteSystems_IRemoteSystemSession<D>::CreateParticipantWatcher() const
     {
@@ -399,7 +399,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionController<D>::JoinRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionController)->remove_JoinRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionController)->remove_JoinRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_RemoteSystems_IRemoteSystemSessionController<D>::RemoveParticipantAsync(winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant const& pParticipant) const
     {
@@ -485,7 +485,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionInvitationListener<D>::InvitationReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionInvitationListener)->remove_InvitationReceived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionInvitationListener)->remove_InvitationReceived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitation) consume_Windows_System_RemoteSystems_IRemoteSystemSessionInvitationReceivedEventArgs<D>::Invitation() const
     {
@@ -563,7 +563,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannel<D>::ValueSetReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel)->remove_ValueSetReceived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel)->remove_ValueSetReceived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel) consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannelFactory<D>::Create(winrt::Windows::System::RemoteSystems::RemoteSystemSession const& session, param::hstring const& channelName) const
     {
@@ -637,7 +637,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Added(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->remove_Added(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->remove_Added(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Removed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantRemovedEventArgs> const& handler) const
     {
@@ -651,7 +651,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Removed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->remove_Removed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->remove_Removed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::EnumerationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -665,7 +665,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::EnumerationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->remove_EnumerationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->remove_EnumerationCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionInfo) consume_Windows_System_RemoteSystems_IRemoteSystemSessionRemovedEventArgs<D>::SessionInfo() const
     {
@@ -723,7 +723,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Added(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->remove_Added(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->remove_Added(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Updated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionUpdatedEventArgs> const& handler) const
     {
@@ -737,7 +737,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Updated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->remove_Updated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->remove_Updated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Removed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionRemovedEventArgs> const& handler) const
     {
@@ -751,7 +751,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Removed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->remove_Removed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->remove_Removed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::System::RemoteSystems::RemoteSystem>) consume_Windows_System_RemoteSystems_IRemoteSystemStatics<D>::FindByHostNameAsync(winrt::Windows::Networking::HostName const& hostName) const
     {
@@ -833,7 +833,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemAdded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher)->remove_RemoteSystemAdded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher)->remove_RemoteSystemAdded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemUpdated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemUpdatedEventArgs> const& handler) const
     {
@@ -847,7 +847,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemUpdated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher)->remove_RemoteSystemUpdated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher)->remove_RemoteSystemUpdated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemRemoved(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemRemovedEventArgs> const& handler) const
     {
@@ -861,7 +861,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemRemoved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher)->remove_RemoteSystemRemoved(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher)->remove_RemoteSystemRemoved(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::EnumerationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemEnumerationCompletedEventArgs> const& handler) const
     {
@@ -875,7 +875,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::EnumerationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher2)->remove_EnumerationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher2)->remove_EnumerationCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::ErrorOccurred(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs> const& handler) const
     {
@@ -889,7 +889,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::ErrorOccurred(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher2)->remove_ErrorOccurred(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher2)->remove_ErrorOccurred(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::User) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher3<D>::User() const
     {
@@ -2708,6 +2708,8 @@ namespace std
     template<> struct hash<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::RemoteSystems::RemoteSystemWebAccountFilter> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

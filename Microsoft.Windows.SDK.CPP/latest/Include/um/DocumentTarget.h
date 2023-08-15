@@ -271,11 +271,10 @@ EXTERN_C const IID IID_IPrintDocumentPackageTarget2;
     IPrintDocumentPackageTarget2 : public IUnknown
     {
     public:
-        virtual /* [helpstring] */ HRESULT STDMETHODCALLTYPE GetIsPdlPassthroughSupported( 
-            /* [string][in] */ __RPC__in_string LPCWSTR pdlContentType,
-            /* [out] */ __RPC__out BOOL *isPassthroughSupported) = 0;
+        virtual /* [helpstring] */ HRESULT STDMETHODCALLTYPE GetIsTargetIppPrinter( 
+            /* [out] */ __RPC__out BOOL *isIppPrinter) = 0;
         
-        virtual /* [helpstring] */ HRESULT STDMETHODCALLTYPE GetPdlPassthroughProvider( 
+        virtual /* [helpstring] */ HRESULT STDMETHODCALLTYPE GetTargetIppPrintDevice( 
             /* [in] */ __RPC__in REFIID riid,
             /* [iid_is][out] */ __RPC__deref_out_opt void **ppvTarget) = 0;
         
@@ -303,14 +302,13 @@ EXTERN_C const IID IID_IPrintDocumentPackageTarget2;
         ULONG ( STDMETHODCALLTYPE *Release )( 
             __RPC__in IPrintDocumentPackageTarget2 * This);
         
-        DECLSPEC_XFGVIRT(IPrintDocumentPackageTarget2, GetIsPdlPassthroughSupported)
-        /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetIsPdlPassthroughSupported )( 
+        DECLSPEC_XFGVIRT(IPrintDocumentPackageTarget2, GetIsTargetIppPrinter)
+        /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetIsTargetIppPrinter )( 
             __RPC__in IPrintDocumentPackageTarget2 * This,
-            /* [string][in] */ __RPC__in_string LPCWSTR pdlContentType,
-            /* [out] */ __RPC__out BOOL *isPassthroughSupported);
+            /* [out] */ __RPC__out BOOL *isIppPrinter);
         
-        DECLSPEC_XFGVIRT(IPrintDocumentPackageTarget2, GetPdlPassthroughProvider)
-        /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetPdlPassthroughProvider )( 
+        DECLSPEC_XFGVIRT(IPrintDocumentPackageTarget2, GetTargetIppPrintDevice)
+        /* [helpstring] */ HRESULT ( STDMETHODCALLTYPE *GetTargetIppPrintDevice )( 
             __RPC__in IPrintDocumentPackageTarget2 * This,
             /* [in] */ __RPC__in REFIID riid,
             /* [iid_is][out] */ __RPC__deref_out_opt void **ppvTarget);
@@ -338,11 +336,11 @@ EXTERN_C const IID IID_IPrintDocumentPackageTarget2;
     ( (This)->lpVtbl -> Release(This) ) 
 
 
-#define IPrintDocumentPackageTarget2_GetIsPdlPassthroughSupported(This,pdlContentType,isPassthroughSupported)	\
-    ( (This)->lpVtbl -> GetIsPdlPassthroughSupported(This,pdlContentType,isPassthroughSupported) ) 
+#define IPrintDocumentPackageTarget2_GetIsTargetIppPrinter(This,isIppPrinter)	\
+    ( (This)->lpVtbl -> GetIsTargetIppPrinter(This,isIppPrinter) ) 
 
-#define IPrintDocumentPackageTarget2_GetPdlPassthroughProvider(This,riid,ppvTarget)	\
-    ( (This)->lpVtbl -> GetPdlPassthroughProvider(This,riid,ppvTarget) ) 
+#define IPrintDocumentPackageTarget2_GetTargetIppPrintDevice(This,riid,ppvTarget)	\
+    ( (This)->lpVtbl -> GetTargetIppPrintDevice(This,riid,ppvTarget) ) 
 
 #endif /* COBJMACROS */
 

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,10 +11,10 @@
 #include "winrt/impl/Windows.UI.Core.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::Core
 {
-    struct DispatchedHandler : Windows::Foundation::IUnknown
+    struct DispatchedHandler : winrt::Windows::Foundation::IUnknown
     {
         DispatchedHandler(std::nullptr_t = nullptr) noexcept {}
-        DispatchedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        DispatchedHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> DispatchedHandler(L lambda);
         template <typename F> DispatchedHandler(F* function);
         template <typename O, typename M> DispatchedHandler(O* object, M method);
@@ -22,10 +22,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Core
         template <typename O, typename M> DispatchedHandler(weak_ref<O>&& object, M method);
         auto operator()() const;
     };
-    struct IdleDispatchedHandler : Windows::Foundation::IUnknown
+    struct IdleDispatchedHandler : winrt::Windows::Foundation::IUnknown
     {
         IdleDispatchedHandler(std::nullptr_t = nullptr) noexcept {}
-        IdleDispatchedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        IdleDispatchedHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> IdleDispatchedHandler(L lambda);
         template <typename F> IdleDispatchedHandler(F* function);
         template <typename O, typename M> IdleDispatchedHandler(O* object, M method);

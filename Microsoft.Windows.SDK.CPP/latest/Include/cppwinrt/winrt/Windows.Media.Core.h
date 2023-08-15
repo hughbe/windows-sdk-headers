@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Media_Core_H
 #define WINRT_Windows_Media_Core_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Media.h"
 #include "winrt/impl/Windows.ApplicationModel.AppService.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -84,7 +84,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IAudioTrack<D>::OpenFailed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioTrack)->remove_OpenFailed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioTrack)->remove_OpenFailed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::MediaProperties::AudioEncodingProperties) consume_Windows_Media_Core_IAudioTrack<D>::GetEncodingProperties() const
     {
@@ -546,7 +546,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IFaceDetectionEffect<D>::FaceDetected(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IFaceDetectionEffect)->remove_FaceDetected(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IFaceDetectionEffect)->remove_FaceDetected(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IFaceDetectionEffectDefinition<D>::DetectionMode(winrt::Windows::Media::Core::FaceDetectionMode const& value) const
     {
@@ -680,7 +680,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaBinder<D>::Binding(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBinder)->remove_Binding(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBinder)->remove_Binding(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_IMediaBinder<D>::Token() const
     {
@@ -710,7 +710,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaBindingEventArgs<D>::Canceled(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBindingEventArgs)->remove_Canceled(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBindingEventArgs)->remove_Canceled(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaBinder) consume_Windows_Media_Core_IMediaBindingEventArgs<D>::MediaBinder() const
     {
@@ -796,7 +796,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaSource2<D>::OpenOperationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource2)->remove_OpenOperationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource2)->remove_OpenOperationCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::ValueSet) consume_Windows_Media_Core_IMediaSource2<D>::CustomProperties() const
     {
@@ -840,7 +840,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaSource3<D>::StateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource3)->remove_StateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource3)->remove_StateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSourceState) consume_Windows_Media_Core_IMediaSource3<D>::State() const
     {
@@ -900,7 +900,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaSourceAppServiceConnection<D>::InitializeMediaStreamSourceRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceAppServiceConnection)->remove_InitializeMediaStreamSourceRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceAppServiceConnection)->remove_InitializeMediaStreamSourceRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaSourceAppServiceConnection<D>::Start() const
     {
@@ -1050,7 +1050,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSample<D>::Processed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSample)->remove_Processed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSample)->remove_Processed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::Buffer) consume_Windows_Media_Core_IMediaStreamSample<D>::Buffer() const
     {
@@ -1176,7 +1176,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::Closed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->remove_Closed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->remove_Closed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaStreamSource<D>::Starting(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceStartingEventArgs> const& handler) const
     {
@@ -1190,7 +1190,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::Starting(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->remove_Starting(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->remove_Starting(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaStreamSource<D>::Paused(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1204,7 +1204,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::Paused(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->remove_Paused(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->remove_Paused(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaStreamSource<D>::SampleRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceSampleRequestedEventArgs> const& handler) const
     {
@@ -1218,7 +1218,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::SampleRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->remove_SampleRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->remove_SampleRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaStreamSource<D>::SwitchStreamsRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestedEventArgs> const& handler) const
     {
@@ -1232,7 +1232,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::SwitchStreamsRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->remove_SwitchStreamsRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->remove_SwitchStreamsRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::NotifyError(winrt::Windows::Media::Core::MediaStreamSourceErrorStatus const& errorStatus) const
     {
@@ -1324,7 +1324,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource2<D>::SampleRendered(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource2)->remove_SampleRendered(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource2)->remove_SampleRendered(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource3<D>::MaxSupportedPlaybackRate(winrt::Windows::Foundation::IReference<double> const& value) const
     {
@@ -1506,7 +1506,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::UpdateStarting(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->remove_UpdateStarting(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->remove_UpdateStarting(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBuffer<D>::Updated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1520,7 +1520,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::Updated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->remove_Updated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->remove_Updated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBuffer<D>::UpdateEnded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1534,7 +1534,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::UpdateEnded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->remove_UpdateEnded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->remove_UpdateEnded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBuffer<D>::ErrorOccurred(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1548,7 +1548,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::ErrorOccurred(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->remove_ErrorOccurred(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->remove_ErrorOccurred(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBuffer<D>::Aborted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1562,7 +1562,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::Aborted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->remove_Aborted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->remove_Aborted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MseAppendMode) consume_Windows_Media_Core_IMseSourceBuffer<D>::Mode() const
     {
@@ -1648,7 +1648,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBufferList<D>::SourceBufferAdded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBufferList)->remove_SourceBufferAdded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBufferList)->remove_SourceBufferAdded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBufferList<D>::SourceBufferRemoved(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBufferList, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1662,7 +1662,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBufferList<D>::SourceBufferRemoved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBufferList)->remove_SourceBufferRemoved(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBufferList)->remove_SourceBufferRemoved(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::MseSourceBuffer>) consume_Windows_Media_Core_IMseSourceBufferList<D>::Buffers() const
     {
@@ -1682,7 +1682,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseStreamSource<D>::Opened(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->remove_Opened(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->remove_Opened(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseStreamSource<D>::Ended(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseStreamSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1696,7 +1696,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseStreamSource<D>::Ended(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->remove_Ended(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->remove_Ended(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseStreamSource<D>::Closed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseStreamSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1710,7 +1710,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseStreamSource<D>::Closed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->remove_Closed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->remove_Closed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MseSourceBufferList) consume_Windows_Media_Core_IMseStreamSource<D>::SourceBuffers() const
     {
@@ -1798,7 +1798,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ISceneAnalysisEffect<D>::SceneAnalyzed(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISceneAnalysisEffect)->remove_SceneAnalyzed(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISceneAnalysisEffect)->remove_SceneAnalyzed(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::CapturedFrameControlValues) consume_Windows_Media_Core_ISceneAnalysisEffectFrame<D>::FrameControlValues() const
     {
@@ -1836,7 +1836,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ISingleSelectMediaTrackList<D>::SelectedIndexChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISingleSelectMediaTrackList)->remove_SelectedIndexChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISingleSelectMediaTrackList)->remove_SelectedIndexChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ISingleSelectMediaTrackList<D>::SelectedIndex(int32_t value) const
     {
@@ -1908,7 +1908,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedMetadataTrack<D>::CueEntered(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack)->remove_CueEntered(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack)->remove_CueEntered(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_ITimedMetadataTrack<D>::CueExited(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::TimedMetadataTrack, winrt::Windows::Media::Core::MediaCueEventArgs> const& handler) const
     {
@@ -1922,7 +1922,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedMetadataTrack<D>::CueExited(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack)->remove_CueExited(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack)->remove_CueExited(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_ITimedMetadataTrack<D>::TrackFailed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::TimedMetadataTrack, winrt::Windows::Media::Core::TimedMetadataTrackFailedEventArgs> const& handler) const
     {
@@ -1936,7 +1936,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedMetadataTrack<D>::TrackFailed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack)->remove_TrackFailed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack)->remove_TrackFailed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::IMediaCue>) consume_Windows_Media_Core_ITimedMetadataTrack<D>::Cues() const
     {
@@ -2256,7 +2256,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextSource<D>::Resolved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSource)->remove_Resolved(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSource)->remove_Resolved(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedMetadataTrackError) consume_Windows_Media_Core_ITimedTextSourceResolveResultEventArgs<D>::Error() const
     {
@@ -2562,7 +2562,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IVideoStabilizationEffect<D>::EnabledChanged(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoStabilizationEffect)->remove_EnabledChanged(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoStabilizationEffect)->remove_EnabledChanged(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::VideoStreamConfiguration) consume_Windows_Media_Core_IVideoStabilizationEffect<D>::GetRecommendedStreamConfiguration(winrt::Windows::Media::Devices::VideoDeviceController const& controller, winrt::Windows::Media::MediaProperties::VideoEncodingProperties const& desiredProperties) const
     {
@@ -2606,7 +2606,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IVideoTrack<D>::OpenFailed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoTrack)->remove_OpenFailed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoTrack)->remove_OpenFailed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::MediaProperties::VideoEncodingProperties) consume_Windows_Media_Core_IVideoTrack<D>::GetEncodingProperties() const
     {
@@ -7347,6 +7347,8 @@ namespace std
     template<> struct hash<winrt::Windows::Media::Core::VideoTrack> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Core::VideoTrackOpenFailedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Core::VideoTrackSupportInfo> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

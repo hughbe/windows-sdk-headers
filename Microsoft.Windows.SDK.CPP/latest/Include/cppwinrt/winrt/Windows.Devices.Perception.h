@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Devices_Perception_H
 #define WINRT_Windows_Devices_Perception_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Devices.h"
 #include "winrt/impl/Windows.Devices.Enumeration.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -242,7 +242,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionColorFrameReader<D>::FrameArrived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameReader)->remove_FrameArrived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameReader)->remove_FrameArrived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Perception::PerceptionColorFrameSource) consume_Windows_Devices_Perception_IPerceptionColorFrameReader<D>::Source() const
     {
@@ -278,7 +278,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionColorFrameSource<D>::AvailableChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameSource)->remove_AvailableChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameSource)->remove_AvailableChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionColorFrameSource<D>::ActiveChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionColorFrameSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -292,7 +292,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionColorFrameSource<D>::ActiveChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameSource)->remove_ActiveChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameSource)->remove_ActiveChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionColorFrameSource<D>::PropertiesChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionColorFrameSource, winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs> const& handler) const
     {
@@ -306,7 +306,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionColorFrameSource<D>::PropertiesChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameSource)->remove_PropertiesChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameSource)->remove_PropertiesChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionColorFrameSource<D>::VideoProfileChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionColorFrameSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -320,7 +320,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionColorFrameSource<D>::VideoProfileChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameSource)->remove_VideoProfileChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameSource)->remove_VideoProfileChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionColorFrameSource<D>::CameraIntrinsicsChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionColorFrameSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -334,7 +334,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionColorFrameSource<D>::CameraIntrinsicsChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameSource)->remove_CameraIntrinsicsChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameSource)->remove_CameraIntrinsicsChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Perception_IPerceptionColorFrameSource<D>::Id() const
     {
@@ -504,7 +504,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionColorFrameSourceWatcher<D>::SourceAdded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameSourceWatcher)->remove_SourceAdded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameSourceWatcher)->remove_SourceAdded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionColorFrameSourceWatcher<D>::SourceRemoved(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher, winrt::Windows::Devices::Perception::PerceptionColorFrameSourceRemovedEventArgs> const& handler) const
     {
@@ -518,7 +518,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionColorFrameSourceWatcher<D>::SourceRemoved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameSourceWatcher)->remove_SourceRemoved(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameSourceWatcher)->remove_SourceRemoved(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionColorFrameSourceWatcher<D>::Stopped(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -532,7 +532,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionColorFrameSourceWatcher<D>::Stopped(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameSourceWatcher)->remove_Stopped(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameSourceWatcher)->remove_Stopped(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionColorFrameSourceWatcher<D>::EnumerationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -546,7 +546,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionColorFrameSourceWatcher<D>::EnumerationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameSourceWatcher)->remove_EnumerationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionColorFrameSourceWatcher)->remove_EnumerationCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Enumeration::DeviceWatcherStatus) consume_Windows_Devices_Perception_IPerceptionColorFrameSourceWatcher<D>::Status() const
     {
@@ -574,7 +574,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionControlSession<D>::ControlLost(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionControlSession)->remove_ControlLost(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionControlSession)->remove_ControlLost(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult>) consume_Windows_Devices_Perception_IPerceptionControlSession<D>::TrySetPropertyAsync(param::hstring const& name, winrt::Windows::Foundation::IInspectable const& value) const
     {
@@ -656,7 +656,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionDepthFrameReader<D>::FrameArrived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameReader)->remove_FrameArrived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameReader)->remove_FrameArrived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Perception::PerceptionDepthFrameSource) consume_Windows_Devices_Perception_IPerceptionDepthFrameReader<D>::Source() const
     {
@@ -692,7 +692,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionDepthFrameSource<D>::AvailableChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameSource)->remove_AvailableChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameSource)->remove_AvailableChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionDepthFrameSource<D>::ActiveChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -706,7 +706,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionDepthFrameSource<D>::ActiveChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameSource)->remove_ActiveChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameSource)->remove_ActiveChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionDepthFrameSource<D>::PropertiesChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource, winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs> const& handler) const
     {
@@ -720,7 +720,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionDepthFrameSource<D>::PropertiesChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameSource)->remove_PropertiesChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameSource)->remove_PropertiesChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionDepthFrameSource<D>::VideoProfileChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -734,7 +734,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionDepthFrameSource<D>::VideoProfileChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameSource)->remove_VideoProfileChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameSource)->remove_VideoProfileChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionDepthFrameSource<D>::CameraIntrinsicsChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -748,7 +748,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionDepthFrameSource<D>::CameraIntrinsicsChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameSource)->remove_CameraIntrinsicsChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameSource)->remove_CameraIntrinsicsChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Perception_IPerceptionDepthFrameSource<D>::Id() const
     {
@@ -918,7 +918,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionDepthFrameSourceWatcher<D>::SourceAdded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameSourceWatcher)->remove_SourceAdded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameSourceWatcher)->remove_SourceAdded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionDepthFrameSourceWatcher<D>::SourceRemoved(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher, winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceRemovedEventArgs> const& handler) const
     {
@@ -932,7 +932,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionDepthFrameSourceWatcher<D>::SourceRemoved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameSourceWatcher)->remove_SourceRemoved(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameSourceWatcher)->remove_SourceRemoved(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionDepthFrameSourceWatcher<D>::Stopped(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -946,7 +946,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionDepthFrameSourceWatcher<D>::Stopped(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameSourceWatcher)->remove_Stopped(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameSourceWatcher)->remove_Stopped(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionDepthFrameSourceWatcher<D>::EnumerationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -960,7 +960,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionDepthFrameSourceWatcher<D>::EnumerationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameSourceWatcher)->remove_EnumerationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionDepthFrameSourceWatcher)->remove_EnumerationCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Enumeration::DeviceWatcherStatus) consume_Windows_Devices_Perception_IPerceptionDepthFrameSourceWatcher<D>::Status() const
     {
@@ -1030,7 +1030,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionInfraredFrameReader<D>::FrameArrived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameReader)->remove_FrameArrived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameReader)->remove_FrameArrived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource) consume_Windows_Devices_Perception_IPerceptionInfraredFrameReader<D>::Source() const
     {
@@ -1066,7 +1066,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionInfraredFrameSource<D>::AvailableChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSource)->remove_AvailableChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSource)->remove_AvailableChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionInfraredFrameSource<D>::ActiveChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1080,7 +1080,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionInfraredFrameSource<D>::ActiveChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSource)->remove_ActiveChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSource)->remove_ActiveChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionInfraredFrameSource<D>::PropertiesChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource, winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs> const& handler) const
     {
@@ -1094,7 +1094,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionInfraredFrameSource<D>::PropertiesChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSource)->remove_PropertiesChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSource)->remove_PropertiesChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionInfraredFrameSource<D>::VideoProfileChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1108,7 +1108,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionInfraredFrameSource<D>::VideoProfileChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSource)->remove_VideoProfileChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSource)->remove_VideoProfileChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionInfraredFrameSource<D>::CameraIntrinsicsChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1122,7 +1122,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionInfraredFrameSource<D>::CameraIntrinsicsChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSource)->remove_CameraIntrinsicsChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSource)->remove_CameraIntrinsicsChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Perception_IPerceptionInfraredFrameSource<D>::Id() const
     {
@@ -1292,7 +1292,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionInfraredFrameSourceWatcher<D>::SourceAdded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSourceWatcher)->remove_SourceAdded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSourceWatcher)->remove_SourceAdded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionInfraredFrameSourceWatcher<D>::SourceRemoved(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher, winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs> const& handler) const
     {
@@ -1306,7 +1306,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionInfraredFrameSourceWatcher<D>::SourceRemoved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSourceWatcher)->remove_SourceRemoved(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSourceWatcher)->remove_SourceRemoved(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionInfraredFrameSourceWatcher<D>::Stopped(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1320,7 +1320,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionInfraredFrameSourceWatcher<D>::Stopped(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSourceWatcher)->remove_Stopped(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSourceWatcher)->remove_Stopped(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Perception_IPerceptionInfraredFrameSourceWatcher<D>::EnumerationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1334,7 +1334,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Perception_IPerceptionInfraredFrameSourceWatcher<D>::EnumerationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSourceWatcher)->remove_EnumerationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSourceWatcher)->remove_EnumerationCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Enumeration::DeviceWatcherStatus) consume_Windows_Devices_Perception_IPerceptionInfraredFrameSourceWatcher<D>::Status() const
     {
@@ -3563,6 +3563,8 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Perception::PerceptionVideoProfile> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

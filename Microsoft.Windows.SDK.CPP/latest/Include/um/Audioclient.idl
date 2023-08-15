@@ -566,7 +566,7 @@ interface IAudioClient : IUnknown
     //  IAudioClientDuckingControl
     //  IAudioEffectsManager
     //  IAudioViewManagerService
-    //  IAudioAcousticEchoCancellationControl
+    //  IAcousticEchoCancellationControl
     //
     HRESULT GetService([in, annotation("_In_")] REFIID riid, [out, iid_is(riid), annotation("_Out_")] void **ppv);
 
@@ -1849,7 +1849,7 @@ cpp_quote("#define AUDCLNT_S_POSITION_STALLED             AUDCLNT_SUCCESS(0x003)
 // NOTE! error codes of 0x200 and above a reserved for SpatialAudioMetadataClient. AUDCLNT_ERR(0x200) to AUDCLNT_ERR(0x2FF)
 
 //-----------------------------------------------------------------------------
-// Description: IAudioAcousticEchoCancellationControl interface
+// Description: IAcousticEchoCancellationControl interface
 // Use IAudioClient::GetService to obtain this interface.
 //
 [
@@ -1858,7 +1858,7 @@ cpp_quote("#define AUDCLNT_S_POSITION_STALLED             AUDCLNT_SUCCESS(0x003)
     pointer_default(unique),
     local
 ]
-interface IAudioAcousticEchoCancellationControl : IUnknown
+interface IAcousticEchoCancellationControl : IUnknown
 {
     HRESULT SetEchoCancellationRenderEndpoint(LPCWSTR endpointId);
 };

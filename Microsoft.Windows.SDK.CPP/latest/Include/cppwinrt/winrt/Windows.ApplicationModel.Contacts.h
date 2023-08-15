@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_ApplicationModel_Contacts_H
 #define WINRT_Windows_ApplicationModel_Contacts_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.ApplicationModel.h"
 #include "winrt/impl/Windows.Data.Text.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -1051,7 +1051,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Contacts_IContactList<D>::ContactChanged(winrt::event_token const& value) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Contacts::IContactList)->remove_ContactChanged(impl::bind_in(value)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Contacts::IContactList)->remove_ContactChanged(impl::bind_in(value));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Contacts_IContactList<D>::SaveAsync() const
     {
@@ -1463,7 +1463,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Contacts_IContactListSyncManager<D>::SyncStatusChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Contacts::IContactListSyncManager)->remove_SyncStatusChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Contacts::IContactListSyncManager)->remove_SyncStatusChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Contacts_IContactListSyncManager2<D>::Status(winrt::Windows::ApplicationModel::Contacts::ContactListSyncStatus const& value) const
     {
@@ -1835,7 +1835,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Contacts_IContactPanel<D>::LaunchFullAppRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Contacts::IContactPanel)->remove_LaunchFullAppRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Contacts::IContactPanel)->remove_LaunchFullAppRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Contacts_IContactPanel<D>::Closing(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::ContactPanel, winrt::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs> const& handler) const
     {
@@ -1849,7 +1849,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Contacts_IContactPanel<D>::Closing(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Contacts::IContactPanel)->remove_Closing(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Contacts::IContactPanel)->remove_Closing(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) consume_Windows_ApplicationModel_Contacts_IContactPanelClosingEventArgs<D>::GetDeferral() const
     {
@@ -2139,7 +2139,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Contacts_IContactStore2<D>::ContactChanged(winrt::event_token const& value) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Contacts::IContactStore2)->remove_ContactChanged(impl::bind_in(value)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Contacts::IContactStore2)->remove_ContactChanged(impl::bind_in(value));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Contacts::AggregateContactManager) consume_Windows_ApplicationModel_Contacts_IContactStore2<D>::AggregateContactManager() const
     {
@@ -6494,6 +6494,8 @@ namespace std
     template<> struct hash<winrt::Windows::ApplicationModel::Contacts::KnownContactField> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::Contacts::PinnedContactIdsQueryResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::Contacts::PinnedContactManager> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

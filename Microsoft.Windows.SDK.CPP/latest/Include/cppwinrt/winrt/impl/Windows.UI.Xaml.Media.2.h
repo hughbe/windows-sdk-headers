@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -15,10 +15,10 @@
 #include "winrt/impl/Windows.UI.Xaml.Media.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Media
 {
-    struct RateChangedRoutedEventHandler : Windows::Foundation::IUnknown
+    struct RateChangedRoutedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         RateChangedRoutedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        RateChangedRoutedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        RateChangedRoutedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> RateChangedRoutedEventHandler(L lambda);
         template <typename F> RateChangedRoutedEventHandler(F* function);
         template <typename O, typename M> RateChangedRoutedEventHandler(O* object, M method);
@@ -26,10 +26,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Media
         template <typename O, typename M> RateChangedRoutedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Media::RateChangedRoutedEventArgs const& e) const;
     };
-    struct TimelineMarkerRoutedEventHandler : Windows::Foundation::IUnknown
+    struct TimelineMarkerRoutedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         TimelineMarkerRoutedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        TimelineMarkerRoutedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        TimelineMarkerRoutedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> TimelineMarkerRoutedEventHandler(L lambda);
         template <typename F> TimelineMarkerRoutedEventHandler(F* function);
         template <typename O, typename M> TimelineMarkerRoutedEventHandler(O* object, M method);

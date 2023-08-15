@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -12,10 +12,10 @@
 #include "winrt/impl/Windows.Media.Capture.1.h"
 WINRT_EXPORT namespace winrt::Windows::Media::Capture
 {
-    struct MediaCaptureFailedEventHandler : Windows::Foundation::IUnknown
+    struct MediaCaptureFailedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         MediaCaptureFailedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        MediaCaptureFailedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        MediaCaptureFailedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> MediaCaptureFailedEventHandler(L lambda);
         template <typename F> MediaCaptureFailedEventHandler(F* function);
         template <typename O, typename M> MediaCaptureFailedEventHandler(O* object, M method);
@@ -23,10 +23,10 @@ WINRT_EXPORT namespace winrt::Windows::Media::Capture
         template <typename O, typename M> MediaCaptureFailedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Media::Capture::MediaCapture const& sender, winrt::Windows::Media::Capture::MediaCaptureFailedEventArgs const& errorEventArgs) const;
     };
-    struct RecordLimitationExceededEventHandler : Windows::Foundation::IUnknown
+    struct RecordLimitationExceededEventHandler : winrt::Windows::Foundation::IUnknown
     {
         RecordLimitationExceededEventHandler(std::nullptr_t = nullptr) noexcept {}
-        RecordLimitationExceededEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        RecordLimitationExceededEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> RecordLimitationExceededEventHandler(L lambda);
         template <typename F> RecordLimitationExceededEventHandler(F* function);
         template <typename O, typename M> RecordLimitationExceededEventHandler(O* object, M method);

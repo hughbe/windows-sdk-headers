@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_ApplicationModel_H
 #define WINRT_Windows_ApplicationModel_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/impl/Windows.ApplicationModel.Activation.2.h"
 #include "winrt/impl/Windows.ApplicationModel.Core.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -636,7 +636,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_IPackageCatalog<D>::PackageStaging(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::IPackageCatalog)->remove_PackageStaging(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::IPackageCatalog)->remove_PackageStaging(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_IPackageCatalog<D>::PackageInstalling(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::PackageCatalog, winrt::Windows::ApplicationModel::PackageInstallingEventArgs> const& handler) const
     {
@@ -650,7 +650,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_IPackageCatalog<D>::PackageInstalling(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::IPackageCatalog)->remove_PackageInstalling(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::IPackageCatalog)->remove_PackageInstalling(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_IPackageCatalog<D>::PackageUpdating(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::PackageCatalog, winrt::Windows::ApplicationModel::PackageUpdatingEventArgs> const& handler) const
     {
@@ -664,7 +664,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_IPackageCatalog<D>::PackageUpdating(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::IPackageCatalog)->remove_PackageUpdating(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::IPackageCatalog)->remove_PackageUpdating(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_IPackageCatalog<D>::PackageUninstalling(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::PackageCatalog, winrt::Windows::ApplicationModel::PackageUninstallingEventArgs> const& handler) const
     {
@@ -678,7 +678,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_IPackageCatalog<D>::PackageUninstalling(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::IPackageCatalog)->remove_PackageUninstalling(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::IPackageCatalog)->remove_PackageUninstalling(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_IPackageCatalog<D>::PackageStatusChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::PackageCatalog, winrt::Windows::ApplicationModel::PackageStatusChangedEventArgs> const& handler) const
     {
@@ -692,7 +692,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_IPackageCatalog<D>::PackageStatusChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::IPackageCatalog)->remove_PackageStatusChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::IPackageCatalog)->remove_PackageStatusChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_IPackageCatalog2<D>::PackageContentGroupStaging(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::PackageCatalog, winrt::Windows::ApplicationModel::PackageContentGroupStagingEventArgs> const& handler) const
     {
@@ -706,7 +706,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_IPackageCatalog2<D>::PackageContentGroupStaging(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::IPackageCatalog2)->remove_PackageContentGroupStaging(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::IPackageCatalog2)->remove_PackageContentGroupStaging(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::PackageCatalogAddOptionalPackageResult>) consume_Windows_ApplicationModel_IPackageCatalog2<D>::AddOptionalPackageAsync(param::hstring const& optionalPackageFamilyName) const
     {
@@ -797,6 +797,12 @@ namespace winrt::impl
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::IPackageCatalogStatics)->OpenForCurrentUser(&value));
         return winrt::Windows::ApplicationModel::PackageCatalog{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::PackageCatalog) consume_Windows_ApplicationModel_IPackageCatalogStatics2<D>::OpenForPackage(winrt::Windows::ApplicationModel::Package const& package) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::IPackageCatalogStatics2)->OpenForPackage(*(void**)(&package), &result));
+        return winrt::Windows::ApplicationModel::PackageCatalog{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Package) consume_Windows_ApplicationModel_IPackageContentGroup<D>::Package() const
     {
@@ -2452,6 +2458,18 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+    template <typename D>
+    struct produce<D, winrt::Windows::ApplicationModel::IPackageCatalogStatics2> : produce_base<D, winrt::Windows::ApplicationModel::IPackageCatalogStatics2>
+    {
+        int32_t __stdcall OpenForPackage(void* package, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::ApplicationModel::PackageCatalog>(this->shim().OpenForPackage(*reinterpret_cast<winrt::Windows::ApplicationModel::Package const*>(&package)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Windows::ApplicationModel::IPackageContentGroup> : produce_base<D, winrt::Windows::ApplicationModel::IPackageContentGroup>
@@ -3231,6 +3249,10 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel
     {
         return impl::call_factory_cast<winrt::Windows::ApplicationModel::PackageCatalog(*)(IPackageCatalogStatics const&), PackageCatalog, IPackageCatalogStatics>([](IPackageCatalogStatics const& f) { return f.OpenForCurrentUser(); });
     }
+    inline auto PackageCatalog::OpenForPackage(winrt::Windows::ApplicationModel::Package const& package)
+    {
+        return impl::call_factory<PackageCatalog, IPackageCatalogStatics2>([&](IPackageCatalogStatics2 const& f) { return f.OpenForPackage(package); });
+    }
     inline auto PackageContentGroup::RequiredGroupName()
     {
         return impl::call_factory_cast<hstring(*)(IPackageContentGroupStatics const&), PackageContentGroup, IPackageContentGroupStatics>([](IPackageContentGroupStatics const& f) { return f.RequiredGroupName(); });
@@ -3286,6 +3308,7 @@ namespace std
     template<> struct hash<winrt::Windows::ApplicationModel::IPackageCatalogRemoveOptionalPackagesResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::IPackageCatalogRemoveResourcePackagesResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::IPackageCatalogStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::ApplicationModel::IPackageCatalogStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::IPackageContentGroup> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::IPackageContentGroupStagingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::IPackageContentGroupStatics> : winrt::impl::hash_base {};
@@ -3338,6 +3361,8 @@ namespace std
     template<> struct hash<winrt::Windows::ApplicationModel::SuspendingDeferral> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::SuspendingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::SuspendingOperation> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

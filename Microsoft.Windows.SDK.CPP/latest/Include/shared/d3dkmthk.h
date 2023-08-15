@@ -819,7 +819,6 @@ typedef struct _D3DKMT_CREATE_DOORBELL
     _Field_range_(0, D3DDDI_DOORBELL_PRIVATEDATA_MAX_BYTES_WDDM3_1)
     UINT PrivateDriverDataSize;                                               // in:      Size of private driver data
     D3DKMT_PTR(_Field_size_(PrivateDriverDataSize) VOID*, PrivateDriverData); // in/out:  Private driver data
-    D3DKMT_HANDLE hDoorbell;                                                  // out:     Handle of the created doorbell
     D3DKMT_PTR(VOID*, DoorbellCPUVirtualAddress);                             // out:     CPU VA of the created doorbell
     D3DKMT_PTR(VOID*, DoorbellSecondaryCPUVirtualAddress);                    // out opt: Secondary CPU VA of the created doorbell
     D3DKMT_PTR(VOID*, DoorbellStatusCPUVirtualAddress);                       // out:     CPU VA of the status page of doorbell
@@ -839,13 +838,13 @@ typedef struct _D3DKMT_CONNECT_DOORBELL_FLAGS
 
 typedef struct _D3DKMT_CONNECT_DOORBELL
 {
-    D3DKMT_HANDLE hDoorbell;             // in: UM handle to doorbell which needs to be connected
+    D3DKMT_HANDLE hHwQueue;             // in: UM handle to HWQueue whose doorbell is to be connected
     D3DKMT_CONNECT_DOORBELL_FLAGS Flags;
 }D3DKMT_CONNECT_DOORBELL;
 
 typedef struct _D3DKMT_DESTROY_DOORBELL
 {
-    D3DKMT_HANDLE hDoorbell; // in: UM handle to doorbell which is being destroyed
+    D3DKMT_HANDLE hHwQueue; // in: UM handle to HWQueue whose doorbell is to be destroyed
 }D3DKMT_DESTROY_DOORBELL;
 
 typedef struct _D3DKMT_NOTIFY_WORK_SUBMISSION_FLAGS
@@ -1218,7 +1217,8 @@ typedef struct _D3DKMT_PRESENT_MULTIPLANE_OVERLAY_FLAGS
             UINT HDRMetaDataValid           : 1;    // 0x00000080
             UINT HMD                        : 1;    // 0x00000100
             UINT TrueImmediate              : 1;    // 0x00000200 If a present interval is 0, allow tearing rather than override a previously queued flip
-            UINT Reserved                   :22;    // 0xFFFFFE00
+            UINT FromDDisplay               : 1;    // 0x00000400 The flip is from DDisplay
+            UINT Reserved                   :21;    // 0xFFFFFC00
         };
         UINT Value;
     };

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Media_Protection_PlayReady_H
 #define WINRT_Windows_Media_Protection_PlayReady_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Media.Protection.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -30,7 +30,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Protection_PlayReady_INDClient<D>::RegistrationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Protection::PlayReady::INDClient)->remove_RegistrationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Protection::PlayReady::INDClient)->remove_RegistrationCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Protection_PlayReady_INDClient<D>::ProximityDetectionCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Protection::PlayReady::NDClient, winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs> const& handler) const
     {
@@ -44,7 +44,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Protection_PlayReady_INDClient<D>::ProximityDetectionCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Protection::PlayReady::INDClient)->remove_ProximityDetectionCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Protection::PlayReady::INDClient)->remove_ProximityDetectionCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Protection_PlayReady_INDClient<D>::LicenseFetchCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Protection::PlayReady::NDClient, winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs> const& handler) const
     {
@@ -58,7 +58,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Protection_PlayReady_INDClient<D>::LicenseFetchCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Protection::PlayReady::INDClient)->remove_LicenseFetchCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Protection::PlayReady::INDClient)->remove_LicenseFetchCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Protection_PlayReady_INDClient<D>::ReRegistrationNeeded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Protection::PlayReady::NDClient, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -72,7 +72,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Protection_PlayReady_INDClient<D>::ReRegistrationNeeded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Protection::PlayReady::INDClient)->remove_ReRegistrationNeeded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Protection::PlayReady::INDClient)->remove_ReRegistrationNeeded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Protection_PlayReady_INDClient<D>::ClosedCaptionDataReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Protection::PlayReady::NDClient, winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs> const& handler) const
     {
@@ -86,7 +86,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Protection_PlayReady_INDClient<D>::ClosedCaptionDataReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Protection::PlayReady::INDClient)->remove_ClosedCaptionDataReceived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Protection::PlayReady::INDClient)->remove_ClosedCaptionDataReceived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::Protection::PlayReady::INDStartResult>) consume_Windows_Media_Protection_PlayReady_INDClient<D>::StartAsync(winrt::Windows::Foundation::Uri const& contentUrl, uint32_t startAsyncOptions, winrt::Windows::Media::Protection::PlayReady::INDCustomData const& registrationCustomData, winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor const& licenseFetchDescriptor) const
     {
@@ -2818,6 +2818,8 @@ namespace std
     template<> struct hash<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Protection::PlayReady::PlayReadySoapMessage> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

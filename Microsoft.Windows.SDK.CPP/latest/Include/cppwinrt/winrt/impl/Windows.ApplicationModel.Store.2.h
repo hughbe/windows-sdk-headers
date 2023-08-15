@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,10 +11,10 @@
 #include "winrt/impl/Windows.ApplicationModel.Store.1.h"
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Store
 {
-    struct LicenseChangedEventHandler : Windows::Foundation::IUnknown
+    struct LicenseChangedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         LicenseChangedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        LicenseChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        LicenseChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> LicenseChangedEventHandler(L lambda);
         template <typename F> LicenseChangedEventHandler(F* function);
         template <typename O, typename M> LicenseChangedEventHandler(O* object, M method);

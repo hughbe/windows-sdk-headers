@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -14,10 +14,10 @@
 #include "winrt/impl/Windows.UI.Xaml.Controls.Primitives.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
 {
-    struct DragCompletedEventHandler : Windows::Foundation::IUnknown
+    struct DragCompletedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         DragCompletedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        DragCompletedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        DragCompletedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> DragCompletedEventHandler(L lambda);
         template <typename F> DragCompletedEventHandler(F* function);
         template <typename O, typename M> DragCompletedEventHandler(O* object, M method);
@@ -25,10 +25,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
         template <typename O, typename M> DragCompletedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventArgs const& e) const;
     };
-    struct DragDeltaEventHandler : Windows::Foundation::IUnknown
+    struct DragDeltaEventHandler : winrt::Windows::Foundation::IUnknown
     {
         DragDeltaEventHandler(std::nullptr_t = nullptr) noexcept {}
-        DragDeltaEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        DragDeltaEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> DragDeltaEventHandler(L lambda);
         template <typename F> DragDeltaEventHandler(F* function);
         template <typename O, typename M> DragDeltaEventHandler(O* object, M method);
@@ -36,10 +36,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
         template <typename O, typename M> DragDeltaEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventArgs const& e) const;
     };
-    struct DragStartedEventHandler : Windows::Foundation::IUnknown
+    struct DragStartedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         DragStartedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        DragStartedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        DragStartedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> DragStartedEventHandler(L lambda);
         template <typename F> DragStartedEventHandler(F* function);
         template <typename O, typename M> DragStartedEventHandler(O* object, M method);
@@ -47,10 +47,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
         template <typename O, typename M> DragStartedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Controls::Primitives::DragStartedEventArgs const& e) const;
     };
-    struct ItemsChangedEventHandler : Windows::Foundation::IUnknown
+    struct ItemsChangedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         ItemsChangedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        ItemsChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        ItemsChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> ItemsChangedEventHandler(L lambda);
         template <typename F> ItemsChangedEventHandler(F* function);
         template <typename O, typename M> ItemsChangedEventHandler(O* object, M method);
@@ -58,10 +58,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
         template <typename O, typename M> ItemsChangedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Controls::Primitives::ItemsChangedEventArgs const& e) const;
     };
-    struct RangeBaseValueChangedEventHandler : Windows::Foundation::IUnknown
+    struct RangeBaseValueChangedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         RangeBaseValueChangedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        RangeBaseValueChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        RangeBaseValueChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> RangeBaseValueChangedEventHandler(L lambda);
         template <typename F> RangeBaseValueChangedEventHandler(F* function);
         template <typename O, typename M> RangeBaseValueChangedEventHandler(O* object, M method);
@@ -69,10 +69,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls::Primitives
         template <typename O, typename M> RangeBaseValueChangedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventArgs const& e) const;
     };
-    struct ScrollEventHandler : Windows::Foundation::IUnknown
+    struct ScrollEventHandler : winrt::Windows::Foundation::IUnknown
     {
         ScrollEventHandler(std::nullptr_t = nullptr) noexcept {}
-        ScrollEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        ScrollEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> ScrollEventHandler(L lambda);
         template <typename F> ScrollEventHandler(F* function);
         template <typename O, typename M> ScrollEventHandler(O* object, M method);

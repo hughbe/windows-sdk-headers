@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -128,6 +128,7 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel
         PackageCatalog(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::IPackageCatalog(ptr, take_ownership_from_abi) {}
         static auto OpenForCurrentPackage();
         static auto OpenForCurrentUser();
+        static auto OpenForPackage(winrt::Windows::ApplicationModel::Package const& package);
     };
     struct __declspec(empty_bases) PackageCatalogAddOptionalPackageResult : winrt::Windows::ApplicationModel::IPackageCatalogAddOptionalPackageResult
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Media_H
 #define WINRT_Windows_Media_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/impl/Windows.ApplicationModel.AppService.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -86,7 +86,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_IMediaControl<D>::SoundLevelChanged(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_SoundLevelChanged(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_SoundLevelChanged(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_IMediaControl<D>::PlayPressed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -100,7 +100,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_IMediaControl<D>::PlayPressed(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_PlayPressed(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_PlayPressed(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_IMediaControl<D>::PausePressed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -114,7 +114,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_IMediaControl<D>::PausePressed(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_PausePressed(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_PausePressed(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_IMediaControl<D>::StopPressed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -128,7 +128,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_IMediaControl<D>::StopPressed(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_StopPressed(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_StopPressed(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_IMediaControl<D>::PlayPauseTogglePressed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -142,7 +142,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_IMediaControl<D>::PlayPauseTogglePressed(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_PlayPauseTogglePressed(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_PlayPauseTogglePressed(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_IMediaControl<D>::RecordPressed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -156,7 +156,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_IMediaControl<D>::RecordPressed(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_RecordPressed(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_RecordPressed(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_IMediaControl<D>::NextTrackPressed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -170,7 +170,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_IMediaControl<D>::NextTrackPressed(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_NextTrackPressed(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_NextTrackPressed(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_IMediaControl<D>::PreviousTrackPressed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -184,7 +184,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_IMediaControl<D>::PreviousTrackPressed(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_PreviousTrackPressed(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_PreviousTrackPressed(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_IMediaControl<D>::FastForwardPressed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -198,7 +198,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_IMediaControl<D>::FastForwardPressed(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_FastForwardPressed(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_FastForwardPressed(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_IMediaControl<D>::RewindPressed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -212,7 +212,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_IMediaControl<D>::RewindPressed(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_RewindPressed(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_RewindPressed(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_IMediaControl<D>::ChannelUpPressed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -226,7 +226,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_IMediaControl<D>::ChannelUpPressed(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_ChannelUpPressed(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_ChannelUpPressed(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_IMediaControl<D>::ChannelDownPressed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -240,7 +240,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_IMediaControl<D>::ChannelDownPressed(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_ChannelDownPressed(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaControl)->remove_ChannelDownPressed(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::SoundLevel) consume_Windows_Media_IMediaControl<D>::SoundLevel() const
     {
@@ -488,7 +488,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_IMediaTimelineController<D>::PositionChanged(winrt::event_token const& eventCookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaTimelineController)->remove_PositionChanged(impl::bind_in(eventCookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaTimelineController)->remove_PositionChanged(impl::bind_in(eventCookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_IMediaTimelineController<D>::StateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::MediaTimelineController, winrt::Windows::Foundation::IInspectable> const& stateChangedEventHandler) const
     {
@@ -502,7 +502,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_IMediaTimelineController<D>::StateChanged(winrt::event_token const& eventCookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaTimelineController)->remove_StateChanged(impl::bind_in(eventCookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaTimelineController)->remove_StateChanged(impl::bind_in(eventCookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>) consume_Windows_Media_IMediaTimelineController2<D>::Duration() const
     {
@@ -536,7 +536,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_IMediaTimelineController2<D>::Failed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaTimelineController2)->remove_Failed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaTimelineController2)->remove_Failed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_IMediaTimelineController2<D>::Ended(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::MediaTimelineController, winrt::Windows::Foundation::IInspectable> const& eventHandler) const
     {
@@ -550,7 +550,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_IMediaTimelineController2<D>::Ended(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaTimelineController2)->remove_Ended(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::IMediaTimelineController2)->remove_Ended(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Media_IMediaTimelineControllerFailedEventArgs<D>::ExtendedError() const
     {
@@ -786,7 +786,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_ISystemMediaTransportControls<D>::ButtonPressed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::ISystemMediaTransportControls)->remove_ButtonPressed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::ISystemMediaTransportControls)->remove_ButtonPressed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_ISystemMediaTransportControls<D>::PropertyChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::SystemMediaTransportControls, winrt::Windows::Media::SystemMediaTransportControlsPropertyChangedEventArgs> const& handler) const
     {
@@ -800,7 +800,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_ISystemMediaTransportControls<D>::PropertyChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::ISystemMediaTransportControls)->remove_PropertyChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::ISystemMediaTransportControls)->remove_PropertyChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::MediaPlaybackAutoRepeatMode) consume_Windows_Media_ISystemMediaTransportControls2<D>::AutoRepeatMode() const
     {
@@ -848,7 +848,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_ISystemMediaTransportControls2<D>::PlaybackPositionChangeRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::ISystemMediaTransportControls2)->remove_PlaybackPositionChangeRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::ISystemMediaTransportControls2)->remove_PlaybackPositionChangeRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_ISystemMediaTransportControls2<D>::PlaybackRateChangeRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::SystemMediaTransportControls, winrt::Windows::Media::PlaybackRateChangeRequestedEventArgs> const& handler) const
     {
@@ -862,7 +862,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_ISystemMediaTransportControls2<D>::PlaybackRateChangeRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::ISystemMediaTransportControls2)->remove_PlaybackRateChangeRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::ISystemMediaTransportControls2)->remove_PlaybackRateChangeRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_ISystemMediaTransportControls2<D>::ShuffleEnabledChangeRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::SystemMediaTransportControls, winrt::Windows::Media::ShuffleEnabledChangeRequestedEventArgs> const& handler) const
     {
@@ -876,7 +876,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_ISystemMediaTransportControls2<D>::ShuffleEnabledChangeRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::ISystemMediaTransportControls2)->remove_ShuffleEnabledChangeRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::ISystemMediaTransportControls2)->remove_ShuffleEnabledChangeRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_ISystemMediaTransportControls2<D>::AutoRepeatModeChangeRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::SystemMediaTransportControls, winrt::Windows::Media::AutoRepeatModeChangeRequestedEventArgs> const& handler) const
     {
@@ -890,7 +890,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_ISystemMediaTransportControls2<D>::AutoRepeatModeChangeRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::ISystemMediaTransportControls2)->remove_AutoRepeatModeChangeRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::ISystemMediaTransportControls2)->remove_AutoRepeatModeChangeRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::SystemMediaTransportControlsButton) consume_Windows_Media_ISystemMediaTransportControlsButtonPressedEventArgs<D>::Button() const
     {
@@ -3071,6 +3071,8 @@ namespace std
     template<> struct hash<winrt::Windows::Media::VideoDisplayProperties> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::VideoEffects> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::VideoFrame> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_UI_WindowManagement_H
 #define WINRT_Windows_UI_WindowManagement_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.UI.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -150,7 +150,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WindowManagement_IAppWindow<D>::Changed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::WindowManagement::IAppWindow)->remove_Changed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::WindowManagement::IAppWindow)->remove_Changed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_WindowManagement_IAppWindow<D>::Closed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::AppWindow, winrt::Windows::UI::WindowManagement::AppWindowClosedEventArgs> const& handler) const
     {
@@ -164,7 +164,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WindowManagement_IAppWindow<D>::Closed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::WindowManagement::IAppWindow)->remove_Closed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::WindowManagement::IAppWindow)->remove_Closed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_WindowManagement_IAppWindow<D>::CloseRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WindowManagement::AppWindow, winrt::Windows::UI::WindowManagement::AppWindowCloseRequestedEventArgs> const& handler) const
     {
@@ -178,7 +178,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WindowManagement_IAppWindow<D>::CloseRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::WindowManagement::IAppWindow)->remove_CloseRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::WindowManagement::IAppWindow)->remove_CloseRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_WindowManagement_IAppWindowChangedEventArgs<D>::DidAvailableWindowPresentationsChange() const
     {
@@ -528,7 +528,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WindowManagement_IDisplayRegion<D>::Changed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::WindowManagement::IDisplayRegion)->remove_Changed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::WindowManagement::IDisplayRegion)->remove_Changed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_WindowManagement_IFullScreenPresentationConfiguration<D>::IsExclusive() const
     {
@@ -576,7 +576,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WindowManagement_IWindowingEnvironment<D>::Changed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::WindowManagement::IWindowingEnvironment)->remove_Changed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::WindowManagement::IWindowingEnvironment)->remove_Changed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::WindowManagement::WindowingEnvironment) consume_Windows_UI_WindowManagement_IWindowingEnvironmentAddedEventArgs<D>::WindowingEnvironment() const
     {
@@ -1611,6 +1611,8 @@ namespace std
     template<> struct hash<winrt::Windows::UI::WindowManagement::WindowingEnvironmentAddedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::WindowManagement::WindowingEnvironmentChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::WindowManagement::WindowingEnvironmentRemovedEventArgs> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

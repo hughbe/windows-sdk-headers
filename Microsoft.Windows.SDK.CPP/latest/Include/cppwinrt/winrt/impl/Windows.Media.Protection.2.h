@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,10 +11,10 @@
 #include "winrt/impl/Windows.Media.Protection.1.h"
 WINRT_EXPORT namespace winrt::Windows::Media::Protection
 {
-    struct ComponentLoadFailedEventHandler : Windows::Foundation::IUnknown
+    struct ComponentLoadFailedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         ComponentLoadFailedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        ComponentLoadFailedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        ComponentLoadFailedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> ComponentLoadFailedEventHandler(L lambda);
         template <typename F> ComponentLoadFailedEventHandler(F* function);
         template <typename O, typename M> ComponentLoadFailedEventHandler(O* object, M method);
@@ -22,10 +22,10 @@ WINRT_EXPORT namespace winrt::Windows::Media::Protection
         template <typename O, typename M> ComponentLoadFailedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Media::Protection::MediaProtectionManager const& sender, winrt::Windows::Media::Protection::ComponentLoadFailedEventArgs const& e) const;
     };
-    struct RebootNeededEventHandler : Windows::Foundation::IUnknown
+    struct RebootNeededEventHandler : winrt::Windows::Foundation::IUnknown
     {
         RebootNeededEventHandler(std::nullptr_t = nullptr) noexcept {}
-        RebootNeededEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        RebootNeededEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> RebootNeededEventHandler(L lambda);
         template <typename F> RebootNeededEventHandler(F* function);
         template <typename O, typename M> RebootNeededEventHandler(O* object, M method);
@@ -33,10 +33,10 @@ WINRT_EXPORT namespace winrt::Windows::Media::Protection
         template <typename O, typename M> RebootNeededEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Media::Protection::MediaProtectionManager const& sender) const;
     };
-    struct ServiceRequestedEventHandler : Windows::Foundation::IUnknown
+    struct ServiceRequestedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         ServiceRequestedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        ServiceRequestedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        ServiceRequestedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> ServiceRequestedEventHandler(L lambda);
         template <typename F> ServiceRequestedEventHandler(F* function);
         template <typename O, typename M> ServiceRequestedEventHandler(O* object, M method);

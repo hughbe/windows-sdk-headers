@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_UI_Xaml_Input_H
 #define WINRT_Windows_UI_Xaml_Input_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.UI.Xaml.h"
 #include "winrt/impl/Windows.Devices.Input.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -55,7 +55,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Input_IAccessKeyManagerStatics<D>::IsDisplayModeEnabledChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Input::IAccessKeyManagerStatics)->remove_IsDisplayModeEnabledChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Input::IAccessKeyManagerStatics)->remove_IsDisplayModeEnabledChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Input_IAccessKeyManagerStatics<D>::ExitDisplayMode() const
     {
@@ -121,7 +121,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Input_ICommand<D>::CanExecuteChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Input::ICommand)->remove_CanExecuteChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Input::ICommand)->remove_CanExecuteChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Input_ICommand<D>::CanExecute(winrt::Windows::Foundation::IInspectable const& parameter) const
     {
@@ -325,7 +325,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Input_IFocusManagerStatics6<D>::GotFocus(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Input::IFocusManagerStatics6)->remove_GotFocus(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Input::IFocusManagerStatics6)->remove_GotFocus(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Input_IFocusManagerStatics6<D>::LostFocus(winrt::Windows::Foundation::EventHandler<winrt::Windows::UI::Xaml::Input::FocusManagerLostFocusEventArgs> const& handler) const
     {
@@ -339,7 +339,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Input_IFocusManagerStatics6<D>::LostFocus(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Input::IFocusManagerStatics6)->remove_LostFocus(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Input::IFocusManagerStatics6)->remove_LostFocus(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Input_IFocusManagerStatics6<D>::GettingFocus(winrt::Windows::Foundation::EventHandler<winrt::Windows::UI::Xaml::Input::GettingFocusEventArgs> const& handler) const
     {
@@ -353,7 +353,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Input_IFocusManagerStatics6<D>::GettingFocus(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Input::IFocusManagerStatics6)->remove_GettingFocus(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Input::IFocusManagerStatics6)->remove_GettingFocus(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Input_IFocusManagerStatics6<D>::LosingFocus(winrt::Windows::Foundation::EventHandler<winrt::Windows::UI::Xaml::Input::LosingFocusEventArgs> const& handler) const
     {
@@ -367,7 +367,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Input_IFocusManagerStatics6<D>::LosingFocus(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Input::IFocusManagerStatics6)->remove_LosingFocus(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Input::IFocusManagerStatics6)->remove_LosingFocus(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) consume_Windows_UI_Xaml_Input_IFocusManagerStatics7<D>::GetFocusedElement(winrt::Windows::UI::Xaml::XamlRoot const& xamlRoot) const
     {
@@ -649,7 +649,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Input_IKeyboardAccelerator<D>::Invoked(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Input::IKeyboardAccelerator)->remove_Invoked(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Input::IKeyboardAccelerator)->remove_Invoked(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Input::KeyboardAccelerator) consume_Windows_UI_Xaml_Input_IKeyboardAcceleratorFactory<D>::CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
     {
@@ -1305,7 +1305,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Input_IXamlUICommand<D>::ExecuteRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Input::IXamlUICommand)->remove_ExecuteRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Input::IXamlUICommand)->remove_ExecuteRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Input_IXamlUICommand<D>::CanExecuteRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Input::XamlUICommand, winrt::Windows::UI::Xaml::Input::CanExecuteRequestedEventArgs> const& handler) const
     {
@@ -1319,7 +1319,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Input_IXamlUICommand<D>::CanExecuteRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Input::IXamlUICommand)->remove_CanExecuteRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Input::IXamlUICommand)->remove_CanExecuteRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Input_IXamlUICommand<D>::NotifyCanExecuteChanged() const
     {
@@ -4414,6 +4414,8 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Xaml::Input::StandardUICommand> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Input::TappedRoutedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Input::XamlUICommand> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

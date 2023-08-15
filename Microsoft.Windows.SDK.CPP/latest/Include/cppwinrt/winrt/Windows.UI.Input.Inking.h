@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_UI_Input_Inking_H
 #define WINRT_Windows_UI_Input_Inking_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.UI.Input.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -372,7 +372,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_IInkPresenter<D>::StrokesCollected(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkPresenter)->remove_StrokesCollected(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkPresenter)->remove_StrokesCollected(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Inking_IInkPresenter<D>::StrokesErased(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkPresenter, winrt::Windows::UI::Input::Inking::InkStrokesErasedEventArgs> const& handler) const
     {
@@ -386,7 +386,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_IInkPresenter<D>::StrokesErased(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkPresenter)->remove_StrokesErased(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkPresenter)->remove_StrokesErased(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Input::Inking::InkHighContrastAdjustment) consume_Windows_UI_Input_Inking_IInkPresenter2<D>::HighContrastAdjustment() const
     {
@@ -852,7 +852,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_IInkStrokeInput<D>::StrokeStarted(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkStrokeInput)->remove_StrokeStarted(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkStrokeInput)->remove_StrokeStarted(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Inking_IInkStrokeInput<D>::StrokeContinued(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkStrokeInput, winrt::Windows::UI::Core::PointerEventArgs> const& handler) const
     {
@@ -866,7 +866,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_IInkStrokeInput<D>::StrokeContinued(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkStrokeInput)->remove_StrokeContinued(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkStrokeInput)->remove_StrokeContinued(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Inking_IInkStrokeInput<D>::StrokeEnded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkStrokeInput, winrt::Windows::UI::Core::PointerEventArgs> const& handler) const
     {
@@ -880,7 +880,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_IInkStrokeInput<D>::StrokeEnded(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkStrokeInput)->remove_StrokeEnded(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkStrokeInput)->remove_StrokeEnded(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Inking_IInkStrokeInput<D>::StrokeCanceled(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkStrokeInput, winrt::Windows::UI::Core::PointerEventArgs> const& handler) const
     {
@@ -894,7 +894,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_IInkStrokeInput<D>::StrokeCanceled(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkStrokeInput)->remove_StrokeCanceled(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkStrokeInput)->remove_StrokeCanceled(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Input::Inking::InkPresenter) consume_Windows_UI_Input_Inking_IInkStrokeInput<D>::InkPresenter() const
     {
@@ -978,7 +978,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_IInkUnprocessedInput<D>::PointerEntered(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkUnprocessedInput)->remove_PointerEntered(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkUnprocessedInput)->remove_PointerEntered(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Inking_IInkUnprocessedInput<D>::PointerHovered(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs> const& handler) const
     {
@@ -992,7 +992,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_IInkUnprocessedInput<D>::PointerHovered(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkUnprocessedInput)->remove_PointerHovered(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkUnprocessedInput)->remove_PointerHovered(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Inking_IInkUnprocessedInput<D>::PointerExited(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs> const& handler) const
     {
@@ -1006,7 +1006,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_IInkUnprocessedInput<D>::PointerExited(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkUnprocessedInput)->remove_PointerExited(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkUnprocessedInput)->remove_PointerExited(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Inking_IInkUnprocessedInput<D>::PointerPressed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs> const& handler) const
     {
@@ -1020,7 +1020,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_IInkUnprocessedInput<D>::PointerPressed(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkUnprocessedInput)->remove_PointerPressed(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkUnprocessedInput)->remove_PointerPressed(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Inking_IInkUnprocessedInput<D>::PointerMoved(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs> const& handler) const
     {
@@ -1034,7 +1034,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_IInkUnprocessedInput<D>::PointerMoved(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkUnprocessedInput)->remove_PointerMoved(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkUnprocessedInput)->remove_PointerMoved(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Inking_IInkUnprocessedInput<D>::PointerReleased(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs> const& handler) const
     {
@@ -1048,7 +1048,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_IInkUnprocessedInput<D>::PointerReleased(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkUnprocessedInput)->remove_PointerReleased(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkUnprocessedInput)->remove_PointerReleased(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Inking_IInkUnprocessedInput<D>::PointerLost(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs> const& handler) const
     {
@@ -1062,7 +1062,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Inking_IInkUnprocessedInput<D>::PointerLost(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkUnprocessedInput)->remove_PointerLost(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Inking::IInkUnprocessedInput)->remove_PointerLost(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Input::Inking::InkPresenter) consume_Windows_UI_Input_Inking_IInkUnprocessedInput<D>::InkPresenter() const
     {
@@ -2962,6 +2962,8 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Input::Inking::InkSynchronizer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Input::Inking::InkUnprocessedInput> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Input::Inking::PenAndInkSettings> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

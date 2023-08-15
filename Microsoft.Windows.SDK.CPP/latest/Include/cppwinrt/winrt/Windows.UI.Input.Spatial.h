@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_UI_Input_Spatial_H
 #define WINRT_Windows_UI_Input_Spatial_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.UI.Input.h"
 #include "winrt/impl/Windows.Devices.Haptics.2.h"
 #include "winrt/impl/Windows.Devices.Power.2.h"
@@ -34,7 +34,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::RecognitionStarted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_RecognitionStarted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_RecognitionStarted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::RecognitionEnded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialRecognitionEndedEventArgs> const& handler) const
     {
@@ -48,7 +48,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::RecognitionEnded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_RecognitionEnded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_RecognitionEnded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::Tapped(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialTappedEventArgs> const& handler) const
     {
@@ -62,7 +62,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::Tapped(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_Tapped(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_Tapped(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::HoldStarted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialHoldStartedEventArgs> const& handler) const
     {
@@ -76,7 +76,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::HoldStarted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_HoldStarted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_HoldStarted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::HoldCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialHoldCompletedEventArgs> const& handler) const
     {
@@ -90,7 +90,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::HoldCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_HoldCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_HoldCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::HoldCanceled(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialHoldCanceledEventArgs> const& handler) const
     {
@@ -104,7 +104,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::HoldCanceled(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_HoldCanceled(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_HoldCanceled(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::ManipulationStarted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialManipulationStartedEventArgs> const& handler) const
     {
@@ -118,7 +118,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::ManipulationStarted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_ManipulationStarted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_ManipulationStarted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::ManipulationUpdated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialManipulationUpdatedEventArgs> const& handler) const
     {
@@ -132,7 +132,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::ManipulationUpdated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_ManipulationUpdated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_ManipulationUpdated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::ManipulationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialManipulationCompletedEventArgs> const& handler) const
     {
@@ -146,7 +146,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::ManipulationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_ManipulationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_ManipulationCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::ManipulationCanceled(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialManipulationCanceledEventArgs> const& handler) const
     {
@@ -160,7 +160,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::ManipulationCanceled(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_ManipulationCanceled(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_ManipulationCanceled(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::NavigationStarted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialNavigationStartedEventArgs> const& handler) const
     {
@@ -174,7 +174,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::NavigationStarted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_NavigationStarted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_NavigationStarted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::NavigationUpdated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialNavigationUpdatedEventArgs> const& handler) const
     {
@@ -188,7 +188,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::NavigationUpdated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_NavigationUpdated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_NavigationUpdated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::NavigationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialNavigationCompletedEventArgs> const& handler) const
     {
@@ -202,7 +202,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::NavigationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_NavigationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_NavigationCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::NavigationCanceled(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer, winrt::Windows::UI::Input::Spatial::SpatialNavigationCanceledEventArgs> const& handler) const
     {
@@ -216,7 +216,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::NavigationCanceled(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_NavigationCanceled(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizer)->remove_NavigationCanceled(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialGestureRecognizer<D>::CaptureInteraction(winrt::Windows::UI::Input::Spatial::SpatialInteraction const& interaction) const
     {
@@ -400,7 +400,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialInteractionManager<D>::SourceDetected(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialInteractionManager)->remove_SourceDetected(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialInteractionManager)->remove_SourceDetected(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Spatial_ISpatialInteractionManager<D>::SourceLost(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager, winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs> const& handler) const
     {
@@ -414,7 +414,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialInteractionManager<D>::SourceLost(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialInteractionManager)->remove_SourceLost(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialInteractionManager)->remove_SourceLost(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Spatial_ISpatialInteractionManager<D>::SourceUpdated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager, winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs> const& handler) const
     {
@@ -428,7 +428,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialInteractionManager<D>::SourceUpdated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialInteractionManager)->remove_SourceUpdated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialInteractionManager)->remove_SourceUpdated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Spatial_ISpatialInteractionManager<D>::SourcePressed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager, winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs> const& handler) const
     {
@@ -442,7 +442,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialInteractionManager<D>::SourcePressed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialInteractionManager)->remove_SourcePressed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialInteractionManager)->remove_SourcePressed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Spatial_ISpatialInteractionManager<D>::SourceReleased(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager, winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs> const& handler) const
     {
@@ -456,7 +456,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialInteractionManager<D>::SourceReleased(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialInteractionManager)->remove_SourceReleased(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialInteractionManager)->remove_SourceReleased(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Input_Spatial_ISpatialInteractionManager<D>::InteractionDetected(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager, winrt::Windows::UI::Input::Spatial::SpatialInteractionDetectedEventArgs> const& handler) const
     {
@@ -470,7 +470,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Input_Spatial_ISpatialInteractionManager<D>::InteractionDetected(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialInteractionManager)->remove_InteractionDetected(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Input::Spatial::ISpatialInteractionManager)->remove_InteractionDetected(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceState>) consume_Windows_UI_Input_Spatial_ISpatialInteractionManager<D>::GetDetectedSourcesAtTimestamp(winrt::Windows::Perception::PerceptionTimestamp const& timeStamp) const
     {
@@ -2329,6 +2329,8 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Input::Spatial::SpatialRecognitionEndedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Input::Spatial::SpatialRecognitionStartedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Input::Spatial::SpatialTappedEventArgs> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

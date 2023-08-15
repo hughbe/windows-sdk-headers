@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,12 +10,12 @@
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename K, typename V>
-    struct MapChangedEventHandler : Windows::Foundation::IUnknown
+    struct MapChangedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         static_assert(impl::has_category_v<K>, "K must be WinRT type.");
         static_assert(impl::has_category_v<V>, "V must be WinRT type.");
         MapChangedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        MapChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        MapChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> MapChangedEventHandler(L lambda);
         template <typename F> MapChangedEventHandler(F* function);
         template <typename O, typename M> MapChangedEventHandler(O* object, M method);
@@ -24,11 +24,11 @@ WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
         auto operator()(winrt::Windows::Foundation::Collections::IObservableMap<K, V> const& sender, winrt::Windows::Foundation::Collections::IMapChangedEventArgs<K> const& event) const;
     };
     template <typename T>
-    struct VectorChangedEventHandler : Windows::Foundation::IUnknown
+    struct VectorChangedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         static_assert(impl::has_category_v<T>, "T must be WinRT type.");
         VectorChangedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        VectorChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        VectorChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> VectorChangedEventHandler(L lambda);
         template <typename F> VectorChangedEventHandler(F* function);
         template <typename O, typename M> VectorChangedEventHandler(O* object, M method);

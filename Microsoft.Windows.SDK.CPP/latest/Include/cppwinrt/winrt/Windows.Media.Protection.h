@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Media_Protection_H
 #define WINRT_Windows_Media_Protection_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Media.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -64,7 +64,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Protection_IHdcpSession<D>::ProtectionChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Protection::IHdcpSession)->remove_ProtectionChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Protection::IHdcpSession)->remove_ProtectionChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Protection_IMediaProtectionManager<D>::ServiceRequested(winrt::Windows::Media::Protection::ServiceRequestedEventHandler const& handler) const
     {
@@ -78,7 +78,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Protection_IMediaProtectionManager<D>::ServiceRequested(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Protection::IMediaProtectionManager)->remove_ServiceRequested(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Protection::IMediaProtectionManager)->remove_ServiceRequested(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Protection_IMediaProtectionManager<D>::RebootNeeded(winrt::Windows::Media::Protection::RebootNeededEventHandler const& handler) const
     {
@@ -92,7 +92,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Protection_IMediaProtectionManager<D>::RebootNeeded(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Protection::IMediaProtectionManager)->remove_RebootNeeded(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Protection::IMediaProtectionManager)->remove_RebootNeeded(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Protection_IMediaProtectionManager<D>::ComponentLoadFailed(winrt::Windows::Media::Protection::ComponentLoadFailedEventHandler const& handler) const
     {
@@ -106,7 +106,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Protection_IMediaProtectionManager<D>::ComponentLoadFailed(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Protection::IMediaProtectionManager)->remove_ComponentLoadFailed(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Protection::IMediaProtectionManager)->remove_ComponentLoadFailed(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IPropertySet) consume_Windows_Media_Protection_IMediaProtectionManager<D>::Properties() const
     {
@@ -690,6 +690,8 @@ namespace std
     template<> struct hash<winrt::Windows::Media::Protection::RevocationAndRenewalInformation> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Protection::RevocationAndRenewalItem> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Protection::ServiceRequestedEventArgs> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

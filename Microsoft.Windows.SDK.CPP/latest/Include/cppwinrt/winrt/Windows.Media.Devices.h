@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Media_Devices_H
 #define WINRT_Windows_Media_Devices_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Media.h"
 #include "winrt/impl/Windows.Devices.Enumeration.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -67,6 +67,12 @@ namespace winrt::impl
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10)->get_CameraOcclusionInfo(&value));
         return winrt::Windows::Media::Devices::CameraOcclusionInfo{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController11<D>::TryAcquireExclusiveControl(param::hstring const& deviceId, winrt::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlReleaseMode const& mode) const
+    {
+        bool result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController11)->TryAcquireExclusiveControl(*(void**)(&deviceId), static_cast<int32_t>(mode), &result));
+        return result;
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Devices::LowLagPhotoSequenceControl) consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2<D>::LowLagPhotoSequence() const
     {
@@ -330,7 +336,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IAudioDeviceModulesManager<D>::ModuleNotificationReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::IAudioDeviceModulesManager)->remove_ModuleNotificationReceived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::IAudioDeviceModulesManager)->remove_ModuleNotificationReceived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Devices::AudioDeviceModule>) consume_Windows_Media_Devices_IAudioDeviceModulesManager<D>::FindAllById(param::hstring const& moduleId) const
     {
@@ -388,7 +394,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ICallControl<D>::AnswerRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::ICallControl)->remove_AnswerRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::ICallControl)->remove_AnswerRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Devices_ICallControl<D>::HangUpRequested(winrt::Windows::Media::Devices::CallControlEventHandler const& handler) const
     {
@@ -402,7 +408,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ICallControl<D>::HangUpRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::ICallControl)->remove_HangUpRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::ICallControl)->remove_HangUpRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Devices_ICallControl<D>::DialRequested(winrt::Windows::Media::Devices::DialRequestedEventHandler const& handler) const
     {
@@ -416,7 +422,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ICallControl<D>::DialRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::ICallControl)->remove_DialRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::ICallControl)->remove_DialRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Devices_ICallControl<D>::RedialRequested(winrt::Windows::Media::Devices::RedialRequestedEventHandler const& handler) const
     {
@@ -430,7 +436,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ICallControl<D>::RedialRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::ICallControl)->remove_RedialRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::ICallControl)->remove_RedialRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Devices_ICallControl<D>::KeypadPressed(winrt::Windows::Media::Devices::KeypadPressedEventHandler const& handler) const
     {
@@ -444,7 +450,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ICallControl<D>::KeypadPressed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::ICallControl)->remove_KeypadPressed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::ICallControl)->remove_KeypadPressed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Devices_ICallControl<D>::AudioTransferRequested(winrt::Windows::Media::Devices::CallControlEventHandler const& handler) const
     {
@@ -458,7 +464,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ICallControl<D>::AudioTransferRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::ICallControl)->remove_AudioTransferRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::ICallControl)->remove_AudioTransferRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Devices::CallControl) consume_Windows_Media_Devices_ICallControlStatics<D>::GetDefault() const
     {
@@ -496,7 +502,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_ICameraOcclusionInfo<D>::StateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::ICameraOcclusionInfo)->remove_StateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::ICameraOcclusionInfo)->remove_StateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Devices_ICameraOcclusionState<D>::IsOccluded() const
     {
@@ -1411,7 +1417,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IMediaDeviceStatics<D>::DefaultAudioCaptureDeviceChanged(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::IMediaDeviceStatics)->remove_DefaultAudioCaptureDeviceChanged(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::IMediaDeviceStatics)->remove_DefaultAudioCaptureDeviceChanged(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Devices_IMediaDeviceStatics<D>::DefaultAudioRenderDeviceChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs> const& handler) const
     {
@@ -1425,7 +1431,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Devices_IMediaDeviceStatics<D>::DefaultAudioRenderDeviceChanged(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::IMediaDeviceStatics)->remove_DefaultAudioRenderDeviceChanged(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Devices::IMediaDeviceStatics)->remove_DefaultAudioRenderDeviceChanged(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Devices::SendCommandStatus) consume_Windows_Media_Devices_IModuleCommandResult<D>::Status() const
     {
@@ -2028,6 +2034,19 @@ namespace winrt::impl
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Windows::Media::Devices::CameraOcclusionInfo>(this->shim().CameraOcclusionInfo());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController11> : produce_base<D, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController11>
+    {
+        int32_t __stdcall TryAcquireExclusiveControl(void* deviceId, int32_t mode, bool* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<bool>(this->shim().TryAcquireExclusiveControl(*reinterpret_cast<hstring const*>(&deviceId), *reinterpret_cast<winrt::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlReleaseMode const*>(&mode)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4914,6 +4933,7 @@ namespace std
     template<> struct hash<winrt::Windows::Media::Devices::IAdvancedPhotoControl> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController11> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4> : winrt::impl::hash_base {};
@@ -5019,6 +5039,8 @@ namespace std
     template<> struct hash<winrt::Windows::Media::Devices::WhiteBalanceControl> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::ZoomControl> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Devices::ZoomSettings> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

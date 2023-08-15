@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Gaming_Input_H
 #define WINRT_Windows_Gaming_Input_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/impl/Windows.Devices.Haptics.2.h"
 #include "winrt/impl/Windows.Devices.Power.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -42,7 +42,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Input_IArcadeStickStatics<D>::ArcadeStickAdded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IArcadeStickStatics)->remove_ArcadeStickAdded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IArcadeStickStatics)->remove_ArcadeStickAdded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Gaming_Input_IArcadeStickStatics<D>::ArcadeStickRemoved(winrt::Windows::Foundation::EventHandler<winrt::Windows::Gaming::Input::ArcadeStick> const& value) const
     {
@@ -56,7 +56,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Input_IArcadeStickStatics<D>::ArcadeStickRemoved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IArcadeStickStatics)->remove_ArcadeStickRemoved(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IArcadeStickStatics)->remove_ArcadeStickRemoved(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Gaming::Input::ArcadeStick>) consume_Windows_Gaming_Input_IArcadeStickStatics<D>::ArcadeSticks() const
     {
@@ -100,7 +100,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Input_IFlightStickStatics<D>::FlightStickAdded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IFlightStickStatics)->remove_FlightStickAdded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IFlightStickStatics)->remove_FlightStickAdded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Gaming_Input_IFlightStickStatics<D>::FlightStickRemoved(winrt::Windows::Foundation::EventHandler<winrt::Windows::Gaming::Input::FlightStick> const& value) const
     {
@@ -114,7 +114,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Input_IFlightStickStatics<D>::FlightStickRemoved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IFlightStickStatics)->remove_FlightStickRemoved(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IFlightStickStatics)->remove_FlightStickRemoved(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Gaming::Input::FlightStick>) consume_Windows_Gaming_Input_IFlightStickStatics<D>::FlightSticks() const
     {
@@ -140,7 +140,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Input_IGameController<D>::HeadsetConnected(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IGameController)->remove_HeadsetConnected(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IGameController)->remove_HeadsetConnected(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Gaming_Input_IGameController<D>::HeadsetDisconnected(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::Gaming::Input::Headset> const& value) const
     {
@@ -154,7 +154,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Input_IGameController<D>::HeadsetDisconnected(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IGameController)->remove_HeadsetDisconnected(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IGameController)->remove_HeadsetDisconnected(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Gaming_Input_IGameController<D>::UserChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::Input::IGameController, winrt::Windows::System::UserChangedEventArgs> const& value) const
     {
@@ -168,7 +168,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Input_IGameController<D>::UserChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IGameController)->remove_UserChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IGameController)->remove_UserChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Gaming::Input::Headset) consume_Windows_Gaming_Input_IGameController<D>::Headset() const
     {
@@ -228,7 +228,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Input_IGamepadStatics<D>::GamepadAdded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IGamepadStatics)->remove_GamepadAdded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IGamepadStatics)->remove_GamepadAdded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Gaming_Input_IGamepadStatics<D>::GamepadRemoved(winrt::Windows::Foundation::EventHandler<winrt::Windows::Gaming::Input::Gamepad> const& value) const
     {
@@ -242,7 +242,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Input_IGamepadStatics<D>::GamepadRemoved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IGamepadStatics)->remove_GamepadRemoved(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IGamepadStatics)->remove_GamepadRemoved(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Gaming::Input::Gamepad>) consume_Windows_Gaming_Input_IGamepadStatics<D>::Gamepads() const
     {
@@ -328,7 +328,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Input_IRacingWheelStatics<D>::RacingWheelAdded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IRacingWheelStatics)->remove_RacingWheelAdded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IRacingWheelStatics)->remove_RacingWheelAdded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Gaming_Input_IRacingWheelStatics<D>::RacingWheelRemoved(winrt::Windows::Foundation::EventHandler<winrt::Windows::Gaming::Input::RacingWheel> const& value) const
     {
@@ -342,7 +342,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Input_IRacingWheelStatics<D>::RacingWheelRemoved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IRacingWheelStatics)->remove_RacingWheelRemoved(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IRacingWheelStatics)->remove_RacingWheelRemoved(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Gaming::Input::RacingWheel>) consume_Windows_Gaming_Input_IRacingWheelStatics<D>::RacingWheels() const
     {
@@ -440,7 +440,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Input_IRawGameControllerStatics<D>::RawGameControllerAdded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IRawGameControllerStatics)->remove_RawGameControllerAdded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IRawGameControllerStatics)->remove_RawGameControllerAdded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Gaming_Input_IRawGameControllerStatics<D>::RawGameControllerRemoved(winrt::Windows::Foundation::EventHandler<winrt::Windows::Gaming::Input::RawGameController> const& value) const
     {
@@ -454,7 +454,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Input_IRawGameControllerStatics<D>::RawGameControllerRemoved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IRawGameControllerStatics)->remove_RawGameControllerRemoved(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IRawGameControllerStatics)->remove_RawGameControllerRemoved(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Gaming::Input::RawGameController>) consume_Windows_Gaming_Input_IRawGameControllerStatics<D>::RawGameControllers() const
     {
@@ -498,7 +498,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Input_IUINavigationControllerStatics<D>::UINavigationControllerAdded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IUINavigationControllerStatics)->remove_UINavigationControllerAdded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IUINavigationControllerStatics)->remove_UINavigationControllerAdded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Gaming_Input_IUINavigationControllerStatics<D>::UINavigationControllerRemoved(winrt::Windows::Foundation::EventHandler<winrt::Windows::Gaming::Input::UINavigationController> const& value) const
     {
@@ -512,7 +512,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_Input_IUINavigationControllerStatics<D>::UINavigationControllerRemoved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IUINavigationControllerStatics)->remove_UINavigationControllerRemoved(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Gaming::Input::IUINavigationControllerStatics)->remove_UINavigationControllerRemoved(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Gaming::Input::UINavigationController>) consume_Windows_Gaming_Input_IUINavigationControllerStatics<D>::UINavigationControllers() const
     {
@@ -1661,6 +1661,8 @@ namespace std
     template<> struct hash<winrt::Windows::Gaming::Input::RacingWheel> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Gaming::Input::RawGameController> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Gaming::Input::UINavigationController> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

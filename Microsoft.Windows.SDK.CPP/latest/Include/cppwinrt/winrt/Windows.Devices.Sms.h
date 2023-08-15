@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Devices_Sms_H
 #define WINRT_Windows_Devices_Sms_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Devices.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -257,7 +257,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsDevice<D>::SmsMessageReceived(winrt::event_token const& eventCookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Sms::ISmsDevice)->remove_SmsMessageReceived(impl::bind_in(eventCookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Sms::ISmsDevice)->remove_SmsMessageReceived(impl::bind_in(eventCookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Sms_ISmsDevice<D>::SmsDeviceStatusChanged(winrt::Windows::Devices::Sms::SmsDeviceStatusChangedEventHandler const& eventHandler) const
     {
@@ -271,7 +271,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsDevice<D>::SmsDeviceStatusChanged(winrt::event_token const& eventCookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Sms::ISmsDevice)->remove_SmsDeviceStatusChanged(impl::bind_in(eventCookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Sms::ISmsDevice)->remove_SmsDeviceStatusChanged(impl::bind_in(eventCookie));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsDevice2<D>::SmscAddress() const
     {
@@ -337,7 +337,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsDevice2<D>::DeviceStatusChanged(winrt::event_token const& eventCookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Sms::ISmsDevice2)->remove_DeviceStatusChanged(impl::bind_in(eventCookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Sms::ISmsDevice2)->remove_DeviceStatusChanged(impl::bind_in(eventCookie));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sms_ISmsDevice2Statics<D>::GetDeviceSelector() const
     {
@@ -649,7 +649,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sms_ISmsMessageRegistration<D>::MessageReceived(winrt::event_token const& eventCookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Sms::ISmsMessageRegistration)->remove_MessageReceived(impl::bind_in(eventCookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Sms::ISmsMessageRegistration)->remove_MessageReceived(impl::bind_in(eventCookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Sms::SmsMessageRegistration>) consume_Windows_Devices_Sms_ISmsMessageRegistrationStatics<D>::AllRegistrations() const
     {
@@ -2656,6 +2656,8 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Sms::SmsTextMessage2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sms::SmsVoicemailMessage> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sms::SmsWapMessage> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

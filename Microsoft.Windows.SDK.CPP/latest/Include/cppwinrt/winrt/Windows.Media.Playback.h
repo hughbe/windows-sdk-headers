@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Media_Playback_H
 #define WINRT_Windows_Media_Playback_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Media.h"
 #include "winrt/impl/Windows.Devices.Enumeration.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -45,7 +45,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IBackgroundMediaPlayerStatics<D>::MessageReceivedFromBackground(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IBackgroundMediaPlayerStatics)->remove_MessageReceivedFromBackground(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IBackgroundMediaPlayerStatics)->remove_MessageReceivedFromBackground(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IBackgroundMediaPlayerStatics<D>::MessageReceivedFromForeground(winrt::Windows::Foundation::EventHandler<winrt::Windows::Media::Playback::MediaPlayerDataReceivedEventArgs> const& value) const
     {
@@ -59,7 +59,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IBackgroundMediaPlayerStatics<D>::MessageReceivedFromForeground(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IBackgroundMediaPlayerStatics)->remove_MessageReceivedFromForeground(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IBackgroundMediaPlayerStatics)->remove_MessageReceivedFromForeground(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IBackgroundMediaPlayerStatics<D>::SendMessageToBackground(winrt::Windows::Foundation::Collections::ValueSet const& value) const
     {
@@ -161,7 +161,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaBreakManager<D>::BreaksSeekedOver(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaBreakManager)->remove_BreaksSeekedOver(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaBreakManager)->remove_BreaksSeekedOver(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaBreakManager<D>::BreakStarted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaBreakManager, winrt::Windows::Media::Playback::MediaBreakStartedEventArgs> const& handler) const
     {
@@ -175,7 +175,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaBreakManager<D>::BreakStarted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaBreakManager)->remove_BreakStarted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaBreakManager)->remove_BreakStarted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaBreakManager<D>::BreakEnded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaBreakManager, winrt::Windows::Media::Playback::MediaBreakEndedEventArgs> const& handler) const
     {
@@ -189,7 +189,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaBreakManager<D>::BreakEnded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaBreakManager)->remove_BreakEnded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaBreakManager)->remove_BreakEnded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaBreakManager<D>::BreakSkipped(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaBreakManager, winrt::Windows::Media::Playback::MediaBreakSkippedEventArgs> const& handler) const
     {
@@ -203,7 +203,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaBreakManager<D>::BreakSkipped(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaBreakManager)->remove_BreakSkipped(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaBreakManager)->remove_BreakSkipped(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Playback::MediaBreak) consume_Windows_Media_Playback_IMediaBreakManager<D>::CurrentBreak() const
     {
@@ -237,7 +237,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaBreakSchedule<D>::ScheduleChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaBreakSchedule)->remove_ScheduleChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaBreakSchedule)->remove_ScheduleChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaBreakSchedule<D>::InsertMidrollBreak(winrt::Windows::Media::Playback::MediaBreak const& mediaBreak) const
     {
@@ -443,7 +443,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::PlayReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_PlayReceived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_PlayReceived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::PauseReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPauseReceivedEventArgs> const& handler) const
     {
@@ -457,7 +457,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::PauseReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_PauseReceived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_PauseReceived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::NextReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerNextReceivedEventArgs> const& handler) const
     {
@@ -471,7 +471,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::NextReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_NextReceived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_NextReceived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::PreviousReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPreviousReceivedEventArgs> const& handler) const
     {
@@ -485,7 +485,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::PreviousReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_PreviousReceived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_PreviousReceived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::FastForwardReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerFastForwardReceivedEventArgs> const& handler) const
     {
@@ -499,7 +499,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::FastForwardReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_FastForwardReceived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_FastForwardReceived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::RewindReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRewindReceivedEventArgs> const& handler) const
     {
@@ -513,7 +513,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::RewindReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_RewindReceived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_RewindReceived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::ShuffleReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerShuffleReceivedEventArgs> const& handler) const
     {
@@ -527,7 +527,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::ShuffleReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_ShuffleReceived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_ShuffleReceived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::AutoRepeatModeReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs> const& handler) const
     {
@@ -541,7 +541,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::AutoRepeatModeReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_AutoRepeatModeReceived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_AutoRepeatModeReceived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::PositionReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPositionReceivedEventArgs> const& handler) const
     {
@@ -555,7 +555,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::PositionReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_PositionReceived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_PositionReceived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::RateReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackCommandManager, winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRateReceivedEventArgs> const& handler) const
     {
@@ -569,7 +569,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackCommandManager<D>::RateReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_RateReceived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManager)->remove_RateReceived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Playback_IMediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs<D>::Handled() const
     {
@@ -627,7 +627,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackCommandManagerCommandBehavior<D>::IsEnabledChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManagerCommandBehavior)->remove_IsEnabledChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackCommandManagerCommandBehavior)->remove_IsEnabledChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Playback_IMediaPlaybackCommandManagerFastForwardReceivedEventArgs<D>::Handled() const
     {
@@ -803,7 +803,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackItem<D>::AudioTracksChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackItem)->remove_AudioTracksChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackItem)->remove_AudioTracksChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackItem<D>::VideoTracksChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackItem, winrt::Windows::Foundation::Collections::IVectorChangedEventArgs> const& handler) const
     {
@@ -817,7 +817,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackItem<D>::VideoTracksChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackItem)->remove_VideoTracksChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackItem)->remove_VideoTracksChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackItem<D>::TimedMetadataTracksChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackItem, winrt::Windows::Foundation::Collections::IVectorChangedEventArgs> const& handler) const
     {
@@ -831,7 +831,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackItem<D>::TimedMetadataTracksChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackItem)->remove_TimedMetadataTracksChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackItem)->remove_TimedMetadataTracksChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSource) consume_Windows_Media_Playback_IMediaPlaybackItem<D>::Source() const
     {
@@ -987,7 +987,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackList<D>::ItemFailed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackList)->remove_ItemFailed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackList)->remove_ItemFailed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackList<D>::CurrentItemChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackList, winrt::Windows::Media::Playback::CurrentMediaPlaybackItemChangedEventArgs> const& handler) const
     {
@@ -1001,7 +1001,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackList<D>::CurrentItemChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackList)->remove_CurrentItemChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackList)->remove_CurrentItemChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackList<D>::ItemOpened(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackList, winrt::Windows::Media::Playback::MediaPlaybackItemOpenedEventArgs> const& handler) const
     {
@@ -1015,7 +1015,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackList<D>::ItemOpened(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackList)->remove_ItemOpened(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackList)->remove_ItemOpened(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IObservableVector<winrt::Windows::Media::Playback::MediaPlaybackItem>) consume_Windows_Media_Playback_IMediaPlaybackList<D>::Items() const
     {
@@ -1125,7 +1125,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::PlaybackStateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_PlaybackStateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_PlaybackStateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::PlaybackRateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1139,7 +1139,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::PlaybackRateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_PlaybackRateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_PlaybackRateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::SeekCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1153,7 +1153,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::SeekCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_SeekCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_SeekCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::BufferingStarted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1167,7 +1167,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::BufferingStarted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_BufferingStarted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_BufferingStarted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::BufferingEnded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1181,7 +1181,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::BufferingEnded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_BufferingEnded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_BufferingEnded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::BufferingProgressChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1195,7 +1195,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::BufferingProgressChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_BufferingProgressChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_BufferingProgressChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::DownloadProgressChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1209,7 +1209,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::DownloadProgressChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_DownloadProgressChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_DownloadProgressChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::NaturalDurationChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1223,7 +1223,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::NaturalDurationChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_NaturalDurationChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_NaturalDurationChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::PositionChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1237,7 +1237,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::PositionChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_PositionChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_PositionChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::NaturalVideoSizeChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1251,7 +1251,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::NaturalVideoSizeChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_NaturalVideoSizeChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession)->remove_NaturalVideoSizeChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Playback::MediaPlayer) consume_Windows_Media_Playback_IMediaPlaybackSession<D>::MediaPlayer() const
     {
@@ -1365,7 +1365,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackSession2<D>::BufferedRangesChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession2)->remove_BufferedRangesChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession2)->remove_BufferedRangesChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackSession2<D>::PlayedRangesChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1379,7 +1379,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackSession2<D>::PlayedRangesChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession2)->remove_PlayedRangesChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession2)->remove_PlayedRangesChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackSession2<D>::SeekableRangesChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1393,7 +1393,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackSession2<D>::SeekableRangesChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession2)->remove_SeekableRangesChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession2)->remove_SeekableRangesChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlaybackSession2<D>::SupportedPlaybackRatesChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlaybackSession, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1407,7 +1407,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackSession2<D>::SupportedPlaybackRatesChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession2)->remove_SupportedPlaybackRatesChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackSession2)->remove_SupportedPlaybackRatesChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Playback::MediaPlaybackSphericalVideoProjection) consume_Windows_Media_Playback_IMediaPlaybackSession2<D>::SphericalVideoProjection() const
     {
@@ -1539,7 +1539,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlaybackTimedMetadataTrackList<D>::PresentationModeChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackTimedMetadataTrackList)->remove_PresentationModeChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlaybackTimedMetadataTrackList)->remove_PresentationModeChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Playback::TimedMetadataTrackPresentationMode) consume_Windows_Media_Playback_IMediaPlaybackTimedMetadataTrackList<D>::GetPresentationMode(uint32_t index) const
     {
@@ -1665,7 +1665,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlayer<D>::MediaOpened(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_MediaOpened(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_MediaOpened(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlayer<D>::MediaEnded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1679,7 +1679,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlayer<D>::MediaEnded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_MediaEnded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_MediaEnded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlayer<D>::MediaFailed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Media::Playback::MediaPlayerFailedEventArgs> const& value) const
     {
@@ -1693,7 +1693,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlayer<D>::MediaFailed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_MediaFailed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_MediaFailed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlayer<D>::CurrentStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1707,7 +1707,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlayer<D>::CurrentStateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_CurrentStateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_CurrentStateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlayer<D>::PlaybackMediaMarkerReached(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Media::Playback::PlaybackMediaMarkerReachedEventArgs> const& value) const
     {
@@ -1721,7 +1721,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlayer<D>::PlaybackMediaMarkerReached(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_PlaybackMediaMarkerReached(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_PlaybackMediaMarkerReached(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlayer<D>::MediaPlayerRateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Media::Playback::MediaPlayerRateChangedEventArgs> const& value) const
     {
@@ -1735,7 +1735,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlayer<D>::MediaPlayerRateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_MediaPlayerRateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_MediaPlayerRateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlayer<D>::VolumeChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1749,7 +1749,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlayer<D>::VolumeChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_VolumeChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_VolumeChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlayer<D>::SeekCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1763,7 +1763,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlayer<D>::SeekCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_SeekCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_SeekCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlayer<D>::BufferingStarted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1777,7 +1777,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlayer<D>::BufferingStarted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_BufferingStarted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_BufferingStarted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlayer<D>::BufferingEnded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1791,7 +1791,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlayer<D>::BufferingEnded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_BufferingEnded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer)->remove_BufferingEnded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlayer<D>::Play() const
     {
@@ -1843,7 +1843,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlayer3<D>::IsMutedChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer3)->remove_IsMutedChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer3)->remove_IsMutedChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Playback_IMediaPlayer3<D>::SourceChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Playback::MediaPlayer, winrt::Windows::Foundation::IInspectable> const& value) const
     {
@@ -1857,7 +1857,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlayer3<D>::SourceChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer3)->remove_SourceChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer3)->remove_SourceChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Playback_IMediaPlayer3<D>::AudioBalance() const
     {
@@ -1973,7 +1973,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlayer5<D>::VideoFrameAvailable(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer5)->remove_VideoFrameAvailable(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer5)->remove_VideoFrameAvailable(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Playback_IMediaPlayer5<D>::IsVideoFrameServerEnabled() const
     {
@@ -2009,7 +2009,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Playback_IMediaPlayer6<D>::SubtitleFrameChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer6)->remove_SubtitleFrameChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Playback::IMediaPlayer6)->remove_SubtitleFrameChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Playback_IMediaPlayer6<D>::RenderSubtitlesToSurface(winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface const& destination) const
     {
@@ -5476,6 +5476,8 @@ namespace std
     template<> struct hash<winrt::Windows::Media::Playback::PlaybackMediaMarkerReachedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Playback::PlaybackMediaMarkerSequence> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Playback::TimedMetadataPresentationModeChangedEventArgs> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

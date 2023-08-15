@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,10 +10,10 @@
 #include "winrt/impl/Windows.UI.WebUI.Core.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::WebUI::Core
 {
-    struct MenuClosedEventHandler : Windows::Foundation::IUnknown
+    struct MenuClosedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         MenuClosedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        MenuClosedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        MenuClosedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> MenuClosedEventHandler(L lambda);
         template <typename F> MenuClosedEventHandler(F* function);
         template <typename O, typename M> MenuClosedEventHandler(O* object, M method);
@@ -21,10 +21,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::WebUI::Core
         template <typename O, typename M> MenuClosedEventHandler(weak_ref<O>&& object, M method);
         auto operator()() const;
     };
-    struct MenuOpenedEventHandler : Windows::Foundation::IUnknown
+    struct MenuOpenedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         MenuOpenedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        MenuOpenedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        MenuOpenedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> MenuOpenedEventHandler(L lambda);
         template <typename F> MenuOpenedEventHandler(F* function);
         template <typename O, typename M> MenuOpenedEventHandler(O* object, M method);
@@ -32,10 +32,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::WebUI::Core
         template <typename O, typename M> MenuOpenedEventHandler(weak_ref<O>&& object, M method);
         auto operator()() const;
     };
-    struct SizeChangedEventHandler : Windows::Foundation::IUnknown
+    struct SizeChangedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         SizeChangedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        SizeChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        SizeChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> SizeChangedEventHandler(L lambda);
         template <typename F> SizeChangedEventHandler(F* function);
         template <typename O, typename M> SizeChangedEventHandler(O* object, M method);

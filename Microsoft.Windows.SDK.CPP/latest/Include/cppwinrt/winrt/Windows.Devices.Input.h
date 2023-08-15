@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Devices_Input_H
 #define WINRT_Windows_Devices_Input_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Devices.h"
 #include "winrt/impl/Windows.Devices.Haptics.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -64,7 +64,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Input_IMouseDevice<D>::MouseMoved(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::IMouseDevice)->remove_MouseMoved(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::IMouseDevice)->remove_MouseMoved(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::MouseDevice) consume_Windows_Devices_Input_IMouseDeviceStatics<D>::GetForCurrentView() const
     {
@@ -96,7 +96,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Input_IPenButtonListener<D>::IsSupportedChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::IPenButtonListener)->remove_IsSupportedChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::IPenButtonListener)->remove_IsSupportedChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Input_IPenButtonListener<D>::TailButtonClicked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Devices::Input::PenTailButtonClickedEventArgs> const& handler) const
     {
@@ -110,7 +110,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Input_IPenButtonListener<D>::TailButtonClicked(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::IPenButtonListener)->remove_TailButtonClicked(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::IPenButtonListener)->remove_TailButtonClicked(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Input_IPenButtonListener<D>::TailButtonDoubleClicked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs> const& handler) const
     {
@@ -124,7 +124,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Input_IPenButtonListener<D>::TailButtonDoubleClicked(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::IPenButtonListener)->remove_TailButtonDoubleClicked(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::IPenButtonListener)->remove_TailButtonDoubleClicked(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Input_IPenButtonListener<D>::TailButtonLongPressed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Devices::Input::PenTailButtonLongPressedEventArgs> const& handler) const
     {
@@ -138,7 +138,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Input_IPenButtonListener<D>::TailButtonLongPressed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::IPenButtonListener)->remove_TailButtonLongPressed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::IPenButtonListener)->remove_TailButtonLongPressed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::PenButtonListener) consume_Windows_Devices_Input_IPenButtonListenerStatics<D>::GetDefault() const
     {
@@ -182,7 +182,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Input_IPenDockListener<D>::IsSupportedChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::IPenDockListener)->remove_IsSupportedChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::IPenDockListener)->remove_IsSupportedChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Input_IPenDockListener<D>::Docked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenDockListener, winrt::Windows::Devices::Input::PenDockedEventArgs> const& handler) const
     {
@@ -196,7 +196,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Input_IPenDockListener<D>::Docked(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::IPenDockListener)->remove_Docked(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::IPenDockListener)->remove_Docked(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Input_IPenDockListener<D>::Undocked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenDockListener, winrt::Windows::Devices::Input::PenUndockedEventArgs> const& handler) const
     {
@@ -210,7 +210,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Input_IPenDockListener<D>::Undocked(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::IPenDockListener)->remove_Undocked(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::IPenDockListener)->remove_Undocked(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::PenDockListener) consume_Windows_Devices_Input_IPenDockListenerStatics<D>::GetDefault() const
     {
@@ -793,6 +793,8 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Input::PenUndockedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Input::PointerDevice> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Input::TouchCapabilities> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -12,10 +12,10 @@
 #include "winrt/impl/Windows.UI.ApplicationSettings.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::ApplicationSettings
 {
-    struct CredentialCommandCredentialDeletedHandler : Windows::Foundation::IUnknown
+    struct CredentialCommandCredentialDeletedHandler : winrt::Windows::Foundation::IUnknown
     {
         CredentialCommandCredentialDeletedHandler(std::nullptr_t = nullptr) noexcept {}
-        CredentialCommandCredentialDeletedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        CredentialCommandCredentialDeletedHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> CredentialCommandCredentialDeletedHandler(L lambda);
         template <typename F> CredentialCommandCredentialDeletedHandler(F* function);
         template <typename O, typename M> CredentialCommandCredentialDeletedHandler(O* object, M method);
@@ -23,10 +23,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::ApplicationSettings
         template <typename O, typename M> CredentialCommandCredentialDeletedHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::UI::ApplicationSettings::CredentialCommand const& command) const;
     };
-    struct WebAccountCommandInvokedHandler : Windows::Foundation::IUnknown
+    struct WebAccountCommandInvokedHandler : winrt::Windows::Foundation::IUnknown
     {
         WebAccountCommandInvokedHandler(std::nullptr_t = nullptr) noexcept {}
-        WebAccountCommandInvokedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        WebAccountCommandInvokedHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> WebAccountCommandInvokedHandler(L lambda);
         template <typename F> WebAccountCommandInvokedHandler(F* function);
         template <typename O, typename M> WebAccountCommandInvokedHandler(O* object, M method);
@@ -34,10 +34,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::ApplicationSettings
         template <typename O, typename M> WebAccountCommandInvokedHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::UI::ApplicationSettings::WebAccountCommand const& command, winrt::Windows::UI::ApplicationSettings::WebAccountInvokedArgs const& args) const;
     };
-    struct WebAccountProviderCommandInvokedHandler : Windows::Foundation::IUnknown
+    struct WebAccountProviderCommandInvokedHandler : winrt::Windows::Foundation::IUnknown
     {
         WebAccountProviderCommandInvokedHandler(std::nullptr_t = nullptr) noexcept {}
-        WebAccountProviderCommandInvokedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        WebAccountProviderCommandInvokedHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> WebAccountProviderCommandInvokedHandler(L lambda);
         template <typename F> WebAccountProviderCommandInvokedHandler(F* function);
         template <typename O, typename M> WebAccountProviderCommandInvokedHandler(O* object, M method);

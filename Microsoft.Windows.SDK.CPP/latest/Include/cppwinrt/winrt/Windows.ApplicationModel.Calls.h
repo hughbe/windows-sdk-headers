@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_ApplicationModel_Calls_H
 #define WINRT_Windows_ApplicationModel_Calls_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.ApplicationModel.h"
 #include "winrt/impl/Windows.ApplicationModel.Contacts.2.h"
 #include "winrt/impl/Windows.Devices.Enumeration.2.h"
@@ -69,7 +69,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_ILockScreenCallUI<D>::EndRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::ILockScreenCallUI)->remove_EndRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::ILockScreenCallUI)->remove_EndRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Calls_ILockScreenCallUI<D>::Closed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::LockScreenCallUI, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -83,7 +83,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_ILockScreenCallUI<D>::Closed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::ILockScreenCallUI)->remove_Closed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::ILockScreenCallUI)->remove_Closed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Calls_ILockScreenCallUI<D>::CallTitle() const
     {
@@ -113,7 +113,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IPhoneCall<D>::StatusChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneCall)->remove_StatusChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneCall)->remove_StatusChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Calls_IPhoneCall<D>::AudioDeviceChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::PhoneCall, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -127,7 +127,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IPhoneCall<D>::AudioDeviceChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneCall)->remove_AudioDeviceChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneCall)->remove_AudioDeviceChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Calls_IPhoneCall<D>::IsMutedChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::PhoneCall, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -141,7 +141,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IPhoneCall<D>::IsMutedChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneCall)->remove_IsMutedChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneCall)->remove_IsMutedChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Calls_IPhoneCall<D>::CallId() const
     {
@@ -701,7 +701,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IPhoneCallManagerStatics2<D>::CallStateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneCallManagerStatics2)->remove_CallStateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneCallManagerStatics2)->remove_CallStateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Calls_IPhoneCallManagerStatics2<D>::IsCallActive() const
     {
@@ -845,7 +845,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IPhoneLine<D>::LineChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneLine)->remove_LineChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneLine)->remove_LineChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_ApplicationModel_Calls_IPhoneLine<D>::Id() const
     {
@@ -1097,7 +1097,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDevice2<D>::AudioRoutingStatusChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneLineTransportDevice2)->remove_AudioRoutingStatusChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneLineTransportDevice2)->remove_AudioRoutingStatusChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDevice2<D>::InBandRingingEnabled() const
     {
@@ -1117,7 +1117,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDevice2<D>::InBandRingingEnabledChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneLineTransportDevice2)->remove_InBandRingingEnabledChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneLineTransportDevice2)->remove_InBandRingingEnabledChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice) consume_Windows_ApplicationModel_Calls_IPhoneLineTransportDeviceStatics<D>::FromId(param::hstring const& id) const
     {
@@ -1157,7 +1157,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IPhoneLineWatcher<D>::LineAdded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneLineWatcher)->remove_LineAdded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneLineWatcher)->remove_LineAdded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Calls_IPhoneLineWatcher<D>::LineRemoved(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher, winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs> const& handler) const
     {
@@ -1171,7 +1171,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IPhoneLineWatcher<D>::LineRemoved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneLineWatcher)->remove_LineRemoved(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneLineWatcher)->remove_LineRemoved(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Calls_IPhoneLineWatcher<D>::LineUpdated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher, winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs> const& handler) const
     {
@@ -1185,7 +1185,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IPhoneLineWatcher<D>::LineUpdated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneLineWatcher)->remove_LineUpdated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneLineWatcher)->remove_LineUpdated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Calls_IPhoneLineWatcher<D>::EnumerationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1199,7 +1199,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IPhoneLineWatcher<D>::EnumerationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneLineWatcher)->remove_EnumerationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneLineWatcher)->remove_EnumerationCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Calls_IPhoneLineWatcher<D>::Stopped(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1213,7 +1213,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IPhoneLineWatcher<D>::Stopped(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneLineWatcher)->remove_Stopped(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IPhoneLineWatcher)->remove_Stopped(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherStatus) consume_Windows_ApplicationModel_Calls_IPhoneLineWatcher<D>::Status() const
     {
@@ -1269,7 +1269,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IVoipCallCoordinator<D>::MuteStateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IVoipCallCoordinator)->remove_MuteStateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IVoipCallCoordinator)->remove_MuteStateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Calls::VoipPhoneCall) consume_Windows_ApplicationModel_Calls_IVoipCallCoordinator<D>::RequestNewIncomingCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& contactNumber, winrt::Windows::Foundation::Uri const& contactImage, param::hstring const& serviceName, winrt::Windows::Foundation::Uri const& brandingImage, param::hstring const& callDetails, winrt::Windows::Foundation::Uri const& ringtone, winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia const& media, winrt::Windows::Foundation::TimeSpan const& ringTimeout) const
     {
@@ -1353,7 +1353,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IVoipPhoneCall<D>::EndRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IVoipPhoneCall)->remove_EndRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IVoipPhoneCall)->remove_EndRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Calls_IVoipPhoneCall<D>::HoldRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::VoipPhoneCall, winrt::Windows::ApplicationModel::Calls::CallStateChangeEventArgs> const& handler) const
     {
@@ -1367,7 +1367,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IVoipPhoneCall<D>::HoldRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IVoipPhoneCall)->remove_HoldRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IVoipPhoneCall)->remove_HoldRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Calls_IVoipPhoneCall<D>::ResumeRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::VoipPhoneCall, winrt::Windows::ApplicationModel::Calls::CallStateChangeEventArgs> const& handler) const
     {
@@ -1381,7 +1381,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IVoipPhoneCall<D>::ResumeRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IVoipPhoneCall)->remove_ResumeRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IVoipPhoneCall)->remove_ResumeRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Calls_IVoipPhoneCall<D>::AnswerRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::VoipPhoneCall, winrt::Windows::ApplicationModel::Calls::CallAnswerEventArgs> const& acceptHandler) const
     {
@@ -1395,7 +1395,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IVoipPhoneCall<D>::AnswerRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IVoipPhoneCall)->remove_AnswerRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IVoipPhoneCall)->remove_AnswerRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Calls_IVoipPhoneCall<D>::RejectRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Calls::VoipPhoneCall, winrt::Windows::ApplicationModel::Calls::CallRejectEventArgs> const& rejectHandler) const
     {
@@ -1409,7 +1409,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IVoipPhoneCall<D>::RejectRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IVoipPhoneCall)->remove_RejectRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Calls::IVoipPhoneCall)->remove_RejectRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Calls_IVoipPhoneCall<D>::NotifyCallHeld() const
     {
@@ -3879,6 +3879,8 @@ namespace std
     template<> struct hash<winrt::Windows::ApplicationModel::Calls::PhoneVoicemail> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::Calls::VoipPhoneCall> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

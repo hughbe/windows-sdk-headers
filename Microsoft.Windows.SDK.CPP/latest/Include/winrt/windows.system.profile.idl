@@ -68,6 +68,8 @@ namespace Windows
 
             interface IAppApplicabilityStatics;
 
+            interface IAppControlPolicyStatics;
+
             interface IEducationSettingsStatics;
 
             interface IHardwareIdentificationStatics;
@@ -99,6 +101,8 @@ namespace Windows
             runtimeclass AnalyticsVersionInfo;
 
             runtimeclass AppApplicability;
+
+            runtimeclass AppControlPolicy;
 
             runtimeclass EducationSettings;
 
@@ -243,6 +247,18 @@ namespace Windows
             interface IAppApplicabilityStatics : IInspectable
             {
                 HRESULT GetUnsupportedAppRequirements([in] Windows.Foundation.Collections.IIterable<HSTRING>* capabilities, [out] [retval] Windows.Foundation.Collections.IVectorView<Windows.System.Profile.UnsupportedAppRequirement*>** result);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.System.Profile.AppControlPolicy)]
+            [uuid(771333FE-67DF-582D-88B0-0A5A87EC1591)]
+            interface IAppControlPolicyStatics : IInspectable
+            {
+                [propget] HRESULT IsEnabled([out] [retval] boolean* value);
+                [propget] HRESULT CanDisable([out] [retval] boolean* value);
+                [propget] HRESULT IsDisableSupported([out] [retval] boolean* value);
+                [eventadd] HRESULT Changed([in] Windows.Foundation.EventHandler<IInspectable*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT Changed([in] EventRegistrationToken token);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 4.0)]
@@ -409,6 +425,14 @@ namespace Windows
             [static(Windows.System.Profile.IAppApplicabilityStatics, Windows.Foundation.UniversalApiContract, 8.0)]
             [threading(both)]
             runtimeclass AppApplicability
+            {
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [marshaling_behavior(agile)]
+            [static(Windows.System.Profile.IAppControlPolicyStatics, Windows.Foundation.UniversalApiContract, 15.0)]
+            [threading(both)]
+            runtimeclass AppControlPolicy
             {
             }
 

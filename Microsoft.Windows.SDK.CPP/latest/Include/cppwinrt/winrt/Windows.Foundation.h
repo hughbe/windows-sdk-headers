@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Foundation_H
 #define WINRT_Windows_Foundation_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 namespace winrt::impl
@@ -187,7 +187,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Foundation_IMemoryBufferReference<D>::Closed(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Foundation::IMemoryBufferReference)->remove_Closed(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Foundation::IMemoryBufferReference)->remove_Closed(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::PropertyType) consume_Windows_Foundation_IPropertyValue<D>::Type() const
     {
@@ -2564,6 +2564,9 @@ namespace std
     template<> struct hash<winrt::Windows::Foundation::WwwFormUrlDecoder> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Foundation::WwwFormUrlDecoderEntry> : winrt::impl::hash_base {};
 #endif
+#ifdef __cpp_lib_format
+    template<> struct formatter<winrt::Windows::Foundation::Uri, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+#endif
 }
 
 namespace winrt::impl
@@ -2779,14 +2782,12 @@ namespace winrt::impl
         using itf = Windows::Foundation::IReference<guid>;
     };
 
-#ifdef WINRT_IMPL_IUNKNOWN_DEFINED
     template <>
     struct reference_traits<GUID>
     {
-        static auto make(GUID const& value) { return Windows::Foundation::PropertyValue::CreateGuid(value); }
+        static auto make(GUID const& value) { return Windows::Foundation::PropertyValue::CreateGuid(reinterpret_cast<guid const&>(value)); }
         using itf = Windows::Foundation::IReference<guid>;
     };
-#endif
 
     template <>
     struct reference_traits<Windows::Foundation::DateTime>
@@ -2921,14 +2922,12 @@ namespace winrt::impl
         using itf = Windows::Foundation::IReferenceArray<guid>;
     };
 
-#ifdef WINRT_IMPL_IUNKNOWN_DEFINED
     template <>
     struct reference_traits<com_array<GUID>>
     {
         static auto make(array_view<GUID const> const& value) { return Windows::Foundation::PropertyValue::CreateGuidArray(reinterpret_cast<array_view<guid const> const&>(value)); }
         using itf = Windows::Foundation::IReferenceArray<guid>;
     };
-#endif
 
     template <>
     struct reference_traits<com_array<Windows::Foundation::DateTime>>
@@ -3011,14 +3010,12 @@ namespace winrt::impl
                 return static_cast<T>(value.template as<Windows::Foundation::IReference<std::underlying_type_t<T>>>().Value());
             }
         }
-#ifdef WINRT_IMPL_IUNKNOWN_DEFINED
         else if constexpr (std::is_same_v<T, com_array<GUID>>)
         {
             T result;
             reinterpret_cast<com_array<guid>&>(result) = value.template as<typename impl::reference_traits<T>::itf>().Value();
             return result;
         }
-#endif
         else
         {
             return value.template as<typename impl::reference_traits<T>::itf>().Value();
@@ -3040,7 +3037,6 @@ namespace winrt::impl
                 return static_cast<T>(temp.Value());
             }
         }
-#ifdef WINRT_IMPL_IUNKNOWN_DEFINED
         else if constexpr (std::is_same_v<T, com_array<GUID>>)
         {
             if (auto temp = value.template try_as<typename impl::reference_traits<T>::itf>())
@@ -3050,7 +3046,6 @@ namespace winrt::impl
                 return result;
             }
         }
-#endif
         else
         {
             if (auto temp = value.template try_as<typename impl::reference_traits<T>::itf>())
@@ -3329,13 +3324,15 @@ namespace winrt::impl
         return async.GetResults();
     }
 
+    template<typename Awaiter>
     struct disconnect_aware_handler
     {
-        disconnect_aware_handler(coroutine_handle<> handle) noexcept
-            : m_handle(handle) { }
+        disconnect_aware_handler(Awaiter* awaiter, coroutine_handle<> handle) noexcept
+            : m_awaiter(awaiter), m_handle(handle) { }
 
         disconnect_aware_handler(disconnect_aware_handler&& other) noexcept
             : m_context(std::move(other.m_context))
+            , m_awaiter(std::exchange(other.m_awaiter, {}))
             , m_handle(std::exchange(other.m_handle, {})) { }
 
         ~disconnect_aware_handler()
@@ -3343,21 +3340,33 @@ namespace winrt::impl
             if (m_handle) Complete();
         }
 
-        void operator()()
+        template<typename Async>
+        void operator()(Async&&, Windows::Foundation::AsyncStatus status)
         {
+            m_awaiter->status = status;
             Complete();
         }
 
     private:
         resume_apartment_context m_context;
+        Awaiter* m_awaiter;
         coroutine_handle<> m_handle;
 
         void Complete()
         {
-            resume_apartment(m_context, std::exchange(m_handle, {}));
+            if (m_awaiter->suspending.exchange(false, std::memory_order_release))
+            {
+                m_handle = nullptr; // resumption deferred to await_suspend
+            }
+            else
+            {
+                resume_apartment(m_context, std::exchange(m_handle, {}), &m_awaiter->failure);
+            }
+
         }
     };
 
+#ifdef WINRT_IMPL_COROUTINES
     template <typename Async>
     struct await_adapter : enable_await_cancellation
     {
@@ -3365,6 +3374,8 @@ namespace winrt::impl
 
         Async const& async;
         Windows::Foundation::AsyncStatus status = Windows::Foundation::AsyncStatus::Started;
+        int32_t failure = 0;
+        std::atomic<bool> suspending{ true };
 
         void enable_cancellation(cancellable_promise* promise)
         {
@@ -3379,18 +3390,23 @@ namespace winrt::impl
             return false;
         }
 
-        void await_suspend(coroutine_handle<> handle)
+        auto await_suspend(coroutine_handle<> handle)
         {
             auto extend_lifetime = async;
-            async.Completed([this, handler = disconnect_aware_handler{ handle }](auto&&, auto operation_status) mutable
+            async.Completed(disconnect_aware_handler(this, handle));
+#ifdef _RESUMABLE_FUNCTIONS_SUPPORTED
+            if (!suspending.exchange(false, std::memory_order_acquire))
             {
-                status = operation_status;
-                handler();
-            });
+                handle.resume();
+            }
+#else
+            return suspending.exchange(false, std::memory_order_acquire);
+#endif
         }
 
         auto await_resume() const
         {
+            check_hresult(failure);
             check_status_canceled(status);
             return async.GetResults();
         }
@@ -3408,6 +3424,7 @@ namespace winrt::impl
             }
         }
     };
+#endif
 
     template <typename D>
     auto consume_Windows_Foundation_IAsyncAction<D>::get() const
@@ -4024,6 +4041,7 @@ namespace std::experimental
 
 WINRT_EXPORT namespace winrt
 {
+#ifdef WINRT_IMPL_COROUTINES
     template <typename... T>
     Windows::Foundation::IAsyncAction when_all(T... async)
     {
@@ -4069,5 +4087,14 @@ WINRT_EXPORT namespace winrt
         impl::check_status_canceled(shared->status);
         co_return shared->result.GetResults();
     }
+#endif
 }
+
+#ifdef __cpp_lib_format
+template <typename FormatContext>
+auto std::formatter<winrt::Windows::Foundation::IStringable, wchar_t>::format(winrt::Windows::Foundation::IStringable const& obj, FormatContext& fc)
+{
+    return std::formatter<winrt::hstring, wchar_t>::format(obj.ToString(), fc);
+}
+#endif
 #endif

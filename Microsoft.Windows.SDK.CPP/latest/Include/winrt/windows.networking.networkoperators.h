@@ -7409,12 +7409,12 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             namespace NetworkOperators {
-                MIDL_INTERFACE("b203e825-6bf4-545b-ac47-82e0ca15dd55")
+                MIDL_INTERFACE("fe1edf45-01b8-5d31-b8d3-d9cbebb2b831")
                 IESim3 : public IInspectable
                 {
                 public:
-                    virtual HRESULT STDMETHODCALLTYPE get_SlotId(
-                        UINT32* value
+                    virtual HRESULT STDMETHODCALLTYPE get_SlotIndex(
+                        __FIReference_1_int** value
                         ) = 0;
                 };
 
@@ -10071,14 +10071,23 @@ namespace ABI {
                 IMobileBroadbandModem4 : public IInspectable
                 {
                 public:
-                    virtual HRESULT STDMETHODCALLTYPE SetIsPassthroughEnabledAsync(
+                    virtual HRESULT STDMETHODCALLTYPE SetIsPassthroughEnabledWithSlotIndexAsync(
                         boolean value,
-                        UINT32 slotid,
-                        __FIAsyncOperation_1_Windows__CNetworking__CNetworkOperators__CMobileBroadbandModemStatus** asyncInfo
+                        INT32 slotindex,
+                        __FIAsyncOperation_1_Windows__CNetworking__CNetworkOperators__CMobileBroadbandModemStatus** operation
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE GetIsPassthroughEnabledAsync(
-                        UINT32 slotid,
-                        __FIAsyncOperation_1_boolean** asyncInfo
+                    virtual HRESULT STDMETHODCALLTYPE GetIsPassthroughEnabledWithSlotIndexAsync(
+                        INT32 slotindex,
+                        __FIAsyncOperation_1_boolean** operation
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE SetIsPassthroughEnabledWithSlotIndex(
+                        boolean value,
+                        INT32 slotindex,
+                        ABI::Windows::Networking::NetworkOperators::MobileBroadbandModemStatus* result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE GetIsPassthroughEnabledWithSlotIndex(
+                        INT32 slotindex,
+                        boolean* result
                         ) = 0;
                 };
 
@@ -13783,8 +13792,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics4 interface starting with version 10.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics3 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Networking.NetworkOperators.INetworkOperatorTetheringManager ** Default Interface **
@@ -23865,8 +23874,8 @@ typedef struct __x_ABI_CWindows_CNetworking_CNetworkOperators_CIESim3Vtbl
         HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIESim3* This,
         TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_SlotId)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIESim3* This,
-        UINT32* value);
+    HRESULT (STDMETHODCALLTYPE* get_SlotIndex)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIESim3* This,
+        __FIReference_1_int** value);
 
     END_INTERFACE
 } __x_ABI_CWindows_CNetworking_CNetworkOperators_CIESim3Vtbl;
@@ -23896,8 +23905,8 @@ interface __x_ABI_CWindows_CNetworking_CNetworkOperators_CIESim3
 #define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIESim3_GetTrustLevel(This, trustLevel) \
     ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIESim3_get_SlotId(This, value) \
-    ((This)->lpVtbl->get_SlotId(This, value))
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIESim3_get_SlotIndex(This, value) \
+    ((This)->lpVtbl->get_SlotIndex(This, value))
 
 #endif /* COBJMACROS */
 
@@ -28808,13 +28817,20 @@ typedef struct __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandM
         HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModem4* This,
         TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* SetIsPassthroughEnabledAsync)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModem4* This,
+    HRESULT (STDMETHODCALLTYPE* SetIsPassthroughEnabledWithSlotIndexAsync)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModem4* This,
         boolean value,
-        UINT32 slotid,
-        __FIAsyncOperation_1_Windows__CNetworking__CNetworkOperators__CMobileBroadbandModemStatus** asyncInfo);
-    HRESULT (STDMETHODCALLTYPE* GetIsPassthroughEnabledAsync)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModem4* This,
-        UINT32 slotid,
-        __FIAsyncOperation_1_boolean** asyncInfo);
+        INT32 slotindex,
+        __FIAsyncOperation_1_Windows__CNetworking__CNetworkOperators__CMobileBroadbandModemStatus** operation);
+    HRESULT (STDMETHODCALLTYPE* GetIsPassthroughEnabledWithSlotIndexAsync)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModem4* This,
+        INT32 slotindex,
+        __FIAsyncOperation_1_boolean** operation);
+    HRESULT (STDMETHODCALLTYPE* SetIsPassthroughEnabledWithSlotIndex)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModem4* This,
+        boolean value,
+        INT32 slotindex,
+        enum __x_ABI_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus* result);
+    HRESULT (STDMETHODCALLTYPE* GetIsPassthroughEnabledWithSlotIndex)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModem4* This,
+        INT32 slotindex,
+        boolean* result);
 
     END_INTERFACE
 } __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModem4Vtbl;
@@ -28844,11 +28860,17 @@ interface __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModem4
 #define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModem4_GetTrustLevel(This, trustLevel) \
     ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModem4_SetIsPassthroughEnabledAsync(This, value, slotid, asyncInfo) \
-    ((This)->lpVtbl->SetIsPassthroughEnabledAsync(This, value, slotid, asyncInfo))
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModem4_SetIsPassthroughEnabledWithSlotIndexAsync(This, value, slotindex, operation) \
+    ((This)->lpVtbl->SetIsPassthroughEnabledWithSlotIndexAsync(This, value, slotindex, operation))
 
-#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModem4_GetIsPassthroughEnabledAsync(This, slotid, asyncInfo) \
-    ((This)->lpVtbl->GetIsPassthroughEnabledAsync(This, slotid, asyncInfo))
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModem4_GetIsPassthroughEnabledWithSlotIndexAsync(This, slotindex, operation) \
+    ((This)->lpVtbl->GetIsPassthroughEnabledWithSlotIndexAsync(This, slotindex, operation))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModem4_SetIsPassthroughEnabledWithSlotIndex(This, value, slotindex, result) \
+    ((This)->lpVtbl->SetIsPassthroughEnabledWithSlotIndex(This, value, slotindex, result))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModem4_GetIsPassthroughEnabledWithSlotIndex(This, slotindex, result) \
+    ((This)->lpVtbl->GetIsPassthroughEnabledWithSlotIndex(This, slotindex, result))
 
 #endif /* COBJMACROS */
 
@@ -34517,8 +34539,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics4 interface starting with version 10.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics3 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Networking.NetworkOperators.INetworkOperatorTetheringManager ** Default Interface **

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Security_Isolation_H
 #define WINRT_Windows_Security_Isolation_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Security.Isolation.2.h"
@@ -309,6 +309,36 @@ namespace winrt::impl
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentOptions2<D>::WindowAnnotationOverride(param::hstring const& value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions2)->put_WindowAnnotationOverride(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats) consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentOptions3<D>::AllowedClipboardFormatsToEnvironment() const
+    {
+        winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions3)->get_AllowedClipboardFormatsToEnvironment(reinterpret_cast<uint32_t*>(&value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentOptions3<D>::AllowedClipboardFormatsToEnvironment(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions3)->put_AllowedClipboardFormatsToEnvironment(static_cast<uint32_t>(value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats) consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentOptions3<D>::AllowedClipboardFormatsToHost() const
+    {
+        winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions3)->get_AllowedClipboardFormatsToHost(reinterpret_cast<uint32_t*>(&value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentOptions3<D>::AllowedClipboardFormatsToHost(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions3)->put_AllowedClipboardFormatsToHost(static_cast<uint32_t>(value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority) consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentOptions3<D>::CreationPriority() const
+    {
+        winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions3)->get_CreationPriority(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentOptions3<D>::CreationPriority(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions3)->put_CreationPriority(static_cast<int32_t>(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentOwnerRegistrationData<D>::ShareableFolders() const
     {
@@ -1023,6 +1053,54 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions3> : produce_base<D, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions3>
+    {
+        int32_t __stdcall get_AllowedClipboardFormatsToEnvironment(uint32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats>(this->shim().AllowedClipboardFormatsToEnvironment());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_AllowedClipboardFormatsToEnvironment(uint32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AllowedClipboardFormatsToEnvironment(*reinterpret_cast<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_AllowedClipboardFormatsToHost(uint32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats>(this->shim().AllowedClipboardFormatsToHost());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_AllowedClipboardFormatsToHost(uint32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AllowedClipboardFormatsToHost(*reinterpret_cast<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CreationPriority(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority>(this->shim().CreationPriority());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_CreationPriority(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CreationPriority(*reinterpret_cast<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOwnerRegistrationData> : produce_base<D, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOwnerRegistrationData>
     {
         int32_t __stdcall get_ShareableFolders(void** value) noexcept final try
@@ -1616,6 +1694,7 @@ namespace std
     template<> struct hash<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentLaunchFileResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOwnerRegistrationData> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOwnerRegistrationResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOwnerRegistrationStatics> : winrt::impl::hash_base {};
@@ -1650,6 +1729,8 @@ namespace std
     template<> struct hash<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentUserInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Security::Isolation::IsolatedWindowsHostMessenger> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

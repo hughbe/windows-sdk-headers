@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -9,10 +9,10 @@
 #include "winrt/impl/Windows.UI.Xaml.Interop.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Interop
 {
-    struct BindableVectorChangedEventHandler : Windows::Foundation::IUnknown
+    struct BindableVectorChangedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         BindableVectorChangedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        BindableVectorChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        BindableVectorChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> BindableVectorChangedEventHandler(L lambda);
         template <typename F> BindableVectorChangedEventHandler(F* function);
         template <typename O, typename M> BindableVectorChangedEventHandler(O* object, M method);
@@ -20,10 +20,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Interop
         template <typename O, typename M> BindableVectorChangedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::UI::Xaml::Interop::IBindableObservableVector const& vector, winrt::Windows::Foundation::IInspectable const& e) const;
     };
-    struct NotifyCollectionChangedEventHandler : Windows::Foundation::IUnknown
+    struct NotifyCollectionChangedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         NotifyCollectionChangedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        NotifyCollectionChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        NotifyCollectionChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> NotifyCollectionChangedEventHandler(L lambda);
         template <typename F> NotifyCollectionChangedEventHandler(F* function);
         template <typename O, typename M> NotifyCollectionChangedEventHandler(O* object, M method);

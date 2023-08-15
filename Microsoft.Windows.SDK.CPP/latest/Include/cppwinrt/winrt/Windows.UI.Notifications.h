@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_UI_Notifications_H
 #define WINRT_Windows_UI_Notifications_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.UI.h"
 #include "winrt/impl/Windows.ApplicationModel.2.h"
 #include "winrt/impl/Windows.Data.Xml.Dom.2.h"
@@ -944,7 +944,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Notifications_IToastNotification<D>::Dismissed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Notifications::IToastNotification)->remove_Dismissed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Notifications::IToastNotification)->remove_Dismissed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Notifications_IToastNotification<D>::Activated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotification, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -958,7 +958,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Notifications_IToastNotification<D>::Activated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Notifications::IToastNotification)->remove_Activated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Notifications::IToastNotification)->remove_Activated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Notifications_IToastNotification<D>::Failed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotification, winrt::Windows::UI::Notifications::ToastFailedEventArgs> const& handler) const
     {
@@ -972,7 +972,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Notifications_IToastNotification<D>::Failed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Notifications::IToastNotification)->remove_Failed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Notifications::IToastNotification)->remove_Failed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Notifications_IToastNotification2<D>::Tag(param::hstring const& value) const
     {
@@ -1172,6 +1172,26 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Notifications::IToastNotificationManagerForUser2)->GetToastCollectionManagerWithAppId(*(void**)(&appId), &result));
         return winrt::Windows::UI::Notifications::ToastCollectionManager{ result, take_ownership_from_abi };
     }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotificationMode) consume_Windows_UI_Notifications_IToastNotificationManagerForUser3<D>::NotificationMode() const
+    {
+        winrt::Windows::UI::Notifications::ToastNotificationMode value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Notifications::IToastNotificationManagerForUser3)->get_NotificationMode(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Notifications_IToastNotificationManagerForUser3<D>::NotificationModeChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotificationManagerForUser, winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Notifications::IToastNotificationManagerForUser3)->add_NotificationModeChanged(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> typename consume_Windows_UI_Notifications_IToastNotificationManagerForUser3<D>::NotificationModeChanged_revoker consume_Windows_UI_Notifications_IToastNotificationManagerForUser3<D>::NotificationModeChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotificationManagerForUser, winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        return impl::make_event_revoker<D, NotificationModeChanged_revoker>(this, NotificationModeChanged(handler));
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Notifications_IToastNotificationManagerForUser3<D>::NotificationModeChanged(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Notifications::IToastNotificationManagerForUser3)->remove_NotificationModeChanged(impl::bind_in(token));
+    }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotifier) consume_Windows_UI_Notifications_IToastNotificationManagerStatics<D>::CreateToastNotifier() const
     {
         void* result{};
@@ -1264,7 +1284,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Notifications_IToastNotifier3<D>::ScheduledToastNotificationShowing(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Notifications::IToastNotifier3)->remove_ScheduledToastNotificationShowing(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Notifications::IToastNotifier3)->remove_ScheduledToastNotificationShowing(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::Notification) consume_Windows_UI_Notifications_IUserNotification<D>::Notification() const
     {
@@ -3257,6 +3277,33 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::UI::Notifications::IToastNotificationManagerForUser3> : produce_base<D, winrt::Windows::UI::Notifications::IToastNotificationManagerForUser3>
+    {
+        int32_t __stdcall get_NotificationMode(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::UI::Notifications::ToastNotificationMode>(this->shim().NotificationMode());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_NotificationModeChanged(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().NotificationModeChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotificationManagerForUser, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_NotificationModeChanged(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().NotificationModeChanged(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::UI::Notifications::IToastNotificationManagerStatics> : produce_base<D, winrt::Windows::UI::Notifications::IToastNotificationManagerStatics>
     {
         int32_t __stdcall CreateToastNotifier(void** result) noexcept final try
@@ -3814,6 +3861,7 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Notifications::IToastNotificationHistoryChangedTriggerDetail2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Notifications::IToastNotificationManagerForUser> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Notifications::IToastNotificationManagerForUser2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Notifications::IToastNotificationManagerForUser3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Notifications::IToastNotificationManagerStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Notifications::IToastNotificationManagerStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Notifications::IToastNotificationManagerStatics4> : winrt::impl::hash_base {};
@@ -3860,6 +3908,8 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Notifications::ToastNotifier> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Notifications::UserNotification> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Notifications::UserNotificationChangedEventArgs> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

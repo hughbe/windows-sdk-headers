@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Web_UI_Interop_H
 #define WINRT_Windows_Web_UI_Interop_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Web.UI.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -104,7 +104,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlProcess<D>::ProcessExited(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::Interop::IWebViewControlProcess)->remove_ProcessExited(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::Interop::IWebViewControlProcess)->remove_ProcessExited(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Web::UI::Interop::WebViewControlProcess) consume_Windows_Web_UI_Interop_IWebViewControlProcessFactory<D>::CreateWithOptions(winrt::Windows::Web::UI::Interop::WebViewControlProcessOptions const& processOptions) const
     {
@@ -188,7 +188,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::MoveFocusRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::Interop::IWebViewControlSite)->remove_MoveFocusRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::Interop::IWebViewControlSite)->remove_MoveFocusRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::AcceleratorKeyPressed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::Interop::WebViewControl, winrt::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs> const& handler) const
     {
@@ -202,7 +202,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlSite<D>::AcceleratorKeyPressed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::Interop::IWebViewControlSite)->remove_AcceleratorKeyPressed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::Interop::IWebViewControlSite)->remove_AcceleratorKeyPressed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_Interop_IWebViewControlSite2<D>::GotFocus(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::Interop::WebViewControl, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -216,7 +216,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlSite2<D>::GotFocus(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::Interop::IWebViewControlSite2)->remove_GotFocus(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::Interop::IWebViewControlSite2)->remove_GotFocus(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_Interop_IWebViewControlSite2<D>::LostFocus(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::Interop::WebViewControl, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -230,7 +230,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_Interop_IWebViewControlSite2<D>::LostFocus(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::Interop::IWebViewControlSite2)->remove_LostFocus(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::Interop::IWebViewControlSite2)->remove_LostFocus(impl::bind_in(token));
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
@@ -572,6 +572,8 @@ namespace std
     template<> struct hash<winrt::Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Web::UI::Interop::WebViewControlProcess> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Web::UI::Interop::WebViewControlProcessOptions> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_UI_Xaml_Hosting_H
 #define WINRT_Windows_UI_Xaml_Hosting_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.UI.Xaml.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.UI.Composition.2.h"
@@ -43,7 +43,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Hosting_IDesignerAppManager<D>::DesignerAppExited(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Hosting::IDesignerAppManager)->remove_DesignerAppExited(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Hosting::IDesignerAppManager)->remove_DesignerAppExited(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::UI::Xaml::Hosting::DesignerAppView>) consume_Windows_UI_Xaml_Hosting_IDesignerAppManager<D>::CreateNewViewAsync(winrt::Windows::UI::Xaml::Hosting::DesignerAppViewState const& initialViewState, winrt::Windows::Foundation::Size const& initialViewSize) const
     {
@@ -121,7 +121,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Hosting_IDesktopWindowXamlSource<D>::TakeFocusRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSource)->remove_TakeFocusRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSource)->remove_TakeFocusRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Hosting_IDesktopWindowXamlSource<D>::GotFocus(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource, winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs> const& handler) const
     {
@@ -135,7 +135,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Hosting_IDesktopWindowXamlSource<D>::GotFocus(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSource)->remove_GotFocus(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Hosting::IDesktopWindowXamlSource)->remove_GotFocus(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationResult) consume_Windows_UI_Xaml_Hosting_IDesktopWindowXamlSource<D>::NavigateFocus(winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest const& request) const
     {
@@ -1095,6 +1095,8 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

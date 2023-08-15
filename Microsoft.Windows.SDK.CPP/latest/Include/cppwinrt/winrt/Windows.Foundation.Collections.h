@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Foundation_Collections_H
 #define WINRT_Windows_Foundation_Collections_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Foundation.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -140,7 +140,7 @@ namespace winrt::impl
     }
     template <typename D, typename K, typename V> WINRT_IMPL_AUTO(void) consume_Windows_Foundation_Collections_IObservableMap<D, K, V>::MapChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Foundation::Collections::IObservableMap<K, V>)->remove_MapChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Foundation::Collections::IObservableMap<K, V>)->remove_MapChanged(impl::bind_in(token));
     }
     template <typename D, typename T> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Foundation_Collections_IObservableVector<D, T>::VectorChanged(winrt::Windows::Foundation::Collections::VectorChangedEventHandler<T> const& vhnd) const
     {
@@ -154,7 +154,7 @@ namespace winrt::impl
     }
     template <typename D, typename T> WINRT_IMPL_AUTO(void) consume_Windows_Foundation_Collections_IObservableVector<D, T>::VectorChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Foundation::Collections::IObservableVector<T>)->remove_VectorChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Foundation::Collections::IObservableVector<T>)->remove_VectorChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::CollectionChange) consume_Windows_Foundation_Collections_IVectorChangedEventArgs<D>::CollectionChange() const
     {
@@ -712,6 +712,8 @@ namespace std
     template<> struct hash<winrt::Windows::Foundation::Collections::PropertySet> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Foundation::Collections::StringMap> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Foundation::Collections::ValueSet> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 
@@ -2612,15 +2614,26 @@ namespace winrt::impl
 
         bool IndexOf(Windows::Foundation::IInspectable const& value, uint32_t& index) const
         {
-            try
+            if constexpr (is_com_interface_v<T>)
             {
-                return IndexOf(unbox_value<T>(value), index);
+                if (!value)
+                {
+                    return base_type::IndexOf(nullptr, index);
+                }
+                else if (auto as = value.try_as<T>())
+                {
+                    return base_type::IndexOf(as, index);
+                }
             }
-            catch (hresult_no_interface const&)
+            else
             {
-                index = 0;
-                return false;
+                if (auto as = value.try_as<T>())
+                {
+                    return base_type::IndexOf(as.value(), index);
+                }
             }
+
+            return false;
         }
 
         using base_type::GetMany;

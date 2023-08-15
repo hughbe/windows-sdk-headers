@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -14,22 +14,17 @@ WINRT_EXPORT namespace winrt::Windows::UI::Shell
         AdaptiveCardBuilder() = delete;
         static auto CreateAdaptiveCardFromJson(param::hstring const& value);
     };
-    struct __declspec(empty_bases) FocusAssistChangedEventArgs : winrt::Windows::UI::Shell::IFocusAssistChangedEventArgs
+    struct __declspec(empty_bases) FocusSession : winrt::Windows::UI::Shell::IFocusSession
     {
-        FocusAssistChangedEventArgs(std::nullptr_t) noexcept {}
-        FocusAssistChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Shell::IFocusAssistChangedEventArgs(ptr, take_ownership_from_abi) {}
+        FocusSession(std::nullptr_t) noexcept {}
+        FocusSession(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Shell::IFocusSession(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) FocusAssistManager : winrt::Windows::UI::Shell::IFocusAssistManager
+    struct __declspec(empty_bases) FocusSessionManager : winrt::Windows::UI::Shell::IFocusSessionManager
     {
-        FocusAssistManager(std::nullptr_t) noexcept {}
-        FocusAssistManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Shell::IFocusAssistManager(ptr, take_ownership_from_abi) {}
+        FocusSessionManager(std::nullptr_t) noexcept {}
+        FocusSessionManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Shell::IFocusSessionManager(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
         [[nodiscard]] static auto IsSupported();
-    };
-    struct __declspec(empty_bases) FocusAssistSession : winrt::Windows::UI::Shell::IFocusAssistSession
-    {
-        FocusAssistSession(std::nullptr_t) noexcept {}
-        FocusAssistSession(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Shell::IFocusAssistSession(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) SecurityAppManager : winrt::Windows::UI::Shell::ISecurityAppManager
     {

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Foundation_Diagnostics_H
 #define WINRT_Windows_Foundation_Diagnostics_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Foundation.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Storage.2.h"
@@ -47,7 +47,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Foundation_Diagnostics_IAsyncCausalityTracerStatics<D>::TracingStatusChanged(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Foundation::Diagnostics::IAsyncCausalityTracerStatics)->remove_TracingStatusChanged(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Foundation::Diagnostics::IAsyncCausalityTracerStatics)->remove_TracingStatusChanged(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Foundation_Diagnostics_IErrorDetails<D>::Description() const
     {
@@ -119,7 +119,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Foundation_Diagnostics_IFileLoggingSession<D>::LogFileGenerated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Foundation::Diagnostics::IFileLoggingSession)->remove_LogFileGenerated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Foundation::Diagnostics::IFileLoggingSession)->remove_LogFileGenerated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Diagnostics::FileLoggingSession) consume_Windows_Foundation_Diagnostics_IFileLoggingSessionFactory<D>::Create(param::hstring const& name) const
     {
@@ -221,7 +221,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Foundation_Diagnostics_ILoggingChannel<D>::LoggingEnabled(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Foundation::Diagnostics::ILoggingChannel)->remove_LoggingEnabled(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Foundation::Diagnostics::ILoggingChannel)->remove_LoggingEnabled(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Foundation_Diagnostics_ILoggingChannel2<D>::Id() const
     {
@@ -2555,6 +2555,8 @@ namespace std
     template<> struct hash<winrt::Windows::Foundation::Diagnostics::LoggingSession> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Foundation::Diagnostics::RuntimeBrokerErrorSettings> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Foundation::Diagnostics::TracingStatusChangedEventArgs> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

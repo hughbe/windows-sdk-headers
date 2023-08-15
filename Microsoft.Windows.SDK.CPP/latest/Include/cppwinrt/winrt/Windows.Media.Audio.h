@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Media_Audio_H
 #define WINRT_Windows_Media_Audio_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Media.h"
 #include "winrt/impl/Windows.Devices.Enumeration.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -112,7 +112,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioFileInputNode<D>::FileCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioFileInputNode)->remove_FileCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioFileInputNode)->remove_FileCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::IStorageFile) consume_Windows_Media_Audio_IAudioFileOutputNode<D>::File() const
     {
@@ -174,7 +174,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioFrameInputNode<D>::AudioFrameCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioFrameInputNode)->remove_AudioFrameCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioFrameInputNode)->remove_AudioFrameCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Audio_IAudioFrameInputNode<D>::QuantumStarted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioFrameInputNode, winrt::Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs> const& handler) const
     {
@@ -188,7 +188,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioFrameInputNode<D>::QuantumStarted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioFrameInputNode)->remove_QuantumStarted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioFrameInputNode)->remove_QuantumStarted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::AudioFrame) consume_Windows_Media_Audio_IAudioFrameOutputNode<D>::GetFrame() const
     {
@@ -298,7 +298,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioGraph<D>::QuantumStarted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioGraph)->remove_QuantumStarted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioGraph)->remove_QuantumStarted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Audio_IAudioGraph<D>::QuantumProcessed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioGraph, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -312,7 +312,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioGraph<D>::QuantumProcessed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioGraph)->remove_QuantumProcessed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioGraph)->remove_QuantumProcessed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Audio_IAudioGraph<D>::UnrecoverableErrorOccurred(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioGraph, winrt::Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs> const& handler) const
     {
@@ -326,7 +326,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioGraph<D>::UnrecoverableErrorOccurred(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioGraph)->remove_UnrecoverableErrorOccurred(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioGraph)->remove_UnrecoverableErrorOccurred(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(uint64_t) consume_Windows_Media_Audio_IAudioGraph<D>::CompletedQuantumCount() const
     {
@@ -866,7 +866,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioPlaybackConnection<D>::StateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioPlaybackConnection)->remove_StateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioPlaybackConnection)->remove_StateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Audio::AudioPlaybackConnectionOpenResultStatus) consume_Windows_Media_Audio_IAudioPlaybackConnectionOpenResult<D>::Status() const
     {
@@ -904,7 +904,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IAudioStateMonitor<D>::SoundLevelChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioStateMonitor)->remove_SoundLevelChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioStateMonitor)->remove_SoundLevelChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::SoundLevel) consume_Windows_Media_Audio_IAudioStateMonitor<D>::SoundLevel() const
     {
@@ -1252,7 +1252,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IMediaSourceAudioInputNode<D>::MediaSourceCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IMediaSourceAudioInputNode)->remove_MediaSourceCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IMediaSourceAudioInputNode)->remove_MediaSourceCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_IReverbEffectDefinition<D>::WetDryMix(double value) const
     {
@@ -1544,7 +1544,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Audio_ISpatialAudioDeviceConfiguration<D>::ConfigurationChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::ISpatialAudioDeviceConfiguration)->remove_ConfigurationChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::ISpatialAudioDeviceConfiguration)->remove_ConfigurationChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Audio::SpatialAudioDeviceConfiguration) consume_Windows_Media_Audio_ISpatialAudioDeviceConfigurationStatics<D>::GetForDeviceId(param::hstring const& deviceId) const
     {
@@ -4410,6 +4410,8 @@ namespace std
     template<> struct hash<winrt::Windows::Media::Audio::SpatialAudioDeviceConfiguration> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Audio::SpatialAudioFormatConfiguration> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Audio::SpatialAudioFormatSubtype> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

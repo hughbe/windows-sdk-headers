@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_UI_Xaml_Media_Animation_H
 #define WINRT_Windows_UI_Xaml_Media_Animation_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.UI.Xaml.Media.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -274,7 +274,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Media_Animation_IConnectedAnimation<D>::Completed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::Animation::IConnectedAnimation)->remove_Completed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::Animation::IConnectedAnimation)->remove_Completed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_Xaml_Media_Animation_IConnectedAnimation<D>::TryStart(winrt::Windows::UI::Xaml::UIElement const& destination) const
     {
@@ -2234,7 +2234,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Media_Animation_ITimeline<D>::Completed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::Animation::ITimeline)->remove_Completed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::Animation::ITimeline)->remove_Completed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Animation::Timeline) consume_Windows_UI_Xaml_Media_Animation_ITimelineFactory<D>::CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
     {
@@ -7706,6 +7706,8 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Xaml::Media::Animation::TimelineCollection> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Media::Animation::Transition> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Media::Animation::TransitionCollection> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Web_UI_H
 #define WINRT_Windows_Web_UI_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Web.h"
 #include "winrt/impl/Windows.ApplicationModel.DataTransfer.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -148,7 +148,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_IWebViewControl<D>::NavigationStarting(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_NavigationStarting(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_NavigationStarting(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_IWebViewControl<D>::ContentLoading(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs> const& handler) const
     {
@@ -162,7 +162,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_IWebViewControl<D>::ContentLoading(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_ContentLoading(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_ContentLoading(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_IWebViewControl<D>::DOMContentLoaded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs> const& handler) const
     {
@@ -176,7 +176,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_IWebViewControl<D>::DOMContentLoaded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_DOMContentLoaded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_DOMContentLoaded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_IWebViewControl<D>::NavigationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs> const& handler) const
     {
@@ -190,7 +190,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_IWebViewControl<D>::NavigationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_NavigationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_NavigationCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_IWebViewControl<D>::FrameNavigationStarting(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNavigationStartingEventArgs> const& handler) const
     {
@@ -204,7 +204,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_IWebViewControl<D>::FrameNavigationStarting(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_FrameNavigationStarting(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_FrameNavigationStarting(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_IWebViewControl<D>::FrameContentLoading(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs> const& handler) const
     {
@@ -218,7 +218,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_IWebViewControl<D>::FrameContentLoading(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_FrameContentLoading(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_FrameContentLoading(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_IWebViewControl<D>::FrameDOMContentLoaded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs> const& handler) const
     {
@@ -232,7 +232,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_IWebViewControl<D>::FrameDOMContentLoaded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_FrameDOMContentLoaded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_FrameDOMContentLoaded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_IWebViewControl<D>::FrameNavigationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs> const& handler) const
     {
@@ -246,7 +246,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_IWebViewControl<D>::FrameNavigationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_FrameNavigationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_FrameNavigationCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_IWebViewControl<D>::ScriptNotify(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlScriptNotifyEventArgs> const& handler) const
     {
@@ -260,7 +260,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_IWebViewControl<D>::ScriptNotify(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_ScriptNotify(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_ScriptNotify(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_IWebViewControl<D>::LongRunningScriptDetected(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs> const& handler) const
     {
@@ -274,7 +274,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_IWebViewControl<D>::LongRunningScriptDetected(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_LongRunningScriptDetected(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_LongRunningScriptDetected(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_IWebViewControl<D>::UnsafeContentWarningDisplaying(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -288,7 +288,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_IWebViewControl<D>::UnsafeContentWarningDisplaying(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_UnsafeContentWarningDisplaying(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_UnsafeContentWarningDisplaying(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_IWebViewControl<D>::UnviewableContentIdentified(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs> const& handler) const
     {
@@ -302,7 +302,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_IWebViewControl<D>::UnviewableContentIdentified(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_UnviewableContentIdentified(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_UnviewableContentIdentified(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_IWebViewControl<D>::PermissionRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlPermissionRequestedEventArgs> const& handler) const
     {
@@ -316,7 +316,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_IWebViewControl<D>::PermissionRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_PermissionRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_PermissionRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_IWebViewControl<D>::UnsupportedUriSchemeIdentified(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs> const& handler) const
     {
@@ -330,7 +330,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_IWebViewControl<D>::UnsupportedUriSchemeIdentified(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_UnsupportedUriSchemeIdentified(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_UnsupportedUriSchemeIdentified(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_IWebViewControl<D>::NewWindowRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs> const& handler) const
     {
@@ -344,7 +344,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_IWebViewControl<D>::NewWindowRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_NewWindowRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_NewWindowRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_IWebViewControl<D>::ContainsFullScreenElementChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -358,7 +358,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_IWebViewControl<D>::ContainsFullScreenElementChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_ContainsFullScreenElementChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_ContainsFullScreenElementChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Web_UI_IWebViewControl<D>::WebResourceRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::UI::IWebViewControl, winrt::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs> const& handler) const
     {
@@ -372,7 +372,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_IWebViewControl<D>::WebResourceRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_WebResourceRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Web::UI::IWebViewControl)->remove_WebResourceRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Web_UI_IWebViewControl2<D>::AddInitializeScript(param::hstring const& script) const
     {
@@ -1560,6 +1560,8 @@ namespace std
     template<> struct hash<winrt::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

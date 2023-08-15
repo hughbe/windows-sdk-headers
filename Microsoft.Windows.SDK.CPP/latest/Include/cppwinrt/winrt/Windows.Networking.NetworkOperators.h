@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Networking_NetworkOperators_H
 #define WINRT_Windows_Networking_NetworkOperators_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Networking.h"
 #include "winrt/impl/Windows.Data.Xml.Dom.2.h"
 #include "winrt/impl/Windows.Devices.Sms.2.h"
@@ -92,7 +92,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_NetworkOperators_IESim<D>::ProfileChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESim)->remove_ProfileChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESim)->remove_ProfileChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Networking::NetworkOperators::ESimDiscoverResult) consume_Windows_Networking_NetworkOperators_IESim2<D>::Discover() const
     {
@@ -118,11 +118,11 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESim2)->DiscoverWithServerAddressAndMatchingIdAsync(*(void**)(&serverAddress), *(void**)(&matchingId), &operation));
         return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::NetworkOperators::ESimDiscoverResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Networking_NetworkOperators_IESim3<D>::SlotId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) consume_Windows_Networking_NetworkOperators_IESim3<D>::SlotIndex() const
     {
-        uint32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESim3)->get_SlotId(&value));
-        return value;
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESim3)->get_SlotIndex(&value));
+        return winrt::Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Networking::NetworkOperators::ESim) consume_Windows_Networking_NetworkOperators_IESimAddedEventArgs<D>::ESim() const
     {
@@ -202,7 +202,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_NetworkOperators_IESimManagerStatics<D>::ServiceInfoChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESimManagerStatics)->remove_ServiceInfoChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESimManagerStatics)->remove_ServiceInfoChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Networking::NetworkOperators::ESimOperationStatus) consume_Windows_Networking_NetworkOperators_IESimOperationResult<D>::Status() const
     {
@@ -360,7 +360,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_NetworkOperators_IESimProfileMetadata<D>::StateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESimProfileMetadata)->remove_StateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESimProfileMetadata)->remove_StateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Networking_NetworkOperators_IESimProfilePolicy<D>::CanDelete() const
     {
@@ -430,7 +430,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_NetworkOperators_IESimWatcher<D>::Added(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESimWatcher)->remove_Added(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESimWatcher)->remove_Added(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Networking_NetworkOperators_IESimWatcher<D>::EnumerationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::ESimWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -444,7 +444,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_NetworkOperators_IESimWatcher<D>::EnumerationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESimWatcher)->remove_EnumerationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESimWatcher)->remove_EnumerationCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Networking_NetworkOperators_IESimWatcher<D>::Removed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::ESimWatcher, winrt::Windows::Networking::NetworkOperators::ESimRemovedEventArgs> const& handler) const
     {
@@ -458,7 +458,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_NetworkOperators_IESimWatcher<D>::Removed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESimWatcher)->remove_Removed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESimWatcher)->remove_Removed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Networking_NetworkOperators_IESimWatcher<D>::Stopped(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::ESimWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -472,7 +472,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_NetworkOperators_IESimWatcher<D>::Stopped(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESimWatcher)->remove_Stopped(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESimWatcher)->remove_Stopped(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Networking_NetworkOperators_IESimWatcher<D>::Updated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::ESimWatcher, winrt::Windows::Networking::NetworkOperators::ESimUpdatedEventArgs> const& handler) const
     {
@@ -486,7 +486,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_NetworkOperators_IESimWatcher<D>::Updated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESimWatcher)->remove_Updated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESimWatcher)->remove_Updated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Networking_NetworkOperators_IFdnAccessManagerStatics<D>::RequestUnlockAsync(param::hstring const& contactListId) const
     {
@@ -763,7 +763,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_NetworkOperators_IMobileBroadbandAccountWatcher<D>::AccountAdded(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandAccountWatcher)->remove_AccountAdded(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandAccountWatcher)->remove_AccountAdded(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Networking_NetworkOperators_IMobileBroadbandAccountWatcher<D>::AccountUpdated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher, winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountUpdatedEventArgs> const& handler) const
     {
@@ -777,7 +777,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_NetworkOperators_IMobileBroadbandAccountWatcher<D>::AccountUpdated(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandAccountWatcher)->remove_AccountUpdated(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandAccountWatcher)->remove_AccountUpdated(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Networking_NetworkOperators_IMobileBroadbandAccountWatcher<D>::AccountRemoved(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher, winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountEventArgs> const& handler) const
     {
@@ -791,7 +791,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_NetworkOperators_IMobileBroadbandAccountWatcher<D>::AccountRemoved(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandAccountWatcher)->remove_AccountRemoved(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandAccountWatcher)->remove_AccountRemoved(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Networking_NetworkOperators_IMobileBroadbandAccountWatcher<D>::EnumerationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -805,7 +805,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_NetworkOperators_IMobileBroadbandAccountWatcher<D>::EnumerationCompleted(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandAccountWatcher)->remove_EnumerationCompleted(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandAccountWatcher)->remove_EnumerationCompleted(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Networking_NetworkOperators_IMobileBroadbandAccountWatcher<D>::Stopped(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -819,7 +819,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_NetworkOperators_IMobileBroadbandAccountWatcher<D>::Stopped(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandAccountWatcher)->remove_Stopped(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandAccountWatcher)->remove_Stopped(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcherStatus) consume_Windows_Networking_NetworkOperators_IMobileBroadbandAccountWatcher<D>::Status() const
     {
@@ -1425,7 +1425,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceDataSession<D>::DataReceived(winrt::event_token const& eventCookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceDataSession)->remove_DataReceived(impl::bind_in(eventCookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceDataSession)->remove_DataReceived(impl::bind_in(eventCookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceInformation<D>::DeviceServiceId() const
     {
@@ -1565,19 +1565,31 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_NetworkOperators_IMobileBroadbandModem3<D>::IsInEmergencyCallModeChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem3)->remove_IsInEmergencyCallModeChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem3)->remove_IsInEmergencyCallModeChanged(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemStatus>) consume_Windows_Networking_NetworkOperators_IMobileBroadbandModem4<D>::SetIsPassthroughEnabledAsync(bool value, uint32_t slotid) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemStatus>) consume_Windows_Networking_NetworkOperators_IMobileBroadbandModem4<D>::SetIsPassthroughEnabledAsync(bool value, int32_t slotindex) const
     {
-        void* asyncInfo{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem4)->SetIsPassthroughEnabledAsync(value, slotid, &asyncInfo));
-        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemStatus>{ asyncInfo, take_ownership_from_abi };
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem4)->SetIsPassthroughEnabledWithSlotIndexAsync(value, slotindex, &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemStatus>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Networking_NetworkOperators_IMobileBroadbandModem4<D>::GetIsPassthroughEnabledAsync(uint32_t slotid) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Networking_NetworkOperators_IMobileBroadbandModem4<D>::GetIsPassthroughEnabledAsync(int32_t slotindex) const
     {
-        void* asyncInfo{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem4)->GetIsPassthroughEnabledAsync(slotid, &asyncInfo));
-        return winrt::Windows::Foundation::IAsyncOperation<bool>{ asyncInfo, take_ownership_from_abi };
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem4)->GetIsPassthroughEnabledWithSlotIndexAsync(slotindex, &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemStatus) consume_Windows_Networking_NetworkOperators_IMobileBroadbandModem4<D>::SetIsPassthroughEnabled(bool value, int32_t slotindex) const
+    {
+        winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemStatus result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem4)->SetIsPassthroughEnabledWithSlotIndex(value, slotindex, reinterpret_cast<int32_t*>(&result)));
+        return result;
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Networking_NetworkOperators_IMobileBroadbandModem4<D>::GetIsPassthroughEnabled(int32_t slotindex) const
+    {
+        bool result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem4)->GetIsPassthroughEnabledWithSlotIndex(slotindex, &result));
+        return result;
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Networking::NetworkOperators::MobileBroadbandUicc) consume_Windows_Networking_NetworkOperators_IMobileBroadbandModemConfiguration<D>::Uicc() const
     {
@@ -1945,7 +1957,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_NetworkOperators_IMobileBroadbandSarManager<D>::TransmissionStateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSarManager)->remove_TransmissionStateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSarManager)->remove_TransmissionStateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_Networking_NetworkOperators_IMobileBroadbandSarManager<D>::EnableBackoffAsync() const
     {
@@ -2051,7 +2063,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_NetworkOperators_IMobileBroadbandSlotManager<D>::SlotInfoChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSlotManager)->remove_SlotInfoChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSlotManager)->remove_SlotInfoChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Networking_NetworkOperators_IMobileBroadbandSlotManager<D>::CurrentSlotIndexChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager, winrt::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs> const& handler) const
     {
@@ -2065,7 +2077,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Networking_NetworkOperators_IMobileBroadbandSlotManager<D>::CurrentSlotIndexChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSlotManager)->remove_CurrentSlotIndexChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSlotManager)->remove_CurrentSlotIndexChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Networking_NetworkOperators_IMobileBroadbandTransmissionStateChangedEventArgs<D>::IsTransmitting() const
     {
@@ -2649,10 +2661,11 @@ namespace winrt::impl
     template <typename D>
     struct produce<D, winrt::Windows::Networking::NetworkOperators::IESim3> : produce_base<D, winrt::Windows::Networking::NetworkOperators::IESim3>
     {
-        int32_t __stdcall get_SlotId(uint32_t* value) noexcept final try
+        int32_t __stdcall get_SlotIndex(void** value) noexcept final try
         {
+            clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<uint32_t>(this->shim().SlotId());
+            *value = detach_from<winrt::Windows::Foundation::IReference<int32_t>>(this->shim().SlotIndex());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4840,19 +4853,33 @@ namespace winrt::impl
     template <typename D>
     struct produce<D, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem4> : produce_base<D, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem4>
     {
-        int32_t __stdcall SetIsPassthroughEnabledAsync(bool value, uint32_t slotid, void** asyncInfo) noexcept final try
+        int32_t __stdcall SetIsPassthroughEnabledWithSlotIndexAsync(bool value, int32_t slotindex, void** operation) noexcept final try
         {
-            clear_abi(asyncInfo);
+            clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *asyncInfo = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemStatus>>(this->shim().SetIsPassthroughEnabledAsync(value, slotid));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemStatus>>(this->shim().SetIsPassthroughEnabledAsync(value, slotindex));
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall GetIsPassthroughEnabledAsync(uint32_t slotid, void** asyncInfo) noexcept final try
+        int32_t __stdcall GetIsPassthroughEnabledWithSlotIndexAsync(int32_t slotindex, void** operation) noexcept final try
         {
-            clear_abi(asyncInfo);
+            clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *asyncInfo = detach_from<winrt::Windows::Foundation::IAsyncOperation<bool>>(this->shim().GetIsPassthroughEnabledAsync(slotid));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<bool>>(this->shim().GetIsPassthroughEnabledAsync(slotindex));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetIsPassthroughEnabledWithSlotIndex(bool value, int32_t slotindex, int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemStatus>(this->shim().SetIsPassthroughEnabled(value, slotindex));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetIsPassthroughEnabledWithSlotIndex(int32_t slotindex, bool* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<bool>(this->shim().GetIsPassthroughEnabled(slotindex));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6800,6 +6827,8 @@ namespace std
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::UssdMessage> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::UssdReply> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::UssdSession> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

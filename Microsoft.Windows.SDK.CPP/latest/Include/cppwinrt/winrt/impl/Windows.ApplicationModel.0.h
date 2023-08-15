@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -155,6 +155,7 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel
     struct IPackageCatalogRemoveOptionalPackagesResult;
     struct IPackageCatalogRemoveResourcePackagesResult;
     struct IPackageCatalogStatics;
+    struct IPackageCatalogStatics2;
     struct IPackageContentGroup;
     struct IPackageContentGroupStagingEventArgs;
     struct IPackageContentGroupStatics;
@@ -251,6 +252,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::ApplicationModel::IPackageCatalogRemoveOptionalPackagesResult>{ using type = interface_category; };
     template <> struct category<winrt::Windows::ApplicationModel::IPackageCatalogRemoveResourcePackagesResult>{ using type = interface_category; };
     template <> struct category<winrt::Windows::ApplicationModel::IPackageCatalogStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::ApplicationModel::IPackageCatalogStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::ApplicationModel::IPackageContentGroup>{ using type = interface_category; };
     template <> struct category<winrt::Windows::ApplicationModel::IPackageContentGroupStagingEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Windows::ApplicationModel::IPackageContentGroupStatics>{ using type = interface_category; };
@@ -398,6 +400,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::ApplicationModel::IPackageCatalogRemoveOptionalPackagesResult> = L"Windows.ApplicationModel.IPackageCatalogRemoveOptionalPackagesResult";
     template <> inline constexpr auto& name_v<winrt::Windows::ApplicationModel::IPackageCatalogRemoveResourcePackagesResult> = L"Windows.ApplicationModel.IPackageCatalogRemoveResourcePackagesResult";
     template <> inline constexpr auto& name_v<winrt::Windows::ApplicationModel::IPackageCatalogStatics> = L"Windows.ApplicationModel.IPackageCatalogStatics";
+    template <> inline constexpr auto& name_v<winrt::Windows::ApplicationModel::IPackageCatalogStatics2> = L"Windows.ApplicationModel.IPackageCatalogStatics2";
     template <> inline constexpr auto& name_v<winrt::Windows::ApplicationModel::IPackageContentGroup> = L"Windows.ApplicationModel.IPackageContentGroup";
     template <> inline constexpr auto& name_v<winrt::Windows::ApplicationModel::IPackageContentGroupStagingEventArgs> = L"Windows.ApplicationModel.IPackageContentGroupStagingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::ApplicationModel::IPackageContentGroupStatics> = L"Windows.ApplicationModel.IPackageContentGroupStatics";
@@ -457,6 +460,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::ApplicationModel::IPackageCatalogRemoveOptionalPackagesResult>{ 0x29D2F97B,0xD974,0x4E64,{ 0x93,0x59,0x22,0xCA,0xDF,0xD7,0x98,0x28 } }; // 29D2F97B-D974-4E64-9359-22CADFD79828
     template <> inline constexpr guid guid_v<winrt::Windows::ApplicationModel::IPackageCatalogRemoveResourcePackagesResult>{ 0xAE719709,0x1A52,0x4321,{ 0x87,0xB3,0xE5,0xA1,0xA1,0x79,0x81,0xA7 } }; // AE719709-1A52-4321-87B3-E5A1A17981A7
     template <> inline constexpr guid guid_v<winrt::Windows::ApplicationModel::IPackageCatalogStatics>{ 0xA18C9696,0xE65B,0x4634,{ 0xBA,0x21,0x5E,0x63,0xEB,0x72,0x44,0xA7 } }; // A18C9696-E65B-4634-BA21-5E63EB7244A7
+    template <> inline constexpr guid guid_v<winrt::Windows::ApplicationModel::IPackageCatalogStatics2>{ 0x4C11C159,0x9A28,0x598C,{ 0xB1,0x85,0x55,0xE1,0x89,0x9B,0x2B,0xE4 } }; // 4C11C159-9A28-598C-B185-55E1899B2BE4
     template <> inline constexpr guid guid_v<winrt::Windows::ApplicationModel::IPackageContentGroup>{ 0x8F62695D,0x120A,0x4798,{ 0xB5,0xE1,0x58,0x00,0xDD,0xA8,0xF2,0xE1 } }; // 8F62695D-120A-4798-B5E1-5800DDA8F2E1
     template <> inline constexpr guid guid_v<winrt::Windows::ApplicationModel::IPackageContentGroupStagingEventArgs>{ 0x3D7BC27E,0x6F27,0x446C,{ 0x98,0x6E,0xD4,0x73,0x3D,0x4D,0x91,0x13 } }; // 3D7BC27E-6F27-446C-986E-D4733D4D9113
     template <> inline constexpr guid guid_v<winrt::Windows::ApplicationModel::IPackageContentGroupStatics>{ 0x70EE7619,0x5F12,0x4B92,{ 0xB9,0xEA,0x6C,0xCA,0xDA,0x13,0xBC,0x75 } }; // 70EE7619-5F12-4B92-B9EA-6CCADA13BC75
@@ -868,6 +872,13 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall OpenForCurrentPackage(void**) noexcept = 0;
             virtual int32_t __stdcall OpenForCurrentUser(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::ApplicationModel::IPackageCatalogStatics2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall OpenForPackage(void*, void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::ApplicationModel::IPackageContentGroup>
@@ -1516,6 +1527,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::ApplicationModel::IPackageCatalogStatics>
     {
         template <typename D> using type = consume_Windows_ApplicationModel_IPackageCatalogStatics<D>;
+    };
+    template <typename D>
+    struct consume_Windows_ApplicationModel_IPackageCatalogStatics2
+    {
+        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::PackageCatalog) OpenForPackage(winrt::Windows::ApplicationModel::Package const& package) const;
+    };
+    template <> struct consume<winrt::Windows::ApplicationModel::IPackageCatalogStatics2>
+    {
+        template <typename D> using type = consume_Windows_ApplicationModel_IPackageCatalogStatics2<D>;
     };
     template <typename D>
     struct consume_Windows_ApplicationModel_IPackageContentGroup

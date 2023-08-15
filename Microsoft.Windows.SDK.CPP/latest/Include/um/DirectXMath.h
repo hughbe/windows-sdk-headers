@@ -470,10 +470,10 @@ namespace DirectX
     XMVECTOR    XM_CALLCONV     operator+ (FXMVECTOR V) noexcept;
     XMVECTOR    XM_CALLCONV     operator- (FXMVECTOR V) noexcept;
 
-    XMVECTOR& XM_CALLCONV     operator+= (XMVECTOR& V1, FXMVECTOR V2) noexcept;
-    XMVECTOR& XM_CALLCONV     operator-= (XMVECTOR& V1, FXMVECTOR V2) noexcept;
-    XMVECTOR& XM_CALLCONV     operator*= (XMVECTOR& V1, FXMVECTOR V2) noexcept;
-    XMVECTOR& XM_CALLCONV     operator/= (XMVECTOR& V1, FXMVECTOR V2) noexcept;
+    XMVECTOR&   XM_CALLCONV     operator+= (XMVECTOR& V1, FXMVECTOR V2) noexcept;
+    XMVECTOR&   XM_CALLCONV     operator-= (XMVECTOR& V1, FXMVECTOR V2) noexcept;
+    XMVECTOR&   XM_CALLCONV     operator*= (XMVECTOR& V1, FXMVECTOR V2) noexcept;
+    XMVECTOR&   XM_CALLCONV     operator/= (XMVECTOR& V1, FXMVECTOR V2) noexcept;
 
     XMVECTOR& operator*= (XMVECTOR& V, float S) noexcept;
     XMVECTOR& operator/= (XMVECTOR& V, float S) noexcept;
@@ -554,11 +554,11 @@ namespace DirectX
         XMMATRIX    operator+ () const noexcept { return *this; }
         XMMATRIX    operator- () const noexcept;
 
-        XMMATRIX& XM_CALLCONV     operator+= (FXMMATRIX M) noexcept;
-        XMMATRIX& XM_CALLCONV     operator-= (FXMMATRIX M) noexcept;
-        XMMATRIX& XM_CALLCONV     operator*= (FXMMATRIX M) noexcept;
-        XMMATRIX& operator*= (float S) noexcept;
-        XMMATRIX& operator/= (float S) noexcept;
+        XMMATRIX&   XM_CALLCONV     operator+= (FXMMATRIX M) noexcept;
+        XMMATRIX&   XM_CALLCONV     operator-= (FXMMATRIX M) noexcept;
+        XMMATRIX&   XM_CALLCONV     operator*= (FXMMATRIX M) noexcept;
+        XMMATRIX&   operator*= (float S) noexcept;
+        XMMATRIX&   operator/= (float S) noexcept;
 
         XMMATRIX    XM_CALLCONV     operator+ (FXMMATRIX M) const noexcept;
         XMMATRIX    XM_CALLCONV     operator- (FXMMATRIX M) const noexcept;
@@ -1278,17 +1278,17 @@ namespace DirectX
     XMVECTOR    XM_CALLCONV     XMVector2LinePointDistance(FXMVECTOR LinePoint1, FXMVECTOR LinePoint2, FXMVECTOR Point) noexcept;
     XMVECTOR    XM_CALLCONV     XMVector2IntersectLine(FXMVECTOR Line1Point1, FXMVECTOR Line1Point2, FXMVECTOR Line2Point1, GXMVECTOR Line2Point2) noexcept;
     XMVECTOR    XM_CALLCONV     XMVector2Transform(FXMVECTOR V, FXMMATRIX M) noexcept;
-    XMFLOAT4* XM_CALLCONV     XMVector2TransformStream(_Out_writes_bytes_(sizeof(XMFLOAT4) + OutputStride * (VectorCount - 1)) XMFLOAT4* pOutputStream,
+    XMFLOAT4*   XM_CALLCONV     XMVector2TransformStream(_Out_writes_bytes_(sizeof(XMFLOAT4) + OutputStride * (VectorCount - 1)) XMFLOAT4* pOutputStream,
         _In_ size_t OutputStride,
         _In_reads_bytes_(sizeof(XMFLOAT2) + InputStride * (VectorCount - 1)) const XMFLOAT2* pInputStream,
         _In_ size_t InputStride, _In_ size_t VectorCount, _In_ FXMMATRIX M) noexcept;
     XMVECTOR    XM_CALLCONV     XMVector2TransformCoord(FXMVECTOR V, FXMMATRIX M) noexcept;
-    XMFLOAT2* XM_CALLCONV     XMVector2TransformCoordStream(_Out_writes_bytes_(sizeof(XMFLOAT2) + OutputStride * (VectorCount - 1)) XMFLOAT2* pOutputStream,
+    XMFLOAT2*   XM_CALLCONV     XMVector2TransformCoordStream(_Out_writes_bytes_(sizeof(XMFLOAT2) + OutputStride * (VectorCount - 1)) XMFLOAT2* pOutputStream,
         _In_ size_t OutputStride,
         _In_reads_bytes_(sizeof(XMFLOAT2) + InputStride * (VectorCount - 1)) const XMFLOAT2* pInputStream,
         _In_ size_t InputStride, _In_ size_t VectorCount, _In_ FXMMATRIX M) noexcept;
     XMVECTOR    XM_CALLCONV     XMVector2TransformNormal(FXMVECTOR V, FXMMATRIX M) noexcept;
-    XMFLOAT2* XM_CALLCONV     XMVector2TransformNormalStream(_Out_writes_bytes_(sizeof(XMFLOAT2) + OutputStride * (VectorCount - 1)) XMFLOAT2* pOutputStream,
+    XMFLOAT2*   XM_CALLCONV     XMVector2TransformNormalStream(_Out_writes_bytes_(sizeof(XMFLOAT2) + OutputStride * (VectorCount - 1)) XMFLOAT2* pOutputStream,
         _In_ size_t OutputStride,
         _In_reads_bytes_(sizeof(XMFLOAT2) + InputStride * (VectorCount - 1)) const XMFLOAT2* pInputStream,
         _In_ size_t InputStride, _In_ size_t VectorCount, _In_ FXMMATRIX M) noexcept;
@@ -1340,23 +1340,23 @@ namespace DirectX
     XMVECTOR    XM_CALLCONV     XMVector3Rotate(FXMVECTOR V, FXMVECTOR RotationQuaternion) noexcept;
     XMVECTOR    XM_CALLCONV     XMVector3InverseRotate(FXMVECTOR V, FXMVECTOR RotationQuaternion) noexcept;
     XMVECTOR    XM_CALLCONV     XMVector3Transform(FXMVECTOR V, FXMMATRIX M) noexcept;
-    XMFLOAT4* XM_CALLCONV     XMVector3TransformStream(_Out_writes_bytes_(sizeof(XMFLOAT4) + OutputStride * (VectorCount - 1)) XMFLOAT4* pOutputStream,
+    XMFLOAT4*   XM_CALLCONV     XMVector3TransformStream(_Out_writes_bytes_(sizeof(XMFLOAT4) + OutputStride * (VectorCount - 1)) XMFLOAT4* pOutputStream,
         _In_ size_t OutputStride,
         _In_reads_bytes_(sizeof(XMFLOAT3) + InputStride * (VectorCount - 1)) const XMFLOAT3* pInputStream,
         _In_ size_t InputStride, _In_ size_t VectorCount, _In_ FXMMATRIX M) noexcept;
     XMVECTOR    XM_CALLCONV     XMVector3TransformCoord(FXMVECTOR V, FXMMATRIX M) noexcept;
-    XMFLOAT3* XM_CALLCONV     XMVector3TransformCoordStream(_Out_writes_bytes_(sizeof(XMFLOAT3) + OutputStride * (VectorCount - 1)) XMFLOAT3* pOutputStream,
+    XMFLOAT3*   XM_CALLCONV     XMVector3TransformCoordStream(_Out_writes_bytes_(sizeof(XMFLOAT3) + OutputStride * (VectorCount - 1)) XMFLOAT3* pOutputStream,
         _In_ size_t OutputStride,
         _In_reads_bytes_(sizeof(XMFLOAT3) + InputStride * (VectorCount - 1)) const XMFLOAT3* pInputStream,
         _In_ size_t InputStride, _In_ size_t VectorCount, _In_ FXMMATRIX M) noexcept;
     XMVECTOR    XM_CALLCONV     XMVector3TransformNormal(FXMVECTOR V, FXMMATRIX M) noexcept;
-    XMFLOAT3* XM_CALLCONV     XMVector3TransformNormalStream(_Out_writes_bytes_(sizeof(XMFLOAT3) + OutputStride * (VectorCount - 1)) XMFLOAT3* pOutputStream,
+    XMFLOAT3*   XM_CALLCONV     XMVector3TransformNormalStream(_Out_writes_bytes_(sizeof(XMFLOAT3) + OutputStride * (VectorCount - 1)) XMFLOAT3* pOutputStream,
         _In_ size_t OutputStride,
         _In_reads_bytes_(sizeof(XMFLOAT3) + InputStride * (VectorCount - 1)) const XMFLOAT3* pInputStream,
         _In_ size_t InputStride, _In_ size_t VectorCount, _In_ FXMMATRIX M) noexcept;
     XMVECTOR    XM_CALLCONV     XMVector3Project(FXMVECTOR V, float ViewportX, float ViewportY, float ViewportWidth, float ViewportHeight, float ViewportMinZ, float ViewportMaxZ,
         FXMMATRIX Projection, CXMMATRIX View, CXMMATRIX World) noexcept;
-    XMFLOAT3* XM_CALLCONV     XMVector3ProjectStream(_Out_writes_bytes_(sizeof(XMFLOAT3) + OutputStride * (VectorCount - 1)) XMFLOAT3* pOutputStream,
+    XMFLOAT3*   XM_CALLCONV     XMVector3ProjectStream(_Out_writes_bytes_(sizeof(XMFLOAT3) + OutputStride * (VectorCount - 1)) XMFLOAT3* pOutputStream,
         _In_ size_t OutputStride,
         _In_reads_bytes_(sizeof(XMFLOAT3) + InputStride * (VectorCount - 1)) const XMFLOAT3* pInputStream,
         _In_ size_t InputStride, _In_ size_t VectorCount,
@@ -1364,7 +1364,7 @@ namespace DirectX
         _In_ FXMMATRIX Projection, _In_ CXMMATRIX View, _In_ CXMMATRIX World) noexcept;
     XMVECTOR    XM_CALLCONV     XMVector3Unproject(FXMVECTOR V, float ViewportX, float ViewportY, float ViewportWidth, float ViewportHeight, float ViewportMinZ, float ViewportMaxZ,
         FXMMATRIX Projection, CXMMATRIX View, CXMMATRIX World) noexcept;
-    XMFLOAT3* XM_CALLCONV     XMVector3UnprojectStream(_Out_writes_bytes_(sizeof(XMFLOAT3) + OutputStride * (VectorCount - 1)) XMFLOAT3* pOutputStream,
+    XMFLOAT3*   XM_CALLCONV     XMVector3UnprojectStream(_Out_writes_bytes_(sizeof(XMFLOAT3) + OutputStride * (VectorCount - 1)) XMFLOAT3* pOutputStream,
         _In_ size_t OutputStride,
         _In_reads_bytes_(sizeof(XMFLOAT3) + InputStride * (VectorCount - 1)) const XMFLOAT3* pInputStream,
         _In_ size_t InputStride, _In_ size_t VectorCount,
@@ -1414,7 +1414,7 @@ namespace DirectX
     XMVECTOR    XM_CALLCONV     XMVector4AngleBetweenNormals(FXMVECTOR N1, FXMVECTOR N2) noexcept;
     XMVECTOR    XM_CALLCONV     XMVector4AngleBetweenVectors(FXMVECTOR V1, FXMVECTOR V2) noexcept;
     XMVECTOR    XM_CALLCONV     XMVector4Transform(FXMVECTOR V, FXMMATRIX M) noexcept;
-    XMFLOAT4* XM_CALLCONV     XMVector4TransformStream(_Out_writes_bytes_(sizeof(XMFLOAT4) + OutputStride * (VectorCount - 1)) XMFLOAT4* pOutputStream,
+    XMFLOAT4*   XM_CALLCONV     XMVector4TransformStream(_Out_writes_bytes_(sizeof(XMFLOAT4) + OutputStride * (VectorCount - 1)) XMFLOAT4* pOutputStream,
         _In_ size_t OutputStride,
         _In_reads_bytes_(sizeof(XMFLOAT4) + InputStride * (VectorCount - 1)) const XMFLOAT4* pInputStream,
         _In_ size_t InputStride, _In_ size_t VectorCount, _In_ FXMMATRIX M) noexcept;
@@ -1451,8 +1451,13 @@ namespace DirectX
     XMMATRIX    XM_CALLCONV     XMMatrixRotationX(float Angle) noexcept;
     XMMATRIX    XM_CALLCONV     XMMatrixRotationY(float Angle) noexcept;
     XMMATRIX    XM_CALLCONV     XMMatrixRotationZ(float Angle) noexcept;
+
+    // Rotates about y-axis (Yaw), then x-axis (Pitch), then z-axis (Roll)
     XMMATRIX    XM_CALLCONV     XMMatrixRotationRollPitchYaw(float Pitch, float Yaw, float Roll) noexcept;
+
+    // Rotates about y-axis (Angles.y), then x-axis (Angles.x), then z-axis (Angles.z)
     XMMATRIX    XM_CALLCONV     XMMatrixRotationRollPitchYawFromVector(FXMVECTOR Angles) noexcept;
+
     XMMATRIX    XM_CALLCONV     XMMatrixRotationNormal(FXMVECTOR NormalAxis, float Angle) noexcept;
     XMMATRIX    XM_CALLCONV     XMMatrixRotationAxis(FXMVECTOR Axis, float Angle) noexcept;
     XMMATRIX    XM_CALLCONV     XMMatrixRotationQuaternion(FXMVECTOR Quaternion) noexcept;
@@ -1514,8 +1519,13 @@ namespace DirectX
     XMVECTOR    XM_CALLCONV     XMQuaternionBaryCentricV(FXMVECTOR Q0, FXMVECTOR Q1, FXMVECTOR Q2, GXMVECTOR F, HXMVECTOR G) noexcept;
 
     XMVECTOR    XM_CALLCONV     XMQuaternionIdentity() noexcept;
+
+    // Rotates about y-axis (Yaw), then x-axis (Pitch), then z-axis (Roll)
     XMVECTOR    XM_CALLCONV     XMQuaternionRotationRollPitchYaw(float Pitch, float Yaw, float Roll) noexcept;
+
+    // Rotates about y-axis (Angles.y), then x-axis (Angles.x), then z-axis (Angles.z)
     XMVECTOR    XM_CALLCONV     XMQuaternionRotationRollPitchYawFromVector(FXMVECTOR Angles) noexcept;
+
     XMVECTOR    XM_CALLCONV     XMQuaternionRotationNormal(FXMVECTOR NormalAxis, float Angle) noexcept;
     XMVECTOR    XM_CALLCONV     XMQuaternionRotationAxis(FXMVECTOR Axis, float Angle) noexcept;
     XMVECTOR    XM_CALLCONV     XMQuaternionRotationMatrix(FXMMATRIX M) noexcept;
@@ -1542,11 +1552,15 @@ namespace DirectX
     XMVECTOR    XM_CALLCONV     XMPlaneNormalize(FXMVECTOR P) noexcept;
     XMVECTOR    XM_CALLCONV     XMPlaneIntersectLine(FXMVECTOR P, FXMVECTOR LinePoint1, FXMVECTOR LinePoint2) noexcept;
     void        XM_CALLCONV     XMPlaneIntersectPlane(_Out_ XMVECTOR* pLinePoint1, _Out_ XMVECTOR* pLinePoint2, _In_ FXMVECTOR P1, _In_ FXMVECTOR P2) noexcept;
-    XMVECTOR    XM_CALLCONV     XMPlaneTransform(FXMVECTOR P, FXMMATRIX M) noexcept;
-    XMFLOAT4* XM_CALLCONV     XMPlaneTransformStream(_Out_writes_bytes_(sizeof(XMFLOAT4) + OutputStride * (PlaneCount - 1)) XMFLOAT4* pOutputStream,
+
+    // Transforms a plane given an inverse transpose matrix
+    XMVECTOR    XM_CALLCONV     XMPlaneTransform(FXMVECTOR P, FXMMATRIX ITM) noexcept;
+
+    // Transforms an array of planes given an inverse transpose matrix
+    XMFLOAT4*   XM_CALLCONV     XMPlaneTransformStream(_Out_writes_bytes_(sizeof(XMFLOAT4) + OutputStride * (PlaneCount - 1)) XMFLOAT4* pOutputStream,
         _In_ size_t OutputStride,
         _In_reads_bytes_(sizeof(XMFLOAT4) + InputStride * (PlaneCount - 1)) const XMFLOAT4* pInputStream,
-        _In_ size_t InputStride, _In_ size_t PlaneCount, _In_ FXMMATRIX M) noexcept;
+        _In_ size_t InputStride, _In_ size_t PlaneCount, _In_ FXMMATRIX ITM) noexcept;
 
     XMVECTOR    XM_CALLCONV     XMPlaneFromPointNormal(FXMVECTOR Point, FXMVECTOR Normal) noexcept;
     XMVECTOR    XM_CALLCONV     XMPlaneFromPoints(FXMVECTOR Point1, FXMVECTOR Point2, FXMVECTOR Point3) noexcept;

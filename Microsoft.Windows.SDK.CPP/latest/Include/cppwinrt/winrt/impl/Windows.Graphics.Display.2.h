@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,10 +10,10 @@
 #include "winrt/impl/Windows.Graphics.Display.1.h"
 WINRT_EXPORT namespace winrt::Windows::Graphics::Display
 {
-    struct DisplayPropertiesEventHandler : Windows::Foundation::IUnknown
+    struct DisplayPropertiesEventHandler : winrt::Windows::Foundation::IUnknown
     {
         DisplayPropertiesEventHandler(std::nullptr_t = nullptr) noexcept {}
-        DisplayPropertiesEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        DisplayPropertiesEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> DisplayPropertiesEventHandler(L lambda);
         template <typename F> DisplayPropertiesEventHandler(F* function);
         template <typename O, typename M> DisplayPropertiesEventHandler(O* object, M method);

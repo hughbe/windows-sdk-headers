@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_UI_Xaml_Media_Imaging_H
 #define WINRT_Windows_UI_Xaml_Media_Imaging_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.UI.Xaml.Media.h"
 #include "winrt/impl/Windows.ApplicationModel.Background.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -71,7 +71,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Media_Imaging_IBitmapImage<D>::DownloadProgress(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::Imaging::IBitmapImage)->remove_DownloadProgress(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::Imaging::IBitmapImage)->remove_DownloadProgress(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Media_Imaging_IBitmapImage<D>::ImageOpened(winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const
     {
@@ -85,7 +85,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Media_Imaging_IBitmapImage<D>::ImageOpened(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::Imaging::IBitmapImage)->remove_ImageOpened(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::Imaging::IBitmapImage)->remove_ImageOpened(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Media_Imaging_IBitmapImage<D>::ImageFailed(winrt::Windows::UI::Xaml::ExceptionRoutedEventHandler const& handler) const
     {
@@ -99,7 +99,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Media_Imaging_IBitmapImage<D>::ImageFailed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::Imaging::IBitmapImage)->remove_ImageFailed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::Imaging::IBitmapImage)->remove_ImageFailed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Xaml::Media::Imaging::DecodePixelType) consume_Windows_UI_Xaml_Media_Imaging_IBitmapImage2<D>::DecodePixelType() const
     {
@@ -347,7 +347,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Media_Imaging_ISvgImageSource<D>::Opened(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::Imaging::ISvgImageSource)->remove_Opened(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::Imaging::ISvgImageSource)->remove_Opened(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Xaml_Media_Imaging_ISvgImageSource<D>::OpenFailed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource, winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs> const& handler) const
     {
@@ -361,7 +361,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Xaml_Media_Imaging_ISvgImageSource<D>::OpenFailed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::Imaging::ISvgImageSource)->remove_OpenFailed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Xaml::Media::Imaging::ISvgImageSource)->remove_OpenFailed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceLoadStatus>) consume_Windows_UI_Xaml_Media_Imaging_ISvgImageSource<D>::SetSourceAsync(winrt::Windows::Storage::Streams::IRandomAccessStream const& streamSource) const
     {
@@ -1479,6 +1479,8 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Media::Imaging::WriteableBitmap> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

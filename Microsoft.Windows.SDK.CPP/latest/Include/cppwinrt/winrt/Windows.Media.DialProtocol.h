@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Media_DialProtocol_H
 #define WINRT_Windows_Media_DialProtocol_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Media.h"
 #include "winrt/impl/Windows.Devices.Enumeration.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -102,7 +102,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_DialProtocol_IDialDevicePicker<D>::DialDeviceSelected(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::DialProtocol::IDialDevicePicker)->remove_DialDeviceSelected(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::DialProtocol::IDialDevicePicker)->remove_DialDeviceSelected(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_DialProtocol_IDialDevicePicker<D>::DisconnectButtonClicked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::DialProtocol::DialDevicePicker, winrt::Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs> const& handler) const
     {
@@ -116,7 +116,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_DialProtocol_IDialDevicePicker<D>::DisconnectButtonClicked(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::DialProtocol::IDialDevicePicker)->remove_DisconnectButtonClicked(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::DialProtocol::IDialDevicePicker)->remove_DisconnectButtonClicked(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_DialProtocol_IDialDevicePicker<D>::DialDevicePickerDismissed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::DialProtocol::DialDevicePicker, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -130,7 +130,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_DialProtocol_IDialDevicePicker<D>::DialDevicePickerDismissed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::DialProtocol::IDialDevicePicker)->remove_DialDevicePickerDismissed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::DialProtocol::IDialDevicePicker)->remove_DialDevicePickerDismissed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_DialProtocol_IDialDevicePicker<D>::Show(winrt::Windows::Foundation::Rect const& selection) const
     {
@@ -600,6 +600,8 @@ namespace std
     template<> struct hash<winrt::Windows::Media::DialProtocol::DialDeviceSelectedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::DialProtocol::DialReceiverApp> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

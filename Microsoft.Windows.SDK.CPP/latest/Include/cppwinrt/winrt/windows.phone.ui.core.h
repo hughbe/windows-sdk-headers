@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Phone_UI_Core_H
 #define WINRT_Windows_Phone_UI_Core_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Phone.UI.Core.2.h"
 namespace winrt::impl
@@ -115,7 +115,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Phone_UI_Core_IKeyboardInputBuffer<D>::TextChanged(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Phone::UI::Core::IKeyboardInputBuffer)->remove_TextChanged(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Phone::UI::Core::IKeyboardInputBuffer)->remove_TextChanged(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Phone_UI_Core_IKeyboardInputBuffer<D>::SelectionChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::UI::Core::KeyboardInputBuffer, winrt::Windows::Phone::UI::Core::CoreSelectionChangedEventArgs> const& handler) const
     {
@@ -129,7 +129,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Phone_UI_Core_IKeyboardInputBuffer<D>::SelectionChanged(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Phone::UI::Core::IKeyboardInputBuffer)->remove_SelectionChanged(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Phone::UI::Core::IKeyboardInputBuffer)->remove_SelectionChanged(impl::bind_in(cookie));
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
@@ -321,6 +321,8 @@ namespace std
     template<> struct hash<winrt::Windows::Phone::UI::Core::CoreSelectionChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Phone::UI::Core::CoreTextChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Phone::UI::Core::KeyboardInputBuffer> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

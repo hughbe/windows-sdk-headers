@@ -665,6 +665,8 @@ typedef enum D3D12_BLEND
     D3D12_BLEND_INV_SRC1_COLOR = 17, // 1.0f - PS output o1.rgb
     D3D12_BLEND_SRC1_ALPHA = 18, // PS output o1.a
     D3D12_BLEND_INV_SRC1_ALPHA = 19, // 1.0f - PS output o1.a
+    D3D12_BLEND_ALPHA_FACTOR = 20,
+    D3D12_BLEND_INV_ALPHA_FACTOR = 21
 } D3D12_BLEND;
 
 // Keep BLENDOP values in sync with earlier DX versions (HW consumes values directly).
@@ -1420,6 +1422,7 @@ typedef struct D3D12_FEATURE_DATA_D3D12_OPTIONS13
     [annotation("_Out_")] BOOL InvertedViewportHeightFlipsYSupported;
     [annotation("_Out_")] BOOL InvertedViewportDepthFlipsZSupported;
     [annotation("_Out_")] BOOL TextureCopyBetweenDimensionsSupported;
+    [annotation("_Out_")] BOOL AlphaBlendFactorSupported;
 } D3D12_FEATURE_DATA_D3D12_OPTIONS13;
 
 
@@ -5649,6 +5652,14 @@ interface ID3D12GraphicsCommandList7 : ID3D12GraphicsCommandList6
         );
 };
 
+[uuid(1ff39ea7-16c5-43cf-8529-f43f1223f161), object, local, pointer_default(unique)]
+interface ID3D12GraphicsCommandList8 : ID3D12GraphicsCommandList7
+{
+    void OMSetAlphaBlendFactor(
+        [annotation("_In_")] FLOAT AlphaBlendFactor
+    );
+};
+
 
 //----------------------------------------------------------------------------------------------------------
 // Old types which are still supported by the runtime for app-compat
@@ -5715,3 +5726,4 @@ cpp_quote( "DEFINE_GUID(IID_ID3D12SDKConfiguration,0xe9eb5314,0x33aa,0x42b2,0xa7
 cpp_quote( "DEFINE_GUID(IID_ID3D12GraphicsCommandList5,0x55050859,0x4024,0x474c,0x87,0xf5,0x64,0x72,0xea,0xee,0x44,0xea);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12GraphicsCommandList6,0xc3827890,0xe548,0x4cfa,0x96,0xcf,0x56,0x89,0xa9,0x37,0x0f,0x80);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12GraphicsCommandList7,0xdd171223,0x8b61,0x4769,0x90,0xe3,0x16,0x0c,0xcd,0xe4,0xe2,0xc1);" )
+cpp_quote( "DEFINE_GUID(IID_ID3D12GraphicsCommandList8,0x1ff39ea7,0x16c5,0x43cf,0x85,0x29,0xf4,0x3f,0x12,0x23,0xf1,0x61);" )

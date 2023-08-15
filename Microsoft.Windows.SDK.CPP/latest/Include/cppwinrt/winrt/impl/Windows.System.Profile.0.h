@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -58,6 +58,7 @@ WINRT_EXPORT namespace winrt::Windows::System::Profile
     struct IAnalyticsVersionInfo;
     struct IAnalyticsVersionInfo2;
     struct IAppApplicabilityStatics;
+    struct IAppControlPolicyStatics;
     struct IEducationSettingsStatics;
     struct IHardwareIdentificationStatics;
     struct IHardwareToken;
@@ -74,6 +75,7 @@ WINRT_EXPORT namespace winrt::Windows::System::Profile
     struct AnalyticsInfo;
     struct AnalyticsVersionInfo;
     struct AppApplicability;
+    struct AppControlPolicy;
     struct EducationSettings;
     struct HardwareIdentification;
     struct HardwareToken;
@@ -94,6 +96,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::System::Profile::IAnalyticsVersionInfo>{ using type = interface_category; };
     template <> struct category<winrt::Windows::System::Profile::IAnalyticsVersionInfo2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::System::Profile::IAppApplicabilityStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::System::Profile::IAppControlPolicyStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::System::Profile::IEducationSettingsStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::System::Profile::IHardwareIdentificationStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::System::Profile::IHardwareToken>{ using type = interface_category; };
@@ -110,6 +113,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::System::Profile::AnalyticsInfo>{ using type = class_category; };
     template <> struct category<winrt::Windows::System::Profile::AnalyticsVersionInfo>{ using type = class_category; };
     template <> struct category<winrt::Windows::System::Profile::AppApplicability>{ using type = class_category; };
+    template <> struct category<winrt::Windows::System::Profile::AppControlPolicy>{ using type = class_category; };
     template <> struct category<winrt::Windows::System::Profile::EducationSettings>{ using type = class_category; };
     template <> struct category<winrt::Windows::System::Profile::HardwareIdentification>{ using type = class_category; };
     template <> struct category<winrt::Windows::System::Profile::HardwareToken>{ using type = class_category; };
@@ -129,6 +133,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::System::Profile::AnalyticsInfo> = L"Windows.System.Profile.AnalyticsInfo";
     template <> inline constexpr auto& name_v<winrt::Windows::System::Profile::AnalyticsVersionInfo> = L"Windows.System.Profile.AnalyticsVersionInfo";
     template <> inline constexpr auto& name_v<winrt::Windows::System::Profile::AppApplicability> = L"Windows.System.Profile.AppApplicability";
+    template <> inline constexpr auto& name_v<winrt::Windows::System::Profile::AppControlPolicy> = L"Windows.System.Profile.AppControlPolicy";
     template <> inline constexpr auto& name_v<winrt::Windows::System::Profile::EducationSettings> = L"Windows.System.Profile.EducationSettings";
     template <> inline constexpr auto& name_v<winrt::Windows::System::Profile::HardwareIdentification> = L"Windows.System.Profile.HardwareIdentification";
     template <> inline constexpr auto& name_v<winrt::Windows::System::Profile::HardwareToken> = L"Windows.System.Profile.HardwareToken";
@@ -150,6 +155,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::System::Profile::IAnalyticsVersionInfo> = L"Windows.System.Profile.IAnalyticsVersionInfo";
     template <> inline constexpr auto& name_v<winrt::Windows::System::Profile::IAnalyticsVersionInfo2> = L"Windows.System.Profile.IAnalyticsVersionInfo2";
     template <> inline constexpr auto& name_v<winrt::Windows::System::Profile::IAppApplicabilityStatics> = L"Windows.System.Profile.IAppApplicabilityStatics";
+    template <> inline constexpr auto& name_v<winrt::Windows::System::Profile::IAppControlPolicyStatics> = L"Windows.System.Profile.IAppControlPolicyStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::System::Profile::IEducationSettingsStatics> = L"Windows.System.Profile.IEducationSettingsStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::System::Profile::IHardwareIdentificationStatics> = L"Windows.System.Profile.IHardwareIdentificationStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::System::Profile::IHardwareToken> = L"Windows.System.Profile.IHardwareToken";
@@ -168,6 +174,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::System::Profile::IAnalyticsVersionInfo>{ 0x926130B8,0x9955,0x4C74,{ 0xBD,0xC1,0x7C,0xD0,0xDE,0xCF,0x9B,0x03 } }; // 926130B8-9955-4C74-BDC1-7CD0DECF9B03
     template <> inline constexpr guid guid_v<winrt::Windows::System::Profile::IAnalyticsVersionInfo2>{ 0x76E915B1,0xFF36,0x407C,{ 0x9F,0x57,0x16,0x0D,0x3E,0x54,0x07,0x47 } }; // 76E915B1-FF36-407C-9F57-160D3E540747
     template <> inline constexpr guid guid_v<winrt::Windows::System::Profile::IAppApplicabilityStatics>{ 0x1664A082,0x0F38,0x5C99,{ 0x83,0xE4,0x48,0x99,0x59,0x70,0x86,0x1C } }; // 1664A082-0F38-5C99-83E4-48995970861C
+    template <> inline constexpr guid guid_v<winrt::Windows::System::Profile::IAppControlPolicyStatics>{ 0x771333FE,0x67DF,0x582D,{ 0x88,0xB0,0x0A,0x5A,0x87,0xEC,0x15,0x91 } }; // 771333FE-67DF-582D-88B0-0A5A87EC1591
     template <> inline constexpr guid guid_v<winrt::Windows::System::Profile::IEducationSettingsStatics>{ 0xFC53F0EF,0x4D3E,0x4E13,{ 0x9B,0x23,0x50,0x5F,0x4D,0x09,0x1E,0x92 } }; // FC53F0EF-4D3E-4E13-9B23-505F4D091E92
     template <> inline constexpr guid guid_v<winrt::Windows::System::Profile::IHardwareIdentificationStatics>{ 0x971260E0,0xF170,0x4A42,{ 0xBD,0x55,0xA9,0x00,0xB2,0x12,0xDA,0xE2 } }; // 971260E0-F170-4A42-BD55-A900B212DAE2
     template <> inline constexpr guid guid_v<winrt::Windows::System::Profile::IHardwareToken>{ 0x28F6D4C0,0xFB12,0x40A4,{ 0x81,0x67,0x7F,0x4E,0x03,0xD2,0x72,0x4C } }; // 28F6D4C0-FB12-40A4-8167-7F4E03D2724C
@@ -220,6 +227,17 @@ namespace winrt::impl
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall GetUnsupportedAppRequirements(void*, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::System::Profile::IAppControlPolicyStatics>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IsEnabled(bool*) noexcept = 0;
+            virtual int32_t __stdcall get_CanDisable(bool*) noexcept = 0;
+            virtual int32_t __stdcall get_IsDisableSupported(bool*) noexcept = 0;
+            virtual int32_t __stdcall add_Changed(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_Changed(winrt::event_token) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::System::Profile::IEducationSettingsStatics>
@@ -396,6 +414,21 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::System::Profile::IAppApplicabilityStatics>
     {
         template <typename D> using type = consume_Windows_System_Profile_IAppApplicabilityStatics<D>;
+    };
+    template <typename D>
+    struct consume_Windows_System_Profile_IAppControlPolicyStatics
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnabled() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) CanDisable() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) IsDisableSupported() const;
+        WINRT_IMPL_AUTO(winrt::event_token) Changed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        using Changed_revoker = impl::event_revoker<winrt::Windows::System::Profile::IAppControlPolicyStatics, &impl::abi_t<winrt::Windows::System::Profile::IAppControlPolicyStatics>::remove_Changed>;
+        [[nodiscard]] Changed_revoker Changed(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(void) Changed(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Windows::System::Profile::IAppControlPolicyStatics>
+    {
+        template <typename D> using type = consume_Windows_System_Profile_IAppControlPolicyStatics<D>;
     };
     template <typename D>
     struct consume_Windows_System_Profile_IEducationSettingsStatics

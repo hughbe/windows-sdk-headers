@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -19,10 +19,10 @@
 #include "winrt/impl/Windows.ApplicationModel.Background.1.h"
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Background
 {
-    struct BackgroundTaskCanceledEventHandler : Windows::Foundation::IUnknown
+    struct BackgroundTaskCanceledEventHandler : winrt::Windows::Foundation::IUnknown
     {
         BackgroundTaskCanceledEventHandler(std::nullptr_t = nullptr) noexcept {}
-        BackgroundTaskCanceledEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        BackgroundTaskCanceledEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> BackgroundTaskCanceledEventHandler(L lambda);
         template <typename F> BackgroundTaskCanceledEventHandler(F* function);
         template <typename O, typename M> BackgroundTaskCanceledEventHandler(O* object, M method);
@@ -30,10 +30,10 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Background
         template <typename O, typename M> BackgroundTaskCanceledEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance const& sender, winrt::Windows::ApplicationModel::Background::BackgroundTaskCancellationReason const& reason) const;
     };
-    struct BackgroundTaskCompletedEventHandler : Windows::Foundation::IUnknown
+    struct BackgroundTaskCompletedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         BackgroundTaskCompletedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        BackgroundTaskCompletedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        BackgroundTaskCompletedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> BackgroundTaskCompletedEventHandler(L lambda);
         template <typename F> BackgroundTaskCompletedEventHandler(F* function);
         template <typename O, typename M> BackgroundTaskCompletedEventHandler(O* object, M method);
@@ -41,10 +41,10 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Background
         template <typename O, typename M> BackgroundTaskCompletedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration const& sender, winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventArgs const& args) const;
     };
-    struct BackgroundTaskProgressEventHandler : Windows::Foundation::IUnknown
+    struct BackgroundTaskProgressEventHandler : winrt::Windows::Foundation::IUnknown
     {
         BackgroundTaskProgressEventHandler(std::nullptr_t = nullptr) noexcept {}
-        BackgroundTaskProgressEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        BackgroundTaskProgressEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> BackgroundTaskProgressEventHandler(L lambda);
         template <typename F> BackgroundTaskProgressEventHandler(F* function);
         template <typename O, typename M> BackgroundTaskProgressEventHandler(O* object, M method);

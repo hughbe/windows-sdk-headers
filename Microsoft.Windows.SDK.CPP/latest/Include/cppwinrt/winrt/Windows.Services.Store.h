@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Services_Store_H
 #define WINRT_Windows_Services_Store_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/impl/Windows.ApplicationModel.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -233,7 +233,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Store_IStoreContext<D>::OfflineLicensesChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Services::Store::IStoreContext)->remove_OfflineLicensesChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Services::Store::IStoreContext)->remove_OfflineLicensesChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_Services_Store_IStoreContext<D>::GetCustomerPurchaseIdAsync(param::hstring const& serviceTicket, param::hstring const& publisherUserId) const
     {
@@ -539,7 +539,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Store_IStorePackageLicense<D>::LicenseLost(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Services::Store::IStorePackageLicense)->remove_LicenseLost(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Services::Store::IStorePackageLicense)->remove_LicenseLost(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Package) consume_Windows_Services_Store_IStorePackageLicense<D>::Package() const
     {
@@ -859,7 +859,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Store_IStoreQueueItem<D>::Completed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Services::Store::IStoreQueueItem)->remove_Completed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Services::Store::IStoreQueueItem)->remove_Completed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Services_Store_IStoreQueueItem<D>::StatusChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Store::StoreQueueItem, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -873,7 +873,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Store_IStoreQueueItem<D>::StatusChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Services::Store::IStoreQueueItem)->remove_StatusChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Services::Store::IStoreQueueItem)->remove_StatusChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_Services_Store_IStoreQueueItem2<D>::CancelInstallAsync() const
     {
@@ -2986,6 +2986,8 @@ namespace std
     template<> struct hash<winrt::Windows::Services::Store::StoreSubscriptionInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Services::Store::StoreUninstallStorePackageResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Services::Store::StoreVideo> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

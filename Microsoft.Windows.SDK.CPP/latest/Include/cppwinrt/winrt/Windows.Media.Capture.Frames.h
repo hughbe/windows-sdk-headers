@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Media_Capture_Frames_H
 #define WINRT_Windows_Media_Capture_Frames_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Media.Capture.h"
 #include "winrt/impl/Windows.Devices.Enumeration.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -170,7 +170,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_Frames_IMediaFrameReader<D>::FrameArrived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::Frames::IMediaFrameReader)->remove_FrameArrived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::Frames::IMediaFrameReader)->remove_FrameArrived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MediaFrameReference) consume_Windows_Media_Capture_Frames_IMediaFrameReader<D>::TryAcquireLatestFrame() const
     {
@@ -296,7 +296,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_Frames_IMediaFrameSource<D>::FormatChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::Frames::IMediaFrameSource)->remove_FormatChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::Frames::IMediaFrameSource)->remove_FormatChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Devices::Core::CameraIntrinsics) consume_Windows_Media_Capture_Frames_IMediaFrameSource<D>::TryGetCameraIntrinsics(winrt::Windows::Media::Capture::Frames::MediaFrameFormat const& format) const
     {
@@ -448,6 +448,12 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo3)->GetRelativePanel(*(void**)(&displayRegion), reinterpret_cast<int32_t*>(&result)));
         return result;
     }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Capture_Frames_IMediaFrameSourceInfo4<D>::IsShareable() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo4)->get_IsShareable(&value));
+        return value;
+    }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader<D>::FrameArrived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader, winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs> const& handler) const
     {
         winrt::event_token token{};
@@ -460,7 +466,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader<D>::FrameArrived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader)->remove_FrameArrived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader)->remove_FrameArrived(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference) consume_Windows_Media_Capture_Frames_IMultiSourceMediaFrameReader<D>::TryAcquireLatestFrame() const
     {
@@ -1253,6 +1259,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo4> : produce_base<D, winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo4>
+    {
+        int32_t __stdcall get_IsShareable(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsShareable());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameArrivedEventArgs> : produce_base<D, winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameArrivedEventArgs>
     {
     };
@@ -1483,6 +1502,7 @@ namespace std
     template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameArrivedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader2> : winrt::impl::hash_base {};
@@ -1508,6 +1528,8 @@ namespace std
     template<> struct hash<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Capture::Frames::VideoMediaFrame> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

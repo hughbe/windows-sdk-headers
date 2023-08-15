@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -13,10 +13,10 @@
 #include "winrt/impl/Windows.Devices.Perception.Provider.1.h"
 WINRT_EXPORT namespace winrt::Windows::Devices::Perception::Provider
 {
-    struct PerceptionStartFaceAuthenticationHandler : Windows::Foundation::IUnknown
+    struct PerceptionStartFaceAuthenticationHandler : winrt::Windows::Foundation::IUnknown
     {
         PerceptionStartFaceAuthenticationHandler(std::nullptr_t = nullptr) noexcept {}
-        PerceptionStartFaceAuthenticationHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        PerceptionStartFaceAuthenticationHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> PerceptionStartFaceAuthenticationHandler(L lambda);
         template <typename F> PerceptionStartFaceAuthenticationHandler(F* function);
         template <typename O, typename M> PerceptionStartFaceAuthenticationHandler(O* object, M method);
@@ -24,10 +24,10 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Perception::Provider
         template <typename O, typename M> PerceptionStartFaceAuthenticationHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup const& sender) const;
     };
-    struct PerceptionStopFaceAuthenticationHandler : Windows::Foundation::IUnknown
+    struct PerceptionStopFaceAuthenticationHandler : winrt::Windows::Foundation::IUnknown
     {
         PerceptionStopFaceAuthenticationHandler(std::nullptr_t = nullptr) noexcept {}
-        PerceptionStopFaceAuthenticationHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        PerceptionStopFaceAuthenticationHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> PerceptionStopFaceAuthenticationHandler(L lambda);
         template <typename F> PerceptionStopFaceAuthenticationHandler(F* function);
         template <typename O, typename M> PerceptionStopFaceAuthenticationHandler(O* object, M method);

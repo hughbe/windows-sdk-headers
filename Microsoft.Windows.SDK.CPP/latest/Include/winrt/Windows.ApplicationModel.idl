@@ -190,6 +190,8 @@ namespace Windows
 
         interface IPackageCatalogStatics;
 
+        interface IPackageCatalogStatics2;
+
         interface IPackageContentGroup;
 
         interface IPackageContentGroupStagingEventArgs;
@@ -905,6 +907,13 @@ namespace Windows
             HRESULT OpenForCurrentUser([out] [retval] Windows.ApplicationModel.PackageCatalog** value);
         }
 
+        [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+        [uuid(4C11C159-9A28-598C-B185-55E1899B2BE4)]
+        interface IPackageCatalogStatics2 : IInspectable
+        {
+            HRESULT OpenForPackage([in] Windows.ApplicationModel.Package* package, [out] [retval] Windows.ApplicationModel.PackageCatalog** result);
+        }
+
         [contract(Windows.Foundation.UniversalApiContract, 4.0)]
         [exclusiveto(Windows.ApplicationModel.PackageContentGroup)]
         [uuid(8F62695D-120A-4798-B5E1-5800DDA8F2E1)]
@@ -1236,6 +1245,7 @@ namespace Windows
 
         [contract(Windows.Foundation.UniversalApiContract, 3.0)]
         [static(Windows.ApplicationModel.IPackageCatalogStatics, Windows.Foundation.UniversalApiContract, 3.0)]
+        [static(Windows.ApplicationModel.IPackageCatalogStatics2, Windows.Foundation.UniversalApiContract, 15.0)]
         runtimeclass PackageCatalog
         {
             [default] interface Windows.ApplicationModel.IPackageCatalog;

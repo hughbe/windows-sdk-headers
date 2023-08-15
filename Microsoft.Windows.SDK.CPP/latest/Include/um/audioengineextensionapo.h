@@ -467,7 +467,7 @@ enum APO_NOTIFICATION_TYPE
         APO_NOTIFICATION_TYPE_SYSTEM_EFFECTS_PROPERTY_CHANGE	= 3,
         APO_NOTIFICATION_TYPE_ENDPOINT_VOLUME2	= 4,
         APO_NOTIFICATION_TYPE_DEVICE_ORIENTATION	= 5,
-        APO_NOTIFICATION_TYPE_MIC_BOOST	= 6
+        APO_NOTIFICATION_TYPE_MICROPHONE_BOOST	= 6
     } 	APO_NOTIFICATION_TYPE;
 
 typedef struct AUDIO_ENDPOINT_VOLUME_CHANGE_NOTIFICATION
@@ -495,13 +495,13 @@ typedef struct AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_NOTIFICATION
 typedef struct AUDIO_VOLUME_NOTIFICATION_DATA2
     {
     PAUDIO_VOLUME_NOTIFICATION_DATA notificationData;
-    float fMasterVolumeDB;
-    float fVolumeMinDB;
-    float fVolumeMaxDB;
-    float fVolumeIncrementDB;
-    UINT nStep;
-    UINT nStepCount;
-    float afChannelVolumesDB[ 1 ];
+    float masterVolumeInDb;
+    float volumeMinInDb;
+    float volumeMaxInDb;
+    float volumeIncrementInDb;
+    UINT step;
+    UINT stepCount;
+    float channelVolumesInDb[ 1 ];
     } 	AUDIO_VOLUME_NOTIFICATION_DATA2;
 
 typedef struct AUDIO_VOLUME_NOTIFICATION_DATA2 *PAUDIO_VOLUME_NOTIFICATION_DATA2;
@@ -521,18 +521,18 @@ enum DEVICE_ORIENTATION_TYPE
         DEVICE_ROTATED_270_DEGREES_CLOCKWISE	= ( DEVICE_ROTATED_180_DEGREES_CLOCKWISE + 1 ) 
     } 	DEVICE_ORIENTATION_TYPE;
 
-typedef struct AUDIO_MIC_BOOST_NOTIFICATION
+typedef struct AUDIO_MICROPHONE_BOOST_NOTIFICATION
     {
     IMMDevice *endpoint;
-    GUID guidEventContext;
-    BOOL bMicBoostEnabled;
-    float fLevelDB;
-    float fLevelMinDB;
-    float fLevelMaxDB;
-    float fLevelStepDB;
-    BOOL bMuteSupported;
-    BOOL bMute;
-    } 	AUDIO_MIC_BOOST_NOTIFICATION;
+    GUID eventContext;
+    BOOL microphoneBoostEnabled;
+    float levelInDb;
+    float levelMinInDb;
+    float levelMaxInDb;
+    float levelStepInDb;
+    BOOL muteSupported;
+    BOOL mute;
+    } 	AUDIO_MICROPHONE_BOOST_NOTIFICATION;
 
 typedef struct APO_NOTIFICATION
     {
@@ -544,7 +544,7 @@ typedef struct APO_NOTIFICATION
         AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_NOTIFICATION audioSystemEffectsPropertyChange;
         AUDIO_ENDPOINT_VOLUME_CHANGE_NOTIFICATION2 audioEndpointVolumeChange2;
         DEVICE_ORIENTATION_TYPE deviceOrientation;
-        AUDIO_MIC_BOOST_NOTIFICATION audioMicBoostChange;
+        AUDIO_MICROPHONE_BOOST_NOTIFICATION audioMicrophoneBoostChange;
         } 	DUMMYUNIONNAME;
     } 	APO_NOTIFICATION;
 
@@ -564,10 +564,10 @@ typedef struct AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_APO_NOTIFICATION_DESCRIPTOR
     GUID propertyStoreContext;
     } 	AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_APO_NOTIFICATION_DESCRIPTOR;
 
-typedef struct AUDIO_MIC_BOOST_APO_NOTIFICATION_DESCRIPTOR
+typedef struct AUDIO_MICROPHONE_BOOST_APO_NOTIFICATION_DESCRIPTOR
     {
     IMMDevice *device;
-    } 	AUDIO_MIC_BOOST_APO_NOTIFICATION_DESCRIPTOR;
+    } 	AUDIO_MICROPHONE_BOOST_APO_NOTIFICATION_DESCRIPTOR;
 
 typedef struct APO_NOTIFICATION_DESCRIPTOR
     {
@@ -577,7 +577,7 @@ typedef struct APO_NOTIFICATION_DESCRIPTOR
         AUDIO_ENDPOINT_VOLUME_APO_NOTIFICATION_DESCRIPTOR audioEndpointVolume;
         AUDIO_ENDPOINT_PROPERTY_CHANGE_APO_NOTIFICATION_DESCRIPTOR audioEndpointPropertyChange;
         AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_APO_NOTIFICATION_DESCRIPTOR audioSystemEffectsPropertyChange;
-        AUDIO_MIC_BOOST_APO_NOTIFICATION_DESCRIPTOR audioMicBoost;
+        AUDIO_MICROPHONE_BOOST_APO_NOTIFICATION_DESCRIPTOR audioMicBoost;
         } 	DUMMYUNIONNAME;
     } 	APO_NOTIFICATION_DESCRIPTOR;
 

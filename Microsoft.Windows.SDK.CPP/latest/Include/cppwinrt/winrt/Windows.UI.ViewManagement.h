@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_UI_ViewManagement_H
 #define WINRT_Windows_UI_ViewManagement_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.UI.h"
 #include "winrt/impl/Windows.Devices.Enumeration.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -44,7 +44,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_IAccessibilitySettings<D>::HighContrastChanged(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IAccessibilitySettings)->remove_HighContrastChanged(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IAccessibilitySettings)->remove_HighContrastChanged(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_UI_ViewManagement_IActivationViewSwitcher<D>::ShowAsStandaloneAsync(int32_t viewId) const
     {
@@ -132,7 +132,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_IApplicationView<D>::Consolidated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IApplicationView)->remove_Consolidated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IApplicationView)->remove_Consolidated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_ViewManagement_IApplicationView2<D>::SuppressSystemOverlays() const
     {
@@ -162,7 +162,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_IApplicationView2<D>::VisibleBoundsChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IApplicationView2)->remove_VisibleBoundsChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IApplicationView2)->remove_VisibleBoundsChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_ViewManagement_IApplicationView2<D>::SetDesiredBoundsMode(winrt::Windows::UI::ViewManagement::ApplicationViewBoundsMode const& boundsMode) const
     {
@@ -582,7 +582,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_IInputPane<D>::Showing(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IInputPane)->remove_Showing(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IInputPane)->remove_Showing(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_ViewManagement_IInputPane<D>::Hiding(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::InputPane, winrt::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs> const& handler) const
     {
@@ -596,7 +596,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_IInputPane<D>::Hiding(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IInputPane)->remove_Hiding(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IInputPane)->remove_Hiding(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) consume_Windows_UI_ViewManagement_IInputPane<D>::OccludedRect() const
     {
@@ -690,7 +690,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_IProjectionManagerStatics<D>::ProjectionDisplayAvailableChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IProjectionManagerStatics)->remove_ProjectionDisplayAvailableChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IProjectionManagerStatics)->remove_ProjectionDisplayAvailableChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_UI_ViewManagement_IProjectionManagerStatics2<D>::StartProjectingAsync(int32_t projectionViewId, int32_t anchorViewId, winrt::Windows::Devices::Enumeration::DeviceInformation const& displayDeviceInfo) const
     {
@@ -782,7 +782,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_IStatusBar<D>::Showing(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IStatusBar)->remove_Showing(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IStatusBar)->remove_Showing(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_ViewManagement_IStatusBar<D>::Hiding(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::StatusBar, winrt::Windows::Foundation::IInspectable> const& eventHandler) const
     {
@@ -796,7 +796,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_IStatusBar<D>::Hiding(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IStatusBar)->remove_Hiding(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IStatusBar)->remove_Hiding(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_UI_ViewManagement_IStatusBarProgressIndicator<D>::ShowAsync() const
     {
@@ -932,7 +932,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_IUISettings2<D>::TextScaleFactorChanged(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IUISettings2)->remove_TextScaleFactorChanged(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IUISettings2)->remove_TextScaleFactorChanged(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Color) consume_Windows_UI_ViewManagement_IUISettings3<D>::GetColorValue(winrt::Windows::UI::ViewManagement::UIColorType const& desiredColor) const
     {
@@ -952,7 +952,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_IUISettings3<D>::ColorValuesChanged(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IUISettings3)->remove_ColorValuesChanged(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IUISettings3)->remove_ColorValuesChanged(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_ViewManagement_IUISettings4<D>::AdvancedEffectsEnabled() const
     {
@@ -972,7 +972,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_IUISettings4<D>::AdvancedEffectsEnabledChanged(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IUISettings4)->remove_AdvancedEffectsEnabledChanged(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IUISettings4)->remove_AdvancedEffectsEnabledChanged(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_ViewManagement_IUISettings5<D>::AutoHideScrollBars() const
     {
@@ -992,7 +992,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_IUISettings5<D>::AutoHideScrollBarsChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IUISettings5)->remove_AutoHideScrollBarsChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IUISettings5)->remove_AutoHideScrollBarsChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_ViewManagement_IUISettings6<D>::AnimationsEnabledChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::UI::ViewManagement::UISettingsAnimationsEnabledChangedEventArgs> const& handler) const
     {
@@ -1006,7 +1006,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_IUISettings6<D>::AnimationsEnabledChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IUISettings6)->remove_AnimationsEnabledChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IUISettings6)->remove_AnimationsEnabledChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_ViewManagement_IUISettings6<D>::MessageDurationChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ViewManagement::UISettings, winrt::Windows::UI::ViewManagement::UISettingsMessageDurationChangedEventArgs> const& handler) const
     {
@@ -1020,7 +1020,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_IUISettings6<D>::MessageDurationChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IUISettings6)->remove_MessageDurationChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IUISettings6)->remove_MessageDurationChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::UserInteractionMode) consume_Windows_UI_ViewManagement_IUIViewSettings<D>::UserInteractionMode() const
     {
@@ -2980,6 +2980,8 @@ namespace std
     template<> struct hash<winrt::Windows::UI::ViewManagement::UISettingsMessageDurationChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::ViewManagement::UIViewSettings> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::ViewManagement::ViewModePreferences> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

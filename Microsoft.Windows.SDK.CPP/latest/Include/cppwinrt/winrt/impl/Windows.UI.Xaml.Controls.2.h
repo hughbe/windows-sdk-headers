@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -21,10 +21,10 @@
 #include "winrt/impl/Windows.UI.Xaml.Controls.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
 {
-    struct BackClickEventHandler : Windows::Foundation::IUnknown
+    struct BackClickEventHandler : winrt::Windows::Foundation::IUnknown
     {
         BackClickEventHandler(std::nullptr_t = nullptr) noexcept {}
-        BackClickEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        BackClickEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> BackClickEventHandler(L lambda);
         template <typename F> BackClickEventHandler(F* function);
         template <typename O, typename M> BackClickEventHandler(O* object, M method);
@@ -32,10 +32,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
         template <typename O, typename M> BackClickEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Controls::BackClickEventArgs const& e) const;
     };
-    struct CalendarViewDayItemChangingEventHandler : Windows::Foundation::IUnknown
+    struct CalendarViewDayItemChangingEventHandler : winrt::Windows::Foundation::IUnknown
     {
         CalendarViewDayItemChangingEventHandler(std::nullptr_t = nullptr) noexcept {}
-        CalendarViewDayItemChangingEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        CalendarViewDayItemChangingEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> CalendarViewDayItemChangingEventHandler(L lambda);
         template <typename F> CalendarViewDayItemChangingEventHandler(F* function);
         template <typename O, typename M> CalendarViewDayItemChangingEventHandler(O* object, M method);
@@ -43,10 +43,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
         template <typename O, typename M> CalendarViewDayItemChangingEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::UI::Xaml::Controls::CalendarView const& sender, winrt::Windows::UI::Xaml::Controls::CalendarViewDayItemChangingEventArgs const& e) const;
     };
-    struct CleanUpVirtualizedItemEventHandler : Windows::Foundation::IUnknown
+    struct CleanUpVirtualizedItemEventHandler : winrt::Windows::Foundation::IUnknown
     {
         CleanUpVirtualizedItemEventHandler(std::nullptr_t = nullptr) noexcept {}
-        CleanUpVirtualizedItemEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        CleanUpVirtualizedItemEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> CleanUpVirtualizedItemEventHandler(L lambda);
         template <typename F> CleanUpVirtualizedItemEventHandler(F* function);
         template <typename O, typename M> CleanUpVirtualizedItemEventHandler(O* object, M method);
@@ -54,10 +54,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
         template <typename O, typename M> CleanUpVirtualizedItemEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Controls::CleanUpVirtualizedItemEventArgs const& e) const;
     };
-    struct ContextMenuOpeningEventHandler : Windows::Foundation::IUnknown
+    struct ContextMenuOpeningEventHandler : winrt::Windows::Foundation::IUnknown
     {
         ContextMenuOpeningEventHandler(std::nullptr_t = nullptr) noexcept {}
-        ContextMenuOpeningEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        ContextMenuOpeningEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> ContextMenuOpeningEventHandler(L lambda);
         template <typename F> ContextMenuOpeningEventHandler(F* function);
         template <typename O, typename M> ContextMenuOpeningEventHandler(O* object, M method);
@@ -65,10 +65,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
         template <typename O, typename M> ContextMenuOpeningEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Controls::ContextMenuEventArgs const& e) const;
     };
-    struct DragItemsStartingEventHandler : Windows::Foundation::IUnknown
+    struct DragItemsStartingEventHandler : winrt::Windows::Foundation::IUnknown
     {
         DragItemsStartingEventHandler(std::nullptr_t = nullptr) noexcept {}
-        DragItemsStartingEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        DragItemsStartingEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> DragItemsStartingEventHandler(L lambda);
         template <typename F> DragItemsStartingEventHandler(F* function);
         template <typename O, typename M> DragItemsStartingEventHandler(O* object, M method);
@@ -76,10 +76,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
         template <typename O, typename M> DragItemsStartingEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Controls::DragItemsStartingEventArgs const& e) const;
     };
-    struct HubSectionHeaderClickEventHandler : Windows::Foundation::IUnknown
+    struct HubSectionHeaderClickEventHandler : winrt::Windows::Foundation::IUnknown
     {
         HubSectionHeaderClickEventHandler(std::nullptr_t = nullptr) noexcept {}
-        HubSectionHeaderClickEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        HubSectionHeaderClickEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> HubSectionHeaderClickEventHandler(L lambda);
         template <typename F> HubSectionHeaderClickEventHandler(F* function);
         template <typename O, typename M> HubSectionHeaderClickEventHandler(O* object, M method);
@@ -87,10 +87,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
         template <typename O, typename M> HubSectionHeaderClickEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Controls::HubSectionHeaderClickEventArgs const& e) const;
     };
-    struct ItemClickEventHandler : Windows::Foundation::IUnknown
+    struct ItemClickEventHandler : winrt::Windows::Foundation::IUnknown
     {
         ItemClickEventHandler(std::nullptr_t = nullptr) noexcept {}
-        ItemClickEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        ItemClickEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> ItemClickEventHandler(L lambda);
         template <typename F> ItemClickEventHandler(F* function);
         template <typename O, typename M> ItemClickEventHandler(O* object, M method);
@@ -98,10 +98,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
         template <typename O, typename M> ItemClickEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Controls::ItemClickEventArgs const& e) const;
     };
-    struct ListViewItemToKeyHandler : Windows::Foundation::IUnknown
+    struct ListViewItemToKeyHandler : winrt::Windows::Foundation::IUnknown
     {
         ListViewItemToKeyHandler(std::nullptr_t = nullptr) noexcept {}
-        ListViewItemToKeyHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        ListViewItemToKeyHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> ListViewItemToKeyHandler(L lambda);
         template <typename F> ListViewItemToKeyHandler(F* function);
         template <typename O, typename M> ListViewItemToKeyHandler(O* object, M method);
@@ -109,10 +109,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
         template <typename O, typename M> ListViewItemToKeyHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& item) const;
     };
-    struct ListViewKeyToItemHandler : Windows::Foundation::IUnknown
+    struct ListViewKeyToItemHandler : winrt::Windows::Foundation::IUnknown
     {
         ListViewKeyToItemHandler(std::nullptr_t = nullptr) noexcept {}
-        ListViewKeyToItemHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        ListViewKeyToItemHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> ListViewKeyToItemHandler(L lambda);
         template <typename F> ListViewKeyToItemHandler(F* function);
         template <typename O, typename M> ListViewKeyToItemHandler(O* object, M method);
@@ -120,10 +120,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
         template <typename O, typename M> ListViewKeyToItemHandler(weak_ref<O>&& object, M method);
         auto operator()(param::hstring const& key) const;
     };
-    struct NotifyEventHandler : Windows::Foundation::IUnknown
+    struct NotifyEventHandler : winrt::Windows::Foundation::IUnknown
     {
         NotifyEventHandler(std::nullptr_t = nullptr) noexcept {}
-        NotifyEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        NotifyEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> NotifyEventHandler(L lambda);
         template <typename F> NotifyEventHandler(F* function);
         template <typename O, typename M> NotifyEventHandler(O* object, M method);
@@ -131,10 +131,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
         template <typename O, typename M> NotifyEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Controls::NotifyEventArgs const& e) const;
     };
-    struct SectionsInViewChangedEventHandler : Windows::Foundation::IUnknown
+    struct SectionsInViewChangedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         SectionsInViewChangedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        SectionsInViewChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        SectionsInViewChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> SectionsInViewChangedEventHandler(L lambda);
         template <typename F> SectionsInViewChangedEventHandler(F* function);
         template <typename O, typename M> SectionsInViewChangedEventHandler(O* object, M method);
@@ -142,10 +142,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
         template <typename O, typename M> SectionsInViewChangedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Controls::SectionsInViewChangedEventArgs const& e) const;
     };
-    struct SelectionChangedEventHandler : Windows::Foundation::IUnknown
+    struct SelectionChangedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         SelectionChangedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        SelectionChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        SelectionChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> SelectionChangedEventHandler(L lambda);
         template <typename F> SelectionChangedEventHandler(F* function);
         template <typename O, typename M> SelectionChangedEventHandler(O* object, M method);
@@ -153,10 +153,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
         template <typename O, typename M> SelectionChangedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Controls::SelectionChangedEventArgs const& e) const;
     };
-    struct SemanticZoomViewChangedEventHandler : Windows::Foundation::IUnknown
+    struct SemanticZoomViewChangedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         SemanticZoomViewChangedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        SemanticZoomViewChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        SemanticZoomViewChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> SemanticZoomViewChangedEventHandler(L lambda);
         template <typename F> SemanticZoomViewChangedEventHandler(F* function);
         template <typename O, typename M> SemanticZoomViewChangedEventHandler(O* object, M method);
@@ -164,10 +164,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
         template <typename O, typename M> SemanticZoomViewChangedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Controls::SemanticZoomViewChangedEventArgs const& e) const;
     };
-    struct TextChangedEventHandler : Windows::Foundation::IUnknown
+    struct TextChangedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         TextChangedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        TextChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        TextChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> TextChangedEventHandler(L lambda);
         template <typename F> TextChangedEventHandler(F* function);
         template <typename O, typename M> TextChangedEventHandler(O* object, M method);
@@ -175,10 +175,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
         template <typename O, typename M> TextChangedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Controls::TextChangedEventArgs const& e) const;
     };
-    struct TextControlPasteEventHandler : Windows::Foundation::IUnknown
+    struct TextControlPasteEventHandler : winrt::Windows::Foundation::IUnknown
     {
         TextControlPasteEventHandler(std::nullptr_t = nullptr) noexcept {}
-        TextControlPasteEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        TextControlPasteEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> TextControlPasteEventHandler(L lambda);
         template <typename F> TextControlPasteEventHandler(F* function);
         template <typename O, typename M> TextControlPasteEventHandler(O* object, M method);
@@ -186,10 +186,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Controls
         template <typename O, typename M> TextControlPasteEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Controls::TextControlPasteEventArgs const& e) const;
     };
-    struct WebViewNavigationFailedEventHandler : Windows::Foundation::IUnknown
+    struct WebViewNavigationFailedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         WebViewNavigationFailedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        WebViewNavigationFailedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        WebViewNavigationFailedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> WebViewNavigationFailedEventHandler(L lambda);
         template <typename F> WebViewNavigationFailedEventHandler(F* function);
         template <typename O, typename M> WebViewNavigationFailedEventHandler(O* object, M method);

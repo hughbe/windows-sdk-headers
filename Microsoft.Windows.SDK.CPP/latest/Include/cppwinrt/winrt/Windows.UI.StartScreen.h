@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_UI_StartScreen_H
 #define WINRT_Windows_UI_StartScreen_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.UI.h"
 #include "winrt/impl/Windows.ApplicationModel.Core.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -336,7 +336,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_StartScreen_ISecondaryTile2<D>::VisualElementsRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::StartScreen::ISecondaryTile2)->remove_VisualElementsRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::StartScreen::ISecondaryTile2)->remove_VisualElementsRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::StartScreen::SecondaryTile) consume_Windows_UI_StartScreen_ISecondaryTileFactory<D>::CreateTile(param::hstring const& tileId, param::hstring const& shortName, param::hstring const& displayName, param::hstring const& arguments, winrt::Windows::UI::StartScreen::TileOptions const& tileOptions, winrt::Windows::Foundation::Uri const& logoReference) const
     {
@@ -1722,6 +1722,8 @@ namespace std
     template<> struct hash<winrt::Windows::UI::StartScreen::VisualElementsRequest> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::StartScreen::VisualElementsRequestDeferral> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::StartScreen::VisualElementsRequestedEventArgs> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

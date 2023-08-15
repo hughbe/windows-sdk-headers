@@ -570,7 +570,7 @@
 #define ThStackBase 0x28
 #define ThLegoData 0x1b8
 #define KernelThreadObjectLength 0x2a0
-#define ExecutiveThreadObjectLength 0x530
+#define ExecutiveThreadObjectLength 0x540
 
 #define KF_VFP_32REG 0x10
 
@@ -878,7 +878,7 @@
 #define PcStartCycles 0xec8
 #define PcSpBase 0xc4c
 #define PcCycleCounterHigh 0xef0
-#define ProcessorControlRegisterLength 0x70e0
+#define ProcessorControlRegisterLength 0x6fe0
 
 //
 // Defines for user shared data
@@ -930,7 +930,7 @@
 #define PbPacketBarrier 0x600
 #define PbDeferredReadyListHead 0x604
 #define PbLookasideIrpFloat 0x650
-#define PbRequestMailbox 0x6700
+#define PbRequestMailbox 0x6600
 #define PbMailbox 0x680
 #define PbDpcGate 0x700
 #define PbWaitListHead 0x780
@@ -979,7 +979,7 @@
 #define PbCopyReadNoWait 0x644
 #define PbCopyReadWait 0x648
 #define PbCopyReadNoWaitMiss 0x64c
-#define PbAlignmentFixupCount 0xd08
+#define PbAlignmentFixupCount 0xd10
 #define PbExceptionDispatchCount 0x934
 #define PbProcessorVendorString 0x508
 #define PbFeatureBits 0x50c

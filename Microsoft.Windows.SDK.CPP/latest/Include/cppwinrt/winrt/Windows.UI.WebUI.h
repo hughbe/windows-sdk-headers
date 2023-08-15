@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_UI_WebUI_H
 #define WINRT_Windows_UI_WebUI_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.UI.h"
 #include "winrt/impl/Windows.ApplicationModel.2.h"
 #include "winrt/impl/Windows.ApplicationModel.Activation.2.h"
@@ -165,7 +165,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_IWebUIActivationStatics<D>::Activated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIActivationStatics)->remove_Activated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIActivationStatics)->remove_Activated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_WebUI_IWebUIActivationStatics<D>::Suspending(winrt::Windows::UI::WebUI::SuspendingEventHandler const& handler) const
     {
@@ -179,7 +179,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_IWebUIActivationStatics<D>::Suspending(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIActivationStatics)->remove_Suspending(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIActivationStatics)->remove_Suspending(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_WebUI_IWebUIActivationStatics<D>::Resuming(winrt::Windows::UI::WebUI::ResumingEventHandler const& handler) const
     {
@@ -193,7 +193,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_IWebUIActivationStatics<D>::Resuming(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIActivationStatics)->remove_Resuming(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIActivationStatics)->remove_Resuming(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_WebUI_IWebUIActivationStatics<D>::Navigated(winrt::Windows::UI::WebUI::NavigatedEventHandler const& handler) const
     {
@@ -207,7 +207,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_IWebUIActivationStatics<D>::Navigated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIActivationStatics)->remove_Navigated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIActivationStatics)->remove_Navigated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_WebUI_IWebUIActivationStatics2<D>::LeavingBackground(winrt::Windows::UI::WebUI::LeavingBackgroundEventHandler const& handler) const
     {
@@ -221,7 +221,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_IWebUIActivationStatics2<D>::LeavingBackground(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIActivationStatics2)->remove_LeavingBackground(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIActivationStatics2)->remove_LeavingBackground(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_WebUI_IWebUIActivationStatics2<D>::EnteredBackground(winrt::Windows::UI::WebUI::EnteredBackgroundEventHandler const& handler) const
     {
@@ -235,7 +235,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_IWebUIActivationStatics2<D>::EnteredBackground(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIActivationStatics2)->remove_EnteredBackground(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIActivationStatics2)->remove_EnteredBackground(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_IWebUIActivationStatics2<D>::EnablePrelaunch(bool value) const
     {
@@ -265,7 +265,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_IWebUIActivationStatics4<D>::NewWebUIViewCreated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIActivationStatics4)->remove_NewWebUIViewCreated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIActivationStatics4)->remove_NewWebUIViewCreated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_WebUI_IWebUIActivationStatics4<D>::BackgroundActivated(winrt::Windows::UI::WebUI::BackgroundActivatedEventHandler const& handler) const
     {
@@ -279,7 +279,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_IWebUIActivationStatics4<D>::BackgroundActivated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIActivationStatics4)->remove_BackgroundActivated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIActivationStatics4)->remove_BackgroundActivated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_WebUI_IWebUIBackgroundTaskInstance<D>::Succeeded() const
     {
@@ -331,7 +331,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_IWebUIView<D>::Closed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIView)->remove_Closed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIView)->remove_Closed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_WebUI_IWebUIView<D>::Activated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::WebUI::WebUIView, winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs> const& handler) const
     {
@@ -345,7 +345,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_WebUI_IWebUIView<D>::Activated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIView)->remove_Activated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::WebUI::IWebUIView)->remove_Activated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_WebUI_IWebUIView<D>::IgnoreApplicationContentUriRulesNavigationRestrictions() const
     {
@@ -1343,6 +1343,8 @@ namespace std
     template<> struct hash<winrt::Windows::UI::WebUI::WebUIWalletActionActivatedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::WebUI::WebUIWebAccountProviderActivatedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::WebUI::WebUIWebAuthenticationBrokerContinuationEventArgs> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

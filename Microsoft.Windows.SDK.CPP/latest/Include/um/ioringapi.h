@@ -16,6 +16,7 @@
 #include <ntioring_x.h>
 #include <windef.h>
 #include <winbase.h>
+#include <sdkddkver.h>
 
 #pragma region Application Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
@@ -178,6 +179,9 @@ typedef struct IORING_CQE
     ULONG_PTR Information;
 } IORING_CQE;
 
+#endif // NTDDI_VERSION >= NTDDI_WIN10_CO
+#endif // ifdef NTDDI_WIN10_CO
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -221,7 +225,7 @@ BuildIoRingReadFile(
     UINT32 numberOfBytesToRead,
     UINT64 fileOffset,
     UINT_PTR userData,
-    IORING_SQE_FLAGS flags
+    IORING_SQE_FLAGS sqeFlags
     );
 
 // Builds a submission queue entry for IORING_OP_REGISTER_FILES
@@ -264,7 +268,7 @@ BuildIoRingFlushFile(
     IORING_HANDLE_REF fileRef,
     FILE_FLUSH_MODE flushMode,
     UINT_PTR userData,
-    IORING_SQE_FLAGS flags
+    IORING_SQE_FLAGS sqeFlags
     );
 #pragma endregion // api-ms-win-core-ioring-l1-1-1
 
@@ -272,8 +276,6 @@ BuildIoRingFlushFile(
 } //extern "C"
 #endif
 
-#endif // NTDDI_VERSION >= NTDDI_WIN10_CO
-#endif // ifdef NTDDI_WIN10_CO
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 #pragma endregion // Application Family or OneCore Family
 

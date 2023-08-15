@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -84,7 +84,7 @@ WINRT_EXPORT namespace winrt::Windows::Media::Capture::Frames
         static auto GetDeviceSelector();
     };
     struct __declspec(empty_bases) MediaFrameSourceInfo : winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo,
-        impl::require<MediaFrameSourceInfo, winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo2, winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo3>
+        impl::require<MediaFrameSourceInfo, winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo2, winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo3, winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo4>
     {
         MediaFrameSourceInfo(std::nullptr_t) noexcept {}
         MediaFrameSourceInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo(ptr, take_ownership_from_abi) {}

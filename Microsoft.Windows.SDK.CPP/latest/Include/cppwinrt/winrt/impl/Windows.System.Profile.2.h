@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -30,6 +30,17 @@ WINRT_EXPORT namespace winrt::Windows::System::Profile
     {
         AppApplicability() = delete;
         static auto GetUnsupportedAppRequirements(param::iterable<hstring> const& capabilities);
+    };
+    struct AppControlPolicy
+    {
+        AppControlPolicy() = delete;
+        [[nodiscard]] static auto IsEnabled();
+        [[nodiscard]] static auto CanDisable();
+        [[nodiscard]] static auto IsDisableSupported();
+        static auto Changed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler);
+        using Changed_revoker = impl::factory_event_revoker<winrt::Windows::System::Profile::IAppControlPolicyStatics, &impl::abi_t<winrt::Windows::System::Profile::IAppControlPolicyStatics>::remove_Changed>;
+        [[nodiscard]] static Changed_revoker Changed(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler);
+        static auto Changed(winrt::event_token const& token);
     };
     struct EducationSettings
     {

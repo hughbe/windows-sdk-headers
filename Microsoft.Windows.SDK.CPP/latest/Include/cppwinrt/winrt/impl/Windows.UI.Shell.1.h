@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -23,33 +23,26 @@ WINRT_EXPORT namespace winrt::Windows::UI::Shell
         IAdaptiveCardBuilderStatics(std::nullptr_t = nullptr) noexcept {}
         IAdaptiveCardBuilderStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) IFocusAssistChangedEventArgs :
+    struct __declspec(empty_bases) IFocusSession :
         winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IFocusAssistChangedEventArgs>
+        impl::consume_t<IFocusSession>
     {
-        IFocusAssistChangedEventArgs(std::nullptr_t = nullptr) noexcept {}
-        IFocusAssistChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IFocusSession(std::nullptr_t = nullptr) noexcept {}
+        IFocusSession(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) IFocusAssistManager :
+    struct __declspec(empty_bases) IFocusSessionManager :
         winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IFocusAssistManager>
+        impl::consume_t<IFocusSessionManager>
     {
-        IFocusAssistManager(std::nullptr_t = nullptr) noexcept {}
-        IFocusAssistManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IFocusSessionManager(std::nullptr_t = nullptr) noexcept {}
+        IFocusSessionManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) IFocusAssistManagerStatics :
+    struct __declspec(empty_bases) IFocusSessionManagerStatics :
         winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IFocusAssistManagerStatics>
+        impl::consume_t<IFocusSessionManagerStatics>
     {
-        IFocusAssistManagerStatics(std::nullptr_t = nullptr) noexcept {}
-        IFocusAssistManagerStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
-    struct __declspec(empty_bases) IFocusAssistSession :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IFocusAssistSession>
-    {
-        IFocusAssistSession(std::nullptr_t = nullptr) noexcept {}
-        IFocusAssistSession(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IFocusSessionManagerStatics(std::nullptr_t = nullptr) noexcept {}
+        IFocusSessionManagerStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ISecurityAppManager :
         winrt::Windows::Foundation::IInspectable,

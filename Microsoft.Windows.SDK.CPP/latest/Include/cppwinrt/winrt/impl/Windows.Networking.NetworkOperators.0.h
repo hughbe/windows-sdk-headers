@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -1016,7 +1016,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Networking::NetworkOperators::IUssdSessionStatics> = L"Windows.Networking.NetworkOperators.IUssdSessionStatics";
     template <> inline constexpr guid guid_v<winrt::Windows::Networking::NetworkOperators::IESim>{ 0x6F6E6E26,0xF123,0x437D,{ 0x8C,0xED,0xDC,0x1D,0x2B,0xC0,0xC3,0xA9 } }; // 6F6E6E26-F123-437D-8CED-DC1D2BC0C3A9
     template <> inline constexpr guid guid_v<winrt::Windows::Networking::NetworkOperators::IESim2>{ 0xBD4FD0A0,0xC68F,0x56EB,{ 0xB9,0x9B,0x8F,0x34,0xB8,0x10,0x02,0x99 } }; // BD4FD0A0-C68F-56EB-B99B-8F34B8100299
-    template <> inline constexpr guid guid_v<winrt::Windows::Networking::NetworkOperators::IESim3>{ 0xB203E825,0x6BF4,0x545B,{ 0xAC,0x47,0x82,0xE0,0xCA,0x15,0xDD,0x55 } }; // B203E825-6BF4-545B-AC47-82E0CA15DD55
+    template <> inline constexpr guid guid_v<winrt::Windows::Networking::NetworkOperators::IESim3>{ 0xFE1EDF45,0x01B8,0x5D31,{ 0xB8,0xD3,0xD9,0xCB,0xEB,0xB2,0xB8,0x31 } }; // FE1EDF45-01B8-5D31-B8D3-D9CBEBB2B831
     template <> inline constexpr guid guid_v<winrt::Windows::Networking::NetworkOperators::IESimAddedEventArgs>{ 0x38BD0A58,0x4D5A,0x4D08,{ 0x8D,0xA7,0xE7,0x3E,0xFF,0x36,0x9D,0xDD } }; // 38BD0A58-4D5A-4D08-8DA7-E73EFF369DDD
     template <> inline constexpr guid guid_v<winrt::Windows::Networking::NetworkOperators::IESimDiscoverEvent>{ 0xE59AC3E3,0x39BC,0x5F6F,{ 0x93,0x21,0x0D,0x4A,0x18,0x2D,0x26,0x1B } }; // E59AC3E3-39BC-5F6F-9321-0D4A182D261B
     template <> inline constexpr guid guid_v<winrt::Windows::Networking::NetworkOperators::IESimDiscoverResult>{ 0x56B4BB5E,0xAB2F,0x5AC6,{ 0xB3,0x59,0xDD,0x5A,0x8E,0x23,0x79,0x26 } }; // 56B4BB5E-AB2F-5AC6-B359-DD5A8E237926
@@ -1236,7 +1236,7 @@ namespace winrt::impl
     {
         struct __declspec(novtable) type : inspectable_abi
         {
-            virtual int32_t __stdcall get_SlotId(uint32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_SlotIndex(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Networking::NetworkOperators::IESimAddedEventArgs>
@@ -1824,8 +1824,10 @@ namespace winrt::impl
     {
         struct __declspec(novtable) type : inspectable_abi
         {
-            virtual int32_t __stdcall SetIsPassthroughEnabledAsync(bool, uint32_t, void**) noexcept = 0;
-            virtual int32_t __stdcall GetIsPassthroughEnabledAsync(uint32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall SetIsPassthroughEnabledWithSlotIndexAsync(bool, int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall GetIsPassthroughEnabledWithSlotIndexAsync(int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall SetIsPassthroughEnabledWithSlotIndex(bool, int32_t, int32_t*) noexcept = 0;
+            virtual int32_t __stdcall GetIsPassthroughEnabledWithSlotIndex(int32_t, bool*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModemConfiguration>
@@ -2343,7 +2345,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_NetworkOperators_IESim3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(uint32_t) SlotId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) SlotIndex() const;
     };
     template <> struct consume<winrt::Windows::Networking::NetworkOperators::IESim3>
     {
@@ -3075,8 +3077,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Networking_NetworkOperators_IMobileBroadbandModem4
     {
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemStatus>) SetIsPassthroughEnabledAsync(bool value, uint32_t slotid) const;
-        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) GetIsPassthroughEnabledAsync(uint32_t slotid) const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemStatus>) SetIsPassthroughEnabledAsync(bool value, int32_t slotindex) const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) GetIsPassthroughEnabledAsync(int32_t slotindex) const;
+        WINRT_IMPL_AUTO(winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemStatus) SetIsPassthroughEnabled(bool value, int32_t slotindex) const;
+        WINRT_IMPL_AUTO(bool) GetIsPassthroughEnabled(int32_t slotindex) const;
     };
     template <> struct consume<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem4>
     {

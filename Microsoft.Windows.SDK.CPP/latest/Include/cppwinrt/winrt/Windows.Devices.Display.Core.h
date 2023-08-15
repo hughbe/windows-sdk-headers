@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Devices_Display_Core_H
 #define WINRT_Windows_Devices_Display_Core_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Devices.Display.h"
 #include "winrt/impl/Windows.Devices.Display.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -184,7 +184,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Display_Core_IDisplayManager<D>::Enabled(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::Core::IDisplayManager)->remove_Enabled(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::Core::IDisplayManager)->remove_Enabled(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Display_Core_IDisplayManager<D>::Disabled(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Display::Core::DisplayManager, winrt::Windows::Devices::Display::Core::DisplayManagerDisabledEventArgs> const& handler) const
     {
@@ -198,7 +198,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Display_Core_IDisplayManager<D>::Disabled(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::Core::IDisplayManager)->remove_Disabled(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::Core::IDisplayManager)->remove_Disabled(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Display_Core_IDisplayManager<D>::Changed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Display::Core::DisplayManager, winrt::Windows::Devices::Display::Core::DisplayManagerChangedEventArgs> const& handler) const
     {
@@ -212,7 +212,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Display_Core_IDisplayManager<D>::Changed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::Core::IDisplayManager)->remove_Changed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::Core::IDisplayManager)->remove_Changed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Display_Core_IDisplayManager<D>::PathsFailedOrInvalidated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Display::Core::DisplayManager, winrt::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs> const& handler) const
     {
@@ -226,7 +226,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Display_Core_IDisplayManager<D>::PathsFailedOrInvalidated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::Core::IDisplayManager)->remove_PathsFailedOrInvalidated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::Core::IDisplayManager)->remove_PathsFailedOrInvalidated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Display_Core_IDisplayManager<D>::Start() const
     {
@@ -608,7 +608,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Display_Core_IDisplaySource2<D>::StatusChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::Core::IDisplaySource2)->remove_StatusChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::Core::IDisplaySource2)->remove_StatusChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Display_Core_IDisplayState<D>::IsReadOnly() const
     {
@@ -2547,6 +2547,8 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Display::Core::DisplayTaskResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::DisplayView> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::Core::DisplayWireFormat> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

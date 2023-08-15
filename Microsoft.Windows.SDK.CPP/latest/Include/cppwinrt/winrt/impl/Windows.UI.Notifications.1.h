@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -400,6 +400,13 @@ WINRT_EXPORT namespace winrt::Windows::UI::Notifications
     {
         IToastNotificationManagerForUser2(std::nullptr_t = nullptr) noexcept {}
         IToastNotificationManagerForUser2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IToastNotificationManagerForUser3 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IToastNotificationManagerForUser3>
+    {
+        IToastNotificationManagerForUser3(std::nullptr_t = nullptr) noexcept {}
+        IToastNotificationManagerForUser3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IToastNotificationManagerStatics :
         winrt::Windows::Foundation::IInspectable,

@@ -10216,7 +10216,8 @@ typedef struct _SID_AND_ATTRIBUTES_HASH {
 #define SECURITY_BUILTIN_APP_PACKAGE_RID_COUNT      (2L)
 #define SECURITY_APP_PACKAGE_RID_COUNT              (8L)
 #define SECURITY_CAPABILITY_BASE_RID                (0x00000003L)
-#define SECURITY_CAPABILITY_APP_RID                 (0x000000400)
+#define SECURITY_CAPABILITY_APP_RID                 (0x00000400L)
+#define SECURITY_CAPABILITY_APP_SILO_RID            (0x00010000L)
 #define SECURITY_BUILTIN_CAPABILITY_RID_COUNT       (2L)
 #define SECURITY_CAPABILITY_RID_COUNT               (5L)
 #define SECURITY_PARENT_PACKAGE_RID_COUNT           (SECURITY_APP_PACKAGE_RID_COUNT)
@@ -10247,7 +10248,6 @@ typedef struct _SID_AND_ATTRIBUTES_HASH {
 #define SECURITY_CAPABILITY_CONTACTS                            (0x0000000CL)
 
 #define SECURITY_CAPABILITY_INTERNET_EXPLORER                   (0x00001000L)
-#define SECURITY_CAPABILITY_APP_SILO                            (0x00010000L)
 
 //
 // Mandatory Label Authority.
@@ -11398,6 +11398,10 @@ typedef struct _SE_ACCESS_REPLY
 #define SE_DEVELOPMENT_MODE_NETWORK_CAPABILITY L"developmentModeNetwork"
 #define SE_LEARNING_MODE_LOGGING_CAPABILITY L"learningModeLogging"
 #define SE_PERMISSIVE_LEARNING_MODE_CAPABILITY L"permissiveLearningMode"
+#define SE_APP_SILO_VOLUME_ROOT_MINIMAL_CAPABILITY L"isolatedWin32:volumeRootMinimal"
+#define SE_APP_SILO_PROFILES_ROOT_MINIMAL_CAPABILITY L"isolatedWin32:profilesRootMinimal"
+#define SE_APP_SILO_USER_PROFILE_MINIMAL_CAPABILITY L"isolatedWin32:userProfileMinimal"
+#define SE_APP_SILO_PRINT_CAPABILITY L"isolatedWin32:print"
 
 // end_ntosifs
 
@@ -12486,6 +12490,7 @@ typedef enum _PROCESS_MITIGATION_POLICY {
     ProcessUserShadowStackPolicy,
     ProcessRedirectionTrustPolicy,
     ProcessUserPointerAuthPolicy,
+	ProcessSEHOPPolicy,
     MaxProcessMitigationPolicy
 } PROCESS_MITIGATION_POLICY, *PPROCESS_MITIGATION_POLICY;
 
@@ -12518,6 +12523,16 @@ typedef struct _PROCESS_MITIGATION_DEP_POLICY {
     } DUMMYUNIONNAME;
     BOOLEAN Permanent;
 } PROCESS_MITIGATION_DEP_POLICY, *PPROCESS_MITIGATION_DEP_POLICY;
+
+typedef struct _PROCESS_MITIGATION_SEHOP_POLICY {
+    union {
+        DWORD Flags;
+        struct {
+            DWORD EnableSehop : 1;
+            DWORD ReservedFlags : 31;
+        } DUMMYSTRUCTNAME;
+    } DUMMYUNIONNAME;
+} PROCESS_MITIGATION_SEHOP_POLICY, *PPROCESS_MITIGATION_SEHOP_POLICY;
 
 typedef struct _PROCESS_MITIGATION_STRICT_HANDLE_CHECK_POLICY {
     union {
@@ -15626,6 +15641,14 @@ DEFINE_GUID(GUID_STANDBY_RESET_PERCENT, 0x49cb11a5, 0x56e2, 0x4afb, 0x9d, 0x38, 
 DEFINE_GUID(GUID_HUPR_ADAPTIVE_DISPLAY_TIMEOUT, 0x0A7D6AB6, 0xAC83, 0x4AD1, 0x82, 0x82, 0xEC, 0xA5, 0xB5, 0x83, 0x08, 0xF3);
 
 //
+// Defines a guid to control Human Presence Sensor Adaptive Dim Timeout;
+//
+// {CF8C6097-12B8-4279-BBDD-44601EE5209D}
+//
+
+DEFINE_GUID(GUID_HUPR_ADAPTIVE_DIM_TIMEOUT, 0xCF8C6097, 0x12B8, 0x4279, 0xBB, 0xDD, 0x44, 0x60, 0x1E, 0xE5, 0x20, 0x9D);
+
+//
 // Defines a guid for enabling/disabling standby (S1-S3) states. This does not
 // affect hibernation (S4).
 //
@@ -16418,6 +16441,19 @@ DEFINE_GUID(GUID_PROCESSOR_COMPLEX_PARKING_POLICY, 0xb669a5e9, 0x7b1d, 0x4132, 0
 #define PARKING_TOPOLOGY_POLICY_DISABLED    0
 #define PARKING_TOPOLOGY_POLICY_ROUNDROBIN  1
 #define PARKING_TOPOLOGY_POLICY_SEQUENTIAL  2
+
+//
+// Specifies the Smt unparking policy.
+//
+// {b28a6829-c5f7-444e-8f61-10e24e85c532}
+//
+
+DEFINE_GUID(GUID_PROCESSOR_SMT_UNPARKING_POLICY, 0xb28a6829, 0xc5f7, 0x444e, 0x8f, 0x61, 0x10, 0xe2, 0x4e, 0x85, 0xc5, 0x32);
+
+#define SMT_UNPARKING_POLICY_CORE 0
+#define SMT_UNPARKING_POLICY_CORE_PER_THREAD 1
+#define SMT_UNPARKING_POLICY_LP_ROUNDROBIN 2
+#define SMT_UNPARKING_POLICY_LP_SEQUENTIAL 3
 
 //
 // Specifies whether the core parking engine should distribute processor
@@ -19769,6 +19805,7 @@ typedef PIMAGE_DYNAMIC_RELOCATION32_V2      PIMAGE_DYNAMIC_RELOCATION_V2;
 #define IMAGE_DYNAMIC_RELOCATION_GUARD_IMPORT_CONTROL_TRANSFER  0x00000003
 #define IMAGE_DYNAMIC_RELOCATION_GUARD_INDIR_CONTROL_TRANSFER   0x00000004
 #define IMAGE_DYNAMIC_RELOCATION_GUARD_SWITCHTABLE_BRANCH       0x00000005
+#define IMAGE_DYNAMIC_RELOCATION_FUNCTION_OVERRIDE              0x00000007
 
 #include "pshpack1.h"
 
@@ -19809,6 +19846,48 @@ typedef struct _IMAGE_SWITCHTABLE_BRANCH_DYNAMIC_RELOCATION {
     WORD        RegisterNumber     : 4;
 } IMAGE_SWITCHTABLE_BRANCH_DYNAMIC_RELOCATION;
 typedef IMAGE_SWITCHTABLE_BRANCH_DYNAMIC_RELOCATION UNALIGNED * PIMAGE_SWITCHTABLE_BRANCH_DYNAMIC_RELOCATION;
+
+typedef struct _IMAGE_FUNCTION_OVERRIDE_HEADER {
+    DWORD FuncOverrideSize;
+ // IMAGE_FUNCTION_OVERRIDE_DYNAMIC_RELOCATION  FuncOverrideInfo[ANYSIZE_ARRAY]; // FuncOverrideSize bytes in size
+ // IMAGE_BDD_INFO BDDInfo; // BDD region, size in bytes: DVRTEntrySize - sizeof(IMAGE_FUNCTION_OVERRIDE_HEADER) - FuncOverrideSize
+} IMAGE_FUNCTION_OVERRIDE_HEADER;
+typedef IMAGE_FUNCTION_OVERRIDE_HEADER UNALIGNED * PIMAGE_FUNCTION_OVERRIDE_HEADER;
+
+typedef struct _IMAGE_FUNCTION_OVERRIDE_DYNAMIC_RELOCATION {
+    DWORD OriginalRva;          // RVA of original function
+    DWORD BDDOffset;            // Offset into the BDD region
+    DWORD RvaSize;              // Size in bytes taken by RVAs. Must be multiple of sizeof(DWORD).
+    DWORD BaseRelocSize;        // Size in bytes taken by BaseRelocs
+
+    // DWORD RVAs[RvaSize / sizeof(DWORD)];     // Array containing overriding func RVAs. 
+
+    // IMAGE_BASE_RELOCATION  BaseRelocs[ANYSIZE_ARRAY]; // Base relocations (RVA + Size + TO)
+                                                         //  Padded with extra TOs for 4B alignment
+                                                         // BaseRelocSize size in bytes
+} IMAGE_FUNCTION_OVERRIDE_DYNAMIC_RELOCATION;
+typedef IMAGE_FUNCTION_OVERRIDE_DYNAMIC_RELOCATION * PIMAGE_FUNCTION_OVERRIDE_DYNAMIC_RELOCATION;
+
+typedef struct _IMAGE_BDD_INFO {
+    DWORD         Version;      // decides the semantics of serialized BDD
+    DWORD         BDDSize;
+    // IMAGE_BDD_DYNAMIC_RELOCATION BDDNodes[ANYSIZE_ARRAY]; // BDDSize size in bytes.
+} IMAGE_BDD_INFO;
+typedef IMAGE_BDD_INFO * PIMAGE_BDD_INFO;
+
+typedef struct _IMAGE_BDD_DYNAMIC_RELOCATION {
+    WORD   Left;                // Index of FALSE edge in BDD array
+    WORD   Right;               // Index of TRUE edge in BDD array
+    DWORD  Value;               // Either FeatureNumber or Index into RVAs array
+} IMAGE_BDD_DYNAMIC_RELOCATION;
+typedef IMAGE_BDD_DYNAMIC_RELOCATION * PIMAGE_BDD_DYNAMIC_RELOCATION;
+
+// Function override relocation types in DVRT records.
+
+#define IMAGE_FUNCTION_OVERRIDE_INVALID         0
+#define IMAGE_FUNCTION_OVERRIDE_X64_REL32       1  // 32-bit relative address from byte following reloc
+#define IMAGE_FUNCTION_OVERRIDE_ARM64_BRANCH26  2  // 26 bit offset << 2 & sign ext. for B & BL
+#define IMAGE_FUNCTION_OVERRIDE_ARM64_THUNK     3
 
 #include "poppack.h"                    // Back to 4 byte packing
 

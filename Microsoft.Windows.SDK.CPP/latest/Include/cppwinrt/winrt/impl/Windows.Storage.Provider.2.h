@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -72,6 +72,24 @@ WINRT_EXPORT namespace winrt::Windows::Storage::Provider
         StorageProviderItemPropertyDefinition(std::nullptr_t) noexcept {}
         StorageProviderItemPropertyDefinition(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::Provider::IStorageProviderItemPropertyDefinition(ptr, take_ownership_from_abi) {}
         StorageProviderItemPropertyDefinition();
+    };
+    struct __declspec(empty_bases) StorageProviderMoreInfoUI : winrt::Windows::Storage::Provider::IStorageProviderMoreInfoUI
+    {
+        StorageProviderMoreInfoUI(std::nullptr_t) noexcept {}
+        StorageProviderMoreInfoUI(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::Provider::IStorageProviderMoreInfoUI(ptr, take_ownership_from_abi) {}
+        StorageProviderMoreInfoUI();
+    };
+    struct __declspec(empty_bases) StorageProviderQuotaUI : winrt::Windows::Storage::Provider::IStorageProviderQuotaUI
+    {
+        StorageProviderQuotaUI(std::nullptr_t) noexcept {}
+        StorageProviderQuotaUI(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::Provider::IStorageProviderQuotaUI(ptr, take_ownership_from_abi) {}
+        StorageProviderQuotaUI();
+    };
+    struct __declspec(empty_bases) StorageProviderStatusUI : winrt::Windows::Storage::Provider::IStorageProviderStatusUI
+    {
+        StorageProviderStatusUI(std::nullptr_t) noexcept {}
+        StorageProviderStatusUI(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::Provider::IStorageProviderStatusUI(ptr, take_ownership_from_abi) {}
+        StorageProviderStatusUI();
     };
     struct __declspec(empty_bases) StorageProviderSyncRootInfo : winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo,
         impl::require<StorageProviderSyncRootInfo, winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo2, winrt::Windows::Storage::Provider::IStorageProviderSyncRootInfo3>

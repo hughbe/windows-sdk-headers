@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,10 +10,10 @@
 #include "winrt/impl/Windows.Data.Text.1.h"
 WINRT_EXPORT namespace winrt::Windows::Data::Text
 {
-    struct SelectableWordSegmentsTokenizingHandler : Windows::Foundation::IUnknown
+    struct SelectableWordSegmentsTokenizingHandler : winrt::Windows::Foundation::IUnknown
     {
         SelectableWordSegmentsTokenizingHandler(std::nullptr_t = nullptr) noexcept {}
-        SelectableWordSegmentsTokenizingHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        SelectableWordSegmentsTokenizingHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> SelectableWordSegmentsTokenizingHandler(L lambda);
         template <typename F> SelectableWordSegmentsTokenizingHandler(F* function);
         template <typename O, typename M> SelectableWordSegmentsTokenizingHandler(O* object, M method);
@@ -21,10 +21,10 @@ WINRT_EXPORT namespace winrt::Windows::Data::Text
         template <typename O, typename M> SelectableWordSegmentsTokenizingHandler(weak_ref<O>&& object, M method);
         auto operator()(param::iterable<winrt::Windows::Data::Text::SelectableWordSegment> const& precedingWords, param::iterable<winrt::Windows::Data::Text::SelectableWordSegment> const& words) const;
     };
-    struct WordSegmentsTokenizingHandler : Windows::Foundation::IUnknown
+    struct WordSegmentsTokenizingHandler : winrt::Windows::Foundation::IUnknown
     {
         WordSegmentsTokenizingHandler(std::nullptr_t = nullptr) noexcept {}
-        WordSegmentsTokenizingHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        WordSegmentsTokenizingHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> WordSegmentsTokenizingHandler(L lambda);
         template <typename F> WordSegmentsTokenizingHandler(F* function);
         template <typename O, typename M> WordSegmentsTokenizingHandler(O* object, M method);

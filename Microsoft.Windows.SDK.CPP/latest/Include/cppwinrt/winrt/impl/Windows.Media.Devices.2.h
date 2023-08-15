@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,10 +10,10 @@
 #include "winrt/impl/Windows.Media.Devices.1.h"
 WINRT_EXPORT namespace winrt::Windows::Media::Devices
 {
-    struct CallControlEventHandler : Windows::Foundation::IUnknown
+    struct CallControlEventHandler : winrt::Windows::Foundation::IUnknown
     {
         CallControlEventHandler(std::nullptr_t = nullptr) noexcept {}
-        CallControlEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        CallControlEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> CallControlEventHandler(L lambda);
         template <typename F> CallControlEventHandler(F* function);
         template <typename O, typename M> CallControlEventHandler(O* object, M method);
@@ -21,10 +21,10 @@ WINRT_EXPORT namespace winrt::Windows::Media::Devices
         template <typename O, typename M> CallControlEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Media::Devices::CallControl const& sender) const;
     };
-    struct DialRequestedEventHandler : Windows::Foundation::IUnknown
+    struct DialRequestedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         DialRequestedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        DialRequestedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        DialRequestedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> DialRequestedEventHandler(L lambda);
         template <typename F> DialRequestedEventHandler(F* function);
         template <typename O, typename M> DialRequestedEventHandler(O* object, M method);
@@ -32,10 +32,10 @@ WINRT_EXPORT namespace winrt::Windows::Media::Devices
         template <typename O, typename M> DialRequestedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Media::Devices::CallControl const& sender, winrt::Windows::Media::Devices::DialRequestedEventArgs const& e) const;
     };
-    struct KeypadPressedEventHandler : Windows::Foundation::IUnknown
+    struct KeypadPressedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         KeypadPressedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        KeypadPressedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        KeypadPressedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> KeypadPressedEventHandler(L lambda);
         template <typename F> KeypadPressedEventHandler(F* function);
         template <typename O, typename M> KeypadPressedEventHandler(O* object, M method);
@@ -43,10 +43,10 @@ WINRT_EXPORT namespace winrt::Windows::Media::Devices
         template <typename O, typename M> KeypadPressedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Media::Devices::CallControl const& sender, winrt::Windows::Media::Devices::KeypadPressedEventArgs const& e) const;
     };
-    struct RedialRequestedEventHandler : Windows::Foundation::IUnknown
+    struct RedialRequestedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         RedialRequestedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        RedialRequestedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        RedialRequestedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> RedialRequestedEventHandler(L lambda);
         template <typename F> RedialRequestedEventHandler(F* function);
         template <typename O, typename M> RedialRequestedEventHandler(O* object, M method);
@@ -278,7 +278,7 @@ WINRT_EXPORT namespace winrt::Windows::Media::Devices
         TorchControl(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Media::Devices::ITorchControl(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) VideoDeviceController : winrt::Windows::Media::Devices::IVideoDeviceController,
-        impl::require<VideoDeviceController, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController8, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController9, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10>
+        impl::require<VideoDeviceController, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController5, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController6, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController7, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController8, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController9, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10, winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController11>
     {
         VideoDeviceController(std::nullptr_t) noexcept {}
         VideoDeviceController(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Media::Devices::IVideoDeviceController(ptr, take_ownership_from_abi) {}

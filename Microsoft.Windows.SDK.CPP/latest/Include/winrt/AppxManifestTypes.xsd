@@ -926,6 +926,14 @@
       <xs:enumeration value="windows.fileExplorerClassicDragDropContextMenuHandler"/>
     </xs:restriction>
   </xs:simpleType>
+
+  <xs:simpleType name="ST_ExtensionCategory_Desktop10">
+    <xs:restriction base="xs:string">
+      <!-- Package Extensions -->
+      <xs:enumeration value="windows.folder"/>
+      <xs:enumeration value="windows.dataShortcuts"/>
+    </xs:restriction>
+  </xs:simpleType>
   
   <xs:simpleType name="ST_ExtensionCategory_PreviewAppCompat2">
     <xs:restriction base="xs:string">
@@ -1509,6 +1517,31 @@
       </xs:restriction>
   </xs:simpleType>
 
+  <!-- CLASSIC APP COMPAT KEYS SCHEMA TYPES -->
+  <xs:simpleType name="ST_RegistryPath">
+    <xs:restriction base="ST_NonEmptyString">
+      <xs:pattern value="[hH][kK][eE][yY]_[cC][uU][rR][rR][eE][nN][tT]_[uU][sS][eE][rR]\\.+"/>
+      <xs:pattern value="[hH][kK][eE][yY]_[lL][oO][cC][aA][lL]_[mM][aA][cC][hH][iI][nN][eE]\\[sS][oO][fF][tT][wW][aA][rR][eE]\\.+"/>
+      <xs:pattern value="[hH][kK][eE][yY]_[uU][sS][eE][rR][sS]\\[sS][oO][fF][tT][wW][aA][rR][eE]\\.+"/>
+      <xs:pattern value="[hH][kK][eE][yY]_[cC][uU][rR][rR][eE][nN][tT]_[cC][oO][nN][fF][iI][gG]\\[sS][oO][fF][tT][wW][aA][rR][eE]\\.+"/>
+      <xs:pattern value="[hH][kK][cC][uU]\\.+"/>
+      <xs:pattern value="[hH][kK][lL][mM]\\[sS][oO][fF][tT][wW][aA][rR][eE]\\.+"/>
+      <xs:pattern value="[hH][kK][uU]\\[sS][oO][fF][tT][wW][aA][rR][eE]\\.+"/>
+      <xs:pattern value="[hH][kK][cC][cC]\\[sS][oO][fF][tT][wW][aA][rR][eE]\\.+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ST_ValueType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="REG_SZ"/>
+      <xs:enumeration value="REG_BINARY"/>
+      <xs:enumeration value="REG_DWORD"/>
+      <xs:enumeration value="REG_QWORD"/>
+      <xs:enumeration value="REG_MULTI_SZ"/>
+      <xs:enumeration value="REG_EXPAND_SZ"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
   <!-- CERTIFICATES EXTENSION SCHEMA TYPES -->
   <xs:simpleType name="ST_CertificateStoreName">
     <xs:restriction base="ST_FileNameCharSet">

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,10 +11,10 @@
 #include "winrt/impl/Windows.System.Threading.Core.1.h"
 WINRT_EXPORT namespace winrt::Windows::System::Threading::Core
 {
-    struct SignalHandler : Windows::Foundation::IUnknown
+    struct SignalHandler : winrt::Windows::Foundation::IUnknown
     {
         SignalHandler(std::nullptr_t = nullptr) noexcept {}
-        SignalHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        SignalHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> SignalHandler(L lambda);
         template <typename F> SignalHandler(F* function);
         template <typename O, typename M> SignalHandler(O* object, M method);

@@ -649,6 +649,19 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            interface IPackageCatalogStatics2;
+        } /* ApplicationModel */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2 ABI::Windows::ApplicationModel::IPackageCatalogStatics2
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CApplicationModel_CIPackageContentGroup_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CIPackageContentGroup_FWD_DEFINED__
 namespace ABI {
@@ -4868,6 +4881,39 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatic
 
 /*
  *
+ * Interface Windows.ApplicationModel.IPackageCatalogStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_IPackageCatalogStatics2[] = L"Windows.ApplicationModel.IPackageCatalogStatics2";
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            MIDL_INTERFACE("4c11c159-9a28-598c-b185-55e1899b2be4")
+            IPackageCatalogStatics2 : public IInspectable
+            {
+            public:
+                virtual HRESULT STDMETHODCALLTYPE OpenForPackage(
+                    ABI::Windows::ApplicationModel::IPackage* package,
+                    ABI::Windows::ApplicationModel::IPackageCatalog** result
+                    ) = 0;
+            };
+
+            extern MIDL_CONST_ID IID& IID_IPackageCatalogStatics2 = _uuidof(IPackageCatalogStatics2);
+        } /* ApplicationModel */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
  * Interface Windows.ApplicationModel.IPackageContentGroup
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
@@ -5800,8 +5846,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics2 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics2 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5884,8 +5930,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.ApplicationModel.FullTrustAppContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.ApplicationModel.IFullTrustProcessLauncherStatics interface starting with version 1.0 of the Windows.ApplicationModel.FullTrustAppContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.IFullTrustProcessLauncherStatics2 interface starting with version 2.0 of the Windows.ApplicationModel.FullTrustAppContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.IFullTrustProcessLauncherStatics interface starting with version 1.0 of the Windows.ApplicationModel.FullTrustAppContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -5999,6 +6045,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.ApplicationModel.IPackageCatalogStatics interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.IPackageCatalogStatics2 interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.IPackageCatalog ** Default Interface **
@@ -6617,6 +6664,12 @@ typedef interface __x_ABI_CWindows_CApplicationModel_CIPackageCatalogRemoveResou
 typedef interface __x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics __x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics;
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2 __x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2;
+
+#endif // ____x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CIPackageContentGroup_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CIPackageContentGroup_FWD_DEFINED__
@@ -14162,6 +14215,74 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatic
 
 /*
  *
+ * Interface Windows.ApplicationModel.IPackageCatalogStatics2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_IPackageCatalogStatics2[] = L"Windows.ApplicationModel.IPackageCatalogStatics2";
+typedef struct __x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* OpenForPackage)(__x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2* This,
+        __x_ABI_CWindows_CApplicationModel_CIPackage* package,
+        __x_ABI_CWindows_CApplicationModel_CIPackageCatalog** result);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2Vtbl;
+
+interface __x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_OpenForPackage(This, package, result) \
+    ((This)->lpVtbl->OpenForPackage(This, package, result))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2;
+#endif /* !defined(____x_ABI_CWindows_CApplicationModel_CIPackageCatalogStatics2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
  * Interface Windows.ApplicationModel.IPackageContentGroup
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
@@ -15905,8 +16026,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics2 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics2 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15989,8 +16110,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.ApplicationModel.FullTrustAppContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.ApplicationModel.IFullTrustProcessLauncherStatics interface starting with version 1.0 of the Windows.ApplicationModel.FullTrustAppContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.IFullTrustProcessLauncherStatics2 interface starting with version 2.0 of the Windows.ApplicationModel.FullTrustAppContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.IFullTrustProcessLauncherStatics interface starting with version 1.0 of the Windows.ApplicationModel.FullTrustAppContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -16104,6 +16225,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.ApplicationModel.IPackageCatalogStatics interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.IPackageCatalogStatics2 interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.IPackageCatalog ** Default Interface **

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,10 +10,10 @@
 #include "winrt/impl/Windows.Security.Isolation.1.h"
 WINRT_EXPORT namespace winrt::Windows::Security::Isolation
 {
-    struct HostMessageReceivedCallback : Windows::Foundation::IUnknown
+    struct HostMessageReceivedCallback : winrt::Windows::Foundation::IUnknown
     {
         HostMessageReceivedCallback(std::nullptr_t = nullptr) noexcept {}
-        HostMessageReceivedCallback(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        HostMessageReceivedCallback(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> HostMessageReceivedCallback(L lambda);
         template <typename F> HostMessageReceivedCallback(F* function);
         template <typename O, typename M> HostMessageReceivedCallback(O* object, M method);
@@ -21,10 +21,10 @@ WINRT_EXPORT namespace winrt::Windows::Security::Isolation
         template <typename O, typename M> HostMessageReceivedCallback(weak_ref<O>&& object, M method);
         auto operator()(winrt::guid const& receiverId, param::vector_view<winrt::Windows::Foundation::IInspectable> const& message) const;
     };
-    struct MessageReceivedCallback : Windows::Foundation::IUnknown
+    struct MessageReceivedCallback : winrt::Windows::Foundation::IUnknown
     {
         MessageReceivedCallback(std::nullptr_t = nullptr) noexcept {}
-        MessageReceivedCallback(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        MessageReceivedCallback(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> MessageReceivedCallback(L lambda);
         template <typename F> MessageReceivedCallback(F* function);
         template <typename O, typename M> MessageReceivedCallback(O* object, M method);
@@ -79,7 +79,7 @@ WINRT_EXPORT namespace winrt::Windows::Security::Isolation
         IsolatedWindowsEnvironmentLaunchFileResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentLaunchFileResult(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IsolatedWindowsEnvironmentOptions : winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions,
-        impl::require<IsolatedWindowsEnvironmentOptions, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions2>
+        impl::require<IsolatedWindowsEnvironmentOptions, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions2, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions3>
     {
         IsolatedWindowsEnvironmentOptions(std::nullptr_t) noexcept {}
         IsolatedWindowsEnvironmentOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOptions(ptr, take_ownership_from_abi) {}

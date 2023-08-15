@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Web_Http_Headers_H
 #define WINRT_Windows_Web_Http_Headers_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Web.Http.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -3658,6 +3658,41 @@ namespace std
     template<> struct hash<winrt::Windows::Web::Http::Headers::HttpResponseHeaderCollection> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpContentHeaderCollection, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpProductHeaderValue, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpRequestHeaderCollection, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpResponseHeaderCollection, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
+    template<> struct formatter<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection, wchar_t> : formatter<winrt::Windows::Foundation::IStringable, wchar_t> {};
 #endif
 }
 #endif

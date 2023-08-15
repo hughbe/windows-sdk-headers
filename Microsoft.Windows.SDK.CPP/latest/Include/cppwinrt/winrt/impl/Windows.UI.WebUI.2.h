@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -16,10 +16,10 @@
 #include "winrt/impl/Windows.UI.WebUI.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::WebUI
 {
-    struct ActivatedEventHandler : Windows::Foundation::IUnknown
+    struct ActivatedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         ActivatedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        ActivatedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        ActivatedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> ActivatedEventHandler(L lambda);
         template <typename F> ActivatedEventHandler(F* function);
         template <typename O, typename M> ActivatedEventHandler(O* object, M method);
@@ -27,10 +27,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::WebUI
         template <typename O, typename M> ActivatedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs const& eventArgs) const;
     };
-    struct BackgroundActivatedEventHandler : Windows::Foundation::IUnknown
+    struct BackgroundActivatedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         BackgroundActivatedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        BackgroundActivatedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        BackgroundActivatedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> BackgroundActivatedEventHandler(L lambda);
         template <typename F> BackgroundActivatedEventHandler(F* function);
         template <typename O, typename M> BackgroundActivatedEventHandler(O* object, M method);
@@ -38,10 +38,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::WebUI
         template <typename O, typename M> BackgroundActivatedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs const& eventArgs) const;
     };
-    struct EnteredBackgroundEventHandler : Windows::Foundation::IUnknown
+    struct EnteredBackgroundEventHandler : winrt::Windows::Foundation::IUnknown
     {
         EnteredBackgroundEventHandler(std::nullptr_t = nullptr) noexcept {}
-        EnteredBackgroundEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        EnteredBackgroundEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> EnteredBackgroundEventHandler(L lambda);
         template <typename F> EnteredBackgroundEventHandler(F* function);
         template <typename O, typename M> EnteredBackgroundEventHandler(O* object, M method);
@@ -49,10 +49,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::WebUI
         template <typename O, typename M> EnteredBackgroundEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::ApplicationModel::IEnteredBackgroundEventArgs const& e) const;
     };
-    struct LeavingBackgroundEventHandler : Windows::Foundation::IUnknown
+    struct LeavingBackgroundEventHandler : winrt::Windows::Foundation::IUnknown
     {
         LeavingBackgroundEventHandler(std::nullptr_t = nullptr) noexcept {}
-        LeavingBackgroundEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        LeavingBackgroundEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> LeavingBackgroundEventHandler(L lambda);
         template <typename F> LeavingBackgroundEventHandler(F* function);
         template <typename O, typename M> LeavingBackgroundEventHandler(O* object, M method);
@@ -60,10 +60,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::WebUI
         template <typename O, typename M> LeavingBackgroundEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::ApplicationModel::ILeavingBackgroundEventArgs const& e) const;
     };
-    struct NavigatedEventHandler : Windows::Foundation::IUnknown
+    struct NavigatedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         NavigatedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        NavigatedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        NavigatedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> NavigatedEventHandler(L lambda);
         template <typename F> NavigatedEventHandler(F* function);
         template <typename O, typename M> NavigatedEventHandler(O* object, M method);
@@ -71,10 +71,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::WebUI
         template <typename O, typename M> NavigatedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs const& e) const;
     };
-    struct ResumingEventHandler : Windows::Foundation::IUnknown
+    struct ResumingEventHandler : winrt::Windows::Foundation::IUnknown
     {
         ResumingEventHandler(std::nullptr_t = nullptr) noexcept {}
-        ResumingEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        ResumingEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> ResumingEventHandler(L lambda);
         template <typename F> ResumingEventHandler(F* function);
         template <typename O, typename M> ResumingEventHandler(O* object, M method);
@@ -82,10 +82,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::WebUI
         template <typename O, typename M> ResumingEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender) const;
     };
-    struct SuspendingEventHandler : Windows::Foundation::IUnknown
+    struct SuspendingEventHandler : winrt::Windows::Foundation::IUnknown
     {
         SuspendingEventHandler(std::nullptr_t = nullptr) noexcept {}
-        SuspendingEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        SuspendingEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> SuspendingEventHandler(L lambda);
         template <typename F> SuspendingEventHandler(F* function);
         template <typename O, typename M> SuspendingEventHandler(O* object, M method);

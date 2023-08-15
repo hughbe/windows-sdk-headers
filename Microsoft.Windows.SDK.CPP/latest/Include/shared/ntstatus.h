@@ -11890,6 +11890,15 @@ Notes:
 //
 #define STATUS_INCORRECT_ACCOUNT_TYPE    ((NTSTATUS)0xC000A089L)
 
+//
+// MessageId: STATUS_LOCAL_POLICY_MODIFICATION_NOT_SUPPORTED
+//
+// MessageText:
+//
+// The local account policy modification request was rejected because the policy is controlled by a regional authority.
+//
+#define STATUS_LOCAL_POLICY_MODIFICATION_NOT_SUPPORTED ((NTSTATUS)0xC000A08AL)
+
 /*++
 
  MessageId's 0xa100 - 0xa120 (inclusive) are for the SMB Hash Generation Service.
@@ -16937,6 +16946,15 @@ Notes:
 // Notifying indirect display UMDF class driver that indirect display device has been stopped.
 //
 #define STATUS_GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED ((NTSTATUS)0xC01E0013L)
+
+//
+// MessageId: STATUS_GRAPHICS_MPO_ALLOCATION_UNPINNED
+//
+// MessageText:
+//
+// The allocation for the MPO has been unpinned.
+//
+#define STATUS_GRAPHICS_MPO_ALLOCATION_UNPINNED ((NTSTATUS)0xC01E0018L)
 
 //
 //   Video Memory Manager (VidMM) specific status codes {0x0100..0x01ff}
@@ -23222,6 +23240,20 @@ Notes:
 //
 #define STATUS_VID_PROCESS_ALREADY_SET   ((NTSTATUS)0xC0370030L)
 
+
+//
+// DM / Resize related error codes (0x0600-0x06ff)
+//
+
+//
+// MessageId: STATUS_DM_OPERATION_LIMIT_EXCEEDED
+//
+// MessageText:
+//
+// The attempted DM / resize operation exceeds the supported size.
+//
+#define STATUS_DM_OPERATION_LIMIT_EXCEEDED ((NTSTATUS)0xC0370600L)
+
 //
 // Warnings:
 //
@@ -25262,6 +25294,24 @@ Notes:
 #define STATUS_SYSTEM_INTEGRITY_REPUTATION_OFFLINE ((NTSTATUS)0xC0E9000AL)
 
 //
+// MessageId: STATUS_SYSTEM_INTEGRITY_REPUTATION_UNFRIENDLY_FILE
+//
+// MessageText:
+//
+// System Integrity policy has been violated.  Unfriendly file.
+//
+#define STATUS_SYSTEM_INTEGRITY_REPUTATION_UNFRIENDLY_FILE ((NTSTATUS)0xC0E9000BL)
+
+//
+// MessageId: STATUS_SYSTEM_INTEGRITY_REPUTATION_UNATTAINABLE
+//
+// MessageText:
+//
+// System Integrity policy has been violated.  Failed to obtain file reputation because an infrastructure issue occurred. Try again later.
+//
+#define STATUS_SYSTEM_INTEGRITY_REPUTATION_UNATTAINABLE ((NTSTATUS)0xC0E9000CL)
+
+//
 // Clip modern app and windows licensing error messages.
 //
 //
@@ -25968,6 +26018,15 @@ Notes:
 // Failed to negotiate a signing hash function.
 //
 #define STATUS_SMB_NO_SIGNING_ALGORITHM_OVERLAP ((NTSTATUS)0xC05D0003L)
+
+//
+// MessageId: STATUS_NETWORK_AUTHENTICATION_PROMPT_CANCELED
+//
+// MessageText:
+//
+// The user canceled the authentication prompt to a remote server. 
+//
+#define STATUS_NETWORK_AUTHENTICATION_PROMPT_CANCELED ((NTSTATUS)0xC05D0004L)
 
 //
 // Embedded Security Core

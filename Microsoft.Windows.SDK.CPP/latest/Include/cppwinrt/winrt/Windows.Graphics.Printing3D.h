@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Graphics_Printing3D_H
 #define WINRT_Windows_Graphics_Printing3D_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Graphics.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -30,7 +30,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing3D_IPrint3DManager<D>::TaskRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing3D::IPrint3DManager)->remove_TaskRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing3D::IPrint3DManager)->remove_TaskRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing3D::Print3DManager) consume_Windows_Graphics_Printing3D_IPrint3DManagerStatics<D>::GetForCurrentView() const
     {
@@ -62,7 +62,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing3D_IPrint3DTask<D>::Submitting(winrt::event_token const& eventCookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing3D::IPrint3DTask)->remove_Submitting(impl::bind_in(eventCookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing3D::IPrint3DTask)->remove_Submitting(impl::bind_in(eventCookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Printing3D_IPrint3DTask<D>::Completed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing3D::Print3DTask, winrt::Windows::Graphics::Printing3D::Print3DTaskCompletedEventArgs> const& eventHandler) const
     {
@@ -76,7 +76,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing3D_IPrint3DTask<D>::Completed(winrt::event_token const& eventCookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing3D::IPrint3DTask)->remove_Completed(impl::bind_in(eventCookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing3D::IPrint3DTask)->remove_Completed(impl::bind_in(eventCookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Graphics_Printing3D_IPrint3DTask<D>::SourceChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing3D::Print3DTask, winrt::Windows::Graphics::Printing3D::Print3DTaskSourceChangedEventArgs> const& eventHandler) const
     {
@@ -90,7 +90,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_Printing3D_IPrint3DTask<D>::SourceChanged(winrt::event_token const& eventCookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing3D::IPrint3DTask)->remove_SourceChanged(impl::bind_in(eventCookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing3D::IPrint3DTask)->remove_SourceChanged(impl::bind_in(eventCookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Graphics::Printing3D::Print3DTaskCompletion) consume_Windows_Graphics_Printing3D_IPrint3DTaskCompletedEventArgs<D>::Completion() const
     {
@@ -2441,6 +2441,8 @@ namespace std
     template<> struct hash<winrt::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Graphics::Printing3D::Printing3DTextureResource> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

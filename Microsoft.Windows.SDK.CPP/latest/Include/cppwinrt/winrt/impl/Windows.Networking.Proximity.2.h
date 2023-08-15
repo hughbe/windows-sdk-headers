@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,10 +11,10 @@
 #include "winrt/impl/Windows.Networking.Proximity.1.h"
 WINRT_EXPORT namespace winrt::Windows::Networking::Proximity
 {
-    struct DeviceArrivedEventHandler : Windows::Foundation::IUnknown
+    struct DeviceArrivedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         DeviceArrivedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        DeviceArrivedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        DeviceArrivedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> DeviceArrivedEventHandler(L lambda);
         template <typename F> DeviceArrivedEventHandler(F* function);
         template <typename O, typename M> DeviceArrivedEventHandler(O* object, M method);
@@ -22,10 +22,10 @@ WINRT_EXPORT namespace winrt::Windows::Networking::Proximity
         template <typename O, typename M> DeviceArrivedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Networking::Proximity::ProximityDevice const& sender) const;
     };
-    struct DeviceDepartedEventHandler : Windows::Foundation::IUnknown
+    struct DeviceDepartedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         DeviceDepartedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        DeviceDepartedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        DeviceDepartedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> DeviceDepartedEventHandler(L lambda);
         template <typename F> DeviceDepartedEventHandler(F* function);
         template <typename O, typename M> DeviceDepartedEventHandler(O* object, M method);
@@ -33,10 +33,10 @@ WINRT_EXPORT namespace winrt::Windows::Networking::Proximity
         template <typename O, typename M> DeviceDepartedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Networking::Proximity::ProximityDevice const& sender) const;
     };
-    struct MessageReceivedHandler : Windows::Foundation::IUnknown
+    struct MessageReceivedHandler : winrt::Windows::Foundation::IUnknown
     {
         MessageReceivedHandler(std::nullptr_t = nullptr) noexcept {}
-        MessageReceivedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        MessageReceivedHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> MessageReceivedHandler(L lambda);
         template <typename F> MessageReceivedHandler(F* function);
         template <typename O, typename M> MessageReceivedHandler(O* object, M method);
@@ -44,10 +44,10 @@ WINRT_EXPORT namespace winrt::Windows::Networking::Proximity
         template <typename O, typename M> MessageReceivedHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Networking::Proximity::ProximityDevice const& sender, winrt::Windows::Networking::Proximity::ProximityMessage const& message) const;
     };
-    struct MessageTransmittedHandler : Windows::Foundation::IUnknown
+    struct MessageTransmittedHandler : winrt::Windows::Foundation::IUnknown
     {
         MessageTransmittedHandler(std::nullptr_t = nullptr) noexcept {}
-        MessageTransmittedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        MessageTransmittedHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> MessageTransmittedHandler(L lambda);
         template <typename F> MessageTransmittedHandler(F* function);
         template <typename O, typename M> MessageTransmittedHandler(O* object, M method);

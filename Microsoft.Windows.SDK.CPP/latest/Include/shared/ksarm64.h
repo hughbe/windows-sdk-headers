@@ -569,7 +569,7 @@
 #define ThStackBase 0x38
 #define ThLegoData 0x2f0
 #define KernelThreadObjectLength 0x4a0
-#define ExecutiveThreadObjectLength 0x910
+#define ExecutiveThreadObjectLength 0x920
 
 
 //
@@ -923,7 +923,7 @@
 #define PcSkipTick 0x1898
 #define PcStartCycles 0x18c8
 #define PcSpBase 0x1480
-#define ProcessorControlRegisterLength 0x2a040
+#define ProcessorControlRegisterLength 0x29dc0
 
 //
 // Defines for user shared data
@@ -974,7 +974,7 @@
 #define PbPacketBarrier 0xa00
 #define PbDeferredReadyListHead 0xa08
 #define PbLookasideIrpFloat 0xa58
-#define PbRequestMailbox 0x9680
+#define PbRequestMailbox 0x9400
 #define PbMailbox 0xa80
 #define PbDpcGate 0xb80
 #define PbWaitListHead 0xc00

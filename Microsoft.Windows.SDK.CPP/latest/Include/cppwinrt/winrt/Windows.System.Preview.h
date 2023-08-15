@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_System_Preview_H
 #define WINRT_Windows_System_Preview_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.System.h"
 #include "winrt/impl/Windows.Devices.Sensors.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -33,7 +33,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Preview_ITwoPanelHingedDevicePosturePreview<D>::PostureChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::Preview::ITwoPanelHingedDevicePosturePreview)->remove_PostureChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::Preview::ITwoPanelHingedDevicePosturePreview)->remove_PostureChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) consume_Windows_System_Preview_ITwoPanelHingedDevicePosturePreviewReading<D>::Timestamp() const
     {
@@ -208,6 +208,8 @@ namespace std
     template<> struct hash<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreview> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

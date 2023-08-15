@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_System_Power_H
 #define WINRT_Windows_System_Power_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.System.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.System.Power.2.h"
@@ -74,7 +74,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::RecentEnergyUsageIncreased(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::Power::IBackgroundEnergyManagerStatics)->remove_RecentEnergyUsageIncreased(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::Power::IBackgroundEnergyManagerStatics)->remove_RecentEnergyUsageIncreased(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::RecentEnergyUsageReturnedToLow(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -88,7 +88,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Power_IBackgroundEnergyManagerStatics<D>::RecentEnergyUsageReturnedToLow(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::Power::IBackgroundEnergyManagerStatics)->remove_RecentEnergyUsageReturnedToLow(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::Power::IBackgroundEnergyManagerStatics)->remove_RecentEnergyUsageReturnedToLow(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::LowUsageLevel() const
     {
@@ -138,7 +138,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::RecentEnergyUsageIncreased(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::Power::IForegroundEnergyManagerStatics)->remove_RecentEnergyUsageIncreased(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::Power::IForegroundEnergyManagerStatics)->remove_RecentEnergyUsageIncreased(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::RecentEnergyUsageReturnedToLow(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -152,7 +152,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Power_IForegroundEnergyManagerStatics<D>::RecentEnergyUsageReturnedToLow(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::Power::IForegroundEnergyManagerStatics)->remove_RecentEnergyUsageReturnedToLow(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::Power::IForegroundEnergyManagerStatics)->remove_RecentEnergyUsageReturnedToLow(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::Power::EnergySaverStatus) consume_Windows_System_Power_IPowerManagerStatics<D>::EnergySaverStatus() const
     {
@@ -172,7 +172,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Power_IPowerManagerStatics<D>::EnergySaverStatusChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::Power::IPowerManagerStatics)->remove_EnergySaverStatusChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::Power::IPowerManagerStatics)->remove_EnergySaverStatusChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::Power::BatteryStatus) consume_Windows_System_Power_IPowerManagerStatics<D>::BatteryStatus() const
     {
@@ -192,7 +192,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Power_IPowerManagerStatics<D>::BatteryStatusChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::Power::IPowerManagerStatics)->remove_BatteryStatusChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::Power::IPowerManagerStatics)->remove_BatteryStatusChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::Power::PowerSupplyStatus) consume_Windows_System_Power_IPowerManagerStatics<D>::PowerSupplyStatus() const
     {
@@ -212,7 +212,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Power_IPowerManagerStatics<D>::PowerSupplyStatusChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::Power::IPowerManagerStatics)->remove_PowerSupplyStatusChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::Power::IPowerManagerStatics)->remove_PowerSupplyStatusChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_System_Power_IPowerManagerStatics<D>::RemainingChargePercent() const
     {
@@ -232,7 +232,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Power_IPowerManagerStatics<D>::RemainingChargePercentChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::Power::IPowerManagerStatics)->remove_RemainingChargePercentChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::Power::IPowerManagerStatics)->remove_RemainingChargePercentChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) consume_Windows_System_Power_IPowerManagerStatics<D>::RemainingDischargeTime() const
     {
@@ -252,7 +252,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Power_IPowerManagerStatics<D>::RemainingDischargeTimeChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::Power::IPowerManagerStatics)->remove_RemainingDischargeTimeChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::Power::IPowerManagerStatics)->remove_RemainingDischargeTimeChanged(impl::bind_in(token));
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
@@ -738,6 +738,8 @@ namespace std
     template<> struct hash<winrt::Windows::System::Power::BackgroundEnergyManager> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::Power::ForegroundEnergyManager> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::Power::PowerManager> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

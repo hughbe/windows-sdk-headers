@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,10 +11,10 @@
 #include "winrt/impl/Windows.Devices.Sms.1.h"
 WINRT_EXPORT namespace winrt::Windows::Devices::Sms
 {
-    struct SmsDeviceStatusChangedEventHandler : Windows::Foundation::IUnknown
+    struct SmsDeviceStatusChangedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         SmsDeviceStatusChangedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        SmsDeviceStatusChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        SmsDeviceStatusChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> SmsDeviceStatusChangedEventHandler(L lambda);
         template <typename F> SmsDeviceStatusChangedEventHandler(F* function);
         template <typename O, typename M> SmsDeviceStatusChangedEventHandler(O* object, M method);
@@ -22,10 +22,10 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Sms
         template <typename O, typename M> SmsDeviceStatusChangedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Devices::Sms::SmsDevice const& sender) const;
     };
-    struct SmsMessageReceivedEventHandler : Windows::Foundation::IUnknown
+    struct SmsMessageReceivedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         SmsMessageReceivedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        SmsMessageReceivedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        SmsMessageReceivedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> SmsMessageReceivedEventHandler(L lambda);
         template <typename F> SmsMessageReceivedEventHandler(F* function);
         template <typename O, typename M> SmsMessageReceivedEventHandler(O* object, M method);

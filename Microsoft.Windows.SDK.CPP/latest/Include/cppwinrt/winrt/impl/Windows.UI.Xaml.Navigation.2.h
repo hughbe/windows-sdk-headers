@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -12,10 +12,10 @@
 #include "winrt/impl/Windows.UI.Xaml.Navigation.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Navigation
 {
-    struct LoadCompletedEventHandler : Windows::Foundation::IUnknown
+    struct LoadCompletedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         LoadCompletedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        LoadCompletedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        LoadCompletedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> LoadCompletedEventHandler(L lambda);
         template <typename F> LoadCompletedEventHandler(F* function);
         template <typename O, typename M> LoadCompletedEventHandler(O* object, M method);
@@ -23,10 +23,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Navigation
         template <typename O, typename M> LoadCompletedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Navigation::NavigationEventArgs const& e) const;
     };
-    struct NavigatedEventHandler : Windows::Foundation::IUnknown
+    struct NavigatedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         NavigatedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        NavigatedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        NavigatedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> NavigatedEventHandler(L lambda);
         template <typename F> NavigatedEventHandler(F* function);
         template <typename O, typename M> NavigatedEventHandler(O* object, M method);
@@ -34,10 +34,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Navigation
         template <typename O, typename M> NavigatedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Navigation::NavigationEventArgs const& e) const;
     };
-    struct NavigatingCancelEventHandler : Windows::Foundation::IUnknown
+    struct NavigatingCancelEventHandler : winrt::Windows::Foundation::IUnknown
     {
         NavigatingCancelEventHandler(std::nullptr_t = nullptr) noexcept {}
-        NavigatingCancelEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        NavigatingCancelEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> NavigatingCancelEventHandler(L lambda);
         template <typename F> NavigatingCancelEventHandler(F* function);
         template <typename O, typename M> NavigatingCancelEventHandler(O* object, M method);
@@ -45,10 +45,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Navigation
         template <typename O, typename M> NavigatingCancelEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Navigation::NavigatingCancelEventArgs const& e) const;
     };
-    struct NavigationFailedEventHandler : Windows::Foundation::IUnknown
+    struct NavigationFailedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         NavigationFailedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        NavigationFailedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        NavigationFailedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> NavigationFailedEventHandler(L lambda);
         template <typename F> NavigationFailedEventHandler(F* function);
         template <typename O, typename M> NavigationFailedEventHandler(O* object, M method);
@@ -56,10 +56,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Navigation
         template <typename O, typename M> NavigationFailedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Navigation::NavigationFailedEventArgs const& e) const;
     };
-    struct NavigationStoppedEventHandler : Windows::Foundation::IUnknown
+    struct NavigationStoppedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         NavigationStoppedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        NavigationStoppedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        NavigationStoppedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> NavigationStoppedEventHandler(L lambda);
         template <typename F> NavigationStoppedEventHandler(F* function);
         template <typename O, typename M> NavigationStoppedEventHandler(O* object, M method);

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_UI_Text_Core_H
 #define WINRT_Windows_UI_Text_Core_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.UI.Text.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -112,7 +112,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_Core_ICoreTextEditContext<D>::TextRequested(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext)->remove_TextRequested(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext)->remove_TextRequested(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Text_Core_ICoreTextEditContext<D>::SelectionRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs> const& handler) const
     {
@@ -126,7 +126,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_Core_ICoreTextEditContext<D>::SelectionRequested(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext)->remove_SelectionRequested(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext)->remove_SelectionRequested(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Text_Core_ICoreTextEditContext<D>::LayoutRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs> const& handler) const
     {
@@ -140,7 +140,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_Core_ICoreTextEditContext<D>::LayoutRequested(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext)->remove_LayoutRequested(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext)->remove_LayoutRequested(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Text_Core_ICoreTextEditContext<D>::TextUpdating(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs> const& handler) const
     {
@@ -154,7 +154,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_Core_ICoreTextEditContext<D>::TextUpdating(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext)->remove_TextUpdating(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext)->remove_TextUpdating(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Text_Core_ICoreTextEditContext<D>::SelectionUpdating(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs> const& handler) const
     {
@@ -168,7 +168,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_Core_ICoreTextEditContext<D>::SelectionUpdating(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext)->remove_SelectionUpdating(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext)->remove_SelectionUpdating(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Text_Core_ICoreTextEditContext<D>::FormatUpdating(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs> const& handler) const
     {
@@ -182,7 +182,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_Core_ICoreTextEditContext<D>::FormatUpdating(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext)->remove_FormatUpdating(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext)->remove_FormatUpdating(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Text_Core_ICoreTextEditContext<D>::CompositionStarted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs> const& handler) const
     {
@@ -196,7 +196,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_Core_ICoreTextEditContext<D>::CompositionStarted(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext)->remove_CompositionStarted(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext)->remove_CompositionStarted(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Text_Core_ICoreTextEditContext<D>::CompositionCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs> const& handler) const
     {
@@ -210,7 +210,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_Core_ICoreTextEditContext<D>::CompositionCompleted(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext)->remove_CompositionCompleted(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext)->remove_CompositionCompleted(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Text_Core_ICoreTextEditContext<D>::FocusRemoved(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -224,7 +224,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_Core_ICoreTextEditContext<D>::FocusRemoved(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext)->remove_FocusRemoved(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext)->remove_FocusRemoved(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_Core_ICoreTextEditContext<D>::NotifyFocusEnter() const
     {
@@ -258,7 +258,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_Core_ICoreTextEditContext2<D>::NotifyFocusLeaveCompleted(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext2)->remove_NotifyFocusLeaveCompleted(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextEditContext2)->remove_NotifyFocusLeaveCompleted(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextRange) consume_Windows_UI_Text_Core_ICoreTextFormatUpdatingEventArgs<D>::Range() const
     {
@@ -448,7 +448,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Text_Core_ICoreTextServicesManager<D>::InputLanguageChanged(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextServicesManager)->remove_InputLanguageChanged(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Text::Core::ICoreTextServicesManager)->remove_InputLanguageChanged(impl::bind_in(cookie));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextEditContext) consume_Windows_UI_Text_Core_ICoreTextServicesManager<D>::CreateEditContext() const
     {
@@ -1378,6 +1378,8 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Text::Core::CoreTextTextRequest> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

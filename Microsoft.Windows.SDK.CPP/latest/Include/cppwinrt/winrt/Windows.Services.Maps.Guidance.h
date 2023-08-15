@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Services_Maps_Guidance_H
 #define WINRT_Windows_Services_Maps_Guidance_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Services.Maps.h"
 #include "winrt/impl/Windows.Devices.Geolocation.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -210,7 +210,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_Guidance_IGuidanceNavigator<D>::GuidanceUpdated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Services::Maps::Guidance::IGuidanceNavigator)->remove_GuidanceUpdated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Services::Maps::Guidance::IGuidanceNavigator)->remove_GuidanceUpdated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Services_Maps_Guidance_IGuidanceNavigator<D>::DestinationReached(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -224,7 +224,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_Guidance_IGuidanceNavigator<D>::DestinationReached(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Services::Maps::Guidance::IGuidanceNavigator)->remove_DestinationReached(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Services::Maps::Guidance::IGuidanceNavigator)->remove_DestinationReached(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Services_Maps_Guidance_IGuidanceNavigator<D>::Rerouting(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -238,7 +238,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_Guidance_IGuidanceNavigator<D>::Rerouting(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Services::Maps::Guidance::IGuidanceNavigator)->remove_Rerouting(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Services::Maps::Guidance::IGuidanceNavigator)->remove_Rerouting(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Services_Maps_Guidance_IGuidanceNavigator<D>::Rerouted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs> const& handler) const
     {
@@ -252,7 +252,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_Guidance_IGuidanceNavigator<D>::Rerouted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Services::Maps::Guidance::IGuidanceNavigator)->remove_Rerouted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Services::Maps::Guidance::IGuidanceNavigator)->remove_Rerouted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Services_Maps_Guidance_IGuidanceNavigator<D>::RerouteFailed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -266,7 +266,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_Guidance_IGuidanceNavigator<D>::RerouteFailed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Services::Maps::Guidance::IGuidanceNavigator)->remove_RerouteFailed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Services::Maps::Guidance::IGuidanceNavigator)->remove_RerouteFailed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Services_Maps_Guidance_IGuidanceNavigator<D>::UserLocationLost(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -280,7 +280,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_Guidance_IGuidanceNavigator<D>::UserLocationLost(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Services::Maps::Guidance::IGuidanceNavigator)->remove_UserLocationLost(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Services::Maps::Guidance::IGuidanceNavigator)->remove_UserLocationLost(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Services_Maps_Guidance_IGuidanceNavigator<D>::UserLocationRestored(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -294,7 +294,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_Guidance_IGuidanceNavigator<D>::UserLocationRestored(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Services::Maps::Guidance::IGuidanceNavigator)->remove_UserLocationRestored(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Services::Maps::Guidance::IGuidanceNavigator)->remove_UserLocationRestored(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_Guidance_IGuidanceNavigator<D>::SetGuidanceVoice(int32_t voiceId, param::hstring const& voiceFolder) const
     {
@@ -320,7 +320,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_Maps_Guidance_IGuidanceNavigator2<D>::AudioNotificationRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Services::Maps::Guidance::IGuidanceNavigator2)->remove_AudioNotificationRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Services::Maps::Guidance::IGuidanceNavigator2)->remove_AudioNotificationRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Services_Maps_Guidance_IGuidanceNavigator2<D>::IsGuidanceAudioMuted() const
     {
@@ -1597,6 +1597,8 @@ namespace std
     template<> struct hash<winrt::Windows::Services::Maps::Guidance::GuidanceRoute> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

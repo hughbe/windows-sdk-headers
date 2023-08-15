@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -43,6 +43,13 @@ WINRT_EXPORT namespace winrt::Windows::System::Profile
     {
         IAppApplicabilityStatics(std::nullptr_t = nullptr) noexcept {}
         IAppApplicabilityStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IAppControlPolicyStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IAppControlPolicyStatics>
+    {
+        IAppControlPolicyStatics(std::nullptr_t = nullptr) noexcept {}
+        IAppControlPolicyStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IEducationSettingsStatics :
         winrt::Windows::Foundation::IInspectable,

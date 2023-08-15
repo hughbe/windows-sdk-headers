@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Devices_SmartCards_H
 #define WINRT_Windows_Devices_SmartCards_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Devices.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -737,7 +737,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_SmartCards_ISmartCardEmulator2<D>::ApduReceived(winrt::event_token const& value) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::SmartCards::ISmartCardEmulator2)->remove_ApduReceived(impl::bind_in(value)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::SmartCards::ISmartCardEmulator2)->remove_ApduReceived(impl::bind_in(value));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_SmartCards_ISmartCardEmulator2<D>::ConnectionDeactivated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::SmartCards::SmartCardEmulator, winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs> const& value) const
     {
@@ -751,7 +751,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_SmartCards_ISmartCardEmulator2<D>::ConnectionDeactivated(winrt::event_token const& value) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::SmartCards::ISmartCardEmulator2)->remove_ConnectionDeactivated(impl::bind_in(value)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::SmartCards::ISmartCardEmulator2)->remove_ConnectionDeactivated(impl::bind_in(value));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_SmartCards_ISmartCardEmulator2<D>::Start() const
     {
@@ -1077,7 +1077,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_SmartCards_ISmartCardReader<D>::CardAdded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::SmartCards::ISmartCardReader)->remove_CardAdded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::SmartCards::ISmartCardReader)->remove_CardAdded(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_SmartCards_ISmartCardReader<D>::CardRemoved(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::SmartCards::SmartCardReader, winrt::Windows::Devices::SmartCards::CardRemovedEventArgs> const& handler) const
     {
@@ -1091,7 +1091,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_SmartCards_ISmartCardReader<D>::CardRemoved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::SmartCards::ISmartCardReader)->remove_CardRemoved(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::SmartCards::ISmartCardReader)->remove_CardRemoved(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_SmartCards_ISmartCardReaderStatics<D>::GetDeviceSelector() const
     {
@@ -3285,6 +3285,8 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::SmartCards::SmartCardProvisioning> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::SmartCards::SmartCardReader> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::SmartCards::SmartCardTriggerDetails> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

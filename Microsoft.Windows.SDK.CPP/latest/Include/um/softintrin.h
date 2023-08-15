@@ -1201,6 +1201,21 @@ void __stosq(
 #define __emulu(x,y)                    ((uint64_t)(uint32_t)(x) * (uint64_t)(uint32_t)(y))
 #define __emul(x,y)                     ((int64_t)(int32_t)(x) * (int64_t)(int32_t)(y))
 
+//
+// Map X64 atomic intrinsics to equivalent ARM64 ones
+// Reference: https://docs.microsoft.com/en-us/cpp/intrinsics/interlockedcompareexchange-intrinsic-functions
+//
+
+#define _InterlockedCompareExchange_np _InterlockedCompareExchange
+#define _InterlockedCompareExchange16_np _InterlockedCompareExchange16
+#define _InterlockedCompareExchange64_np _InterlockedCompareExchange64
+
+#define _InterlockedCompareExchange_HLEAcquire _InterlockedCompareExchange_acq
+#define _InterlockedCompareExchange_HLERelease _InterlockedCompareExchange_rel
+
+#define _InterlockedCompareExchange64_HLEAcquire _InterlockedCompareExchange64_acq
+#define _InterlockedCompareExchange64_HLERelease _InterlockedCompareExchange64_rel
+
 #endif
 
 #ifdef __cplusplus

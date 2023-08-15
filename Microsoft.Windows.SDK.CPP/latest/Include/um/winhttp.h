@@ -1559,23 +1559,27 @@ WinHttpSetStatusCallback
     IN DWORD_PTR dwReserved
 );
 
-BOOLAPI
+WINHTTPAPI
+BOOL
+WINAPI
 WinHttpTimeFromSystemTime
 (
     _In_ CONST SYSTEMTIME *pst,  // input GMT time
     _Out_writes_bytes_(WINHTTP_TIME_FORMAT_BUFSIZE) LPWSTR pwszTime // output string buffer
 );
 
-BOOLAPI
+WINHTTPAPI
+BOOL
+WINAPI
 WinHttpTimeToSystemTime
 (
     _In_z_ LPCWSTR pwszTime,        // NULL terminated string
     _Out_ SYSTEMTIME *pst           // output in GMT time
 );
 
-
-
-BOOLAPI
+WINHTTPAPI
+BOOL
+WINAPI
 WinHttpCrackUrl
 (
     _In_reads_(dwUrlLength) LPCWSTR pwszUrl,
@@ -1585,7 +1589,9 @@ WinHttpCrackUrl
 );
 
 _Success_(return != FALSE)
-BOOLAPI
+WINHTTPAPI
+BOOL
+WINAPI
 WinHttpCreateUrl
 (
     _In_ LPURL_COMPONENTS lpUrlComponents,
@@ -1600,9 +1606,7 @@ WinHttpCreateUrl
 #pragma region Application Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
-BOOLAPI
-WinHttpCheckPlatform(void);
-
+WINHTTPAPI BOOL WINAPI WinHttpCheckPlatform(void);
 
 WINHTTPAPI BOOL WINAPI WinHttpGetDefaultProxyConfiguration( IN OUT WINHTTP_PROXY_INFO * pProxyInfo);
 WINHTTPAPI BOOL WINAPI WinHttpSetDefaultProxyConfiguration( IN WINHTTP_PROXY_INFO * pProxyInfo);
@@ -1625,13 +1629,13 @@ WinHttpOpen
     _In_ DWORD dwFlags
 );
 
-
-BOOLAPI
+WINHTTPAPI
+BOOL
+WINAPI
 WinHttpCloseHandle
 (
     IN HINTERNET hInternet
 );
-
 
 WINHTTPAPI
 HINTERNET
@@ -1644,8 +1648,9 @@ WinHttpConnect
     IN DWORD dwReserved
 );
 
-
-BOOLAPI
+WINHTTPAPI
+BOOL
+WINAPI
 WinHttpReadData
 (
     IN HINTERNET hRequest,
@@ -1668,7 +1673,9 @@ WinHttpReadDataEx
     _In_reads_bytes_opt_(cbProperty) PVOID pvProperty
 );
 
-BOOLAPI
+WINHTTPAPI
+BOOL
+WINAPI
 WinHttpWriteData
 (
     IN HINTERNET hRequest,
@@ -1677,17 +1684,19 @@ WinHttpWriteData
     OUT LPDWORD lpdwNumberOfBytesWritten
 );
 
-
-BOOLAPI
+WINHTTPAPI
+BOOL
+WINAPI
 WinHttpQueryDataAvailable
 (
     IN HINTERNET hRequest,
     __out_data_source(NETWORK) LPDWORD lpdwNumberOfBytesAvailable
 );
 
-
 _Success_(return != FALSE)
-BOOLAPI
+WINHTTPAPI
+BOOL
+WINAPI
 WinHttpQueryOption
 (
     IN HINTERNET hInternet,
@@ -1696,8 +1705,11 @@ WinHttpQueryOption
     IN OUT LPDWORD lpdwBufferLength
 );
 
-BOOLAPI
-WinHttpSetOption(
+WINHTTPAPI
+BOOL
+WINAPI
+WinHttpSetOption
+(
     _In_opt_ HINTERNET hInternet,
     _In_ DWORD dwOption,
     _When_((dwOption == WINHTTP_OPTION_USERNAME ||
@@ -1719,9 +1731,9 @@ WinHttpSetOption(
     _In_ DWORD dwBufferLength
 );
 
-
-
-BOOLAPI
+WINHTTPAPI
+BOOL
+WINAPI
 WinHttpSetTimeouts
 (
     IN HINTERNET    hInternet,           // Session/Request handle.
@@ -1730,7 +1742,6 @@ WinHttpSetTimeouts
     IN int          nSendTimeout,
     IN int          nReceiveTimeout
 );
-
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
@@ -1774,7 +1785,9 @@ WinHttpOpenRequest
     IN DWORD dwFlags
 );
 
-BOOLAPI
+WINHTTPAPI
+BOOL
+WINAPI
 WinHttpAddRequestHeaders
 (
     IN HINTERNET hRequest,
@@ -1788,7 +1801,8 @@ WinHttpAddRequestHeaders
 WINHTTPAPI
 DWORD
 WINAPI
-WinHttpAddRequestHeadersEx(
+WinHttpAddRequestHeadersEx
+(
     IN HINTERNET hRequest,
     IN DWORD dwModifiers,
     IN ULONGLONG ullFlags,
@@ -1797,7 +1811,9 @@ WinHttpAddRequestHeadersEx(
     _In_reads_(cHeaders) WINHTTP_EXTENDED_HEADER *pHeaders
 );
 
-BOOLAPI
+WINHTTPAPI
+BOOL
+WINAPI
 WinHttpSendRequest
 (
     IN HINTERNET hRequest,
@@ -1809,31 +1825,30 @@ WinHttpSendRequest
     IN DWORD_PTR dwContext
 );
 
-BOOLAPI WinHttpSetCredentials
+WINHTTPAPI
+BOOL
+WINAPI
+WinHttpSetCredentials
 (
-
     IN HINTERNET   hRequest,        // HINTERNET handle returned by WinHttpOpenRequest.
-
-
-    IN DWORD       AuthTargets,      // Only WINHTTP_AUTH_TARGET_SERVER and
+    IN DWORD       AuthTargets,     // Only WINHTTP_AUTH_TARGET_SERVER and
                                     // WINHTTP_AUTH_TARGET_PROXY are supported
                                     // in this version and they are mutually
                                     // exclusive
-
     IN DWORD       AuthScheme,      // must be one of the supported Auth Schemes
                                     // returned from WinHttpQueryAuthSchemes()
-
     IN LPCWSTR     pwszUserName,    // 1) NULL if default creds is to be used, in
                                     // which case pszPassword will be ignored
-
     IN LPCWSTR     pwszPassword,    // 1) "" == Blank Password; 2)Parameter ignored
                                     // if pszUserName is NULL; 3) Invalid to pass in
                                     // NULL if pszUserName is not NULL
     IN LPVOID      pAuthParams
 );
 
-
-BOOLAPI WinHttpQueryAuthSchemes
+WINHTTPAPI
+BOOL
+WINAPI
+WinHttpQueryAuthSchemes
 (
     IN  HINTERNET   hRequest,             // HINTERNET handle returned by WinHttpOpenRequest
     OUT LPDWORD     lpdwSupportedSchemes, // a bitmap of available Authentication Schemes
@@ -1847,11 +1862,15 @@ BOOLAPI WinHttpQueryAuthSchemes
 #pragma region Application Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
-BOOLAPI WinHttpQueryAuthParams(
+WINHTTPAPI
+BOOL
+WINAPI
+WinHttpQueryAuthParams
+(
     IN  HINTERNET   hRequest,        // HINTERNET handle returned by WinHttpOpenRequest
     IN  DWORD       AuthScheme,
     OUT LPVOID*     pAuthParams      // Scheme-specific Advanced auth parameters
-    );
+);
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
@@ -1869,7 +1888,9 @@ WinHttpReceiveResponse
 );
 
 _Success_(return != FALSE)
-BOOLAPI
+WINHTTPAPI
+BOOL
+WINAPI
 WinHttpQueryHeaders
 (
     IN     HINTERNET hRequest,
@@ -1922,14 +1943,18 @@ WinHttpFreeQueryConnectionGroupResult
 #pragma region Application Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
-BOOLAPI
+WINHTTPAPI
+BOOL
+WINAPI
 WinHttpDetectAutoProxyConfigUrl
 (
     DWORD dwAutoDetectFlags,
     _Outptr_result_maybenull_ LPWSTR * ppwstrAutoConfigUrl
 );
 
-BOOLAPI
+WINHTTPAPI
+BOOL
+WINAPI
 WinHttpGetProxyForUrl
 (
     IN  HINTERNET                   hSession,
@@ -2014,7 +2039,9 @@ WinHttpResetAutoProxy
     _In_ DWORD dwFlags
 );
 
-BOOLAPI
+WINHTTPAPI
+BOOL
+WINAPI
 WinHttpGetIEProxyConfigForCurrentUser
 (
     IN OUT WINHTTP_CURRENT_USER_IE_PROXY_CONFIG * pProxyConfig
@@ -2184,6 +2211,86 @@ WinHttpWebSocketQueryCloseStatus
     _Out_range_(0, WINHTTP_WEB_SOCKET_MAX_CLOSE_REASON_LENGTH) DWORD *pdwReasonLengthConsumed
 );
 
+
+//
+// Proxy change notification APIs
+//
+
+typedef PVOID WINHTTP_PROXY_CHANGE_REGISTRATION_HANDLE;
+
+typedef
+VOID
+(CALLBACK *WINHTTP_PROXY_CHANGE_CALLBACK)(
+    _In_ ULONGLONG ullFlags,
+    _In_ PVOID pvContext
+);
+
+#define WINHTTP_PROXY_NOTIFY_CHANGE 0x0001
+
+DWORD
+WinHttpRegisterProxyChangeNotification(
+    _In_ ULONGLONG ullFlags,
+    _In_ WINHTTP_PROXY_CHANGE_CALLBACK pfnCallback,
+    _In_ PVOID pvContext,
+    _Out_ WINHTTP_PROXY_CHANGE_REGISTRATION_HANDLE *hRegistration
+);
+
+DWORD
+WinHttpUnregisterProxyChangeNotification(
+    _In_ WINHTTP_PROXY_CHANGE_REGISTRATION_HANDLE hRegistration
+);
+
+//
+// Extended proxy settings APIs
+//
+
+typedef enum _WINHTTP_PROXY_SETTINGS_TYPE
+{
+    WinHttpProxySettingsTypeUnknown,
+    WinHttpProxySettingsTypeWsl,
+    WinHttpProxySettingsTypeWsa
+} WINHTTP_PROXY_SETTINGS_TYPE, *PWINHTTP_PROXY_SETTINGS_TYPE;
+
+
+typedef struct _WINHTTP_PROXY_SETTINGS_EX
+{
+    ULONGLONG ullGenerationId;
+    ULONGLONG ullFlags;
+
+    PCWSTR pcwszAutoconfigUrl;
+    PCWSTR pcwszProxy;
+    PCWSTR pcwszSecureProxy;
+
+    DWORD cProxyBypasses;
+    PCWSTR *rgpcwszProxyBypasses;
+
+    DWORD dwInterfaceIndex;
+    PCWSTR pcwszConnectionName;
+} WINHTTP_PROXY_SETTINGS_EX, *PWINHTTP_PROXY_SETTINGS_EX;
+
+DWORD
+WinHttpGetProxySettingsEx(
+    _In_ HINTERNET hResolver,
+    _In_ WINHTTP_PROXY_SETTINGS_TYPE ProxySettingsType,
+    _In_ ULONGLONG ullFlags,
+    _In_opt_ PCWSTR pcwszConnectionName,
+    _In_opt_ PCWSTR pcwszProbeHost,
+    _In_opt_ PVOID pvReserved,
+    _In_ DWORD cbReserved,
+    _In_opt_ DWORD_PTR pContext
+);
+
+DWORD
+WinHttpGetProxySettingsResultEx(
+    _In_ HINTERNET hResolver,
+    _Out_ PVOID pProxySettingsEx
+);
+
+DWORD
+WinHttpFreeProxySettingsEx(
+    _In_ WINHTTP_PROXY_SETTINGS_TYPE ProxySettingsType,
+    _In_ PVOID pProxySettingsEx
+);
 
 //
 // Feature IDs for WINHTTP_OPTION_FEATURE_SUPPORTED

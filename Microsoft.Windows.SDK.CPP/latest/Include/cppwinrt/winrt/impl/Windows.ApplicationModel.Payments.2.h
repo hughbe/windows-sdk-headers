@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,10 +11,10 @@
 #include "winrt/impl/Windows.ApplicationModel.Payments.1.h"
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Payments
 {
-    struct PaymentRequestChangedHandler : Windows::Foundation::IUnknown
+    struct PaymentRequestChangedHandler : winrt::Windows::Foundation::IUnknown
     {
         PaymentRequestChangedHandler(std::nullptr_t = nullptr) noexcept {}
-        PaymentRequestChangedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        PaymentRequestChangedHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> PaymentRequestChangedHandler(L lambda);
         template <typename F> PaymentRequestChangedHandler(F* function);
         template <typename O, typename M> PaymentRequestChangedHandler(O* object, M method);

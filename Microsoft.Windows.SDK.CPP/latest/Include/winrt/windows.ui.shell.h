@@ -144,65 +144,50 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CUI_CShell_CIAdaptiveCardBuilderStatics_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs_FWD_DEFINED__
-#define ____x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs_FWD_DEFINED__
+#ifndef ____x_ABI_CWindows_CUI_CShell_CIFocusSession_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CShell_CIFocusSession_FWD_DEFINED__
 namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                interface IFocusAssistChangedEventArgs;
+                interface IFocusSession;
             } /* Shell */
         } /* UI */
     } /* Windows */
 } /* ABI */
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs ABI::Windows::UI::Shell::IFocusAssistChangedEventArgs
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSession ABI::Windows::UI::Shell::IFocusSession
 
-#endif // ____x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs_FWD_DEFINED__
+#endif // ____x_ABI_CWindows_CUI_CShell_CIFocusSession_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_FWD_DEFINED__
-#define ____x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_FWD_DEFINED__
+#ifndef ____x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_FWD_DEFINED__
 namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                interface IFocusAssistManager;
+                interface IFocusSessionManager;
             } /* Shell */
         } /* UI */
     } /* Windows */
 } /* ABI */
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager ABI::Windows::UI::Shell::IFocusAssistManager
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager ABI::Windows::UI::Shell::IFocusSessionManager
 
-#endif // ____x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_FWD_DEFINED__
+#endif // ____x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_FWD_DEFINED__
-#define ____x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_FWD_DEFINED__
+#ifndef ____x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_FWD_DEFINED__
 namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                interface IFocusAssistManagerStatics;
+                interface IFocusSessionManagerStatics;
             } /* Shell */
         } /* UI */
     } /* Windows */
 } /* ABI */
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics ABI::Windows::UI::Shell::IFocusAssistManagerStatics
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics ABI::Windows::UI::Shell::IFocusSessionManagerStatics
 
-#endif // ____x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_FWD_DEFINED__
-#define ____x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace Shell {
-                interface IFocusAssistSession;
-            } /* Shell */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistSession ABI::Windows::UI::Shell::IFocusAssistSession
-
-#endif // ____x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_FWD_DEFINED__
+#endif // ____x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CShell_CISecurityAppManager_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CShell_CISecurityAppManager_FWD_DEFINED__
@@ -366,49 +351,37 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                class FocusAssistManager;
-            } /* Shell */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace Shell {
-                class FocusAssistChangedEventArgs;
+                class FocusSessionManager;
             } /* Shell */
         } /* UI */
     } /* Windows */
 } /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
-#ifndef DEF___FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs_USE
-#define DEF___FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs_USE
+#ifndef DEF___FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable_USE
+#define DEF___FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("b8e75f0b-566c-5e0d-a944-6c0f1604776a"))
-ITypedEventHandler<ABI::Windows::UI::Shell::FocusAssistManager*, ABI::Windows::UI::Shell::FocusAssistChangedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::FocusAssistManager*, ABI::Windows::UI::Shell::IFocusAssistManager*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::FocusAssistChangedEventArgs*, ABI::Windows::UI::Shell::IFocusAssistChangedEventArgs*>>
+struct __declspec(uuid("88ebdc98-220d-59cd-9cef-a34a27c36f98"))
+ITypedEventHandler<ABI::Windows::UI::Shell::FocusSessionManager*, IInspectable*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::FocusSessionManager*, ABI::Windows::UI::Shell::IFocusSessionManager*>, IInspectable*>
 {
     static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.UI.Shell.FocusAssistManager, Windows.UI.Shell.FocusAssistChangedEventArgs>";
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.UI.Shell.FocusSessionManager, Object>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::UI::Shell::FocusAssistManager*, ABI::Windows::UI::Shell::FocusAssistChangedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs_t;
-#define __FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs_t
+typedef ITypedEventHandler<ABI::Windows::UI::Shell::FocusSessionManager*, IInspectable*> __FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable_t;
+#define __FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable_t
 /* Foundation */ } /* Windows */ } /* ABI */ }
 
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs_USE */
+#endif /* DEF___FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 namespace ABI {
@@ -591,7 +564,7 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                class FocusAssistSession;
+                class FocusSession;
             } /* Shell */
         } /* UI */
     } /* Windows */
@@ -772,150 +745,23 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CIAdaptiveCardBuilderStatics;
 
 /*
  *
- * Interface Windows.UI.Shell.IFocusAssistChangedEventArgs
+ * Interface Windows.UI.Shell.IFocusSession
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
- * Interface is a part of the implementation of type Windows.UI.Shell.FocusAssistChangedEventArgs
+ * Interface is a part of the implementation of type Windows.UI.Shell.FocusSession
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Shell_IFocusAssistChangedEventArgs[] = L"Windows.UI.Shell.IFocusAssistChangedEventArgs";
+#if !defined(____x_ABI_CWindows_CUI_CShell_CIFocusSession_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CShell_CIFocusSession_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Shell_IFocusSession[] = L"Windows.UI.Shell.IFocusSession";
 namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                MIDL_INTERFACE("17f6a388-249c-51cf-b342-0ba2a0f08df9")
-                IFocusAssistChangedEventArgs : public IInspectable
-                {
-                public:
-                };
-
-                extern MIDL_CONST_ID IID& IID_IFocusAssistChangedEventArgs = _uuidof(IFocusAssistChangedEventArgs);
-            } /* Shell */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs;
-#endif /* !defined(____x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.UI.Shell.IFocusAssistManager
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.UI.Shell.FocusAssistManager
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Shell_IFocusAssistManager[] = L"Windows.UI.Shell.IFocusAssistManager";
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace Shell {
-                MIDL_INTERFACE("39cae2c3-1e3e-52fe-b635-a754627923e1")
-                IFocusAssistManager : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_IsActive(
-                        boolean* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE GetSession(
-                        HSTRING sessionId,
-                        ABI::Windows::UI::Shell::IFocusAssistSession** result
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE TryStartFocusSession(
-                        ABI::Windows::UI::Shell::IFocusAssistSession** result
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE TryStartFocusSession2(
-                        ABI::Windows::Foundation::DateTime endTime,
-                        ABI::Windows::UI::Shell::IFocusAssistSession** result
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE EndAllSessions(void) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE add_Changed(
-                        __FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs* handler,
-                        EventRegistrationToken* token
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_Changed(
-                        EventRegistrationToken token
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IFocusAssistManager = _uuidof(IFocusAssistManager);
-            } /* Shell */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CIFocusAssistManager;
-#endif /* !defined(____x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.UI.Shell.IFocusAssistManagerStatics
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.UI.Shell.FocusAssistManager
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Shell_IFocusAssistManagerStatics[] = L"Windows.UI.Shell.IFocusAssistManagerStatics";
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace Shell {
-                MIDL_INTERFACE("aef917bc-e324-54cd-acb5-232642a102a6")
-                IFocusAssistManagerStatics : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE GetDefault(
-                        ABI::Windows::UI::Shell::IFocusAssistManager** result
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsSupported(
-                        boolean* value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IFocusAssistManagerStatics = _uuidof(IFocusAssistManagerStatics);
-            } /* Shell */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics;
-#endif /* !defined(____x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.UI.Shell.IFocusAssistSession
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.UI.Shell.FocusAssistSession
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Shell_IFocusAssistSession[] = L"Windows.UI.Shell.IFocusAssistSession";
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace Shell {
-                MIDL_INTERFACE("1210972d-2600-5d84-95e3-d5623c982411")
-                IFocusAssistSession : public IInspectable
+                MIDL_INTERFACE("069fbab8-0e84-5f2f-8614-9b6544326277")
+                IFocusSession : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE get_Id(
@@ -924,14 +770,108 @@ namespace ABI {
                     virtual HRESULT STDMETHODCALLTYPE End(void) = 0;
                 };
 
-                extern MIDL_CONST_ID IID& IID_IFocusAssistSession = _uuidof(IFocusAssistSession);
+                extern MIDL_CONST_ID IID& IID_IFocusSession = _uuidof(IFocusSession);
             } /* Shell */
         } /* UI */
     } /* Windows */
 } /* ABI */
 
-EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CIFocusAssistSession;
-#endif /* !defined(____x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_INTERFACE_DEFINED__) */
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CIFocusSession;
+#endif /* !defined(____x_ABI_CWindows_CUI_CShell_CIFocusSession_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Interface Windows.UI.Shell.IFocusSessionManager
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Shell.FocusSessionManager
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Shell_IFocusSessionManager[] = L"Windows.UI.Shell.IFocusSessionManager";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Shell {
+                MIDL_INTERFACE("e7ffbaa9-d8be-5dbf-bac6-49364842e37e")
+                IFocusSessionManager : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE get_IsFocusActive(
+                        boolean* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE GetSession(
+                        HSTRING id,
+                        ABI::Windows::UI::Shell::IFocusSession** result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE TryStartFocusSession(
+                        ABI::Windows::UI::Shell::IFocusSession** result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE TryStartFocusSession2(
+                        ABI::Windows::Foundation::DateTime endTime,
+                        ABI::Windows::UI::Shell::IFocusSession** result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE DeactivateFocus(void) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE add_IsFocusActiveChanged(
+                        __FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable* handler,
+                        EventRegistrationToken* token
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE remove_IsFocusActiveChanged(
+                        EventRegistrationToken token
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_IFocusSessionManager = _uuidof(IFocusSessionManager);
+            } /* Shell */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CIFocusSessionManager;
+#endif /* !defined(____x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Interface Windows.UI.Shell.IFocusSessionManagerStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Shell.FocusSessionManager
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Shell_IFocusSessionManagerStatics[] = L"Windows.UI.Shell.IFocusSessionManagerStatics";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Shell {
+                MIDL_INTERFACE("834df764-cb9a-5d0a-aa9f-73df4f249395")
+                IFocusSessionManagerStatics : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE GetDefault(
+                        ABI::Windows::UI::Shell::IFocusSessionManager** result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_IsSupported(
+                        boolean* value
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_IFocusSessionManagerStatics = _uuidof(IFocusSessionManagerStatics);
+            } /* Shell */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics;
+#endif /* !defined(____x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
@@ -1273,34 +1213,34 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
- * Class Windows.UI.Shell.FocusAssistChangedEventArgs
+ * Class Windows.UI.Shell.FocusSession
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Class implements the following interfaces:
- *    Windows.UI.Shell.IFocusAssistChangedEventArgs ** Default Interface **
+ *    Windows.UI.Shell.IFocusSession ** Default Interface **
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_UI_Shell_FocusAssistChangedEventArgs_DEFINED
-#define RUNTIMECLASS_Windows_UI_Shell_FocusAssistChangedEventArgs_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Shell_FocusAssistChangedEventArgs[] = L"Windows.UI.Shell.FocusAssistChangedEventArgs";
+#ifndef RUNTIMECLASS_Windows_UI_Shell_FocusSession_DEFINED
+#define RUNTIMECLASS_Windows_UI_Shell_FocusSession_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Shell_FocusSession[] = L"Windows.UI.Shell.FocusSession";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
- * Class Windows.UI.Shell.FocusAssistManager
+ * Class Windows.UI.Shell.FocusSessionManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.UI.Shell.IFocusAssistManagerStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.Shell.IFocusSessionManagerStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
- *    Windows.UI.Shell.IFocusAssistManager ** Default Interface **
+ *    Windows.UI.Shell.IFocusSessionManager ** Default Interface **
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -1308,28 +1248,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_UI_Shell_FocusAssistManager_DEFINED
-#define RUNTIMECLASS_Windows_UI_Shell_FocusAssistManager_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Shell_FocusAssistManager[] = L"Windows.UI.Shell.FocusAssistManager";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Class Windows.UI.Shell.FocusAssistSession
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Class implements the following interfaces:
- *    Windows.UI.Shell.IFocusAssistSession ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_UI_Shell_FocusAssistSession_DEFINED
-#define RUNTIMECLASS_Windows_UI_Shell_FocusAssistSession_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Shell_FocusAssistSession[] = L"Windows.UI.Shell.FocusAssistSession";
+#ifndef RUNTIMECLASS_Windows_UI_Shell_FocusSessionManager_DEFINED
+#define RUNTIMECLASS_Windows_UI_Shell_FocusSessionManager_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Shell_FocusSessionManager[] = L"Windows.UI.Shell.FocusSessionManager";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
@@ -1439,29 +1360,23 @@ typedef interface __x_ABI_CWindows_CUI_CShell_CIAdaptiveCardBuilderStatics __x_A
 
 #endif // ____x_ABI_CWindows_CUI_CShell_CIAdaptiveCardBuilderStatics_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs_FWD_DEFINED__
-#define ____x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs __x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs;
+#ifndef ____x_ABI_CWindows_CUI_CShell_CIFocusSession_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CShell_CIFocusSession_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CShell_CIFocusSession __x_ABI_CWindows_CUI_CShell_CIFocusSession;
 
-#endif // ____x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs_FWD_DEFINED__
+#endif // ____x_ABI_CWindows_CUI_CShell_CIFocusSession_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_FWD_DEFINED__
-#define ____x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager;
+#ifndef ____x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager;
 
-#endif // ____x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_FWD_DEFINED__
+#endif // ____x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_FWD_DEFINED__
-#define ____x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics __x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics;
+#ifndef ____x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics __x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics;
 
-#endif // ____x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_FWD_DEFINED__
-#define ____x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CUI_CShell_CIFocusAssistSession __x_ABI_CWindows_CUI_CShell_CIFocusAssistSession;
-
-#endif // ____x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_FWD_DEFINED__
+#endif // ____x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CShell_CISecurityAppManager_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CShell_CISecurityAppManager_FWD_DEFINED__
@@ -1631,54 +1546,52 @@ interface __FIAsyncOperationCompletedHandler_1_boolean
 #endif // ____FIAsyncOperationCompletedHandler_1_boolean_INTERFACE_DEFINED__
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs_INTERFACE_DEFINED__)
-#define ____FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs_INTERFACE_DEFINED__
+#if !defined(____FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable_INTERFACE_DEFINED__)
+#define ____FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable_INTERFACE_DEFINED__
 
-typedef interface __FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs __FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs;
+typedef interface __FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable __FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs;
+EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable;
 
-typedef struct __FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgsVtbl
+typedef struct __FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectableVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs* This,
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable* This,
         REFIID riid,
         void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs* This,
-        __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager* sender,
-        __x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs* args);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable* This,
+        __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager* sender,
+        IInspectable* args);
 
     END_INTERFACE
-} __FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgsVtbl;
+} __FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectableVtbl;
 
-interface __FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs
+interface __FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable
 {
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectableVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs_QueryInterface(This, riid, ppvObject) \
+#define __FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable_QueryInterface(This, riid, ppvObject) \
     ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs_AddRef(This) \
+#define __FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable_AddRef(This) \
     ((This)->lpVtbl->AddRef(This))
 
-#define __FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs_Release(This) \
+#define __FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable_Release(This) \
     ((This)->lpVtbl->Release(This))
 
-#define __FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs_Invoke(This, sender, args) \
+#define __FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable_Invoke(This, sender, args) \
     ((This)->lpVtbl->Invoke(This, sender, args))
 
 #endif /* COBJMACROS */
 
-#endif // ____FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // ____FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable_INTERFACE_DEFINED__
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xd0000
@@ -1961,314 +1874,250 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CIAdaptiveCardBuilderStatics;
 
 /*
  *
- * Interface Windows.UI.Shell.IFocusAssistChangedEventArgs
+ * Interface Windows.UI.Shell.IFocusSession
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
- * Interface is a part of the implementation of type Windows.UI.Shell.FocusAssistChangedEventArgs
+ * Interface is a part of the implementation of type Windows.UI.Shell.FocusSession
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Shell_IFocusAssistChangedEventArgs[] = L"Windows.UI.Shell.IFocusAssistChangedEventArgs";
-typedef struct __x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgsVtbl
+#if !defined(____x_ABI_CWindows_CUI_CShell_CIFocusSession_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CShell_CIFocusSession_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Shell_IFocusSession[] = L"Windows.UI.Shell.IFocusSession";
+typedef struct __x_ABI_CWindows_CUI_CShell_CIFocusSessionVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs* This,
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CShell_CIFocusSession* This,
         REFIID riid,
         void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs* This,
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CShell_CIFocusSession* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CShell_CIFocusSession* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CShell_CIFocusSession* This,
         ULONG* iidCount,
         IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs* This,
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CShell_CIFocusSession* This,
         HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs* This,
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CShell_CIFocusSession* This,
         TrustLevel* trustLevel);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgsVtbl;
-
-interface __x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs
-{
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs;
-#endif /* !defined(____x_ABI_CWindows_CUI_CShell_CIFocusAssistChangedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.UI.Shell.IFocusAssistManager
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.UI.Shell.FocusAssistManager
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Shell_IFocusAssistManager[] = L"Windows.UI.Shell.IFocusAssistManager";
-typedef struct __x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManager* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManager* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManager* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManager* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManager* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManager* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_IsActive)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManager* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* GetSession)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManager* This,
-        HSTRING sessionId,
-        __x_ABI_CWindows_CUI_CShell_CIFocusAssistSession** result);
-    HRESULT (STDMETHODCALLTYPE* TryStartFocusSession)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManager* This,
-        __x_ABI_CWindows_CUI_CShell_CIFocusAssistSession** result);
-    HRESULT (STDMETHODCALLTYPE* TryStartFocusSession2)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManager* This,
-        struct __x_ABI_CWindows_CFoundation_CDateTime endTime,
-        __x_ABI_CWindows_CUI_CShell_CIFocusAssistSession** result);
-    HRESULT (STDMETHODCALLTYPE* EndAllSessions)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManager* This);
-    HRESULT (STDMETHODCALLTYPE* add_Changed)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManager* This,
-        __FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssistManager_Windows__CUI__CShell__CFocusAssistChangedEventArgs* handler,
-        EventRegistrationToken* token);
-    HRESULT (STDMETHODCALLTYPE* remove_Changed)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManager* This,
-        EventRegistrationToken token);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerVtbl;
-
-interface __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager
-{
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_get_IsActive(This, value) \
-    ((This)->lpVtbl->get_IsActive(This, value))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_GetSession(This, sessionId, result) \
-    ((This)->lpVtbl->GetSession(This, sessionId, result))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_TryStartFocusSession(This, result) \
-    ((This)->lpVtbl->TryStartFocusSession(This, result))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_TryStartFocusSession2(This, endTime, result) \
-    ((This)->lpVtbl->TryStartFocusSession2(This, endTime, result))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_EndAllSessions(This) \
-    ((This)->lpVtbl->EndAllSessions(This))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_add_Changed(This, handler, token) \
-    ((This)->lpVtbl->add_Changed(This, handler, token))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_remove_Changed(This, token) \
-    ((This)->lpVtbl->remove_Changed(This, token))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CIFocusAssistManager;
-#endif /* !defined(____x_ABI_CWindows_CUI_CShell_CIFocusAssistManager_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.UI.Shell.IFocusAssistManagerStatics
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.UI.Shell.FocusAssistManager
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Shell_IFocusAssistManagerStatics[] = L"Windows.UI.Shell.IFocusAssistManagerStatics";
-typedef struct __x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStaticsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetDefault)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics* This,
-        __x_ABI_CWindows_CUI_CShell_CIFocusAssistManager** result);
-    HRESULT (STDMETHODCALLTYPE* get_IsSupported)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics* This,
-        boolean* value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStaticsVtbl;
-
-interface __x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics
-{
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStaticsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_GetDefault(This, result) \
-    ((This)->lpVtbl->GetDefault(This, result))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_get_IsSupported(This, value) \
-    ((This)->lpVtbl->get_IsSupported(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics;
-#endif /* !defined(____x_ABI_CWindows_CUI_CShell_CIFocusAssistManagerStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Interface Windows.UI.Shell.IFocusAssistSession
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Interface is a part of the implementation of type Windows.UI.Shell.FocusAssistSession
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#if !defined(____x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Shell_IFocusAssistSession[] = L"Windows.UI.Shell.IFocusAssistSession";
-typedef struct __x_ABI_CWindows_CUI_CShell_CIFocusAssistSessionVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistSession* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistSession* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistSession* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistSession* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistSession* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistSession* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Id)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistSession* This,
+    HRESULT (STDMETHODCALLTYPE* get_Id)(__x_ABI_CWindows_CUI_CShell_CIFocusSession* This,
         HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* End)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistSession* This);
+    HRESULT (STDMETHODCALLTYPE* End)(__x_ABI_CWindows_CUI_CShell_CIFocusSession* This);
 
     END_INTERFACE
-} __x_ABI_CWindows_CUI_CShell_CIFocusAssistSessionVtbl;
+} __x_ABI_CWindows_CUI_CShell_CIFocusSessionVtbl;
 
-interface __x_ABI_CWindows_CUI_CShell_CIFocusAssistSession
+interface __x_ABI_CWindows_CUI_CShell_CIFocusSession
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CShell_CIFocusAssistSessionVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CShell_CIFocusSessionVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_QueryInterface(This, riid, ppvObject) \
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSession_QueryInterface(This, riid, ppvObject) \
     ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_AddRef(This) \
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSession_AddRef(This) \
     ((This)->lpVtbl->AddRef(This))
 
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_Release(This) \
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSession_Release(This) \
     ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_GetIids(This, iidCount, iids) \
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSession_GetIids(This, iidCount, iids) \
     ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_GetRuntimeClassName(This, className) \
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSession_GetRuntimeClassName(This, className) \
     ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_GetTrustLevel(This, trustLevel) \
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSession_GetTrustLevel(This, trustLevel) \
     ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_get_Id(This, value) \
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSession_get_Id(This, value) \
     ((This)->lpVtbl->get_Id(This, value))
 
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_End(This) \
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSession_End(This) \
     ((This)->lpVtbl->End(This))
 
 #endif /* COBJMACROS */
 
-EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CIFocusAssistSession;
-#endif /* !defined(____x_ABI_CWindows_CUI_CShell_CIFocusAssistSession_INTERFACE_DEFINED__) */
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CIFocusSession;
+#endif /* !defined(____x_ABI_CWindows_CUI_CShell_CIFocusSession_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Interface Windows.UI.Shell.IFocusSessionManager
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Shell.FocusSessionManager
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Shell_IFocusSessionManager[] = L"Windows.UI.Shell.IFocusSessionManager";
+typedef struct __x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManager* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManager* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManager* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManager* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManager* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManager* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_IsFocusActive)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManager* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* GetSession)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManager* This,
+        HSTRING id,
+        __x_ABI_CWindows_CUI_CShell_CIFocusSession** result);
+    HRESULT (STDMETHODCALLTYPE* TryStartFocusSession)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManager* This,
+        __x_ABI_CWindows_CUI_CShell_CIFocusSession** result);
+    HRESULT (STDMETHODCALLTYPE* TryStartFocusSession2)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManager* This,
+        struct __x_ABI_CWindows_CFoundation_CDateTime endTime,
+        __x_ABI_CWindows_CUI_CShell_CIFocusSession** result);
+    HRESULT (STDMETHODCALLTYPE* DeactivateFocus)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManager* This);
+    HRESULT (STDMETHODCALLTYPE* add_IsFocusActiveChanged)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManager* This,
+        __FITypedEventHandler_2_Windows__CUI__CShell__CFocusSessionManager_IInspectable* handler,
+        EventRegistrationToken* token);
+    HRESULT (STDMETHODCALLTYPE* remove_IsFocusActiveChanged)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManager* This,
+        EventRegistrationToken token);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerVtbl;
+
+interface __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_get_IsFocusActive(This, value) \
+    ((This)->lpVtbl->get_IsFocusActive(This, value))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_GetSession(This, id, result) \
+    ((This)->lpVtbl->GetSession(This, id, result))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_TryStartFocusSession(This, result) \
+    ((This)->lpVtbl->TryStartFocusSession(This, result))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_TryStartFocusSession2(This, endTime, result) \
+    ((This)->lpVtbl->TryStartFocusSession2(This, endTime, result))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_DeactivateFocus(This) \
+    ((This)->lpVtbl->DeactivateFocus(This))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_add_IsFocusActiveChanged(This, handler, token) \
+    ((This)->lpVtbl->add_IsFocusActiveChanged(This, handler, token))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_remove_IsFocusActiveChanged(This, token) \
+    ((This)->lpVtbl->remove_IsFocusActiveChanged(This, token))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CIFocusSessionManager;
+#endif /* !defined(____x_ABI_CWindows_CUI_CShell_CIFocusSessionManager_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Interface Windows.UI.Shell.IFocusSessionManagerStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Shell.FocusSessionManager
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Shell_IFocusSessionManagerStatics[] = L"Windows.UI.Shell.IFocusSessionManagerStatics";
+typedef struct __x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStaticsVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetDefault)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics* This,
+        __x_ABI_CWindows_CUI_CShell_CIFocusSessionManager** result);
+    HRESULT (STDMETHODCALLTYPE* get_IsSupported)(__x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics* This,
+        boolean* value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStaticsVtbl;
+
+interface __x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStaticsVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_GetDefault(This, result) \
+    ((This)->lpVtbl->GetDefault(This, result))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_get_IsSupported(This, value) \
+    ((This)->lpVtbl->get_IsSupported(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics;
+#endif /* !defined(____x_ABI_CWindows_CUI_CShell_CIFocusSessionManagerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
@@ -2878,34 +2727,34 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
- * Class Windows.UI.Shell.FocusAssistChangedEventArgs
+ * Class Windows.UI.Shell.FocusSession
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Class implements the following interfaces:
- *    Windows.UI.Shell.IFocusAssistChangedEventArgs ** Default Interface **
+ *    Windows.UI.Shell.IFocusSession ** Default Interface **
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_UI_Shell_FocusAssistChangedEventArgs_DEFINED
-#define RUNTIMECLASS_Windows_UI_Shell_FocusAssistChangedEventArgs_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Shell_FocusAssistChangedEventArgs[] = L"Windows.UI.Shell.FocusAssistChangedEventArgs";
+#ifndef RUNTIMECLASS_Windows_UI_Shell_FocusSession_DEFINED
+#define RUNTIMECLASS_Windows_UI_Shell_FocusSession_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Shell_FocusSession[] = L"Windows.UI.Shell.FocusSession";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
- * Class Windows.UI.Shell.FocusAssistManager
+ * Class Windows.UI.Shell.FocusSessionManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.UI.Shell.IFocusAssistManagerStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.Shell.IFocusSessionManagerStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
- *    Windows.UI.Shell.IFocusAssistManager ** Default Interface **
+ *    Windows.UI.Shell.IFocusSessionManager ** Default Interface **
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -2913,28 +2762,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_UI_Shell_FocusAssistManager_DEFINED
-#define RUNTIMECLASS_Windows_UI_Shell_FocusAssistManager_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Shell_FocusAssistManager[] = L"Windows.UI.Shell.FocusAssistManager";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-
-/*
- *
- * Class Windows.UI.Shell.FocusAssistSession
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
- *
- * Class implements the following interfaces:
- *    Windows.UI.Shell.IFocusAssistSession ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#ifndef RUNTIMECLASS_Windows_UI_Shell_FocusAssistSession_DEFINED
-#define RUNTIMECLASS_Windows_UI_Shell_FocusAssistSession_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Shell_FocusAssistSession[] = L"Windows.UI.Shell.FocusAssistSession";
+#ifndef RUNTIMECLASS_Windows_UI_Shell_FocusSessionManager_DEFINED
+#define RUNTIMECLASS_Windows_UI_Shell_FocusSessionManager_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Shell_FocusSessionManager[] = L"Windows.UI.Shell.FocusSessionManager";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 

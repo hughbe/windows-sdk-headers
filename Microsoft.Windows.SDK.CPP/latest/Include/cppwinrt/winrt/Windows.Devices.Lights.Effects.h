@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Devices_Lights_Effects_H
 #define WINRT_Windows_Devices_Lights_Effects_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Devices.Lights.h"
 #include "winrt/impl/Windows.Devices.Lights.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -66,7 +66,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffect<D>::BitmapRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Lights::Effects::ILampArrayBitmapEffect)->remove_BitmapRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Lights::Effects::ILampArrayBitmapEffect)->remove_BitmapRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Lights::Effects::LampArrayBitmapEffect) consume_Windows_Devices_Lights_Effects_ILampArrayBitmapEffectFactory<D>::CreateInstance(winrt::Windows::Devices::Lights::LampArray const& lampArray, array_view<int32_t const> lampIndexes) const
     {
@@ -248,7 +248,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Lights_Effects_ILampArrayCustomEffect<D>::UpdateRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Lights::Effects::ILampArrayCustomEffect)->remove_UpdateRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Lights::Effects::ILampArrayCustomEffect)->remove_UpdateRequested(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Lights::Effects::LampArrayCustomEffect) consume_Windows_Devices_Lights_Effects_ILampArrayCustomEffectFactory<D>::CreateInstance(winrt::Windows::Devices::Lights::LampArray const& lampArray, array_view<int32_t const> lampIndexes) const
     {
@@ -1100,6 +1100,8 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArraySolidEffect> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

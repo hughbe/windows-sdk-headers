@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Devices_Input_Preview_H
 #define WINRT_Windows_Devices_Input_Preview_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Devices.Input.h"
 #include "winrt/impl/Windows.Devices.HumanInterfaceDevice.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -76,7 +76,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Input_Preview_IGazeDeviceWatcherPreview<D>::Added(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview)->remove_Added(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview)->remove_Added(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Input_Preview_IGazeDeviceWatcherPreview<D>::Removed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs> const& handler) const
     {
@@ -90,7 +90,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Input_Preview_IGazeDeviceWatcherPreview<D>::Removed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview)->remove_Removed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview)->remove_Removed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Input_Preview_IGazeDeviceWatcherPreview<D>::Updated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs> const& handler) const
     {
@@ -104,7 +104,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Input_Preview_IGazeDeviceWatcherPreview<D>::Updated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview)->remove_Updated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview)->remove_Updated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Input_Preview_IGazeDeviceWatcherPreview<D>::EnumerationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -118,7 +118,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Input_Preview_IGazeDeviceWatcherPreview<D>::EnumerationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview)->remove_EnumerationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::Preview::IGazeDeviceWatcherPreview)->remove_EnumerationCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Input_Preview_IGazeDeviceWatcherPreview<D>::Start() const
     {
@@ -184,7 +184,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Input_Preview_IGazeInputSourcePreview<D>::GazeMoved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::Preview::IGazeInputSourcePreview)->remove_GazeMoved(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::Preview::IGazeInputSourcePreview)->remove_GazeMoved(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Input_Preview_IGazeInputSourcePreview<D>::GazeEntered(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::Preview::GazeInputSourcePreview, winrt::Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs> const& handler) const
     {
@@ -198,7 +198,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Input_Preview_IGazeInputSourcePreview<D>::GazeEntered(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::Preview::IGazeInputSourcePreview)->remove_GazeEntered(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::Preview::IGazeInputSourcePreview)->remove_GazeEntered(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Devices_Input_Preview_IGazeInputSourcePreview<D>::GazeExited(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::Preview::GazeInputSourcePreview, winrt::Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs> const& handler) const
     {
@@ -212,7 +212,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Input_Preview_IGazeInputSourcePreview<D>::GazeExited(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::Preview::IGazeInputSourcePreview)->remove_GazeExited(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Input::Preview::IGazeInputSourcePreview)->remove_GazeExited(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Input::Preview::GazeInputSourcePreview) consume_Windows_Devices_Input_Preview_IGazeInputSourcePreviewStatics<D>::GetForCurrentView() const
     {
@@ -697,6 +697,8 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Input::Preview::GazeInputSourcePreview> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Input::Preview::GazePointPreview> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,10 +10,10 @@
 #include "winrt/impl/Windows.Graphics.Printing.1.h"
 WINRT_EXPORT namespace winrt::Windows::Graphics::Printing
 {
-    struct PrintTaskSourceRequestedHandler : Windows::Foundation::IUnknown
+    struct PrintTaskSourceRequestedHandler : winrt::Windows::Foundation::IUnknown
     {
         PrintTaskSourceRequestedHandler(std::nullptr_t = nullptr) noexcept {}
-        PrintTaskSourceRequestedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        PrintTaskSourceRequestedHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> PrintTaskSourceRequestedHandler(L lambda);
         template <typename F> PrintTaskSourceRequestedHandler(F* function);
         template <typename O, typename M> PrintTaskSourceRequestedHandler(O* object, M method);

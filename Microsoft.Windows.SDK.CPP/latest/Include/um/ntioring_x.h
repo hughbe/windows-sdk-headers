@@ -38,7 +38,7 @@ typedef enum IORING_VERSION {
 
 #if defined(NTDDI_WIN10_NI) && (NTDDI_VERSION >= NTDDI_WIN10_NI)
     /// <summary>Major update; Adds write, FLUSH and DRAIN support</summary>
-    IORING_VERSION_3,
+    IORING_VERSION_3 = 300,
 #endif
 } IORING_VERSION;
 

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_System_Profile_H
 #define WINRT_Windows_System_Profile_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.System.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -58,6 +58,38 @@ namespace winrt::impl
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::IAppApplicabilityStatics)->GetUnsupportedAppRequirements(*(void**)(&capabilities), &result));
         return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::System::Profile::UnsupportedAppRequirement>{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_Profile_IAppControlPolicyStatics<D>::IsEnabled() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::IAppControlPolicyStatics)->get_IsEnabled(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_Profile_IAppControlPolicyStatics<D>::CanDisable() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::IAppControlPolicyStatics)->get_CanDisable(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_Profile_IAppControlPolicyStatics<D>::IsDisableSupported() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::IAppControlPolicyStatics)->get_IsDisableSupported(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_Profile_IAppControlPolicyStatics<D>::Changed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::IAppControlPolicyStatics)->add_Changed(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> typename consume_Windows_System_Profile_IAppControlPolicyStatics<D>::Changed_revoker consume_Windows_System_Profile_IAppControlPolicyStatics<D>::Changed(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        return impl::make_event_revoker<D, Changed_revoker>(this, Changed(handler));
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Profile_IAppControlPolicyStatics<D>::Changed(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Windows::System::Profile::IAppControlPolicyStatics)->remove_Changed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_Profile_IEducationSettingsStatics<D>::IsEducationEnvironment() const
     {
@@ -239,7 +271,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Profile_IPlatformDiagnosticsAndUsageDataSettingsStatics<D>::CollectionLevelChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::Profile::IPlatformDiagnosticsAndUsageDataSettingsStatics)->remove_CollectionLevelChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::Profile::IPlatformDiagnosticsAndUsageDataSettingsStatics)->remove_CollectionLevelChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_Profile_IPlatformDiagnosticsAndUsageDataSettingsStatics<D>::CanCollectDiagnostics(winrt::Windows::System::Profile::PlatformDataCollectionLevel const& level) const
     {
@@ -313,7 +345,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Profile_ISystemSetupInfoStatics<D>::OutOfBoxExperienceStateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::Profile::ISystemSetupInfoStatics)->remove_OutOfBoxExperienceStateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::Profile::ISystemSetupInfoStatics)->remove_OutOfBoxExperienceStateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Profile_IUnsupportedAppRequirement<D>::Requirement() const
     {
@@ -363,7 +395,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_Profile_IWindowsIntegrityPolicyStatics<D>::PolicyChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::Profile::IWindowsIntegrityPolicyStatics)->remove_PolicyChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::Profile::IWindowsIntegrityPolicyStatics)->remove_PolicyChanged(impl::bind_in(token));
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
@@ -449,6 +481,47 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::System::Profile::IAppControlPolicyStatics> : produce_base<D, winrt::Windows::System::Profile::IAppControlPolicyStatics>
+    {
+        int32_t __stdcall get_IsEnabled(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsEnabled());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CanDisable(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().CanDisable());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_IsDisableSupported(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsDisableSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_Changed(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().Changed(*reinterpret_cast<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_Changed(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Changed(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
     };
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
@@ -960,6 +1033,31 @@ WINRT_EXPORT namespace winrt::Windows::System::Profile
     {
         return impl::call_factory<AppApplicability, IAppApplicabilityStatics>([&](IAppApplicabilityStatics const& f) { return f.GetUnsupportedAppRequirements(capabilities); });
     }
+    inline auto AppControlPolicy::IsEnabled()
+    {
+        return impl::call_factory_cast<bool(*)(IAppControlPolicyStatics const&), AppControlPolicy, IAppControlPolicyStatics>([](IAppControlPolicyStatics const& f) { return f.IsEnabled(); });
+    }
+    inline auto AppControlPolicy::CanDisable()
+    {
+        return impl::call_factory_cast<bool(*)(IAppControlPolicyStatics const&), AppControlPolicy, IAppControlPolicyStatics>([](IAppControlPolicyStatics const& f) { return f.CanDisable(); });
+    }
+    inline auto AppControlPolicy::IsDisableSupported()
+    {
+        return impl::call_factory_cast<bool(*)(IAppControlPolicyStatics const&), AppControlPolicy, IAppControlPolicyStatics>([](IAppControlPolicyStatics const& f) { return f.IsDisableSupported(); });
+    }
+    inline auto AppControlPolicy::Changed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler)
+    {
+        return impl::call_factory<AppControlPolicy, IAppControlPolicyStatics>([&](IAppControlPolicyStatics const& f) { return f.Changed(handler); });
+    }
+    inline AppControlPolicy::Changed_revoker AppControlPolicy::Changed(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler)
+    {
+        auto f = get_activation_factory<AppControlPolicy, winrt::Windows::System::Profile::IAppControlPolicyStatics>();
+        return { f, f.Changed(handler) };
+    }
+    inline auto AppControlPolicy::Changed(winrt::event_token const& token)
+    {
+        impl::call_factory<AppControlPolicy, IAppControlPolicyStatics>([&](IAppControlPolicyStatics const& f) { return f.Changed(token); });
+    }
     inline auto EducationSettings::IsEducationEnvironment()
     {
         return impl::call_factory_cast<bool(*)(IEducationSettingsStatics const&), EducationSettings, IEducationSettingsStatics>([](IEducationSettingsStatics const& f) { return f.IsEducationEnvironment(); });
@@ -1156,6 +1254,7 @@ namespace std
     template<> struct hash<winrt::Windows::System::Profile::IAnalyticsVersionInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::Profile::IAnalyticsVersionInfo2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::Profile::IAppApplicabilityStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::Profile::IAppControlPolicyStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::Profile::IEducationSettingsStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::Profile::IHardwareIdentificationStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::Profile::IHardwareToken> : winrt::impl::hash_base {};
@@ -1172,6 +1271,7 @@ namespace std
     template<> struct hash<winrt::Windows::System::Profile::AnalyticsInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::Profile::AnalyticsVersionInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::Profile::AppApplicability> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::Profile::AppControlPolicy> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::Profile::EducationSettings> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::Profile::HardwareIdentification> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::Profile::HardwareToken> : winrt::impl::hash_base {};
@@ -1184,6 +1284,8 @@ namespace std
     template<> struct hash<winrt::Windows::System::Profile::SystemSetupInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::Profile::UnsupportedAppRequirement> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::Profile::WindowsIntegrityPolicy> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

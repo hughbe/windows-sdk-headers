@@ -8413,6 +8413,7 @@ typedef DWORD
 #define CLUSREG_NAME_NODE_MODEL             L"Model"
 #define CLUSREG_NAME_NODE_SERIALNUMBER      L"SerialNumber"
 #define CLUSREG_NAME_NODE_MANUFACTURER      L"Manufacturer"
+#define CLUSREG_NAME_NODE_UNIQUEID          L"UniqueID"
 
 
 //

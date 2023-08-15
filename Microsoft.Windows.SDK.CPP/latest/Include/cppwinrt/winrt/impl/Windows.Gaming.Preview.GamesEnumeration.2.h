@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,10 +10,10 @@
 #include "winrt/impl/Windows.Gaming.Preview.GamesEnumeration.1.h"
 WINRT_EXPORT namespace winrt::Windows::Gaming::Preview::GamesEnumeration
 {
-    struct GameListChangedEventHandler : Windows::Foundation::IUnknown
+    struct GameListChangedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         GameListChangedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        GameListChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        GameListChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> GameListChangedEventHandler(L lambda);
         template <typename F> GameListChangedEventHandler(F* function);
         template <typename O, typename M> GameListChangedEventHandler(O* object, M method);
@@ -21,10 +21,10 @@ WINRT_EXPORT namespace winrt::Windows::Gaming::Preview::GamesEnumeration
         template <typename O, typename M> GameListChangedEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry const& game) const;
     };
-    struct GameListRemovedEventHandler : Windows::Foundation::IUnknown
+    struct GameListRemovedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         GameListRemovedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        GameListRemovedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        GameListRemovedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> GameListRemovedEventHandler(L lambda);
         template <typename F> GameListRemovedEventHandler(F* function);
         template <typename O, typename M> GameListRemovedEventHandler(O* object, M method);

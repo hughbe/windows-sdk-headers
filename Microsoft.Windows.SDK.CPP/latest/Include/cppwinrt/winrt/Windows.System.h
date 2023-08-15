@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_System_H
 #define WINRT_Windows_System_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/impl/Windows.ApplicationModel.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -106,7 +106,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IAppDiagnosticInfoWatcher<D>::Added(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IAppDiagnosticInfoWatcher)->remove_Added(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IAppDiagnosticInfoWatcher)->remove_Added(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_IAppDiagnosticInfoWatcher<D>::Removed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::AppDiagnosticInfoWatcher, winrt::Windows::System::AppDiagnosticInfoWatcherEventArgs> const& handler) const
     {
@@ -120,7 +120,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IAppDiagnosticInfoWatcher<D>::Removed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IAppDiagnosticInfoWatcher)->remove_Removed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IAppDiagnosticInfoWatcher)->remove_Removed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_IAppDiagnosticInfoWatcher<D>::EnumerationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::AppDiagnosticInfoWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -134,7 +134,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IAppDiagnosticInfoWatcher<D>::EnumerationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IAppDiagnosticInfoWatcher)->remove_EnumerationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IAppDiagnosticInfoWatcher)->remove_EnumerationCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_IAppDiagnosticInfoWatcher<D>::Stopped(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::AppDiagnosticInfoWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -148,7 +148,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IAppDiagnosticInfoWatcher<D>::Stopped(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IAppDiagnosticInfoWatcher)->remove_Stopped(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IAppDiagnosticInfoWatcher)->remove_Stopped(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::AppDiagnosticInfoWatcherStatus) consume_Windows_System_IAppDiagnosticInfoWatcher<D>::Status() const
     {
@@ -308,7 +308,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IAppResourceGroupInfoWatcher<D>::Added(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IAppResourceGroupInfoWatcher)->remove_Added(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IAppResourceGroupInfoWatcher)->remove_Added(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_IAppResourceGroupInfoWatcher<D>::Removed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::AppResourceGroupInfoWatcher, winrt::Windows::System::AppResourceGroupInfoWatcherEventArgs> const& handler) const
     {
@@ -322,7 +322,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IAppResourceGroupInfoWatcher<D>::Removed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IAppResourceGroupInfoWatcher)->remove_Removed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IAppResourceGroupInfoWatcher)->remove_Removed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_IAppResourceGroupInfoWatcher<D>::EnumerationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::AppResourceGroupInfoWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -336,7 +336,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IAppResourceGroupInfoWatcher<D>::EnumerationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IAppResourceGroupInfoWatcher)->remove_EnumerationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IAppResourceGroupInfoWatcher)->remove_EnumerationCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_IAppResourceGroupInfoWatcher<D>::Stopped(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::AppResourceGroupInfoWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -350,7 +350,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IAppResourceGroupInfoWatcher<D>::Stopped(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IAppResourceGroupInfoWatcher)->remove_Stopped(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IAppResourceGroupInfoWatcher)->remove_Stopped(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_IAppResourceGroupInfoWatcher<D>::ExecutionStateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::AppResourceGroupInfoWatcher, winrt::Windows::System::AppResourceGroupInfoWatcherExecutionStateChangedEventArgs> const& handler) const
     {
@@ -364,7 +364,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IAppResourceGroupInfoWatcher<D>::ExecutionStateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IAppResourceGroupInfoWatcher)->remove_ExecutionStateChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IAppResourceGroupInfoWatcher)->remove_ExecutionStateChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::AppResourceGroupInfoWatcherStatus) consume_Windows_System_IAppResourceGroupInfoWatcher<D>::Status() const
     {
@@ -582,7 +582,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IDispatcherQueue<D>::ShutdownStarting(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IDispatcherQueue)->remove_ShutdownStarting(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IDispatcherQueue)->remove_ShutdownStarting(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_IDispatcherQueue<D>::ShutdownCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::DispatcherQueue, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -596,7 +596,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IDispatcherQueue<D>::ShutdownCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IDispatcherQueue)->remove_ShutdownCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IDispatcherQueue)->remove_ShutdownCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_IDispatcherQueue2<D>::HasThreadAccess() const
     {
@@ -680,7 +680,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IDispatcherQueueTimer<D>::Tick(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IDispatcherQueueTimer)->remove_Tick(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IDispatcherQueueTimer)->remove_Tick(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Storage::IStorageItem>) consume_Windows_System_IFolderLauncherOptions<D>::ItemsToSelect() const
     {
@@ -1104,7 +1104,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IMemoryManagerStatics<D>::AppMemoryUsageIncreased(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IMemoryManagerStatics)->remove_AppMemoryUsageIncreased(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IMemoryManagerStatics)->remove_AppMemoryUsageIncreased(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_IMemoryManagerStatics<D>::AppMemoryUsageDecreased(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1118,7 +1118,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IMemoryManagerStatics<D>::AppMemoryUsageDecreased(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IMemoryManagerStatics)->remove_AppMemoryUsageDecreased(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IMemoryManagerStatics)->remove_AppMemoryUsageDecreased(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_IMemoryManagerStatics<D>::AppMemoryUsageLimitChanging(winrt::Windows::Foundation::EventHandler<winrt::Windows::System::AppMemoryUsageLimitChangingEventArgs> const& handler) const
     {
@@ -1132,7 +1132,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IMemoryManagerStatics<D>::AppMemoryUsageLimitChanging(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IMemoryManagerStatics)->remove_AppMemoryUsageLimitChanging(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IMemoryManagerStatics)->remove_AppMemoryUsageLimitChanging(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::AppMemoryReport) consume_Windows_System_IMemoryManagerStatics2<D>::GetAppMemoryReport() const
     {
@@ -1434,7 +1434,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IUserDeviceAssociationStatics<D>::UserDeviceAssociationChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IUserDeviceAssociationStatics)->remove_UserDeviceAssociationChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IUserDeviceAssociationStatics)->remove_UserDeviceAssociationChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_IUserPicker<D>::AllowGuestAccounts() const
     {
@@ -1530,7 +1530,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IUserWatcher<D>::Added(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IUserWatcher)->remove_Added(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IUserWatcher)->remove_Added(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_IUserWatcher<D>::Removed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::UserWatcher, winrt::Windows::System::UserChangedEventArgs> const& handler) const
     {
@@ -1544,7 +1544,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IUserWatcher<D>::Removed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IUserWatcher)->remove_Removed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IUserWatcher)->remove_Removed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_IUserWatcher<D>::Updated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::UserWatcher, winrt::Windows::System::UserChangedEventArgs> const& handler) const
     {
@@ -1558,7 +1558,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IUserWatcher<D>::Updated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IUserWatcher)->remove_Updated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IUserWatcher)->remove_Updated(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_IUserWatcher<D>::AuthenticationStatusChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::UserWatcher, winrt::Windows::System::UserChangedEventArgs> const& handler) const
     {
@@ -1572,7 +1572,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IUserWatcher<D>::AuthenticationStatusChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IUserWatcher)->remove_AuthenticationStatusChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IUserWatcher)->remove_AuthenticationStatusChanged(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_IUserWatcher<D>::AuthenticationStatusChanging(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::UserWatcher, winrt::Windows::System::UserAuthenticationStatusChangingEventArgs> const& handler) const
     {
@@ -1586,7 +1586,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IUserWatcher<D>::AuthenticationStatusChanging(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IUserWatcher)->remove_AuthenticationStatusChanging(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IUserWatcher)->remove_AuthenticationStatusChanging(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_IUserWatcher<D>::EnumerationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::UserWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1600,7 +1600,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IUserWatcher<D>::EnumerationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IUserWatcher)->remove_EnumerationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IUserWatcher)->remove_EnumerationCompleted(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_IUserWatcher<D>::Stopped(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::UserWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
@@ -1614,7 +1614,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_IUserWatcher<D>::Stopped(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::System::IUserWatcher)->remove_Stopped(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::IUserWatcher)->remove_Stopped(impl::bind_in(token));
     }
     template <typename H> struct delegate<winrt::Windows::System::DispatcherQueueHandler, H> final : implements_delegate<winrt::Windows::System::DispatcherQueueHandler, H>
     {
@@ -4737,6 +4737,8 @@ namespace std
     template<> struct hash<winrt::Windows::System::UserDeviceAssociationChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::UserPicker> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::UserWatcher> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 

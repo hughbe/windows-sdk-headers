@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Data_Xml_Xsl_H
 #define WINRT_Windows_Data_Xml_Xsl_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/impl/Windows.Data.Xml.Dom.2.h"
 #include "winrt/impl/Windows.Data.Xml.Xsl.2.h"
 namespace winrt::impl
@@ -88,6 +88,8 @@ namespace std
     template<> struct hash<winrt::Windows::Data::Xml::Xsl::IXsltProcessor2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Data::Xml::Xsl::IXsltProcessorFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Data::Xml::Xsl::XsltProcessor> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

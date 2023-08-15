@@ -165,12 +165,11 @@ DEFINE_ENUM_FLAG_OPERATORS(FILE_WRITE_FLAGS)
 
 typedef enum FILE_FLUSH_MODE
 {
-    FILE_FLUSH_ALL,
-    FILE_FLUSH_FILE_DATA_ONLY,
-    FILE_FLUSH_NO_SYNC,
-    FILE_FLUSH_FILE_DATA_SYNC_ONLY,
+    FILE_FLUSH_DEFAULT = 0, // same as WIN32 FlushFileBuffers(); Flushes data, metadata, AND sends a SYNC command to the hardware
+    FILE_FLUSH_DATA,        // Flush data only
+    FILE_FLUSH_MIN_METADATA,// Flush data + SYNC (minimal metadata)
+    FILE_FLUSH_NO_SYNC,     // Flush data + metadata
 } FILE_FLUSH_MODE;
-
 #endif // NTDDI_WIN10_NI
 
 

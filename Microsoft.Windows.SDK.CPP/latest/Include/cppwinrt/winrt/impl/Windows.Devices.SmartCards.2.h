@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -12,10 +12,10 @@
 #include "winrt/impl/Windows.Devices.SmartCards.1.h"
 WINRT_EXPORT namespace winrt::Windows::Devices::SmartCards
 {
-    struct SmartCardPinResetHandler : Windows::Foundation::IUnknown
+    struct SmartCardPinResetHandler : winrt::Windows::Foundation::IUnknown
     {
         SmartCardPinResetHandler(std::nullptr_t = nullptr) noexcept {}
-        SmartCardPinResetHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        SmartCardPinResetHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> SmartCardPinResetHandler(L lambda);
         template <typename F> SmartCardPinResetHandler(F* function);
         template <typename O, typename M> SmartCardPinResetHandler(O* object, M method);

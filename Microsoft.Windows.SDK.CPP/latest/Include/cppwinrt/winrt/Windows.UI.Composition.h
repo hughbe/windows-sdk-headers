@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_UI_Composition_H
 #define WINRT_Windows_UI_Composition_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.210707.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.UI.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -346,7 +346,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_ICompositionCapabilities<D>::Changed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::ICompositionCapabilities)->remove_Changed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::ICompositionCapabilities)->remove_Changed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionCapabilities) consume_Windows_UI_Composition_ICompositionCapabilitiesStatics<D>::GetForCurrentView() const
     {
@@ -478,7 +478,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_ICompositionCommitBatch<D>::Completed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::ICompositionCommitBatch)->remove_Completed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::ICompositionCommitBatch)->remove_Completed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionShapeCollection) consume_Windows_UI_Composition_ICompositionContainerShape<D>::Shapes() const
     {
@@ -830,7 +830,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_ICompositionGraphicsDevice<D>::RenderingDeviceReplaced(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::ICompositionGraphicsDevice)->remove_RenderingDeviceReplaced(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::ICompositionGraphicsDevice)->remove_RenderingDeviceReplaced(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionDrawingSurface) consume_Windows_UI_Composition_ICompositionGraphicsDevice2<D>::CreateDrawingSurface2(winrt::Windows::Graphics::SizeInt32 const& sizePixels, winrt::Windows::Graphics::DirectX::DirectXPixelFormat const& pixelFormat, winrt::Windows::Graphics::DirectX::DirectXAlphaMode const& alphaMode) const
     {
@@ -1154,6 +1154,10 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::ICompositionObject4)->TryGetAnimationController(*(void**)(&propertyName), &result));
         return winrt::Windows::UI::Composition::AnimationController{ result, take_ownership_from_abi };
     }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_ICompositionObject5<D>::StartAnimation(param::hstring const& propertyName, winrt::Windows::UI::Composition::CompositionAnimation const& animation, winrt::Windows::UI::Composition::AnimationController const& animationController) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::ICompositionObject5)->StartAnimationWithController(*(void**)(&propertyName), *(void**)(&animation), *(void**)(&animationController)));
+    }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_ICompositionObjectStatics<D>::StartAnimationWithIAnimationObject(winrt::Windows::UI::Composition::IAnimationObject const& target, param::hstring const& propertyName, winrt::Windows::UI::Composition::CompositionAnimation const& animation) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::ICompositionObjectStatics)->StartAnimationWithIAnimationObject(*(void**)(&target), *(void**)(&propertyName), *(void**)(&animation)));
@@ -1161,10 +1165,6 @@ namespace winrt::impl
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_ICompositionObjectStatics<D>::StartAnimationGroupWithIAnimationObject(winrt::Windows::UI::Composition::IAnimationObject const& target, winrt::Windows::UI::Composition::ICompositionAnimationBase const& animation) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::ICompositionObjectStatics)->StartAnimationGroupWithIAnimationObject(*(void**)(&target), *(void**)(&animation)));
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_ICompositionObjectWithAnimationController<D>::StartAnimation(param::hstring const& propertyName, winrt::Windows::UI::Composition::CompositionAnimation const& animation, winrt::Windows::UI::Composition::AnimationController const& animationController) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::ICompositionObjectWithAnimationController)->StartAnimationWithController(*(void**)(&propertyName), *(void**)(&animation), *(void**)(&animationController)));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionPath) consume_Windows_UI_Composition_ICompositionPathFactory<D>::Create(winrt::Windows::Graphics::IGeometrySource2D const& source) const
     {
@@ -1524,7 +1524,7 @@ namespace winrt::impl
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_ICompositionScopedBatch<D>::Completed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::ICompositionScopedBatch)->remove_Completed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::ICompositionScopedBatch)->remove_Completed(impl::bind_in(token));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Numerics::float2) consume_Windows_UI_Composition_ICompositionShape<D>::CenterPoint() const
     {
@@ -2382,6 +2382,12 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::ICompositor7)->CreateRectangleClipWithSidesAndRadius(left, top, right, bottom, impl::bind_in(topLeftRadius), impl::bind_in(topRightRadius), impl::bind_in(bottomRightRadius), impl::bind_in(bottomLeftRadius), &result));
         return winrt::Windows::UI::Composition::RectangleClip{ result, take_ownership_from_abi };
     }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::AnimationController) consume_Windows_UI_Composition_ICompositor8<D>::CreateAnimationController() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::ICompositor8)->CreateAnimationController(&result));
+        return winrt::Windows::UI::Composition::AnimationController{ result, take_ownership_from_abi };
+    }
     template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Composition_ICompositorStatics<D>::MaxGlobalPlaybackRate() const
     {
         float value{};
@@ -2393,12 +2399,6 @@ namespace winrt::impl
         float value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::ICompositorStatics)->get_MinGlobalPlaybackRate(&value));
         return value;
-    }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::AnimationController) consume_Windows_UI_Composition_ICompositorWithAnimationController<D>::CreateAnimationController() const
-    {
-        void* result{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::ICompositorWithAnimationController)->CreateAnimationController(&result));
-        return winrt::Windows::UI::Composition::AnimationController{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::CompositionBackdropBrush) consume_Windows_UI_Composition_ICompositorWithBlurredWallpaperBackdropBrush<D>::TryCreateBlurredWallpaperBackdropBrush() const
     {
@@ -5741,6 +5741,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::UI::Composition::ICompositionObject5> : produce_base<D, winrt::Windows::UI::Composition::ICompositionObject5>
+    {
+        int32_t __stdcall StartAnimationWithController(void* propertyName, void* animation, void* animationController) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().StartAnimation(*reinterpret_cast<hstring const*>(&propertyName), *reinterpret_cast<winrt::Windows::UI::Composition::CompositionAnimation const*>(&animation), *reinterpret_cast<winrt::Windows::UI::Composition::AnimationController const*>(&animationController));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::UI::Composition::ICompositionObjectFactory> : produce_base<D, winrt::Windows::UI::Composition::ICompositionObjectFactory>
     {
     };
@@ -5760,19 +5773,6 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             this->shim().StartAnimationGroupWithIAnimationObject(*reinterpret_cast<winrt::Windows::UI::Composition::IAnimationObject const*>(&target), *reinterpret_cast<winrt::Windows::UI::Composition::ICompositionAnimationBase const*>(&animation));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-    };
-#endif
-#ifndef WINRT_LEAN_AND_MEAN
-    template <typename D>
-    struct produce<D, winrt::Windows::UI::Composition::ICompositionObjectWithAnimationController> : produce_base<D, winrt::Windows::UI::Composition::ICompositionObjectWithAnimationController>
-    {
-        int32_t __stdcall StartAnimationWithController(void* propertyName, void* animation, void* animationController) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().StartAnimation(*reinterpret_cast<hstring const*>(&propertyName), *reinterpret_cast<winrt::Windows::UI::Composition::CompositionAnimation const*>(&animation), *reinterpret_cast<winrt::Windows::UI::Composition::AnimationController const*>(&animationController));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -7739,6 +7739,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::UI::Composition::ICompositor8> : produce_base<D, winrt::Windows::UI::Composition::ICompositor8>
+    {
+        int32_t __stdcall CreateAnimationController(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::UI::Composition::AnimationController>(this->shim().CreateAnimationController());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::UI::Composition::ICompositorStatics> : produce_base<D, winrt::Windows::UI::Composition::ICompositorStatics>
     {
         int32_t __stdcall get_MaxGlobalPlaybackRate(float* value) noexcept final try
@@ -7752,20 +7766,6 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             *value = detach_from<float>(this->shim().MinGlobalPlaybackRate());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-    };
-#endif
-#ifndef WINRT_LEAN_AND_MEAN
-    template <typename D>
-    struct produce<D, winrt::Windows::UI::Composition::ICompositorWithAnimationController> : produce_base<D, winrt::Windows::UI::Composition::ICompositorWithAnimationController>
-    {
-        int32_t __stdcall CreateAnimationController(void** result) noexcept final try
-        {
-            clear_abi(result);
-            typename D::abi_guard guard(this->shim());
-            *result = detach_from<winrt::Windows::UI::Composition::AnimationController>(this->shim().CreateAnimationController());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -10274,9 +10274,9 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Composition::ICompositionObject2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositionObject3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositionObject4> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::ICompositionObject5> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositionObjectFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositionObjectStatics> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Windows::UI::Composition::ICompositionObjectWithAnimationController> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositionPath> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositionPathFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositionPathGeometry> : winrt::impl::hash_base {};
@@ -10318,8 +10318,8 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Composition::ICompositor5> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositor6> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositor7> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::UI::Composition::ICompositor8> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositorStatics> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Windows::UI::Composition::ICompositorWithAnimationController> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositorWithBlurredWallpaperBackdropBrush> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositorWithProjectedShadow> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::ICompositorWithRadialGradient> : winrt::impl::hash_base {};
@@ -10490,6 +10490,8 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Composition::Visual> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::VisualCollection> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Composition::VisualUnorderedCollection> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

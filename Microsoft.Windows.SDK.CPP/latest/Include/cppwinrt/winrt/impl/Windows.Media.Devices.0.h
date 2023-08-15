@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -26,6 +26,7 @@ WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 }
 WINRT_EXPORT namespace winrt::Windows::Media::Capture
 {
+    enum class MediaCaptureDeviceExclusiveControlReleaseMode : int32_t;
     enum class MediaStreamType : int32_t;
     enum class PowerlineFrequency : int32_t;
 }
@@ -257,6 +258,7 @@ WINRT_EXPORT namespace winrt::Windows::Media::Devices
     struct IAdvancedPhotoControl;
     struct IAdvancedVideoCaptureDeviceController;
     struct IAdvancedVideoCaptureDeviceController10;
+    struct IAdvancedVideoCaptureDeviceController11;
     struct IAdvancedVideoCaptureDeviceController2;
     struct IAdvancedVideoCaptureDeviceController3;
     struct IAdvancedVideoCaptureDeviceController4;
@@ -373,6 +375,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Media::Devices::IAdvancedPhotoControl>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController11>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4>{ using type = interface_category; };
@@ -584,6 +587,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Media::Devices::IAdvancedPhotoControl> = L"Windows.Media.Devices.IAdvancedPhotoControl";
     template <> inline constexpr auto& name_v<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController> = L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController";
     template <> inline constexpr auto& name_v<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10> = L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController10";
+    template <> inline constexpr auto& name_v<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController11> = L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController11";
     template <> inline constexpr auto& name_v<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2> = L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController2";
     template <> inline constexpr auto& name_v<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3> = L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController3";
     template <> inline constexpr auto& name_v<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4> = L"Windows.Media.Devices.IAdvancedVideoCaptureDeviceController4";
@@ -651,6 +655,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Media::Devices::IAdvancedPhotoControl>{ 0xC5B15486,0x9001,0x4682,{ 0x93,0x09,0x68,0xEA,0xE0,0x08,0x0E,0xEC } }; // C5B15486-9001-4682-9309-68EAE0080EEC
     template <> inline constexpr guid guid_v<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController>{ 0xDE6FF4D3,0x2B96,0x4583,{ 0x80,0xAB,0xB5,0xB0,0x1D,0xC6,0xA8,0xD7 } }; // DE6FF4D3-2B96-4583-80AB-B5B01DC6A8D7
     template <> inline constexpr guid guid_v<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10>{ 0xC621B82D,0xD6F0,0x5C1B,{ 0xA3,0x88,0xA6,0xE9,0x38,0x40,0x71,0x46 } }; // C621B82D-D6F0-5C1B-A388-A6E938407146
+    template <> inline constexpr guid guid_v<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController11>{ 0xD5B65AE2,0x3772,0x580C,{ 0xA6,0x30,0xE7,0x5D,0xE9,0x10,0x69,0x04 } }; // D5B65AE2-3772-580C-A630-E75DE9106904
     template <> inline constexpr guid guid_v<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2>{ 0x8BB94F8F,0xF11A,0x43DB,{ 0xB4,0x02,0x11,0x93,0x0B,0x80,0xAE,0x56 } }; // 8BB94F8F-F11A-43DB-B402-11930B80AE56
     template <> inline constexpr guid guid_v<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController3>{ 0xA98B8F34,0xEE0D,0x470C,{ 0xB9,0xF0,0x42,0x29,0xC4,0xBB,0xD0,0x89 } }; // A98B8F34-EE0D-470C-B9F0-4229C4BBD089
     template <> inline constexpr guid guid_v<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController4>{ 0xEA9FBFAF,0xD371,0x41C3,{ 0x9A,0x17,0x82,0x4A,0x87,0xEB,0xDF,0xD2 } }; // EA9FBFAF-D371-41C3-9A17-824A87EBDFD2
@@ -790,6 +795,13 @@ namespace winrt::impl
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall get_CameraOcclusionInfo(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController11>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall TryAcquireExclusiveControl(void*, int32_t, bool*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2>
@@ -1534,6 +1546,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController10>
     {
         template <typename D> using type = consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController10<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController11
+    {
+        WINRT_IMPL_AUTO(bool) TryAcquireExclusiveControl(param::hstring const& deviceId, winrt::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlReleaseMode const& mode) const;
+    };
+    template <> struct consume<winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController11>
+    {
+        template <typename D> using type = consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController11<D>;
     };
     template <typename D>
     struct consume_Windows_Media_Devices_IAdvancedVideoCaptureDeviceController2

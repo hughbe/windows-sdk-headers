@@ -12694,6 +12694,15 @@
 //
 #define ERROR_SERVER_SERVICE_CALL_REQUIRES_SMB1 3023L
 
+//
+// MessageId: ERROR_NETWORK_AUTHENTICATION_PROMPT_CANCELED
+//
+// MessageText:
+//
+// The user canceled the authentication prompt to a remote server. 
+//
+#define ERROR_NETWORK_AUTHENTICATION_PROMPT_CANCELED 3024L
+
 
 ///////////////////////////////////////////////////
 //                                               //
@@ -14482,9 +14491,34 @@
 
 ///////////////////////////////////////////////////
 //                                               //
+//   System Integrity Error codes (continued)    //
+//                                               //
+//                 4580 to 4589                  //
+///////////////////////////////////////////////////
+
+//
+// MessageId: ERROR_SYSTEM_INTEGRITY_REPUTATION_UNFRIENDLY_FILE
+//
+// MessageText:
+//
+// System Integrity policy has been violated.  Unfriendly file.
+//
+#define ERROR_SYSTEM_INTEGRITY_REPUTATION_UNFRIENDLY_FILE 4580L
+
+//
+// MessageId: ERROR_SYSTEM_INTEGRITY_REPUTATION_UNATTAINABLE
+//
+// MessageText:
+//
+// System Integrity policy has been violated.  Failed to obtain file reputation because an infrastructure issue occurred. Try again later.
+//
+#define ERROR_SYSTEM_INTEGRITY_REPUTATION_UNATTAINABLE 4581L
+
+///////////////////////////////////////////////////
+//                                               //
 //                  Available                    //
 //                                               //
-//                 4580 to 4599                  //
+//                 4590 to 4599                  //
 ///////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////
@@ -22262,6 +22296,15 @@
 //
 #define ERROR_DS_PER_ATTRIBUTE_AUTHZ_FAILED_DURING_ADD 8652L
 
+//
+// MessageId: ERROR_LOCAL_POLICY_MODIFICATION_NOT_SUPPORTED
+//
+// MessageText:
+//
+// The local account policy modification request was rejected because the policy is controlled by a regional authority.
+//
+#define ERROR_LOCAL_POLICY_MODIFICATION_NOT_SUPPORTED 8653L
+
 
 ///////////////////////////////////////////////////
 //                                                /
@@ -29288,6 +29331,24 @@
 // The provided package name does not match the expected package name. Check the AppXDeployment-Server event log for details.
 //
 #define ERROR_PACKAGE_NAME_MISMATCH      15670L
+
+//
+// MessageId: ERROR_APPINSTALLER_URI_IN_USE
+//
+// MessageText:
+//
+// The provided .appinstaller URI is already being used by another package family. Check the AppXDeployment-Server event log for details.
+//
+#define ERROR_APPINSTALLER_URI_IN_USE    15671L
+
+//
+// MessageId: ERROR_APPINSTALLER_IS_MANAGED_BY_SYSTEM
+//
+// MessageText:
+//
+// The package family's auto update settings are being managed at system priority and cannot be changed at default priority. Please contact your system administrator for help with the error.
+//
+#define ERROR_APPINSTALLER_IS_MANAGED_BY_SYSTEM 15672L
 
 //////////////////////////
 //                      //
@@ -42993,6 +43054,15 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 #define ERROR_GRAPHICS_LINK_CONFIGURATION_IN_PROGRESS _HRESULT_TYPEDEF_(0xC0262017L)
 
 //
+// MessageId: ERROR_GRAPHICS_MPO_ALLOCATION_UNPINNED
+//
+// MessageText:
+//
+// The allocation for the MPO has been unpinned.
+//
+#define ERROR_GRAPHICS_MPO_ALLOCATION_UNPINNED _HRESULT_TYPEDEF_(0xC0262018L)
+
+//
 // Video Memory Manager (VidMM) subsystem errors {0x2100..0x21ff}
 //
 //
@@ -50216,6 +50286,24 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 #define FVE_E_UPDATE_INVALID_CONFIG      _HRESULT_TYPEDEF_(0x803100E8L)
 
 //
+// MessageId: FVE_E_AAD_SERVER_FAIL_RETRY_AFTER
+//
+// MessageText:
+//
+// The AAD request has failed and it has been advised to backoff to prevent throttling. Device will retry soon.
+//
+#define FVE_E_AAD_SERVER_FAIL_RETRY_AFTER _HRESULT_TYPEDEF_(0x803100E9L)
+
+//
+// MessageId: FVE_E_AAD_SERVER_FAIL_BACKOFF
+//
+// MessageText:
+//
+// The AAD request has failed due to server issues and it has been advised to backoff to prevent throttling. Device will retry soon.
+//
+#define FVE_E_AAD_SERVER_FAIL_BACKOFF    _HRESULT_TYPEDEF_(0x803100EAL)
+
+//
 // =======================================================
 // Windows Filtering Platform Error Messages
 // =======================================================
@@ -53309,6 +53397,20 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 // The active virtual trust level is not enabled on the specified virtual processor.
 //
 #define VM_SAVED_STATE_DUMP_E_VP_VTL_NOT_ENABLED _HRESULT_TYPEDEF_(0xC0370509L)
+
+
+//
+// DM / Resize related error codes (0x0600-0x06ff)
+//
+
+//
+// MessageId: ERROR_DM_OPERATION_LIMIT_EXCEEDED
+//
+// MessageText:
+//
+// The attempted DM / resize operation exceeds the supported size.
+//
+#define ERROR_DM_OPERATION_LIMIT_EXCEEDED _HRESULT_TYPEDEF_(0xC0370600L)
 
 
 //
@@ -58245,6 +58347,20 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 // The desired element already exists.
 //
 #define DXGI_ERROR_ALREADY_EXISTS        _HRESULT_TYPEDEF_(0x887A0036L)
+
+
+//
+// DXGI errors that are produced by the DDisplay
+//
+
+//
+// MessageId: DXGI_ERROR_MPO_UNPINNED
+//
+// MessageText:
+//
+// The allocation of the MPO plane has been unpinned
+//
+#define DXGI_ERROR_MPO_UNPINNED          _HRESULT_TYPEDEF_(0x887A0064L)
 
 
 //

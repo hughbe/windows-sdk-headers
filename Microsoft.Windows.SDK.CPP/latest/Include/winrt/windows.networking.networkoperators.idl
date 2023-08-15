@@ -1197,10 +1197,10 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 15.0)]
             [exclusiveto(Windows.Networking.NetworkOperators.ESim)]
-            [uuid(B203E825-6BF4-545B-AC47-82E0CA15DD55)]
+            [uuid(FE1EDF45-01B8-5D31-B8D3-D9CBEBB2B831)]
             interface IESim3 : IInspectable
             {
-                [propget] HRESULT SlotId([out] [retval] UINT32* value);
+                [propget] HRESULT SlotIndex([out] [retval] Windows.Foundation.IReference<INT32>** value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
@@ -1846,8 +1846,10 @@ namespace Windows
             [uuid(4A0398C2-91BE-412B-B569-586E9F0030D1)]
             interface IMobileBroadbandModem4 : IInspectable
             {
-                HRESULT SetIsPassthroughEnabledAsync([in] boolean value, [in] UINT32 slotid, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators.MobileBroadbandModemStatus>** asyncInfo);
-                HRESULT GetIsPassthroughEnabledAsync([in] UINT32 slotid, [out] [retval] Windows.Foundation.IAsyncOperation<boolean>** asyncInfo);
+                [overload("SetIsPassthroughEnabledAsync")] HRESULT SetIsPassthroughEnabledWithSlotIndexAsync([in] boolean value, [in] INT32 slotindex, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators.MobileBroadbandModemStatus>** operation);
+                [overload("GetIsPassthroughEnabledAsync")] HRESULT GetIsPassthroughEnabledWithSlotIndexAsync([in] INT32 slotindex, [out] [retval] Windows.Foundation.IAsyncOperation<boolean>** operation);
+                [overload("SetIsPassthroughEnabled")] HRESULT SetIsPassthroughEnabledWithSlotIndex([in] boolean value, [in] INT32 slotindex, [out] [retval] Windows.Networking.NetworkOperators.MobileBroadbandModemStatus* result);
+                [overload("GetIsPassthroughEnabled")] HRESULT GetIsPassthroughEnabledWithSlotIndex([in] INT32 slotindex, [out] [retval] boolean* result);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]

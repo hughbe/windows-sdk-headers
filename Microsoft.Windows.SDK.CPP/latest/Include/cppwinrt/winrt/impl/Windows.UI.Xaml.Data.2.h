@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,10 +10,10 @@
 #include "winrt/impl/Windows.UI.Xaml.Data.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Data
 {
-    struct CurrentChangingEventHandler : Windows::Foundation::IUnknown
+    struct CurrentChangingEventHandler : winrt::Windows::Foundation::IUnknown
     {
         CurrentChangingEventHandler(std::nullptr_t = nullptr) noexcept {}
-        CurrentChangingEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        CurrentChangingEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> CurrentChangingEventHandler(L lambda);
         template <typename F> CurrentChangingEventHandler(F* function);
         template <typename O, typename M> CurrentChangingEventHandler(O* object, M method);
@@ -21,10 +21,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Data
         template <typename O, typename M> CurrentChangingEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Data::CurrentChangingEventArgs const& e) const;
     };
-    struct PropertyChangedEventHandler : Windows::Foundation::IUnknown
+    struct PropertyChangedEventHandler : winrt::Windows::Foundation::IUnknown
     {
         PropertyChangedEventHandler(std::nullptr_t = nullptr) noexcept {}
-        PropertyChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        PropertyChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> PropertyChangedEventHandler(L lambda);
         template <typename F> PropertyChangedEventHandler(F* function);
         template <typename O, typename M> PropertyChangedEventHandler(O* object, M method);

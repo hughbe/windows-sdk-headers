@@ -6849,6 +6849,9 @@ typedef struct _KSPROPERTY_NETWORKCAMERACONTROL_EVENT_INFO
 
 #endif
 
+#if(NTDDI_VERSION >= NTDDI_WIN10_NI)
+#endif
+
 #ifndef __EDevCtrl__
 #define __EDevCtrl__
 //===========================================================================
@@ -8116,6 +8119,9 @@ typedef enum {
     KSPROPERTY_AUDIOENGINE_BUFFER_SIZE_RANGE = 7,
     KSPROPERTY_AUDIOENGINE_LOOPBACK_PROTECTION = 8,
     KSPROPERTY_AUDIOENGINE_VOLUMELEVEL = 9,
+#if (NTDDI_VERSION >= NTDDI_WIN10_NI)
+    KSPROPERTY_AUDIOENGINE_DEVICECONTROLS = 10,
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_NI)
 } KSPROPERTY_AUDIOENGINE;
 
 typedef struct _tagKSAUDIOENGINE_DESCRIPTOR
@@ -8145,6 +8151,21 @@ typedef struct _tagKSAUDIOENGINE_VOLUMELEVEL
     AUDIO_CURVE_TYPE                    CurveType;
     ULONGLONG                           CurveDuration;
 } KSAUDIOENGINE_VOLUMELEVEL, *PKSAUDIOENGINE_VOLUMELEVEL;
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_NI)
+typedef enum {
+    eDeviceControlUseMissing    = 0,
+    eDeviceControlUsePrimary    = 1,
+    eDeviceControlUseSecondary  = 2,
+} EDeviceControlUseType;
+
+typedef struct _tagKSAUDIOENGINE_DEVICECONTROLS
+{
+    EDeviceControlUseType   Volume;
+    EDeviceControlUseType   Mute;
+    EDeviceControlUseType   PeakMeter;
+} KSAUDIOENGINE_DEVICECONTROLS, *PKSAUDIOENGINE_DEVICECONTROLS;
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_NI)
 
 //===========================================================================
 // AUDIO SIGNAL PROCESSING DEFINITIONS

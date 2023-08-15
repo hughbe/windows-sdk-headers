@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.210707.1
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -10,10 +10,10 @@
 #include "winrt/impl/Windows.UI.Xaml.Printing.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Printing
 {
-    struct AddPagesEventHandler : Windows::Foundation::IUnknown
+    struct AddPagesEventHandler : winrt::Windows::Foundation::IUnknown
     {
         AddPagesEventHandler(std::nullptr_t = nullptr) noexcept {}
-        AddPagesEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        AddPagesEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> AddPagesEventHandler(L lambda);
         template <typename F> AddPagesEventHandler(F* function);
         template <typename O, typename M> AddPagesEventHandler(O* object, M method);
@@ -21,10 +21,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Printing
         template <typename O, typename M> AddPagesEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Printing::AddPagesEventArgs const& e) const;
     };
-    struct GetPreviewPageEventHandler : Windows::Foundation::IUnknown
+    struct GetPreviewPageEventHandler : winrt::Windows::Foundation::IUnknown
     {
         GetPreviewPageEventHandler(std::nullptr_t = nullptr) noexcept {}
-        GetPreviewPageEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        GetPreviewPageEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> GetPreviewPageEventHandler(L lambda);
         template <typename F> GetPreviewPageEventHandler(F* function);
         template <typename O, typename M> GetPreviewPageEventHandler(O* object, M method);
@@ -32,10 +32,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Printing
         template <typename O, typename M> GetPreviewPageEventHandler(weak_ref<O>&& object, M method);
         auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Printing::GetPreviewPageEventArgs const& e) const;
     };
-    struct PaginateEventHandler : Windows::Foundation::IUnknown
+    struct PaginateEventHandler : winrt::Windows::Foundation::IUnknown
     {
         PaginateEventHandler(std::nullptr_t = nullptr) noexcept {}
-        PaginateEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        PaginateEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> PaginateEventHandler(L lambda);
         template <typename F> PaginateEventHandler(F* function);
         template <typename O, typename M> PaginateEventHandler(O* object, M method);
