@@ -935,7 +935,6 @@ namespace ABI {
     } /* Windows */
 } /* ABI */
 
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 
 #ifndef DEF___FIIterator_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_USE
@@ -962,9 +961,7 @@ typedef IIterator<ABI::Windows::Storage::Provider::StorageProviderKnownFolderEnt
 #endif /* DEF___FIIterator_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_USE */
 
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 
 #ifndef DEF___FIIterable_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_USE
@@ -991,7 +988,6 @@ typedef IIterable<ABI::Windows::Storage::Provider::StorageProviderKnownFolderEnt
 #endif /* DEF___FIIterable_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_USE */
 
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 namespace ABI {
     namespace Windows {
@@ -1163,7 +1159,6 @@ typedef IVectorView<ABI::Windows::Storage::Provider::StorageProviderItemProperty
 
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x10000
 
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 
 #ifndef DEF___FIVectorView_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_USE
@@ -1190,7 +1185,6 @@ typedef IVectorView<ABI::Windows::Storage::Provider::StorageProviderKnownFolderE
 #endif /* DEF___FIVectorView_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_USE */
 
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x10000
 
@@ -1300,7 +1294,6 @@ typedef IVector<ABI::Windows::Storage::Provider::StorageProviderItemPropertyDefi
 
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x10000
 
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 
 #ifndef DEF___FIVector_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_USE
@@ -1327,7 +1320,6 @@ typedef IVector<ABI::Windows::Storage::Provider::StorageProviderKnownFolderEntry
 #endif /* DEF___FIVector_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_USE */
 
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 namespace ABI {
     namespace Windows {
@@ -1440,7 +1432,6 @@ typedef ITypedEventHandler<ABI::Windows::Storage::Provider::CachedFileUpdaterUI*
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 
 #ifndef DEF___FITypedEventHandler_2_Windows__CStorage__CProvider__CIStorageProviderKnownFolderSyncInfoSource_IInspectable_USE
@@ -1467,7 +1458,6 @@ typedef ITypedEventHandler<ABI::Windows::Storage::Provider::IStorageProviderKnow
 #endif /* DEF___FITypedEventHandler_2_Windows__CStorage__CProvider__CIStorageProviderKnownFolderSyncInfoSource_IInspectable_USE */
 
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 
@@ -2086,10 +2076,7 @@ namespace ABI {
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 namespace ABI {
     namespace Windows {
@@ -2106,7 +2093,6 @@ namespace ABI {
     } /* Windows */
 } /* ABI */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -2284,10 +2270,7 @@ namespace ABI {
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncRequestedHandler_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncRequestedHandler_INTERFACE_DEFINED__
@@ -2313,7 +2296,6 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncRequestedHandler;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncRequestedHandler_INTERFACE_DEFINED__) */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -2967,12 +2949,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderItem
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * Interface is a part of the implementation of type Windows.Storage.Provider.StorageProviderKnownFolderEntry
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderEntry_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderEntry_INTERFACE_DEFINED__
@@ -3008,7 +2987,6 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderEntry;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderEntry_INTERFACE_DEFINED__) */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -3016,12 +2994,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnow
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * Interface is a part of the implementation of type Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfo_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfo_INTERFACE_DEFINED__
@@ -3060,7 +3035,6 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfo;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -3068,10 +3042,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnow
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfoSource_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfoSource_INTERFACE_DEFINED__
@@ -3105,7 +3076,6 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfoSource;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfoSource_INTERFACE_DEFINED__) */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -3113,10 +3083,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnow
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfoSourceFactory_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfoSourceFactory_INTERFACE_DEFINED__
@@ -3143,7 +3110,6 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfoSourceFactory;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfoSourceFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -3151,12 +3117,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnow
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * Interface is a part of the implementation of type Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestArgs
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncRequestArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncRequestArgs_INTERFACE_DEFINED__
@@ -3186,7 +3149,6 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncRequestArgs;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncRequestArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -4088,8 +4050,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 7.0 of the Windows.Storage.Provider.CloudFilesContract API contract
  *
@@ -4101,22 +4061,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #ifndef RUNTIMECLASS_Windows_Storage_Provider_StorageProviderKnownFolderEntry_DEFINED
 #define RUNTIMECLASS_Windows_Storage_Provider_StorageProviderKnownFolderEntry_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Storage_Provider_StorageProviderKnownFolderEntry[] = L"Windows.Storage.Provider.StorageProviderKnownFolderEntry";
 #endif
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
  * Class Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
- *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 7.0 of the Windows.Storage.Provider.CloudFilesContract API contract
@@ -4129,14 +4085,12 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #ifndef RUNTIMECLASS_Windows_Storage_Provider_StorageProviderKnownFolderSyncInfo_DEFINED
 #define RUNTIMECLASS_Windows_Storage_Provider_StorageProviderKnownFolderSyncInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Storage_Provider_StorageProviderKnownFolderSyncInfo[] = L"Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo";
 #endif
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -4144,22 +4098,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * Class implements the following interfaces:
  *    Windows.Storage.Provider.IStorageProviderKnownFolderSyncRequestArgs ** Default Interface **
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #ifndef RUNTIMECLASS_Windows_Storage_Provider_StorageProviderKnownFolderSyncRequestArgs_DEFINED
 #define RUNTIMECLASS_Windows_Storage_Provider_StorageProviderKnownFolderSyncRequestArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Storage_Provider_StorageProviderKnownFolderSyncRequestArgs[] = L"Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestArgs";
 #endif
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -5212,7 +5162,6 @@ interface __FIIterable_1_Windows__CStorage__CProvider__CStorageProviderItemPrope
 #endif // ____FIIterable_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition_INTERFACE_DEFINED__
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x10000
 
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #if !defined(____FIIterator_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_INTERFACE_DEFINED__)
 #define ____FIIterator_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_INTERFACE_DEFINED__
@@ -5293,9 +5242,7 @@ interface __FIIterator_1_Windows__CStorage__CProvider__CStorageProviderKnownFold
 
 #endif // ____FIIterator_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_INTERFACE_DEFINED__
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #if !defined(____FIIterable_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_INTERFACE_DEFINED__)
 #define ____FIIterable_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_INTERFACE_DEFINED__
@@ -5359,7 +5306,6 @@ interface __FIIterable_1_Windows__CStorage__CProvider__CStorageProviderKnownFold
 
 #endif // ____FIIterable_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_INTERFACE_DEFINED__
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterator_1_Windows__CStorage__CProvider__CStorageProviderSyncRootInfo_INTERFACE_DEFINED__)
@@ -5844,7 +5790,6 @@ interface __FIVectorView_1_Windows__CStorage__CProvider__CStorageProviderItemPro
 #endif // ____FIVectorView_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition_INTERFACE_DEFINED__
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x10000
 
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #if !defined(____FIVectorView_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_INTERFACE_DEFINED__)
 #define ____FIVectorView_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_INTERFACE_DEFINED__
@@ -5929,7 +5874,6 @@ interface __FIVectorView_1_Windows__CStorage__CProvider__CStorageProviderKnownFo
 
 #endif // ____FIVectorView_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_INTERFACE_DEFINED__
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x10000
 #if !defined(____FIVectorView_1_Windows__CStorage__CProvider__CStorageProviderSyncRootInfo_INTERFACE_DEFINED__)
@@ -6394,7 +6338,6 @@ interface __FIVector_1_Windows__CStorage__CProvider__CStorageProviderItemPropert
 #endif // ____FIVector_1_Windows__CStorage__CProvider__CStorageProviderItemPropertyDefinition_INTERFACE_DEFINED__
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x10000
 
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #if !defined(____FIVector_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_INTERFACE_DEFINED__)
 #define ____FIVector_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_INTERFACE_DEFINED__
@@ -6520,7 +6463,6 @@ interface __FIVector_1_Windows__CStorage__CProvider__CStorageProviderKnownFolder
 
 #endif // ____FIVector_1_Windows__CStorage__CProvider__CStorageProviderKnownFolderEntry_INTERFACE_DEFINED__
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 typedef struct __x_ABI_CWindows_CUI_CColor __x_ABI_CWindows_CUI_CColor;
 
@@ -6688,7 +6630,6 @@ interface __FITypedEventHandler_2_Windows__CStorage__CProvider__CCachedFileUpdat
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #if !defined(____FITypedEventHandler_2_Windows__CStorage__CProvider__CIStorageProviderKnownFolderSyncInfoSource_IInspectable_INTERFACE_DEFINED__)
 #define ____FITypedEventHandler_2_Windows__CStorage__CProvider__CIStorageProviderKnownFolderSyncInfoSource_IInspectable_INTERFACE_DEFINED__
@@ -6737,7 +6678,6 @@ interface __FITypedEventHandler_2_Windows__CStorage__CProvider__CIStorageProvide
 
 #endif // ____FITypedEventHandler_2_Windows__CStorage__CProvider__CIStorageProviderKnownFolderSyncInfoSource_IInspectable_INTERFACE_DEFINED__
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #if !defined(____FITypedEventHandler_2_Windows__CStorage__CProvider__CIStorageProviderStatusUISource_IInspectable_INTERFACE_DEFINED__)
@@ -7013,10 +6953,7 @@ enum __x_ABI_CWindows_CStorage_CProvider_CStorageProviderInSyncPolicy
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 enum __x_ABI_CWindows_CStorage_CProvider_CStorageProviderKnownFolderSyncStatus
 {
@@ -7025,7 +6962,6 @@ enum __x_ABI_CWindows_CStorage_CProvider_CStorageProviderKnownFolderSyncStatus
     StorageProviderKnownFolderSyncStatus_Enrolled = 2,
 };
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -7147,10 +7083,7 @@ enum __x_ABI_CWindows_CStorage_CProvider_CWriteActivationMode
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncRequestedHandler_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncRequestedHandler_INTERFACE_DEFINED__
@@ -7193,7 +7126,6 @@ interface __x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncRe
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncRequestedHandler;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncRequestedHandler_INTERFACE_DEFINED__) */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -8405,12 +8337,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderItem
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * Interface is a part of the implementation of type Windows.Storage.Provider.StorageProviderKnownFolderEntry
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderEntry_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderEntry_INTERFACE_DEFINED__
@@ -8485,7 +8414,6 @@ interface __x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderEntry
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderEntry;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderEntry_INTERFACE_DEFINED__) */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -8493,12 +8421,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnow
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * Interface is a part of the implementation of type Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfo_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfo_INTERFACE_DEFINED__
@@ -8578,7 +8503,6 @@ interface __x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncIn
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfo;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -8586,10 +8510,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnow
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfoSource_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfoSource_INTERFACE_DEFINED__
@@ -8660,7 +8581,6 @@ interface __x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncIn
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfoSource;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfoSource_INTERFACE_DEFINED__) */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -8668,10 +8588,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnow
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfoSourceFactory_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfoSourceFactory_INTERFACE_DEFINED__
@@ -8731,7 +8648,6 @@ interface __x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncIn
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfoSourceFactory;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncInfoSourceFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -8739,12 +8655,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnow
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * Interface is a part of the implementation of type Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestArgs
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncRequestArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncRequestArgs_INTERFACE_DEFINED__
@@ -8809,7 +8722,6 @@ interface __x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncRe
 EXTERN_C const IID IID___x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncRequestArgs;
 #endif /* !defined(____x_ABI_CWindows_CStorage_CProvider_CIStorageProviderKnownFolderSyncRequestArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -10275,8 +10187,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 7.0 of the Windows.Storage.Provider.CloudFilesContract API contract
  *
@@ -10288,22 +10198,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #ifndef RUNTIMECLASS_Windows_Storage_Provider_StorageProviderKnownFolderEntry_DEFINED
 #define RUNTIMECLASS_Windows_Storage_Provider_StorageProviderKnownFolderEntry_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Storage_Provider_StorageProviderKnownFolderEntry[] = L"Windows.Storage.Provider.StorageProviderKnownFolderEntry";
 #endif
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
  * Class Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
- *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 7.0 of the Windows.Storage.Provider.CloudFilesContract API contract
@@ -10316,14 +10222,12 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #ifndef RUNTIMECLASS_Windows_Storage_Provider_StorageProviderKnownFolderSyncInfo_DEFINED
 #define RUNTIMECLASS_Windows_Storage_Provider_StorageProviderKnownFolderSyncInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Storage_Provider_StorageProviderKnownFolderSyncInfo[] = L"Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo";
 #endif
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -10331,22 +10235,18 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Introduced to Windows.Storage.Provider.CloudFilesContract in version 7.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * Class implements the following interfaces:
  *    Windows.Storage.Provider.IStorageProviderKnownFolderSyncRequestArgs ** Default Interface **
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
 #ifndef RUNTIMECLASS_Windows_Storage_Provider_StorageProviderKnownFolderSyncRequestArgs_DEFINED
 #define RUNTIMECLASS_Windows_Storage_Provider_StorageProviderKnownFolderSyncRequestArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Storage_Provider_StorageProviderKnownFolderSyncRequestArgs[] = L"Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestArgs";
 #endif
 #endif // WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION >= 0x70000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *

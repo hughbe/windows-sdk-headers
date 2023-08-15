@@ -7964,6 +7964,14 @@ DEFINE_PROPERTYKEY(PKEY_RecordedTV_StationName, 0x1B5439E7, 0xEBA1, 0x4AF8, 0xBD
 //-----------------------------------------------------------------------------
 // Search properties
 
+//  Name:     System.LocationEmptyString -- PKEY_LocationEmptyString
+//  Type:     Unspecified -- VT_NULL
+//  FormatID: {62D2D9AB-8B64-498D-B865-402D4796F865}, 3
+//
+//  The display string shown when the user navigates to a location, but the location is empty.
+DEFINE_PROPERTYKEY(PKEY_LocationEmptyString, 0x62D2D9AB, 0x8B64, 0x498D, 0xB8, 0x65, 0x40, 0x2D, 0x47, 0x96, 0xF8, 0x65, 3);
+#define INIT_PKEY_LocationEmptyString { { 0x62D2D9AB, 0x8B64, 0x498D, 0xB8, 0x65, 0x40, 0x2D, 0x47, 0x96, 0xF8, 0x65 }, 3 }
+
 //  Name:     System.Search.AutoSummary -- PKEY_Search_AutoSummary
 //  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
 //  FormatID: {560C36C0-503A-11CF-BAA1-00004C752A9A}, 2

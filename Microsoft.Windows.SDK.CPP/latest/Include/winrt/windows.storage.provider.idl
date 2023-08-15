@@ -368,7 +368,6 @@ namespace Windows
             };
 
             [contract(Windows.Storage.Provider.CloudFilesContract, 7.0)]
-            [experimental]
             enum StorageProviderKnownFolderSyncStatus
             {
                 Available = 0,
@@ -435,7 +434,6 @@ namespace Windows
             };
 
             [contract(Windows.Storage.Provider.CloudFilesContract, 7.0)]
-            [experimental]
             [uuid(C4CBB4F5-13DD-5C8E-8B96-336FC30C629B)]
             delegate
                 HRESULT StorageProviderKnownFolderSyncRequestedHandler([in] Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestArgs* args);
@@ -596,7 +594,6 @@ namespace Windows
 
             [contract(Windows.Storage.Provider.CloudFilesContract, 7.0)]
             [exclusiveto(Windows.Storage.Provider.StorageProviderKnownFolderEntry)]
-            [experimental]
             [uuid(EFFA7DB0-1D44-596B-8464-928800C5E2D8)]
             interface IStorageProviderKnownFolderEntry : IInspectable
             {
@@ -608,7 +605,6 @@ namespace Windows
 
             [contract(Windows.Storage.Provider.CloudFilesContract, 7.0)]
             [exclusiveto(Windows.Storage.Provider.StorageProviderKnownFolderSyncInfo)]
-            [experimental]
             [uuid(98B017CE-FFC1-5B11-AE77-CC17AFEC1049)]
             interface IStorageProviderKnownFolderSyncInfo : IInspectable
             {
@@ -620,7 +616,6 @@ namespace Windows
             }
 
             [contract(Windows.Storage.Provider.CloudFilesContract, 7.0)]
-            [experimental]
             [uuid(51359342-F7C0-53D0-BBB6-1CDC098EBDA9)]
             interface IStorageProviderKnownFolderSyncInfoSource : IInspectable
             {
@@ -630,7 +625,6 @@ namespace Windows
             }
 
             [contract(Windows.Storage.Provider.CloudFilesContract, 7.0)]
-            [experimental]
             [uuid(AAEE03A7-A7F6-50BE-A9B0-8E82D0C81082)]
             interface IStorageProviderKnownFolderSyncInfoSourceFactory : IInspectable
             {
@@ -639,7 +633,6 @@ namespace Windows
 
             [contract(Windows.Storage.Provider.CloudFilesContract, 7.0)]
             [exclusiveto(Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestArgs)]
-            [experimental]
             [uuid(EDA6D569-B4E8-542F-AB8D-F3613F250A4A)]
             interface IStorageProviderKnownFolderSyncRequestArgs : IInspectable
             {
@@ -901,30 +894,27 @@ namespace Windows
 
             [activatable(Windows.Storage.Provider.CloudFilesContract, 7.0)]
             [contract(Windows.Storage.Provider.CloudFilesContract, 7.0)]
-            [experimental]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass StorageProviderKnownFolderEntry
             {
-                [default] [experimental] interface Windows.Storage.Provider.IStorageProviderKnownFolderEntry;
+                [default] interface Windows.Storage.Provider.IStorageProviderKnownFolderEntry;
             }
 
             [activatable(Windows.Storage.Provider.CloudFilesContract, 7.0)]
             [contract(Windows.Storage.Provider.CloudFilesContract, 7.0)]
-            [experimental]
             [marshaling_behavior(agile)]
             [threading(both)]
             runtimeclass StorageProviderKnownFolderSyncInfo
             {
-                [default] [experimental] interface Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfo;
+                [default] interface Windows.Storage.Provider.IStorageProviderKnownFolderSyncInfo;
             }
 
             [contract(Windows.Storage.Provider.CloudFilesContract, 7.0)]
-            [experimental]
             [marshaling_behavior(agile)]
             runtimeclass StorageProviderKnownFolderSyncRequestArgs
             {
-                [default] [experimental] interface Windows.Storage.Provider.IStorageProviderKnownFolderSyncRequestArgs;
+                [default] interface Windows.Storage.Provider.IStorageProviderKnownFolderSyncRequestArgs;
             }
 
             [activatable(Windows.Storage.Provider.CloudFilesContract, 7.0)]
