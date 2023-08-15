@@ -270,9 +270,13 @@ namespace Windows
 
             interface IMobileBroadbandDeviceService;
 
+            interface IMobileBroadbandDeviceServiceCommandEventArgs;
+
             interface IMobileBroadbandDeviceServiceCommandResult;
 
             interface IMobileBroadbandDeviceServiceCommandSession;
+
+            interface IMobileBroadbandDeviceServiceCommandSession2;
 
             interface IMobileBroadbandDeviceServiceDataReceivedEventArgs;
 
@@ -475,6 +479,8 @@ namespace Windows
             runtimeclass MobileBroadbandDeviceInformation;
 
             runtimeclass MobileBroadbandDeviceService;
+
+            runtimeclass MobileBroadbandDeviceServiceCommandEventArgs;
 
             runtimeclass MobileBroadbandDeviceServiceCommandResult;
 
@@ -729,6 +735,8 @@ namespace Windows
                 interface Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher*, Windows.Networking.NetworkOperators.MobileBroadbandAccountEventArgs*>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher*, Windows.Networking.NetworkOperators.MobileBroadbandAccountUpdatedEventArgs*>;
+
+                interface Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession*, Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs*>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession*, Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataReceivedEventArgs*>;
 
@@ -1752,6 +1760,17 @@ namespace Windows
                 HRESULT OpenCommandSession([out] [retval] Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession** value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+            [exclusiveto(Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs)]
+            [uuid(28E4338F-CCA4-5047-A20C-0A6D79ACECBA)]
+            interface IMobileBroadbandDeviceServiceCommandEventArgs : IInspectable
+            {
+                [propget] HRESULT DeviceId([out] [retval] HSTRING* value);
+                [propget] HRESULT DeviceServiceId([out] [retval] GUID* value);
+                [propget] HRESULT EventId([out] [retval] UINT32* value);
+                [propget] HRESULT ReceivedData([out] [retval] Windows.Storage.Streams.IBuffer** value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult)]
             [uuid(B0F46ABB-94D6-44B9-A538-F0810B645389)]
@@ -1769,6 +1788,15 @@ namespace Windows
                 HRESULT SendQueryCommandAsync([in] UINT32 commandId, [in] Windows.Storage.Streams.IBuffer* data, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult*>** asyncInfo);
                 HRESULT SendSetCommandAsync([in] UINT32 commandId, [in] Windows.Storage.Streams.IBuffer* data, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult*>** asyncInfo);
                 HRESULT CloseSession();
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+            [exclusiveto(Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession)]
+            [uuid(EF004861-2546-5739-86E7-0FDC0E62411C)]
+            interface IMobileBroadbandDeviceServiceCommandSession2 : IInspectable
+            {
+                [eventadd] HRESULT CommandReceived([in] Windows.Foundation.TypedEventHandler<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession*, Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT CommandReceived([in] EventRegistrationToken token);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -2686,6 +2714,13 @@ namespace Windows
                 [default] interface Windows.Networking.NetworkOperators.IMobileBroadbandDeviceService;
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass MobileBroadbandDeviceServiceCommandEventArgs
+            {
+                [default] interface Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandEventArgs;
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
             runtimeclass MobileBroadbandDeviceServiceCommandResult
@@ -2698,6 +2733,7 @@ namespace Windows
             runtimeclass MobileBroadbandDeviceServiceCommandSession
             {
                 [default] interface Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandSession;
+                [contract(Windows.Foundation.UniversalApiContract, 16.0)] interface Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandSession2;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]

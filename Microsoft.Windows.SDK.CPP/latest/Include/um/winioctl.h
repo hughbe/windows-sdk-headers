@@ -13868,6 +13868,37 @@ typedef struct _FILE_FS_PERSISTENT_VOLUME_INFORMATION {
 
 #endif // #if (NTDDI_VERSION >= NTDDI_WIN10_MN)
 
+/* ABRACADABRA_WIN10_ZN?  ABRACADABRA_WIN10_ZN? */
+#if defined(NTDDI_WIN10_CU) && (NTDDI_VERSION >= NTDDI_WIN10_CU)
+
+//
+//  The volume was formatted as a developer volume.  This can be used by the
+//  file system and other system components to enable optimizations that doe
+//  not require an administrator to trust the volume on a given machine.
+//
+//  This is set at format time and can only be queried.
+//
+
+#define PERSISTENT_VOLUME_STATE_DEV_VOLUME                          (0x00002000)
+
+//
+//  An adminstrator on a given machine had trust this volume and is willing
+//  to enable optimizations like not having anti-virus filters attach to the
+//  volume.  This information is persisted in the registry on a given machine.
+//  This can be used by the file system and other system components to enable
+//  optimizations that require an administrator to trust the volume on a given
+//  machine.
+//
+//  NOTE: Today only developer volumes can be trusted, i.e. this flag can be
+//  set only when PERSISTENT_VOLUME_STATE_DEV_VOLUME is set.
+//
+//  This can be set and queried.
+//
+
+#define PERSISTENT_VOLUME_STATE_TRUSTED_VOLUME                      (0x00004000)
+
+#endif // #if (NTDDI_VERSION >= NTDDI_WIN10_CU)
+
 //
 //==================== FSCTL_QUERY_FILE_SYSTEM_RECOGNITION ====================
 //

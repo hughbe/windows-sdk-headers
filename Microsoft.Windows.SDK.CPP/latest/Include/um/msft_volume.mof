@@ -179,6 +179,9 @@ class MSFT_Volume : MSFT_StorageObject {
         [In]
         Boolean DeveloperVolume,
 
+        [In]
+        Boolean SHA256Checksums,
+
         [Out, EmbeddedInstance("MSFT_Volume")]
         String FormattedVolume,
 

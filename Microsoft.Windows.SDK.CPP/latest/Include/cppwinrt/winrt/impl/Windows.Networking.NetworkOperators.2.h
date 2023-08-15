@@ -253,12 +253,18 @@ WINRT_EXPORT namespace winrt::Windows::Networking::NetworkOperators
         MobileBroadbandDeviceService(std::nullptr_t) noexcept {}
         MobileBroadbandDeviceService(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceService(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) MobileBroadbandDeviceServiceCommandEventArgs : winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandEventArgs
+    {
+        MobileBroadbandDeviceServiceCommandEventArgs(std::nullptr_t) noexcept {}
+        MobileBroadbandDeviceServiceCommandEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandEventArgs(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) MobileBroadbandDeviceServiceCommandResult : winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandResult
     {
         MobileBroadbandDeviceServiceCommandResult(std::nullptr_t) noexcept {}
         MobileBroadbandDeviceServiceCommandResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandResult(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) MobileBroadbandDeviceServiceCommandSession : winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession
+    struct __declspec(empty_bases) MobileBroadbandDeviceServiceCommandSession : winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession,
+        impl::require<MobileBroadbandDeviceServiceCommandSession, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession2>
     {
         MobileBroadbandDeviceServiceCommandSession(std::nullptr_t) noexcept {}
         MobileBroadbandDeviceServiceCommandSession(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession(ptr, take_ownership_from_abi) {}

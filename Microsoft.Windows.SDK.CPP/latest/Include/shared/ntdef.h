@@ -371,6 +371,20 @@ Abstract:
 
 // begin_ntoshvp
 
+//
+// When DECLSPEC_NOSANITIZEADDRESS is set, the compiler may not inline
+// functions marked with __forceinline. That's expected and not a problem,
+// so disable warning 4714.
+//
+
+#ifndef DECLSPEC_NOSANITIZEADDRESS
+#if defined(__SANITIZE_ADDRESS__)
+#define DECLSPEC_NOSANITIZEADDRESS  __declspec(no_sanitize_address) __pragma(warning(disable:4714))
+#else
+#define DECLSPEC_NOSANITIZEADDRESS
+#endif
+#endif
+
 #ifndef DECLSPEC_GUARDNOCF
 #if (_MSC_FULL_VER >= 170065501) || defined(_D1VERSIONLKG171_)
 #define DECLSPEC_GUARDNOCF  __declspec(guard(nocf))

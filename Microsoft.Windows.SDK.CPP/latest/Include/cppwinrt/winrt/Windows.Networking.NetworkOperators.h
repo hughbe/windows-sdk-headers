@@ -1369,6 +1369,30 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceService)->OpenCommandSession(&value));
         return winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession{ value, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandEventArgs<D>::DeviceId() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandEventArgs)->get_DeviceId(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandEventArgs<D>::DeviceServiceId() const
+    {
+        winrt::guid value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandEventArgs)->get_DeviceServiceId(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandEventArgs<D>::EventId() const
+    {
+        uint32_t value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandEventArgs)->get_EventId(&value));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandEventArgs<D>::ReceivedData() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandEventArgs)->get_ReceivedData(&value));
+        return winrt::Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandResult<D>::StatusCode() const
     {
         uint32_t value{};
@@ -1396,6 +1420,20 @@ namespace winrt::impl
     template <typename D> auto consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandSession<D>::CloseSession() const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession)->CloseSession());
+    }
+    template <typename D> auto consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandSession2<D>::CommandReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession, winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession2)->add_CommandReceived(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> typename consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandSession2<D>::CommandReceived_revoker consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandSession2<D>::CommandReceived(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession, winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, CommandReceived_revoker>(this, CommandReceived(handler));
+    }
+    template <typename D> auto consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandSession2<D>::CommandReceived(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession2)->remove_CommandReceived(impl::bind_in(token));
     }
     template <typename D> auto consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceDataReceivedEventArgs<D>::ReceivedData() const
     {
@@ -4565,6 +4603,42 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandEventArgs> : produce_base<D, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandEventArgs>
+    {
+        int32_t __stdcall get_DeviceId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().DeviceId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_DeviceServiceId(winrt::guid* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::guid>(this->shim().DeviceServiceId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_EventId(uint32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint32_t>(this->shim().EventId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ReceivedData(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Storage::Streams::IBuffer>(this->shim().ReceivedData());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandResult> : produce_base<D, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandResult>
     {
         int32_t __stdcall get_StatusCode(uint32_t* value) noexcept final try
@@ -4611,6 +4685,26 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession2> : produce_base<D, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession2>
+    {
+        int32_t __stdcall add_CommandReceived(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().CommandReceived(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession, winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_CommandReceived(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CommandReceived(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
     };
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
@@ -6738,8 +6832,10 @@ namespace std
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceInformation3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceInformation4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceService> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceDataReceivedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceDataSession> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceInformation> : winrt::impl::hash_base {};
@@ -6841,6 +6937,7 @@ namespace std
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs> : winrt::impl::hash_base {};

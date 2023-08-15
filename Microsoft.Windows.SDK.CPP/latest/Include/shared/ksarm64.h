@@ -1530,6 +1530,12 @@
 // Activity Monitors registers
 //
 
+#define ARM64_AMCNTENSET0_EL0 0x5e95
+#define ARM64_AMEVCNTR00_EL0 0x5ea0
+#define ARM64_AMEVCNTR01_EL0 0x5ea1
+#define ARM64_AMEVCNTR02_EL0 0x5ea2
+#define ARM64_AMEVCNTR03_EL0 0x5ea3
+#define ARM64_AMUSERENR_EL0 0x5e93
 
 //
 // Statistical Profiling Extensions
@@ -2080,6 +2086,21 @@
 #define ARM64_PMCCFILTR_NSK 0x0000000020000000
 #define ARM64_PMCCFILTR_U 0x0000000040000000
 #define ARM64_PMCCFILTR_P 0x0000000080000000
+
+//
+// Activity monitors count enable set register 0 bits
+//
+
+#define ARM64_AMCNTENSET0_P0 0x0000000000000001
+#define ARM64_AMCNTENSET0_P1 0x0000000000000002
+#define ARM64_AMCNTENSET0_P2 0x0000000000000004
+#define ARM64_AMCNTENSET0_P3 0x0000000000000008
+
+//
+// Activity monitors user-enable register bits
+//
+
+#define ARM64_AMUSERENR_EN 0x0000000000000001
 
 //
 // Monitor Debug Configuration Register bits

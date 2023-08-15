@@ -1564,6 +1564,15 @@
 #define WU_E_PT_LOAD_SHEDDING            _HRESULT_TYPEDEF_(0x8024402DL)
 
 //
+// MessageId: WU_E_PT_DATA_BOUNDARY_RESTRICTED
+//
+// MessageText:
+//
+// The client is data boundary restricted and needs to talk to a restricted endpoint.
+//
+#define WU_E_PT_DATA_BOUNDARY_RESTRICTED _HRESULT_TYPEDEF_(0x8024402EL)
+
+//
 // MessageId: WU_E_PT_SAME_REDIR_ID
 //
 // MessageText:

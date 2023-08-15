@@ -1701,5 +1701,13 @@
       <xs:enumeration value="package"/>
     </xs:restriction>
   </xs:simpleType>
+
+  <xs:simpleType name="ST_AppLifecycleBehavior">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="systemManaged"></xs:enumeration>
+      <xs:enumeration value="unmanaged"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
 </xs:schema>
 

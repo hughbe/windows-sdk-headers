@@ -3520,6 +3520,15 @@
 #define ERROR_CLOUD_FILE_US_MESSAGE_TIMEOUT 475L
 
 //
+// MessageId: ERROR_NOT_A_DEV_VOLUME
+//
+// MessageText:
+//
+// This operation requires a developer volume.
+//
+#define ERROR_NOT_A_DEV_VOLUME           476L
+
+//
 // **** Available SYSTEM error codes ****
 //
 //
@@ -65157,5 +65166,14 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 // The union this operation is being performed on is inactive.
 //
 #define UNIONFS_E_INACTIVE_UNION         _HRESULT_TYPEDEF_(0x89250008L)
+
+//
+// MessageId: UNIONFS_E_TOO_MANY_LAYERS
+//
+// MessageText:
+//
+// There are too many layers to construct this union.
+//
+#define UNIONFS_E_TOO_MANY_LAYERS        _HRESULT_TYPEDEF_(0x89250009L)
 
 #endif//_WINERROR_

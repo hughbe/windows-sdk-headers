@@ -325,6 +325,20 @@ extern "C" {
 
 // begin_ntoshvp
 
+//
+// When DECLSPEC_NOSANITIZEADDRESS is set, the compiler may not inline
+// functions marked with __forceinline. That's expected and not a problem,
+// so disable warning 4714.
+//
+
+#ifndef DECLSPEC_NOSANITIZEADDRESS
+#if defined(__SANITIZE_ADDRESS__)
+#define DECLSPEC_NOSANITIZEADDRESS  __declspec(no_sanitize_address) __pragma(warning(disable:4714))
+#else
+#define DECLSPEC_NOSANITIZEADDRESS
+#endif
+#endif
+
 #ifndef DECLSPEC_GUARDNOCF
 #if (_MSC_FULL_VER >= 170065501) || defined(_D1VERSIONLKG171_)
 #define DECLSPEC_GUARDNOCF  __declspec(guard(nocf))
@@ -5753,6 +5767,14 @@ YieldProcessor (
 #pragma intrinsic(__iso_volatile_store16)
 #pragma intrinsic(__iso_volatile_store32)
 #pragma intrinsic(__iso_volatile_store64)
+#pragma intrinsic(__ldapr8)
+#pragma intrinsic(__ldapr16)
+#pragma intrinsic(__ldapr32)
+#pragma intrinsic(__ldapr64)
+#pragma intrinsic(__stlr8)
+#pragma intrinsic(__stlr16)
+#pragma intrinsic(__stlr32)
+#pragma intrinsic(__stlr64)
 
 //
 //
@@ -5772,8 +5794,13 @@ ReadAcquire8 (
 
     CHAR Value;
 
+#if defined(__ARM64_FEAT_LRCPC__)
+    Value = (CHAR)__ldapr8((unsigned __int8 volatile*)Source);
+#else
     Value = __iso_volatile_load8(Source);
     __dmb(_ARM64_BARRIER_ISH);
+#endif
+
     return Value;
 }
 
@@ -5800,8 +5827,13 @@ WriteRelease8 (
 
 {
 
+#if defined(__ARM64_FEAT_LRCPC__)
+    __stlr8((unsigned __int8 volatile*)Destination, (unsigned __int8)Value);
+#else
     __dmb(_ARM64_BARRIER_ISH);
     __iso_volatile_store8(Destination, Value);
+#endif
+
     return;
 }
 
@@ -5828,8 +5860,13 @@ ReadAcquire16 (
 
     SHORT Value;
 
+#if defined(__ARM64_FEAT_LRCPC__)
+    Value = (SHORT)__ldapr16((unsigned __int16 volatile*)Source);
+#else
     Value = __iso_volatile_load16(Source);
     __dmb(_ARM64_BARRIER_ISH);
+#endif
+
     return Value;
 }
 
@@ -5856,8 +5893,13 @@ WriteRelease16 (
 
 {
 
+#if defined(__ARM64_FEAT_LRCPC__)
+    __stlr16((unsigned __int16 volatile*)Destination, (unsigned __int16)Value);
+#else
     __dmb(_ARM64_BARRIER_ISH);
     __iso_volatile_store16(Destination, Value);
+#endif
+
     return;
 }
 
@@ -5884,8 +5926,13 @@ ReadAcquire (
 
     LONG Value;
 
+#if defined(__ARM64_FEAT_LRCPC__)
+    Value = (LONG)__ldapr32((unsigned __int32 volatile*)Source);
+#else
     Value = __iso_volatile_load32((int *)Source);
     __dmb(_ARM64_BARRIER_ISH);
+#endif
+
     return Value;
 }
 
@@ -5912,8 +5959,13 @@ WriteRelease (
 
 {
 
+#if defined(__ARM64_FEAT_LRCPC__)
+    __stlr32((unsigned __int32 volatile*)Destination, (unsigned __int32)Value);
+#else
     __dmb(_ARM64_BARRIER_ISH);
     __iso_volatile_store32((int *)Destination, Value);
+#endif
+
     return;
 }
 
@@ -5940,8 +5992,13 @@ ReadAcquire64 (
 
     LONG64 Value;
 
+#if defined(__ARM64_FEAT_LRCPC__)
+    Value = (LONG64)__ldapr64((unsigned __int64 volatile*)Source);
+#else
     Value = __iso_volatile_load64(Source);
     __dmb(_ARM64_BARRIER_ISH);
+#endif
+
     return Value;
 }
 
@@ -5968,8 +6025,13 @@ WriteRelease64 (
 
 {
 
+#if defined(__ARM64_FEAT_LRCPC__)
+    __stlr64((unsigned __int64 volatile*)Destination, (unsigned __int64)Value);
+#else
     __dmb(_ARM64_BARRIER_ISH);
     __iso_volatile_store64(Destination, Value);
+#endif
+
     return;
 }
 

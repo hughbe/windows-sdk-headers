@@ -16044,6 +16044,16 @@ RegisterForTooltipDismissNotification(HWND hWnd,
 #endif /* WINVER >= 0x0607 */
 
 
+#if(WINVER >= 0x0604)
+
+WINUSERAPI
+BOOL
+WINAPI
+IsWindowArranged(
+    _In_ HWND hwnd);
+
+#endif /* WINVER >= 0x0604 */
+
 #if _MSC_VER >= 1200
 #pragma warning(pop)
 #endif

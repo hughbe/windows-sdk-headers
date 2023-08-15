@@ -413,7 +413,7 @@ Do not use it.
     if (!IsolationAwareQueryActCtxW(
         QUERY_ACTCTX_FLAG_ACTCTX_IS_ADDRESS
         | QUERY_ACTCTX_FLAG_NO_ADDREF,
-        &WinbaseIsolationAwarePrivateT_UnPgpgk,
+        (HANDLE)&WinbaseIsolationAwarePrivateT_UnPgpgk,
         NULL,
         ActivationContextBasicInformation,
         &actCtxBasicInfo,

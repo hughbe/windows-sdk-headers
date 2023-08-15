@@ -329,6 +329,9 @@ typedef struct _DNS_HEADER
 {
     WORD    Xid;
 
+#ifdef MIDL_PASS
+    WORD    Flags;
+#else
     BYTE    RecursionDesired : 1;
     BYTE    Truncation : 1;
     BYTE    Authoritative : 1;
@@ -340,6 +343,7 @@ typedef struct _DNS_HEADER
     BYTE    AuthenticatedData : 1;
     BYTE    Reserved : 1;
     BYTE    RecursionAvailable : 1;
+#endif
 
     WORD    QuestionCount;
     WORD    AnswerCount;
@@ -1531,7 +1535,6 @@ typedef enum _DNS_SVCB_PARAM_TYPE
     DnsSvcbParamEch            = 5,
     DnsSvcbParamIpv6Hint       = 6,
     DnsSvcbParamDohPath        = 7,
-    DnsSvcbParamDohPathQuad9   = 65380,
     DnsSvcbParamDohPathOpenDns = 65432,
 } DNS_SVCB_PARAM_TYPE;
 

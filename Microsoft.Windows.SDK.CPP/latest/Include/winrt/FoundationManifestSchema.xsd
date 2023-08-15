@@ -30,6 +30,7 @@
            xmlns:desktop2="http://schemas.microsoft.com/appx/manifest/desktop/windows10/2"
            xmlns:desktop4="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4"
            xmlns:desktop6="http://schemas.microsoft.com/appx/manifest/desktop/windows10/6"
+           xmlns:desktop11="http://schemas.microsoft.com/appx/manifest/desktop/windows10/11"
            xmlns:virtualization="http://schemas.microsoft.com/appx/manifest/virtualization/windows10"
            xmlns:previewsecurity="http://schemas.microsoft.com/appx/manifest/preview/windows10/security"
            xmlns:heap="http://schemas.microsoft.com/appx/manifest/heap/windows10"
@@ -53,12 +54,13 @@
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/iot/windows10/2"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/desktop/windows10/6"/>
+  <xs:import namespace="http://schemas.microsoft.com/appx/manifest/desktop/windows10/11"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/6"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/virtualization/windows10"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/preview/windows10/security"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/heap/windows10"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/preview/windows10/security/2"/>
-  
+
   <xs:element name="Package">
     <xs:complexType>
       <xs:all>
@@ -295,6 +297,7 @@
             <xs:element name="PublisherCacheFolders" type="CT_PublisherCacheFolders"/>
           </xs:choice>
           <xs:attribute name="Category" type="t:ST_PackageExtensionCategory_Foundation" use="required"/>
+          <xs:attribute ref="desktop11:AppLifecycleBehavior" use="optional"/>
           <xs:attributeGroup ref="uap10:TrustLevelGroup"/>
           <xs:attributeGroup ref="uap11:ManganeseExtensionAttributesGroup"/>
         </xs:complexType>
@@ -389,6 +392,7 @@
           <xs:attributeGroup ref="uap10:TrustLevelGroup"/>
           <xs:attribute ref="previewsecurity2:RuntimeBehavior" use="optional"/>
           <xs:attribute ref="uap16:BaseNamedObjectsIsolation" use="optional"/>
+          <xs:attribute ref="desktop11:AppLifecycleBehavior" use="optional"/>
         </xs:complexType>
         <xs:unique name="ApplicationContentUrisRule_Match">
           <xs:selector xpath="uap:ApplicationContentUriRules/uap:Rule"/>
@@ -467,6 +471,7 @@
         <xs:element name="BackgroundTasks" type="CT_BackgroundTasks"/>
       </xs:choice>
       <xs:attribute name="Category" type="t:ST_ApplicationExtensionCategory_Foundation" use="required"/>
+      <xs:attribute ref="desktop11:AppLifecycleBehavior" use="optional"/>
       <xs:attributeGroup ref="t:ExtensionBaseAttributes"/>
       <xs:attributeGroup ref="uap10:TrustLevelGroup"/>
       <xs:attributeGroup ref="uap11:ManganeseExtensionAttributesGroup"/>

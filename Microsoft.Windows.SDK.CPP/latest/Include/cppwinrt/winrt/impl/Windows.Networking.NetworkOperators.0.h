@@ -406,8 +406,10 @@ WINRT_EXPORT namespace winrt::Windows::Networking::NetworkOperators
     struct IMobileBroadbandDeviceInformation3;
     struct IMobileBroadbandDeviceInformation4;
     struct IMobileBroadbandDeviceService;
+    struct IMobileBroadbandDeviceServiceCommandEventArgs;
     struct IMobileBroadbandDeviceServiceCommandResult;
     struct IMobileBroadbandDeviceServiceCommandSession;
+    struct IMobileBroadbandDeviceServiceCommandSession2;
     struct IMobileBroadbandDeviceServiceDataReceivedEventArgs;
     struct IMobileBroadbandDeviceServiceDataSession;
     struct IMobileBroadbandDeviceServiceInformation;
@@ -509,6 +511,7 @@ WINRT_EXPORT namespace winrt::Windows::Networking::NetworkOperators
     struct MobileBroadbandCurrentSlotIndexChangedEventArgs;
     struct MobileBroadbandDeviceInformation;
     struct MobileBroadbandDeviceService;
+    struct MobileBroadbandDeviceServiceCommandEventArgs;
     struct MobileBroadbandDeviceServiceCommandResult;
     struct MobileBroadbandDeviceServiceCommandSession;
     struct MobileBroadbandDeviceServiceDataReceivedEventArgs;
@@ -608,8 +611,10 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceInformation3>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceInformation4>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceService>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandResult>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceDataReceivedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceDataSession>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceInformation>{ using type = interface_category; };
@@ -711,6 +716,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation>{ using type = class_category; };
     template <> struct category<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService>{ using type = class_category; };
+    template <> struct category<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult>{ using type = class_category; };
     template <> struct category<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession>{ using type = class_category; };
     template <> struct category<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs>{ using type = class_category; };
@@ -828,6 +834,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs> = L"Windows.Networking.NetworkOperators.MobileBroadbandCurrentSlotIndexChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation> = L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation";
     template <> inline constexpr auto& name_v<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService> = L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceService";
+    template <> inline constexpr auto& name_v<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs> = L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult> = L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult";
     template <> inline constexpr auto& name_v<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession> = L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession";
     template <> inline constexpr auto& name_v<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs> = L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataReceivedEventArgs";
@@ -957,8 +964,10 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceInformation3> = L"Windows.Networking.NetworkOperators.IMobileBroadbandDeviceInformation3";
     template <> inline constexpr auto& name_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceInformation4> = L"Windows.Networking.NetworkOperators.IMobileBroadbandDeviceInformation4";
     template <> inline constexpr auto& name_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceService> = L"Windows.Networking.NetworkOperators.IMobileBroadbandDeviceService";
+    template <> inline constexpr auto& name_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandEventArgs> = L"Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandResult> = L"Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandResult";
     template <> inline constexpr auto& name_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession> = L"Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandSession";
+    template <> inline constexpr auto& name_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession2> = L"Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandSession2";
     template <> inline constexpr auto& name_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceDataReceivedEventArgs> = L"Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceDataReceivedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceDataSession> = L"Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceDataSession";
     template <> inline constexpr auto& name_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceInformation> = L"Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceInformation";
@@ -1072,8 +1081,10 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceInformation3>{ 0xE08BB4BD,0x5D30,0x4B5A,{ 0x92,0xCC,0xD5,0x4D,0xF8,0x81,0xD4,0x9E } }; // E08BB4BD-5D30-4B5A-92CC-D54DF881D49E
     template <> inline constexpr guid guid_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceInformation4>{ 0x263F3152,0x7B9D,0x582C,{ 0xB1,0x7C,0xF8,0x0A,0x60,0xB5,0x00,0x31 } }; // 263F3152-7B9D-582C-B17C-F80A60B50031
     template <> inline constexpr guid guid_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceService>{ 0x22BE1A52,0xBD80,0x40AC,{ 0x8E,0x1F,0x2E,0x07,0x83,0x6A,0x3D,0xBD } }; // 22BE1A52-BD80-40AC-8E1F-2E07836A3DBD
+    template <> inline constexpr guid guid_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandEventArgs>{ 0x28E4338F,0xCCA4,0x5047,{ 0xA2,0x0C,0x0A,0x6D,0x79,0xAC,0xEC,0xBA } }; // 28E4338F-CCA4-5047-A20C-0A6D79ACECBA
     template <> inline constexpr guid guid_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandResult>{ 0xB0F46ABB,0x94D6,0x44B9,{ 0xA5,0x38,0xF0,0x81,0x0B,0x64,0x53,0x89 } }; // B0F46ABB-94D6-44B9-A538-F0810B645389
     template <> inline constexpr guid guid_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession>{ 0xFC098A45,0x913B,0x4914,{ 0xB6,0xC3,0xAE,0x63,0x04,0x59,0x3E,0x75 } }; // FC098A45-913B-4914-B6C3-AE6304593E75
+    template <> inline constexpr guid guid_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession2>{ 0xEF004861,0x2546,0x5739,{ 0x86,0xE7,0x0F,0xDC,0x0E,0x62,0x41,0x1C } }; // EF004861-2546-5739-86E7-0FDC0E62411C
     template <> inline constexpr guid guid_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceDataReceivedEventArgs>{ 0xB6AA13DE,0x1380,0x40E3,{ 0x86,0x18,0x73,0xCB,0xCA,0x48,0x13,0x8C } }; // B6AA13DE-1380-40E3-8618-73CBCA48138C
     template <> inline constexpr guid guid_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceDataSession>{ 0xDAD62333,0x8BCF,0x4289,{ 0x8A,0x37,0x04,0x5C,0x21,0x69,0x48,0x6A } }; // DAD62333-8BCF-4289-8A37-045C2169486A
     template <> inline constexpr guid guid_v<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceInformation>{ 0x53D69B5B,0xC4ED,0x45F0,{ 0x80,0x3A,0xD9,0x41,0x7A,0x6D,0x98,0x46 } }; // 53D69B5B-C4ED-45F0-803A-D9417A6D9846
@@ -1169,6 +1180,7 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs>{ using type = winrt::Windows::Networking::NetworkOperators::IMobileBroadbandCurrentSlotIndexChangedEventArgs; };
     template <> struct default_interface<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation>{ using type = winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceInformation; };
     template <> struct default_interface<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService>{ using type = winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceService; };
+    template <> struct default_interface<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs>{ using type = winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandEventArgs; };
     template <> struct default_interface<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult>{ using type = winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandResult; };
     template <> struct default_interface<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession>{ using type = winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession; };
     template <> struct default_interface<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs>{ using type = winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceDataReceivedEventArgs; };
@@ -1736,6 +1748,16 @@ namespace winrt::impl
             virtual int32_t __stdcall OpenCommandSession(void**) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandEventArgs>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_DeviceId(void**) noexcept = 0;
+            virtual int32_t __stdcall get_DeviceServiceId(winrt::guid*) noexcept = 0;
+            virtual int32_t __stdcall get_EventId(uint32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_ReceivedData(void**) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandResult>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -1751,6 +1773,14 @@ namespace winrt::impl
             virtual int32_t __stdcall SendQueryCommandAsync(uint32_t, void*, void**) noexcept = 0;
             virtual int32_t __stdcall SendSetCommandAsync(uint32_t, void*, void**) noexcept = 0;
             virtual int32_t __stdcall CloseSession() noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall add_CommandReceived(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_CommandReceived(winrt::event_token) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceDataReceivedEventArgs>
@@ -2977,6 +3007,18 @@ namespace winrt::impl
         template <typename D> using type = consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceService<D>;
     };
     template <typename D>
+    struct consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandEventArgs
+    {
+        [[nodiscard]] auto DeviceId() const;
+        [[nodiscard]] auto DeviceServiceId() const;
+        [[nodiscard]] auto EventId() const;
+        [[nodiscard]] auto ReceivedData() const;
+    };
+    template <> struct consume<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandEventArgs>
+    {
+        template <typename D> using type = consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandEventArgs<D>;
+    };
+    template <typename D>
     struct consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandResult
     {
         [[nodiscard]] auto StatusCode() const;
@@ -2996,6 +3038,18 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession>
     {
         template <typename D> using type = consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandSession<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandSession2
+    {
+        auto CommandReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession, winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs> const& handler) const;
+        using CommandReceived_revoker = impl::event_revoker<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession2, &impl::abi_t<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession2>::remove_CommandReceived>;
+        [[nodiscard]] CommandReceived_revoker CommandReceived(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession, winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs> const& handler) const;
+        auto CommandReceived(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession2>
+    {
+        template <typename D> using type = consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandSession2<D>;
     };
     template <typename D>
     struct consume_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceDataReceivedEventArgs

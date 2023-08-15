@@ -880,6 +880,21 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceService_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_FWD_DEFINED__
+#define ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Networking {
+            namespace NetworkOperators {
+                interface IMobileBroadbandDeviceServiceCommandEventArgs;
+            } /* NetworkOperators */
+        } /* Networking */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs ABI::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandEventArgs
+
+#endif // ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandResult_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandResult_FWD_DEFINED__
 namespace ABI {
@@ -909,6 +924,21 @@ namespace ABI {
 #define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession ABI::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession
 
 #endif // ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Networking {
+            namespace NetworkOperators {
+                interface IMobileBroadbandDeviceServiceCommandSession2;
+            } /* NetworkOperators */
+        } /* Networking */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2 ABI::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession2
+
+#endif // ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceDataReceivedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceDataReceivedEventArgs_FWD_DEFINED__
@@ -5416,6 +5446,55 @@ namespace ABI {
     namespace Windows {
         namespace Networking {
             namespace NetworkOperators {
+                class MobileBroadbandDeviceServiceCommandSession;
+            } /* NetworkOperators */
+        } /* Networking */
+    } /* Windows */
+} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace Networking {
+            namespace NetworkOperators {
+                class MobileBroadbandDeviceServiceCommandEventArgs;
+            } /* NetworkOperators */
+        } /* Networking */
+    } /* Windows */
+} /* ABI */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+
+#ifndef DEF___FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs_USE
+#define DEF___FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("fb669e9d-a7f8-5b7a-84fc-20a4caddecef"))
+ITypedEventHandler<ABI::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession*, ABI::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession*, ABI::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandSession*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs*, ABI::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceCommandEventArgs*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession, Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef ITypedEventHandler<ABI::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession*, ABI::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs*> __FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs_t;
+#define __FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+namespace ABI {
+    namespace Windows {
+        namespace Networking {
+            namespace NetworkOperators {
                 class MobileBroadbandDeviceServiceDataSession;
             } /* NetworkOperators */
         } /* Networking */
@@ -6194,16 +6273,6 @@ namespace ABI {
         namespace Networking {
             namespace NetworkOperators {
                 class MobileBroadbandDeviceService;
-            } /* NetworkOperators */
-        } /* Networking */
-    } /* Windows */
-} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace Networking {
-            namespace NetworkOperators {
-                class MobileBroadbandDeviceServiceCommandSession;
             } /* NetworkOperators */
         } /* Networking */
     } /* Windows */
@@ -9670,6 +9739,51 @@ EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBr
 
 /*
  *
+ * Interface Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ *
+ * Interface is a part of the implementation of type Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if !defined(____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandEventArgs[] = L"Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandEventArgs";
+namespace ABI {
+    namespace Windows {
+        namespace Networking {
+            namespace NetworkOperators {
+                MIDL_INTERFACE("28e4338f-cca4-5047-a20c-0a6d79acecba")
+                IMobileBroadbandDeviceServiceCommandEventArgs : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE get_DeviceId(
+                        HSTRING* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_DeviceServiceId(
+                        GUID* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_EventId(
+                        UINT32* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_ReceivedData(
+                        ABI::Windows::Storage::Streams::IBuffer** value
+                        ) = 0;
+                };
+
+                MIDL_CONST_ID IID& IID_IMobileBroadbandDeviceServiceCommandEventArgs = __uuidof(IMobileBroadbandDeviceServiceCommandEventArgs);
+            } /* NetworkOperators */
+        } /* Networking */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs;
+#endif /* !defined(____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+
+/*
+ *
  * Interface Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -9750,6 +9864,46 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+/*
+ *
+ * Interface Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandSession2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ *
+ * Interface is a part of the implementation of type Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if !defined(____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandSession2[] = L"Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandSession2";
+namespace ABI {
+    namespace Windows {
+        namespace Networking {
+            namespace NetworkOperators {
+                MIDL_INTERFACE("ef004861-2546-5739-86e7-0fdc0e62411c")
+                IMobileBroadbandDeviceServiceCommandSession2 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE add_CommandReceived(
+                        __FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs* handler,
+                        EventRegistrationToken* token
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE remove_CommandReceived(
+                        EventRegistrationToken token
+                        ) = 0;
+                };
+
+                MIDL_CONST_ID IID& IID_IMobileBroadbandDeviceServiceCommandSession2 = __uuidof(IMobileBroadbandDeviceServiceCommandSession2);
+            } /* NetworkOperators */
+        } /* Networking */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2;
+#endif /* !defined(____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
 /*
  *
@@ -13200,6 +13354,25 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
+ * Class Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandEventArgs ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#ifndef RUNTIMECLASS_Windows_Networking_NetworkOperators_MobileBroadbandDeviceServiceCommandEventArgs_DEFINED
+#define RUNTIMECLASS_Windows_Networking_NetworkOperators_MobileBroadbandDeviceServiceCommandEventArgs_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Networking_NetworkOperators_MobileBroadbandDeviceServiceCommandEventArgs[] = L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+
+/*
+ *
  * Class Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -13225,6 +13398,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandSession ** Default Interface **
+ *    Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandSession2
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -13891,8 +14065,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics4 interface starting with version 10.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics4 interface starting with version 10.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics3 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
@@ -14371,6 +14545,12 @@ typedef interface __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadba
 
 #endif // ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceService_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_FWD_DEFINED__
+#define ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs;
+
+#endif // ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandResult_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandResult_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandResult __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandResult;
@@ -14382,6 +14562,12 @@ typedef interface __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadba
 typedef interface __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession;
 
 #endif // ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2 __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2;
+
+#endif // ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceDataReceivedEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceDataReceivedEventArgs_FWD_DEFINED__
@@ -22665,6 +22851,57 @@ interface __FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobi
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if !defined(____FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs_INTERFACE_DEFINED__)
+#define ____FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs_INTERFACE_DEFINED__
+
+typedef interface __FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs __FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs;
+
+typedef struct __FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgsVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs* This,
+        __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession* sender,
+        __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs* args);
+
+    END_INTERFACE
+} __FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgsVtbl;
+
+interface __FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs
+{
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgsVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs_Invoke(This, sender, args) \
+    ((This)->lpVtbl->Invoke(This, sender, args))
+
+#endif /* COBJMACROS */
+
+#endif // ____FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceDataSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceDataReceivedEventArgs_INTERFACE_DEFINED__)
 #define ____FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceDataSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceDataReceivedEventArgs_INTERFACE_DEFINED__
@@ -28105,6 +28342,90 @@ EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBr
 
 /*
  *
+ * Interface Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ *
+ * Interface is a part of the implementation of type Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if !defined(____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandEventArgs[] = L"Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandEventArgs";
+typedef struct __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgsVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_DeviceId)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_DeviceServiceId)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs* This,
+        GUID* value);
+    HRESULT (STDMETHODCALLTYPE* get_EventId)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs* This,
+        UINT32* value);
+    HRESULT (STDMETHODCALLTYPE* get_ReceivedData)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs* This,
+        __x_ABI_CWindows_CStorage_CStreams_CIBuffer** value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgsVtbl;
+
+interface __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs
+{
+    CONST_VTBL struct __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgsVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_get_DeviceId(This, value) \
+    ((This)->lpVtbl->get_DeviceId(This, value))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_get_DeviceServiceId(This, value) \
+    ((This)->lpVtbl->get_DeviceServiceId(This, value))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_get_EventId(This, value) \
+    ((This)->lpVtbl->get_EventId(This, value))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_get_ReceivedData(This, value) \
+    ((This)->lpVtbl->get_ReceivedData(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs;
+#endif /* !defined(____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandEventArgs_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+
+/*
+ *
  * Interface Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -28258,6 +28579,81 @@ interface __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDevice
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+/*
+ *
+ * Interface Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandSession2
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ *
+ * Interface is a part of the implementation of type Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if !defined(____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Networking_NetworkOperators_IMobileBroadbandDeviceServiceCommandSession2[] = L"Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandSession2";
+typedef struct __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* add_CommandReceived)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2* This,
+        __FITypedEventHandler_2_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandSession_Windows__CNetworking__CNetworkOperators__CMobileBroadbandDeviceServiceCommandEventArgs* handler,
+        EventRegistrationToken* token);
+    HRESULT (STDMETHODCALLTYPE* remove_CommandReceived)(__x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2* This,
+        EventRegistrationToken token);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2Vtbl;
+
+interface __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_add_CommandReceived(This, handler, token) \
+    ((This)->lpVtbl->add_CommandReceived(This, handler, token))
+
+#define __x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_remove_CommandReceived(This, token) \
+    ((This)->lpVtbl->remove_CommandReceived(This, token))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2;
+#endif /* !defined(____x_ABI_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceCommandSession2_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
 /*
  *
@@ -34061,6 +34457,25 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
+ * Class Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandEventArgs ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#ifndef RUNTIMECLASS_Windows_Networking_NetworkOperators_MobileBroadbandDeviceServiceCommandEventArgs_DEFINED
+#define RUNTIMECLASS_Windows_Networking_NetworkOperators_MobileBroadbandDeviceServiceCommandEventArgs_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Networking_NetworkOperators_MobileBroadbandDeviceServiceCommandEventArgs[] = L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+
+/*
+ *
  * Class Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -34086,6 +34501,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandSession ** Default Interface **
+ *    Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceCommandSession2
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -34752,8 +35168,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics4 interface starting with version 10.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics4 interface starting with version 10.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics3 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:

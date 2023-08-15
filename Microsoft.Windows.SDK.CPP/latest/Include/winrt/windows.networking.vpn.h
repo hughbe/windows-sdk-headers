@@ -855,6 +855,21 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInProfile2_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_FWD_DEFINED__
+#define ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Networking {
+            namespace Vpn {
+                interface IVpnPlugInReconnectTransport;
+            } /* Vpn */
+        } /* Networking */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport ABI::Windows::Networking::Vpn::IVpnPlugInReconnectTransport
+
+#endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CNetworking_CVpn_CIVpnProfile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CVpn_CIVpnProfile_FWD_DEFINED__
 namespace ABI {
@@ -5520,6 +5535,41 @@ EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInProfile2;
 
 /*
  *
+ * Interface Windows.Networking.Vpn.IVpnPlugInReconnectTransport
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Networking_Vpn_IVpnPlugInReconnectTransport[] = L"Windows.Networking.Vpn.IVpnPlugInReconnectTransport";
+namespace ABI {
+    namespace Windows {
+        namespace Networking {
+            namespace Vpn {
+                MIDL_INTERFACE("9d5a1092-bb46-4d34-9d88-f217893076f4")
+                IVpnPlugInReconnectTransport : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE ReconnectTransport(
+                        ABI::Windows::Networking::Vpn::IVpnChannel* channel,
+                        IInspectable* context
+                        ) = 0;
+                };
+
+                MIDL_CONST_ID IID& IID_IVpnPlugInReconnectTransport = __uuidof(IVpnPlugInReconnectTransport);
+            } /* Vpn */
+        } /* Networking */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport;
+#endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
  * Interface Windows.Networking.Vpn.IVpnProfile
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -6984,6 +7034,12 @@ typedef interface __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInProfile __x_ABI_C
 typedef interface __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInProfile2 __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInProfile2;
 
 #endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInProfile2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_FWD_DEFINED__
+#define ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport;
+
+#endif // ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CNetworking_CVpn_CIVpnProfile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CVpn_CIVpnProfile_FWD_DEFINED__
@@ -15753,6 +15809,74 @@ interface __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInProfile2
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInProfile2;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInProfile2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+/*
+ *
+ * Interface Windows.Networking.Vpn.IVpnPlugInReconnectTransport
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Networking_Vpn_IVpnPlugInReconnectTransport[] = L"Windows.Networking.Vpn.IVpnPlugInReconnectTransport";
+typedef struct __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransportVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* ReconnectTransport)(__x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport* This,
+        __x_ABI_CWindows_CNetworking_CVpn_CIVpnChannel* channel,
+        IInspectable* context);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransportVtbl;
+
+interface __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport
+{
+    CONST_VTBL struct __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransportVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_ReconnectTransport(This, channel, context) \
+    ((This)->lpVtbl->ReconnectTransport(This, channel, context))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport;
+#endif /* !defined(____x_ABI_CWindows_CNetworking_CVpn_CIVpnPlugInReconnectTransport_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *

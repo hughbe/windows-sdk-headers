@@ -6463,9 +6463,10 @@ GetFileBandwidthReservation(
 #endif // (_WIN32_WINNT >= 0x0600)
 
 //
-// Event logging APIs
+// Legacy Event logging APIs
 //
 
+_Success_(return != FALSE)
 WINADVAPI
 BOOL
 WINAPI
@@ -6473,6 +6474,7 @@ ClearEventLogA (
     _In_     HANDLE hEventLog,
     _In_opt_ LPCSTR lpBackupFileName
     );
+_Success_(return != FALSE)
 WINADVAPI
 BOOL
 WINAPI
@@ -6486,6 +6488,7 @@ ClearEventLogW (
 #define ClearEventLog  ClearEventLogA
 #endif // !UNICODE
 
+_Success_(return != FALSE)
 WINADVAPI
 BOOL
 WINAPI
@@ -6493,6 +6496,7 @@ BackupEventLogA (
     _In_ HANDLE hEventLog,
     _In_ LPCSTR lpBackupFileName
     );
+_Success_(return != FALSE)
 WINADVAPI
 BOOL
 WINAPI
@@ -6506,6 +6510,7 @@ BackupEventLogW (
 #define BackupEventLog  BackupEventLogA
 #endif // !UNICODE
 
+_Success_(return != FALSE)
 WINADVAPI
 BOOL
 WINAPI
@@ -6519,6 +6524,7 @@ CloseEventLog (
 #pragma region Application Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
+_Success_(return != FALSE)
 WINADVAPI
 BOOL
 WINAPI
@@ -6532,6 +6538,7 @@ DeregisterEventSource (
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
+_Success_(return != FALSE)
 WINADVAPI
 BOOL
 WINAPI
@@ -6540,6 +6547,7 @@ NotifyChangeEventLog(
     _In_ HANDLE  hEvent
     );
 
+_Success_(return != FALSE)
 WINADVAPI
 BOOL
 WINAPI
@@ -6548,6 +6556,7 @@ GetNumberOfEventLogRecords (
     _Out_ PDWORD NumberOfRecords
     );
 
+_Success_(return != FALSE)
 WINADVAPI
 BOOL
 WINAPI
@@ -6556,6 +6565,7 @@ GetOldestEventLogRecord (
     _Out_ PDWORD OldestRecord
     );
 
+_Success_(return != FALSE)
 WINADVAPI
 HANDLE
 WINAPI
@@ -6563,6 +6573,7 @@ OpenEventLogA (
     _In_opt_ LPCSTR lpUNCServerName,
     _In_     LPCSTR lpSourceName
     );
+_Success_(return != FALSE)
 WINADVAPI
 HANDLE
 WINAPI
@@ -6582,6 +6593,7 @@ OpenEventLogW (
 #pragma region Application Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
+_Success_(return != FALSE)
 WINADVAPI
 HANDLE
 WINAPI
@@ -6589,6 +6601,7 @@ RegisterEventSourceA (
     _In_opt_ LPCSTR lpUNCServerName,
     _In_     LPCSTR lpSourceName
     );
+_Success_(return != FALSE)
 WINADVAPI
 HANDLE
 WINAPI
@@ -6607,6 +6620,8 @@ RegisterEventSourceW (
 
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+
+_Success_(return != FALSE)
 WINADVAPI
 HANDLE
 WINAPI
@@ -6614,6 +6629,7 @@ OpenBackupEventLogA (
     _In_opt_ LPCSTR lpUNCServerName,
     _In_     LPCSTR lpFileName
     );
+_Success_(return != FALSE)
 WINADVAPI
 HANDLE
 WINAPI
@@ -6627,6 +6643,7 @@ OpenBackupEventLogW (
 #define OpenBackupEventLog  OpenBackupEventLogA
 #endif // !UNICODE
 
+_Success_(return != FALSE)
 WINADVAPI
 BOOL
 WINAPI
@@ -6639,6 +6656,7 @@ ReadEventLogA (
     _Out_ DWORD      *pnBytesRead,
     _Out_ DWORD      *pnMinNumberOfBytesNeeded
     );
+_Success_(return != FALSE)
 WINADVAPI
 BOOL
 WINAPI
@@ -6663,6 +6681,7 @@ ReadEventLogW (
 #pragma region Application Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
+_Success_(return != FALSE)
 WINADVAPI
 BOOL
 WINAPI
@@ -6677,6 +6696,7 @@ ReportEventA (
     _In_reads_opt_(wNumStrings) LPCSTR *lpStrings,
     _In_reads_bytes_opt_(dwDataSize) LPVOID lpRawData
     );
+_Success_(return != FALSE)
 WINADVAPI
 BOOL
 WINAPI
@@ -6711,6 +6731,7 @@ typedef struct _EVENTLOG_FULL_INFORMATION
 }
 EVENTLOG_FULL_INFORMATION, *LPEVENTLOG_FULL_INFORMATION;
 
+_Success_(return != FALSE)
 WINADVAPI
 BOOL
 WINAPI

@@ -10597,6 +10597,15 @@ Notes:
 //
 #define STATUS_VOLUME_UPGRADE_DISABLED_TILL_OS_DOWNGRADE_EXPIRED ((NTSTATUS)0xC00004DCL)
 
+//
+// MessageId: STATUS_NOT_A_DEV_VOLUME
+//
+// MessageText:
+//
+// This operation requires a developer volume.
+//
+#define STATUS_NOT_A_DEV_VOLUME          ((NTSTATUS)0xC00004DDL)
+
 
 //     **** New SYSTEM error codes can be inserted here ****
 
@@ -12872,6 +12881,15 @@ Notes:
 // The union this operation is being performed on is inactive.
 //
 #define STATUS_UNIONFS_INACTIVE_UNION    ((NTSTATUS)0xC0ED0008L)
+
+//
+// MessageId: STATUS_UNIONFS_TOO_MANY_LAYERS
+//
+// MessageText:
+//
+// There are too many layers to construct this union.
+//
+#define STATUS_UNIONFS_TOO_MANY_LAYERS   ((NTSTATUS)0xC0ED0009L)
 
 
 //     **** New SYSTEM error codes can be inserted here ****

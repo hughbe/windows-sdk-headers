@@ -211,6 +211,7 @@ typedef enum _WER_FILE_TYPE
     WerFileTypeCustomDump = 7,
     WerFileTypeAuxiliaryDump = 8,
     WerFileTypeEtlTrace = 9,
+    WerFileTypeAuxiliaryHeapDump = 10,
     WerFileTypeMax
 } WER_FILE_TYPE;
 
