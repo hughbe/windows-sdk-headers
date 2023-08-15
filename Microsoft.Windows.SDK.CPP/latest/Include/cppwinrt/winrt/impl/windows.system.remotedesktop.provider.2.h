@@ -31,5 +31,24 @@ WINRT_EXPORT namespace winrt::Windows::System::RemoteDesktop::Provider
         RemoteDesktopConnectionInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfo(ptr, take_ownership_from_abi) {}
         static auto GetForLaunchUri(winrt::Windows::Foundation::Uri const& launchUri, winrt::Windows::UI::WindowId const& windowId);
     };
+    struct __declspec(empty_bases) RemoteDesktopConnectionRemoteInfo : winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionRemoteInfo,
+        impl::require<RemoteDesktopConnectionRemoteInfo, winrt::Windows::Foundation::IClosable>
+    {
+        RemoteDesktopConnectionRemoteInfo(std::nullptr_t) noexcept {}
+        RemoteDesktopConnectionRemoteInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionRemoteInfo(ptr, take_ownership_from_abi) {}
+        static auto Current();
+    };
+    struct __declspec(empty_bases) RemoteDesktopInfo : winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopInfo
+    {
+        RemoteDesktopInfo(std::nullptr_t) noexcept {}
+        RemoteDesktopInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopInfo(ptr, take_ownership_from_abi) {}
+        RemoteDesktopInfo(param::hstring const& id, param::hstring const& displayName);
+    };
+    struct RemoteDesktopRegistrar
+    {
+        RemoteDesktopRegistrar() = delete;
+        [[nodiscard]] static auto DesktopInfos();
+        static auto IsSwitchToLocalSessionEnabled();
+    };
 }
 #endif

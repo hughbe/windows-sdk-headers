@@ -55,17 +55,57 @@ namespace Windows
 
                 interface IRemoteDesktopConnectionInfoStatics;
 
+                interface IRemoteDesktopConnectionRemoteInfo;
+
+                interface IRemoteDesktopConnectionRemoteInfoStatics;
+
+                interface IRemoteDesktopInfo;
+
+                interface IRemoteDesktopInfoFactory;
+
+                interface IRemoteDesktopRegistrarStatics;
+
                 runtimeclass CloudPCDisplayInfo;
 
                 runtimeclass CloudPCHostService;
 
                 runtimeclass RemoteDesktopConnectionInfo;
+
+                runtimeclass RemoteDesktopConnectionRemoteInfo;
+
+                runtimeclass RemoteDesktopInfo;
+
+                runtimeclass RemoteDesktopRegistrar;
             }
         }
     }
 }
 
 // Generic instantiations
+namespace Windows
+{
+    namespace System
+    {
+        namespace RemoteDesktop
+        {
+            namespace Provider
+            {
+                declare
+                {
+                    interface Windows.Foundation.Collections.IIterable<Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo*>;
+
+                    interface Windows.Foundation.Collections.IIterator<Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo*>;
+
+                    interface Windows.Foundation.Collections.IVectorView<Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo*>;
+
+                    interface Windows.Foundation.Collections.IVector<Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo*>;
+
+                    interface Windows.Foundation.TypedEventHandler<Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo*, IInspectable*>;
+                }
+            }
+        }
+    }
+}
 
 // Type definition
 namespace Windows
@@ -155,6 +195,50 @@ namespace Windows
                     HRESULT GetForLaunchUri([in] Windows.Foundation.Uri* launchUri, [in] Windows.UI.WindowId windowId, [out] [retval] Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo** result);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+                [exclusiveto(Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo)]
+                [uuid(E50E00E5-010D-5CAB-B468-CF871A8543B5)]
+                interface IRemoteDesktopConnectionRemoteInfo : IInspectable
+                {
+                    HRESULT ReportSwitched();
+                    [eventadd] HRESULT SwitchToLocalSessionRequested([in] Windows.Foundation.TypedEventHandler<Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo*, IInspectable*>* handler, [out] [retval] EventRegistrationToken* token);
+                    [eventremove] HRESULT SwitchToLocalSessionRequested([in] EventRegistrationToken token);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+                [exclusiveto(Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo)]
+                [uuid(9AD68472-CD92-537A-8309-639CE2CF940F)]
+                interface IRemoteDesktopConnectionRemoteInfoStatics : IInspectable
+                {
+                    HRESULT Current([out] [retval] Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo** result);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+                [exclusiveto(Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo)]
+                [uuid(D185BB25-2F1E-5098-B9E0-F46D6358C5C4)]
+                interface IRemoteDesktopInfo : IInspectable
+                {
+                    [propget] HRESULT DisplayName([out] [retval] HSTRING* value);
+                    [propget] HRESULT Id([out] [retval] HSTRING* value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+                [exclusiveto(Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo)]
+                [uuid(AD0E8D58-B56F-5A8B-B419-8002EE0C5EE9)]
+                interface IRemoteDesktopInfoFactory : IInspectable
+                {
+                    HRESULT CreateInstance([in] HSTRING id, [in] HSTRING displayName, [out] [retval] Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo** value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+                [exclusiveto(Windows.System.RemoteDesktop.Provider.RemoteDesktopRegistrar)]
+                [uuid(687C2750-46D9-5DE3-8DC3-84A9202CECFB)]
+                interface IRemoteDesktopRegistrarStatics : IInspectable
+                {
+                    [propget] HRESULT DesktopInfos([out] [retval] Windows.Foundation.Collections.IVector<Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo*>** value);
+                    HRESULT IsSwitchToLocalSessionEnabled([out] [retval] boolean* result);
+                }
+
                 [activatable(Windows.System.RemoteDesktop.Provider.ICloudPCDisplayInfoFactory, Windows.Foundation.UniversalApiContract, 15.0)]
                 [contract(Windows.Foundation.UniversalApiContract, 15.0)]
                 [experimental]
@@ -184,6 +268,33 @@ namespace Windows
                 {
                     [default] interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo;
                     [contract(Windows.Foundation.UniversalApiContract, 15.0)] [experimental] interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfo2;
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+                [marshaling_behavior(agile)]
+                [static(Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics, Windows.Foundation.UniversalApiContract, 15.0)]
+                [threading(both)]
+                runtimeclass RemoteDesktopConnectionRemoteInfo
+                {
+                    [default] interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo;
+                    interface Windows.Foundation.IClosable;
+                }
+
+                [activatable(Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfoFactory, Windows.Foundation.UniversalApiContract, 15.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+                [marshaling_behavior(agile)]
+                [threading(both)]
+                runtimeclass RemoteDesktopInfo
+                {
+                    [default] interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfo;
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+                [marshaling_behavior(agile)]
+                [static(Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics, Windows.Foundation.UniversalApiContract, 15.0)]
+                [threading(both)]
+                runtimeclass RemoteDesktopRegistrar
+                {
                 }
             }
         }
