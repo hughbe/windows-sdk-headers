@@ -570,7 +570,7 @@
 #define ThStackBase 0x38
 #define ThLegoData 0x2f0
 #define KernelThreadObjectLength 0x4a0
-#define ExecutiveThreadObjectLength 0x9f8
+#define ExecutiveThreadObjectLength 0xa08
 
 
 //

@@ -1376,6 +1376,16 @@ enum CLUSTER_NODE_STATUS
     } 	CLUSTER_NODE_STATUS;
 
 typedef 
+enum CLUSTER_NODE_FAILBACK_STATUS
+    {
+        NodeFailbackStatusNotInitiated	= 0,
+        NodeFailbackStatusInProgress	= ( NodeFailbackStatusNotInitiated + 1 ) ,
+        NodeFailbackStatusCompleted	= ( NodeFailbackStatusInProgress + 1 ) ,
+        NodeFailbackStatusFailed	= ( NodeFailbackStatusCompleted + 1 ) ,
+        ClusterNodeFailbackStatusCount	= ( NodeFailbackStatusFailed + 1 ) 
+    } 	CLUSTER_NODE_FAILBACK_STATUS;
+
+typedef 
 enum CLUSTER_GROUP_ENUM
     {
         CLUSTER_GROUP_ENUM_CONTAINS	= 0x1,

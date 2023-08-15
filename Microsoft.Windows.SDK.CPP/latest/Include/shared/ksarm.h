@@ -571,7 +571,7 @@
 #define ThStackBase 0x28
 #define ThLegoData 0x1b8
 #define KernelThreadObjectLength 0x2a0
-#define ExecutiveThreadObjectLength 0x5c0
+#define ExecutiveThreadObjectLength 0x5c8
 
 #define KF_VFP_32REG 0x10
 
@@ -969,10 +969,10 @@
 #define PbInterruptTime 0x910
 #define PbAdjustDpcThreshold 0x914
 #define PbStartCycles 0x948
-#define PbPageColor 0xabc
-#define PbNodeColor 0xac0
-#define PbNodeShiftedColor 0xac4
-#define PbSecondaryColorMask 0xac8
+#define PbPageColor 0xac0
+#define PbNodeColor 0xac4
+#define PbNodeShiftedColor 0xac8
+#define PbSecondaryColorMask 0xacc
 #define PbCycleTime 0xad0
 #define PbFastReadNoWait 0x638
 #define PbFastReadWait 0x63c

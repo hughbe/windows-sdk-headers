@@ -373,15 +373,22 @@ Abstract:
 
 //
 // When DECLSPEC_NOSANITIZEADDRESS is set, the compiler may not inline
-// functions marked with __forceinline. That's expected and not a problem,
-// so disable warning 4714.
+// functions marked with __forceinline. This may result in warning 4714:
+//
+//     function 'xxx' marked as __forceinline not inlined
+//
+// Provide a way to disable this warning.
 //
 
 #ifndef DECLSPEC_NOSANITIZEADDRESS
 #if defined(__SANITIZE_ADDRESS__)
-#define DECLSPEC_NOSANITIZEADDRESS  __declspec(no_sanitize_address) __pragma(warning(disable:4714))
+#define DECLSPEC_NOSANITIZEADDRESS      __declspec(no_sanitize_address)
+#define ASAN_WARNING_DISABLE_4714_PUSH  __pragma(warning(push)) __pragma(warning(disable:4714))
+#define ASAN_WARNING_DISABLE_4714_POP   __pragma(warning(pop))
 #else
 #define DECLSPEC_NOSANITIZEADDRESS
+#define ASAN_WARNING_DISABLE_4714_PUSH
+#define ASAN_WARNING_DISABLE_4714_POP
 #endif
 #endif
 

@@ -978,6 +978,7 @@ typedef struct addrinfoexW
 #define ADDRINFOEX_VERSION_4    4
 #define ADDRINFOEX_VERSION_5    5
 #define ADDRINFOEX_VERSION_6    6
+#define ADDRINFOEX_VERSION_7    7
 
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
@@ -1136,6 +1137,37 @@ typedef struct addrinfoex6
     ADDRINFO_DNS_SERVER  *ai_servers;
     ULONG64              ai_responseflags;
 } ADDRINFOEX6, *PADDRINFOEX6;
+
+//
+//  Flags for ai_extraflags
+//
+
+#define AI_EXTRA_DNS_DNSSEC_OK      0x0000000000000001 // Set DO bit in request, note: only the IP adress will be returned not the DNSSEC specific records / WSA_DNS_FLAG_DNSSEC_OK
+#define AI_EXTRA_DNS_DNSSEC_AUTH    0x0000000000000002 // Set AD bit in request, return IP address if DNSSEC authenticated / WSA_DNS_FLAG_DNSSEC_AUTH
+
+typedef struct addrinfoex7
+{
+    int                  ai_flags;       // AI_PASSIVE, AI_CANONNAME, AI_NUMERICHOST
+    int                  ai_family;      // PF_xxx
+    int                  ai_socktype;    // SOCK_xxx
+    int                  ai_protocol;    // 0 or IPPROTO_xxx for IPv4 and IPv6
+    size_t               ai_addrlen;     // Length of ai_addr
+    PWSTR                ai_canonname;   // Canonical name for nodename
+    _Field_size_bytes_(ai_addrlen) struct sockaddr    *ai_addr;        // Binary address
+    _Field_size_(ai_bloblen) void               *ai_blob;
+    size_t               ai_bloblen;
+    GUID                 *ai_provider;
+    struct addrinfoex5   *ai_next;        // Next structure in linked list
+    int                  ai_version;
+    PWSTR                ai_fqdn;
+    int                  ai_interfaceindex;
+    HANDLE               ai_resolutionhandle;
+    unsigned int         ai_ttl;          // Number of seconds for which this DNS record is valid
+    unsigned int         ai_numservers;
+    ADDRINFO_DNS_SERVER  *ai_servers;
+    ULONG64              ai_responseflags;
+    ULONG64              ai_extraflags;   // additional dns options
+} ADDRINFOEX7, *PADDRINFOEX7;
 
 #endif
 

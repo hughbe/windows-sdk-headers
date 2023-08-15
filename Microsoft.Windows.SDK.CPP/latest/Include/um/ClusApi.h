@@ -58,6 +58,9 @@ Revision History:
 // NT13 upgrade versions
 #define CA_UPGRADE_VERSION           1
 #define NI_UPGRADE_VERSION           2
+#define CU_UPGRADE_VERSION           3
+#define ZN_UPGRADE_VERSION           4
+
 
 #define HCI_UPGRADE_BIT 0x8000
 
@@ -87,10 +90,14 @@ Revision History:
 #define CLUSAPI_VERSION_WINTHRESHOLD 0x00000703
 #define CLUSAPI_VERSION_RS3          0x00000A00
 #define CLUSAPI_VERSION_NI           0x00000A0C
-
+// starting with CU use convention of 0x0000 + 2 digit major version + 2 digit minor version
+// ie NT13_MAJOR_VERSION = 12 = 0x0C, CU_UPGRADE_VERSION = 3 = 0x03
+#define CLUSAPI_VERSION_CU           0x00000C03
 
 #if (!defined(CLUSAPI_VERSION))
-#if (!defined(NTDDI_VERSION) || (NTDDI_VERSION >= NTDDI_WIN10_NI))
+#if (!defined(NTDDI_VERSION) || (NTDDI_VERSION >= NTDDI_WIN10_CU))
+#define CLUSAPI_VERSION CLUSAPI_VERSION_CU
+#elif (!defined(NTDDI_VERSION) || (NTDDI_VERSION >= NTDDI_WIN10_NI))
 #define CLUSAPI_VERSION CLUSAPI_VERSION_NI
 #elif (!defined(NTDDI_VERSION) || (NTDDI_VERSION >= NTDDI_WIN10_RS3))
 #define CLUSAPI_VERSION CLUSAPI_VERSION_RS3
@@ -569,6 +576,19 @@ typedef struct _CREATE_CLUSTER_NAME_ACCOUNT
     CLUSTER_MGMT_POINT_RESTYPE  managementPointResType;        // CLUSAPI Version >= CLUSAPI_VERSION_RS3
     BOOLEAN                     bUpgradeVCOs;           // CLUSAPI Version >= CLUSAPI_VERSION_RS3, managementPointType==CLUSTER_MGMT_POINT_TYPE_CNO
 } CREATE_CLUSTER_NAME_ACCOUNT, *PCREATE_CLUSTER_NAME_ACCOUNT;
+
+// Cluster Version >= NT13.CU_UPGRADE_VERSION
+// CLUSAPI >= CLUSAPI_VERSION_CU
+typedef struct _REPAIR_CLUSTER_NAME_ACCOUNT_CONFIG
+{
+    DWORD                       dwVersion;
+    DWORD                       dwFlags;
+    PCWSTR                      pszUserName;
+    PCWSTR                      pszPassword;
+    PCWSTR                      pszDomain;
+} REPAIR_CLUSTER_NAME_ACCOUNT_CONFIG, *PREPAIR_CLUSTER_NAME_ACCOUNT_CONFIG;
+
+
 
 #endif // _CLUSTER_API_TYPES_
 
@@ -2302,6 +2322,18 @@ typedef enum CLUSTER_NODE_STATUS
 } CLUSTER_NODE_STATUS;
 
 #endif //CLUSAPI_VERSION >= CLUSAPI_VERSION_WINTHRESHOLD
+
+#if (CLUSAPI_VERSION >= CLUSAPI_VERSION_NI)
+
+typedef enum CLUSTER_NODE_FAILBACK_STATUS {
+    NodeFailbackStatusNotInitiated = 0,
+    NodeFailbackStatusInProgress,
+    NodeFailbackStatusCompleted,
+    NodeFailbackStatusFailed,
+    ClusterNodeFailbackStatusCount
+} CLUSTER_NODE_FAILBACK_STATUS;
+
+#endif //CLUSAPI_VERSION >= CLUSAPI_VERSION_NI
 
 #endif // _CLUSTER_API_TYPES_
 
@@ -7306,6 +7338,17 @@ GetClusterNetInterface(
     _Inout_ LPDWORD lpcchInterfaceName
     );
 
+_Success_(return == ERROR_SUCCESS)
+DWORD
+WINAPI
+GetClusterNetInterfaceEx(
+    _In_ HCLUSTER hCluster,
+    _In_ LPCWSTR lpszNodeName,
+    _In_ LPCWSTR lpszNetworkName,
+    _Out_writes_to_(*lpmszInterfaceNameList, *lpcbInterfaceListBufSize) LPWSTR lpmszInterfaceNameList,
+    _Inout_ LPDWORD lpcbInterfaceListBufSize
+);
+
 typedef DWORD
 (WINAPI * PCLUSAPI_GET_CLUSTER_NET_INTERFACE)(
     _In_ HCLUSTER hCluster,
@@ -8037,6 +8080,9 @@ typedef enum _CLUSTER_SETUP_PHASE {
     ClusterSetupPhaseCleanupNode                    = 405,
     ClusterSetupPhaseCoreGroupCleanup               = 406,
 
+    ClusterSetupPhaseRepairCNOAccount               = 500,
+    ClusterSetupPhaseRepairDNSPermissions           = 501,
+
     ClusterSetupPhaseFailureCleanup                 = 999
 
 } CLUSTER_SETUP_PHASE;
@@ -8124,6 +8170,19 @@ RemoveClusterNameAccount(
     _In_ HCLUSTER    hCluster,
     _In_ BOOL        bDeleteComputerObjects
 );
+
+DWORD
+WINAPI
+RepairClusterNameAccount(
+    _In_ HCLUSTER hCluster,
+    _In_ PREPAIR_CLUSTER_NAME_ACCOUNT_CONFIG pConfig,
+    _In_opt_ PCLUSTER_SETUP_PROGRESS_CALLBACK pfnProgressCallback,
+    _In_opt_ PVOID              pvCallbackArg);
+
+typedef DWORD
+(WINAPI * PCLUSAPI_REPAIR_CLUSTER_NAME_ACCOUNT)(
+    _In_ HCLUSTER    hCluster
+    );
 
 DWORD
 WINAPI
@@ -8416,7 +8475,7 @@ typedef DWORD
 #define CLUSREG_NAME_NODE_MANUFACTURER      L"Manufacturer"
 #define CLUSREG_NAME_NODE_UNIQUEID          L"UniqueID"
 #define CLUSREG_NAME_NODE_DRAIN_ERROR_CODE  L"DrainErrorCode"
-
+#define CLUSREG_NAME_NODE_FAILBACK_STATUS   L"NodeFailbackStatus"
 
 //
 // Group common property names

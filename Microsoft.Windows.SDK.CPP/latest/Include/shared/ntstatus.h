@@ -10606,6 +10606,15 @@ Notes:
 //
 #define STATUS_NOT_A_DEV_VOLUME          ((NTSTATUS)0xC00004DDL)
 
+//
+// MessageId: STATUS_FS_GUID_MISMATCH
+//
+// MessageText:
+//
+// The file system GUID in the per machine state did not match the one on disk.
+//
+#define STATUS_FS_GUID_MISMATCH          ((NTSTATUS)0xC00004DEL)
+
 
 //     **** New SYSTEM error codes can be inserted here ****
 
@@ -23037,6 +23046,15 @@ Notes:
 // There is not enough contiguous memory in the root partition's pool to complete the mirroring operation.
 //
 #define STATUS_HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY_MIRRORING ((NTSTATUS)0xC0350085L)
+
+//
+// MessageId: STATUS_HV_VTL_ALREADY_ENABLED
+//
+// MessageText:
+//
+// The VTL specified for the operation is already in an enabled state.
+//
+#define STATUS_HV_VTL_ALREADY_ENABLED    ((NTSTATUS)0xC0350086L)
 
 //
 // MessageId: STATUS_HV_NOT_PRESENT

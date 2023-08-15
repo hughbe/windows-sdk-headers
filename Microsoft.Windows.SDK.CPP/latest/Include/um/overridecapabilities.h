@@ -365,9 +365,11 @@
 
 // SV3 Capabilities (OVRDCAP_AMD64_V3_CAPSET)
 #define OVRDCAP_AMD64_V3_CAPSET                           0x00000140
-#define OVRDCAP_AMD64_CFG_OPT                             0x00000141 // MUST NOT CHANGE, hard coded in compiler
+#define OVRDCAP_AMD64_CFG_CHECK_OPT                       0x00000141 // MUST NOT CHANGE, hard coded in compiler
+#define OVRDCAP_AMD64_CFG_DISPATCH_OPT                    0x00000142 // MUST NOT CHANGE, hard coded in compiler
+#define OVRDCAP_AMD64_XFG_DISPATCH_OPT                    0x00000143 // MUST NOT CHANGE, hard coded in compiler
 
-#define OVRDCAP_AMD64_MAX                                 0x00000142
+#define OVRDCAP_AMD64_MAX                                 0x00000144
 
 // ARM64
 // SV2 Capabilities (OVRDCAP_ARM64_V1_CAPSET)
@@ -400,9 +402,10 @@
 #define OVRDCAP_ARM64_F32MM                               0x00010018
 #define OVRDCAP_ARM64_F64MM                               0x00010019
 #define OVRDCAP_ARM64_V2_CAPSET                           0x0001001A
-#define OVRDCAP_ARM64_CFG_OPT                             0x0001001B // MUST NOT CHANGE, hard coded in compiler
+#define OVRDCAP_ARM64_CFG_CHECK_OPT                       0x0001001B // MUST NOT CHANGE, hard coded in compiler
+#define OVRDCAP_ARM64_CFG_DISPATCH_OPT                    0x0001001C // MUST NOT CHANGE, hard coded in compiler
 
-#define OVRDCAP_ARM64_MAX                                 0x0001001C
+#define OVRDCAP_ARM64_MAX                                 0x0001001D
 
 #define OVRDCAP_ALWAYS_OFF                                0x7FFFFFFF
 

@@ -4261,7 +4261,7 @@ DWRITE_BEGIN_INTERFACE(IDWritePaintReader, "8128E912-3B97-42A5-AB6C-24AAD3A86E54
     // Inline overload of SetCurrentGlyph, in which structSize is implied.
     HRESULT SetCurrentGlyph(
         UINT32 glyphIndex,
-        _Out_writes_bytes_(structSize) DWRITE_PAINT_ELEMENT* paintElement,
+        _Out_ DWRITE_PAINT_ELEMENT* paintElement,
         _Out_ D2D_RECT_F* clipBox,
         _Out_opt_ DWRITE_PAINT_ATTRIBUTES* glyphAttributes = nullptr
         )

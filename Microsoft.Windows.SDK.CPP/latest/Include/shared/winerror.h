@@ -3529,6 +3529,15 @@
 #define ERROR_NOT_A_DEV_VOLUME           476L
 
 //
+// MessageId: ERROR_FS_GUID_MISMATCH
+//
+// MessageText:
+//
+// The file system GUID in the per machine state did not match the one on disk.
+//
+#define ERROR_FS_GUID_MISMATCH           477L
+
+//
 // **** Available SYSTEM error codes ****
 //
 //
@@ -52523,6 +52532,15 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 // There is not enough contiguous memory in the root partition's pool to complete the mirroring operation.
 //
 #define ERROR_HV_INSUFFICIENT_CONTIGUOUS_ROOT_MEMORY_MIRRORING _NDIS_ERROR_TYPEDEF_(0xC0350085L)
+
+//
+// MessageId: ERROR_HV_VTL_ALREADY_ENABLED
+//
+// MessageText:
+//
+// The VTL specified for the operation is already in an enabled state.
+//
+#define ERROR_HV_VTL_ALREADY_ENABLED     _NDIS_ERROR_TYPEDEF_(0xC0350086L)
 
 //
 // MessageId: ERROR_HV_NOT_PRESENT

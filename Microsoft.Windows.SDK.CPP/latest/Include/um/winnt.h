@@ -327,15 +327,22 @@ extern "C" {
 
 //
 // When DECLSPEC_NOSANITIZEADDRESS is set, the compiler may not inline
-// functions marked with __forceinline. That's expected and not a problem,
-// so disable warning 4714.
+// functions marked with __forceinline. This may result in warning 4714:
+//
+//     function 'xxx' marked as __forceinline not inlined
+//
+// Provide a way to disable this warning.
 //
 
 #ifndef DECLSPEC_NOSANITIZEADDRESS
 #if defined(__SANITIZE_ADDRESS__)
-#define DECLSPEC_NOSANITIZEADDRESS  __declspec(no_sanitize_address) __pragma(warning(disable:4714))
+#define DECLSPEC_NOSANITIZEADDRESS      __declspec(no_sanitize_address)
+#define ASAN_WARNING_DISABLE_4714_PUSH  __pragma(warning(push)) __pragma(warning(disable:4714))
+#define ASAN_WARNING_DISABLE_4714_POP   __pragma(warning(pop))
 #else
 #define DECLSPEC_NOSANITIZEADDRESS
+#define ASAN_WARNING_DISABLE_4714_PUSH
+#define ASAN_WARNING_DISABLE_4714_POP
 #endif
 #endif
 
@@ -14793,9 +14800,7 @@ typedef struct _REPARSE_GUID_DATA_BUFFER {
 
 //
 // Macro to determine whether a reparse point tag corresponds to a reserved
-// tag owned by Microsoft.  Note that reserved tags with non-zero reserved
-// bits (bits 16..27) are invalid on disk, but can be used for special
-// purposes within the OS.
+// tag owned by Microsoft.
 //
 
 #define IsReparseTagReserved(_tag) (               \
@@ -14819,7 +14824,7 @@ typedef struct _REPARSE_GUID_DATA_BUFFER {
                            ((_tag) & 0x10000000)   \
                            )
 
-#define IO_REPARSE_TAG_RESERVED_INVALID         (0xCFFF0000L)       
+#define IO_REPARSE_TAG_RESERVED_INVALID         (0xC0008000L)       
 #define IO_REPARSE_TAG_MOUNT_POINT              (0xA0000003L)       
 #define IO_REPARSE_TAG_HSM                      (0xC0000004L)       
 #define IO_REPARSE_TAG_HSM2                     (0x80000006L)       
